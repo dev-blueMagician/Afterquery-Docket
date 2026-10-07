@@ -1,0 +1,1209 @@
+# aq-01430 - document map
+
+Written once by `bundle-mapper` from `text/` (and `docs/` for flattened tables and scans).
+It is for navigation, like the form's bundle overview: where things are, not what to ask.
+Questions quote the documents, never this map.
+
+Line references "Lnn" point to `text/Dnn.txt`. Each `docs/` original holds the same text two
+lines earlier, because `text/` adds a 2-line header. Values are given as printed; "|" separates
+documents in comparisons.
+
+## Bundle
+
+- What it is: eight publications by Ember, a think tank, about global electricity generation.
+  - Four editions of the annual Global Electricity Review (GER): 2021, 2022, 2025 and 2026, covering calendar 2020, 2021, 2024 and 2025.
+  - Two Global Electricity Mid-Year Insights reports (2023 and 2025), each covering January-June.
+  - One Q3 Global Power Report covering January-September 2025, with a full-year 2025 forecast.
+  - One gas-share analysis with data to 2025.
+  - The 2023 and 2024 GER editions and the 2024 mid-year report are not in the bundle.
+- Documents: 8, D01-D08 from `text/manifest.json`. Local ids are alphabetical by file name. Platform Doc numbers are D01=Doc 8, D02=Doc 5, D03=Doc 6, D04=Doc 1, D05=Doc 2, D06=Doc 3, D07=Doc 4, D08=Doc 7.
+- Publication order: D04 (29 Mar 2021), D05 (30 Mar 2022), D02 (5 Oct 2023), D06 (8 Apr 2025), D03 (7 Oct 2025), D08 (13 Nov 2025), D07 (21 Apr 2026), D01 (9 Jun 2026).
+- Period convention: calendar years only, with no fiscal years.
+  - "H1" / "first half" = January-June (D02 L45, D03 L49).
+  - "Q1-Q3" / "first three quarters" = January-September (D08 L19).
+  - D08 also uses "the last twelve months (Q4 2024-Q3 2025)" (L100).
+- Gaps:
+  - Readable text has no gaps: all eight documents were read in full (see ledger).
+  - Missing or visual material:
+    - Chart placeholders printed as "Loading data..." appear 57 times in D06 (L504-L1298, chapters 3-5) and 46 times in D07 (L597-L1290, chapters 3.3-4.7). They are identical in the `docs/` originals, so the chart contents are absent from the capture and cannot be inspected.
+    - Methodology pages are referenced but not captured: D06 L188 ("see Methodology for more detail") and D07 L237 and L426.
+    - D02 and D03 contain no methodology section.
+    - Link targets ("available here", downloads) are not captured: D01 L128, D04 L96-L98, D05 L519, D08 L119-L121 and L131.
+    - The D04 capture is the summary landing page only, with no chapter sub-pages.
+- Tables: no Markdown pipe tables in any document.
+  - A search for "|" finds only the "# Dnn |" header lines and the language bars at D06 L9 and D07 L9.
+  - All figures are in prose, highlight blocks and lists. The only tabular list is D05 L569-L587 (emissions factors).
+  - A table spot-check is therefore not applicable.
+- Extraction spot-checks:
+  - Method is "text" with no pages, so a page count is not applicable.
+  - Every `text/Dnn.txt` equals its original plus a 2-line header. The end markers "-----" fall at docs L149/404/375/177/644/1299/1291/146, which are text L151/406/377/179/646/1301/1293/148 for D01-D08.
+  - Verbatim matches in the originals: D01 L58 ("17 times more than gas"), D06 L763 ("14.31% ... 14.27%"), D07 L111 ("gas, the only fossil fuel that increased"), D08 L79 ("831 TWh") and D08 L83 ("322 TWh (+1.8%)").
+  - Footnote-style numbered definitions match: D04 L110-L118 (note 5 at docs L116) and D05 L531-L537 (note 4 at docs L535). No other footnotes are present.
+  - Charts are unresolved (see Gaps).
+- Provenance:
+  - `notes/intake.json` is schema 1, with capture sha256 75cce6eb...8378 (AQ-01430_2026-10-06_1949.txt, "8 of 8 read in full (396,563 characters)").
+  - Every document records incomplete false, gap_characters 0 and matches_capture true.
+  - The source sha256 of each document equals its captured and manifest sha256.
+  - There is no recovered-source history.
+
+### Coverage ledger
+
+| id | platform | file | chars | text lines read | remaining unread | missing / visual |
+|---|---|---|---|---|---|---|
+| D01 | Doc 8 | gas_share_in_global_power_mix_has_declined_f | 16,986 | L1-L151 (full) | none | link target L128 |
+| D02 | Doc 5 | global_electricity_mid_year_insights_2023 | 45,820 | L1-L406 (full) | none | no methodology page |
+| D03 | Doc 6 | global_electricity_mid_year_insights_2025 | 28,947 | L1-L377 (full) | none | no methodology page |
+| D04 | Doc 1 | global_electricity_review_2021 | 10,859 | L1-L179 (full) | none | summary page only; downloads L98 |
+| D05 | Doc 2 | global_electricity_review_2022 | 43,476 | L1-L646 (full) | none | link targets L519 |
+| D06 | Doc 3 | global_electricity_review_2025 | 115,346 | L1-L250, L251-L450, L451-L650, L651-L850, L851-L1050, L1051-L1270, L1271-L1301 (full) | none | 57 chart placeholders; methodology (L188) absent |
+| D07 | Doc 4 | global_electricity_review_2026 | 121,507 | L1-L200, L201-L380, L381-L560, L561-L740, L741-L920, L921-L1100, L1101-L1293 (full) | none | 46 chart placeholders; methodology (L237, L426) absent |
+| D08 | Doc 7 | q3_global_power_report_no_fossil_fuel_growth | 13,828 | L1-L148 (full) | none | PDF/link targets L121, L131 |
+
+## D01 - Gas share in global power mix has declined for a fifth consecutive year
+
+- Source:
+  - docs/ember_global_reviews_gas_share_in_global_power_mix_has_declined_f.txt, no pages, text/D01.txt L1-L151.
+  - Platform Doc 8; the task page title is "Ember Global Gas Power Review 2025".
+- Written or submitted by: Ember.
+  - Author: Malgorzata Wiatros-Motyka, bylined "Senior Energy Analyst" (L13-L17). Her quote is signed "Senior Electricity Analyst, Ember" (L39-L40).
+  - Acknowledged Ember staff (13 names, L144): Richard Black, Raul Miranda, Rashmi Mishra, Dave Jones, Sarah Brown, Wilmar Suárez, Nicolas Fulghum, Libby Copsey, Lauren Orso, Muyi Yang, Neshwin Rodrigues, Ardhi Arsala Rahmani, Claire Kaelin.
+  - External reviewers (L146): Toby Lockwood (CATF), Scott Smouse (Enerconnex Global, LLC, formerly with the US DoE) and Sanjay Pande (independent researcher and consultant, formerly with NTPC Limited, India).
+  - Cover image credit: Canetti / Getty images (L148).
+  - About Ember (L118): independent energy think tank, founded in 2008 as Sandbag, rebranded as Ember in 2020.
+- Type, date, edition: analysis article dated 9 Jun 2026 (L9). No edition number.
+- Period covered:
+  - Calendar 2025 is the latest year.
+  - Comparison windows: 2001-2005, 2016-2020 and 2021-2025 (L29, L54-L56); 2000 vs 2025 (L50); 2015 vs 2025 (L68, L90-L92).
+  - Country peaks: 2008 (UK), 2010 (Europe, India), 2014 (Brazil), 2015 and 2019 (LatAm), 2017 (Japan).
+- Entities and aliases:
+  - G7 members are named only in part: UK, Germany, Italy and Japan (L33, L104) and the US (L98).
+  - "The world's three largest emerging economies" = Brazil, China, India (L35).
+  - Regions: Asia, Oceania, Europe, Latin America and the Caribbean, North America, Middle East, North and West Africa (L68-L74).
+  - Countries in country-level sentences: Japan, UK, India, Spain, Italy (L80-L84); US, China, Viet Nam (L90-L92); Germany, India, Japan, South Korea (L62); Ukraine, Yemen (L140).
+  - Organisations mentioned: IPCC and IEA (L131), ENTSO-E (L124), CATF, Enerconnex, US DoE, NTPC.
+  - Events: Paris Agreement (L56, L88, L98); Russia's invasion of Ukraine in 2022 (L42); "the US-Israel war with Iran in 2026" (L42); Fukushima in 2011 (L82).
+- Tables: none (prose only).
+- Lists:
+  - Largest declines since peak gas generation, 5 items in printed order: Japan (-127 TWh), UK (-85), India (-69), Spain (-59), Italy (-48) (L80).
+  - "Other declines" in 2015-2025, 8 items: Venezuela, Brazil, Türkiye, India, UK, Belarus, Belgium, Colombia (last item) (L92).
+  - Four G7 gas import-dependent economies below peak: UK, Germany, Italy, Japan (L33, L104).
+  - Key markets: G7, China, India, Brazil (L21).
+- Key figures (2025 unless stated):
+  - Gas share and generation:
+    - Gas share fell from 23.9% (2020) to 21.8% (2025), a fifth consecutive annual decline (L27, L29, L48, L60).
+    - Gas generation rose 38 TWh (+0.6%), less than 5% of demand growth (L58).
+    - Gas grew 1.6% a year on average in 2021-2025, against 2.9% in 2016-2020 (L29).
+    - Gas share of demand growth: 33% (2001-2005), 31% (2016-2020), about 11% (2021-2025) (L54-L56).
+  - Solar and clean power:
+    - Solar rose 636 TWh (+30%), "17 times more than gas", and met around 75% of demand growth (L58).
+    - Clean power met around 68% of demand growth in 2021-2025 (L27).
+  - Demand: 15,279 TWh (2000) to 31,774 TWh (2025) (L50).
+  - Economies past their gas peak: 61 of 124 gas-generating economies, accounting for around one-fifth of global gas generation (L31, L78).
+  - G7:
+    - The G7 produced 37% of global gas generation with about 10% of world population. The US alone produced 26% of global gas power (L98).
+    - G7 gas fell from 2,627 TWh to 2,577 TWh (-50 TWh). Its share was 34.5% (2023), 34.3% (2024) and 32.9% (2025) (L100).
+    - G7 renewables generated 2,544 TWh against 2,577 TWh from gas, "helping clean power overtake fossil power in the G7" (L33, L102).
+  - Brazil, China and India together: 42% of global demand (L35).
+  - Regions:
+    - Asia gas share 10.2% (13.9% in 2015); Oceania 15.1% (18.5% in 2015) (L68).
+    - Europe peaked in 2010 at 28.4% / 1,443 TWh; "Since then ... 1,212 TWh, accounting for 23.8%", with no year printed (L70).
+    - Latin America and the Caribbean: share peak 28.6% / 460 TWh in 2015; absolute peak 474 TWh / 28.2% in 2019; 448 TWh / 24.3% in 2025 (L72).
+  - Countries:
+    - Japan: peak 464 TWh (43%) in 2017, 338 TWh (33%) in 2025 (L82); gas fell 80 TWh over 2015-2025 (L92).
+    - UK: 176 TWh (45%) in 2008, 91 TWh (31%) in 2025; coal "phased out completely in 2024" (L84).
+    - US: +474 TWh over 2015-2025, "just under one-third of global gas growth"; gas share 33% to 40%, coal share 33% to 16% (L90).
+    - China: gas +167 TWh, share 2.9% to 3.2% over 2015-2025 (L90); "close to 3% (334 TWh)" in 2025 (L35, L108).
+    - India: peak 12.6% / 118 TWh in 2010, now 2.3% / 49 TWh (L108).
+    - Brazil: peak 13.7% / 81 TWh in 2014, now 7.3% / 55 TWh (L108).
+    - Viet Nam: gas share 30% (2015) to 6% (2025) (L92).
+- Forecasts, guidance, deadlines: LNG disruptions in 2026 "are expected to further accelerate this shift" (L42); the future role of gas "is likely to become more limited..." (L112). No dated targets.
+- Hedged claims:
+  - L48: "suggesting that the world may be nearing a peak in gas-fired power". "May" attaches to nearing a peak; the fifth-year share decline in the same sentence is unhedged.
+  - L60: "may be approaching a structural peak", introduced by "these trends suggest".
+  - L66: "This suggests that gas is no longer the primary route".
+  - L112: "is likely to become more limited, regionally uneven...".
+  - L140: falls "may have been caused by external factors" and some economies "may have replaced domestic gas generation with electricity imports". Both are caveats on the past-peak count.
+- Rounded prose beside exact figures:
+  - "Nearly half of gas-generating economies" (L31, L76) vs 61 of 124 (L31, L78).
+  - "close to 3%" for China (L35, L108) vs 2.9%-3.2% (L90).
+  - Other rounded wording: "around 68%" (L27); "about half" the 2016-2020 growth rate (L29); "less than 5%" (L58); "around 75%" (L58); "just under one-third" (L90).
+- Notes: the summary bullets (L25-L44) repeat body figures (L46-L112). The Japan ranking prints -127 TWh (L80); the Japan paragraph prints 464 TWh (2017) and 338 TWh (2025) (L82).
+- Operative definitions, rules and scope exceptions:
+  - Passed-peak definition, L31: countries whose gas generation "has remained below its historical peak for at least five consecutive years".
+  - Passed-peak definition, L138: "If absolute gas generation remains below its peak output for at least five years since a country's initial gas power peak, it is considered to have passed its peak". Caveats at L140.
+  - Renewables include bioenergy "to allow easy comparison with legislated targets" (L131-L133).
+  - Data scope: 215 countries, with latest 2025 data for 91; yearly data covers >90% of global demand; other countries are estimated (L124-L126).
+- Amendments or contradictions: the author's title differs between L15 and L40. The Japan figures are noted above. The document states no precedence.
+- Coverage: full; L1-L151 read; none remaining.
+
+## D02 - Global Electricity Mid-Year Insights 2023
+
+- Source:
+  - docs/ember_global_reviews_global_electricity_mid_year_insights_2023.txt, no pages, text/D02.txt L1-L406.
+  - Platform Doc 5.
+  - Sub-page source lines: global analysis L107-L108; country and region analysis L242-L243.
+- Written or submitted by: Ember.
+  - Authors: Malgorzata Wiatros-Motyka, Senior Energy Analyst (quote signed "Senior Electricity Analyst", L99-L100), and Nicolas Fulghum, Senior Data Analyst (L13-L23).
+  - Quoted from outside Ember: Bruce Douglas, CEO, Global Renewables Alliance (L102-L105).
+  - Featured in: Reuters, The Guardian, Carbon Brief (L49-L55).
+- Type, date, edition: mid-year report dated 5 Oct 2023 (L9).
+- Period covered:
+  - January-June 2023 vs the same period of 2022, written "H1-2023" vs "H1-2022" (L45).
+  - Full-year references: 2021 and 2022 hydro capacity factors (L154); IEA comparison for 2021 and 2022 (L172); wind additions 2020-2022 (L210-L212); US 2022 vs 2013 (L319); EU 2022 (L331); Japan 2022 (L399).
+- Scope statement (L47):
+  - Monthly data from 78 countries representing 92% of global demand, plus estimates for the rest.
+  - "Top five CO2 emitting countries and regions" (>70% of power-sector CO2) = sections 2.1 China (L253), 2.2 United States (L293), 2.3 European Union (L321), 2.4 India (L353), 2.5 Japan (L379).
+- Entities and aliases:
+  - Countries: China, US, EU, India, Japan, South Korea, Chile, South Africa (L136-L144); the Netherlands, Poland, Mexico, Brazil (L206); Greece, Portugal, Denmark (L337); Austria, Bulgaria, Estonia, Finland (L343); New Zealand, Qatar and Hungary as a size comparison (L204).
+  - Organisations: IEA, IPCC AR6 WGII (L162), EIA (L313), China Electricity Council (L267). COP28 is mentioned (L102).
+- Tables: none.
+- Highlights (L27-L41): +12% wind and solar; -8.5% hydro; +0.1% fossil; +0.2% emissions.
+- Key figures (H1-2023 vs H1-2022):
+  - Emissions:
+    - Global: 5,795 mtCO2, +0.2% (+12) (L122).
+    - EU -17% (-59), US -8.6% (-64), Japan -12% (-25), South Korea -3% (-3.6), India +3.7% (+19) after +9.7% (+45) a year earlier, China +7.9% (+173) (L126).
+  - Fossil:
+    - Fossil share 59.9% (8,100 TWh) vs 60.1% (8,091 TWh); fossil +0.1% (+9 TWh) (L130-L132).
+    - Coal +1% (+47 TWh), gas +0.5% (+14), other fossil -15% (-52) (L132).
+    - Country coal at L136-L140, gas at L142, other fossil at L144.
+  - Hydro:
+    - Hydro -8.5% (-177 TWh), of which China -129; hydro share 14% (1,898 TWh) vs 15% (2,075) (L150).
+    - Counterfactual: fossil would have fallen 168 TWh and emissions 2.9% (-119 Mt) (L152).
+    - Capacity factor 35.6%, against a 10-year average of 40.9%; annual lows of 39.6% (2021) and 39.4% (2022) (L154). China: 30.5% (L156).
+    - IEA net-zero path requires hydro +4% a year; actual 2021 -2.2%, 2022 +1.3% (L172).
+  - Wind and solar:
+    - Combined share 14.3% (1,930 TWh) vs 12.8% (1,717); solar 5.5%, wind 8.8% (L180).
+    - Wind +10% (+109 TWh) vs +16% (+147) a year earlier; solar +16% (+104) vs +26% (+132) (L182-L184).
+    - IEA net-zero rates: wind 17%, solar 24% (L182).
+    - China provided 91% of wind growth and 43% of solar growth (L188).
+    - IEA-based expectation of +140-160 TWh solar vs an actual 104 TWh, 26-35% below (L196).
+    - 50 countries set monthly solar records (L202); 24 of 27 EU members set solar highs (L206).
+    - Wind capacity added: 111 GW (2020), 92 GW (2021), 73 GW (2022) (L210).
+    - Wind growth: 2021 +268 TWh, "the largest growth in wind generation in history"; 2022 +251 TWh (L212).
+    - Wind and solar avoided 142 MtCO2 (L220-L222).
+  - Demand: +0.4% (+59 TWh) vs +2.8% a year earlier (L234). China +6% (+246 TWh) (L265).
+  - EU: demand -4.6% (-61 TWh), after -1.4% in H1-2022 and -3.3% for full-year 2022 (L331). Fossil -17% (-86 TWh) to 410 TWh, the lowest since at least 2000 (L341-L343).
+  - US: 2022 power emissions 17% below 2013 (L319).
+  - Japan: nuclear +47% (+12 TWh), against global nuclear growth of 0.7% (L389).
+- Lists:
+  - EU countries with fossil falls of more than 30%: 5 items (Portugal, Austria, Bulgaria, Estonia, Finland) (L343).
+  - Solar-record examples (L204-L206).
+  - Demand fallers: Japan, EU, US, South Korea (L89, L234).
+- Forecasts and expectations:
+  - L93: earlier Ember analysis said "2023 may be the first year with structurally falling global emissions from the power sector, if clean power growth continues"; whether full-year 2023 emissions fall is "too close to call".
+  - L158: 2023 "is likely to set a record for the lowest global hydro capacity factor ... if conditions don't substantially improve".
+  - L142: rising US gas and falling US coal are "expected to continue at least in the near-term".
+  - L285: China's H2-2023 hydro "could therefore see a return" above the previous year's levels.
+  - L303: in the US, "economic growth and electricity demand are expected to rise again in 2024".
+  - L267: China Electricity Council forecasts 6% demand growth for 2023.
+  - L240: demand "likely to increase".
+  - L313: US solar and wind "look poised to increase".
+  - L333: EU records are "set to become the norm".
+- Hedged claims:
+  - "likely exacerbated by climate change" (L61, L63, L116, L150) attaches to the adverse hydro conditions and droughts, not to the emissions plateau or the hydro fall.
+  - L91: "unclear whether the situation will improve".
+  - L162: IPCC says climate conditions "could affect production between +5% and -5%" by 2080.
+  - L170: hydro output "could negatively affect the speed" of the transition.
+  - L198: "Another possible reason".
+  - L291: wind and solar additions "could soon be enough".
+- Rounded prose beside exact figures:
+  - India H1-2022 demand growth: 10.7% (L89) vs 11% (L238, L363).
+  - China share of wind and solar growth: "two-thirds" (L257) vs 67% (L261, L271).
+  - China share of the hydro fall: "three-quarters" (L83, L150) vs -129 of -177 TWh.
+  - US gas: +8.1% (L142) vs 8% (L303).
+  - Japan solar: -2% (L192) vs -1.9% (L399).
+  - EU, US and India: "about 12% each" of solar growth (L77).
+- Operative definitions, rules and scope exceptions: capacity factor "shows the actual output relative to the theoretical limit of the existing capacity" (L154); scope as in L47.
+- Amendments or contradictions (internal; no stated precedence):
+  - Global gas in H1-2023: "rose by 0.5%" (L132) and "a global rise of 0.5%" (L347) vs "the global fall of 0.5%" (L373).
+  - US wind: "fell 16%" (L299) vs -5.6% (-13 TWh) (L190, L216, L307).
+  - US hydro: -12% "similar to the global decline of 12%" (L307) vs global hydro -8.5% (L83, L150).
+  - US share of solar growth: 13% (L297, L299) vs "EU, US and India ... about 12% each" (L77) and "next largest contributors were the EU and India" (L188).
+  - Netherlands: June 2023 (3.5 TWh) is compared with "2.3 TWh in May 2022" (L206).
+- Coverage: full; L1-L406 read.
+
+## D03 - Global Electricity Mid-Year Insights 2025
+
+- Source:
+  - docs/ember_global_reviews_global_electricity_mid_year_insights_2025.txt, text/D03.txt L1-L377.
+  - Platform Doc 6.
+  - Sub-pages: global analysis L115-L116; country and region analysis L238-L239; conclusion L357-L358.
+- Written or submitted by: Ember.
+  - Authors: Malgorzata Wiatros-Motyka, Senior Energy Analyst (quote signed "Małgorzata Wiatros-Motyka, Senior Electricity Analyst", L75-L76), and Kostantsa Rangelova, Senior Battery Analyst (L13-L23).
+  - Quoted from outside Ember: Sonia Dunlop, CEO, Global Solar Council (L78-L81).
+  - Featured in: Associated Press, BBC, Financial Times, Reuters, World Economic Forum (L53-L63).
+- Type, date, edition: mid-year report dated 7 Oct 2025 (L9).
+- Period covered: January-June 2025 vs the same period of 2024 (L49). Reference points: H1-2021, H1-2020, full-year 2021 (L162) and the 2015-2024 average (L142).
+- Scope:
+  - Monthly data from 88 countries representing 93% of global demand, plus estimates (L51).
+  - The top four CO2-emitting economies are described as "63% of the world's electricity generation and 64%" of power CO2 (L51), and as "63% of global electricity demand and 64% of CO2 emissions" (L249).
+  - Sections: 2.1 China (L259), 2.2 United States (L281), 2.3 India (L309), 2.4 European Union (L333).
+- Highlights (L35-L45): 109% (solar and wind growth vs demand growth); 83% (solar alone); -0.6% coal.
+- Key figures (global, H1-2025 vs H1-2024):
+  - Demand:
+    - +2.6% (+369 TWh), vs +5.3% (+731) a year earlier (L136).
+    - 10-year annual average: 2.7% for 2015-2024 (L142).
+    - Four largest polluters supplied 81% of the rise: China 54% (198 TWh), US 21% (76), India 3.3% (12), EU 2.4% (9) (L144).
+  - Solar:
+    - +306 TWh (+31%) (L89).
+    - Share 6.9% to 8.8% (L95, L148, L370).
+    - Shares of solar growth: China 55%, US 14%, EU 12%, India 5.6%, Brazil 3.2%, rest 9% (L95).
+    - Capacity: 380 GW added vs 232 GW in H1-2024; China 67% of additions (L180).
+    - Generation: 1,303 TWh vs wind 1,365 TWh (L188).
+    - Radiation analysis: +4% output across 25 countries covering 91% of solar (L174).
+    - At least 29 countries above 10% solar, against 22 (H1-2024) and 11 (H1-2021) (L95, L168).
+    - Pakistan: 4.4% (H1-2021) to 21.9% (H1-2025), "based on Ember's estimate" (L166).
+  - Wind: +97 TWh (+7.7%) (L89); share 9.2% (8.8%); H1-2024 growth +106 (+9.1%) (L190).
+  - Other low-carbon:
+    - Nuclear +33 TWh (+2.5%); other renewables +3.6 TWh (+4.7%); hydro -42 TWh (-2%); bioenergy -2.7 TWh (-1%) (L150).
+    - Hydro share 13.9%, vs 14.6% (H1-2024) and 16.3% (H1-2020) (L210).
+    - Nuclear share 9.1% (L222).
+  - Fossil:
+    - -27 TWh (-0.3%): coal -31 TWh (-0.6%), gas -6.3 TWh (-0.2%), other fossil +10 TWh (+2.5%) (L152, L200).
+    - Gas share "23%" (L200).
+  - Renewables vs coal: renewables +363 TWh (+7.7%) to 5,072 TWh, share 34.3% (from 32.7%); coal 4,896 TWh, share 33.1% (from 34.2%) (L101, L198).
+  - Emissions:
+    - -12 MtCO2 (-0.2%) to 6,963 MtCO2 (L232).
+    - Without solar and wind growth: +236 MtCO2 (+3.9%). Africa's H1 emissions: 251 MtCO2 (L232).
+    - By economy: China -46 (-1.7%), India -24 (-3.6%), EU +13 (+4.8%), US +33 (+4.3%) (L113, L234-L236).
+- Key figures (economies):
+  - China (L263-L279):
+    - Demand +198 TWh (+4.2%), vs +326 (+7.5%) a year earlier.
+    - Solar +168 TWh (+43%), share 11.5% (8.4%).
+    - Wind +79 TWh (+16%), share 11% to 12%.
+    - Nuclear +24 TWh (+11%), 73% of global nuclear growth. Hydro -11 TWh (-1.9%).
+    - Coal -56 TWh (-2%), share 59% to 56%; gas -2.7 TWh (-2%); other fossil -0.1 TWh (-1.8%).
+    - Emissions -46 MtCO2 (-1.7%).
+  - US (L285-L307):
+    - 15% (2,190 TWh) of global demand and 12% of global CO2.
+    - Demand +76 TWh (+3.6%), vs +93 (+4.6%) a year earlier; solar and wind met 65% of the increase.
+    - Solar +44 TWh (+30%), meeting 58% of demand growth; share 8.7% (6.9%).
+    - Wind +5 TWh (+2%), vs +19 (+8.1%); share 11.7% to 11.5%.
+    - Hydro +5 TWh (+4.1%); nuclear -5.2 TWh (-1.4%).
+    - Fossil +18 TWh (+1.6%); emissions +33 MtCO2 (+4.3%).
+    - Gas -34 TWh (-3.9%), vs +44 (+5.4%); share 40.6% to 37.9%.
+    - Coal +51 TWh (+17%), vs +3.5 (+1.2%); share 14.4% to 16.2%.
+  - India (L313-L331):
+    - 6.2% of global demand and 9.1% of global CO2.
+    - Demand +12 TWh (+1.3%), vs +75 (+9%); "lowest absolute growth since the COVID-19 pandemic".
+    - Air conditioning is about 50 GW, 20% of maximum load. Counterfactual demand growth: about 3.5% (+32 TWh). Clean sources +40 TWh (+20%).
+    - Solar +17 TWh (+25%), a record, vs 8 (+13%); share 9.2% (7.4%).
+    - Wind +11 TWh (+29%), a record, vs 0.5 (+1.3%); share 5.1% (4%).
+    - Nuclear +3.5 TWh (+14%); hydro +9.6 TWh (+17%), vs -4.9 (-7.8%).
+    - Coal -22 TWh (-3.1%); gas -7.1 TWh (-34%); emissions -24 MtCO2 (-3.6%).
+  - EU (L337-L355):
+    - 8.8% (1,303 TWh) of global electricity and 4% (293 MtCO2) of emissions.
+    - Demand +9 TWh (+0.7%), vs +14 (+1.1%).
+    - Solar +37 TWh (+24%), vs +26 (+21%); share 14% (12%). In June, solar was the single largest source at 22%.
+    - Wind -21 TWh (-8.5%), vs +21 (+9.3%); share 17% (19%).
+    - Hydro -33 TWh (-17%), vs +34 (+21%); share 12% (15%). Bioenergy -1.7 TWh (-3.2%).
+    - Nuclear +3 TWh (+1%); share 23.4% to 23.5%.
+    - Gas +25 TWh (+14%), vs -29 (-14%); share 16% (14%).
+    - Coal +1.4 TWh (+1.1%); share 9.7%. Other fossil -1.1 TWh (-3%); share 2.7% to 2.6%.
+    - Emissions +13 MtCO2 (+4.8%).
+- Lists:
+  - Seven of the top-20 solar generators with at least 20% solar: Hungary, Greece, the Netherlands, Pakistan, Spain, Australia, Germany (L164).
+  - "Top five" hydro decliners in printed order: EU, China, Russia, Türkiye, Brazil (L212). Values at L212-L214: EU -33, China -11, Russia -13, Türkiye -12, Brazil -10 TWh.
+  - Hydro risers: Canada, India, Viet Nam, Colombia, US, Norway (L216).
+  - Nuclear risers: China, South Korea, Japan, India, Canada, France (L222).
+  - Nuclear fallers: Taiwan, US, Belarus, Belgium, Argentina, Brazil (L224).
+  - Biggest radiation gains: Belgium, Netherlands, UK, Germany, France (L176).
+- Forecasts and expectations:
+  - L158: "If this pace continues, solar is on track to remain the fastest-growing source of electricity for the 21st consecutive year and to outpace wind growth in absolute terms for the fourth year in a row".
+  - L182: record H1 capacity is "a clear sign" that solar growth "will continue beyond the first half of the year and into next year".
+  - L226: nuclear "Further growth is expected".
+  - L293: US demand is "expected to rise further ... according to" the EIA.
+  - L319: India "Demand growth is expected to rebound in the second half of the year, likely driving higher coal generation".
+  - L341: EU "Demand is expected to continue rising moderately".
+  - L368 and L370: solar and wind growth "signals that fossil fuel demand is nearing its peak".
+- Hedged claims:
+  - L279: "it remains unclear when fossil fuels will definitely peak in China".
+  - L140: Ember estimates India's weather-matched demand growth "closer to +3%".
+  - L166: Pakistan's share is "based on Ember's estimate".
+  - L170: Japan's solar fall was "partly due to record-high curtailment".
+- Rounded prose beside exact figures:
+  - India share of solar growth: 5.6% (L95) vs "6% (17 TWh)" (L170).
+  - "nearly two-thirds" (L247) vs 63% / 64% (L249).
+  - Hungary "nearly 30%" (L166). Gas share "23%" (L200).
+- Notes:
+  - Renewables overtaking coal is stated at L71, L78 (Dunlop: "for the first time"), L101, L124 and L198 ("for the first time on record").
+  - "Half of the world is past a peak in fossil generation" (L374).
+  - The same value, 1,303 TWh, is printed for global solar generation in H1-2025 (L188) and for EU total generation in H1-2025 (L337).
+- Operative definitions, rules and scope exceptions:
+  - Scope as in L51.
+  - The 20%-solar group is limited to "Among the top 20 largest solar generators in absolute terms" (L164).
+  - The over-10% count is "Based on available monthly data" (L168).
+  - The radiation analysis covers 25 countries / 91% of solar (L174).
+- Amendments or contradictions (internal):
+  - Top-four share: of "generation" (L51) vs of "demand" (L249).
+  - India's counterfactual demand growth: "closer to +3%" (L140) vs "about 3.5% (+32 TWh)" (L319).
+  - "Four countries generated over 25% of their electricity from solar" (L95). L166 names three above 25% within the top-20 group: Hungary (nearly 30%), Greece and the Netherlands.
+- Coverage: full; L1-L377 read.
+
+## D04 - Global Electricity Review 2021
+
+- Source:
+  - docs/ember_global_reviews_global_electricity_review_2021.txt, text/D04.txt L1-L179.
+  - Platform Doc 1. The capture is the summary landing page only.
+- Written or submitted by: Ember.
+  - Author: Dave Jones, "Chief Analyst" (L13-L17). His quote is signed "Global Insights Programme Director, Ember" (L79-L80).
+  - Other Ember quotes: Dr Muyi Yang, Senior Electricity Policy Analyst, China (L84-L85); Aditya Lolla, Asia Programme Director (L89-L90).
+  - Report design: Designers for Climate (L138).
+  - Peer reviewers (L142-L176): 18 entries naming 19 people, with "Joojin Kim and Gahee Han (SFOC)" on one line. The list includes Xunpeng Shi, President of the International Society for Energy Transition Studies (L144). The last entry is Christine Shearer, Global Energy Monitor (L176).
+- Type, date, edition: annual review dated 29 Mar 2021 (L9). No edition number stated. Downloads at L98: English, Chinese and Spanish PDFs and two XLSX files, with sizes.
+- Period covered: calendar 2020 vs 2019; 2015-2020 comparisons; December 2020 vs December 2019.
+- Scope:
+  - Dataset of 217 countries, 2000-2020; 2020 data covers 90% of world electricity production (L35).
+  - 68 countries (90% of world generation) have full-year 2020 data; the remaining countries have data to 2019. The G20 is 84% of world generation (L104).
+  - World 2020 is estimated from countries with both 2019 and 2020 data (L134).
+- Highlights (L21-L31): demand -0.1%; wind and solar +15%; coal -4% (a record).
+- Key figures (2020):
+  - Demand:
+    - -0.1%, the first fall since 2009 (L51).
+    - December 2020 vs December 2019: India +5%, EU +2%, Japan +3%, South Korea +2%, Turkey +3%, US +2% (L51).
+  - Wind and solar:
+    - +15% (+314 TWh); share 9.4%, "doubling from 4.6% in 2015" (L57).
+    - G20 shares: India 9%, China 9.5%, Japan 10%, Brazil 11%, US 12%, Turkey 12%. Germany 33%, UK 29%. Indonesia, Russia and Saudi Arabia near zero (L57).
+  - Coal and other sources:
+    - Coal -4% (-346 TWh). Demand -23 TWh; gas and oil -12 TWh; hydro +94; nuclear -104.
+    - Coal by economy: US -20%, EU -20%, India -5% (L63).
+  - China:
+    - Coal +2%, the only G20 country with a large coal increase (L67-L69).
+    - Demand 33% above 2015; fossil-free sources met 54% of the rise; coal +19% over five years.
+    - China produces 53% of world coal power (44% in 2015) (L69).
+  - Since 2015 (L75):
+    - Demand +11% (+2536 TWh); clean generation +2107 TWh.
+    - Gas +11% (+562 TWh); coal -0.8% (-71 TWh); emissions "around 2% higher" than 2015.
+    - Fossil-free share of demand growth: China 54%, India 57%, Indonesia 37%.
+    - "Of the 10% rise in global gas generation since 2015, half of that was in the United States".
+  - Quote (L77): coal "needs to collapse by 80% by 2030".
+- Tables: none.
+- Lists: peer reviewers (L142-L176); December demand changes (L51); G20 wind and solar shares (L57); downloads (L98).
+- Forecasts and expectations: L51 "this pause has already ended"; L77 sets an 80% coal reduction by 2030 as a requirement.
+- Hedged claims: none with may/likely. L120: bioenergy "cannot be automatically assumed to deliver similar climate benefits".
+- Rounded prose beside exact figures: "almost a tenth (9.4%)" (L57); highlight -4% vs "record 4% (-346 TWh)" (L31, L63); "around 2% higher" (L75).
+- Operative definitions, rules and scope exceptions (L106-L134):
+  - Nine generation types.
+  - Note 1: solar includes thermal and PV, plus distributed solar where possible.
+  - Note 2: hydro excludes pumped hydro where possible.
+  - Note 3: bioenergy includes combustible renewables; some historical waste is mapped to bioenergy.
+  - Note 4: other renewables = geothermal, tidal and wave.
+  - Note 5 (L118): other fossil = "oil and petroleum products, as well as manufactured gases".
+  - Renewables are classified in line with the IPCC and include bioenergy, with an EU-criteria caveat. Reports cited: "The Burning Issue (June 2020)" and "Playing with Fire (December 2019)" (L120).
+  - Data sources:
+    - EIA international data browser for everything except China, India, EU-27 and the US (L125).
+    - Missing non-OECD 2019 values are filled with the 2015-2018 average change (L125).
+    - Fossil disaggregation uses BP Statistical Review ratios and the WRI power plant database (L128).
+    - 2020 comes from national sources; Argentina, Canada, Ecuador, Kazakhstan and Russia are split using IEA monthly statistics and BP (L131).
+- Amendments or contradictions (internal): in the same paragraph, gas since 2015 "rose 11% (+562 TWh)" and "the 10% rise in global gas generation since 2015" (L75). The author's title differs between L15 and L80.
+- Coverage: full; L1-L179 read.
+
+## D05 - Global Electricity Review 2022
+
+- Source:
+  - docs/ember_global_reviews_global_electricity_review_2022.txt, text/D05.txt L1-L646.
+  - Platform Doc 2.
+  - Sub-pages: global trends L126-L127; data L265-L266; supporting materials L508-L509.
+  - Some section headings are printed twice (for example L139 and L143), a capture duplication.
+- Written or submitted by: Ember, "an independent, not-for-profit think tank" (L55).
+  - Author: Dave Jones, Chief Analyst (L13-L17).
+  - Quotes: one at L113-L116 signed "Dave Jones, Global Insights Programme Director"; a second at L118-L124 signed only "Global Insights Programme Director, Ember", with no name.
+  - Contributors (L599-L601):
+    - Data: Maciej Zieliński, Jeremy Fletcher, Matt Ewen, Nicolas Fulghum, Pete Tunbridge.
+    - Analysis: Dave Jones, Aditya Lolla, Alison Candlin, Bryony Worthington, Charles Moore, Hannah Broadbent, Harry Benham, Muyi Yang, Phil MacDonald.
+  - Funders (L55): European Climate Foundation, Quadrature Climate Foundation, Bloomberg Philanthropies, ClimateWorks.
+  - Media: featured at L57-L63 (Reuters, BBC, Bloomberg); coverage list at L609-L643 (18 outlets, last Le Figaro).
+- Type, date, edition: annual review dated 30 Mar 2022 (L9); "Ember's third annual Global Electricity Review" (L47).
+- Period covered: calendar 2021 vs 2020; 2015 (Paris Agreement) comparisons; 2000-2021 trends; IEA 1.5C pathway to 2030.
+- Scope: 209 countries, 2000-2020; 2021 data for 75 countries representing 93% of global power demand (L51, repeated L517).
+- Highlights (L21-L43): 10% wind and solar; 50 countries above 10% wind and solar; 38% clean; +7% CO2; +5% demand; 29% of demand growth met by wind and solar.
+- Key figures (2021):
+  - Shares:
+    - Wind and solar 10.3% (9.3% in 2020; 4.6% in 2015) (L85, L149).
+    - Clean 38% vs coal 36% (L71, L85, L151).
+    - Fossil 62% (coal 36%, gas 22%) (L151). Fossil share 62% vs 61% in 2020, the first rise since 2012 (L105).
+  - Demand:
+    - +1,414 TWh (+5.4%), "the most ever in absolute terms", fastest since 2010. 2020 had "a small 1% fall" (L93, L203, L496).
+    - China demand was 13% above 2019 (L93, L496), or 14% (L207).
+  - Who met demand growth: wind and solar 29%, coal 59%, gas and oil 10% (L95, L223).
+  - Coal:
+    - +9.0% to 10,042 TWh, beating the 2018 record of 9,838 TWh (L101, L217).
+    - Share 36.5% (35.3% in 2020); coal fell 4.2% in 2020 (L217).
+    - China's share of global coal: 54% (L103, L217, L348).
+  - Emissions:
+    - +7% (778 Mt) to more than 12 billion tonnes, 3% above the 2018 record; the 2020 fall was 3% (L111, L255, L470).
+    - Carbon intensity 442 g/kWh (437 in 2020), the first rise since 2011 (L261, L472, L498).
+    - Since 2015: emissions +10%, intensity -6%; 18 of the G20 have cleaner electricity (L476).
+    - Intensities: Australia 644 to 527; China 549; India 663 to 633; Indonesia 663 (2020) (L480).
+  - Sources:
+    - Solar +23% (+188 TWh) to 1023 TWh, the fastest-rising source for the 17th year (L288); share 3.7% (1.1% in 2015) (L292).
+    - Wind +14% (+227 TWh) to 1,814 TWh, the "highest absolute increase ever" (L316); share 6.6% (3.5% in 2015) (L320).
+    - China supplied 65% of wind growth (37% in 2020), +148 TWh (L324).
+    - Bioenergy +6% to 646 TWh (L370).
+    - Nuclear +4% (+100 TWh) to 2,736 TWh; share 10% (17% in 2000) (L394-L398).
+    - Gas +1% (+81 TWh) to 6098 TWh; share 23% to 22% (L418). The US took 46% of the rise in global gas in 2015-2020 (L430).
+    - Hydro -2%; share 15% (18% in 2000) (L446-L450).
+  - Countries:
+    - China: coal +466 TWh (9.5%); coal share constant at 63.6% (L239). Clean met 33% of China's demand rise; demand +9.5%; coal met 64% (L241).
+    - India: coal +125 TWh (11%); share 72% to 74%; wind and solar met 12% (L243).
+    - Viet Nam: solar +337% (+17 TWh), becoming the 10th largest solar generator (L167).
+- Lists:
+  - Seven countries new to 10% wind and solar: China 11.2%, Japan 10.2%, Mongolia 10.6%, Viet Nam 10.7%, Argentina 10.4%, Hungary 11.1%, El Salvador 12.0% (L87, L155).
+  - Above 40% wind and solar: Denmark 52%, Luxembourg 43%, Uruguay 47% (L157).
+  - Five largest economies at 10%: US, China, Japan, Germany, UK (L157).
+  - Fastest transformers: Netherlands, Australia, Viet Nam (L161).
+  - Asian coal records: China, India, Kazakhstan, Mongolia, Pakistan, Philippines and "most likely Indonesia" (L103, L245, L352).
+  - Paused eastern European solar: Bulgaria, Czechia, Romania, Slovakia, Slovenia (L300).
+  - Bioenergy ranks: China #1, US #2, Germany #3, Brazil #4, Japan #5 (L378).
+  - Emissions factors, 9 items (L571-L587).
+- Forecasts and IEA-pathway targets:
+  - Wind and solar: 20% a year compound to 2030 (L73).
+  - Coal: -73% over 2021-2030 (L217); -13% a year, share 36% to 8% (L358).
+  - Solar: 7-fold, 4% to 19%, 24% a year (L304). Wind: 4-fold, 7% to 21%, 18% a year (L332).
+  - Bioenergy: doubling over 2020-2030 (L382). Nuclear: +38%, 4% a year (L406). Gas: 2030 level not significantly above 2020 (L434). Hydro: +40%, 4% a year (L458).
+  - Emissions -60% over 2021-2030 (L255, L484). Demand +38% over 2020-2030 (L506).
+  - Intensity to zero by 2035 (advanced economies) and 2040 (worldwide) (L261). OECD coal exit by 2030, the rest by 2040 (L233).
+  - Viet Nam 89 GW by 2030 (L169).
+  - Expectations: "We expect a turbulent year ahead" (L49); the gas crisis "will undoubtedly impact 2022 and beyond" (L231); the December 2021 offshore build-out "will ensure this growth continues into 2022" (L324).
+- Hedged claims:
+  - L103: "most likely Indonesia (data not yet available)" attaches only to Indonesia's inclusion among the coal records.
+  - L189: the IEA says decarbonising without bioenergy and CCS "would likely increase the cost".
+  - L589: emissions factors "may differ from reality".
+  - L118: wind and solar are "able—and expected—to provide the majority".
+- Rounded prose beside exact figures:
+  - Highlight 10% (L21) vs 10.3% (L85). Highlight +5% (L37) vs 5.4% (L93).
+  - Coal 36% vs 36.5% (L217).
+  - Solar 3.7% (L292) vs "4%" (L304, L374). Wind 6.6% (L320) vs "7%" (L332, L374).
+- Operative definitions, rules and scope exceptions:
+  - Fuel definitions (L529-L537): nine types (Bioenergy, Coal, Gas, Hydro, Nuclear, Other Fossil, Other Renewables, Solar, Wind). Other renewables = geothermal, tidal, wave (L535). Other fossil = "oil and petroleum products, as well as manufactured gases and waste" (L537).
+  - Bioenergy is counted in "renewable" (L541), with a caveat (L543).
+  - Methods (L547-L564):
+    - Monthly data is used to estimate the latest annual figure.
+    - 2019, not 2020, is the reference year.
+    - "simply summing up monthly values will not produce the same results as our annual values" (L558).
+    - Imports and exports are excluded from regional and world estimates (L564).
+  - Emissions: lifecycle, all gases as CO2e over 100 years, from IPCC AR5 Annex 3 (L567-L587).
+  - Sources: EIA, Eurostat, BP, UN, China's National Bureau of Statistics; capacity from GEM, IRENA, WRI (L517). Disclaimer at L523.
+- Amendments or contradictions (internal unless stated):
+  - China demand vs 2019: 13% (L93, L496) vs 14% (L207).
+  - China's +466 TWh coal: "equal to the combined coal generation of Japan and Germany" (L239) vs "about the same as Japan and South Korea's combined" (L352).
+  - "nuclear and hydro levels unchanged for two years" (L95) vs "nuclear increasing but hydro falling" (L223).
+  - China coal share "rose from 50% in 2019 to 54% in 2021" (L103) vs "unchanged at 54% in 2021, having risen from 50% in 2019 to 54% in 2020" (L217).
+  - "the EU saw wind generation fall in 2020" appears inside the 2021 wind section (L324).
+  - Cross-document: the report title is "The Burning Question (June 2020)" (L543) vs D04 L120 "The Burning Issue (June 2020)".
+- Coverage: full; L1-L646 read.
+
+## D06 - Global Electricity Review 2025
+
+- Source:
+  - docs/ember_global_reviews_global_electricity_review_2025.txt, text/D06.txt L1-L1301.
+  - Platform Doc 3.
+  - Sub-pages: 2024 in review L123-L124; The Big Picture L220-L221; Global Electricity Trends L465-L466; Global Electricity Source Trends L632-L633; Major Countries and Regions L915-L916.
+  - Language bar (L9): 7 languages.
+- Written or submitted by: Ember.
+  - Authors: Euan Graham (Senior Energy Analyst), Nicolas Fulghum (Senior Data Analyst), Katye Altieri (Electricity Transition Analyst (Global)) (L15-L31).
+  - Quotes: Phil MacDonald, Managing Director, Ember (L103-L106).
+  - Quoted from outside Ember: Mike Hemsley, Deputy Director, Energy Transitions Commission (L108-L111); Professor Xunpeng Shi, President of ISETS (L113-L116); Bruce Douglas, CEO, Global Renewables Alliance (L118-L121).
+  - Featured in: Reuters, The Guardian, Times of India, China Daily, Xinhua (L55-L65).
+- Type, date, edition: annual review dated 8 Apr 2025 (L11); "Ember's sixth annual Global Electricity Review" (L49).
+- Period covered: calendar 2024 vs 2023; trends since 2000, the 2007 peaks and 2015; forecasts for 2025-2030.
+- Scope:
+  - 215 countries; latest 2024 data for 88 countries representing 93% of demand; estimates for the rest.
+  - 13 groupings, including Africa, Asia, the EU and the G7.
+  - The seven largest consumers account for 72% of demand (L51, L924).
+  - Country sections are ordered by 2024 demand: 5.1 China (L928), 5.2 US (L990), 5.3 EU (L1044), 5.4 India (L1100), 5.5 Russia (L1154), 5.6 Japan (L1202), 5.7 Brazil (L1248).
+- Highlights (L35-L45): 40.9% low-carbon; +29% solar (a six-year high); +4.0% demand.
+- Key figures (global, 2024):
+  - Low-carbon and renewables:
+    - Low-carbon 40.9% (12,609 TWh) vs 39.4% in 2023, the first time above 40% since the 1940s (L81, L142, L546).
+    - Renewables +858 TWh, 49% above the 577 TWh record of 2022 (L81, L154, L558).
+    - Shares: hydro 14.3% (14.31% vs 14.27% in 2023, L763); nuclear 9.0% (a 45-year low); wind 8.1%; solar 6.9% (L81, L144, L548).
+    - Wind and solar 15%, above hydro for the first time; together they had surpassed nuclear in 2021 (L144, L548).
+    - "Other renewables, such as bioenergy and geothermal power" 2.6% (L146).
+    - 80 countries above 50% clean, 47 above 75% (L148).
+  - Fossil shares:
+    - 60.6% to 59.1%, the first time below 60% since the 1940s; coal 34.4%, gas 22%, other fossil 2.8% (L150).
+    - Fossil peak 68.3% (2007); coal share 40.8% (2007) to 34.4% (L550).
+    - Gas share has fallen four years running since its 2020 peak of 23.9% (L550).
+  - Who met demand growth: renewables "three-quarters" (L152-L156) / 73% (L558); renewables plus nuclear 79% (L166, L554).
+  - Solar:
+    - +474 TWh (+29%) to 2,131 TWh; 40% of demand growth; fastest-growing for the 20th year; largest absolute increase for the third year (L87, L156, L170, L663).
+    - The 2023 increase was +327 TWh (L665).
+    - Capacity: 585 GW (+30%); +86% in 2023 (L172, L257); 1 TW (2022) to 2 TW (2024) (L87, L257).
+  - Hydro: +182 TWh (+4.3%) to 4,416 TWh, an all-time high (L158, L757-L761). China's share of the rebound: 72% (L158) / 71% (L755, L767).
+  - Wind: +182 TWh (+7.9%) to 2,494 TWh; share 7.8% to 8.1% (L162, L709).
+  - Nuclear: +69 TWh (+2.5%) to 2,768 TWh (L164, L799).
+  - Demand:
+    - +4.0% (+1,172 TWh) to 30,856 TWh (L180, L494-L496). 2023: +2.6% (+758); 2022: +2.3% (+656) (L182).
+    - Temperature-adjusted growth: 3.3% in both years (L186, L194). Temperature effect: cooling +238, heating -29, net +208 TWh (L190).
+    - Clean +927 TWh (+7.9%), a record, meeting 96% of non-temperature growth (+963 TWh) (L204, L554).
+    - EVs, heat pumps and data centres added +0.7% (+195 TWh) in 2024 and +0.6% (+174) in 2023 (L329).
+    - EV demand +62 TWh (163 to 225 TWh) (L331). Data centres and crypto +111 TWh (+20%) (L333).
+  - Fossil and emissions:
+    - Fossil +245 TWh (+1.4%); 2023 +246; 2022 +201 (L93, L200, L556).
+    - Coal +149 TWh (+1.4%); gas +103 TWh (+1.6%); other fossil -7.7 TWh (-0.9%) (L564).
+    - Emissions +1.6% (+223 MtCO2) to 14.6 billion tonnes; 2023 +1.5%, 2022 +1.3% (L93, L136, L200, L598).
+    - Intensity 473 gCO2/kWh (484 in 2023), 15% below the 555 peak of 2007 (L600-L602).
+  - Gas and coal levels:
+    - Gas at a record 6,788 TWh; share peaked at 24% in 2020 and fell to 22% (L845-L847).
+    - Gas since 2015: +22% (+1,246 TWh), of which the US contributed 43% (L576, L849).
+    - Countries getting at least a fifth of power from coal: 59 (2015) to 40 (2024) (L891). 37 countries saw coal falls (L901).
+- Key figures (countries and regions, 2024):
+  - Demand:
+    - China 10,066 TWh (32.6%), US 4,401 (14.3%), EU 2,727 (8.8%), India 2,054 (6.7%) (L506-L508).
+    - Increases: China +623 (+6.6%), US +128 (+3%), India +98 (+5%), Brazil +35, Russia +32, Viet Nam +26, Türkiye +18 (L500-L502).
+    - Per capita: Canada 15.5 MWh; India 1.4; China 7.1; world 3.8 (L514-L516).
+  - Emissions:
+    - China 5,640 MtCO2 (38.6% at L610 / 39% at L968); US 1,683 (11.5%); India 1,457 (10%, a first) (L606-L610).
+    - Russia 544 (L1180); EU 585 (L1074); Japan 493 (L1226); Brazil 77 (L1278).
+    - Intensities: China 560, US 384, EU 213, India 708, Russia 449, Japan 482, Brazil 103; Asia 573 (L982, L1036, L1092, L1146, L1194, L1242, L1292).
+  - Solar: China +250 TWh (+43%) to 834 TWh, 39% of world solar; US +64; Brazil +23 (+45%); India +20 (+18%) (L673-L683, L1122).
+  - Wind: China +106 TWh (+12%) to 992 TWh (40% of world); China took 58% of global wind growth (L719, L729, L956). US +32 TWh after -13 in 2023 (L723).
+  - Coal: China +110 TWh (+1.9%), 74% of global coal growth; China 5,864 TWh (55% of global); India 1,534; US 653 (L895, L905).
+  - Gas: US +59 TWh (+3.3%), 57% of global gas growth; US 1,865 TWh; Russia 538 (L853, L861, L1014).
+  - Nuclear:
+    - Changes: France +41 TWh, China +10, Japan +7.5, US +7.1, Germany -7.2, Taiwan -2.7 (L809-L815).
+    - Levels: US 782 TWh, China 445, France 379 (L819).
+  - Hydro: China +130 TWh (+11%) to 1,356 TWh (L767, L773).
+- Lists:
+  - Solar shares among countries above 5 TWh: Hungary 25%, Chile 22% (L685).
+  - Wind shares: Denmark 58%; the top ten includes Ireland, Portugal, Germany, the Netherlands, Finland, Sweden and Spain; Morocco 22%, ninth (L731-L733).
+  - Nordic wind per capita top four: Sweden, Finland, Denmark, Norway (L735).
+  - Only three countries above 50% nuclear: France, Slovakia, Ukraine (L821).
+  - Coal-share top: Kosovo 92%, Mongolia 86%, South Africa 82%; India 75%. Kazakhstan left the top ten; Serbia and Bosnia Herzegovina entered at 63% (L907-L909).
+  - Per capita generation leaders:
+    - Coal: Taiwan 5,349, Australia 4,768, China 4,132 kWh; world 1,299 kWh (L911).
+    - Gas: Bahrain 22,986 (a 2023 value), Qatar 19,190 kWh (L865).
+    - Hydro: Iceland 36,382, Norway 24,837 kWh (L777).
+  - Solar panel imports: Pakistan 17 GW, South Africa 3.8, Nigeria 1.3, Morocco 1.1, Saudi Arabia 16, Oman 2.5 GW (L287-L293).
+  - India pipeline: 143 GW (82 solar, 25 wind, 36 hybrid) (L435).
+- Forecasts and expectations (with scope):
+  - Ember view and quotes:
+    - MacDonald quote: "we're very unlikely to see a similar jump in 2025" (L103), referring to fossil generation.
+    - "even if electricity demand grows at 4.1% per year until 2030 ... clean generation growth will be fast enough" (L101, L371).
+    - Wind "is likely to return to higher growth in the coming years" (L162, L715).
+    - Fossil generation "is set for structural decline" (L373).
+    - Nuclear "still expected to rise" (L805).
+  - 2025 demand:
+    - Scenarios: the same heatwaves as 2024 give 3.3%; a cooler year gives less (L351).
+    - China's industrial demand growth is "unlikely to be as high in 2025" (L353).
+  - IEA outlooks:
+    - STEPS (October 2024): 3.3% a year over 2023-2030, vs the 2.7% forecast in 2023 for 2022-2030; +1,687 TWh (L343).
+    - February 2025 forecast: generation +3.7% a year over 2025-2027 (L345).
+  - Other outlooks:
+    - LBNL: US data centres from 176 TWh (2023) to 580 TWh (2028) in the high case, 325 TWh in the low case (L361).
+    - BNEF: solar additions near 1 TW a year by 2030. GWEC: wind additions 182 GW by 2028 (L367).
+    - Ember estimate: solar +21% a year, wind +13% a year, clean +9% a year, adding 8,399 TWh by 2030 (L369).
+  - China and India:
+    - China: "2025 may mark the first decline in fossil generation since 2015" (L425). BloombergNEF expects China's 2025 solar deployment to rise 12% (L405).
+    - India: "is likely to become the country with the largest fossil generation growth in coming years, surpassing China" (L429).
+    - IEA STEPS for India: demand +844 TWh by 2030, of which clean could meet about 75% (L443).
+    - Fossil to 2029: India +197 TWh; China -501 TWh (2025-2029); rest of the world -849 TWh; global fossil in 2029 1,153 TWh (6.3%) below 2024 (L453-L455).
+  - Targets and projects:
+    - India: 500 GW clean capacity by 2030, up from 211 GW in 2024 (L437); "goal of reaching 500 GW of clean power capacity", with 200 GW of RE reached by October 2024 (L1138).
+    - Japan's 7th energy plan: 20% nuclear by 2040 (L1238).
+    - Masdar's Abu Dhabi round-the-clock solar project is due online in 2027 (L313).
+- Hedged claims:
+  - L174: growth "potentially even larger"; "some underestimation is likely".
+  - L233: "the outlook remains uncertain".
+  - L339 and L349: whether high growth will be maintained in 2025 is questioned.
+  - L355: "It remains to be seen".
+  - L381: "likely to be year-on-year fluctuations".
+  - L395: India "could meet all new demand growth with clean electricity as soon as 2030, according to the IEA's STEPS".
+  - L399: further fossil expansion in China "increasingly unlikely".
+  - L423: "further recovery in 2025 remains uncertain".
+  - L461: US policy "risk slowing the decline".
+  - L968: "Forecasts suggest that China is approaching the tipping point".
+- Rounded prose beside exact figures:
+  - Renewables' share of demand growth: "three-quarters" (L152, L156) vs 73% (L558).
+  - Hydro: 14.3% vs 14.31% (L763).
+  - China emissions share: 38.6% (L610) vs 39% (L968). China hydro share: 13% (L773) vs 13.5% (L974).
+  - Gas share: "24% in 2020" / "22%" (L839, L847) vs 23.9% (L550). Coal 34% (L881, L889) vs 34.4% (L150, L550).
+  - Temperature share of demand growth: "nearly a fifth" (L188) / "A fifth" (L492).
+  - China share of wind growth: "well over 50%" (L719) vs 58% (L956).
+  - India: "about two-thirds" of demand growth met with fossil fuels (L395) vs coal's 64% (L1116, L1124).
+  - China: "more than half" of wind and solar growth (L936) vs 54% (L972).
+- Notes:
+  - Chart placeholders: 57 from L504.
+  - The executive summary (L69-L121) and 2024 in review (L128-L218) repeat material from chapters 3-5 (L476-L1298).
+- Operative definitions, rules and scope exceptions:
+  - Low-carbon = "renewables plus nuclear" (L81).
+  - Other renewables "such as bioenergy and geothermal power" (L146).
+  - Capacity factor = "the amount of generation per unit of capacity" (L160).
+  - Emissions intensity = "emissions per unit of electricity produced" (L600).
+  - "DC capacity is used in this report if not otherwise specified" (L403); China figures there are in GWac.
+  - Share rankings cover countries above 5 TWh of solar or wind (L685, L731).
+  - Bahrain's value is from 2023 (L865).
+- Amendments or contradictions (internal):
+  - China share of the hydro rebound: 72% (L158) vs 71% (L755, L767).
+  - Gas share "lowest since 2013" (L839) vs "the lowest since 2014" (L847).
+  - The 2.5% ten-year average is labelled 2013-2022 (L196) vs 2014-2023 (L494).
+  - L210 calls China, India and the US the "three largest power consumers" and the EU the "fourth largest". The demand values (L506-L508) and the section order (L924-L926; 5.1-5.4) run China, US, EU, India.
+  - China's 2024 clean share of demand growth was "the highest share since 2015 when demand fell" (L413).
+  - "the EU, the US and other OECD economies – have seen fossil generation peak in the early 20th century" (L447).
+  - India targets: 500 GW clean by 2030 vs 211 GW in 2024 (L437) and 200 GW RE by October 2024 (L1138), which are different measures and dates.
+- Coverage: full; L1-L1301 read in seven chunks (ledger).
+
+## D07 - Global Electricity Review 2026
+
+- Source:
+  - docs/ember_global_reviews_global_electricity_review_2026.txt, text/D07.txt L1-L1293.
+  - Platform Doc 4.
+  - Sub-pages: 2025 in Review L158-L159; Global Electricity Insights L283-L284; Electricity demand and supply trends L494-L495; Major Countries and Regions L853-L854.
+  - Language bar (L9): 8 languages, including Polski.
+- Written or submitted by: Ember.
+  - Authors: Nicolas Fulghum (Senior Data Analyst), Wilmar Suarez (Senior Energy Analyst, Latin America), Katye Altieri (Electricity Transition Analyst (Global)), Kostantsa Rangelova (Senior Battery Analyst) (L15-L37).
+  - Foreword: Bryony Worthington, Founder and Chair of the Board, Ember (L81-L101).
+  - Quote: Aditya Lolla, Managing Director, Ember (L153-L156).
+  - Featured in: The Economist, The New York Times, Bloomberg, Financial Times, Reuters (L69-L79).
+- Type, date, edition:
+  - Annual review dated 21 Apr 2026 (L11); "Ember's seventh annual Global Electricity Review" (L61).
+  - It is the "first in a sequence of annual global flagship reports", including the China Energy Transition Review, Electrotech Revolution and the Energy Institute Statistical Review partnership (L67, L97).
+- Period covered: calendar 2025 vs 2024; the 2015-2025 decade; baselines 2000, 2005, 2007 and 2010; outlooks to 2030 and 2035.
+- Scope:
+  - 215 countries; latest 2025 data for 91 countries representing 93% of demand.
+  - 13 groupings "such as Africa, Asia, Latin America, the EU and the G7". The seven largest account for 72% (L63, L864).
+  - Chapter 3 covers sources making up 94% of generation, ordered by 2025 growth: solar, wind, gas, nuclear, hydro, coal (L505).
+  - Country sections are ordered by 2025 demand: 4.1 China (L866), 4.2 US (L936), 4.3 EU (L992), 4.4 India (L1066), 4.5 Russia (L1126), 4.6 Japan (L1176), 4.7 Brazil (L1236).
+- Highlights (L47-L57): solar met 75% of demand growth; renewables 33.8% ("above a third for the first time, overtaking coal"); fossil -0.2%.
+- Key figures (global, 2025):
+  - Demand:
+    - +2.8% (+849 TWh) to 31,779 TWh (L179, L191, L525).
+    - 2024: +4.3% (+1,265 TWh) (L191, L390, L525).
+    - 10-year average: 2.7% (2015-2024). The 2025 rise is the sixth-largest (L191, L527). The record was 2021, at +1,536 TWh (L527).
+    - Underlying growth: 3.3% (2024) and 3% (2025). The leap year was worth about 0.3 points (L535-L537).
+  - Low-carbon: +887 TWh (L127); wind and solar +841 TWh, meeting 99% of demand growth (L181).
+  - Solar:
+    - +636 TWh (+30%) to 2,778 TWh, from 2,143 TWh in 2024 (L133, L179, L211, L593).
+    - Earlier increases: 2024 +479 TWh, 2023 +331, 2020 +155 (L201, L589). Coal's 2021 rebound was +719 TWh (L201).
+    - Capacity: 647 GW; 582 GW in 2024 (+11%) (L207).
+    - Share: 1.1% (2015) to 8.7% (L593); "9% on average for 2025" (L426).
+    - Generation: 256 TWh (2015) and 1,333 TWh (2022) (L133, L215, L217).
+    - Fastest-growing source for 21 consecutive years (L217); largest absolute growth for the fourth year running (L205).
+  - Wind:
+    - +205 TWh (+8.2%) to 2,715 TWh. 2024: +190 (+8.2%). Record: +265 TWh in 2021. 2018: 1,268 TWh. Share 8.5% (L181, L641-L645).
+    - Capacity added: 167 GW (L237, L643).
+  - Nuclear: +35 TWh (+1.3%) to 2,812 TWh; share 8.9% (L185, L741-L743).
+  - Hydro: +3 TWh (+0.1%) to 4,437 TWh; share 14%, an all-time low (L187, L787).
+  - Fossil:
+    - -38 TWh (-0.2%): coal -63 TWh (-0.6%), other fossil -12 TWh (-1.4%), gas +36 TWh (+0.5%) (L127, L225).
+    - Gas at a record 6,919 TWh. 2024 gas growth was +183 TWh (+2.7%). Gas share 23.9% (2020) to 21.8% (2025), a fifth consecutive decline (L265, L683, L693-L695).
+  - Shares:
+    - Renewables 33.8% (10,730 TWh) vs coal 33.0% (10,476 TWh) (L145, L257, L831).
+    - Renewables 23.0% in 2015. Wind and solar 4.5% (2015) to 17.3% (L263, L567).
+    - Coal in 2015: 38.7% (L263) / 39% (L833).
+    - Low-carbon 42.6% (33.5% in 2015). Fossil 57.4% (66.5% in 2015) (L567).
+  - Emissions:
+    - -6 MtCO2e (-0.04%). 2024: +1.7% (+237 MtCO2e) (L229). No 2025 global emissions total is printed.
+    - Intensity 458 gCO2e/kWh; 471 (2024), 533 (2015), 543 (2005) (L265, L569).
+  - Batteries:
+    - Price USD 70/kWh (-45%). Additions an estimated 250 GWh (+46%), or 247 GWh.
+    - Enough to shift 14% of new solar; 13% in 2024; 5% in 2022 (L117, L452, L460).
+  - New demand drivers:
+    - EV demand +66 TWh (8% of growth); 2024 +46 TWh (L404, L539).
+    - Data centres: about 60 TWh (7% of growth); IEA projects about 500 TWh (2025) rising to about 950 TWh (2030) (L541).
+- Key figures (countries and regions, 2025):
+  - China:
+    - Demand +503 TWh (+5.0%) to 10,573 TWh, a third of the world (33.3%) for the first time. 2024: +6.7% (+631 TWh) (L543, L553, L884, L904).
+    - Fossil -56 TWh (-0.9%): coal -71 TWh (-1.2%), gas +14 TWh (+4.3%) (L139, L233, L886-L910).
+    - Clean +561 TWh (+15%). Solar +336 TWh (+40%; 44% in 2024). Wind +138 TWh (+14%).
+    - Nuclear +37 TWh (+8.2%); 2023 +17, 2024 +16.
+    - Emissions -37 MtCO2e (-0.7%).
+    - Levels: solar 1,175 TWh vs the OECD's 1,078 and the US's 389 (L611); wind 1,135 TWh vs the G7's 819 (L663); coal 5,757 TWh (55%) (L908).
+  - US:
+    - Demand +131 TWh (+3.0%) to 4,536 TWh. 2024: +132 (+3.1%) (L545, L553, L954).
+    - Coal +85 TWh (+13%); gas -63 TWh (-3.4%); gas level 1,807 TWh (26% of global) (L703, L713, L841, L954-L970).
+    - Solar +85 TWh (+28%); wind +12.5 TWh.
+    - Emissions +52 MtCO2e (+3.1%) to 1,737 MtCO2e.
+  - India:
+    - Demand +49 TWh (+2.4%) to 2,083 TWh. 2024: +118 TWh (+6.2%) (L545, L553, L1084).
+    - Fossil -52 TWh (-3.3%); coal -44 TWh (-2.9%) (L139, L243, L839, L1084-L1106).
+    - Renewables +98 TWh (+24%): solar +53 TWh (+37%), wind +22 TWh (+28%), hydro +21 TWh (+14%).
+    - Emissions 1,395 MtCO2e (1,437 in 2024).
+  - EU:
+    - Demand +13.5 TWh (+0.5%) to 2,774 TWh. 2024: +1.9% (L1010, L1028).
+    - Solar +60 TWh (+20%); wind -12 TWh; hydro -43 TWh; gas +34 TWh (+8%); coal -14 TWh (-5%) (L1012-L1058).
+    - Emissions 587 MtCO2e; intensity 210 (211 in 2024).
+  - Russia: demand -17 TWh (-1.4%) (L551, L1144); fossil -7.6 TWh; gas -13 TWh; coal +4.4 TWh (L1146).
+  - Japan: demand +13.4 TWh (+1.3%); 2024 +1.0% (L1194). Fossil -4.9 TWh; gas -8.5 TWh; coal +2.5 TWh; emissions 492 MtCO2e (L1200, L1210).
+  - Brazil: demand +5 TWh (+0.6%) (L1252). Solar +17 TWh (+24%); wind +9 TWh (+8%); hydro -25 TWh (-6%; 2024 -13 TWh); emissions 83 MtCO2e (L1254-L1272).
+- Lists:
+  - Chapter-3 source order (L505). Seven largest power sectors (L864).
+  - Four countries that shifted at least a fifth of generation away from gas since 2019: Belarus, the UAE (2024 value; "2025 data not yet available"), Latvia, the Netherlands (L697).
+  - Largest gas rises: Taiwan (China) +16 TWh, Türkiye +15 TWh (L701). Largest gas declines: US, Thailand, Russia (L703-L707). Japan's gas fell for the eighth consecutive year (L709).
+  - Coal-share top three: Mongolia 86%, South Africa 81%, India 71%. 14 countries get more than half their power from coal (L847).
+  - Regional coal shares: Europe and the EU-27, North America, Oceania, Africa, Latin America, Middle East, Asia (L271-L281).
+  - Hydro-share leaders: Bhutan, Nepal, Paraguay (L807).
+  - Share of new solar that 2025 battery additions could shift: Chile 76%, Australia 53%, US about 20%, EU 9% (L468-L472).
+- Forecasts and expectations:
+  - Sources:
+    - "Both solar and wind are expected to overtake nuclear in 2026" (L133, L215).
+    - Solar capacity "will support sustained generation growth well into 2026" (L207).
+    - Fossil generation "is set to plateau before entering a more consistent decline in the early 2030s" (L390).
+    - IEA STEPS: demand 3.2% a year to 2035; a more recent IEA estimate is 3.6% over 2026-2030; clean 7.2% a year; fossil 10% below 2025 by 2035. BNEF ETS: about 20% lower (L392).
+    - In a 4.0% demand scenario, clean meets 97% of growth by 2035 (L394).
+  - Countries:
+    - India's demand is "expected to grow at over 6% annually through the early 2030s" (L340).
+    - Japan: more reactor restarts "expected in 2026" (L753).
+    - US data centres are "projected to account for around half of total US demand growth through 2030" (L954).
+  - Targets and pledges:
+    - India: 500 GW of non-fossil capacity by 2030 is under consideration for an increase; more than 250 GW of renewables by October 2025 (L350, L1114).
+    - Japan: 20% nuclear by 2040 (L1222); offshore wind "could provide 18%" by 2035 (L1224).
+    - EU: ban on Russian gas imports by the end of 2027 (L1038).
+- Hedged claims:
+  - L298 and L326: India "is unlikely to take China's place".
+  - L386: clean power "likely exceeding electricity demand growth over the next decade".
+  - L396: clean growth "could yet exceed these projections".
+  - L541: data centres "likely added around 60 TWh ... uncertainty ... remains high".
+  - L912: "the stabilisation of emissions in 2025 may indicate that coal generation is plateauing in China".
+  - L1096: "The lower growth in 2025 was likely an outlier due to weather conditions" (India).
+  - L380: Saudi Arabia "some estimates suggesting over 10 GW".
+- Rounded prose beside exact figures:
+  - Solar's share of demand growth: "three-quarters" / 75% (L111, L127, L169, L179, L322).
+  - Batteries: "estimated 250 GWh" (L117, L452) vs 247 GWh (L460).
+  - Nuclear changes: France +12 TWh (L185) vs 11.6 (L751); Japan +9 (L185) vs 9.2 (L753); "growing by 1%" (L731) vs 1.3% (L741).
+  - US: wind and solar met "three-quarters" (L944) vs 74% (L956, L980).
+  - Global averages: clean "43%" (L1046) vs 42.6% (L567, L974); gas "22%" (L976, L1162) vs 21.8% (L265, L695); solar "9%" (L426) vs 8.7% (L593).
+  - Coal share in 2015: 39% (L833) vs 38.7% (L263).
+  - Brazil wind share: 16% (L655) vs 15.7% (L1268).
+  - India per capita emissions: 0.95 tCO2e (L932) vs 1.0 (L1122).
+  - Multiples: "18 times" (L111, L565, L693) vs "nearly 18 times" (L591); solar "more than tenfold" (L133, L215) vs "almost 11 times" (L593); wind and solar share "more than tripling" (L263) vs "nearly four times" (L567).
+- Operative definitions, rules and scope exceptions:
+  - Low-carbon = "renewables and nuclear" (L169).
+  - India's renewables = solar, wind, hydro and bioenergy (L243).
+  - Emissions intensity = "the amount of greenhouse gas emissions produced per unit of electricity", in gCO2e (L265).
+  - Capacity units: DC vs AC (L237; GW(AC) at L348, L603, L1088, L1256).
+  - "larger electricity markets, defined as those with more than 5 TWh of total solar generation" (L617).
+  - Wind and hydro share rankings cover countries with at least 5 TWh (L667, L807).
+  - Hydro capacity factor = "the average output per unit of capacity" (L1264).
+  - The UAE gas share is a 2024 value (L697).
+- Amendments or contradictions (internal):
+  - Renewables over coal is described as "first time in 100 years" (L145, L169, L257), "first time in the modern power system/era" (L115, L143, L251-L253) and "For the first time on record" (L831). L261 says that in 1919 renewables "briefly exceeded coal power".
+  - India's 2025 demand growth: "third-lowest increase ... in the last decade" (L245) vs "third-lowest rate ... in the last 20 years" (L549) and "in two decades" (L523).
+  - World average solar per capita: 345 kWh (L374) vs 338 kWh in 2025 (L619).
+  - 2025 demand rise: "sixth-largest absolute annual rise ever recorded" (L191) vs "sixth-largest ... in the past two decades" (L527).
+  - "coal remained the single largest source of electricity globally" (L831) appears beside renewables exceeding coal.
+  - India: "In each of the previous four years, demand had grown by more than 100 TWh" (L245) and 2024 was +118 TWh (L1084).
+- Notes: chart placeholders 46 from L597. The methodology page is referenced (L237, L426) but not captured. The executive summary (L103-L156) and 2025 in Review (L161-L281) repeat chapters 3-4 (L499-L1290).
+- Coverage: full; L1-L1293 read in seven chunks (ledger).
+
+## D08 - Q3 Global Power Report: No fossil fuel growth expected in 2025
+
+- Source: docs/ember_global_reviews_q3_global_power_report_no_fossil_fuel_growth.txt, text/D08.txt L1-L148. Platform Doc 7.
+- Written or submitted by: Ember.
+  - Author: Nicolas Fulghum, Senior Data Analyst (L11-L15; quote L31-L34).
+  - Contributors (L140), 12 names: Rini Sucahyo, Chelsea Bruce-Lockhart, Ardhi Arsala Rahmani, Claire Kaelin, Eli Terry, Dave Jones, Libby Copsey, Richard Black, Euan Graham, Neha Rajput, Harriet Fox and Sam Hawkins (last).
+  - Header image credit: Alamy / Thierry GRUN – Aero (L145).
+- Type, date, edition: quarterly report with a forecast, dated 13 Nov 2025 (L9).
+- Period covered: Q1-Q3 2025 vs Q1-Q3 2024 (L19, L27); the last twelve months, Q4 2024-Q3 2025 (L100, L103); a full-year 2025 forecast (L19, L71-L79).
+- Scope and method (L127-L134): Ember monthly data for 88 countries from over 70 sources, covering >90% of global demand, with other countries estimated; forecast methodology at L134.
+- Key figures (Q1-Q3 2025):
+  - Solar:
+    - +498 TWh (+31%), the largest increase ever over a nine-month period.
+    - Output already exceeds all of 2024 (L27, L44, L51).
+    - The same period of 2024 grew 29% (L53).
+  - Wind +137 TWh (+7.6%). Wind and solar +635 TWh vs demand +603 TWh (+2.7%) (L27, L44).
+  - Nuclear +33 TWh (+1.7%); hydro -54 TWh (-1.6%); fossil -17 TWh (-0.1%) (L46).
+  - Shares (L48):
+    - Wind and solar 15.2% to 17.6%.
+    - Fossil 58.7% to 57.1%. Coal 34.0% to 33.1%.
+    - Renewables 32.5% to 34.2%.
+    - Low-carbon 43.0%, "up from 41.3% in 2024".
+  - China: solar +280 TWh (+44%); wind +102 TWh (+14%); nuclear +30 TWh (+9.3%) (L59-L63). US solar +71 TWh (+30%); EU solar +52 TWh (+20%) (L59).
+  - Fossil:
+    - China -52 TWh (-1.1%) and India -34 TWh (-3.3%) (L29, L67).
+    - China -0.7% over the last twelve months (L100).
+    - India -2.5% over the twelve months to Q3; India wind and solar +42 TWh (+25%) (L103-L105).
+  - 2024 fossil growth: +322 TWh (+1.8%) (L83).
+- Forecasts:
+  - Fossil generation flat for full-year 2025, which would be the first year without an increase since the pandemic (L7, L23, L25, L29, L71, L77).
+  - Solar growth in 2025 of "around 640 TWh" (L53).
+  - 2025 demand: "the sixth largest absolute increase in electricity demand ever at 831 TWh" (L79).
+  - India: the decline is "likely temporary", and a rebound is "expected" if temperatures normalise "in late 2025 and into 2026" (L107).
+- Hedged claims:
+  - L31: fossil power "now appears to be entering a period of stagnation".
+  - L85: "looks set to avoid" a fossil increase.
+  - L87: "it is yet unclear whether fossil generation will show a small increase or fall, but any change is likely to be minor".
+  - L107: India's decline is "likely temporary".
+- Tables: none.
+- Lists: contributors (L140).
+- Rounded prose beside exact figures: only the forecast "around 640 TWh" (L53).
+- Notes:
+  - D08 cites D03 by title ("Ember's Global Electricity Mid-Year Insights 2025") at L48 (renewables above coal) and L103 (India records).
+  - 2009 and 2020 are named as earlier years of fossil stagnation or decline (L79).
+  - India is called "the third-largest power sector" (L92).
+- Operative definitions, rules and scope exceptions: scope and method as above. Forecast basis (L134): "economic growth expectations, historical trends in demand growth ... capacity build-out".
+- Amendments or contradictions:
+  - L48: the low-carbon comparison base is worded "in 2024", while the other L48 shares compare against Q1-Q3 2024.
+  - L96: China and India fossil falls are "continuing the downward trend that first emerged during 2024".
+- Coverage: full; L1-L148 read.
+
+## Shared ground (navigation only)
+
+### Issuer, people and organisations in more than one document
+
+- Issuer: all eight documents are issued by Ember, with no co-issuers. Self-descriptions appear at D01 L118 and D05 L55.
+- Ember people, with roles as printed and their locations:
+  - Malgorzata / Małgorzata Wiatros-Motyka:
+    - Author of D01 (L13), D02 (L13) and D03 (L13).
+    - Bylined "Senior Energy Analyst"; quotes signed "Senior Electricity Analyst" (D01 L40, D02 L100, D03 L76).
+  - Nicolas Fulghum:
+    - Author of D02 (L19), D06 (L21), D07 (L15) and D08 (L11).
+    - Data contributor in D05 (L599); acknowledged in D01 (L144); quoted in D08 (L33).
+  - Dave Jones:
+    - Author of D04 (L13) and D05 (L13), bylined "Chief Analyst" and signed "Global Insights Programme Director" (D04 L80, D05 L116).
+    - Also D05 analysis contributor (L601), D01 acknowledgements (L144) and D08 contributors (L140).
+  - Katye Altieri: author of D06 (L27) and D07 (L27).
+  - Kostantsa Rangelova: author of D03 (L19) and D07 (L33).
+  - Euan Graham: author of D06 (L15); contributor to D08 (L140).
+  - Wilmar Suarez / Suárez: author of D07 (L21); acknowledged in D01 (L144).
+  - Aditya Lolla: Asia Programme Director (D04 L90, quote); D05 contributor (L601); Managing Director (D07 L156, quote).
+  - Phil MacDonald: D05 contributor (L601); Managing Director (D06 L106, quote).
+  - Bryony Worthington: D05 contributor (L601); Founder and Chair of the Board (D07 L101, foreword).
+  - Muyi Yang: D04 L84-L85 (quote), D05 L601, D01 L144.
+  - In both the D01 acknowledgements (L144) and the D08 contributors (L140): Richard Black, Ardhi Arsala Rahmani, Claire Kaelin, Libby Copsey, Dave Jones.
+- People from outside Ember:
+  - Bruce Douglas, CEO, Global Renewables Alliance: D02 L104-L105 and D06 L120-L121.
+  - Xunpeng Shi, President of ISETS: peer reviewer in D04 (L144); quoted in D06 (L115-L116).
+  - Sonia Dunlop: D03 only. Mike Hemsley: D06 only.
+- Organisations that are mentioned, not issuers:
+  - IEA: D02 L162-L196; D04 L131; D05 L135-L506; D06 L343-L443; D07 L386-L392, L492, L541.
+  - IPCC: D01 L131; D02 L162; D04 L120; D05 L541, L567.
+  - EIA: D02 L313; D03 L293; D04 L125; D05 L517.
+  - IMF: D07 L223, L245.
+  - BNEF / BloombergNEF: D06 L367, L405; D07 L386, L392.
+  - GWEC and LBNL: D06 L361-L367.
+  - China Electricity Council: D02 L267. National Energy Administration: D07 L233. Energy Institute: D07 L67, L97.
+  - ENTSO-E: D01 L124, D08 L127. Masdar: D06 L313.
+  - BP, WRI, GEM, IRENA, Eurostat, UN: D04, D05.
+- Media lists appear in D02, D03, D05, D06 and D07; Reuters is in all five.
+
+### Country groupings and coverage statements
+
+- G7: membership is never listed in full.
+  - Members named: UK, Germany, Italy, Japan (D01 L33, L104); US (D01 L98).
+  - Indirect references: "all other G7 members" (D06 L1032); Japan vs the "rest of the G7" (D06 L1210, L1228).
+  - G7 aggregates: D01 L98-L102 (2025 gas and renewables); D07 L663 (wind, 819 TWh).
+- G20: D04 L57, L67, L104; D05 L476, L480; D06 L1166, L1188, L1286, L1292, L1296; D07 L1276, L1286. Membership is not listed.
+- OECD: D05 L233; D06 L263, L279, L283, L447; D07 L113, L314, L360, L611, L922. Membership is not listed.
+- BRICS: D06 L281 (China, India and Brazil are among the top five solar generators).
+- EU-27: D04 L125; D07 L211; D07 L271 (19 of 27 countries below 5% coal).
+- Named country groups:
+  - "Top five CO2 emitting countries and regions" (D02 L47) = China, US, EU, India, Japan.
+  - "Top four CO2-emitting economies" (D03 L51, L247) = China, India, EU, US.
+  - "Seven largest" (D06 L924, D07 L864) = China, US, EU, India, Russia, Japan, Brazil, 72% of demand in both editions.
+- Coverage by edition:
+
+  | Doc | Data | Countries | Coverage |
+  |---|---|---|---|
+  | D04 | 2020 annual | 217 | 90%, from 68 countries |
+  | D05 | 2021 annual | 209 | 75 countries, 93% |
+  | D06 | 2024 annual | 215 | 88 countries, 93% |
+  | D07 | 2025 annual | 215 | 91 countries, 93% |
+  | D01 | 2025 annual | 215 | 91 countries |
+  | D02 | monthly | 78 | 92% |
+  | D03 | monthly | 88 | 93% |
+  | D08 | monthly | 88 | >70 sources, >90% |
+
+### Editions, series and cross-references
+
+- Annual review series:
+  - D04: 2021 edition, 2020 data; edition number not stated.
+  - D05: "third annual" edition, 2021 data.
+  - D06: "sixth annual" edition, 2024 data.
+  - D07: "seventh annual" edition, 2025 data.
+  - Editions for 2022 and 2023 data are not in the bundle.
+- Mid-year series: D02 covers H1-2023; D03 covers H1-2025.
+- Sequence for 2025: D06 (April 2025 outlook), then D03 (H1), D08 (Q1-Q3 plus forecast), D07 (full-year actual) and D01 (full-year gas analysis).
+- Only in-bundle citation: D08 L48 and L103 cite D03 by title.
+- Ember work cited but not in the bundle: D02 L93 (an earlier 2023 analysis); D02 L343 (EU review); D03 L267 (China Energy Transition Review 2025); D04 L120 and D05 L543 (bioenergy reports); D06 L188 (heatwave analysis); D07 L67.
+- Running counts across editions:
+  - Solar as the fastest-growing source:
+    - 2021: 17th year (D05 L288).
+    - 2024: 20th year (D06 L87, L170).
+    - 2025: "on track ... 21st consecutive year" if the pace continues (D03 L158); 21 consecutive years (D07 L217).
+  - Solar as the largest absolute increase:
+    - 2024: third year in a row (D06 L87, L170, L247).
+    - 2025: fourth year "in a row" if the pace continues (D03 L158); "fourth year running" (D07 L205).
+  - Gas share decline: four consecutive years to 2024 (D06 L550, L847); fifth consecutive year in 2025 (D01 L27; D07 L683).
+  - EU coal decline: second consecutive year in 2024 (D06 L1068); third in 2025 (D07 L1020).
+  - EU gas: fifth year of decline in 2024 (D06 L855, L1068); +8% in 2025 (D07 L1022).
+  - Taiwan nuclear decline: fifth year in 2024 (D06 L815); sixth in 2025 (D07 L755).
+  - Annual review edition numbers: third (D05 L47), sixth (D06 L49), seventh (D07 L61).
+
+### Same quantity and period printed in more than one place (values as printed)
+
+- Calendar 2024: D06 (actual) vs D07 (as the 2024 base year) and D08.
+  - Global demand growth: D06 +4.0% (+1,172 TWh), with a total of 30,856 TWh (L180, L494-L496) | D07 +4.3% (+1,265 TWh) (L191, L390, L525).
+  - Solar:
+    - Generation: D06 2,131 TWh, +474 TWh (+29%) (L170, L663) | D07 2,143 TWh, +479 TWh (L201, L211, L589).
+    - 2023 increase: D06 +327 TWh (L665) | D07 +331 TWh (L589, L890).
+    - Capacity: D06 585 GW (L172, L257) | D07 582 GW (L207).
+  - Wind: D06 +182 TWh (+7.9%), 2,494 TWh (L162, L560, L709) | D07 +190 TWh (+8.2%) (L181).
+  - Gas: D06 +103 TWh (+1.6%), 6,788 TWh (L564, L845) | D07 +183 TWh (+2.7%) (L693).
+  - Fossil: D06 +245 TWh (+1.4%) (L93, L200, L556) | D08 +322 TWh (+1.8%) (L83).
+  - Emissions: D06 +1.6% (+223 MtCO2), 14.6 billion t (L200, L598) | D07 +1.7% (+237 MtCO2e) (L229).
+  - Emissions intensity: D06 473 gCO2/kWh (L600) | D07 471 gCO2e (L265).
+  - Low-carbon share: D06 40.9% (full year) | D08 "41.3% in 2024" (L48).
+  - China:
+    - Demand: D06 +6.6% (+623 TWh), 10,066 TWh (L500, L506, L946) | D07 +6.7% (+631 TWh) (L543).
+    - Per capita demand: 7.1 MWh in both (D06 L516; D07 L930).
+    - Solar growth: D06 +43% (L273, L673, L952) | D07 44% (L599).
+    - Nuclear: D06 +10 TWh (L811) | D07 +16 TWh (L898).
+    - Wind and solar share: 18% in both (D06 L976; D07 L922).
+  - US:
+    - Demand: D06 +3% (+128 TWh) (L500, L1008) | D07 +132 TWh (+3.1%) (L954).
+    - Wind: D06 +32 TWh (L723) | D07 +31 TWh (L653).
+    - Nuclear: 782 TWh in both (D06 L819; D07 L759).
+  - India:
+    - Demand: D06 +5% (+98 TWh) (L500, L1118) | D07 +118 TWh (+6.2%) (L1084) and "more than 100 TWh" in each of the four years before 2025 (L245).
+    - Emissions: D06 1,457 MtCO2 (L608, L1134) | D07 1,437 MtCO2e (L1106).
+    - Emissions intensity: D06 708 (L614, L1146) | D07 705 gCO2e (L1118).
+    - Coal share: 75% in both (D06 L907, L1140; D07 L1092).
+    - Hydro: D06 +4.7% (L1120) | D07 +4.8% (L1090).
+  - EU:
+    - Demand: D06 +1.1% (+30 TWh) (L1070) | D07 +1.9% (L1010).
+    - Nuclear: D06 +4.6% (L1066) | D07 +4.8% (L1024).
+    - Emissions intensity: D06 213 gCO2/kWh (L1092) | D07 211 gCO2e (L1058).
+  - Japan demand: D06 +0.9% (+9 TWh) (L1220) | D07 +1.0% (L1194).
+  - Brazil hydro: D06 -14 TWh (-3.2%) (L769, L1272) | D07 -13 TWh (-3%) (L799, L1258).
+  - Solar shares: D06 Hungary 25%, Chile 22% (L271, L685) | D07 Hungary 24%, Chile 23% (L613).
+  - EV demand growth: D06 +62 TWh (L331) | D07 +46 TWh (L404, L539).
+  - Gas share peak in 2020: D06 23.9% (L550) and "24%" (L839, L847); D01 and D07 23.9%.
+- Leaders and ranks, 2024 (D06) vs 2025 (D07):
+  - Coal-share leaders:
+    - D06 2024: Kosovo 92%, Mongolia 86%, South Africa 82% (L907).
+    - D07 2025: "remained the top three": Mongolia 86%, South Africa 81%, India 71% (L847).
+  - Coal per capita:
+    - D06 2024: Taiwan highest at 5,349 kWh; Australia 4,768 (L911).
+    - D07 2025: Australia "still had the highest", 4,534 (L849).
+  - Nuclear per capita:
+    - D06: Finland first in 2023-2024, ahead of France (L823).
+    - D07: France highest in 2025 (L765).
+  - Brazil's per capita emissions:
+    - D06: "the lowest in the G20" in 2024 (L1296).
+    - D07: "second-lowest ... just behind France" in 2025 (L1286).
+  - Brazil's solar rank:
+    - D06: fifth in 2024 (L683, L1260).
+    - D07: sixth in 2025 (L1256).
+- Calendar 2025: D07 vs D01.
+  - Demand total: D07 31,779 TWh (L525) | D01 31,774 TWh (L50).
+  - Gas: D07 +36 TWh (+0.5%) and "18 times" (L225, L565, L693) | D01 +38 TWh (+0.6%) and "17 times" (L58).
+  - Same in both:
+    - Solar: +636 TWh (+30%) (D07 L133; D01 L58).
+    - Gas share: 21.8% (D07 L265, L695; D01 L29, L60).
+    - US share of global gas: 26% (D07 L966; D01 L98); D07 prints US gas at 1,807 TWh (L713).
+  - UK coal: "phased out completely in 2024" (D01 L84) | 2025 system "fully coal-free" (D07 L835).
+- Calendar 2021, 2020 and 2015 across editions:
+  - 2021 demand: D05 +1,414 TWh (+5.4%), "the most ever" (L93, L203) | D07 2021 record +1,536 TWh (L527).
+  - 2021 wind increase: D05 +227 TWh, "highest absolute increase ever" (L316) | D02 +268 TWh, "largest growth ... in history" (L212) | D07 record +265 TWh (L181).
+  - 2020 wind and solar share: D04 9.4% (L57) | D05 9.3% (L85, L149).
+  - 2015 wind and solar share: D04 4.6% (L57) and D05 4.6% (L85, L149) | D07 4.5% (L263, L567).
+  - 2020 demand: D04 -0.1% (L23, L51) | D05 "a small 1% fall" (L203, L496).
+  - 2020 coal: D04 -4% (-346 TWh) (L63) | D05 4.2% fall (L217).
+  - China's share of world coal in 2020: D04 53% (L69) | D05 54% (L217).
+  - US share of global gas growth:
+    - 2015-2020: D04 "half" (L75) | D05 46% (L430).
+    - Other windows: D06 43% since 2015, to 2024 (L576, L849, L1018); D01 "just under one-third" for 2015-2025 (L90).
+  - 2015 solar: 256 TWh (D06 L570; D07 L133, L215, L593).
+  - 2015 solar share: 1.1% (D05 L292; D07 L593).
+  - 2021 solar share: 3.7% (D05 L292) | 3.8% (D03 L162).
+  - China in 2015: "since 2015 when demand fell" (D06 L413) | +19 TWh (+0.3%) (D07 L233).
+  - China per capita demand vs India: "six times" in 2021 (D05 L502) | "five times" in 2024 (D06 L488, L984) | "more than five times" in 2025 (D07 L930).
+- Unit bases differ:
+  - Emissions: D02-D06 report CO2 (mtCO2 / MtCO2, gCO2/kWh); D07 reports CO2e (MtCO2e, gCO2e/kWh); D05's methods define lifecycle all-gas CO2e (L567) while the text says "CO2".
+  - Capacity: D06 states a DC default but gives China in GWac (L403); D07 uses GW(DC) for global and China (L237) and GW(AC) for India and Brazil (L348, L603, L1088, L1256).
+
+### Partial-period vs full-year figures for the same calendar year
+
+- 2023, D02 (H1) vs D06 (full year):
+  - Demand: H1 +0.4% (D02 L234) | FY +2.6% (+758 TWh) (D06 L182).
+  - Emissions: H1 +0.2% (D02 L122) | FY +1.5% (D06 L598).
+  - Fossil: H1 +9 TWh (D02 L132) | FY +246 TWh (D06 L93, L200).
+  - China coal: H1 +203 TWh (D02 L281) | FY +341 TWh (D06 L895, L954).
+  - China hydro: H1 -129 TWh (D02 L150) | FY -72 TWh (D06 L767).
+  - US coal: H1 -112 TWh (-27%) (D02 L303) | FY -156 TWh (-19%) (D06 L899).
+  - US wind: H1 -13 TWh (D02 L216, L307) | FY 2023 -13 TWh (D06 L723).
+  - Japan fossil: H1 -45 TWh (D02 L395) | FY -63 TWh (D06 L1220).
+  - India demand: H1 +3.1% (D02 L363) | FY +7% (D06 L1118).
+  - Solar: H1 +104 TWh (D02 L184) | FY +327 TWh (D06) / +331 TWh (D07).
+- 2025, D03 (H1) | D08 (Q1-Q3) | D07 (full year), plus D01 where noted:
+  - Global totals:
+
+    | Quantity | D03 H1 | D08 Q1-Q3 | D07 full year |
+    |---|---|---|---|
+    | Demand (TWh) | +369 (+2.6%) L136 | +603 (+2.7%) L27; forecast 831 L79 | +849 (+2.8%) L179 |
+    | Solar (TWh) | +306 (+31%) L89 | +498 (+31%) L27; forecast ~640 L53 | +636 (+30%) L133; D01 L58 same |
+    | Wind (TWh) | +97 (+7.7%) | +137 (+7.6%) | +205 (+8.2%) |
+    | Nuclear (TWh) | +33 (+2.5%) | +33 (+1.7%) | +35 (+1.3%) |
+    | Hydro (TWh) | -42 (-2%) | -54 (-1.6%) | +3 (+0.1%) |
+    | Fossil (TWh) | -27 (-0.3%) | -17 (-0.1%) | -38 (-0.2%) |
+    | Coal | -31 TWh (-0.6%); share 33.1% | share 33.1% (from 34.0%) | -63 TWh (-0.6%); share 33.0% |
+    | Gas | -6.3 TWh (-0.2%); share 23% | not printed | +36 TWh (+0.5%) in D07 / +38 TWh (+0.6%) in D01; share 21.8% |
+    | Emissions | -12 MtCO2 (-0.2%) to 6,963 | not printed | -6 MtCO2e (-0.04%) |
+
+  - Shares:
+
+    | Share | D03 H1 | D08 Q1-Q3 | D07 full year |
+    |---|---|---|---|
+    | Renewables | 34.3% (from 32.7%) | 34.2% (from 32.5%) | 33.8% |
+    | Solar | 8.8% (from 6.9%) | not printed | 8.7% |
+    | Wind | 9.2% | not printed | 8.5% |
+    | Wind and solar | not printed | 17.6% (from 15.2%) | 17.3% |
+    | Low-carbon | not printed | 43.0% | 42.6% |
+    | Fossil | not printed | 57.1% (from 58.7%) | 57.4% |
+
+  - China and India fossil:
+    - China: H1 coal -56 TWh (-2%) (D03 L277) | -52 TWh (-1.1%) (D08 L29) | -56 TWh (-0.9%), with coal -71 TWh (D07 L139, L900).
+    - India: H1 coal -22 TWh and gas -7.1 TWh (D03 L331) | -34 TWh (-3.3%) (D08 L29) | -52 TWh (-3.3%), with coal -44 TWh (D07 L139, L1092).
+  - Country source changes, H1 | Q1-Q3 | full year:
+    - China solar: +168 (+43%) | +280 (+44%) | +336 (+40%).
+    - US solar: +44 (+30%) | +71 (+30%) | +85 (+28%).
+    - EU solar: +37 (+24%) | +52 (+20%) | +60 (+20%).
+    - China wind: +79 (+16%) | +102 (+14%) | +138 (+14%).
+    - China nuclear: +24 (+11%) | +30 (+9.3%) | +37 (+8.2%).
+    - India solar: +17 (+25%) | wind and solar combined +42 (+25%) | +53 (+37%).
+    - India wind: +11 (+29%) | not printed | +22 (+28%).
+  - US and EU, H1 vs full year:
+    - US demand: +76 (+3.6%) vs +131 (+3%).
+    - US gas: -34 (-3.9%) vs -63 (-3.4%).
+    - US coal: +51 (+17%) vs +85 (+13%).
+    - EU demand: +9 (+0.7%) vs +13.5 (+0.5%).
+    - EU gas: +25 (+14%) vs +34 (+8%).
+    - EU wind: -21 vs -12.
+    - EU hydro: -33 vs -43.
+  - Other pairs:
+    - Solar capacity: H1 380 GW (D03 L180) | full year 647 GW (D07 L207).
+    - Pakistan solar share: H1 21.9% (D03 L166) | full year 18.8% (D07 L605).
+    - Hungary solar share: H1 "nearly 30%" (D03 L166) | full year 27% (D07 L613).
+  - Renewables overtaking coal:
+    - H1: "first time on record" (D03 L101, L198).
+    - Q1-Q3: renewables above coal (D08 L48).
+    - Full year: "first time in 100 years" (D07 L145).
+
+### Forecast or expectation, then a later document reporting the same period
+
+- D02 L93 (2023 may be the first year of structurally falling power emissions; "too close to call") -> D06 L598 (2023 emissions +1.5%) and L93/L200 (2023 fossil +246 TWh).
+- D02 L158 (2023 likely a record-low global hydro capacity factor) -> D06 L158 and L761 (2023 droughts and hydro decline); D07 L789 (China capacity factor 34% in 2023). No global 2023 capacity factor is printed.
+- D02 L285 (China's H2-2023 hydro could recover) -> D06 L767 (China hydro fell 72 TWh in 2023).
+- D02 L303 (US demand expected to rise again in 2024) -> D06 L1008 (+3%, +128 TWh) and D07 L954 (+132 TWh).
+- D05 L324 (China's offshore build-out will carry wind growth into 2022) -> D02 L212 (global wind +251 TWh in 2022). No 2022 China wind figure is in the bundle.
+- D06 L103 (a fossil jump is very unlikely in 2025) and L425 (2025 may be China's first fossil decline since 2015) -> D03 L277 (H1 China coal fall), D08 L29 (Q1-Q3 -52 TWh) and D07 L139, L233, L900 (full year -56 TWh, the first since 2015).
+- D06 L429 (India likely to have the largest fossil growth in coming years) -> D07 L139 and L1092 (India's 2025 fossil -52 TWh, coal -44 TWh).
+- D06 L351 and L353 (2025 demand scenarios; China's industrial growth unlikely to be as high) -> D07 L191, L531-L537 and L543 (2025 +2.8%; no temperature effect; China industrial growth 5.1% to 3.7%).
+- D06 L162 and L715 (wind likely to return to higher growth) -> D07 L181 (2025 +205 TWh, +8.2%).
+- D06 L405 (BNEF: China's 2025 solar deployment +12%) -> D07 L237 (China 378 GW(DC) in 2025). D06's 2024 China figure is 277 GWac (L403), on a different unit basis.
+- D06 L343-L345 (IEA 3.3% to 2030; 3.7% for 2025-2027) -> D07 L392 (later IEA figures: 3.2% to 2035, 3.6% for 2026-2030); actual 2025 growth +2.8% (D07 L179).
+- D03 L158 (21st consecutive year as fastest-growing; fourth year out-growing wind in absolute terms, conditional) -> D07 L217 and L205.
+- D03 L319 (India H2 demand rebound, likely higher coal) -> D07 L1084 and L1092 (full-year demand +2.4%; coal -44 TWh).
+- D03 L341 (EU demand to keep rising moderately) -> D07 L1010 (+0.5%).
+- D03 L226 (further nuclear growth expected) -> D07 L741 (+1.3%, a record 2,812 TWh).
+- D08 L53 (solar about 640 TWh) -> D07 L133 (+636 TWh) and D01 L58 (+636 TWh).
+- D08 L79 (2025 demand rise the sixth-largest ever, at 831 TWh) -> D07 L191 and L527 (+849 TWh, sixth-largest).
+- D08 L71 and L87 (fossil flat; any change likely minor) -> D07 L127 and L225 (-38 TWh, -0.2%).
+- D08 L107 (India's decline likely temporary; rebound expected late 2025/2026) -> D07 L139 and L243 (full-year 2025 India fossil -52 TWh) and D07 L1096 (2025's low growth "likely an outlier").
+- No later document in the bundle reports on: D07 L133/L215 (solar and wind expected to overtake nuclear in 2026); D07 L753 (Japanese restarts in 2026); D01 L42 (2026 LNG disruptions); D07 L340 (India demand to the early 2030s).
+
+### First-time, record, rank and "only" statements (period in brackets)
+
+- First time, or first since:
+  - D02 (H1-2023):
+    - L275: China's first six-month period with more than a sixth from wind and solar.
+    - L333: the EU's first recorded month (May 2023) with wind and solar above fossil.
+    - L345: EU coal below 10% for the first time ever, in May.
+    - L337: Portugal 75% and Denmark 79% renewables for the first time.
+  - D03 L101 and L198: renewables above coal for the first time on record (H1-2025).
+  - D04 L51: demand's first fall since 2009 (2020).
+  - D05 (2021):
+    - L85: wind and solar above 10% for the first time.
+    - L105: fossil share's first rise since 2012.
+    - L472: carbon intensity's first rise since 2011.
+    - L239: China's coal share failed to fall for the first time since 2011.
+  - D06 (2024):
+    - L142: low-carbon above 40% for the first time since the 1940s.
+    - L150: fossil below 60% for the first time since the 1940s.
+    - L144: wind and solar above hydro for the first time.
+    - L548: wind and solar had surpassed nuclear globally in 2021.
+    - L180: demand above 30,000 TWh for the first time.
+    - L488: China's per capita demand above France's for the first time.
+    - L273: solar the largest new source in China for the first time.
+    - L608: India at 10% of global emissions for the first time.
+    - L998 and L1022: US wind and solar above coal for the first time.
+    - L1052 and L1086: EU solar above coal for the first time.
+    - L976: China's wind and solar share above the US's for the first time.
+    - L291: Nigeria and Morocco imported more than 1 GW for the first time.
+  - D07 (2025):
+    - L107 and L127: no fossil rise for the first time since 2020, the fifth such year this century.
+    - L139: China and India fossil both fell for the first time this century.
+    - L145 and L257: renewables above coal for the first time in 100 years.
+    - L145 and L259: coal below one-third for the first time in history.
+    - L215: solar above wind for the first time.
+    - L113 and L1088: India's solar capacity additions above the US's for the first time.
+    - L553: China at a third of world demand for the first time.
+    - L948 and L962: US wind and solar above nuclear for the first time.
+    - L1000 and L1040: EU wind and solar above fossil for the first time.
+    - L1082 and L1098: India's solar above hydro for the first time.
+    - L1242 and L1266: Brazil's solar above fossil for the first time.
+  - D08 L25 and L29: 2025 forecast as the first year without a fossil increase since the pandemic.
+  - D01 L27: fifth consecutive year of gas-share decline (2025).
+- "Only" statements:
+  - D02 L63, L77, L180: wind and solar were the only sources to increase share significantly (H1-2023).
+  - D02 L134: Japan and the EU were the only high-income, high-polluting economies where both coal and gas fell (H1-2023).
+  - D04 L67: China was the only G20 country with a large coal increase (2020).
+  - D05 L167: Viet Nam was the only Asian country to meet its demand rise with new wind and solar (2021).
+  - D05 L233: of the remaining top-10 coal countries, only Germany had a 2030 phase-out commitment.
+  - D05 L378: China was the only country, "bar Japan", substantially increasing bioenergy.
+  - D05 L402: China was the only country significantly increasing nuclear.
+  - D06 L600: 2021 was the only increase in emissions intensity in ten years.
+  - D06 L759: China was the only country to install more than 1 GW of hydro (2023).
+  - D06 L821: only three countries got more than 50% from nuclear: France, Slovakia, Ukraine (2024).
+  - D07 L111 and L565: gas was the only fossil fuel that grew (2025).
+  - D07 L281: Asia was the only region where coal exceeded renewables (2025).
+  - D07 L841: 2025 was only the second US coal increase in a decade.
+- Ranks:
+  - Solar generators:
+    - India: third-largest from 2022 (D06 L281); third-largest in 2025 (D07 L1098).
+    - Japan: fourth-largest (D06 L1214; D07 L1224).
+    - Brazil: fifth in 2024 (D06 L281, L683, L1260) | sixth in 2025 (D07 L1256).
+  - Wind generators:
+    - Brazil: fourth in total wind (D06 L1270; D07 L1256).
+    - India: fifth-largest in 2025 (D07 L639, L665, L1102).
+    - Germany: third-largest wind country, 78 GW (D07 L237).
+  - Nuclear: Japan sixth-largest generator in 2025, up from seventh (D07 L763).
+  - Emitters:
+    - 2024 order: China, US, India, Russia (D06 L606-L608, L1134, L1180).
+    - India third-largest in 2025 (D07 L1106); Japan fifth-largest (D07 L1224).
+  - Demand: India is "the third-largest power sector" (D08 L92) and had the third-highest total demand (D07 L1120).
+
+### Definitions and scope across editions
+
+- "Renewables" includes bioenergy: D01 L131-L133; D04 L120; D05 L541. D07 L243 lists India's renewables as solar, wind, hydro and bioenergy.
+- "Other renewables":
+  - Geothermal, tidal and wave (D04 L116; D05 L535).
+  - "Other renewables, such as bioenergy and geothermal power" (D06 L146).
+- "Other fossil":
+  - Oil and petroleum products plus manufactured gases (D04 L118).
+  - The same "and waste" (D05 L537). D04 L114 maps some historical waste to bioenergy.
+  - Described as "mainly oil" or "mostly from oil" in D02 L132/L144 and D07 L225.
+- "Low-carbon" / "clean":
+  - Renewables plus nuclear (D06 L81; D07 L169).
+  - D05 L151 calls hydro, bioenergy and nuclear "other zero emissions sources".
+  - D06 L950 lists China's clean sources as wind, solar, hydro, nuclear and bioenergy.
+- Hydro excludes pumped hydro where possible (D04 L112; D05 L533).
+- Solar includes thermal and PV, with distributed solar where possible (D04 L110; D05 L531). Rooftop solar is estimated where reporting is inaccurate (D06 L174).
+- Capacity factor wording: D02 L154; D06 L160; D07 L1264.
+- Emissions intensity wording: D06 L600 (CO2 per unit); D07 L265 (greenhouse gases per unit, in gCO2e).
+- Gas "passed peak" rule: D01 L31 and L138, with caveats at L140.
+- Share-ranking thresholds: above 5 TWh of solar or wind (D06 L685, L731; D07 L617, L667); at least 5 TWh of hydro (D07 L807); the top-20 solar generators (D03 L164).
+- Demand adjustments: temperature only in D06 (L186-L196); temperature and leap year in D07 (L529-L537).
+
+### Overview passages that repeat detailed results
+
+- D01: summary L23-L44 repeats the body, L46-L112.
+- D02: highlights L27-L41 and key takeaways L65-L89 repeat the global analysis (L114-L240) and country sections (L245-L403).
+- D03: highlights L35-L45 and key takeaways L83-L113 repeat L118-L236 and L241-L355. Conclusion at L366-L374.
+- D04: highlights and key takeaways L19-L75. No detailed chapters were captured.
+- D05: highlights and executive summary L21-L111 repeat global trends (L131-L263) and the data sections (L274-L506).
+- D06: highlights and executive summary L33-L121, and 2024 in review L128-L218, repeat chapters 3-5 (L476-L1298).
+- D07: highlights and executive summary L45-L156, and 2025 in Review L161-L281, repeat chapters 3-4 (L499-L1290).
+- D08: summary L21-L31 repeats L36-L113.

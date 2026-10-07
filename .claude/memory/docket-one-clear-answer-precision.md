@@ -41,6 +41,19 @@ metadata:
   one decimal place (5,175 / 7,926 = 65.29%, so 65.3%). It is either that figure truncated or a
   wrong-column ratio (5,175 / 7,936 = 65.21%).
 
+- A vague tie phrase makes the decoy defensible to the platform reviewer, even when the documents'
+  arithmetic rules it out (aq-01278 q02, 2026-10-06, "Revision requested" after a Medium-tier difficulty
+  pass). The question quoted Chubb's Q1 "2.8% in commercial insurance" and asked for Q2 "On that same
+  basis"; only commercial plus agriculture reproduces 2.8%, but the reviewer wrote: ""On the same basis"
+  is undefined ... Doc 9 states "North America Commercial was down 2.3%", so -2.3% is defensible; most model
+  attempts gave it." The local review had called -2.3% indefensible by that very arithmetic. The fix the
+  reviewer proposed names the scope with a concrete noun: "Asking for the business lines behind the 2.8%
+  keeps Doc 4 necessary and makes -1.3% the only answer." The difficulty check had already printed "This
+  question may be too vague: several solvers agreed on an answer that is not your gold". Treat that
+  advisory, with the wrong attempts clustered on one printed figure, as a likely revision request: before
+  submitting, replace the tie phrase with the concrete scope and re-measure. The reviewer also flagged
+  "change" ("percentage points vs percent, absolute vs relative, which line item"): write "percentage
+  change in net premiums written ... from a year earlier".
 - A document's own working term creates a defensible reading. aq-docket-trial-06 q02 (local,
   2026-10-06) asked about "all U.S. credit unions without federal deposit insurance", with a gold
   that counted two uninsured credit unions. GAO-03-971 uses "depository institutions lacking federal
@@ -66,6 +79,18 @@ rounding choice. See also [[docket-local-solver-calibration]] (numeric levers an
 solver) and [[docket-form-automated-checks]] (how to write the calculation step).
 
 ## Evidence and history
+
+- 2026-10-06, aq-01321 q02 (form model check, screenshot from the user): a twelve-month (R&D + SG&A) /
+  revenue ratio to two decimals, whose exact numerator exists only as a three-release rebuild, while the
+  latest release says "Over the past 12 months we invested $3.9 billion in R&D and SG&A". With the
+  user's wording ("total amount spent on research & development and selling, general, and administrative
+  expenses"), the form blocked it: "This question is too vague to submit: two independent solvers ...
+  Both answered "20.05%"" (the rounded-prose route) and listed the prose phrase among "3 matches" for the
+  description ("Narrow the description."). So a rounded figure stated for exactly the asked quantity and
+  window counts as a second answer even at a precision it cannot support; the rounding lever only works
+  when the question's description cannot match the rounded statement (e.g. it names the income-statement
+  lines), which also removes most of the pull. Mirroring the document's own verb ("spent" for "invested")
+  strengthens the competing reading.
 
 - 2026-10-04: aq-docket-trial-04 q03 rev 1, platform reviewer, returned with "This is your last
   attempt". Verbatim: "The question was answered inconsistently. Make sure it has exactly one
@@ -95,3 +120,6 @@ solver) and [[docket-form-automated-checks]] (how to write the calculation step)
   remove a miss route.
   Platform reviewer feedback, one question. Possible floor WARN (not built): a "was what
   percentage of" ask.
+- 2026-10-06, aq-01321 q02 follow-up (user report): the narrowed version passed the difficulty check
+  "evaluated as Easy Tier", so narrowing the description to the income-statement lines cleared the
+  "too vague" block. Exact tested wording not supplied.

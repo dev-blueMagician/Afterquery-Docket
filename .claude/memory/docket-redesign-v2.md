@@ -4,7 +4,7 @@ description: "2026-10-05 replacement policy: Easy minimum, evidence dependencies
 metadata:
   node_type: memory
   originSessionId: ae999fcd-0d3a-4c3d-ae53-d4952c82e292
-  modified: 2026-10-06T17:40:26.789Z
+  modified: 2026-10-07T08:32:41.659Z
 ---
 
 ## Current rule
@@ -53,7 +53,34 @@ capture; the trial-01 relaxation was not restated for trial-02. Same request for
 decide whether Easy is acceptable. Same Medium target for aq-01321 (user, 2026-10-06: "work on
 AQ-01321 ... you should do difficulty_target to at least medium"; slots Hard 0/2, Medium 0/3, Easy 0/1,
 9 submissions): new bundle, difficulty_target: medium; two checked write-ups were reviewed Easy-leaning
-(Medium about 9-12%), so the hand-over asked for quick tests before any difficulty run.
+(Medium about 9-12%), so the hand-over asked for quick tests before any difficulty run. Same Medium
+target for aq-01433 (user, 2026-10-06: "work on AQ-01433 ... you should do difficulty_target to at least
+medium"; slots Hard 0/2, Medium 0/3, Easy 0/1, "In review: Medium 1", 8 submissions): new bundle; q01
+rev 1 checked (review Easy-leaning, Medium ~17%) and q02 checked with a deferred reasoning-quote fix
+(Medium ~10%); hand-over asked for quick tests first. The user ran q01's difficulty check directly:
+"In band — Easy tier", Low 2/5 (Run 1, version 55d10a), below the bundle's Medium target; the Easy slot
+(0/1) was open; the user submitted it there (confirmed 2026-10-07: "q01 is passed and now submitted,
+set status. and answer_tier as Easy Tier", then "I mean accepted_tier"; front matter now
+accepted_tier: Easy Tier) and a second sketch round found no fair Medium design. Same Medium target for aq-01428 (user,
+2026-10-06: "work on AQ-01428_2026-10-06_1949 / you should do difficulty_target to at least medium"; slots
+Hard 0/2, Medium 0/3, Easy 0/1, 9 submissions): new bundle, difficulty_target: medium; q01 (untied event
+edition trap, review Medium+ ~45%) handed over as primary and q02 (Easy-leaning, robust necessity) as fallback.
+Same Medium target for aq-01431 (user, 2026-10-06: "work on AQ-01431_2026-10-06_1949 / you should do
+difficulty_target to at least medium"; slots Hard 0/2, Medium 0/3, Easy 0/1, 9 submissions): new bundle of
+SEC comment letters, difficulty_target: medium; the caller and two authors found no fair Medium design, and
+the one fully checked write-up (q01) was reviewed Easy (Medium 6-8%), so the hand-over asked for a quick test
+and the user's decision on Easy before any difficulty run. The user ran the difficulty check anyway: rev 0
+"Between levels" (Low 0/5 · Medium 4/5), so rev 1 removed the cue the medium model followed (same target).
+
+Same Medium target for aq-01432 (user, 2026-10-06: "work on AQ-01432_2026-10-06_1949 ... you should do
+difficulty_target to at least medium"; slots Hard 0/2, Medium 0/3, Easy 0/1, 9 submissions): new bundle of eleven FTC
+and CMA consumer-protection guidance documents; no fair numeric design; two checked write-ups reviewed Easy-leaning
+(Medium about 8-10%), so the hand-over asked for quick tests and whether Easy is acceptable.
+Same Medium target for aq-01278 (user, 2026-10-06: "work on AQ-01278_2026-10-06_1140. you should do
+difficulty_target to at least medium"; slots Hard 0/2, Medium 0/3, Easy 0/1, 9 submissions): four-insurer peer bundle
+of Q1/Q2 2026 releases; quick-test batch of five handed over. The user ran q02's difficulty check: "In band — Medium
+tier", Low 0/5 · Medium 1/5 (Run 1, version 4093c3), with the "may be too vague" advisory; local review had said
+easy, marginal toward medium. Binding to a local fingerprint waited for the tested form fields.
 
 ## Evidence and history
 
@@ -86,3 +113,22 @@ kit are context-specific; current platform form/guide still governs.
 - 2026-10-06: aq-00745 q09 rev 1 passed at the High tier (user report: "great! you passed as a
   High tier."), above the bundle's Medium requirement. Untied single edition trap; see
   [[docket-local-solver-calibration]].
+- 2026-10-06: aq-01320 (user: "difficulty_target to at least medium"; page slots Hard 0/2 · Medium 0/3 ·
+  Easy 0/1). q01 rev 2 (Darden outlook edition in force at the Q4 start) measured Easy (user report "Easy
+  Tier"), below the target; the user then had it accepted (2026-10-07, "accepted"), filling the Easy slot.
+  See [[docket-local-solver-calibration]].
+- 2026-10-06: aq-01430 (user: "work on AQ-01430_2026-10-06_1949 ... difficulty_target to at least
+  medium"; slots Hard 0/2 · Medium 0/3 · Easy 0/1): new bundle, difficulty_target medium. Two checked
+  write-ups were reviewed Easy (Medium about 7-12%) and handed over for quick tests; the bundle's Easy
+  slot is open, so an Easy pass is usable there if the user accepts it. See
+  [[docket-local-solver-calibration]].
+- 2026-10-07: aq-01430 q01 submitted at the Easy tier (user: "set q01 status as submitted and
+  accepted_tier as Easy Tier"), filling the bundle's Easy slot; the Medium slots remain open (q02
+  checked and reviewed Easy-leaning; d02 a screened sketch).
+- 2026-10-07: aq-01333 (target medium, user 2026-10-06 "at least medium") q01 rev 4 passed at the Easy tier
+  and the user submitted it ("set q01 status as submitted and accepted_tier as Easy Tier"), below the
+  stated target by the user's own decision. Earlier runs on the bundle: q02 Too easy, q01 rev 1 Answer
+  not supported, q01 rev 2 Too easy. Medium 0/3 and Hard 0/2 slots remain open per the capture.
+  The platform reviewer then returned q01 ("Revision requested", 2026-10-07): Doc 5 (the decoy release,
+  ticked as "Exclusion / condition source") was not necessary. Rev 5 unticks it and leaves the question
+  unchanged. Resubmission is pending.

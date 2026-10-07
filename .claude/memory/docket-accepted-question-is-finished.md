@@ -1,10 +1,13 @@
 ---
 name: docket-accepted-question-is-finished
-description: Never edit, re-export or resubmit a question once its status is submitted or accepted; log later findings instead. 
+description: "Never edit, re-export or resubmit a question once its status is submitted or accepted; log later findings instead."
 metadata:
+  node_type: memory
   type: feedback
   stage: export
   updated: 2026-10-01
+  originSessionId: cce78281-5de7-4ebd-afb7-2132b5621e18
+  modified: 2026-10-07T08:32:34.443Z
 ---
 
 ## Current rule
@@ -22,6 +25,17 @@ judged, in the same way.
 
 **How to apply:** read the front-matter status before any edit to a question file. For
 `submitted` or `accepted`, record, don't change.
+
+A platform "Revision requested" works the same way as a rejection: the platform has handed the question
+back. Log the panel verbatim first (notes/feedback-qNN.md plus a Feedback log line). Then revise in place
+as a new revision with fresh records. Status moves from draft to checked, and back to submitted when the
+user resubmits. Remove `accepted_tier` while the revision is pending (aq-01278 q02 2026-10-06, aq-01333
+q01 2026-10-07). Change only what the reviewer asked for.
+
+When the user confirms a submission, set `status: submitted` and add the platform tier the
+question passed at as `accepted_tier: <Easy|Medium|Hard> Tier` in the front matter (user,
+2026-10-07, aq-01433 q01: "I mean accepted_tier", correcting a first "answer_tier"; aq-01320 q01
+already carried `accepted_tier: Easy Tier`). Neither field is in the tested fingerprint.
 
 ## Evidence and history
 

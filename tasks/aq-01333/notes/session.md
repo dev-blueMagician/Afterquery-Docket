@@ -1,14 +1,28 @@
 # Current bundle checkpoint
 
 - Goal and user constraints: user 2026-10-06 "work on AQ-01333_2026-10-06_1150 ... difficulty_target to at least medium". Slots on capture: Hard 0/2 · Medium 0/3 · Easy 0/1; 9 submissions, 8 difficulty runs, 10 quick tests left.
-- Verification target / measured platform tier: medium / pending (no platform test run or authorized).
-- Current runs: q01 rev 1 q01-r1-v2-b98e240c4860575dc40170e487f5091d07e3b8ea2ee29ee8989eba0b31643c4d; q03 rev 0 q03-r0-v2-cd2388480937397810390be7c6ba00347338fc47dea4af1d6ff43cf9d323e8e0; q02 rev 0 q02-r0-v2-d81d8a8b... source_gaps none (4f53cda1...).
-- Bundle: six HPE earnings releases; D01=Doc 4 (Q1 FY26, 2026-03-09), D02=Doc 1 (Q2 FY25, 2025-06-03), D03=Doc 5 (Q2 FY26, 2026-06-01), D04=Doc 2 (Q3 FY25, 2025-09-03), D05=Doc 6 (Q3 FY26, 2026-09-02), D06=Doc 3 (Q4 FY25, 2025-12-04). Text = originals except NFKC; pipe tables only.
-- Phase: handed over (awaiting user quick test / difficulty check).
-- Questions: q01 checked rev 1 (H3C-completion edition bridge, 58.3%, Doc 4+Doc 6; review ready, medium marginal, est. Medium-or-higher 40-50%) = primary. q03 checked rev 0 (Juniper-closing edition bridge, 9.3 pp, Doc 1+Doc 3; review ready, Easy most likely, Medium-or-higher 30-35%) = second. q02 draft rev 0 (recast FY25 Networking margin 24.39%; review revise: fair, Easy-leaning; Doc 6 pipe-row quotes) = fallback below target.
-- Hand-over notes: q01 keep Doc 5 unticked, paste Evidence-list quotes (Step 1 reasoning quote period only in Doc 5); q03 keep Doc 2 unticked, Save passage for Doc 3 table row; no in-bundle proof of no guidance update between event and prior release (q03 Jun 3-Jul 2). Origin claude: "I wrote this question myself" cannot be ticked truthfully; export needs origin user.
-- Families: h01, h09 promoted (edition bridges); h02 promoted (recast); h03-h08, h10 held. Author run 1 failed (output limit); run 2 found no third Medium design.
-- Memory updated: platform-quality-checks near-copy check (2nd instance), calibration entry for aq-01333 (local only); gpt-project/playbook.md synced (user must re-upload).
-- Revision rounds: q01 1 of 2; q02 0; q03 0.
-- Next action: record any platform output verbatim via /docket-feedback (exact fingerprint); if q01 runs Too easy/Too hard, consider q03; never edit submitted content.
-- Runtime: Claude Code, Opus 5.5 max; blind roles fresh non-fork subagents with omitClaudeMd and the scope hook.
+- Verification target / measured platform tier: medium. q01 rev 4 passed at the Easy tier (user report) and was submitted 2026-10-07. The platform reviewer then returned it as "Revision requested": question and gold correct, Doc 5 not necessary ("Without document 5 — 58.3%"). Earlier results: q02 Too easy; q01 rev 1 Answer not supported; rev 2 Too easy. 4 of 8 runs left (assumed one used).
+- Current runs: q01 rev 5 q01-r5-v2-f6b3318d49235652e301180a068020df2e8835966fcbc2df3c8dfaaa84710c1c. Checks 2026-10-07: A match, B match, audit clear, closed-book misses; review ready (difficulty easy, local). Status checked. History: q01 r0-r4, probe q01-r3-probe-x4. q03 r0 cd238848; q02 r0 dropped.
+- Bundle: six HPE earnings releases. Local id = platform Doc, quarter, date:
+  - D01 = Doc 4 (Q1 FY26, 2026-03-09)
+  - D02 = Doc 1 (Q2 FY25, 2025-06-03)
+  - D03 = Doc 5 (Q2 FY26, 2026-06-01)
+  - D04 = Doc 2 (Q3 FY25, 2025-09-03)
+  - D05 = Doc 6 (Q3 FY26, 2026-09-02)
+  - D06 = Doc 3 (Q4 FY25, 2025-12-04)
+  Text = originals except NFKC; pipe tables only.
+- Phase: q01 revision requested by the platform reviewer. The panel is logged verbatim in notes/feedback-q01.md; the screenshots are in runs/q01-r4-.../results/. Rev 5 is revised in place: status draft (checked after the checks); accepted_tier removed until resubmission.
+- q01 rev 5 changes (exactly what the reviewer asked; question, answer, component and tags unchanged):
+  - documents D01, D05;
+  - Doc 5 unticked and the note deleted;
+  - every Doc 5 evidence row dropped;
+  - Step 2 is the reviewer's sentence;
+  - Step 1's quote period moved outside the quotation marks;
+  - decoy line uses Doc 5's own date only.
+  The fields were handed to the user in labelled blocks after the user pasted step 2 into Evidence 2 ("NOT VERBATIM").
+- Questions: q01 rev 5 draft (above). q03 checked rev 0: day cue "On the day", likely too easy. Do NOT mark its Doc 2 as exclusion source (reviewer ruling). q02 dropped.
+- Families: h01 and h09 promoted (edition bridges); h02 promoted (recast); h03-h08 and h10 held. Author run 1 failed (output limit); run 2 found no third Medium design.
+- Memory updated 2026-10-07 (exclusion-role lesson reversed; Revision requested panel; accepted-question rule). Files: platform-quality-checks, series-editions-necessity, calibration, redesign-v2, MEMORY.md, gpt-project playbook/lessons (user must re-upload).
+- Revision rounds: q01 5 (rev 5 = reviewer-requested); q03 0; q02 dropped.
+- Next action: wait for the user's resubmission. Then set status submitted, restore accepted_tier: Easy Tier and record any new difficulty result. If the form flags Step 2's numbers, use the contingency Steps 1-2 in q01 Lever checks (Revision 5); that change is a rev 6 with re-run checks. The form must hold exactly the 5 rev 5 evidence rows before any result is bound to f6b3318d.
+- Runtime: Claude Code, Opus 5.5 max; blind roles run as fresh non-fork subagents with omitClaudeMd and the scope hook.

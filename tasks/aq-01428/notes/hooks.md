@@ -1,0 +1,26 @@
+# aq-01428 - cross-document hooks
+
+Find facts that combine into a world answer before drafting wording. Record sources/locations,
+input quantities and units/periods, the relationship, a possible ask and one or two selected levers.
+Explore forecast/actual, proposal/final dates, changed/conflicting tables, amendments, hedge scope,
+mentions/actions, entity/edition joins, ordered/late items, exclusions and ordinary cross-document
+calculations. Find more viable hooks than questions requested without inventing a quota.
+
+Target: medium (user, 2026-10-06). Local ids: D01 = Doc 2 (Eni Q1, Apr 24), D02 = Doc 1 (Eni Q2/H1,
+Jul 29), D03 = Doc 4 (Oxy Q1, May 5), D04 = Doc 3 (Oxy Q2, Aug 5). Caller's own read, 2026-10-06.
+
+| Hook | Source inputs and locations | World fact/possible ask | Selected lever(s) | Applicable decoy/counterfactual | Source risks | Decision |
+| --- | --- | --- | --- | --- | --- | --- |
+| h1 | D01 L172 GGP guided "around €1.3 bln, up 30% from the initial forecast" (Apr 24); D02 L242 "raised to over €1.4 bln ... 40% compared with the initial level" (Jul 29); D02 month-dated events between the editions, absent from D01 (e.g. L449 Ravenna regas booking "In June"; L364 Gambia block; L370 Greater PAJ FID; L373 Sabratha start-up; L376 YPF SPA) | GGP FY2026 proforma adjusted EBIT guidance in force at a June event = about €1.3 bln | Same series, right edition; scatter | Decoys in the event's own release: >€1.4 bln (post-event guidance) and €1.0 bln (initial level implied by D02's 40%) | "around" is a stated approximate figure (asked as is, no arithmetic). Overview: no GGP or event. Searah is foreshadowed in D01 L121/L76, so do not anchor on Searah (D01-only model would answer 1.3) | sketch (primary; aq-00964 q01 mechanism) |
+| h2 | D01 L70/L178 CFFO guidance €13.8 bln at Brent 83/SERM 8/TTF 50/1.15 (Apr 24); D02 L253 €15 bln at Brent 85/SERM 14 (Jul 29); budget €11.5 bln printed in both (D01 L187, D02 L264); D02 events as h1 | CFFO guidance in force at a June event = €13.8 bln; or first-half adjusted CFFO (D02 L802 7,347) as share of guidance in place on June 30 = 53% | Same series, right edition | Decoys: €15 bln (D02 own), €11.5 bln budget (D02 L264) | Overview of Doc 2 prints "€13.8 billion" (exposure tie-breaker); headline April figure may be recalled closed-book; share near 50% has a natural prior | sketch (secondary; sibling of h1) |
+| h3 | D01 L1468 production incl. hydrocarbons consumed in operation 141 kboe/d Q4 2025, 1,839 total (D01 L1428-1460); D02 L1706 150 kboe/d Q2 2026, total 1,789 | Production net of own consumption, Q4 2025 to Q2 2026: 1,698 -> 1,639 (-59 kboe/d) | Footnoted remainder; scatter | Printed totals give -50 | Period pairing (Q4 2025 vs Q2 2026) is chosen to need D01; Q1 2026 pair is D02-only | investigate |
+| h4 | D01 Refining Q1 2026 (47), Sites in transformation (55) (D01 ~L509-515); D02 L655-659 restated Q1 Refining (14), Sites (88); D02 L661 Livorno reclassified effective 1 Jan 2026 "with the adjustment of the Q1 result" | Livorno hub Q1 2026 proforma adjusted EBIT = -€33 mln | Restated figures carve-out | Decoys -14, -47, -55, -88 | Question naming Livorno leads to the footnote; two lookups + subtraction (Easy-leaning) | investigate |
+| h5 | D03 Sched 1/2/3 2025 adjusted income on old basis (TY $2,220, EPS $2.21; disc-ops items (283)); D04 restated (TY $1,675, $1.67; disc ops 262 as item) | OxyChem adjusted contribution 2025 = $545M / $0.54 | Restated figures | Old-basis vs new-basis 2025 | D03 alone gives 262 + 283 = 545, so D04 not necessary; naming the restatement is a known Too-easy pattern | park |
+| h6 | D03 L7 principal debt $13.3B after repaying $7.1B "through May 5"; D04 L9 "Reduced principal debt by $1.9 billion to $11.8 billion" (undated) | Debt repaid after May 5 | Scatter | 1.9 printed | D04's $11.8B carries no date; 13.3 + ... vs 13.7 implied | park (undated endpoint) |
+| h7 | D02 L286 Brent dated Q2 $104.52 / Q1 $80.61; D04 L649 Brent $97.06 / $77.93 (Oxy index); realizations D02 L292, D04 L644 | Cross-company benchmark/realization gaps | Calculate across documents | n/a | Two lookups + one operation (measured Too easy pattern) | park |
+| h9 | Scenario vs actual (map): SERM 8 (D01 L178) vs 14 (D02 L253) against IH SERM 9.1 (D02 L613); EUR/USD 1.15 vs 1.16 against IH 1.167; TTF 50 in both | H1 actual vs assumption in force at June 30 (SERM: +1.1 vs decoy -4.9, sign flip) | Same series, right edition | Decoy = D02's own July scenario | SERM methodology was revised in Q2 (D02 L622), so H1 9.1 and the April 8 sit on different bases: fairness risk; TTF unchanged (no trap); EUR/USD tiny and estimable | park |
+| h10 | Oxy production vs sales (D04 Sched 7 vs 8: Dolphin 36 vs 35, Oman 68 vs 69, Q2 2026) | Platform-suggested "one figure that differs within a document" | Who belongs where | n/a | Single-document | drop (one document) |
+| h8 | D01 L666 2025 buyback €1.8 bln, 119 mln shares (Feb 18); D02 L835 2026 program ~39 mln shares, €860 mln (Jul 17) | Average price per share change | Calculate across documents | n/a | "around 39 mln" splits the answer even at whole percent | drop |
+
+The map is navigation; quotes come from originals/extracted sources. A short valid calculation
+or ID join is eligible. Prior failures suggest tests/priority, not a universal veto.

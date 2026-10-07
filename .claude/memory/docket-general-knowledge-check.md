@@ -6,7 +6,7 @@ metadata:
   type: feedback
   updated: 2026-10-05
   originSessionId: 9e8d8c8c-aa4d-457b-a7c1-04fe73680640
-  modified: 2026-10-06T17:10:24.569Z
+  modified: 2026-10-07T02:16:14.248Z
 ---
 
 ## Current rule
@@ -210,6 +210,12 @@ duplicate).
   document even when the target count is safe; use bridges only the bundle states (here a
   regulator's program described in one testimony). Local evidence; no platform result yet.
 
+- 2026-10-06: aq-01428 (Eni 2026 releases), closed-book probes on first-half vs full-year guidance asks. The
+  share of FY CFFO guidance earned in H1 (gold 53%) drew "about 55%", citing a habitual 53-55% H1 share;
+  the second-half amount still needed (gold €6.45 bln, two decimals) drew €6.30 bln and "about €6.5 billion"
+  from guessed guidance minus a roughly even first half. Splits of a full-year figure into halves have a
+  half-year prior; only a fine precision protects them. A stated guidance figure asked at a dated event
+  (GGP about €1.3 bln) drew "about €1 billion" (the superseded initial level) twice: clean misses.
 - 2026-10-06: aq-01320 (restaurant earnings releases), sketch-stage closed-book probes. A cost ratio with
   an industry prior was reached: Chipotle's first-half 2026 labor share excluding a legal accrual (gold
   25.3%) drew "25.3% (an estimate)" from a recalled ~24.6% 2025 level plus drift; dropped. A Darden
@@ -218,3 +224,30 @@ duplicate).
   $0.20 against -$0.28), although each probe recalled the adjusted guidance and dated the edition.
   Ratios and rates that sit near a well-known level are estimable; prefer per-share or dollar answers
   whose size depends on a bundle-only figure. Local evidence.
+- 2026-10-06: aq-01431 (SEC comment letters, 2022-2024), sketch-stage closed-book probes. Reached: the
+  climate rule's Federal Register proposal-to-final gap (717 days; both FR dates, Apr 11, 2022 and Mar
+  28, 2024, recalled at medium confidence) and a commenter's first letter after a reopening (68 days:
+  the March 15, 2023 cybersecurity reopening plus its May 22, 2023 reopened deadline, assumed to be
+  the letter date). The securities-loan proposal's FR date (Dec 8, 2021) was recalled "fairly sure"
+  although the target date (a March 3, 2022 staff meeting) missed, so the dating letter would fail the
+  platform's removal test. Missed: US SIF 2022 issue-level AUM figures (only the $8.4T total and
+  "climate change/carbon is the top issue" recalled). SEC rulemaking dates, reopenings and reopened
+  deadlines are general knowledge; a commenter's filing on a public deadline is guessable from it.
+- 2026-10-06: aq-01430 (Ember electricity reports to June 2026), closed-book screens. Reached: a
+  small-integer count difference (countries above a tenth solar, 2025 vs 2024 = 8, a "best guess" from a
+  7-10 a year trend) and a near-zero change at whole-TWh precision (China fossil July-December 2025, +3,
+  "roughly flat", from recalled monthly NBS thermal data). Recall covered Ember's October 2025 mid-year
+  details (China first-half fossil -58.7, solar +306 TWh, China 55%) but not the April 2026 review's
+  full-year figures; asking one decimal (+2.8) turned the reach into misses (+8, +55). Avoid small
+  integers and near-zero answers at coarse precision.
+- 2026-10-06: aq-01432 (eleven FTC and CMA consumer-protection guidance documents, 2013-2025), closed-book
+  screens. Statute-level facts were recalled: which UK banned practices are civil-only (advertorials and
+  direct appeals to children, carried over from the CPUTRs 2008; fake reviews at low confidence). Over the
+  CMA's canonical list of six hidden-advertising provisions, a question-only model reached both the count
+  and the exact set (two runs, low confidence), rebuilding the list from memory. Universes taken from a
+  guidance document's own list all missed: the short guide's seven pressure-selling behaviours ("All of
+  them", "4", "5"), CMA208's commissioning examples ("None", generic) and the after-sales theme's paragraph
+  numbers ("8, 24, 28", old numbering shifted). The same recall let a removal probe without the document
+  that states offence status forced-guess the gold (p 0.55). In public-law bundles, anchor the universe on
+  a list only one guidance document prints; expect the law document's platform necessity to depend on
+  whether the high model recalls the rule. (Golds deliberately not stated here: questions still under check.)

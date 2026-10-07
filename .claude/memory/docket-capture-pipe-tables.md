@@ -41,6 +41,10 @@ compare with the old gap counts; at sketch time note which inputs live only in p
 
 ## Evidence and history
 
+- 2026-10-06 (aq-01322, .txt capture, compact pipe tables): the form accepted piped quotes. The
+  difficulty check unlocks only after every blocking check passes, and its run echoed the question's
+  evidence "|U.S. Healthcare Solutions|$998,300|$944,969|5.6%|" with the pipes. First observed pass
+  of the Verbatim evidence check on a pipe-row quote; whether the depiped form also passes is unseen.
 - 2026-10-05 (aq-00745 re-ingest; aq-00949 form warning text). Inference from the platform's
   message format; no pipe-row quote has been pasted into the form yet. Unconfirmed until the form
   reports on one.

@@ -1,0 +1,783 @@
+# aq-01433 - document map
+
+Written once by `bundle-mapper` from `text/` (and `docs/` for flattened tables and scans).
+It is for navigation, like the form's bundle overview: where things are, not what to ask.
+Questions quote the documents, never this map.
+
+Line numbers below refer to `text/Dnn.txt` (each file starts with a 2-line `# Dnn | docs/...` header; `docs/` line numbers run 0-2 lower). "Mapper arithmetic" marks sums computed while checking tables; they are not printed figures.
+
+## Bundle
+
+- What it is: six final U.S. Census Bureau assessment reports on the 2010 Census Integrated Communications Program (ICP), from the "2010 Census Program for Evaluations and Experiments". Each has a "2010 CENSUS PLANNING MEMORANDA SERIES" cover memo from Burton Reist [signed], Acting Chief, Decennial Management Division, dated August 2-8, 2012. The set is one summary report (D06) plus five component reports: Mail Response Rates/Take 10, National Partnership, Paid Advertising, Promotional Materials and Research. The capture title is "Marketing materials". The subject period is mostly 2007-2011: planning 2007-2009, campaign January-July 2010, and cost tables as of November 2010 and March 2011. The reports also compare with Census 2000. All dates are calendar dates, except that budget and appropriation passages use federal fiscal years (FY 2007-FY 2013 in D06 App D; FY 2008/2009/2010 in D04; FY 2016-2018 in D02's recommendations). The bundle never states when a fiscal year ends.
+- Documents: 6, D01-D06, from `text/manifest.json`. Local ids are alphabetical by file name. The platform "Doc N" numbers differ:
+
+| Local | Platform | File (docs/) | Report | Memo No. / memo date | Title-page date | Author (title page) |
+|---|---|---|---|---|---|---|
+| D01 | Doc 6 | census_census2010_campaign_icp_mail_response.txt | Mail Response Rates/Take 10 | No. 222 / Aug 2, 2012 | Aug 2, 2012 | Benjamin C. Saunders, Jr., DMD |
+| D02 | Doc 3 | census_census2010_campaign_icp_national_partnership.txt | National Partnership | No. 228 / Aug 8, 2012 | Aug 1, 2012 | William T. King, David L. Wycinsky Jr., CLMSO, Office of External Engagement |
+| D03 | Doc 2 | census_census2010_campaign_icp_paid_advertising.txt | Paid Advertising | No. 221 / Aug 6, 2012 | Aug 1, 2012 | Monica Wroblewski, Census 2010 Publicity Office |
+| D04 | Doc 4 | census_census2010_campaign_icp_promotional.txt | Promotional Materials | No. 220 / Aug 6, 2012 | Aug 1, 2012 | Alexandra Figueroa, Census 2010 Publicity Office |
+| D05 | Doc 5 | census_census2010_campaign_icp_research.txt | Research | No. 226 / Aug 2, 2012 | Aug 1, 2012 | Monica Wroblewski, Census 2010 Publicity Office |
+| D06 | Doc 1 | census_census2010_campaign_icp_summary.txt | Summary | No. 223 / Aug 2, 2012 | Aug 2, 2012 | Mary A. Bucci, DMD |
+
+- Gaps: all extracted text of all six files was read line by line; ranges are given under each document's Coverage. There are **no unread ranges**. Missing or visual-only source material follows. The originals are `.txt` captures, so images were never captured and cannot be inspected; each item is **unresolved**:
+  - D01: Figures 1, 2 and 4-8 are captions only (327-336, 509-529). The Figure 3 flowchart text (370, 378-380) and the App C flowchart (803-828) are flattened, so box order and lane labels are garbled ("SI RD OPSD P&C DMD DSSD maeT AQ...", 804).
+  - D02: Figure 1, the NP timeline (140-142), and Figure 2, the stamp image (242), are captions only.
+  - D03: Appendix "Favored Media Outlet by Audience Segment" (427-428) is caption and source only.
+  - D04: the App A timeline graphic (392-405) is flattened, so dates and milestones cannot be paired reliably. In App C/D review matrices (867-941) the X-mark column alignment is unresolved (durations are readable). The footnote markers "*" (585, "18-month Census Calendar*") and "**" (782, ARRA timeframe) have **no footnote text** anywhere in the source.
+  - D05: Table 1 (325) has title and source only, with no values. Figures 1-5 (318-322, 345, 599, 602) are captions only, so the Figure 3 mindset population proportions are absent. The Appendix timeline (702-714, pages 31-36) has no text.
+  - D06: Appendix B "2010 Census Communications and Partnership Program Costs" (562-566) has no text.
+  - These layout ambiguities were resolved by printed totals: D03 Tables 5-6 values displaced to 368-377; fused footnote digits in the D03 and D05 Table 2 NHPI/AIAN rows; the D06 App D FY 2011 cell. See each document.
+- Extraction spot-checks: method `text`, pages null for all six, so a page count does not apply. Each item below was grepped against `docs/` and matched:
+  - D01: App A footnote 1 "consists of employees from C2PO, DSSD and DMD" (text 633); App E rows 9 and 11 "3/23/2010 3/26/2011", "3/19/2010 3/26/2011" (text 1195, 1213).
+  - D02: has no tables or footnotes (not applicable). List items were checked instead: App B item 30 (539) and "There were 219 successful activities" (389).
+  - D03: Table 2 total row "Total 78 1400 37 314" (271); Table 3 "Diverse Mass $81.6" (337) and footnote "* Includes Chinese" (344); fused row "NHPI14 39 0 0 AIAN28 136 0 0" (258) is the same in the source.
+  - D04: App E "TOTAL ITEMS 60,586,708" (994); malformed Korean cell "3009,410" (972) is the same in the source; Wave 3 total label (759); "nineteen of these languages" (212).
+  - D05: Table 2 totals (479); footnote 2 "Census Barriers, Attitudes, and Motivators Survey Analytic Report" (173); fused row "NHPI34 39 0 0 AIAN48 136 0 0" (466) is the same in the source.
+  - D06: App D "Base Total 253,853,775" (610); FY 2011 line (606); footnote 1 "Complete Count Committees consisted of community" (270); footnote 2 typo "Communicatioins ... Seriess" (353).
+  - NFKC normalisation produced no visible change in the checked strings.
+- Provenance: from `notes/intake.json` (schema 1). Capture `D:\Dev\Docket\AQ-01433_2026-10-06_1949.txt` was saved 2026-10-06 19:49, capture_sha256 `ca89d5a6...7378`. For all six documents: `incomplete: false`, `gap_characters: 0`, `matches_capture: true`, and source_sha256 = captured_sha256 = manifest sha256 (D01 c4314079..., D02 d30954d8..., D03 b0d0bfa0..., D04 ceca4d75..., D05 ebae91a2..., D06 c6b54bb4...). No recovered-source history is recorded. The capture header says "6 of 6 read in full (480,932 characters)"; manifest char counts sum to 480,941. The 9-character difference was not investigated, and no gap is reported.
+
+## D01 - 2010 Census ICP Mail Response Rates/Take 10 Assessment Report (platform Doc 6)
+
+- Source: `text/D01.txt` (1,239 lines; 111,648 chars) from `docs/census_census2010_campaign_icp_mail_response.txt`; platform **Doc 6**; text, no pages.
+- Written or submitted by: report author Benjamin C. Saunders, Jr., Decennial Management Division (25-27). Cover memo "From: Burton Reist [signed]", Acting Chief, DMD (8-10). Contacts: Kevin Deardorff (3) and Mary Bucci (14). Organisations that are mentioned but are not authors:
+  - DraftFCB, which developed Smart Suite and the Rate Map software (276, 319, 330, 574)
+  - USPS (62, 97)
+  - the third-party apps Innovation Landscape, USA Today and CUNY Center for Urban Research (504-529)
+  - Weber Shandwick (reference only, 608)
+  - eight mayors (428-440) and seven city challenges (443-455)
+- Type, date, edition: Final; Planning Memoranda No. 222; memo and title page both August 2, 2012 (4, 17-18). One edition only.
+- Period covered:
+  - Program span: from a "December 2, 2008 planning meeting" to the final posting on October 21, 2010 (270). Section 5.2 says the team discussed requirements "In 2007" (339).
+  - MRR postings: preliminary March 6 - September 9, 2010; final October 4, 2010 (Table 3, 163-172).
+  - Take 10 postings: preliminary March 22 - April 28, 2010; final October 21, 2010 (Table 4, 235-237; 333).
+  - Census 2000 HAKWAN ran January 11 - September 19, 2000 (120).
+  - All dates are calendar dates.
+- Entities and aliases:
+  - Program names: "Mail Response Rates/Take 10 Program" (MRR/Take 10) is split into the "Mail Response Rates Program" (MRR; internal) and the "Take 10 Program" (external) (68-70).
+  - Response Rate Feedback Program: "The Response Rate Feedback Program was officially renamed the Take 10 Program in December 2009" (197). But "At the time this document was produced, the RRFP referred to the MRR Program" (419).
+  - HAKWAN = "How America Knows What America Needs" (90). The table title is misspelt "HAWKAN" (52, 123).
+  - "2010 Census Mail Participation Rate Map" = "Take 10 Public Facing Tool" (672, 1182-1183), URL http://2010.census.gov/2010census/take10map/ (499).
+  - Smart Suite (276, 283, 416). C&P = "Cost & Progress System" (174, 414).
+  - Team members: DMD, CLMSO, C2PO = "Census 2010 Publicity Office", FLD, DSSD, DSPO, PIO, GEO, SSD (nine units, 274).
+  - Appendix A defined groups: QAT (633, fn 1), Senior Staff (663, fn 2), Executive Staff (664, fn 3).
+  - "Associate Director for Communications" (79, 81). Other abbreviations: UAA, TQA, NRFU, LCO, RCC, MCD.
+- Tables (units: percent rates; housing-unit counts; m/d/yyyy dates in App E):
+  - Table 1 "Categories for Quality Assurance Process for HAKWAN" (109-116): Critical Errors; Warnings ("increases of 10 percent or more when compared to the previous day's rate"); High Profile Areas. After the table: internal postings about 6:00 am, external about 6:00 pm, weekdays only, two-day lag (116).
+  - Table 2 "HAWKAN Timeline for 2000 Census" (123-139): eight date rows in 2000. Includes NRFU "April 27 - June 26" (137) and final rates posted "September 19" (138).
+  - Table 3 "Rates Provided by the Mail Response Rates Program" (159-174): Preliminary Response Rate; Preliminary Participation Rate; Final Response Rate; Final Participation Rate. Each row gives components, UAA treatment and posting dates.
+  - Table 4 "Rates Provided by the Take 10 Program" (232-239): preliminary and final participation rates.
+  - Table 5 "Categories for Quality Assurance Process - Take 10 Program" (258-266).
+  - App B "Mail Response Rates Report Names With Description" (680-800): 26 numbered reports.
+    - #13 "Executive Report Actual vs. Expected Unduplicated Mail Response Rates" (741-743)
+    - #14 Actual vs. Expected graphs with minimum/maximum expected and actual (746-750)
+    - #17 and #18 print identical names (758-764)
+  - App D "Data Provided By Mail Response Rates Program" (831-1102): about 50 data definitions; percents are "dividing ... by the 'Universe,' multiplied by 100".
+  - App E "Change Requests" (1105-1237): 13 rows, columns Description/Submitted/Implemented (see Amendments).
+- Lists:
+  - Census 2000 response components (91-97); HAKWAN's two components "90 Plus Five" and "Because You Count" (98-99).
+  - Enumeration-area types: three in Census 2000 (102-104) versus four in 2010, which adds "Military" (152-156).
+  - Tracked items: MRR six, including "Be Counted" (143-148); Take 10 five, with "Be Counted" intended but "not added due to a data distinction issue" (199-204).
+  - Geography levels: MRR 15, last "Collection Tract (Spanish Assistance Housing Units Only)" (175-191); Take 10 11 (242-253; same 11 in App A, 614-623).
+  - Take 10 goals six (210-220) and actions four (224-228).
+  - Assessment questions 14 (291-312); sub-teams four (343-346).
+  - Survey results: three bullets from a survey of 81 staff (371-376).
+  - Tools seven, last "Take 10 Turnkey Kit" (414-422).
+  - Public-official examples eight, last Jamestown, NY (428-440). City challenges seven, last St. Louis vs. Kansas City (443-455).
+  - Report list (472-489) and five comparison column headings (490-494). Third-party applications three (504-529).
+  - "Related ... Assessments" list of 11 ICP reports, which omits MRR/Take 10 itself (544).
+  - Executive-summary recommendations five (74-81).
+  - MRR: three lessons (550-552) and five recommendations, the last on non-ID verification (555-563).
+  - Take 10: seven lessons (567-578) and eight recommendations (581-592).
+- Forecasts, guidance, deadlines, effective dates:
+  - Expected 2010 rates (App D):
+    - "Minimum Expected Response Rate - The expected response rate with a rate of 59 percent at the end of the creation of the NRFU universe (4/20/2010)" (951-953)
+    - "Maximum ... 65 percent" (955-957)
+    - Expected participation rates "coincide with" those response rates (961-966). No numeric expected participation rate is printed.
+  - Change Request 6 adopted the two values (59 and 65 percent) "at the NRFU cut date, April 20, 2010" (1156-1166).
+  - Change Request 11 adds a footnote: "The expected participation rates and expected response rates on this report include Puerto Rico while the actual participation rates and actual response rates exclude Puerto Rico." (1211)
+  - Census 2000 NRFU cut date: "April 18, 2000" (1145).
+  - D01 prints **no actual 2010 national response or participation rate**. Its only national rate is Census 2000's "final mail response rate of 67.4 percent" (90).
+  - Posting goals: external "by 4:00 pm of the next business day ... achieved for almost all postings" (364); internal "near 10:00 am ... achieved for most postings" (367).
+- Hedged claims:
+  - Limitations: effects are "hard to quantify and isolate" (314).
+  - Posting goals "almost all" / "most" (364, 367).
+  - Take 10 Challenges were "partially documented ... no way to develop an all-encompassing list of events or determine how many took place" (465).
+  - App A: "it is not anticipated that there will be many outliers" (677).
+  - The survey percentages 92.2, 43.2 and 88.2 (372-376) are stated as measured, without a hedge.
+- Rounded prose beside exact figures: "approximately 83 percent" / "approximately 17 percent" (105); "approximately 6,000 locations" (407). Otherwise not applicable.
+- Notes:
+  - Why participation rates were adopted: "increased number of vacant housing units caused by relatively poor economic conditions and recent natural disasters (e.g., Hurricane Katrina)" (62; also App E rows 1-3, 1108-1130).
+  - Smart Suite "was only for use by identified Census Bureau employees and partners"; island areas other than Puerto Rico were not represented (276).
+  - March to the Mailbox rallies on April 10, 2010 "in approximately 6,000 locations" (407).
+  - Rate Map gave whole numbers; a recommendation asks for tenths (585).
+  - In-text citations missing from References (597-608): "U.S. Census Bureau, 2004" (90) and "Brady and Stackhouse, 2003" (106).
+- Operative definitions, rules and scope exceptions:
+  - Mail Participation Rate vs Mail Response Rate (64-67, 351-358). Both count unduplicated mail returns: initial (mailout and Update/Leave), replacement, form fulfillment with ID, and TQA with ID.
+    - Response rate: UAA questionnaires "were not counted as responses but were included in the mailback universe" (67).
+    - Participation rate: UAA questionnaires "were not counted as responses and were not included in the mailback universe" (66).
+    - Formulas: "Mail Response Rate = Unduplicated Mail Returns from the Mailback Universe * 100 Mailback Universe" (353) and "... Mailback Universe - UAAs" (358).
+    - "Be Counted" forms were included in final response rates, and "in final mail participation rates for the Mail Response Rates Program but not for the Take 10 Program due to a data distinction issue" (65-66, 354).
+  - Census 2000 response-rate scope also included Internet questionnaires and "Be Counted" questionnaires (91-97).
+  - Universe "does not contain housing units ineligible for NRFU" (833). Universe (with Unmailables) is defined at 906.
+  - National rate excludes Puerto Rico: "a sum of all collection tract level data, excluding Puerto Rico" (191, 254).
+  - QA categories (260-265, 536-537, 626-627):
+    - critical error: "less than zero percent, greater than 100 percent, or lower than the last approved"
+    - outlier: "outside of three standard deviations from the national mean"
+    - High Profile Top 100 Places
+  - App A decision paths (631-672) end in "shut down the Take 10 Public Facing Tool" (672).
+- Amendments or contradictions:
+  - App E change requests, in row order (number: submitted / implemented):
+    - 1-3 participation rates, data shells, help definitions: 1/20/2010 / before 3/06/2010 (1106-1138)
+    - 4 Census 2000 rate at the 2000 NRFU cut date: 3/17/2010 / 4/15/2010 (1140-1148)
+    - 5 unmailables: 4/8/2010 / 4/10/2010 (1149-1155)
+    - 6 min/max expected rates: 3/22/2010 / 4/14/2010 (1156-1166)
+    - 7 edits to the final external posting: 10/12/2010 / before 10/21/2010. Because non-IDs "could not be verified as mail returns", 2000 final rates were recalculated without non-IDs and compared to 2010 final rates with "Progress as of Date September 8, 2010" (1167-1173).
+    - 8 American Indian "Reservation" level: 4/12/2010 / 4/15/2010 (1176-1185)
+    - 9 Puerto Rico "State" level: 3/23/2010 / **3/26/2011** (1186-1195)
+    - 10 removal of Congressional Districts: 1/7/2010 / before 3/06/2010 (1196-1204)
+    - 11 Executive Report footnote: 3/19/2010 / **3/26/2011** (1206-1213)
+    - 12 Puerto Rico LCO level: 2/16/2010 / before 3/06/2010 (1214-1225)
+    - 13 GEO collection-to-tabulation geography file: 3/4/2010 / before 3/22/2010 (1227-1237)
+  - Internal differences, recorded without resolution:
+    - Rows 9 and 11 print implementation in 2011, after the stated October 21, 2010 program end (270).
+    - Row 10 removed congressional districts, but the flowchart texts still list "Congressional District" among compiled levels (378, 804).
+    - Final MRR date: October 4, 2010 in Table 3 (168, 172) versus "Final Response Rates ... - October 5, 2010" in section 5.1, which also lists preliminary data on October 4, 2010 (324-325).
+    - "The MRR Program posted to the Internet participation rates..." versus "was for internal Census Bureau use only" (both 141) and "posted on the Census Bureau intranet" (70).
+    - Program start: December 2, 2008 (270) versus "In 2007" (339).
+    - RRFP alias, 197 versus 419.
+    - The "Be Counted" oversight "delayed the final external posting" (563).
+- Coverage: **full**. Read 1-200, 200-399, 400-598, 599-797, 798-1016, 1017-1239. No unread ranges. Only the images listed under Gaps are unresolved.
+
+## D02 - 2010 Census ICP National Partnership Assessment Report (platform Doc 3)
+
+- Source: `text/D02.txt` (545 lines; 66,733 chars) from `docs/census_census2010_campaign_icp_national_partnership.txt`; platform **Doc 3**.
+- Written or submitted by: William T. King and David L. Wycinsky Jr. (24), Customer Liaison & Marketing Services Office, Office of External Engagement (26-27). Cover memo from Burton Reist (8).
+  - Acknowledgements (470): King led research; Wycinsky was "Branch Chief, National Partnership from 2010-2011"; Irma Harahush was Branch Chief 2008-2010; Nina Heggs was Assistant Branch Chief in 2010; Russ Davis; and Tasha Boone, Leslie Rodriguez, Eli Serrano, Brian Lavin, Kathy Conklin.
+  - Mentioned only: Census 2000 vendors 21st Century Group and Skyes Communications (118-121); Natek Inc. (126); Acumen Solutions and Salesforce.com (132); Weber Shandwick (157, 196, 339); GovDelivery (372-374); partner organisations.
+- Type, date, edition: Final; No. 228; memo **August 8, 2012** (4); title page August 1, 2012 (18).
+- Period covered:
+  - Census 2000 background (115-136).
+  - "From 2007 to 2010" the program evolved (154).
+  - NP Nerve Center from July 2009 (157). Peak "from mid-2009 to April 2010" (159).
+  - E-blasts "From February 2009 to February of 2011" (372).
+  - Recommendations use fiscal years: "skeleton staff in FY 2017 versus FY 2018" (93); "before fiscal year 2018" (431); "fiscal year 2017 rather than in fiscal year 2018" (437); "early in fiscal year 2016 and fiscal year 2017" (441). Peak "late 2019 and early 2020" (437).
+- Entities and aliases:
+  - NP = National Partnership. The "NP Office" became the "NP Nerve Center" in July 2009 (157), also written "National Partnerships Nerve Center" (165).
+  - CLMSO "formerly the Customer Liaison Office" (123).
+  - C2PO is expanded as "Census 2000 Publicity Office (C2PO)" in the Census 2000 paragraph (118) and as "Census 2010 Publicity Office" in 2010 staffing (157).
+  - "Communications Directorate (ADCOM)" (132).
+  - Partner databases: CPUMS, then PRISMS, then IPCD on Salesforce.com (126-132).
+  - Corporate labels: "Fortune 500" (121, 138, 159, 333) versus "Fortune 1000" (266, 336, 339).
+  - Grant question names the "Leadership Conference on Civil Rights" (277, 377); the answer names the "Leadership Conference on Civil and Human Rights" (379).
+  - Appendix B is cited as "Attachment B" (420).
+- Tables: none, and no footnotes. Quantities appear in prose and in numbered lists (Appendices A and B).
+- Lists:
+  - Three goals (62-65; repeated 144-146); three assistance areas (70); four data sources (74-78).
+  - Findings five (83-89); executive-summary recommendations five (93-99).
+  - PRISMS essential elements three (130); operating assumptions seven (169-176).
+  - Information kit eight items (187); meeting guidelines (190-194); exhibition guidelines ten (201-215).
+  - Do-not-select criteria three (222-225).
+  - Questions 13; Q1 has 16 groups a-p (248-287, repeated 314-331).
+  - Data limitations (295-311).
+  - Corporate partners named eight (339) and larger corporations four (342).
+  - Fraternities and sororities eight, last "(8) Sigma Gamma Rho" (345). Faith-based examples seven (349).
+  - Chambers: three "largest" (356-361) plus four additional (365-369).
+  - Grant-reporting organisations three (379); activity categories eight (384).
+  - Conference examples (399); promotional item types 12 (400); PSA figures (405).
+  - Four activity groupings (411-417).
+  - Related studies: "2010 Census Partnership Research Project" plus 11 ICP reports, omitting National Partnership (423-426).
+  - Recommendations in four groups (433-468).
+  - App A: 17 selection criteria, last "17. Capability and likelihood to adopt the 2010 Census Partnerships Program as a project (Harris, 2007)" (489-506).
+  - App B: 32 activities, including "11. Link to the 2010 Census website..." (520), "30. Allow the Census Bureau to post organization's name..." (539) and "32. Other" (541).
+- Forecasts, guidance, deadlines, effective dates: off-site contractors "were required to provide a certain number of successful national partnerships by a certain date"; protocol breakdowns occurred "In 2010, as they neared their deadline" (159). FY recommendations are listed under Period.
+- Hedged claims:
+  - "with some exceptions ... a more researched production and distribution plan could have yielded better return on investment per language" (89).
+  - "This is not to say this strategy was not effective, but that there is very little in the way of metrics" (218).
+  - "a dozen or so national partners that might have been considered marginal"; "even as minimal or low in impact as they may be" (229).
+  - "The action seemed to diffuse the situation" (232).
+  - "some documented partners may have never really been a partner" (297).
+  - "the overall and average partner employee estimates have significant margins of error". The hedge attaches to the employee estimates (the "nearly 3 million" figure), not to the 278 count (342).
+  - "Based on anecdotal and qualitative findings" (380).
+  - "It was reported by the NP staff that a little under two-thirds" (391).
+  - "Potentially identify an independent, internal group" (443).
+  - Unhedged success statements: "the program met its goals" (61); "The NP program was successful" (333); "That goal was successfully met" (339).
+- Rounded prose beside exact figures:
+  - Staffing: "about 130" (118), "about 100" (123), "six to eight staffers" (156), "as many as ten different contractor personnel" (159), "effectively tripled in size" (157).
+  - Partners: 278 business/corporation partner types, of which 114 documented had "nearly 3 million employees" (342); "approximately 51" faith-based (348).
+  - Chambers: "more than 3 million", "over 3 million", "over 100,000", "1.9 million" (357-361).
+  - Outreach: "70 mass email blasts", "around 1,400" contacts (372); "only allowing 1,000 mass emails ... per day"; open rate "between ten percent and twenty percent" (374).
+  - Websites: 219 link activities versus 719 name-posting activities (389).
+  - "approximately 18 PSAs" (406).
+  - "almost three dozen specific categories" (410), against 32 listed (510-541).
+  - "over two-thirds"; "an estimated 30 million dollars of 'value-added' support" (420).
+  - USPS: "almost 1.5 billion pieces"; "over 31,000 post offices" (240).
+- Notes:
+  - ACORN was dropped as a partner in September 2009, followed by "a de facto pause in publicly adding national partners to the list on 2010census.gov for a number of months" (231-232).
+  - "Children Count Too" kick-off on March 9, 2010 at Mary's Center; Nickelodeon's Dora the Explorer (235-238).
+  - USPS "2010 Census Mail it Back" cancellation, March-April 2010 (240).
+  - An Ethiopian-partner request was approximated by "Sub-Saharan African" (309).
+  - GovDelivery used from April 2010 (374). Helpdesk staffer from late 2009 to summer 2010 (133).
+  - "We were unable to find a published or unpublished independent assessment or evaluation of the 2000 NP program" (117).
+  - **D02 gives no total count of national partners** (no "852"; compare D06).
+- Operative definitions, rules and scope exceptions:
+  - PRISMS complete-record rule: three essential data elements (130).
+  - Partner exclusion rule: "Staff was instructed not to select a partner organization that:" followed by three criteria (220-225). Vetting through the Headquarters chain of command (227).
+  - Value-added is a subjective field (300, 458).
+- Amendments or contradictions: these are internal only. Fortune 500 vs Fortune 1000; "Attachment B" vs Appendix B; C2PO expansions (118 vs 157); Leadership Conference name variants (377 vs 379); "almost three dozen" vs 32 activities listed.
+- Coverage: **full**. Read 1-150, 150-299, 300-429, 430-545.
+
+## D03 - 2010 Census ICP Paid Advertising Assessment Report (platform Doc 2)
+
+- Source: `text/D03.txt` (430 lines; 51,040 chars) from `docs/census_census2010_campaign_icp_paid_advertising.txt`; platform **Doc 2**.
+- Written or submitted by: Monica Wroblewski, Census 2010 Publicity Office (24-25). Cover memo from Burton Reist.
+  - Acknowledgements (404): Tasha Boone, Kendall Johnson; reviewers Jennifer Kim, Benjamin Saunders, Jonathan Zapata, Brenda Holmes, Mary Bucci.
+  - Mentioned only: DraftFCB, "the primary contractor", and "a group of 14 subcontractors" (123); Y&R (105); NORC (116); New America Media (223); A Language Bank (325); Simmons (298); AAF (226); DJs Michael Baisden, Tom Joyner, Steve Harvey (303); Christopher Bridges (Ludacris) (304-305).
+- Type, date, edition: Final; No. 221; memo August 6, 2012 (4); title page August 1, 2012 (18).
+- Period covered:
+  - Campaign "officially launched on January 17, 2010 and continued through July 4, 2010" (52; 129 "ran through July 4, 2010").
+  - Phases (exec, 72-76): Awareness January-February 2010; Motivation March-April 2010; "Nonresponse Followup Phase (May to July 2010)".
+  - Phases (body, 130-134): Awareness and Motivation the same; "**April** - July 2010" for Phase 3.
+  - Media purchases: Upfront Summer 2009; Scatter Fall 2009; Rapid Response "March, April, and June 2010" (137-139). National media bought "in May 2009" (199).
+  - Review process December 2008 - December 2009 (161). Advisory-group work 2007-2009 (158).
+  - Paid-advertising "contract start date of September 19, 2007" (329). Final budget distributions "as of March 2011" (331).
+- Entities and aliases:
+  - C2PO = Census 2010 Publicity Office (97).
+  - Review panel: "Joint Advertising Advisory Review Panel" (82) versus "Joint Advisory Advertising Review Panel (JAARP)" (159).
+  - Advisory groups: CACPA, CAC, REAC (158).
+  - PMP; Y&R's "Likelihood SpectrumTM Model" (105).
+  - "Designated Marketing Areas" (78, 280).
+  - Phase-name variants: "awareness, motivation, and support" (70, 129) versus "Nonresponse Followup Phase" (76, 134).
+  - Mindset 3 is named "Insulated" (301) but "Unaware" (367).
+- Tables:
+  - Table 1 "Campaign Reach and Frequency Targets" (141-150), Phase by "Population Reached by Media":
+    - Awareness: 95% at least 10 times with base funding, plus at least five additional times with ARRA funding
+    - Motivation: 95% at least 20 times base, plus at least 11 additional ARRA
+    - NRFU: Lowest Responding Population at least 3 times base, plus at least 2 additional ARRA
+    - Source: "DraftFCB Projected Plan Reach/Frequency PowerPoint Presentation".
+    - Prose outcome: "reach as high as 97 percent"; final frequency "up to 18 times" (Awareness) and "up to 48 times" (Motivation) (139).
+  - Table 2 "Creative Copy Testing Focus Groups by Phase and Audience" (250-275): 17 audience rows by Phase I/II groups and participants.
+    - Totals "78 1400 37 314" (271); source: Phase II Final Summary Report (272).
+    - Row 258 prints "NHPI14 39 0 0 AIAN28 136 0 0". The footnote markers 1 and 2 (274-275) are fused, so NHPI = 4 groups/39 and AIAN = 8 groups/136; the Phase I totals confirm this.
+    - The same table appears in D05 (459-483).
+  - Ads by medium (308-311): "The total number of ads developed: 452"; Television 62, Radio 97, Print 159, Out-of-Home 79, Digital (online) 55. These sum to 452.
+  - Table 3 "Final Spending by Audience/Language" in millions (332-349):
+    - Rows: Diverse Mass $81.6; Hispanic 32.7; Black 28.4; Asian* 14.2; AIAN 4.1; Puerto Rico 2.4; Emerging Audiences** 1.9; NHPI 1.1; Legacy Languages*** 0.6; Total $167.0. The rows sum to 167.0.
+    - Footnotes: * Asian = Chinese, Vietnamese, Korean, Hindi, Tagalog, Japanese, Cambodian, Hmong, Laotian, Thai, Pakistani (Urdu), Bangladeshi (Bengali). ** Emerging = German, French, Italian, Greek, Portuguese, Yiddish. *** Legacy = Russian, Polish, Arabic, Farsi, Armenian, Ukrainian.
+    - Source: "Communications Contract Planning Budget Rev 3/17/11".
+  - Table 4 "Final Spending by Media Type" in millions (352-360): Television $81.5; Newspaper 26.0; Radio 24.8; Digital 13.8; Out-of-Home 11.1; Magazine 4.6; Events 2.9; Other* 1.4 ("Production of media-driven content integrations"); Cinema 0.9; Total $167.0. Source "Post Buy Cover rev. 3.18".
+  - Table 5 "Final Spending by National/Local" (title 361-362; values displaced to 368-370): National $88.3; Local 78.7; Total $167.0.
+  - Table 6 "Final Spending by Phase" (title 363-364; values 370-377): Awareness Phase $44.3; Motivation Phase 78.5; Rapid Response 31.8; Heavy-Up 1.3; Nonresponse Followup 11.1; Total $167.0. The rows sum.
+  - Appendix "Favored Media Outlet by Audience Segment" (427-428) is an image only.
+- Lists:
+  - ICP goals three, with sub-objectives a-b / a-b / a-c (53-68).
+  - Three key points and two taglines (81, 152-155). Major recommendations four (85-91; again 393-400).
+  - Award programs three (92). Purchase markets three (137-139).
+  - Method sources (168-171); questions 14 (173-191).
+  - Ethnic-media sessions: "11 meetings", with ten cities named (223).
+  - Small-business seminars six (224); creative review panel of five units (230).
+  - Segments eight: "Advantaged Homeowners, All Around Average I and II, Single Unattached Mobiles, Ethnic Enclave I and II, and Economically Disadvantaged I and II" (288-294).
+  - Mindsets five (298-301; 367).
+  - DJ tour "in 46 cities" (303); webisode cities five; "Luda on the Block" cities 20 entries (305).
+  - Languages: base "14 languages used in Census 2000" with 13 entries, Chinese subdivided into Mandarin/Cantonese/Simplified (316-317); ARRA 14 (319-322).
+  - Related reports 11, omitting Paid Advertising; "Mail Reponse Rates/Take 10" is misspelt (384).
+  - Lessons three (386-388).
+- Forecasts, guidance, deadlines, effective dates:
+  - Table 1 targets versus achieved values (139; see Table 1).
+  - Local buys "were planned for August 2009, but they did not occur until October and November, which led to a several week delay in the delivery of the media buy schedule ... originally planned for January 2010" (203).
+  - "Make goods" ran through June 2010 (209).
+  - Production dates were revised after ARRA (215).
+- Hedged claims:
+  - NORC Census 2000 evaluation: "that evidence was somewhat weaker and less uniform" (116).
+  - "The available evidence suggests that the Census 2000 PMP ... helped reverse a three decade decline in the mail response rates ... and may also have improved cooperation with Census Bureau enumerators" (119). "suggests" scopes the reversal claim; "may" scopes the cooperation claim.
+  - "Given the judged success" (121).
+  - "not 100 percent reliable" (208).
+  - Segmentation models of the impact campaigns "may have on mail response" (286). This "may" describes what the model estimates.
+  - Unhedged: "we did not encounter issues with respect to in-language advertising" (325); "executed as planned within the scope of the final budget and on time" (401).
+- Rounded prose beside exact figures:
+  - Prose "167 million dollars" (80, 329) beside the tables' $167.0 million totals.
+  - "3,900" outlets (78) and "approximately 3,900" (280).
+  - Budget: "212 million" to "362 million" (329).
+  - "93 percent to 97 percent of the Diverse Mass, Black, and Hispanic audiences" (329).
+  - Census 2000: "more than 250" ads, "17 languages", "99 percent", "over 50 times", "More than 3,000" outlets, "over 130,000", "over 71,000 radio spots", value added "exceeded 10.8 million dollars" (107).
+  - "2,500 requests for proposals", "over 68,000 media properties" (221). "Approximately 20 small businesses" (224).
+- Notes:
+  - JAARP "vote of no confidence" at the April 20-21, 2009 meeting; reversed after the June 30, 2009 meeting in New York (236).
+  - Casting reviewers (238); "essential buys" (241).
+  - Copy testing: "192 messages in 115 focus groups ... in 36 cities ... with 1,714 participants covering 17 different audiences", citing 2009a and 2009b (247).
+  - Translations verified by "A Language Bank" (325).
+  - DraftFCB supplier-diversity awards: 2010 AAF and 2011 Interpublic Group (226).
+  - In-text citation "U.S. Census Bureau (2009), C2PO ... Research Memoranda Series No. 10, Messaging to America" (301) is not in References (408-424).
+- Operative definitions, rules and scope exceptions:
+  - "Reach is defined as the percentage of households exposed to the media while frequency tells how often the household will be exposed" (139).
+  - Segments: "the I denotes a homeowner skew, while the II denotes a renter skew" (296).
+  - "make good" (208). "All clusters are inclusive of all races" (127, 286).
+- Amendments or contradictions: these are internal. Census 2000 languages "17" (107) vs "14 languages used in Census 2000" (78, 316); Phase 3 May-July (76) vs April-July (134); Insulated (301) vs Unaware (367); JAARP name order (82 vs 159); 11 meetings vs 10 cities (223); question 6 "media buy schedules" (179) vs heading 5.6 "media buy plans" (240). For cross-document relationships of Tables 3/5/6 see Shared ground.
+- Coverage: **full**. Read 1-120, 120-249, 249-430.
+
+## D04 - 2010 Census ICP Promotional Materials Assessment Report (platform Doc 4)
+
+- Source: `text/D04.txt` (997 lines; 90,983 chars) from `docs/census_census2010_campaign_icp_promotional.txt`; platform **Doc 4**.
+- Written or submitted by: Alexandra Figueroa, Census 2010 Publicity Office (23-24). Cover memo from Burton Reist. The acknowledgements name groups only: C2PO staff, Field Partnerships and Data Services Branch, stakeholders (359).
+  - Mentioned only: Weber Shandwick, "the lead contractor who worked on developing promotional materials" (79); DraftFCB, the prime contractor (146, 212, 225); Government Printing Office (81, 101); A Language Bank (309); partner agencies; PDS; CLMSO; NP Nerve Center (99).
+- Type, date, edition: Final; No. 220; memo August 6, 2012 (4); title page August 1, 2012 (17).
+- Period covered:
+  - 2010 materials "developed and distributed from April 2008 through April 2010" (79-81). Census 2000 materials May 1998 - April 15, 2000 (77).
+  - "The 2010 Census communications contract was awarded September 2007 and funding was not available until fiscal year 2008" (184).
+  - Promotional items could not be bought with FY 2008 funding; purchase was authorised in FY 2009 (287-290).
+  - Phases and waves: see Contradictions and App B.
+  - App E dated June 14, 2010. Interim materials "April 2008, two years prior to Census Day" (285).
+  - Regional partnership staff hired "between January 2008 and September 2010"; Census 2000 peak staffing "July 1999 through May 2000" (300).
+- Entities and aliases:
+  - C2PO = Census 2010 Publicity Office (24, 152); its "Contract Management Branch" (313).
+  - ADCOM: "Assistant Director for Communications (ADCOM)" (147) and App D column "Assistant Director for Communications" (889), but "Associate Director for Communications" (306). Related groups: ADCOM Clearance Team; ADCOM Review Team (150).
+  - COMM OIT = "Integrated Communications Operations Integration Team" (146).
+  - PDS = "Field Division's Partnership and Data Services Branch" (99). CLMSO is printed "Customer Liaison and Marketing Office (CLMSO)" (99).
+  - RO and RCC are both used for regional offices/centers (190, 260, 275).
+  - PCA = "Partnership Communications Area" = 2010census.gov/partners (92, 229, 313).
+  - "transcreated" (52, 89, 218).
+  - "Buy American Act" (101, 275) vs "Buy America Act" / "Made in America" (254, 273-274). Partner Support Program (275); NPC (266).
+- Tables:
+  - 28-language grid numbered 1-28 (205-211), last "28) Yiddish".
+  - App A "2010 Census ICC Timeline Partner Materials and Events" (392-405) is flattened. Months FEB 2008 - MAY 2010 and milestone labels such as "Wave 1A transcreation materials complete" and "Wave 3/ARRA ..." are not reliably paired. Source: "2010 Census ICP Lessons Learned Report".
+  - App B "List of Promotional Materials, Languages, and Quantities" (408-864). Source: Public Information Office. Units are counts of pieces; columns DESCRIPTION / LANGUAGE / TOTAL QUANTITY or "TOTAL (RCC+HQ)". Sections, row counts and printed totals:
+    - WAVE 1 Awareness, "Distribution Timeframe - February 2009 - April 2009" (410): printed 20 rows, total 7,297,500 (445); items 41 rows, total 6,275,430 (499).
+    - WAVE 1A Awareness In-Language, "July 2009 - December 2009" (503): printed 28 rows, total 1,573,882 (541); items 17 rows, total 933,924 (574).
+    - WAVE 2 Awareness/Motivation, "April 2009 - December 2009" (578): printed 121 rows, total 26,230,373 (721). Row 3 "18-month Census Calendar*" has an asterisk with no footnote. Row 121 "Confidentiality Poster Thai 42,585" (720) is Thai's only Wave 2 row.
+    - WAVE 3 Awareness In-Language, "November - December 2009" (726): printed rows numbered 1-27, with two rows numbered "2" (732-733), so 28 rows; **printed total 7,652,496** (759). Mapper arithmetic: the listed rows sum to 7,697,271. The difference of 44,775 equals the Khmer row (751) and the Thai row (758). Items 13 rows, total 2,265,002 (778).
+    - WAVE ARRA Awareness In-Language, "November 2009 - March 2010**" (782; "**" has no footnote text): printed 36 rows, including #36 "TQA Calling Card English-based, with 5 additional languages 7,500,000" (825); total 14,385,004 (826). Items 10 rows, including Fotonovela Spanish 750,000 (835) and Stickers for Children 5,000,000 (838); total 12,747,000 (843).
+    - REPRINT materials: 10 rows, total 4,000,040 (860). REORDER items: 2 rows, total 280,000 (864).
+    - Mapper arithmetic: the printed section totals sum to 61,139,295 printed plus 22,501,356 items, 83,640,651 in all. That matches neither "88 million" nor App E's 118,789,814, and the bundle does not reconcile them. Every other section total re-adds exactly.
+  - App C "Initial Product Review Process" (867-884): the matrix is flattened, but per-product estimated durations are readable. Examples: Press Releases 18 days; Brochures, Poster, Factsheet 12; Newsletter 5; Census In Schools Materials 16; Paid Advertisement Scripts 18; Web pages 18; Recruiting Materials 14. Header durations: FLD Recruiting 4 days; DMD 2 days; ADCOM 2 days; "BOC Director/ Deputy 2 days?"; DOC/ESA 4 days.
+  - App D "Revised Review Process Matrix" (887-941): reviewer columns C2PO through ACSD/Policy/Legal; "CONCURRENT REVIEW: 4 DAYS 2 DAYS 1 DAY 1 DAY 8 DAYS" (890); 21 product rows.
+  - App E "2010 Census Promotional Materials Quantities by Language and Audience (Surplus)" (944-995). Source: U.S. Census Bureau, Field Division, Partnership and Data Services, June 14, 2010. 32 language/audience rows.
+    - Columns: Printed; Give-Away; Total; Percent of Total Materials; Total Clearinghouse (unusable) Items; Percent of Total Clearinghouse Items; Unusable % of Total Print Items; Unusable % of Total Promotional Materials (print and give-away combined); Unusable % (print ONLY).
+    - TOTAL row (994): 60,586,708 | 58,203,106 | 118,789,814 | 100.0% | 11,434,316 | 100.0% | 18.87% | 9.63% | 18.87%.
+    - Key rows: English - Diverse Mass 19,999,264 | 47,161,880 | 67,161,144 | 56.5% | 2,331,838 (950). Spanish (Stateside) 12,534,291 | 5,859,654 | 18,393,945 | 15.5% | 601,250 (955). Spanish (Puerto Rico) 692,650 | 4,235,730 | 4,928,380 | 4.1% | 53,000 (956).
+    - Anomalies:
+      - Korean clearinghouse prints "3009,410" (972). The other rows sum to 10,544,906, so the printed total minus that sum is 889,410, which is consistent with the row's 7.8% / 1.47% / 0.75%.
+      - German clearinghouse 93,817 exceeds its 30,000 total (965).
+      - Chinese (simplified) and Portuguese clearinghouse are 0 (958, 975).
+      - The "Print Items" and "(print ONLY)" percent columns are identical in every row.
+    - The Printed, Give-Away and Total columns re-add to the TOTAL row.
+- Lists:
+  - Executive-summary recommendations four (60-65); Census 2000 item types (77); three challenges, social/political/economic (84-87).
+  - RO-created items (104-106); questions 19 (114-140); SME responsibilities (151-176).
+  - Challenges: requirements three (232-235), development three (238-244), printing/production five items (246, 247, 249, 250, 251).
+  - Destinations: "the 12 regions, Puerto Rico, and 2 HQ destinations - PDS and CLMSO" (283).
+  - Audiences given extra partner review (306).
+  - Lessons five (322-330); recommendations ten (334-356); related reports 11, omitting Promotional Materials (319).
+  - Languages: 28 (205-211). "nineteen of these languages were identified in the base plan" (212): Arabic, Bengali, Cantonese, English, Haitian Creole, Hindi/Hinglish, Hmong, Japanese, Khmer, Korean, Laotian, Mandarin, Polish, Russian, Spanish, Tagalog/Taglish, Thai, Urdu, Vietnamese. "DraftFCB recommended five additional languages. In June 2009, the Census Bureau's Deputy Director requested the following additional nine languages: Armenian, Farsi, French, German, Greek, Italian, Portuguese, Ukrainian, and Yiddish" (212). Language data sources (213).
+- Forecasts, guidance, deadlines, effective dates:
+  - "since the overall project was expected to be executed sooner, the program areas considered the materials delayed" (177).
+  - Requested Wave 1-2 quantities were lowered to fit the budget (264).
+  - A fulfillment system was requested but judged over budget and not implemented (235).
+  - Awareness-poster review "within a 24 to 48 hour timeframe" (181); delivery notice "a minimum of two days to 24 hour notice" (247); CLMSO upload "within a week" (313).
+  - Recommendation: "Launch the decennial website as early as one year before census day" (352).
+- Hedged claims:
+  - "The timeliness of the review process was appropriate. However ..." (177).
+  - "However, they remained overwhelmed" (190).
+  - "no critical problems with the in-language materials" (218).
+  - "was not completely successful ... although steps were taken to mitigate" (258).
+  - "Although this did not correct all issues, it did help" (263).
+  - "from the regional perspective materials came too late" (300).
+  - A Language Bank "was considered a success" (309).
+- Rounded prose beside exact figures:
+  - "more than 257,840 corporations, businesses and nonprofits" (52, 89).
+  - "Over 88 million items were allocated to the 12 Census Bureau Regional Offices" (54, citing Figueroa 2009). "From the more than 88 million products, approximately 45 million materials developed were in-language" (212).
+  - "almost one-tenth of 118.7 million materials produced under the ICP were still available for the 12 ROs" (193), versus App E total 118,789,814 and clearinghouse 11,434,316 (9.63% of combined; 18.87% of print).
+  - "approximately 11.4 million promotional materials were unused and delivered to the National Processing Center" (266), versus 11,434,316.
+  - Spanish: "a total of 23.3 million promotional materials produced in Spanish. For stateside 12.5 million materials were produced along with around 5.9 million give-away items" (190), versus App E Spanish (Stateside) 12,534,291 + 5,859,654 and Spanish (PR) 4,928,380. By mapper arithmetic Stateside plus PR totals = 23,322,325.
+- Notes:
+  - Buy American complaints and news stories (254, 273-275); RCC purchases "less than $3,000" under the Partner Support Program "were allowed to operate outside the Buy American Act" (275).
+  - The "10" poster was not used in some regions (238).
+  - Quantities were based on the Census 2000 Planning Database, which was outdated (102, 260-266).
+  - Interim materials were English-only, delivered April 2008; DMD's Puerto Rico, Island Areas and Overseas Branch translated them for Puerto Rico (186).
+  - Materials online "for the first time", 508 compliant (92, 313).
+  - The same third-party vendor reviewed in-language paid media (310). Graphic standards were in English only (229).
+  - Thank-you items in English and Spanish (108).
+- Operative definitions, rules and scope exceptions:
+  - "transcreated" = "translated and made culturally relevant" (89).
+  - Compliance: a signage sheet signed by the ADCOM Clearance Team, FLD, DMD, ADCOM and Executive Staff (180).
+  - Exception: Awareness posters and Wave 2 promotional items went through a faster review "mainly ... PDS and ADCOM" (181).
+- Amendments or contradictions: these are internal and unresolved.
+  - Campaign phases "ran from early January 2010 through late May 2010" (82). Yet materials phases are listed as Awareness "December 2008 through March 2009", Motivation "April 2009 through September 2009" and NRFU "September 2009 through January 2010" (97).
+  - Wave 2 "delivered ... from December 2009 through April 2010" (296) vs App B Wave 2 timeframe "April 2009 - December 2009" (578).
+  - "Wave 3 materials, purchased with ARRA funding, were delivered from November 2009 to March 2010" (298) vs App B, which separates WAVE 3 (Nov-Dec 2009, 726) and WAVE ARRA (Nov 2009 - Mar 2010, 782).
+  - The prose labels the July-December 2009 in-language delivery "Wave 1" (295); App B calls it "WAVE 1A" (502-503).
+  - "Interim materials" and "Wave 1" appear in one paragraph (285-286).
+  - "(see Attachment B)" for review processes (278).
+  - ADCOM expansions (147 vs 306).
+- Coverage: **full**. Read 1-150, 150-309, 310-479, 480-649, 650-828, 829-997.
+
+## D05 - 2010 Census ICP Research Assessment Report (platform Doc 5)
+
+- Source: `text/D05.txt` (716 lines; 79,862 chars) from `docs/census_census2010_campaign_icp_research.txt`; platform **Doc 5**.
+- Written or submitted by: Monica Wroblewski, Census 2010 Publicity Office (25-26), the same author as D03. Acknowledgements are the same people as D03 (661). Cover memo from Burton Reist.
+  - Mentioned only: DraftFCB; Macro International, which ran CBAMS as "a subcontractor to DraftFCB" (153, 417); the Maya Group (copy testing, 523); Gallup Organization (177, 572); ARC (CATS methodology, 666); NORC (130, 181); Knowledge Networks, "then known as InterSurvey" (127); Y&R (126); Simmons Data Service (149); Statistical Research Division (293); CACPA, REAC (187, 421).
+- Type, date, edition: Final; No. 226; memo August 2, 2012 (4); title page August 1, 2012 (19).
+- Period covered:
+  - CBAMS "July and August 2008" (153-158), changed "after the field period beginning on July 11, 2008" (425); second CBAMS "completed in October 2011" (448).
+  - Copy testing Phase 1 "late January to early March 2009", Phase 2 "August 2009" (164).
+  - CATS "October 27, 2009 to April 19, 2010" (170, 536-538).
+  - Gallup "from December 3, 2009 through April 24, 2010" (573); line 177 prints "December 3 to April 24, 2010".
+  - Academic Assessment Panel formed April 2009 (183). NORC 2010 ICP evaluation "began in September 2008 and ended with a final report on March 15, 2012" (181).
+  - Census 2000 Knowledge Networks surveys "between March 3 and April 13, 2000", baseline February 2000 (127).
+- Entities and aliases:
+  - C2PO = Census 2010 Publicity Office (117).
+  - "SmartSuite" (192-195, 549-595, 639, 653-658) vs "Smart Suites" (101). D01 writes "Smart Suite".
+  - CATS; CBAMS; PAHUE "Paid Advertising Heavy Up Experiment" (185); PDB = "tract-level planning database" (295); HTC score (295-298); "2008 Census DR" (208); "Team Census" (183).
+  - Single-mobile segment spellings: "Single Unattached Mobiles" (149), "Single/Unattached/Mobiles" (302), factor "Unattached/Mobile Singles" (298).
+- Tables:
+  - Table 1 "Percent Distribution of Households by Clusters: Census 2000 and 2006 ACS" (325) is title and source only (Jacobsen and Bates, 2009); **no values in text**. Prose: "did not change substantially between 2000 and 2006" (324).
+  - Table 2 (459-483) has the same values as D03 Table 2. Row 466 prints "NHPI34 39 0 0 AIAN48 136 0 0", with footnote markers 3 and 4 fused (482-483). Totals 78/1400 and 37/314 (479). Cited as 2009d/2009e (456).
+  - Figures 1-5 (318-322, 345, 599, 602) are captions only. Figures 1-2 compare the 2008 Dress Rehearsal with Census 2000 short-form rates for San Joaquin County, CA and Fayetteville, NC.
+  - Appendix timeline (702-714) has no text.
+- Lists:
+  - Major research components (94-101). Line 99 prints "Census 2000 Partnership and Marketing Program Evaluation Academic Assessment Panel" as one line; the body has nine headings (146, 151, 162, 167, 176, 179, 182, 185, 191).
+  - Key recommendations two (108-109).
+  - Census 2000 PMP evaluation findings by population (131-135).
+  - Three factors (298); eight clusters with homeowner/renter skews (302); CBAMS goals eight (330-339).
+  - Five mindsets (158; profiles 346-413), each with a "Core Characteristic": Leading Edge "Committed", Head Nodders "Impressionable", Insulated "Indifferent", Unacquainted "Peripheral", Cynical Fifth "Resistant".
+  - HTC sampling strata (432-443); in-person interview languages four (451).
+  - Phase 1 and Phase 2 focus-group language lists (488-509). Mapper count: 22 distinct language labels, with Chinese not subdivided.
+  - Rapid response decisions five, last the "10 questions/10 minutes" out-of-home item (560-566).
+  - Academic Assessment Panel recommendations adopted: three examples (630).
+  - Related reports 11, omitting Research (635); lessons two (637-639); recommendations (646-658).
+- Forecasts, guidance, deadlines, effective dates:
+  - "beginning the motivation phase on March 1, 2010 instead of March 15, 2010 after awareness measures began to plateau" (564).
+  - CATS and Gallup run "as planned" (536, 573-574).
+  - Phase 2 copy testing was not in the original plan; it tested ARRA creative and revised Phase 1 copy (164-165, 526-527).
+  - Panel long-term suggestions are "being incorporated into the 2020 Census research plans" (630).
+- Hedged claims:
+  - "The evidence suggests, however, that intentions to return the census form increased for English-speaking American Indians" (131).
+  - "suggesting that the program had less impact on this group" (Hispanics) (133).
+  - "evidence was somewhat weaker and less uniform" (130).
+  - "achieved mixed success"; data "consistent with the hypothesis ... had no effect" (135).
+  - Segmentation "used logistic regression models to determine the potential impact that the partnership and paid advertising campaigns may have had" (147). This "may" sits inside the description of the model.
+  - "definitely a success, but the related drawback was that the data was nearly a decade old" (306).
+  - "This implies that a tract ... may not have been in the same segment"; "As expected, ... between 16 and 27 percentage points lower" (316).
+  - "may also be an effective strategy" (399).
+  - Stated firmly: "Our multi-award winning campaign supported the 2010 Census efforts in achieving its participation rate of 74 percent" (642).
+- Rounded prose beside exact figures:
+  - CBAMS "sample size of 4,064 interviews" (153); D06 says "4,000 interviews" (D06 340).
+  - CATS: "about 900 respondents per week for a total sample of approximately 20,000" (170) vs "close to 900" (536).
+  - Gallup: daily 1,000 respondents, of whom 200 answered 10 questions (177, 572-573).
+  - Leading Edge "just over one-quarter" (347); Unacquainted "Over 40 percent ... foreign born" (390).
+  - "over 50 industry and leadership awards with at least 15 of them specifically recognizing our paid advertising" (512).
+  - Message "400 billion dollars" (356, 371); "12 variables" (297); "eight matched-pair designated market areas" (187); "23 languages" (165).
+- Notes:
+  - Stakeholder pressure led to "additional print advertising in newspapers targeted to the black audience despite the fact that research found that newspapers for that target audience were not a preferred source" (311).
+  - NHPI REAC sample concern; no interviews in Hawaii (421). Reservation-permission difficulties (448).
+  - In-person interviews "only available in English, Spanish, Chinese and Korean" (451).
+  - The untested Christopher Guest ad "was aired during the Super Bowl"; the rest went to YouTube (516).
+  - "CATS was an English only survey" (541); Gallup in English and Spanish (577).
+  - SmartSuite accounts "available to all interested parties" (549) and to internal and external staff (585).
+  - "The Communications Directorate has formed the Planning and Evaluation Group" (648).
+  - "Federal Statistical System Public Opinion Survey" (574).
+- Operative definitions, rules and scope exceptions:
+  - Audience segmentation (147); factor vs cluster analysis (298-300).
+  - HTC scores "constructed from 12 variables" (295-297).
+  - CATS phases Benchmark, Awareness and Motivation (170).
+  - PAHUE design: "a random half of each pair received an increase in the amount of paid advertising 'dosage'" (187).
+  - SmartSuite (192-195). Market-size strata by DMA television households: big over 2,000,000; mid 600,000 to 2,000,000; small under 600,000 (439-441).
+  - Mindset-to-cluster alignments (347, 362, 378, 390, 403).
+- Amendments or contradictions: these are internal.
+  - "Appendix A shows a flow chart" (287) vs TOC "Appendix: Timeline of Research Activities" (80).
+  - Two sections are numbered 5.6 (606, 621).
+  - ACS validation years: "2006 and 2007" (149) vs "the 2008 ACS" (316) vs "2006 ACS" (324).
+  - The Phase 1 list says "Emerging Audiences: Russian, Polish, and Arabic" (495), while Table 2's Phase I row is "Legacy" (468).
+  - Phase 1 had "both qualitative and quantitative" groups and Phase 2 "qualitative sessions only" (531).
+  - Not in References (665-699): Jacobsen and Bates 2009 (325) and Macro International 2009 (341).
+- Coverage: **full**. Read 1-130, 130-279, 279-418, 418-567, 567-716.
+
+## D06 - 2010 Census ICP Summary Assessment Report (platform Doc 1)
+
+- Source: `text/D06.txt` (829 lines; 80,675 chars) from `docs/census_census2010_campaign_icp_summary.txt`; platform **Doc 1**.
+- Written or submitted by: Mary A. Bucci, Decennial Management Division (25-26). Cover memo from Burton Reist; memo contact Mary Bucci (15).
+  - Acknowledgements (504): Jonathan Zapata led research and production; Brenda Holmes planning; Theodora Knight key review; Adrienne Oneto, Tasha Boone, Kimberly Higginbotham, Jim Dinwiddie.
+  - Mentioned only: DraftFCB and subcontracted agencies (177-189); NORC at the University of Chicago (460); Department of Commerce (468); Scholastic (413-414); National League of Cities, National Association of Counties, ICMA (419); Telemundo (400); award bodies (App F).
+- Type, date, edition: Final; No. 223; memo August 2, 2012 (4). Title page "2010 Census Program **of** Evaluations and Experiments" (18); the others say "for". Dated August 2, 2012 (19). Page numbering restarts after section 6 (TOC 40-42; page marks "2" at 454, "3" at 471).
+- Period covered:
+  - Contract: "On September 6, 2007, the Census Bureau announced the award ... The one-year contract had up to three option years, ending September 30, 2011" (177).
+  - Paid advertising "launched in January 2010 and continued through June 2010" (222). Phases: Awareness January-February, Motivation March-April, "Support Phase (May to July 2010)" (225-229).
+  - NRFU operations "during May, June, and July 2010" (392); NRFU paid advertising "(April through July 2010)" (393).
+  - App D runs FY 2007-FY 2013, "as of November 2010". App C is "Revised 3/17/11".
+  - Department of Commerce award December 13, 2011 (468).
+  - Acronym list: "2010 Census The 23rd decennial census, taken as of April 1, 2010" (47); Census 2000 the 22nd (53).
+- Entities and aliases:
+  - The acronym list (45-83) includes "C2PO Census 2000 Publicity Office" (53), while App E prints "Census 2010 Publicity Office (C2PO)" (646, 652).
+  - "ADCOM Associate Director for Communications" (48) and "Communications Directorate (ADCOM)" (283).
+  - HAKWAN is defined as a "Census 2000 public relations program that disseminated response rates for government units" (66).
+  - "eleven individual program assessment reports" (46).
+  - Program-name variants: "National Partnerships" (123) vs "National Partnerships Program" (210); "Earned Media and Public Relations" (117) vs "Earned Media/Public Relations" (204).
+  - Census in Schools "2010 Census: It's About Us" (252).
+  - D02 is cited as "King, William T. and Kaya, Briana (2012)" (514), but D02's title page names King and Wycinsky.
+- Tables:
+  - App A "Listing of all 59 Languages" (543-559): 4-column grid of 15/15/15/14 entries, with no English. Source line: "2010 Census ICP Promotional Materials Assessment Report, 2012" (559).
+  - App B "2010 Census Communications and Partnership Program Costs" (562-566): **no text**.
+  - App C "Communications Contract Planning Budget" (567-592), Source "(Revised 3/17/11)", whole dollars.
+    - Language notes: "Emerging Audiences: Arabic, Farsi, Polish, Russian, and Urkrainian New Legacy Languages: French, German, Greek, Italian, Portuguese, and Yiddish" (568).
+    - Columns: Census 2000 Contract Cost (Actual) | Inflated to 2010 | 2010 Estimated Lifecycle Allocation (Base and ARRA) | Index vs. 2000 | 2010 Rapid Response Activities (Base and ARRA) | TOTAL ESTIMATED LIFECYCLE BUDGET | Index vs. 2000 | Percent Funding Used.
+    - Paid media rows (TOTAL ESTIMATED LIFECYCLE column): Paid Media - Total Budget $292,769,305 (80.9%); Production $34,768,783; Labor $80,296,918; Other $10,578,005; Total Advertising Buy $167,125,599 (Census 2000 actual $110,018,000).
+    - Buys by type: National Buys $90,169,215; Local Buys "(Mostly directed to HTC population)" $76,956,384.
+    - Buys by audience: Diverse Mass $81,640,470; Ethnic/Language Audience $85,485,129. Within the latter: Hispanic $32,738,188; Black (including African and Caribbean) $28,387,842; Asian $14,164,650; NHPI $1,129,936; AIAN $4,087,281; Emerging Audiences $1,881,760; Puerto Rico $2,444,000; Island Areas "$ -" (Census 2000 $422,000); New Legacy languages $651,472.
+    - Other components: Partnerships Total $27,177,809 (7.5%); Public Relations/Events/Road Tour Total $26,798,544 (7.4%; Census 2000 $10,800,000); Census In Schools Total $14,270,721 (3.9%; Census 2000 $17,251,281; index 83); Promoting Data Releases $949,390 (0.3%); Rapid Response Activities 9.5%. The RR column total is $34,329,268, of which the Total Advertising Buy share is $31,939,982.
+    - TOTAL $204,851,105 | $278,748,447 | $327,636,501 | 160 | $34,329,268 | $361,965,769 | 177 | 100.0% (592).
+    - Mapper checks: the components re-add to Paid Media and TOTAL. Index = 2010 amount divided by Census 2000 actual, times 100. The percent column reaches 100.0 without the 9.5% Rapid Response line, because the RR column is already inside the row totals.
+  - App D "Communications Contract and Regional Partnership Lifecycle Costs (as of November 2010)" (595-613). Columns: Integrated Communications Contract ("all funds allocated to DraftFCB contract") and Regional Partnerships:
+    - FY 2007: 900,000 | 726,240
+    - FY 2008: 9,000,000 | 8,100,000
+    - FY 2009: 121,958,456 | 73,301,997
+    - ARRA (FY 2009): 73,846,045 | 28,139,955
+    - FY 2010: 121,995,319 | 99,230,863
+    - ARRA (FY 2010): 43,542,955 | 80,700,590
+    - FY 2011: one value, 5,086,597 (606). Base-total arithmetic places it in the Regional Partnerships column. FY 2012-2013 are blank.
+    - Base Total 253,853,775 | 186,445,697; Recovery Total 117,389,000 | 108,840,545; TOTALS 371,242,775 | 295,286,242 (610-612).
+    - Source "Lifecycle Inegrated Communications Program Cost. xls, Kim Higgenbothem, November 2010" (613).
+  - App E "Roles and Responsibilities" (616-661): PIO (11 bullets), ACO, CLMSO, CAO, C2PO, DMD, FLD.
+  - App F "Awards Submitted and Won" (664-827): 55 numbered awards; "TOTAL AWARDS WON 55 Source: ADCOM" (827). Category labels print flattened after the items:
+    - Advertising (Paid) 1-21
+    - Promotional Materials 22-27
+    - Public Relations/PSAs/Podcast 28-40
+    - Research 41-42
+    - Social Media 43-54, website awards included
+    - Census In Schools 55, the last item (822-825)
+- Lists:
+  - Goals three and objectives seven (93-105).
+  - "11 key program areas" (113-125; again 201-212), last "Mail Response Rates/Take 10".
+  - Executive-summary recommendations nine (128-144); research reports used (190-197); test data (198).
+  - Stakeholders (262-276); key challenges five (289-291); questions three with sub-items (302-318); risks four (325-333).
+  - Five audience lines with homeowner/renter variants (345-349).
+  - Earned-media strategies nine, last "Implementing a rapid response system" (356-366).
+  - Communications tools ten, last "Satellite and Audio Media Tours (SMT/AMT)" (422-432).
+  - Related evaluations (434-452): 11 components plus "Summary".
+  - Final recommendations (472-501).
+  - Subcontractor list (180-189): 13 role lines naming 15 firms; "*Small businesses" marks seven.
+- Forecasts, guidance, deadlines, effective dates:
+  - "it was predicted that the 74 percent participation rate of Census 2000 would not only not be achieved, but also that it would decline" (287), against the outcome "achieving a mail participation rate of 74 percent" (293).
+  - "Although many thought the mail response rate would decline, ... 74 percent of the nation's households participated by mailing back the questionnaire" (457).
+  - "Twenty-two states, 1,553 counties, and 278 cities and townships met or exceeded their Census 2000 participation rates" (458).
+  - Department of Commerce citation: "a 370 million dollars integrated communications campaign that ... generated a 74 percent mail-in response rate ... a prime contractor and 14 key subcontractors" (468).
+- Hedged claims:
+  - "It was assumed that the majority of national partners would have significant reach into HTC communities" (381).
+  - Risks: "may not have been gathered ... may not have all the information" (331).
+  - "considered a success through its achievement of recognitions" (456); "We believe the ICP was a success" (469).
+  - "Perhaps the contract can be written ..." (481); "Perhaps these two systems can be combined" (496).
+  - Unhedged Census 2000 statements: PMP "helped achieve the reversal of a three-decade long decline in mail response rates" (89), and "helped reverse a three-decade long decline ... and reduced the differential undercount for all historically undercounted population groups" (167).
+- Rounded prose beside exact figures:
+  - Partners: "Approximately 257,000 regional partnerships" (110); "Approximately 257,000 partnerships" (159); "More than 250,000 ... of which 852 were national organizations" (276); "More than 250,000 ... 99 percent were regional partners" (376); "More than 260,000" (410).
+  - Value added: "97.4 million dollars" (276, 376, 410); "1.2 billion dollars" (276). Data centers: "approximately 1,700 State Data Centers and 47 Census Information Centers" (274).
+  - Budget prose (279-280): "212.1 million"; "one billion dollars in ARRA funds, of which 100 million dollars was added ... 312.1 million"; "35 million dollars ... added to the 2010 Census Response Rate Program"; "approximately 371 million dollars and 295 million dollars had been obligated for partnerships". These sit beside App D totals 371,242,775 and 295,286,242 and App D Recovery Total 117,389,000.
+  - CBAMS "4,000 interviews" (340).
+  - Promotional materials: "nearly 300" (246), "300" (378), "Three hundred" (411). Items: "Over 88 million items were allocated" (246) / "distributed" (378, 411).
+  - Exposure: "95 percent ... exposed to approximately 15 advertisements on average" (Awareness); "at least 31 impressions" (Motivation) (389-391); "at least five advertisements each" (NRFU) (393).
+  - "Eleven million dollars was spent on paid advertising during the NRFU Operation (April through July 2010) and another 32 million dollars ... during the Rapid Response Program" (393).
+  - Social media: "over 110,000 Facebook fans, over 11,000 Twitter followers, over 350 videos ... close to 500,000 views"; "23 million page views during the first week of April 2010" (372).
+  - Road tour "estimated 217 million media impressions" (374). Director's blog "114,775 page views ... about 20 percent" (399).
+  - Scholastic "10 waves", "more than 1.5 million", "more than 23 months" (414).
+  - Awards "over 50" (465) vs App F 55.
+- Notes:
+  - 2010 form of "ten questions only"; replacement questionnaires used for the first time; bilingual questionnaires where "at least 20 percent" of households met the Spanish criterion; questionnaires in "six languages"; Language Assistance Guides in "59 languages"; ads "in 28 different languages" (170-172).
+  - Road tour "13 vehicles, one for each of the 12 Census regions and one national vehicle" (249); NASCAR and Today Show (374).
+  - "452 advertisements were developed and distributed across 55 uniquely defined and targeted markets"; reach "93 percent to 97 percent", citing Wroblewski 2012a (349).
+  - Director's May 6, 2010 blog "welcoming the 600,000 enumerators" (399); Telemundo "Mas Sabe El Diablo" (400).
+  - Footnote 1 defines Complete Count Committees (270). Footnote 2 points audience-segmentation readers to "Research Memoranda Seriess, No.11, ... (CBAMS) Analytic Report, May 18, 2009" (353).
+- Operative definitions, rules and scope exceptions:
+  - Decennial census numbering (47, 53); HAKWAN (66); CCC (270); "C& P Cost and Progress - refers to both the system and the reports generated by the system" (59).
+  - Value added illustrated as "(i.e. training space)" (410).
+  - App C language-group membership notes (568).
+- Amendments or contradictions: these are internal and unresolved.
+  - "thirteen subcontractors" (89) vs the Department of Commerce quote "14 key subcontractors" (468).
+  - Partner counts: 257,000 / 250,000 / 260,000 (110, 159, 276, 376, 410).
+  - Budget: "370 million" (468) vs "approximately 371 million" (280).
+  - ARRA "100 million dollars" (279) vs App D Recovery Total 117,389,000 (611).
+  - Campaign "through June 2010" (222) vs Support Phase "May to July 2010" (229).
+  - NRFU "May, June, and July" (392) vs "(April through July 2010)" (393).
+  - Appendix labels: line 280 says "Appendix B shows the U.S. Census Bureau's proposed expenditure of the one billion dollars" and "Appendix D shows the Communications and Partnership Program Costs as of November 2010". But App B is titled "...Communications and Partnership Program Costs" and has no content (562), and App D is titled "Communications Contract and Regional Partnership Lifecycle Costs" (595).
+  - App A cites the Promotional Materials report, but D04 holds only a 28-language list (D04 203-211).
+  - TOC typo "(as of of November 2010)" (42).
+- Coverage: **full**. Read 1-130, 130-259, 259-388, 388-517, 517-676, 676-829.
+
+## Shared ground (navigation only)
+
+- Entities that appear in more than one document, and where:
+  - Issuer: all six documents come from the U.S. Census Bureau, each with a Burton Reist cover memo (line 8 in each), Kevin Deardorff as public-release contact (line 3 in each) and Mary Bucci as memo contact (D01 14, D02 14, D03 14, D04 13, D05 15, D06 15).
+  - Authors versus mentioned people:
+    - Mary Bucci: D06 author; acknowledged in D01 594, D03 404, D05 661.
+    - Tasha Boone: D01 595, D02 470, D03 404, D05 661, D06 504.
+    - Benjamin Saunders: D01 author; D03 404; D05 661; D06 522.
+    - Jonathan Zapata and Brenda Holmes: D01 594; D03 404; D05 661; D06 504.
+    - Kimberly Higginbotham: D01 594; D06 504; spelled "Kim Higgenbothem" at D06 613.
+    - Adrienne Oneto and Jim Dinwiddie: D01 595; D06 504.
+    - Monica Wroblewski: D03/D05 author; D01 595 (as C2PO); D06 534-538.
+    - Alexandra Figueroa: D04 author; D01 595 (C2PO); D04 364 (Figueroa 2009 e-mail); D06 508.
+    - Eric Newburger: D01 595; D06 520.
+    - William T. King: D02 author; D06 381, 514 ("King and Kaya").
+    - Nancy Bates: references in D03 409, D05 668-674, D06 512.
+  - Contractors (all are mentioned, none is an issuer):
+    - DraftFCB: all six documents (D01 276; D02 196; D03 123; D04 146, 212; D05 138, 153; D06 89, 177).
+    - Weber Shandwick: D01 608; D02 157, 196, 339; D04 79, 146; D06 180 and App F.
+    - Y&R: D03 105-107; D05 126; D06 83.
+    - NORC: D03 116; D05 130, 181; D06 73, 460.
+    - A Language Bank: D03 325; D04 309-310.
+    - Simmons: D03 298; D05 149; D06 349.
+    - Gallup: D05 177, 572-604; D06 237.
+    - New America Media: D03 223; D04 213.
+    - Macro International (D05 only); Maya Group (D05 only).
+    - GovDelivery: D02 372-374; D06 711-712 (award).
+    - Scholastic: D06 185, 413-414, 823-825.
+    - USPS: D01 62, 97; D02 240.
+  - Organisational labels with differing expansions:
+    - C2PO: "Census 2000 Publicity Office" (D02 118; D06 53) vs "Census 2010 Publicity Office" (D01 274; D02 157; D03 25, 97; D04 24, 152; D05 26, 117; D06 646, 652).
+    - ADCOM: Associate (D01 79; D06 48; D04 306) vs Assistant (D04 147, 889) Director for Communications.
+    - CLMSO: "Customer Liaison and Marketing Office" (D04 99) vs "...Marketing Services Office" (D01 274; D02 123; D06 60).
+    - Smart Suite (D01) / SmartSuite / Smart Suites (D05).
+    - JAARP name order (D03 82 vs 159).
+  - Advisory bodies: REAC, CAC and CACPA in D03 158-159 and D06 264. D06 264 gives REAC "consisting of five committees".
+- Periods or series that more than one document covers, and where:
+  - The 11 ICP program areas appear in D06 113-125 and 201-212. Each component report has a "Related ... Assessments" list that omits itself: D01 544, D02 426, D03 384, D04 319, D05 635. D06 434-452 lists the 11 components plus "Summary".
+  - Paid campaign window:
+    - D03: January 17 - July 4, 2010 (52, 129).
+    - D06: "January 2010 ... through June 2010" (222).
+    - D04: "early January 2010 through late May 2010" (82).
+  - Phase 3 window and name:
+    - D03: May-July (76) and April-July (134), named "Nonresponse Followup Phase".
+    - D06: "Support Phase (May to July 2010)" (229); NRFU May-July (392) and "April through July" (393).
+  - Promotional-material phases and waves run December 2008 - January 2010 (D04 97) and February 2009 - April 2010 (D04 292-299, App B 410-782).
+  - Motivation start: March 1 instead of March 15, 2010 (D05 564), against "March to April 2010" (D03 74; D06 227).
+  - Contract award:
+    - D06: announced September 6, 2007; option years to September 30, 2011 (177).
+    - D03: paid-advertising "contract start date of September 19, 2007" (329).
+    - D04: "awarded September 2007" (184, 300); Master Contract dated "September 19, 2007" (374).
+  - NRFU cut dates: Census 2000 "April 18, 2000" (D01 1145); 2010 "April 20, 2010" or "4/20/2010" (D01 953-966, 1164).
+  - Census 2000 comparisons:
+    - D01 90-139: HAKWAN; 67.4 percent; 117,661,748 housing units; Table 2.
+    - D02 115-136: about 130 plus about 100 national organisations.
+    - D03 104-116: Y&R ads, 17 languages.
+    - D04 76-77, 300.
+    - D05 126-135: PMP evaluation; Knowledge Networks.
+    - D06 166-168, 287, 458, and App C Census 2000 cost columns.
+- Documents that cite, amend or respond to another document in the bundle:
+  - D06 cites the other five as "forthcoming 2012":
+    - D04 = Figueroa (508)
+    - D02 = "King and Kaya" (514; author list differs from D02 24)
+    - D01 = Saunders Jr. (522)
+    - D03 = Wroblewski 2012a (534; used for D06 349)
+    - D05 = Wroblewski 2012c (538)
+    - D06 App A cites the Promotional Materials report (559).
+  - D03 refers readers to "the 2010 Census Integrated Communications Program Research Assessment report" (D05) at 232 and 296.
+  - D05 refers to the "2010 Census Rapid Response Assessment" (574), which is not in the bundle.
+  - No document amends another. No document is a revised edition of another.
+  - Shared external sources with different dates or labels:
+    - DraftFCB Lessons Learned Report: "Final, 11/17/10" (D02 142); "Fall 2010" (D03 420); "December 07, 2010" (D04 364); also the App A source (D04 405).
+    - "Detailed Operational Plan for Integrated Communications Program": Vitrano, July 30, 2009 (D03 422) vs U.S. Census Bureau 2009a, No. 37, August 20, 2009 (D06 527).
+    - Wolter et al. 2002: "July 17, 2002" (D02 485; D03 424) vs "July 2002" (D05 699).
+    - Copy-testing reports Memoranda No. 13 (July 22, 2009) and No. 16 (November 16, 2009): cited as 2009a/2009b in D03 (247, 415-418) and as 2009d/2009e in D05 (456, 692-695).
+    - CBAMS memoranda: No. 8 Methodology (D05 682); No. 10 "Messaging to America" (D03 301; D05 344, 674); No. 11 Analytic Report (D05 173, 689; D06 353, cited for audience segmentation).
+    - Jacobsen and Bates 2009, No. 9 (D06 512; D05 325 cites it without a reference entry).
+- Forecast/actual pairs, repeated/changed tables, same-period conflicts and scope relationships (locations only; the author owns hooks):
+  - **Mail rates, by measure and scope.**
+    - Census 2000 "final mail response rate of 67.4 percent" (D01 90) vs Census 2000 "74 percent participation rate" (D06 287).
+    - 2010 expected response rate: minimum 59 / maximum 65 percent at the NRFU cut date of 4/20/2010; expected figures include Puerto Rico and actual figures exclude it (D01 951-966, 1156-1166, 1211).
+    - 2010 outcome: "participation rate of 74 percent" (D05 642); "mail participation rate of 74 percent" (D06 293); "74 percent of the nation's households participated" (D06 457).
+    - Department of Commerce quote "74 percent mail-in response rate" (D06 468).
+    - Definitions separating the two measures: D01 64-67, 353, 358. D01 itself has no 2010 actual.
+  - **ICP or communications contract budget.**
+    - D03 329: "started at 212 million dollars and increased to 362 million dollars with ARRA funding".
+    - D06 279-280: 212.1 million; plus 100 million ARRA, giving 312.1 million; plus 35 million to the "2010 Census Response Rate Program"; "approximately 371 million" by the end; 295 million for partnerships.
+    - D06 App C TOTAL ESTIMATED LIFECYCLE BUDGET $361,965,769 (592, Revised 3/17/11).
+    - D06 App D ICC TOTALS 371,242,775, including Recovery Total 117,389,000 (610-612, as of November 2010).
+    - D06 468: Department of Commerce quote "370 million dollars".
+  - **Paid advertising $167 million.**
+    - D03: 80 and 329; Tables 3-6 Total $167.0 (millions, "as of March 2011", 331). D06 349: "167 million dollars".
+    - D06 App C: Total Advertising Buy $167,125,599 (579), within Paid Media - Total Budget $292,769,305 (575), which includes production, labor and other.
+    - D03 Table 3 rows match App C audience rows rounded to $0.1M, except "Legacy Languages*** 0.6" against "New Legacy languages $651,472". Both name the source "Communications Contract Planning Budget Rev 3/17/11" (D03 349; D06 568).
+    - Language-group labels differ between the two: D03 Emerging = German, French, Italian, Greek, Portuguese, Yiddish and Legacy = Russian, Polish, Arabic, Farsi, Armenian, Ukrainian (344-347). D06 Emerging = Arabic, Farsi, Polish, Russian, Ukrainian and New Legacy = French, German, Greek, Italian, Portuguese, Yiddish (568). Armenian appears in neither D06 note. D05 495 uses "Emerging Audiences" for Russian, Polish and Arabic.
+    - National/local split: D03 Table 5 National 88.3 / Local 78.7 (Post Buy Cover) vs D06 App C National Buys $90,169,215 / Local Buys $76,956,384.
+    - Phase spending: D03 Table 6 Rapid Response 31.8, Nonresponse Followup 11.1, Heavy-Up 1.3 vs D06 393 "Eleven million dollars" (NRFU) and "another 32 million dollars" (Rapid Response). D06 App C Rapid Response: $31,939,982 in advertising buy, $34,329,268 total.
+    - The label "Heavy-Up" (D03 375) matches the experiment name "Paid Advertising Heavy Up Experiment (PAHUE)" (D05 185-189; D06 436). The bundle does not tie the $1.3M to PAHUE.
+  - **Planned exposure vs reported exposure.**
+    - D03 Table 1 targets: 10+5, 20+11 and 3+2 exposures at 95% or the lowest-responding population (141-150). Achieved: "up to 18", "up to 48", reach "as high as 97 percent" (139).
+    - D06 389-393: approximately 15, at least 31 and at least five.
+  - **Subcontractor count.** "14 subcontractors" (D03 123); "thirteen subcontractors" (D06 89); list of 13 roles and 15 firms (D06 180-189); "14 key subcontractors" in the Department of Commerce quote (D06 468).
+  - **Languages.**
+    - 28 in all: D03 78, 280, 314; D04 52, 89, 203; D06 172, 246, 349.
+    - Base/added split: 14 base + 14 ARRA (D03 316-322) vs 19 base + 9 added after "DraftFCB recommended five" (D04 212). Bengali, Hmong, Laotian, Thai and Urdu are ARRA additions in D03 but base languages in D04.
+    - Census 2000: "17 languages" (D03 107) vs "14 languages used in Census 2000" (D03 78, 316).
+    - Copy testing: "23 languages" (D05 165; D06 220).
+    - Questionnaires in 6 languages; Language Assistance Guides in 59 (D06 171-172, App A 543-559).
+    - Distinct audiences: 35 audiences for materials (D04 52, 89) vs 17 copy-testing audiences (D03 247; D05 456).
+  - **Promotional materials.**
+    - 288 materials (D04 52, 89) vs "nearly 300" / "300" / "Three hundred" (D06 246, 378, 411).
+    - "Over 88 million items" allocated (D04 54; D06 246) or distributed (D06 378, 411); "more than 88 million products" (D04 212).
+    - "118.7 million materials produced" (D04 193) vs App E total 118,789,814 (D04 994).
+    - Unused: "approximately 11.4 million" (D04 266) vs 11,434,316 (D04 994).
+    - Budget 12 + 9 (ARRA) = 21 million dollars (D04 55-56, 90). D06 App C has no separate promotional-materials line. Its only GPO mention is the Paid Media "Production (includes Talent, Dubbing & Shipping, GPO)" row (575).
+  - **Partnership counts and value.**
+    - Counts: "more than 257,840 corporations, businesses and nonprofits" (D04 52, 89); about 257,000 partnerships, "regional" in one place (D06 110, 159); more than 250,000 including 852 national (D06 276, 376, 381); more than 260,000 (D06 410).
+    - D02 has no national total. It gives 278 business/corporation partner types (342), about 51 faith-based (348) and 8 fraternities/sororities (345).
+    - Value added: National Partnership "estimated 30 million dollars" (D02 420) vs HTC regional partners 97.4 million and all partners 1.2 billion (D06 276, 376, 410).
+    - Costs: App C Partnerships Total $27,177,809 (D06 591); App D Regional Partnerships $295,286,242 (D06 612).
+  - **Copy testing.** D03 Table 2 (250-275) and D05 Table 2 (459-483) are duplicate tables; the prose is the same in D03 247 and D05 456. D06 220 says "both quantitative and qualitative", while D05 531 says Phase 2 was "qualitative sessions only".
+  - **CBAMS.** 4,064 interviews (D05 153) vs 4,000 (D06 340); "July and August 2008" in both. The third mindset is "Insulated" in D03 301 and D05 158/375, but "Unaware" in D03 367.
+  - **Segments.** Eight audiences or clusters (D03 288-296; D05 149, 302) vs five audience lines with homeowner/renter variants (D06 345-349). Three factors (D05 298). Likelihood Spectrum three groups (D03 105; D05 126).
+  - **Census 2000 PMP effect, by hedge scope.**
+    - Hedged: D03 119 ("available evidence suggests ... may also have improved cooperation"); D03 116 and D05 130 ("somewhat weaker and less uniform"); D05 135 ("mixed success").
+    - Unhedged: D06 89 and D06 167, which adds "reduced the differential undercount for all historically undercounted population groups".
+  - **Awards.**
+    - Totals: D06 App F "TOTAL AWARDS WON 55" (827); "over 50 awards" (D06 465); "over 50 ... at least 15 of them specifically recognizing our paid advertising" (D05 512).
+    - D03 92 names three programs, which match App F entries: Mediaweek (705-708, items 16-17); IPG MERGE (722-723, item 21); Summit International (667, 692-714, 804).
+    - DraftFCB supplier-diversity awards (D03 226) do not appear in App F.
+    - "award-winning PSAs" (D02 407) matches the Greg Biffle PSA items 28, 29 and 39 (D06 748-780).
+    - Promotional-material awards: Poster Series, Fotonovela (D04 835) and "How People Are Counted" brochure (D04 612-632, 734) match App F items 22-27 (D06 723-742).
+    - Effie Bronze: D06 465 and item 20 (720-721).
+  - **Smart Suite scope.** Developed by DraftFCB, "designated marketing areas", "only for use by identified Census Bureau employees and partners", island areas other than Puerto Rico excluded (D01 276). D01 416 calls it a dashboard down to tract level. D05 says accounts were "available to all interested parties" (549) and to internal and external staff (585), and describes it at 192-195.
+  - **"Response rate" program names.** "Response Rate Feedback Program" renamed Take 10 (D01 197) vs RRFP referring to MRR (D01 419); "2010 Census Response Rate Program" received +35 million (D06 279). The bundle does not define the latter.
+  - **Take 10.** D01 throughout; D06 259-260 and 416-419 (NLC, NACo and ICMA urged the "Take 10 Challenge"); D01 465 says challenges were only partially documented.
+  - **Coincident figures with different referents.**
+    - 278: business partner types (D02 342) vs cities and townships (D06 458).
+    - 10.8 million: Census 2000 value added (D03 107) vs Census 2000 PR/Events/Road Tour cost $10,800,000 (D06 591).
+    - 55: digital ads (D03 311); "55 uniquely defined and targeted markets" (D06 349); awards (D06 827). D03 gives 210 DMAs and about 3,900 outlets (78, 280).
+    - 257,125: Spanish fact-sheet quantity (D04 509, 530) vs about 257,000 partnerships.
+    - 11.1: Out-of-Home (D03 Table 4) vs Nonresponse Followup (D03 Table 6).
+    - 81.5 Television vs 81.6 Diverse Mass (D03 355, 337).
+  - **Narrative passages that repeat tables.**
+    - D03 78/280 (452 ads, 28 languages) repeats D03 308-311; D06 349 repeats D03.
+    - D03 80/329 ($167M) repeats D03 Tables 3-6.
+    - D04 190, 193 and 266 repeat D04 App E.
+    - D06 280 repeats D06 App D totals.
+    - D03 247 and D05 456 repeat their Table 2.
+    - D06 389-393 restates D03 Table 1 sums and Table 6.
+  - **Exclusion facts located.**
+    - D01: UAA excluded from the participation universe (66); "Be Counted" excluded from Take 10 rates (65-66, 204, 563); Puerto Rico excluded from the national rate (191, 254) but included in expected rates (1211); congressional districts removed (1196-1204); island areas other than PR outside Smart Suite (276).
+    - D02: partner do-not-select criteria (220-225); ACORN dropped (232).
+    - D03 Table 3 footnotes (344-347).
+    - D04: Partner Support Program purchases "outside the Buy American Act" (275).
+    - D05: no interviews in Hawaii (421); in-person interviews in 4 languages only (451); CATS English only (541).
+    - D06: App C Island Areas "$ -" in 2010 (591); English absent from the 59-language list (543-559).
+  - **Late list members.**
+    - D06 11th program area "Mail Response Rates/Take 10" (125, 212); App F item 55, Census in Schools (825).
+    - D02 App B items 30 and 32 (539, 541); fraternity 8, Sigma Gamma Rho (345).
+    - D04 language 28, Yiddish (211); Wave 2 row 121, Thai (720).
+    - D01 App E row 13 (1227-1237); D01 challenge 7, St. Louis vs. Kansas City (453-455).
+    - D05 rapid-response decision 5 (566).
+  - **Actions versus mentions.**
+    - Actions:
+      - Mayors' challenges (D01 428-455)
+      - NLC/NACo/ICMA urging the Take 10 Challenge (D06 419)
+      - ACORN removal (D02 232)
+      - Deputy Director's nine-language request vs DraftFCB's five-language recommendation (D04 212)
+      - stakeholder-driven newspaper buy (D05 311)
+      - Planning and Evaluation Group formed (D05 648)
+    - Mentions or plans: recommendation lists in every report (D01 73-81, 545-592; D02 93-99, 433-468; D03 85-91, 391-400; D04 60-65, 332-356; D05 106-109, 645-658; D06 126-144, 472-501).
+    - Grant organisations: three "informed us of receiving or giving foundational grants" (D02 379); the Census Funders Initiative is an outside initiative in which NP was "minimally involved" (D02 380).
+- Platform bundle overview (capture `AQ-01433_2026-10-06_1949.txt` lines 21-67; "for navigation only, not evidence") prints these figures and dates:
+  - Doc 1 = D06 (27-32): "257,000 regional partnerships", "59 languages for Language Assistance Guides", "28 different languages for paid media advertisements", "11 key program areas", "55 total awards won", "13 subcontractors". Dates: Aug 2, 2012; Apr 1, 2010; Sep 6, 2007; "January 2010 to June 2010"; Sep 30, 2011; Nov 2010. Names: DraftFCB, Weber Shandwick, GlobalHue, Scholastic, Burton Reist.
+  - Doc 2 = D03 (34-39): "$167 million final paid advertising budget", "452 total advertisements", "28 languages", "210 Designated Marketing Areas", "3,900 unique media outlets", "$362 million total ICP contract budget with ARRA funding". Dates: Aug 6, 2012; Aug 1, 2012; Jan 17, 2010; Jul 4, 2010; Sep 19, 2007; March 2011.
+  - Doc 3 = D02 (41-46): "130 national organizations (Census 2000)", "100 national governmental and non-governmental organizations (Census 2000)", Fortune 500, Fortune 1000, "10 contractor personnel (peak)", "6 to 8 staffers". Dates include July 2009 and 2007 to 2010.
+  - Doc 4 = D04 (48-53): "288 different promotional materials", "28 languages", "35 different race and ethnic communities", "Over 88 million items allocated", "$21 million total budget", "257,840 corporations, businesses and nonprofits". The summary sentence "produced 288 different materials in 28 languages targeting 35 audiences" is at line 50. Dates: April 2008 through April 2010; the three phase ranges December 2008 - January 2010.
+  - Doc 5 = D05 (55-60): "4,064 interviews", "74 percent (2010 Census participation rate)", 8 clusters, 5 mindsets, 3 groups, 4 race/ethnic populations. Dates: July and August 2008; "March 3 and April 13, 2000"; February 2000; October 24, 2008.
+  - Doc 6 = D01 (62-67): "67.4% final mail response rate, Census 2000", "117,661,748 housing units", 83% and 17% short/long form, "59% expected response rate at NRFU cut date, 2010", "65% expected response rate at NRFU cut date, 2010". Dates: March 6 - September 9, 2010; October 4, 2010; January 11 - September 19, 2000; April 18, 2000; April 20, 2010.
+  - Not stated in the overview: D06's 212.1 / 312.1 / 371 / 370 million figures and ARRA 100 million; App C and App D values; D03 "14 subcontractors"; D04's 12 + 9 million split, 118.7 million and 11.4 million; App B and App E quantities; D06's 852 national partners, 250,000 / 260,000 counts, 97.4 million and 1.2 billion; D02's 278, 114, 30 million, 219 / 719; D03 Tables 1-6 values; the 115 / 1,714 / 192 / 36 copy-testing figures; D05 CATS and Gallup counts; D06 exposure averages and the 11 / 32 million spending.

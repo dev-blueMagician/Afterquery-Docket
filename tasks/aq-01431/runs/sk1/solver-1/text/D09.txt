@@ -1,0 +1,1257 @@
+# D09 | docs/sec_esg_disclosures_advisers_funds_s71722-450259-1152422.txt
+
+March 25, 2024
+Vanessa A. Countryman
+Secretary
+U.S. Securities and Exchange Commission
+100 F Street, NE
+Washington, DC 20549-1090
+Re: Enhanced Disclosures by Certain Investment Advisers and Investment Companies about Environmental, Social, and Governance Investment Practices (File No. S7-17-22, RIN 3235-AM96; 87 Fed. Reg. 36,654 (June 17, 2022).
+
+Dear Ms. Countryman:
+
+Better Markets1 appreciates the opportunity to submit this supplemental comment letter in connection with the above-captioned Proposed Rule (“Proposal”).2 The purpose of this supplemental comment letter is to bring to the Commission’s attention the attached research paper, which “highlights the potential consequences of selective ESG disclosures.” We believe the research paper may be helpful to the Commission as it finalizes the Proposal.
+Sincerely,
+Benjamin L. Schiffrin
+Director of Securities Policy
+Better Markets, Inc.
+
+2000 Pennsylvania Avenue, NW
+Suite 4008
+Washington, DC 20006
+(202) 618-6464 bschiffrin@bettermarkets.org http://www.bettermarkets.org
+1
+Better Markets is a non-profit, non-partisan, and independent organization founded in the wake of the 2008 financial crisis to promote the public interest in the financial markets, support the financial reform of Wall Street, and make our financial system work for all Americans again. Better Markets works with allies— including many in finance—to promote pro-market, pro-business, and pro-growth policies that help build a stronger, safer financial system that protects and promotes Americans’ jobs, savings, retirements, and more. 2 Enhanced Disclosures by Certain Investment Advisers and Investment Companies about Environmental, Social, and Governance Investment Practices, 87 Fed. Reg. 36,654 (June 17, 2022).
+
+Working Paper No. 22-18
+Diversity Washing
+Andrew C. Baker
+Berkeley Law School
+David F. Larcker
+Stanford University, Graduate School of Business
+Hoover Institution
+European Corporate Governance Institute (ECGI)
+
+Charles G. McClure
+University of Chicago Booth School of Business
+Durgesh Saraph
+Jump Trading
+Edward M. Watts
+Yale School of Management
+All rights reserved. Short sections of text, not to exceed two paragraphs, may be quoted without explicit permission, provided that full credit including  notice is given to the source.
+This paper also can be downloaded without charge from the Social Science Research Network Electronic Paper Collection:
+
+http://ssrn.com/abstract=4298626
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Diversity Washing
+Andrew C. Bakera, David F. Larckerb,c,d, Charles G. McCluree, Durgesh Saraphf, and Edward M. Wattsg,* aBerkeley Law School bStanford University, Graduate School of Business cHoover Institution dEuropean Corporate Governance Institute (ECGI)
+
+eThe University of Chicago, Booth School of Business fUnaffiliated gYale School of Management
+Draft: March 6, 2024
+Abstract
+We provide large-sample evidence on whether U.S. publicly traded corporations use voluntary disclosures about their commitments to employee diversity opportunistically.
+We document significant discrepancies between companies’ external stances on diversity, equity, and inclusion (DEI) and their hiring practices. Firms that discuss DEI excessively relative to their actual employee gender and racial diversity (“diversity washers”) obtain superior scores from environmental, social, and governance (ESG) rating organizations and attract more investment from institutional investors with an ESG focus. These outcomes occur even though diversity-washing firms are more likely to incur discrimination violations and have negative human-capital-related news events.
+Our study provides evidence consistent with growing allegations of misleading statements from firms about their DEI initiatives and highlights the potential consequences of selective ESG disclosures.
+
+JEL classification: G30, G34, G23, J82, M14, M40, M41, M51 Keywords: Diversity disclosure; Human capital; Social washing; Environmental, social, and corporate governance (ESG)
+
+Accepted by Regina Wittenberg Moerman. We thank John Core (discussant), Fabrizio Ferri (discussant), Joseph Grundfest, Umit Gurun, Ken Li, Heidi Packard, Joseph Pacelli (discussant), Ethan Rouen (discussant), Shawn Shi, Jun Yang (discussant) and seminar participants at the London School of Economics, Drexel Corporate Governance Conference, Labor and Accounting Groups Conference, Corporate Governance Conference at the University of Chicago, the University of Connecticut Finance Conference, Annual Conference on Financial Market Regulation, Edinburgh Corporate Finance Conference, WFA Annual Conference, and Stanford Summer Camp for helpful feedback and comments. We gratefully acknowledge the support of Berkeley Law School, The University of Chicago, Stanford Graduate School of Business, and the Yale School of Management. Charles McClure is grateful for the support from the Liew Junior Faculty Fellowship and the Chookaszian Accounting Research Center. We also thank Esha Bhattacharya, Boyie Chen, Kalkidan Ayalew Kebede, Cameron Mejia, and Ozair Qureshi for excellent research assistance, and Ben Zweig and Reyhan Ayas for their guidance on the use of the Revelio Labs data, Aneesh Raghunandan for his help with the Goodjobsfirst data, and Lisa Liu for help with the US SIF data. We used ChatGPT to assign topic labels for our content analysis and to determine the vagueness of DEI-related sentences.
+∗Corresponding author.
+
+Email: edward.watts@yale.edu
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+1. Introduction
+A growing number of allegations suggest companies provide questionable portrayals of their environmental, social and governance (ESG) activities. Such misrepresentations, commonly referred to as “greenwashing” or “social washing,” are particularly concerning given the increasing number of ESG-focused shareholders and stakeholders who rely on voluntary firm disclosures to identify ESG constructs. In the presence of these misrepresentations, investors, consumers, regulators, and other stakeholders have difficulty assessing companies’ ESG performance. Consequently, poor ESG information may adversely affect ESG-oriented stakeholders’ decision-making and lead ESG-conscious investors to misallocate their capital.
+Despite widespread accusations, we currently have a limited understanding of the extent of these measurement problems. In this paper, we assess the inconsistency between firms’ public commitments to diversity, equity, and inclusion (DEI) in their financial filings and the underlying diversity of their employees.
+
+A firm’s decision to misrepresent its commitment to DEI is a function of the perceived benefits and costs for firms and managers, as is the case for other financial misstatements.
+Many of the potential benefits appear evident, from attracting ESG-focused investors, who are expected to control a third of all institutional assets by 2025 (Simpson, Rathi, and Kishan, 2021), to appeasing other stakeholders (e.g., Homburg, Stierl, and Bornemann, 2013; Park, Lee, and Kim, 2014). At the same time, the direct costs of misleading DEI disclosures are significantly less clear but are perceived to be small. Verification through DEI audits, although increasing, remains rare, with just eight diversity audits receiving majority shareholder support in the Russell 3000 in 2022 (The Conference Board, 2022). And despite the growing number of shareholder lawsuits involving corporate DEI practices and disclosures (Hood, 2023), the courts have dismissed nearly all lawsuits against firms for failing to uphold 1
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+disclosed DEI commitments as “non-actionable” corporate puffery (LaCroix, 2021).1 As a result, the litigation costs are perceived to be low.2
+To explore whether firms make misleading statements about diversity in their financial disclosures, we determine the amount of DEI discussion by developing a DEI dictionary and counting the frequency of DEI-related terms in financial documents (10-Ks, 8-Ks, and proxy statements). Our descriptive evidence shows these discussions are most commonly related to employee diversity and firm policies to create equal opportunities regardless of race or gender.
+We find that the intra-year dispersion of such discussions increased significantly. Importantly, we also find a significant increase in the frequency of DEI-related discussions in SEC filings over time, which has far outpaced the growth in diversity. Most of this increase involves terms related to racial diversity and workplace culture. These basic descriptive facts suggest the possibility of a growing prevalence of opportunistic DEI disclosures by some firms.
+We next investigate the association between a firm’s diversity and its propensity to disclose DEI-related commitments. We find a positive relationship between diversity and DEI disclosures, indicating that firms with more diversity discuss DEI more frequently. However, this relationship is weak and explains less than 1% of the overall variation in these types of public commitments. The substantial amount of unexplained variation suggests many firms may opportunistically use selective voluntary DEI disclosures to engage in “diversity washing” (i.e., firms misrepresenting their actual commitments to diversity).
+To further examine the relation between corporate disclosure and diversity commitment behavior and its consequences, we create a simple firm-year measure that compares the relative underlying diversity of firms with the relative amount of DEI discussion in their disclosures. In 1Anecdotal evidence suggests providers of director and officer (D&O) insurance have recently become worried about future shareholder litigation costs related to firm diversity practices (Smith, 2020). Although much of the attention in the media has recently focused on shareholder litigation, increased stakeholder costs due to diversity washing are also possible, such as more frequent employee discrimination lawsuits.
+2Firms incorporating statements about firm diversity in their financial filings likely need a strong investorrelation team to assess which statements to include. Although disclosing a commitment to DEI is typically unverifiable and non-binding, disclosure can likely result in other indirect costs. For example, the repeated nature of interactions between the firm and its stakeholders would lead to reputation consequences for a firm found to consistently misreport its commitments to diversity (e.g., Stocken, 2000).
+2
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+effect, we create a measure for the abnormal amount of DEI discussion, under the assumption that firms should discuss DEI in line with their underlying diversity. The logic behind this measure is similar to the logic used to test the role of managerial optimism in soft disclosures (e.g., Rogers, Van Buskirk, and Zechman, 2011; Huang, Teoh, and Zhang, 2014) or the use of obfuscatory language to mislead investors (Li, 2008; Bushee, Gow, and Taylor, 2018). This approach is also consistent with prior literature comparing the ESG activity of self-labeled ESG funds (e.g., Raghunandan and Rajgopal, 2022; Dikolli, Frank, Guo, and Lynch, 2022). Specifically, we assess whether firms “walk the talk,” where larger differences between discussion of diversity and actual diversity are more likely to indicate “diversity washing.”
+
+We validate that our diversity-washing measure is a proxy for DEI-related misrepresentation in several ways. First, using data on Equal Employment Opportunity Commission (“EEOC”) penalties, we show that diversity washers are more likely to incur violations, both contemporaneously and in the future. Poor ESG and human capital outcomes also extend to adverse news events, which is inconsistent with the notion that these firms are committed to DEI.
+Second, we also explore whether diversity washers’ misleading behaviors extend beyond their communications in financial disclosures and diversity. Independent of their employment practices, we find evidence that diversity-washing firms are not serious about enacting meaningful changes to their ESG practices despite public assurances. Specifically, we show that diversity-washing firms are also more likely to provide ESG policies without concrete goals, not only for diversity but also other ESG-related topics. Moreover, given the many other disclosure venues available to firms, we establish that diversity washers’ emphasis on DEI extends beyond financial statement disclosures to other commonly used communications platforms for ESG-related information (i.e., CSR reports and Twitter).
+Third, given that we base our diversity-washing proxy on contemporaneous diversity, a function of past hiring decisions, it is important to consider whether identified diversity washers are signaling future commitments to diverse hiring. Inconsistent with this notion, 3
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+we find diversity washers tend to hire fewer diverse candidates in the future, even among their most junior employee ranks. This decline is particularly noteworthy given these firms also tend to use more forward-looking language when discussing DEI. We also find evidence that the disconnects in hiring we observe are not attributable to the dimension of diversity discussed, as we find no evidence that those firms with a disproportionate amount of race- or gender-based DEI discussions subsequently improve hiring on those dimensions. Altogether, these observations are inconsistent with truthful aspirations for future increases in diversity and more aligned with an effort to shift attention away from current shortcomings.
+An important consideration is whether this corporate disclosure behavior has an undesirable impact on market participants’ perceptions of ESG performance and sustainable asset flows. Across two major commercial ESG data providers (Refinitiv and Sustainalytics), both of which use voluntary company disclosure as a primary input in their ratings, we find diversity washers garner higher overall ESG and social ratings. Moreover, we find diversity washers experience higher ownership levels by norm-constrained institutions, such as ESG-oriented mutual funds. We observe that this focus on the firm disclosures instead of underlying diversity persists broadly, suggesting a widespread misunderstanding among market participants about the true nature of firms’ diversity.
+
+In our final set of analyses, we highlight other critical ways that diversity washers differ from other firms in their discussions around DEI. We find diversity washers are more likely to highlight workplace culture and equity despite exhibiting less diverse hiring. Furthermore, we show these firms are more likely to use vague and ambiguous language when discussing DEI, which is consistent with firms attempting to mislead investors (e.g., Cheng, De Franco, Jiang, and Lin, 2019; Loughran and McDonald, 2013). This ambiguity may be one reason why many of the shareholder lawsuits thus far have been unsuccessful, given prior evidence that firms can use less precise disclosure to avoid litigation risk (e.g., Skinner, 1994).
+The central contribution of our paper is to provide broad evidence on the propensity of firms to exaggerate commitments to DEI in their financial disclosures and its consequences.
+4
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+In doing so, we add to the recent literature, which provides mixed evidence for whether firms “walk the talk.” Many studies focus on specific contexts and industries, such as greenwashing behavior among investment advisors (e.g., Raghunandan and Rajgopal, 2022; Dikolli et al., 2022; Kim and Yoon, 2021) or bank lending activities (Basu, Vitanza, Wang, and Zhu, 2022; Giannetti, Jasova, Loumioti, and Mendicino, 2023). Related to diversity disclosures specifically, contemporaneous papers highlight selective diversity disclosures or actions that relate to diversity statistics on Bloomberg (Liang, Lourie, Nekrasov, and Yoo, 2022), EEO-1 disclosures for federal contractors (Bourveau, Flam, and Le, 2023), and publicly communicated diversity targets (Cai, Chen, Rajgopal, and Yang, 2023). Along with these studies, we emphasize the selective nature of DEI disclosures made by firms but focus on one of the most important channels that firms use to communicate with investors—financial disclosures.
+
+Our paper also has important implications for the literature on sustainable asset flows and commercial ESG ratings. Recent studies highlight inherent noise and disagreements in ESG ratings (e.g., Berg, K ̈olbel, and Rigobon, 2022; Larcker, Pomorski, Tayan, and Watts, 2022; Berg, Koelbel, Pavlova, and Rigobon, 2021b), part of which is related to disclosure choices (Christensen, Serafeim, and Sikochi, 2022). Uncertainty regarding “true” firm ESG profiles has also been shown to significantly affect asset flows and pricing (e.g., Avramov, Cheng, Lioui, and Tarelli, 2022; Serafeim and Yoon, 2022). Our results highlight that firms not only add noise but also alter the market perceptions of their ESG profile through their use of selective disclosures.
+
+Collectively, our results provide empirical evidence supporting the accusations of industry groups, litigants, and regulators that some firms appear to misrepresent their commitments to DEI and ESG more broadly. Our findings also support concerns that socially responsible capital may not be invested in appropriate companies (e.g., Bhagat, 2022; Wilkes, 2022). Whereas much of the SEC’s focus to date has been on false marketing by investment funds (e.g., SEC, 2022b; Williamson, 2022), our study emphasizes the need for 5
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+increased enforcement of ESG claims by portfolio companies. It also highlights the need for standardized, mandatory disclosure requirements around important ESG-related issues such as firms’ DEI efforts. Our results underscore the importance of regulation and enforcement to ensure that firms report their ESG activities truthfully.
+
+2. Data Sources, Measurement Choices, and Sample
+2.1. Diversity data
+We leverage novel data from Revelio Labs to measure underlying corporate diversity for a large sample of public U.S. firms. Revelio Labs collects and standardizes hundreds of millions of online public profiles and resumes to construct aggregate measures of historical workforce composition. Critical to our study, they assemble detailed data on gender and racial diversity for over 5,000 public companies in the U.S. Revelio Labs derives these diversity measures using prediction-based algorithms comparing employee names and locations with social security, census, and voter registration data. We construct our primary measure of diversity as the fraction of U.S.-based employees who are female or non-white.3 Using online profiles, such as LinkedIn, can skew the Revelio Labs sample toward white-collar workers. Revelio Labs addresses this potential bias by re-weighting profiles to approximate the underlying population of employees.4 Despite these efforts, Revelio Labs may not completely offset this bias. In that case, our diversity measures might be more representative of the demographics of white-collar workers. Given that most diversity debates revolve around high-paid white-collar jobs, our subsequent analysis is highly relevant to the contemporary debate on DEI issues.
+
+3We use data from Revelio Labs’ Workforce Dynamics database, which provides probability-weighted counts of employees based on their gender and ethnicity. We focus on U.S.-based diversity for two reasons.
+First, diversity issues have been particularly acute in the U.S. Second, we do not want our measures to mechanically relate to the demographics of a firm’s international locations. For example, if a firm has a large presence in Central America, we would expect it to have a large fraction of Hispanic employees.
+4For example, if a U.S.-based engineer has a 90% chance of having an online profile, one profile of a U.S.-based engineer counts as 1.1 people. See https://www.reveliolabs.com/faq/.
+6
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+2.2. Firm-level DEI commitment measures
+We develop our DEI-commitment measure using DEI discussions contained in three primary SEC filings, namely, annual reports (10-K), current reports (8-K), and proxy statements (DEF14A), which we obtain from WRDS SEC EDGAR filings database. Although these documents are not the only channels through which firms can communicate their commitments to DEI, we focus on them for three reasons. First, every publicly traded firm is required to file SEC documents annually. This requirement allows us to examine a broad sample of firms and mitigates concerns regarding selection bias associated with a focus restricted to only voluntary disclosure channels (e.g., CSR reports) or voluntary diversity targets, because only a small fraction of firms commit to any diversity target (Cai et al., 2023). Second, these filings are an increasingly essential avenue of communication for a firm’s ESG-related activities, which is reflected in the SEC’s recent push to include human-capital and climate-change disclosures (e.g., SEC, 2022a; Gampher and Goldstein, 2022). Third, shareholders and stakeholders have become increasingly concerned about the veracity of DEI disclosures in financial documents, as evidenced by recent investigations and legal proceedings related to false diversity commitments in firms’ financial disclosures (e.g., Moreno and Staskiewicz, 2021).
+
+We use a dictionary-based algorithm on the text of SEC filings to identify firm-level disclosures related to DEI commitments. Our approach is similar to many prior studies that use a dictionary to identify topics, such as the complexity of financial documents and the underlying tone of the document (e.g., Li, 2008; Loughran and McDonald, 2011, 2014). We provide a detailed explanation of our linguistic approach in Appendix B. To summarize, we construct a dictionary of DEI-related words from several online DEI dictionaries and remove terms with alternative, non-DEI meanings to mitigate the possibility of inadvertently capturing non-DEI discussion.
+
+Most of our dictionary words relate to racial and gender diversity, which has been the focus of many high-profile DEI efforts (e.g., #MeToo) and corresponds to our underlying 7
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+measure of diversity. However, several words pertain to DEI objectives distinct from racial and gender equity, such as sexual orientation and disabilities. To minimize researcher discretion on the measurement construction, we keep all words from the online dictionaries that do not have alternative meanings that are unrelated to DEI, regardless of whether they specifically relate to gender and racial diversity. We take this holistic approach because most firms’ DEI efforts are not constrained to a particular aspect of DEI (e.g., only focus on gender diversity) but are more general efforts to welcome employees from diverse backgrounds.
+We isolate keywords related to diversity by having research assistants read sentences with the keyword to determine whether it relates to DEI, and we include those that do. We keep the keyword if nearly all the example sentences relate to DEI. If the sentence examples include discussion unrelated to DEI, we examine example sentences for bigrams that contain that keyword and keep only the bigrams that relate to diversity to avoid inadvertently capturing discussion unrelated to diversity. As a result, our DEI dictionary is likely a lower bound for the level of DEI discussion and, at worst, only adds (presumably random) noise to our measure of DEI commitment.
+
+At a high level, our measure captures the quantity of discussion that firms allocate to DEI in their SEC filings. Such discussions are often about commitments to DEI, highlighting their current (or past) efforts to promote an inclusive work environment or general language on being an inclusive employer. Thus, our measure provides a proxy for DEI commitments found in the documents of interest.
+
+2.3. Sample
+We construct firm-level financial and equity characteristics from CRSP and Compustat.
+ESG ownership proxies are acquired from CRSP mutual fund holdings data. We obtain firm misconduct information from Goodjobsfirst Violation Tracker data and include several measures on aggregate ESG and social ratings from Refinitiv and Sustainalytics. In subsequent analyses, we analyze DEI-related discussions on Twitter, accessed via their API, and in firms’ 8
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+CSR reports, which we obtain from the comprehensive Corporate Register database. Our dataset covers nearly all U.S. public corporations from 2008 through 2021 in the CRSPCompustat universe and approximately 1.4 million SEC documents. All continuous variables are winsorized at the 1st and 99th percentiles to mitigate the impact of outliers.
+In Panel A of Table 1, we present descriptives for all primary measures used in our analyses. The average (median) number of aggregate DEI-related words in our sample of firm-year observations is approximately seven (three), suggesting firms devote at least some discussion to DEI-related issues in their financial documents in a given year.5 The primary source of these discussions is the DEF 14A, which reflects that it is the only document with a required DEI discussion for most of our sample period, because in 2009, the SEC required all firms to disclose if and how diversity factored into board positions (SEC, 2009). Critical to our study, which focuses on heterogeneity in disclosure, we see significant variation in how much firms discuss diversity, with the standard deviation of aggregate DEI terms being approximately 10.
+
+Table 1 also reveals diverse employees are under-represented in publicly traded U.S.
+companies relative to their proportion in the broader population. For instance, the percentages of female (41.7%) and non-white (29.8%) employees are substantially lower than the 2016- 2020 Census estimates of 50.5% and 40.7%, respectively, for working-aged individuals.6 All other statistics are in line with the expectation that our sample broadly reflects the Compustat-CRSP universe.
+
+We match underlying diversity for a calendar year to the DEI discussion in documents released in that calendar year because this timing best aligns diversity with DEI discussion.7 In Panels B and C of Table 1, we present pairwise correlations of our DEI-disclosure and 5The count of DEI terms reflects the trade-off between a more expansive dictionary that may induce false positives and a more conservative dictionary that may miss some DEI discussion. We utilize a more conservative dictionary to avoid false positives, because we believe the bigger concern is mislabeling firms as diversity washers because of false positives. Our results are qualitatively unchanged with a more expansive dictionary of 1,132 terms and when only using unigrams.
+
+6See: https://www.census.gov/quickfacts/fact/table/US/LFE046220.
+
+7
+In untabulated analyses, our results are robust to various timing specifications, such as using lagged or next year’s diversity data.
+
+9
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+diversity measures, respectively. Both tables highlight that, although all variables are positively correlated, substantial variation exists within the DEI count and diversity measures.
+This result suggests each measure captures a different aspect of externally communicated and realized DEI commitments.
+
+Figure 1 plots the trend in the average (black line) and standard deviation (white bar) of firm-level diversity (left panel) and DEI words (right panel) over our sample period. The left panel shows only a modest increase in firms’ average diversity, but within-year variation in firms’ diversity is substantial. The right panel examines the DEI word count in the financial documents.8 This plot shows a substantial increase in the average amount of DEI discussion over our sample period. This five-fold increase is far greater than the increase in average diversity and likely reflects firms’ responses to recent increased attention to DEI matters by shareholders and stakeholders. Like the underlying diversity in the left panel, we also observe substantial variation in the DEI discussion. Although some of this variation may reflect the variation in the underlying diversity, it may also reflect that other factors, such as opportunistic DEI disclosures, may also be at play.
+
+To better illustrate the content of firms’ DEI commitments and how it changes over our sample period, we plot the frequency of the most common keywords for each year in Figure 2. Although we see a sizeable increase in overall counts, we observe it is primarily driven by a subset of terms. The increase in DEI discussion relates to the discussion of ethnic diversity, as terms like “diversity and inclusion,” “ethnicity,” “racial,” and “board diversity” substantially increase in frequency in the second half of our sample. This finding contrasts with terms related to equity, such as “pay equity” and “equal employment opportunity,” which remains relatively constant over our sample period. Figure 2 suggests the increase in DEI discussion stems from an expansion in a discussion of ethnic diversity.
+We further investigate how firms discuss DEI, by examining the topics arising in 8The correlation between the number of DEI words in a firm-year and the number of words in DEI sentences is 0.845. Consequently, all of our results are qualitatively similar if we use the number of words in sentences with DEI keywords as a measure of DEI discussion.
+
+10
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+sentences with DEI keywords using a method based on BERT. Briefly, BERT is a transformerbased neural network that examines the context of words by considering the co-occurrence of words around them to infer meaning. We use an extension of BERT, sentenceBERT, which is pre-trained on over 1 billion sentences and is intended to examine the context of sentences instead of individual words. We use sentenceBERT because most DEI sentences involve one topic, and this method is better suited for sentence-level classification.9 We set the number of topics to 20 and have ChatGPT assign labels to each topic based on a sample of sentences. Following Dyer, Lang, and Stice-Lawrence (2016), we organize these topics into interpretable categories and report the four categories that most directly relate to DEI issues.10 Appendix C describes our approach in greater detail, as well as the mapping between topics and categories.
+
+Figure 3 reports the sentence counts of each category. This figure shows that earlier in our sample, DEI sentences are predominately related to employment and compensation.
+However, the number of sentences related to these categories remains steady, whereas a substantial increase occurs in DEI sentences related to corporate governance and, more drastically, workplace culture. Figure 3 shows these two topics dominate much of the DEI discussion toward the end of our sample. This observation may reflect firms’ discussions of how culture and governance mechanisms foster a more inclusive workplace following the #MeToo and Black Lives Matter movements. Discussion of compensation and employment practices are likely less germane to these events, because they reflect general purpose governance practices.
+
+9BERT is pre-trained on Wikipedia and therefore embeds meaning on nearly any topic. BERT and derivative methods have been used in accounting (Huang, Wang, and Yang, 2023; Kim and Nikolaev, 2023) to identify topics in corporate disclosures. For additional details on BERT and sentenceBERT, see Devlin, Chang, Lee, and Toutanova (2019) and Reimers and Gurevych (2019).
+
+10We do not report the category labeled as “Other.” As Appendix C shows, the topics in this category do not easily fit into DEI-related topics and are often industry-specific. For instance, the topic “Healthcare, Medical Research, and Accessibility Services” often discusses treatments for diseases prevalent among certain ethnic populations or a medical company’s efforts to increase access to care for certain demographics. Similarly, “Real Estate Law and Financial Regulation” describes the efforts of companies with real estate or retail stores to open locations in underprivileged neighborhoods.
+
+11
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+3. DEI Commitments and Firm Diversity
+3.1. DEI Discussions in Financial Documents and Diversity We first explore the relationship between a firm’s discussion of DEI commitment and the actual level of diversity at the firm. This analysis examines whether firms with more diversity discuss diversity more. In Table 2, for the aggregate number of DEI words disclosed by the firm (i.e., DEI WordsAgg.) and for each type of EDGAR disclosure (e.g., 10-Ks), we estimate Poisson regressions of the quantity of DEI terms in firms’ financial disclosures on the percentage of female and non-white employees. Panel A reports results without fixed effects, and Panel B reports results with industry (2-digit SIC code) and year fixed effects to control for industry-specific and temporal variation in DEI disclosures. We use industry fixed effects, instead of firm fixed effects, to exploit across-firm variation to identify how diversity-washing firms differ from others.11
+In both panels, we observe a positive and statistically significant relationship between the percentage of non-white employees and the number of DEI words in the disclosures. This finding suggests firms with more non-white employees highlight their diversity in financial disclosures. This result holds not only for the aggregate amount of diversity discussion, but also for each document type. We find similar results for the relation between the percentage of female employees and DEI words for most specifications. Overall, these two panels are consistent with the findings in Liang et al. (2022) and Bourveau et al. (2023), who note firms with more diversity are more likely to disclose diversity in different contexts. Although we find a positive relationship between underlying diversity and the extent to which firms discuss their commitments to these issues, we also see this relationship is substantively weak. For instance, in column 1 of Panel A, our estimates indicate a one-standard-deviation 11Many of our results become insignificant when we replace industry with firm fixed effects. This finding is unsurprising because our diversity-washing measures mainly capture across-firm variation to identify how diversity washers differ from other firms. Our choice to exploit inter-firm variation is consistent with other areas of accounting research, including the nature of corporate boards (Anderson, Mansi, and Reeb, 2004), discretionary accruals (Hribar and Nichols, 2007), and disclosure quality (Rogers, 2008).
+12
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+increase in the percentage of female employees (i.e., a 16% increase) is associated with less than a 3.5% increase in the number of DEI words across financial documents. Relatedly, depending on the specification, the percentage of variation in DEI discussions explained by the underlying diversity at firms is only 0.1% to 0.7%. Even when controlling for industry and year fixed effects, we find substantial variation is left unexplained. Thus, the effect size and the explanatory power of these models are, at best, modest.
+
+Another way to visualize the relationship is through the box plots presented in Figure
+4. In the top panel, we present the distribution of aggregate DEI word count (i.e., discussions of DEI commitments across firm financial filings) by within-year decile of firms ranked by their percentage of female employees. The bottom panel presents the same distribution but broken down by within-year decile of non-white-employee share. Figure 4 clearly illustrates the weak relationship between various diversity measures and DEI commentary in financial disclosures. Specifically, although we see a modest increase in the median word count as we move across diversity deciles, the distribution of DEI discussions within diversity deciles is similar across the range of diversity scores, suggesting the relationship between firms’ underlying diversity and their DEI discussions is tenuous.
+
+Throughout much of the paper, we do not distinguish between different forms of diversity washing, because many of the diversity-related statements firms make cannot be easily categorized (e.g., being an “equal opportunity employer”). However, our pooling of different forms of diversity washing may discount cases where firms exhibit diversity along one dimension (e.g., gender) while lacking it in another. It also ignores differences in the discussions related to different types of diversity among their workforce. Some firms may diversity wash by emphasizing their strongest form of diversity while de-emphasizing areas where they are deficient. Moreover, separately examining gender and ethnic diversity allows us to assess whether firms that more frequently discuss a form of diversity that they do not exhibit are signaling future aspirations to improve along this dimension.
+To investigate this potential heterogeneity, we had research assistants manually 13
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+categorize our DEI keywords as relating to gender, ethnicity, both, or neither. Using the segments of the dictionary focused on gender and ethnicity, we then performed two analyses. In Panel C of Table 2, we re-estimate the association between the frequency of DEI terms and the percentage of female and non-white employees. Columns 1 and 2 show gender keywords are positively associated with the percentage of female employees (as expected) and of non-white employees. The fact that gender keywords are strongly associated with non-white employees potentially reflects the high correlation between the use of gender and ethnic keywords. Columns 3 and 4 show the number of race-based keywords is positively related to the percentage of non-white employees, but we observe no corresponding relation with the percentage of female employees. Thus, these analyses show some modest evidence for a specific form of strategic disclosure (highlighting their strengths and de-emphasizing their weaknesses) in relation to ethnic diversity.
+
+Overall, our findings indicate companies with greater workforce diversity are more likely to discuss their commitments to DEI. However, we also show that this relationship is economically small, and substantial unexplained variation exists among firms even when we control for industry characteristics and time trends.
+
+3.2. Identifying Diversity Washers
+We now explore the extent to which firms have a disconnect between their DEI commitment discussions and their actual diversity. We approach this issue using bivariate sorts of firms, based on their discussion of DEI commitment and their underlying diversity.
+Specifically, each year, we independently sort firms into percentiles of both underlying diversity and the number of DEI terms aggregated across all disclosures. This approach isolates firms that, relative to other firms in a calendar year, discuss DEI excessively relative to their actual diversity.12 Table 3 reports summary statistics related to each group of firms. The columns 12We measure diversity washing using within-year sorts to hold constant the overall level of DEI discussion and ensure our measure is not affected by the increasing time-series trend in DEI discussions. Our results are robust to sorting within the full panel (i.e., not by year).
+
+14
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+contain the within-year quintile ranks of DEI discussion, and the rows present the within-year quintile ranks of underlying diversity. Panel A reports the number of firm-year observations for each bin in the 5 × 5 matrix. Two aspects of the distribution are worth nothing. First, a chi-squared test rejects the null hypothesis that this binning is random. Instead, this panel suggests a weakly positive relation between firms’ DEI discussions and underlying diversity, which is consistent with the results in Table 2. Second, and more importantly, we see a meaningful disparity between the extent of DEI discussion and the underlying diversity for a large number of firms, because nearly 40% of observations are classified in a higher discussion quintile than their underlying diversity.
+
+Panel B reports the average percent of diversity for firms in each quintile. By construction, as we move down the rows, average diversity increases. A comparison across columns shows the differences in diversity between the lowest and highest discussion quintiles are mostly statistically significant and positive, highlighting the finding that firms with more diversity tend to have more discussion about DEI-based commitments. In general, after conditioning on overall levels of diversity, we find DEI-based disclosure strategies of firms are largely disjoint from their underlying diversity. Panel C reports the average number of aggregate DEI words in each bin. As expected, as we increase the disclosure quintile (i.e., move across columns), DEI words increase. The magnitude of the change across quintiles is drastic—holding fixed the diversity quintile, firms in the highest-disclosure quintile have approximately 37–45 times more DEI words in their financial disclosures than firms in the lowest-disclosure quintile.
+
+The results in Table 3 show firm’s decision to disclose DEI-related issues appears largely unrelated to their underlying diversity. Despite an on-average positive relation between diversity and DEI discussions, we demonstrate significant variation in the relation.
+Collectively, we find firms have significant discretion in how they discuss diversity in their SEC documents. We leverage this variation to identify firms that appear to be diversity washers.
+
+15
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+3.3. Constructing Firm-Specific Measures
+We construct two measures of diversity washing based on the intra-year distance between the amount of DEI commitment discussion and actual diversity. Effectively, we assume the expected amount of discussion should be proportional to underlying diversity, and any deviation from the average relation across firms in a given year suggests a firm may be misrepresenting its diversity.
+
+We calculate these deviations as the difference between a firm’s within-year DEIcommitment disclosure percentile and its diversity percentile.13 Using within-year percentile ranks allows for comparisons across two differently scaled measures (i.e., counts of DEI words and diversity percentages). Furthermore, it mitigates the impact of outliers and measurement errors in the data. Comparing observations within a year controls for any time-variant common changes in these discussions, such as the general increase in firms’ DEI discussions. We label the difference in the disclosure and actual diversity percentiles as the Diversity-Washing Level. We also construct a binary variable that equals 1 if a firm’s disclosure percentile is higher than its diversity percentile, and 0 otherwise, and label the resulting variable Diversity Washer.
+
+14 Unlike other threshold-based measures, such as meeting-or-beating forecasts, the threshold at 0 does not have special economic significance.
+We include this variable because it simplifies the discussion of economic magnitudes, given that its effect is the difference for the average diversity washer compared with a non-diversity washing firm.
+
+In Table 4, Panel A, we report univariate differences in firm characteristics between 13For example, a firm in the highest disclosure percentile (i.e., 100) and lowest diversity percentile (i.e., 1), would receive a score of +99. All findings throughout the paper are qualitatively the same when we use differences in quintiles (as in Table 3), quartiles, or deciles.
+
+14The omitted category for the binary indicator, Diversity Washers, contains firms that talk about DEI in similar relative amounts to their underlying diversity, as well as firms that talk about diversity less than is justified by their hiring practices (i.e., firms that hide their diversity). In untabulated results, we find the coefficient on the indicator for “diversity hiding” firms is of the opposite sign of those reported for diversity washers. These firms are typically smaller and have higher-than-normal profitability, suggesting their incentive to obfuscate through soft disclosures is likely much smaller. In other untabulated analyses, we define Diversity-Washing Level and Diversity Washer using within industry-year deciles, and our results are qualitatively unchanged.
+
+16
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+diversity washers (those firms for which Diversity Washer is equal to 1, which is approximately half of our sample) and the rest of the sample of non-diversity washers. We find diversity washers tend to be larger firms with higher profitability and lower volatility. Although these differences are statistically significant, they are economically modest, suggesting our subsequent results are less likely to be confounded by these differences. Panel B performs a multivariate regression on the determinants of diversity washing. Columns 1 and 2 have Diversity-Washing Level as the dependent variable, and columns 3 and 4 have Diversity Washer.
+
+Like the univariate results in Panel A, diversity washers tend to be larger firms.
+However, after we control for size and other firm characteristics, diversity washers tend to be less profitable, have lower returns, and have higher book-to-market and volatility.15 These findings suggest large, well-established firms experiencing negative profits and returns may use diversity discussion to shift the focus away from their worsening financial condition. By contrast, smaller, more profitable firms likely have much less incentive to shift the narrative away from their superior financial performance. Collectively, these findings provide some preliminary empirical support for the regulatory concern that firms use misleading discussions of their ESG commitments.
+
+In unreported results, we find that the correlations reported in Table 4 remain largely unchanged when also controlling for non-financial determinants, such as employment and discrimination penalties and negative ESG and human-capital related news in the prior year.
+These nonfinancial factors are likely more closely related to diversity, so their negligible impact on financial proxies and the focus of DEI discussion in SEC documents suggests the diversity washing we document appears specifically targeted toward investors and other 15Although we observe in untabulated analysis meaningful differences in the fraction of firms within different industries classified as diversity washers, the explanatory power of industry fixed effects is modest. This result suggests firms’ differing levels of diversity washing occur for reasons other than their industry. Relatedly, firms located in more diverse locations may have better diversity, and thus are less likely to diversity wash.
+However, headquarters-state fixed effects have little explanatory power, suggesting firms’ operations are too disparate for a headquarters-state fixed effect to capture the pool of employees or that diversity and DEI discussion are jointly determined.
+
+17
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+market participants.
+
+4. Validation of the Diversity-Washing Measure
+4.1. DEI-related outcomes
+If our proxy for diversity washing accurately captures false commitments to diversity, we expect it to be associated with other negative DEI-related outcomes. Moreover, if DEIrelated issues are a function of poor human-capital management (HCM), we would expect other negative HCM-related outcomes for diversity washers. We examine whether diversity washers have other adverse HCM outcomes in Table 5, where we correlate our diversitywashing measure with EEOC violations (Panel A) and negative ESG-related news from RepRisk (Panel B).16 In both panels, we include the covariates in Table 4 as control variables, as well as industry and year fixed effects for all specifications.17 In Panel A, we present results from a logit regression of whether the firm received an EEOC violation in year t on its measure of diversity washing. The first two columns show the association between diversity washing and all EEOC violations. In the last two columns, we narrow our focus to discrimination-related violations, because they are the offenses most related to our measure of DEI. This panel shows a positive relation between diversity washing and the probability of having an EEOC penalty, and all columns are statistically significant.
+In Panel B, we present results from a logit regression of whether the firm has negative ESG and human-capital news during the year. Columns 1 and 2 show the relation between diversity washing and negative ESG news. The last two columns focus specifically on human16EEOC violations occur if a firm is found to discriminate against a job applicant on the basis of race, color, religion, sex, national origin, age, or disability. For background information on EEOCs, see https:
+//www.eeoc.gov/overview. RepRisk provides measures of reputational risk based on public disclosures, which exclude self-disclosures, for over 230,000 companies worldwide. See https://www.reprisk.com/ for more information.
+
+17In all subsequent analyses, we include the covariates from Table 4 as control variables. In untabulated analysis, we entropy-balance our sample along these control variables and find our results are qualitatively unchanged.
+
+18
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+capital news. All four columns in Panel B are positive and statistically significant, indicating diversity washers are more likely to have negative human-capital and discrimination news.
+This finding suggests diversity washing may function as a way to use DEI discussions in financial disclosures to overcome negative news related to DEI and ESG. Collectively, the findings in Table 5 show diversity washers exhibit significantly worse DEI performance, as measured by the likelihood of receiving an EEOC violation and having negative DEI news.
+These outcomes are expected if our diversity-washing measure has convergent validity.
+In untabulated analyses, we perform similar regressions to those in Table 5, but instead examine the correlation with negative human-capital outcomes in the two years prior to and two years following our measurement of diversity washing. We find diversity-washing firms have more EEOC violations and negative ESG and human-capital news both before and after classification as a diversity washer. This evidence is inconsistent with diversity-washing firms using the disclosure channel to respond earnestly to a negative firm event. It also does not suggest diversity washers are genuinely aspirational in their desire to improve diversity and their treatment of employees. Rather, diversity washers appear to have persistent negative human-capital outcomes and large amounts of DEI discussion in their financial documents.
+These results suggest a less-than-constructive rationale for discussing diversity for this subset of firms.18
+4.2. Other Questionable ESG Commitments
+If diversity washing is part of a broader public-relations strategy for ESG issues, we expect our measure to correlate with other questionable ESG commitments. One such commitment relates to firms adopting an ESG policy that does not have quantitative targets (e.g., Nelson, 2021). If ESG pledges do not also involve targets to evaluate whether firms 18Another type of validation analysis that we explore is whether diversity washers (non-washers) in a given year remain diversity washers (non-washers) in subsequent years. A reasonable expectation here is that the strategic choice for DEI disclosure and actual diversity should exhibit a high level of serial correlation if our measure is valid. The serial correlation for Diversity-Washing Level is approximately 0.79, indicating the recent focus on DEI did not alter firms’ propensity to diversity wash.
+19
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+are achieving their goals, the associated policies may amount to little more than posturing, with minimal substance concerning how or whether a firm will achieve its goals. We expect diversity washers to be more likely to provide policies without targets, because they want the appearance of good corporate citizenship without exerting the effort to achieve quantifiable targets.
+
+We examine this issue with ESG data from Refinitiv, which provides data on whether firms provide explicit policies and targets for four ESG categories: diversity, energy, water, and emissions. In Table 6, we examine the association between whether a firm provides a questionable ESG policy (i.e., a policy without a target) and our diversity-washing measure, by estimating a logit regression that includes the controls, as well as industry and year fixed effects. In Panel A, we find a statistically positive association between questionable diversity policies (columns 1 and 2) and our diversity-washing measures. Diversity washers are approximately 1.21 times more likely to have a questionable diversity policy. Except for emissions policies (columns 3 and 4 of Panel B) and energy policies with Diversity Washers as the variable of interest (column 4 of Panel A), all estimates are statistically significant and positive. These results suggest diversity washers do not increase disclosure to discuss actionable changes or quantifiable targets, as in Cai et al. (2023). Rather, the analyses in Table 6, in conjunction with Table 5, provide further evidence supporting the validity of our diversity-washing measure.
+
+4.3. Alternative DEI-Disclosure Channels
+We measure diversity washers based on their DEI discussions in mandated financial disclosures, but this communication channel is just one of many available to firms. An implicit assumption in our approach is that the DEI information released in alternative channels is consistent with what is contained in SEC documents. To examine this assumption, we explore two alternative channels firms commonly use to communicate their ESG-related efforts: CSR reports and Twitter. This analysis allows us to assess whether our diversity-washing measure 20
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+and results are an artifact of the focus on financial disclosures. It also may indicate diversity washers are responding to stakeholder demand for diversity information.
+We examine CSR reports because they are the primary platform where firms can discuss a wide range of CSR-related topics that may affect a firm’s financial and operating conditions (e.g., see Christensen, Hail, and Leuz, 2019 for an overview of these disclosures).
+Because these voluntary disclosures directly relate to a firm’s ESG activities, including DEI, a diversity washer may also be more likely to provide a CSR report. Additionally, we examine corporate Twitter disclosures, because Twitter is a forum for firms to disseminate timely information directly to a broad set of constituents other than shareholders, bypassing traditional media outlets (e.g., Blankespoor, deHaan, and Marinovic, 2020; Miller and Skinner, 2015). Given Twitter’s direct-access feature, diversity washers may use it to further amplify their DEI discussions.
+
+We determine whether diversity washing is associated with CSR reporting and Twitter usage. Evidence of more usage by diversity washers can indicate they are more likely to engage with shareholders and stakeholders on issues unrelated to financial issues, such as diversity. In Panel A of Table 7, we estimate a logit regression where the dependent variable is an indicator for whether a firm issues a CSR report (columns 1 and 2) or has a Twitter handle (columns 3 and 4) on our two measures for diversity washing, Diversity-Washing Level and Diversity Washer. We also include the control variables and industry and year fixed effects. Panel A of Table 7 shows diversity washers are more likely to issue CSR reports and have a Twitter account.
+
+Panel B examines whether diversity washers use these platforms to discuss their DEI commitments. In these tests, we use the dictionary in Appendix B and count the number of DEI terms appearing in CSR reports (columns 1 and 2) and the number of tweets containing DEI terms (columns 3 and 4) in a given year. Panel B shows diversity washers discuss DEI more frequently in CSR reports and tweets. The positive coefficients are statistically significant and economically meaningful. For example, in column 2 (4), diversity washers 21
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+have 19.0% (28.1%) more DEI words in their CSR reports (tweets about DEI). In sum, Table
+7 shows diversity washers do not constrain their DEI discussions to SEC filings.
+4.4. Aspirational DEI Commitments
+4.4.1. Future Hiring Decisions
+A potential concern with our measurement strategy is that we may misclassify firms with aspirational diversity goals that are not yet reflected in their actual diversity. Given our focus on contemporaneous diversity, which is a function of past hiring decisions, DEI discussion that relates to future hiring may be erroneously ascribed to misreporting. If these discussions are aspirational in nature and meant to describe ongoing efforts to improve diversity, we would expect future levels of diversity to improve. Alternatively, observing no effect, or even a decline in diversity, would suggest diversity washers overstate their commitments. Such overstatement may be intended to influence the market’s perception of firms’ diversity practices.
+
+In Table 8, we explore the relationship between diversity washing and subsequent changes in diversity. In Panel A, we explore the association between changes in diversity and our measures of diversity washing by estimating regressions of the percent of employees who are diverse, % Diversity, in years t + 1 through t + 3, on our diversity-washing measures measured at time t. As before, we include the firm-level controls and industry and year fixed effects. In these estimations, we also control for the contemporaneous level of firm diversity to measure the relative changes over time.19
+Panel A reports the results. In years t+1 and t+2, we observe a statistically significant decline in diversity (the coefficient remains negative and similar in economic magnitude but insignificant in t+ 3), which is inconsistent with the notion that diversity-washing firms signal their commitment to diversity in advance of actual changes in hiring practices. Rather, our 19This analysis is robust to several alternative specifications, including examining year-over-year growth in diversity or replacing industry fixed effects with firm fixed effects and removing current-year diversity.
+22
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+results suggest diversity washers have elevated discussions on diversity commitments without enacting meaningful changes in their subsequent employee makeup.
+
+In Panel B, we perform the same analysis but focus on changes in diversity levels for senior employees, representing mid- to senior-level managers. Even though we do not observe an increase in the overall level of diversity for diversity washers, an increase in senior-employee diversity could suggest firms’ attempting to utilize a “trickledown” approach to diversity (Cai, Dey, Grennan, Pacelli, and Qiu, 2022). Alternatively, observing no correlation, or a decline in diversity, further contradicts the notion that firms labeled as diversity washers are discussing aspirational changes to their employee workforce. Similar to the results in Panel A, Panel B shows a negative and significant correlation between the level of DEI-commitment discussion and changes in future diversity measures.
+
+Panel C examines how diversity changes for the most junior level of employees. We examine junior employees because of potential “pipeline” issues in many industries (e.g., Rivera, 2012), suggesting firms could most easily address deficiencies in employee diversity by hiring junior candidates. The observation that diversity washers increase junior-employee diversity could suggest diversity washers are committed to improving diversity but face barriers to effectively increasing diversity at the aggregate level. However, Panel C again reveals a significant decline in the diversity of junior employees, which is inconsistent with diversity-washing firms being committed to increasing diversity through hiring practices. In untabulated analyses, we examine the diversity of overall, senior, and junior employees up to five years after our diversity-washing measurement year and continue to observe negative and largely significant declines.
+
+We next explore whether firms with heightened discussion but with hiring deficiencies along one dimension of diversity become more diverse in the future. We construct measures of diversity washing, based on bivariate sorts using underlying diversity and keywords related to that specific form of diversity. For instance, we define Diversity-Washing Level Gender as the difference between discussion of gender diversity specifically and the fraction of female 23
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+employees based on within-year percentile sorts.
+
+We use these diversity-washing measures in Table 9. Specifically, we regress next-period gender (Panel A) and non-white (Panel B) diversity on these diversity-washing measures, firm-level controls, and industry and year fixed effects. We observe an insignificant relation between gender and ethnic diversity washing and underlying measures of female and non-white employees. These results contradict the notion that firms discussing a particular form of diversity are signaling future aspirations toward diversity and largely align with our findings in Table 8.
+
+20 Overall, the results in Tables 8 and 9 reinforce the notion that our diversity-washing measure is not capturing an aspirational DEI strategy by firms that has yet to manifest in their workforce demographics.
+
+4.4.2. Forward-Looking Discussions
+Although we find no evidence that diversity washers improve future diversity, we examine whether these firms discuss future diversity commitments more frequently. Such forward-looking discussions can represent cheap talk, which diversity washers use to appear committed to improving diversity despite actual hiring practices suggesting otherwise.
+To examine whether diversity washers have more forward-looking terms, we examine sentences containing one of our DEI terms and count the number of forward-looking terms based on the forward-looking keyword dictionary in Bozanic, Roulstone, and Van Buskirk (2018). Using this measure, we conduct two analyses to explore how diversity-washing firms differ in their usage of forward-looking terms and whether these terms are associated with firms’ future activities.
+
+First, we establish that diversity washers tend to use more forward-looking terms, by estimating a Poisson regression of forward-looking terms on our diversity-washing measures, firm-level controls, and fixed effects. Table 10, Panel A, shows positive and significant 20In untabulated analyses, we also replicated all our results using these gender and ethnic diversity-washing measures. In both cases, our results are similar to those reported in the paper, which uses an aggregate measure of diversity washing.
+
+24
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+coefficients on Diversity-Washing Level (columns 1 and 2) and Diversity Washer (columns
+3 and 4). This result provides evidence that diversity washers have more forward-looking statements in their DEI discussion.
+
+Panel A shows diversity washers have more forward-looking terms even though they have less future diversity. However, this average effect may mask instances where some diversity washers use forward-looking terms to convey their aspirations. Presumably, these aspirational firms use more forward-looking terms. Alternatively, if forward-looking terms are used primarily as a form of cheap talk to shift the focus away from current diversity issues, we expect diversity washers with more forward-looking terms to have worse future diversity. To disentangle these two possibilities, in Panel B, we regress firm diversity in year t + 1 on our two measures of diversity washing, the number of forward-looking terms and their interaction terms, and year t diversity.
+
+Consistent with diversity-washing firms using forward-looking terms to shift the narrative from current issues, the interaction coefficients across all columns in Panel B are negative and mostly significant at conventional levels. In other words, diversity washers that use more forward-looking terms are, if anything, less likely to increase diversity hiring in subsequent years. These findings further support the notion that diversity-washing discussions are not honest commitments by firms to improve their diversity profiles.
+5. Market Perceptions
+Diversity washing is likely associated with a broader push within an organization to influence the market perception of the company. In doing so, diversity washers may benefit from appearing more socially conscious than their actual social behavior. This disclosure tactic may be especially appealing for mature, low-performing firms because they can attract socially responsible investment (SRI) and ESG funds, which tend to be less sensitive to firm performance (Benson and Humphrey, 2008; Renneboog, Ter Horst, and Zhang, 2011; 25
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Bia lkowski and Starks, 2016) and have less volatile asset flows than non-SRI and ESG funds (e.g., Bollen, 2007). Furthermore, SRI and ESG funds are an increasingly large sector of the investment community (Simpson et al., 2021). Therefore, we examine whether diversity washers succeed in biasing the perceptions of ESG-conscious market participants.
+5.1. Commercial ESG Ratings
+As the primary information source for investors on sustainability issues, commercial ESG-rating providers are an important information intermediary in public markets. These rating agencies have also recently faced heightened scrutiny over the quality of the underlying data used to construct their measures (e.g., Berg, Fabisik, and Sautner, 2021a; Berg et al., 2022), which is generally a combination of public, quasi-public, and sometimes proprietary data.21 One important data source for rating agencies is a firm’s own disclosures (DE Shaw, 2022), which are difficult to verify, because outside stakeholders and ESG rating agencies do not typically have access to the underlying data. Furthermore, ESG rating agencies tend to interpret and use these disclosures inconsistently (Christensen et al., 2022).22 These features highlight the possibility that ESG raters may be misled by firms’ ESG disclosures or disingenuous actions (see section 4.2). To the extent this occurs for diversity washers, we expect such firms to obtain higher ESG scores.
+
+We examine the relationship between ESG ratings and diversity washers in Table 11.
+We consider the scores from two top ESG rating providers: Thompson Reuters Refinitiv (Panel A) and Morningstar Sustainalytics (Panel B). We consider each provider’s overall 21This scrutiny has led to increasing concern among regulators and market commentators that the focus on ESG ratings may be misleading indicators of underlying ESG activities (Financial Conduct Authority, 2022; Temple-West, 2022). Highlighting this possibility, and in line with our findings, Cornaggia and Cornaggia (2023) show firms “manage” their ESG ratings by improving cosmetically along dimensions that ESG rating providers weigh more heavily in their ratings.
+
+22Rating-agency practices vary, with some ratings setting non-disclosing firms to the industry average, and others assuming the worst performance (Larcker et al., 2022). For instance, Thompson Reuters Refintiv describes in their methodology guide that “not reporting on ‘highly material’ data points will negatively affect a company’s score” (Refinitiv, 2021). Therefore, firms are often heavily incentivized to disclose something about ESG if they care about their ratings, but ESG rating agencies have difficulty verifying the quality of these disclosures.
+
+26
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+assigned ESG rating (columns 1 and 2) and their social ratings (columns 3 and 4). As in prior analyses, we include firm-level controls and industry and year fixed effects. Panel A shows ESG scores provided by Refinitiv are higher for diversity-washing firms, which is the case for both the overall ESG rating (columns 1 and 2) and the social rating (columns 3 and 4). In economic terms, diversity washers exhibit approximately a 12% higher ESG score both for the overall and social score relative to non-diversity washers (which have a mean ESG score of 0.393). We also observe that these relationships are increasing in the level of diversity washing, as shown in columns 1 and 3.
+
+Panel B tabulates similar analyses for Sustainalytics ratings. As in Panel A, we find diversity washers have higher average ESG ratings for both the overall rating (columns 1 and
+2) and social rating (columns 3 and 4), as shown by the positive and statistically significant coefficients. Economic significance is smaller than in Panel A, with diversity-washing firms having approximately 1.5% and 1.9% higher overall and social ratings than non-diversity washers, and again, these effects are increasing in the magnitude of diversity washing.
+The incentive to disclose DEI data to satisfy ESG raters may induce a mechanical relation between diversity washing and ESG rating coverage. To explore this possibility, in untabulated analysis, we estimate year-by-year regressions of Panel A, Table 11, because Refinitiv expanded its coverage beginning in 2017 from the Russell 1000 to the Russell 3000.
+If a mechanical relation exists, we should observe a change in the coefficient on our diversitywashing measures that coincides with this expansion. However, we observe a consistently positive and significant relation that steadily increases over our sample period. Thus, our findings do not appear to result from ESG rating coverage.23 To further emphasize how ESG ratings strongly relate to DEI disclosures instead of underlying diversity, in Panels A through D of Figure 5, we plot the ESG ratings across 23Additional research-design choices and evidence also suggest Refinitiv’s expansion does not meaningfully influence our results. First, all of our tests include year fixed effects, so we control for year-level variation.
+Second, our result that diversity washers receive a higher rating holds when Sustainalytics is the rating agency (i.e., Table 11, Panel B). Sustainalytics did not expand coverage during the same period, so Refinitiv’s coverage expansion is unlikely to be driving these results. Results from this table are also robust to switching from 2-digit SIC codes to the industry definitions provided by Refinitiv and Sustainalytics.
+27
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+bivariate decile sorts of DEI discussion and underlying diversity. If ratings were solely based on underlying diversity, we expect lighter shades on the left of the plots and darker shades to the right and no significant variation along the vertical dimension. Conversely, if ratings are based on disclosures, we expect darker shades toward the top of the plots and lighter shades toward the bottom. Consistent with the latter scenario, Panels A and C show the overall Refinitiv and Sustainalytics scores are strongly correlated with DEI discussion and have no discernible relation with underlying diversity. We observe a similar pattern when focusing on Refinitiv and Sustainalytics social scores (Panels B and D). The consistent pattern of these heatmaps suggests raters’ focus on DEI disclosures rather than the actual diversity for a wide array of firms. These patterns imply our on-average results in Table 11 are not driven by only a few firms’ misleading behavior.
+
+The results in Table 11 and Figure 5 show diversity washers receive higher ESG ratings by commercial rating organizations, including their social scores, for which diversity is a principal input. This overrating likely arises from a combination of public promotion of commitments to DEI in disclosures, as well as the inability of ESG rating agencies to verify actual company diversity due to a lack of available data.
+
+5.2. Asset Flows
+Given our finding that diversity washers receive ESG ratings that may be biased upwards, ESG-focused investors may be misled into making poor asset-allocation decisions using these ESG ratings. In Table 12, we test this conjecture by examining whether diversity washing is associated with greater ownership by institutional investors who value ESG. We use two methods to identify funds with an ESG focus. In Panel A, we follow Christensen, Floyd, Liu, and Maffett (2017) and examine ownership by SRI mutual funds as listed by The Forum for Sustainable and Responsible Investment (USSIF). Because USSIF’s list only includes USSIF members, in Panel B, we also identify ESG mutual funds based on their 28
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+names.24 In both panels, we measure ownership as the percentage of shares held by these investors for the year based on mutual fund holdings from the CRSP mutual fund database.
+As in prior analyses, we include firm-level controls and industry and year fixed effects.
+Panel A shows SRI funds have larger positions in diversity washers. Firms that appear to engage in diversity washing have approximately 10.4% more SRI fund ownership (relative to the unconditional mean of 0.56% for non-diversity-washing firms). Furthermore, the positive and statistically significant relationship between Diversity-Washing Level and SRI mutual fund ownership (columns 1 and 2) suggests ownership increases in the level of diversity washing. In Panel B, we explore the relationship between diversity washing and ownership by ESG mutual fund ownership based on fund names. As in Panel A, we find a positive and statistically significant relationship between diversity washing and ESG asset ownership across all specifications.
+
+Panels E and F of Figure 5 report the heat maps of ESG ownership as determined by USSIF membership and fund name. These plots are based on bivariate decile sorts of DEI discussion and underlying diversity. If ESG ownership is based on underlying diversity, we expect the ownership gradient to increase horizontally across the plots, with darker regions (i.e., higher ownership) as you move to the right. Alternatively, if ESG ownership is based more on DEI discussion, we expect the gradient to increase vertically across the plots, with darker regions toward the top of the plots. Panel E reports darker regions toward the top of the plot, implying SRI ownership is more strongly associated with DEI discussion than underlying diversity. This pattern suggests the emphasis on disclosure is widespread among SRI investors and the firms in which they invest. Panel F reports SRI ownership based on fund name and reveals no discernible relation between underlying diversity and ownership by funds whose names relate to ESG.
+
+Overall, the evidence in Table 12 and Figure 5 suggests socially conscious investors hold a larger fraction of diversity washers’ shares despite exhibiting significantly lower outcomes 24Specifically, we identify all funds that contain the following search terms in their name: sustain, social, ESG, impact, gender, diversity, and diverse.
+
+29
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+for DEI-related issues. These findings highlight that opportunistic ESG profiles of public firms may distort sustainability-oriented asset flows. This potential manipulation benefits diversity-washing companies and is an economic and social loss for investors with an ESG focus.
+
+6. Content Analyses
+In our primary analyses, we measure the extent of DEI discussions in financial statements based on the count of DEI keywords. However, this approach does not consider how firms discuss diversity and whether diversity-washing firms discuss DEI differently than other firms. Therefore, in this section, we examine the content of DEI discussions to understand how diversity-washing firms differ in their DEI discussions and whether the content is consistent with misleading DEI discussions.
+
+6.1. DEI Topics
+In this subsection, we explore whether diversity-washing firms differ in their discussion of DEI topics. We test differences across the four broad topic categories presented in Figure 3 by regressing the fraction of DEI sentences assigned to a category on our two diversity-washing measures, firm-level controls, and industry and year fixed effects.
+We report the results in Table 13, and our findings suggest diversity washers discuss DEI differently along several important dimensions. First, as seen in columns 1 and 2 of Panel A, diversity washers highlight corporate culture and equity more frequently despite having less diversity. Our findings in column 1 demonstrate that as the level of diversity washing increases, the proportion of discussion allocated to this topic also increases. These differences are economically significant, with diversity washers having approximately 36.0% more discussion related to these topics as a fraction of their total DEI discussions, as measured 30
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+in column 2 (relative to the non-diversity washer average of 12.28%). Overall, this finding further highlights how firms may be misleading stakeholders and shareholders.
+In columns 3 and 4 of Panel A, we also find diversity washers discuss corporate governance less frequently, which suggests they may have weaker governance structures to foster improved diversity.25 Relatedly, columns 1 and 2 of Panel B show diversity washers allocate more time discussing employment law and regulation, which likely reflects efforts to control the damage resulting from their more frequent adverse DEI outcomes, such as EEOC violations. This observation may also be partially explained by an increased propensity to provide boilerplate language regarding compliance with existing employment laws or to protect themselves in case of a lawsuit.
+
+6.2. Vague and Ambiguous DEI Discussions
+Prior literature highlights that firms can mislead investors using vague or ambiguous language (e.g., Cheng et al., 2019; Ertugrul, Lei, Qiu, and Wan, 2017). In the context of diversity washing, firms might also use less precise discussions to avoid litigation risk (e.g., Skinner, 1994). We, therefore, explore whether diversity washing firms are more likely to use vague or ambiguous language when discussing DEI.
+
+In Table 14, we explore the relationship between diversity washing and two different proxies for the amount of vague and ambiguous DEI-related discussions in firms’ financial filings. First, in Panel A, we explore the relationship between diversity washing and the number of weasel words in DEI sentences because these words can serve as caveats and allow them to make DEI statements without concrete commitments (e.g., Loughran and Mcdonald, 2016; Loughran and McDonald, 2013).26 Second, in Panel B, we explore the relationship between diversity washing and a ChatGPT-assigned vagueness score of firms’ DEI-related 25For instance, Cai et al. (2022) highlight the influence that diverse directors have in hiring diversity, more generally, throughout the firm.
+
+26The terms we identify as weasel words are: believe, can, commonly, could, help, leading, like, many, may, maybe, might, often, possibly, probably, rarely, seem, some, up to, virtually, and widely.
+31
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+sentences in each firm-year.27
+Consistent with diversity-washing firms providing less concrete discussions of DEIrelated issues, we see a positive association between our diversity-washing proxies and proxies for vague and ambiguous DEI-related language. The relationships are robust and statistically significant at the 1% level across all specifications. Altogether, these results provide strong evidence that diversity washing firms attempt to mislead investors through vague DEI-related discussions. It also provides one explanation for how firms may have avoided successful shareholder litigation for diversity washing, as they appear to manage their discussions to minimize these risks.
+
+7. Conclusion
+We provide large-sample evidence consistent with firms having significant discrepancies between their disclosed commitments to diversity and their actual hiring practices. Consistent with these discrepancies indicating diversity washing, we show such firms exhibit more outflows of diverse employees, more discrimination-related fines, and adverse human-capital events. Despite these negative DEI outcomes, diversity-washing firms receive higher ESG scores from commercial rating organizations and attract more investment from ESG-focused institutional investors, suggesting these diversity disclosures mislead outside stakeholders and investors.
+
+Our findings are inherently descriptive in nature. This feature is common in studies on disclosure (e.g., Leuz and Wysocki, 2016), especially those focused on voluntary disclosure in the ESG setting (e.g., Christensen, Hail, and Leuz, 2021). Moreover, a firm’s decision to diversity wash is an endogenous choice, likely correlated with other strategic decisions.
+27The prompt we give ChatGPT is Please score the vagueness of the following sentence(s) on a continuous scale from 0 to 100, where 0 means the sentence is not vague at all, and 100 means the sentence is very vague. Reply in the following format: ‘Score: <THE SCORE>’ (without the quotation marks). If the sentence is empty, please reply ‘Score: NA’. We then average the scores across all sentences in a firm-year.
+
+32
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+For instance, our evidence shows a firm’s propensity to diversity wash is correlated with its propensity to have other misleading ESG policies. Our evidence also suggests diversity washers invest more heavily in their investor and public relations departments. Like with all descriptive studies, our inability to provide a strong causal explanation is a limitation of our study.
+
+Our large-sample evidence speaks to behavior on average and cannot address individual instances of misbehavior. We do not claim with absolute certainty that a firm classified as a diversity washer is misreporting its commitment to diversity because many aspects of DEI-related activity and intent are unobservable. Instead, our inferences depend on the aggregate properties of our measures, which are consistently correlated with other observable misleading ESG behaviors and capital market benefits. This reliance on the cross-sectional properties of firm-level proxies for managerial opportunism is common in the empirical accounting literature (e.g., Dechow, Ge, and Schrand, 2010).
+
+Despite these caveats, the data in this paper offer a unique opportunity to study an essential component of ESG—employee diversity—and compare it with firm disclosures related to these issues. ESG investing has grown rapidly in scale and importance even though most ESG activities are unobservable and self-reported, making it difficult to verify disclosures of the actual underlying activity for most firms. Our collective evidence highlights that many firms may be providing misleading disclosures about their ESG commitments, leading to potentially mistaken inferences among investors and other market participants.
+Collectively, our findings support the need for ongoing regulation and enforcement to hold firms accountable for reporting their ESG activities truthfully.
+
+33
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+References
+Anderson, R. C., Mansi, S. A., Reeb, D. M., 2004. Board characteristics, accounting report integrity, and the cost of debt. Journal of Accounting and Economics 37, 315–342.
+Avramov, D., Cheng, S., Lioui, A., Tarelli, A., 2022. Sustainable investing with ESG rating uncertainty. Journal of Financial Economics 145, 642–664.
+
+Basu, S., Vitanza, J., Wang, W., Zhu, X. R., 2022. Walking the walk? Bank ESG disclosures and home mortgage lending. Review of Accounting Studies 27, 779–821.
+Benson, K. L., Humphrey, J. E., 2008. Socially responsible investment funds: Investor reaction to current and past returns. Journal of Banking and Finance 32, 1850–1859.
+Berg, F., Fabisik, K., Sautner, Z., 2021a. Is History Repeating Itself? The (Un)Predictable Past of ESG Ratings. Unpublished working paper. MIT Sloan School of Management and Frankfurt School of Finance and Management.
+
+Berg, F., Koelbel, J. F., Pavlova, A., Rigobon, R., 2021b. ESG Confusion and Stock Returns: Tackling the Problem of Noise. Unpublished working paper. MIT Sloan School of Management, University of Zurich, and London Business School.
+
+Berg, F., K ̈olbel, J. F., Rigobon, R., 2022. Aggregate Confusion: The Divergence of ESG Ratings*. Review of Finance 26, 1315–1344.
+
+Bhagat, S., 2022. An Inconvenient Truth About ESG Investing. Harvard Business Review.
+Bia lkowski, J., Starks, L. T., 2016. SRI Funds: Investor Demand, Exogenous Shocks and ESG Profiles. Unpublished working paper pp. 1–47.
+
+Blankespoor, E., deHaan, E., Marinovic, I., 2020. Disclosure processing costs, investors’ information choice, and equity market outcomes: A review. Journal of Accounting and Economics 70.
+
+Bollen, N. P., 2007. Mutual fund attributes and investor behavior. Journal of Financial and Quantitative Analysis 42, 683–708.
+
+Bourveau, T., Flam, R., Le, A., 2023. Behind the EEO Curtain. Unpublished working paper.
+Columbia Business School and London Business School.
+
+Bozanic, Z., Roulstone, D. T., Van Buskirk, A., 2018. Management earnings forecasts and other forward-looking statements. Journal of Accounting and Economics 65, 1–20.
+Bushee, B. J., Gow, I. D., Taylor, D. J., 2018. Linguistic Complexity in Firm Disclosures:
+Obfuscation or Information? Journal of Accounting Research 56, 85–121.
+Cai, W., Chen, Y., Rajgopal, S., Yang, L., 2023. Diversity Targets. Unpublished working paper. Columbia Business School.
+
+34
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Cai, W., Dey, A., Grennan, J., Pacelli, J., Qiu, L., 2022. Do Diverse Directors Influence DEI. Unpublished working paper. Columbia Business School, Harvard Business School, UC Berkeley, and Purdue University.
+
+Cheng, S. F., De Franco, G., Jiang, H., Lin, P., 2019. Riding the blockchain mania: Public firms’ speculative 8-k disclosures. Management Science 65, 5901–5913.
+Christensen, D. M., Serafeim, G., Sikochi, A., 2022. Why is Corporate Virtue in the Eye of The Beholder? The Case of ESG Ratings. The Accounting Review 97, 147–175.
+Christensen, H. B., Floyd, E., Liu, L. Y., Maffett, M., 2017. The real effects of mandated information on social responsibility in financial reports: Evidence from mine-safety records.
+Journal of Accounting and Economics 64, 284–304.
+
+Christensen, H. B., Hail, L., Leuz, C., 2019. Economic Analysis of Widespread Adoption of CSR and Sustainability Reporting Standards. SSRN Electronic Journal .
+Christensen, H. B., Hail, L., Leuz, C., 2021. Mandatory CSR and Sustainability Reporting:
+Economic Analysis and Literature Review. Review of Accounting Studies 53, 1689–1699.
+Cornaggia, J., Cornaggia, K., 2023. ESG Ratings Management. Unpublished working paper.
+Pennsylvania State University.
+
+DE Shaw, 2022. Keep the Change: Analyzing the Increase in ESG Rating for U.S Equities.
+Dechow, P., Ge, W., Schrand, C., 2010. Understanding earnings quality: A review of the proxies, their determinants and their consequences. Journal of Accounting and Economics 50, 344–401.
+
+Devlin, J., Chang, M. W., Lee, K., Toutanova, K., 2019. BERT: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805 .
+Dikolli, S. S., Frank, M. M., Guo, Z. M., Lynch, L. J., 2022. Walk the talk: ESG mutual fund voting on shareholder proposals. Review of Accounting Studies 27, 864–896.
+Dyer, T., Lang, M., Stice-Lawrence, L., 2016. Do managers really guide through the fog? On the challenges in assessing the causes of voluntary disclosure. Journal of Accounting and Economics 62, 270–276.
+
+Ertugrul, M., Lei, J., Qiu, J., Wan, C., 2017. Annual Report Readability, Tone Ambiguity, and the Cost of Borrowing. Journal of Financial and Quantitative Analysis 52, 811–836.
+Financial Conduct Authority, 2022. ESG integration in UK capital markets: Feedback to CP21 / 18. June, Financial Conduct Authority.
+
+Gampher, A., Goldstein, D., 2022. A New SEC Human Capital Rule Is Coming—So Is Pushback. Bloomberg Law.
+
+35
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Giannetti, M., Jasova, M., Loumioti, M., Mendicino, C., 2023. ”Glossy Green” Banks: The Disconnect Between Sustainability Reporting and Lending Activities. Unpublished working paper. Stockholm School of Economics, Columbia University, and UT Dallas.
+Homburg, C., Stierl, M., Bornemann, T., 2013. Corporate social responsibility in businessto-business markets: How organizational customers account for supplier corporate social responsibility engagement. Journal of Marketing 77, 54–72.
+
+Hood, D., 2023. Lawsuits Challenge Corporate Diversity Pledges After Floyd. Bloomberg Law.
+
+Hribar, P., Nichols, D., 2007. The Use of Unsigned Earnings Quality Measures in Tests of Earnings Management. Journal of Accounting Research 45, 1017–1053.
+Huang, A. H., Wang, H., Yang, Y., 2023. FinBERT: A Large Language Model for Extracting Information from Financial Text. Contemporary Accounting Research 40, 806–841.
+Huang, X., Teoh, S. H., Zhang, Y., 2014. Tone management. Accounting Review 89, 1083– 1113.
+
+Kim, A. G., Nikolaev, V. V., 2023. Context-Based Interpretation of Financial Information.
+Unpublished working paper. University of Chicago.
+
+Kim, S., Yoon, A., 2021. Analyzing Active Managers’ Commitment to ESG: Evidence from United Nations Principles for Responsible Investment. Management Science. In Press.
+LaCroix, K., 2021. Two More Board Diversity Lawsuits Dismissed. The D & O Diary.
+Larcker, D. F., Pomorski, L., Tayan, B., Watts, E. M., 2022. ESG ratings: A Compass without direction (Stanford Business) pp. 1–16.
+
+Leuz, C., Wysocki, P. D., 2016. The Economics of Disclosure and Financial Reporting Regulation: Evidence and Suggestions for Future Research. Journal of Accounting Research 54, 525–622.
+
+Li, F., 2008. Annual report readability, current earnings, and earnings persistence. Journal of Accounting and Economics 45, 221–247.
+
+Liang, C., Lourie, B., Nekrasov, A., Yoo, I. S., 2022. Voluntary Disclosure of Workforce Gender Diversity. Unpublished working paper. University of California Irvine and University of Illinois Chicago.
+
+Loughran, T., McDonald, B., 2011. When Is a Liability Not a Liability? Textual Analysis, Dictionaries, and 10-Ks. Journal of Finance 66, 35–65.
+
+Loughran, T., McDonald, B., 2013. IPO first-day returns, offer price revisions, volatility, and form S-1 language. Journal of Financial Economics 109, 307–326.
+
+Loughran, T., McDonald, B., 2014. Measuring readability in financial disclosures. Journal of Finance 69, 1643–1671.
+
+36
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Loughran, T., Mcdonald, B., 2016. Textual Analysis in Accounting and Finance: A Survey.
+Journal of Accounting Research 54, 1187–1230.
+
+Miller, G. S., Skinner, D. J., 2015. The evolving disclosure landscape: How changes in technology, the media, and capital markets are affecting disclosure. Journal of Accounting Research 53, 221–239.
+
+Moreno, A., Staskiewicz, C., 2021. Facebook Defeats Shareholder Suit Challenging Alleged Failures In Its Diversity and Inclusion Practices. National Law Review XIII.
+Nelson, R., 2021. Setting challenging ESG goals that create value. Conservice ESG.
+Park, J., Lee, H., Kim, C., 2014. Corporate social responsibilities, consumer trust and corporate reputation: South Korean consumers’ perspectives. Journal of Business Research 67, 295–302.
+
+Raghunandan, A., Rajgopal, S., 2022. Do ESG funds make stakeholder-friendly investments?
+Review of Accounting Studies 27, 822–863.
+
+Refinitiv, 2021. Environmental, Social, and governance (ESG) scores from Refinitiv. February.
+Reimers, N., Gurevych, I., 2019. Sentence-BERT: Sentence embeddings using siamese BERTnetworks. arXiv preprint arXiv:1908.10084 .
+Renneboog, L., Ter Horst, J., Zhang, C., 2011. Is ethical money financially smart?
+Nonfinancial attributes and money flows of socially responsible investment funds. Journal of Financial Intermediation 20, 562–588.
+
+Rivera, L. A., 2012. Diversity within Reach: Recruitment versus Hiring in Elite Firms. The Annals of the American Academy of Political and Social Science 639, 71–90.
+Rogers, J. L., 2008. Disclosure quality and management trading incentives. Journal of Accounting Research 46, 1265–1296.
+
+Rogers, J. L., Van Buskirk, A., Zechman, S. L., 2011. Disclosure tone and shareholder litigation. Accounting Review 86, 2155–2183.
+
+SEC, 2009. Proxy Disclosure Enhancements, Rel. No. 33-9089.
+
+SEC, 2022a. SEC Proposes Rules to Enhance and Standardize Climate-Related Disclosures for Investors.
+
+SEC, 2022b. Statement on ESG Disclosures Proposal.
+
+Serafeim, G., Yoon, A., 2022. Stock price reactions to ESG news: the role of ESG ratings and disagreement. Review of Accounting Studies In Press.
+
+Simpson, C., Rathi, A., Kishan, S., 2021. The ESG Mirage. Bloomberg Business Week.
+Skinner, D. J., 1994. Why Firms Voluntarily Disclose Bad News. Journal of Accounting Research 32, 38.
+
+37
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Smith, R., 2020. Facing a barrage of lawsuits, insurers make diversity changes. Insurance Business Magazine.
+
+Stocken, P. C., 2000. Credibility of Voluntary Disclosure. The RAND Journal of Economics 31, 359–374.
+
+Temple-West, P., 2022. FCA to regulate ESG ratings businesses. Financial Times.
+The Conference Board, 2022. In the 2022 Proxy Season, Proposals on Climate Disclosures and Racial Equity Audits Gained Significant Momentum. PR Newswire pp. 1–7.
+Wilkes, T. R., 2022. ’Sustainable’ funds are no more green than traditional products, study finds. Reuters.
+
+Williamson, G., 2022. ESG and the SEC: Where Are We Now? Perkins Coie.
+38
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Appendix A. Variable Definitions
+This table contains descriptions of the primary variables used throughout this paper. Sources include Revelio Labs (RL), the WRDS SEC EDGAR Filings database (EDGAR), Compustat (COMP), the Center for Research in Security Prices (CRSP), Good Jobs First (GJF), Corporate Register (CR), Twitter (TWTR), Sustainalytics (SUSTAIN), RepRisk (RRISK), and Thomson Reuters (TR).
+
+Variable Description
+Ann. Return Annualized return for firm i in year t. (CRSP)
+
+Ann. Volatility Annualized volatility for firm i in year t. (CRSP) Asset Growth Year-over-year asset growth for firm i from year t.
+
+(COMP)
+
+Book-Market Book value of equity scaled by market value of equity.
+(COMP)
+
+Compensation & Pay Equity The percentage of sentences classified in the topic “Compensation & Pay Equity” within all DEI discussions in 8-K, 10-K, and DEF 14A disclosures. (EDGAR)
+
+Corporate Governance The percentage of sentences classified in the topic “Corporate Governance” within all DEI discussions in
+8-K, 10-K, and DEF 14A disclosures. (EDGAR)
+
+CSR Report An indicator that takes a value of 1 for firm i in year t if the firm releases a CSR report. (CR)
+
+DEI FLTAgg. Number of forward-looking terms showing up in 10-K, 8K, and DEF 14A documents related to DEI discussion for firm i in year t. The forward-looking terms are defined following the approach of Bozanic et al. (2018).
+
+(EDGAR)
+
+DEI Tweets Number of DEI-based Tweets for firm i in year t. (CR)
+
+DEI WordsAgg. Number of DEI-based words across 10-K, 8-K, and DEF 14A disclosures for firm i in year t. (EDGAR)
+
+DEI Words8-K Number of DEI-based words across 8-K disclosures for firm i in year t. (EDGAR)
+
+DEI Words10-K Number of DEI-based words across 10-K disclosures for firm i in year t. (EDGAR)
+
+DEI WordsDEF14A Number of DEI-based words across DEF 14A disclosures for firm i in year t. (EDGAR)
+
+DEI WordsCSR Number of DEI-based words across DEF 14A disclosures for firm i in year t. (CR)
+
+DEI WordsGender Number of DEI-based words related to gender across 8-K, 10-K, and DEF 14A disclosures for firm i in year
+t. (EDGAR)
+
+DEI WordsEthnic Number of DEI-based words related to ethnicity across 8-K, 10-K, and DEF 14A disclosures for firm i in year
+t. (EDGAR)
+
+39
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Discrimination Penalty An indicator that takes a value of 1 for firm i in year t if the firm receives a discrimination-related Equal
+Employment Opportunity Commission Penalty (GJF)
+
+Diversity Washer An indicator variable that takes a value of 1 for firm i in year t if the firms’ DEI disclosure rank is above their workforce diversity rank. (RL, EDGAR)
+
+Diversity WasherEthnic An indicator variable that takes a value of 1 for firm i in year t if the firms’ ethnic DEI disclosure rank is above their non-white workforce diversity rank. (RL,
+EDGAR)
+
+Diversity WasherGender An indicator variable that takes a value of 1 for firm i in year t if the firms’ gender DEI disclosure rank is above their female workforce diversity rank. (RL, EDGAR)
+
+Diversity-Washing Level The difference between a firm’s DEI disclosure rank and its workforce diversity rank or firm i in year t. (RL,
+EDGAR)
+
+Diversity-Washing LevelEthnic The difference between a firm’s ethnic DEI disclosure rank and its non-white workforce diversity rank or firm i in year t. (RL, EDGAR)
+
+Diversity-Washing LevelGender The difference between a firm’s gender DEI disclosure rank and its female workforce diversity rank or firm i in year t. (RL, EDGAR)
+
+Employment Law & Regulations The percentage of sentences classified in the topic “Employment Law & Regulations” within all DEI discussions in 8-K, 10-K, and DEF 14A disclosures.
+
+(EDGAR)
+
+Employment Penalty An indicator that takes a value of 1 for firm i in year t if the firm receives an Equal Employment Opportunity
+Commission Penalty. (GJF)
+
+ESG-related News Indicator for whether firm i had negative ESG-related news arising in year t. (RRISK)
+
+ESG OwnershipName-based ESG fund ownership for firm i in year t based on holdings of mutual funds with ESG-related names.
+
+(CRSP)
+
+ESG OwnershipUS SIF ESG fund ownership for firm i in year t based on holdings of mutual funds listed in USSIF. (CRSP)
+
+ESG ScoreRefinitiv Overall ESG rating provided by Refinitiv for firm i in year t. (TR)
+
+ESG ScoreSustainalytics Overall ESG rating provided by Sustainalytics for firm i in year t. (SUSTAIN)
+
+Human-Capital-Related News Indicator for whether firm i had negative human capitalrelated news arising in year t. (RRISK) Market Cap. Market capitalization of equity for firm i in year t.
+
+(COMP)
+
+40
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Questionable Diversity Policy An indicator that takes a value of 1 for firm i in year t if the firm has a diversity policy but not a “target”
+
+(TR)
+
+Questionable Emissions Policy An indicator that takes a value of 1 for firm i in year t if the firm has an emissions policy but not a “target.”
+
+(TR)
+
+Questionable Energy Policy An indicator that takes a value of 1 for firm i in year t if the firm has a energy policy but not a “target.” (TR)
+
+Questionable Water Policy An indicator that takes a value of 1 for firm i in year t if the firm has a water policy but not a “target.” (TR)
+
+Return on Assets Return on assets for firm i in year t. (COMP)
+
+Social ScoreRefinitiv Social rating provided by Refinitiv for firm i in year t.
+(TR)
+
+Social ScoreSustainalytics Social rating provided by Sustainalytics for firm i in year t. (SUSTAIN)
+
+Twitter Acct. An indicator that takes the value of 1 for firm i if the firm has an active Twitter account (TWTR).
+
+Vagueness Score The measure of the vagueness of a DEI sentence scored by chatGPT on a 0 to 100 scale. (EDGAR)
+
+Workplace Culture & Equity The percentage of sentences classified in the topic “Workplace Culture & Equity” within all DEI discussions in 8-K, 10-K, and DEF 14A disclosures. (EDGAR)
+
+% Diversity The percentage of U.S.-based employees that are female or non-white for firm i in year t. (RL)
+
+% DiversityJunior The percent in diverse employees categorized as the most junior for firm i in year t. (RL)
+
+% DiversitySenior The percent in diverse employees categorized as the most senior for firm i in year t. (RL)
+
+% Female The percentage of U.S.-based employees that are female for firm i in year t. (RL)
+
+% Non-White The percentage of U.S.-based employees that are nonwhite for firm i in year t. (RL)
+# of Weasel Words Number of weasel words showing up in 10-K, 8-K, and
+DEF 14A documents related to DEI discussion for firm i in year t (EDGAR)
+
+41
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Appendix B. Identifying DEI Discussion in Financial
+Disclosures
+We use a dictionary-based approach to identify instances in which firms discuss DEI in their financial disclosures. We create a dictionary of 989 terms related to DEI and use counts of these terms as a measure of DEI discussion.
+
+Our DEI terms are based on two DEI glossaries, the DEI Glossary from the Foster School of Business, Washington University28 and the University of Alaska Fairbanks DEI Dictionary.29 We further supplemented these glossaries with terms from the UN’s Sustainable Development Goals (SDG) related to DEI.30 Although these two glossaries and the SDG have substantial overlap, we combine them into a single, comprehensive list.
+However, several of these DEI terms have multiple meanings within the financialreporting context of SEC documents. For instance, “equity” in a financial-reporting context can refer to shareholders’ equity, whereas “equity” in a DEI context can refer to fostering a community that ensures all employees can thrive. To avoid inadvertently capturing these alternative meanings, we extract the text around each term for a random sample of documents and have research assistants read the excerpts to confirm most cases related to DEI. If it does, we include the keyword as is. If it does not, we remove the term from our dictionary and extract all the bigrams that include that keyword.31 We then have research assistants read sentences with those bigrams to determine whether those bigrams relate to DEI. We keep the bigrams that the research assistants determined were related to DEI. After this iterative process, our final sample includes 989 terms.
+
+28See https://foster.uw.edu/about-foster-school/fostering-diversity/dei-glossary.
+29See https://www.uaf.edu/diversity/strategic-plan/dictionary.php.
+30We focused on subgoals including Gender Equity, Reduced Inequalities, and Partnership for the Goals.
+See https://sdgs.un.org/goals.
+
+31Many of the terms in the DEI glossaries are unigrams. In some instances, the keywords are n-grams. In those cases, we create “n+1”-grams to refine our dictionary. For the Twitter and CSR analyses in Table 7, we use the root word because the context almost always refers to DEI.
+42
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Appendix C. Topics of DEI discussion
+This section describes our approach to identifying categories of DEI sentences. First, we extract all sentences that contain at least one DEI keyword and tokenize the words. We then use setenceBERT to create sentence-level embeddings for each DEI sentence.32 The resulting embeddings result in each sentence being represented as a vector. We use KMeans to assign each sentence to one of 20 available clusters. We label each cluster by giving 30 sentences from that cluster to ChatGPT and asking it to label the cluster as a topic. After the topics are identified and labeled, we manually inspect example sentences from them and group them into five categories: Workplace Culture and Equity, Corporate Governance, Employment Law and Regulation, Compensation and Pay Equity, and Other. The succeeding table reports the labels of the 20 topics and the names of the five categories to which the topics are assigned. This table also reports the fraction of sentences assigned to each topic.
+Topic Fraction (%)
+
+Workplace Culture and Equity
+Anti-Discrimination Policies and Equal Opportunity in Employment 4.637 Corporate Social Responsibility and Workplace Culture 2.899 Diversity, Inclusion, and Social Equity 1.759
+Gender and Racial Diversity in Business Leadership 1.618 Workplace Diversity and Inclusion 3.712
+Corporate Governance
+
+Board Diversity and Corporate Governance Policies	15.640
+Corporate Board Diversity and Nomination Process	11.223
+Corporate Governance and Board Diversity	3.946
+Executive Biographies and Professional Achievements	5.263
+Employment Law and Regulations
+Age Discrimination Laws and Releases in Employment Agreements 4.590 Employment Law and Discrimination Legislation 2.702 Employment Law and Regulations 7.645
+Gender Neutrality in Legal and Contractual Language 0.171 Workplace Safety Regulations and Compliance 3.359 Compensation and Pay Equity
+Employee Compensation, Benefits, and Corporate Financial Transactions 3.253 Executive Compensation and Internal Pay Equity 9.283 Other
+Business and Finance 5.743
+Healthcare, Medical Research, and Accessibility Services 2.682 Legal Language Related to Stock Warrants and Liabilities 2.401 Real Estate Law and Financial Regulation 5.493 32Details on the Python package that implements sentenceBERT can be found at https://www.sbert.net.
+43
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Actual Diversity DEI Word Count
+2008 2010 2012 2014 2016 2018 2020 2008 2010 2012 2014 2016 2018 2020
+0 10 20 0.50 0.55 0.60 0.65 Year Average Value Fig. 1 Time Series of Diversity and DEI Discussion in Financial Discussions. This figure presents the time series for Revelio Labs’ diversity measure (left panel) and the number of DEI-related terms found in financial filings (right panel). The annual mean of each measure is captured by the horizontal black line, and the white boxes represent the standard deviation. All measures are derived from the full sample described in
+section 2.
+
+44
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+0 5 10 15 20 25
+2007 2009 2011 2013 2015 2017 2019 2021 Count
+(Thousands)
+
+affirmative action african american age discrimination board diversity discriminate against diverse backgrounds diverse experience diverse group diverse workforce diversity and inclusion employment discrimination equal employment opportunity equal opportunity equal pay ethnicity inclusive work lgbt pay equity racial sexual orientation united way workplace safety
+Fig. 2 Time Series of Top DEI Words. This figure presents the frequency of the top 10 DEI keywords for each year over the sample period. All measures are derived from the full sample described in section 2.
+45
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+0 10 20 30
+2007 2009 2011 2013 2015 2017 2019 2021 Count
+(Thousands)
+
+compensation and pay equity corporate governance employment law and regulations workplace culture and equity Fig. 3 Time Series of DEI Categories This figure presents the frequency of the four DEI categories each year over the sample period. Counts are based on the number of DEI sentences assigned to topics within that category. All measures are derived from the full sample described in section 2.
+46
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Percent Workforce Non−White
+Percent Workforce Female
+1 2 3 4 5 6 7 8 9 10
+0 4 8 12 0 4 8 12
+Decile % Female or Non−White
+Aggregate DEI
+Word Count
+Fig. 4 Distribution of DEI Discussion in Financial Disclosures by Decile of Diversity Measure.
+This figure presents box plots of the distribution of DEI-related words in our corpus of SEC documents, broken down by the decile of underlying diversity, as measured by the percentage of a firm’s workforce that is either female or non-white. The deciles are calculated within year, and all measures are derived from the full sample described in section 2. In the box plot, the horizontal line represents the median aggregate disclosure amount within the decile, with the upper and lower hinges (the top and bottom ends of the box) representing the 25th and 75th percentile. The upper “whisker” extends from the upper hinge to the largest value no greater than 1.5 times the interquartile range (IQR, or distance between the first and third quartiles) from the hinge. The lower whisker extends from the lower hinge to the smallest value greater than 1.5 times the IQR in the opposite direction.
+
+47
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+2 4 6 8 10 2 4 6 8 10
+Within−Year Diversity Rank
+Within−Year
+DEI Mentions Rank
+−0.1 0.0 0.1 Refinitiv Score
+Panel A: Overall Refinitiv Score
+2 4 6 8 10 2 4 6 8 10
+Within−Year Diversity Rank
+Within−Year
+DEI Mentions Rank
+−0.1 0.0 0.1
+Social Refinitiv
+Score
+Panel B: Social Refinitiv Score
+2 4 6 8 10 2 4 6 8 10
+Within−Year Diversity Rank
+Within−Year
+DEI Mentions Rank
+−2 0 2
+Overall Sustainalytics
+Score
+Panel C: Overall Sustainalytics Score
+2 4 6 8 10 2 4 6 8 10
+Within−Year Diversity Rank
+Within−Year
+DEI Mentions Rank
+−4 −2 0 2
+Social Sustainalytics
+Score
+Panel D: Sustainalytics Social Score
+2 4 6 8 10 2 4 6 8 10
+Within−Year Diversity Rank
+Within−Year
+DEI Mentions Rank
+−0.10−0.05 0.00 0.05
+SIF
+Ownership
+Panel E: ESG Ownership (US SIF)
+
+2 4 6 8 10 2 4 6 8 10
+Within−Year Diversity Rank
+Within−Year
+DEI Mentions Rank
+−0.2−0.10.0 0.1 0.2 0.3
+List−Based ESG
+Ownership
+Panel F: ESG Ownership (List−based)
+
+Fig. 5 Non-parametric Summary of ESG Outcomes by DEI Discussion and Diversity Ranks.
+This figure presents the average of Refinitiv’s Overall Score (Panel A), Refinitiv’s Social Score (Panel B), Sustainalytics Overall Score (Panel C), Sustainalytics Social Score (Panel D), Ownership by US SIF funds (Panel E), and Ownership by ESG funds, based on the fund name (Panel F). Each heat map is broken down by the decile of DEI discussion (measured by the overall amount of DEI discussion in our corpus of SEC documents) and the decile of underlying diversity (measured by the percentage of a firm’s U.S.-based workforce that is either female or non-white). The deciles are calculated within year, and all measures are derived from the full sample described in Section 2.
+
+48
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Table 1
+Descriptive statistics
+Panel A: Summary statistics
+Mean StDev p25% p
+50% p75% Obs.
+
+Disclosure-based DEI measures
+DEI WordsAgg. 6.689 9.526 1.000 3.000 8.000 47,334
+
+DEI Words10-K	1.930	3.533	0.000	0.000	2.000	47,334
+DEI WordsDEF14A	2.829	5.550	0.000	1.000	3.000	47,334
+DEI Words8-K	1.728	3.642	0.000	0.000	2.000	47,334
+DEI WordsCSR	48.757	53.855	11.000	31.000	67.750	5,102
+DEI Tweets	2.588	7.039	0.000	0.000	2.000	17,637
+DEI FLTAgg. 2.508 4.140 0.000 1.000 3.000 47,334 Diversity measures
+
+% Diversity	0.584	0.143	0.488	0.586	0.683	47,334
+% Female	0.417	0.160	0.299	0.402	0.528	47,334
+% Non-White	0.298	0.129	0.216	0.285	0.363	47,334
+Firm characteristics
+
+Ann. Return	0.122	0.581	-0.214	0.064	0.339	46,982
+Ann. Volatility	0.463	0.311	0.253	0.378	0.576	47,119
+Asset Growth	0.114	0.391	-0.039	0.043	0.153	47,262
+log(Book-Market)	-0.718	0.927	-1.246	-0.600	-0.096	44,947
+log(Market Cap.)	6.501	2.166	4.935	6.504	8.008	47,323
+Return on Assets	-0.052	0.249	-0.045	0.014	0.061	47,254
+Other outcome variables
+% Diversityt+1 0.585 0.141 0.489 0.587 0.683 41,184 % DiversityJunior t+1 0.674 0.170 0.568 0.683 0.793 40,012 % DiversitySenior
+
+t+1	0.473	0.157	0.374	0.468	0.568	40,658
+CSR Report	0.108	0.310	0.000	0.000	0.000	47,334
+Discrimination Penalty	0.026	0.159	0.000	0.000	0.000	19,544
+Diversity Washer	0.499	0.500	0.000	0.000	1.000	47,334
+Diversity Washing Level	0.052	39.584	-28.000	0.000	28.000	47,334
+Employment Penalty	0.115	0.319	0.000	0.000	0.000	19,544
+ESG-related News	0.205	0.404	0.000	0.000	0.000	47,334
+ESG OwnershipName-based	17.842	41.677	0.000	1.200	16.200	47,334
+ESG OwnershipUS SIF	26.444	91.375	0.000	0.000	8.900	47,334
+ESG ScoreRefinitiv	0.488	0.299	0.207	0.426	0.791	20,276
+ESG ScoreSustainalytics	53.913	8.213	47.778	52.000	59.000	10,291
+Human capital-related News	0.092	0.289	0.000	0.000	0.000	47,334
+Questionable Diversity Policy	0.761	0.427	1.000	1.000	1.000	20,172
+Social ScoreRefinitiv	0.413	0.288	0.148	0.332	0.671	20,276
+Social ScoreSustainalytics	53.924	9.996	46.407	53.000	60.767	8,799
+Twitter Acct. 0.373 0.484 0.000 0.000 1.000 47,334 Panel B: DEI disclosure-measures correlation
+[1] [2] [3] [4]
+
+[1] DEI WordsAgg. 0.616 0.652 0.566
+
+[2] DEI Words10-K	0.640	0.219	0.128
+[3] DEI WordsDEF14A	0.782	0.288	0.133
+[4] DEI Words8-K	0.563	0.154	0.146
+Panel C: Firm-diversity proxy correlation
+[1] [2] [3]
+
+[1] % Diversity	0.833	0.501
+[2] % Female	0.824	0.058
+[3] % Non-White	0.546	0.038
+This table reports descriptive statistics for the disclosure-based DEI commitment data used throughout this study. Panel A presents summary statistics on the primary measures used in this study. Panel B provides the pairwise Spearman (Pearson) correlations for disclosure-based DEI variables in the upper (lower) triangular region. Panel C provides the pairwise Spearman (Pearson) correlations for firm-level diversity proxies in the upper (lower) triangular region. All variable definitions are as described in Appendix A, and all statistics are calculated from the full set of data described in section 2.
+
+49
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Table 2
+Firm DEI disclosures and diversity
+Panel A: No fixed effects
+DEI WordsAgg. DEI Words10-K DEI WordsDEF14A DEI Words8-K
+(1) (2) (3) (4)
+
+Constant 1.608∗∗∗ 0.176∗∗∗ 0.853∗∗∗ 0.309∗∗∗ (35.920) (2.773) (15.450) (5.254)
+
+% Female 0.221∗∗∗ 0.533∗∗∗ -0.076 0.350∗∗∗ (2.938) (5.294) (-0.776) (3.563)
+
+% Non-White 0.657∗∗∗ 0.835∗∗∗ 0.716∗∗∗ 0.301∗∗ (7.142) (6.782) (6.323) (2.209)
+
+Pseudo R2 0.005 0.007 0.003 0.001
+Observations 47,334 47,334 47,334 47,334 Panel B: Industry and year fixed effects DEI WordsAgg. DEI Words10-K DEI WordsDEF14A DEI Words8-K
+(1) (2) (3) (4)
+
+% Female 0.230∗∗ 0.407∗∗∗ 0.185 0.128
+(2.493) (3.311) (1.475) (1.070)
+
+% Non-White 0.578∗∗∗ 0.821∗∗∗ 0.560∗∗∗ 0.258∗ (5.937) (6.387) (4.775) (1.681)
+
+Year fixed effects Yes Yes Yes Yes
+Industry fixed effects Yes Yes Yes Yes Pseudo R2 0.173 0.107 0.210 0.033
+Observations 47,334 47,334 47,334 47,334 Panel C: Aggregate counts of gender/ethnic keywords DEI WordsGender DEI WordsEthnic
+(1) (2) (3) (4)
+
+Constant 0.394∗∗∗ 0.632∗∗∗
+(8.110) (11.672)
+
+% Female 0.208∗∗ 0.284∗∗∗ 0.080 0.121
+(2.322) (2.668) (0.938) (1.174)
+
+% Non-White 0.889∗∗∗ 0.613∗∗∗ 0.814∗∗∗ 0.691∗∗∗ (8.607) (5.334) (6.698) (5.118)
+
+Year fixed effects No Yes No Yes
+Industry fixed effects No Yes No Yes
+Pseudo R2 0.006 0.115 0.005 0.148
+Observations 47,334 47,334 47,334 47,334 This table presents analysis on the relation between employee diversity measures and DEI disclosures from Poisson regressions. In columns 1 through 4 of panels A and B, the dependent variables represent the amount of DEI-related discussion across all documents, across 10-Ks, across DEF 14As, and across 8-Ks, respectively.
+Panel A (B) reports the results without (with) industry and year fixed effects. Panel C examines the association between gender (columns 1 and 2) and ethnic (columns 3 and 4) keywords across all documents and employee diversity measures. All estimates are based on the full sample of observations, described in section 2. All variables are defined in Appendix A. Test statistics are clustered by firm and included in parentheses. Levels of significance are presented as follows: ∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01.
+50
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Table 3
+Identifying diversity washing
+Panel A: Sample composition
+DEI WordsAgg.
+
+% Diversity 1 2 3 4 5
+
+1	2,183	1,917	1,796	1,709	1,570
+2	1,940	1,889	1,935	1,983	1,998
+3	1,841	1,921	2,026	1,915	1,966
+4	1,743	1,879	1,855	2,050	2,095
+5	1,807	1,819	1,877	1,807	1,813
+χ
+2 = 175.99(DF= 16), p-value < .001 Panel B: Average firm diversity
+DEI WordsAgg.
+
+% Diversity 1 2 3 4 5 (5) - (1) t-stat
+1 0.439 0.444 0.443 0.454 0.459 0.02∗∗∗ 2.673
+2 0.554 0.556 0.558 0.562 0.561 0.006 1.428
+3 0.62 0.621 0.621 0.623 0.626 0.007∗ 1.805
+4 0.683 0.683 0.686 0.686 0.69 0.007∗∗ 2.192
+5 0.787 0.787 0.783 0.782 0.789 0.002 0.323
+(5) - (1) 0.348∗∗∗ 0.343∗∗∗ 0.34∗∗∗ 0.329∗∗∗ 0.33∗∗∗ t-stat 51.524 66.006 69.684 61.601 55.115 Panel C: Average DEI word count
+DEI WordsAgg.
+
+% Diversity 1 2 3 4 5 (5) - (1) t-stat
+1 0.485 2.109 4.041 7.668 18.427 17.942∗∗∗ 42.896
+2 0.428 2.072 4.183 7.667 18.843 18.415∗∗∗ 41.549
+3 0.439 2.019 4.094 7.627 19.919 19.48∗∗∗ 40.757
+4 0.471 1.961 4.201 7.459 19.807 19.336∗∗∗ 41.306
+5 0.425 1.934 4.069 7.488 19.434 19.009∗∗∗ 34.510
+(5) - (1) -0.06∗-0.175∗∗∗ 0.029 -0.18 1.007 t-stat -1.849 -2.802 0.274 -0.992 1.457 This table explores disagreements in DEI commitments and underlying diversity at firms. Each panel presents statistics on unconditional bivariate sorts across disclosure-based DEI variables and underlying diversity variables (sorted across firms within each year). In each panel, the rows are sorts of the level of diversity. The columns are sorts of the total number of DEI words, summed across a firm’s 10-K, 8-Ks, and DEF14A for the year. For both rows and columns, 1 represents the lowest amount and 5 represents the highest. Panel A reports the number of firm-year observations in each quintile. Panel B reports the average employee diversity within each group. Panel C reports the average total of DEI words. In Panels B and C, differences between the first and last quintile are reported, along with t-statistics, clustered by firm. All variables are defined in Appendix A. Levels of significance are presented as follows: ∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01.
+51
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Table 4
+Firm characteristics of diversity washers Panel A: Univariate analyses of differences (N = 44,598)
+
+Diversity Washers Rest of Sample Diff. t-stat log(Market Cap.) 6.90 6.10 0.80∗∗∗ 40.92 Asset Growth 0.11 0.12 -0.01∗∗ -2.22 log(Book-Market) -0.72 -0.72 0.00 0.32 Return on Assets -0.04 -0.06 0.02∗∗∗ 10.77 Ann. Return 0.12 0.13 -0.01∗∗ -2.09 Ann. Volatility 0.45 0.47 -0.02∗∗∗ -8.07 Panel B: Multivariate analyses of differences Diversity Washing Level Diversity Washers
+(1) (2) (3) (4)
+
+Constant -37.372∗∗∗ 0.100∗∗∗
+(-19.463) (4.699)
+
+log(Market Cap.) 5.701∗∗∗ 4.778∗∗∗ 0.061∗∗∗ 0.051∗∗∗ (21.693) (18.976) (21.440) (17.255)
+
+Asset Growth -2.461∗∗∗ -0.277 -0.029∗∗∗ -0.008 (-4.554) (-0.543) (-4.209) (-1.195)
+
+log(Book-Market) 4.432∗∗∗ 4.695∗∗∗ 0.046∗∗∗ 0.050∗∗∗ (9.150) (9.886) (8.462) (8.959)
+
+Return on Assets -5.639∗∗∗ -12.370∗∗∗ -0.060∗∗∗ -0.120∗∗∗ (-3.054) (-6.530) (-2.853) (-5.437)
+
+Ann. Return -2.285∗∗∗ -1.320∗∗∗ -0.026∗∗∗ -0.017∗∗∗ (-6.239) (-3.431) (-5.771) (-3.492)
+
+Ann. Volatility 8.124∗∗∗ 2.056∗ 0.089∗∗∗ 0.026∗∗ (7.196) (1.915) (6.781) (1.999)
+
+Industry fixed effects No Yes No Yes Year fixed effects No Yes No Yes
+R2 0.066 0.232 0.047 0.158
+Observations 44,598 44,598 44,598 44,598 This table presents the characteristics of diversity washers. Panel A reports summary statistics of diversity washers and other firms. Column 1 (2) reports mean firm characteristics for diversity washers (other firms).
+Column 3 reports the mean difference between diversity washers and other firms, and column 4 reports the test statistics for the difference. Panel B reports the determinants model for becoming a diversity washer.
+In columns 1 and 2, the dependent variable is Diversity-Washing Level, and in columns 3 and 4, it is an indicator for whether a firm is a diversity washer, Diversity Washer. All variables are defined in Appendix
+A. Test statistics are clustered by firm and included in parentheses. Levels of significance are presented as follows: ∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01.
+
+52
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Table 5
+Diversity washing and negative ESG outcomes Panel A: EEOC violations
+Employment Penalty Discrimination Penalty
+(1) (2) (3) (4)
+
+Diversity Washing Level 0.004∗∗∗ 0.005∗∗ (3.398) (2.504)
+
+Diversity Washers 0.158∗∗ 0.325∗∗
+(2.106) (2.200)
+
+Controls Yes Yes Yes Yes
+Year fixed effects Yes Yes Yes Yes Industry fixed effects Yes Yes Yes Yes Pseudo R2 0.159 0.158 0.187 0.187
+Observations 18,624 18,624 17,399 17,399 Panel B: Negative ESG and human-capital-related news ESG-related News Human capital-related News
+(1) (2) (3) (4)
+
+Diversity Washing Level 0.003∗∗∗ 0.003∗∗∗ (4.613) (3.147)
+
+Diversity Washers 0.167∗∗∗ 0.121∗
+(3.519) (1.888)
+
+Controls Yes Yes Yes Yes
+Year fixed effects Yes Yes Yes Yes Industry fixed effects Yes Yes Yes Yes Pseudo R2 0.374 0.374 0.402 0.402
+Observations 44,549 44,549 44,535 44,535 This table presents analyses exploring the relationship between diversity washing and diversity and humancapital-related violations and penalties. Panel A presents logit regressions for whether the firm received an employment penalty (columns 1 and 2) or a discrimination-related penalty (columns 3 and 4) in a calendar year on our two measures of diversity washing, Diversity-Washing Level and Diversity Washers. Panel B presents logit regressions for if the firm-year observation has negative news related to ESG (columns 1 and
+2) and human-capital activities (columns 3 and 4) on the two diversity-washing measures. Untabulated controls include the natural log of market capitalization, asset growth, the natural log of book-to-market, return on assets, annual return, and annual volatility. All variables are defined in Appendix A. Test statistics are clustered by firm and included in parentheses. Levels of significance are presented as follows: ∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01.
+
+53
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Table 6
+Diversity washing and questionable ESG policies: “Policies” vs. “Targets” Panel A: Diversity and energy
+Questionable Diversity Policy Questionable Energy Policy
+(1) (2) (3) (4)
+
+Diversity Washing Level 0.003∗∗∗ 0.002∗ (3.587) (1.908)
+
+Diversity Washers 0.188∗∗∗ 0.095
+(3.183) (1.475)
+
+Controls Yes Yes Yes Yes
+Year fixed effects Yes Yes Yes Yes Industry fixed effects Yes Yes Yes Yes Pseudo R2 0.061 0.060 0.127 0.126
+Observations 19,268 19,268 19,127 19,127 Panel B: Water and emissions
+Questionable Water Policy Questionable Emissions Policy
+(1) (2) (3) (4)
+
+Diversity Washing Level 0.004∗∗∗ 0.000 (2.979) (0.288)
+
+Diversity Washers 0.207∗∗∗ 0.058
+(2.677) (0.824)
+
+Controls Yes Yes Yes Yes
+Year fixed effects Yes Yes Yes Yes Industry fixed effects Yes Yes Yes Yes Pseudo R2 0.171 0.170 0.083 0.083
+Observations 19,054 19,054 19,064 19,064 This table presents results from logit regressions of the relation between diversity washers and questionable ESG policies, which we define as those policies without a target. In Panel A, the dependent variable is an indicator variable that takes a value of 1 when a company has a diversity policy but no target (columns 1 and
+2) or an energy policy but no target (columns 3 and 4). In Panel B, the dependent variable is an indicator variable that takes a value of 1 when a company has a water and emissions policy but no target. Untabulated controls include the natural log of market capitalization, asset growth, the natural log of book-to-market, return on assets, annual return, and annual volatility. All variables are defined in Appendix A. Test statistics are clustered by firm and included in parentheses. Levels of significance are presented as follows: ∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01.
+
+54
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Table 7
+Diversity washing and DEI commitments via other communication channels Panel A: Alternative stakeholder communication platforms CSR Report Twitter Acct.
+
+(1) (2) (3) (4)
+
+Diversity Washing Level 0.007∗∗∗ 0.002∗∗∗ (7.199) (2.908)
+
+Diversity Washers 0.396∗∗∗ 0.120∗∗ (5.828) (2.446)
+
+Controls Yes Yes Yes Yes
+Year fixed effects Yes Yes Yes Yes Industry fixed effects Yes Yes Yes Yes Pseudo R2 0.404 0.402 0.095 0.095
+Observations 37,726 37,726 44,556 44,556 Panel B: DEI disclosure in alternative platforms DEI WordsCSR DEI Tweets
+(1) (2) (3) (4)
+
+Diversity Washing Level 0.002∗∗ 0.003∗∗∗ (2.315) (3.527)
+
+Diversity Washers 0.174∗∗∗ 0.248∗∗∗ (3.354) (3.977)
+
+Controls Yes Yes Yes Yes
+Year fixed effects Yes Yes Yes Yes Industry fixed effects Yes Yes Yes Yes Pseudo R2 0.281 0.283 0.369 0.369
+Observations 4,922 4,922 16,685 16,685 This table presents analysis on the relation between identified diversity washers and DEI disclosures in alternative communication platforms. In Panel A, we estimate logit regressions where the dependent variable represents indicators of whether a firm filed a CSR report (columns 1 and 2) or had a Twitter account (columns 3 and 4). In Panel B, we estimate Poisson regressions where the dependent variable represents the number of DEI-related words in the firms CSR reports (the number of DEI-related tweets) in columns 1 and 2 (3 and 4). Untabulated controls include the natural log of market capitalization, asset growth, the natural log of book-to-market, return on assets, annual return, and annual volatility. All variables are defined in Appendix A. Test statistics are clustered by firm and included in parentheses. Levels of significance are presented as follows: ∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01.
+
+55
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Table 8
+Diversity washing and employee outcomes Panel A: Changes in diversity
+% Diversityt+1 % Diversityt+2 % Diversityt+3
+(1) (2) (3) (4) (5) (6)
+
+Diversity Washing Level -0.002∗∗∗ -0.002∗∗ -0.002 (-2.735) (-2.065) (-1.479)
+
+Diversity Washers -0.070∗∗ -0.104∗∗ -0.073 (-2.159) (-2.044) (-1.105)
+
+Controls Yes Yes Yes Yes Yes Yes
+Year fixed effects Yes Yes Yes Yes Yes Yes Industry fixed effects Yes Yes Yes Yes Yes Yes R2 0.966 0.966 0.930 0.930 0.905 0.905 Observations 39,118 39,118 33,918 33,918 29,289 29,289 Panel B: Changes in senior-level diversity % DiversitySenior t+1 % DiversitySenior t+2 % DiversitySenior t+3
+(1) (2) (3) (4) (5) (6)
+
+Diversity Washing Level -0.006∗∗∗ -0.011∗∗∗ -0.015∗∗∗ (-7.073) (-7.858) (-7.823)
+
+Diversity Washers -0.301∗∗∗ -0.550∗∗∗ -0.674∗∗∗ (-5.727) (-6.437) (-6.081)
+
+Controls Yes Yes Yes Yes Yes Yes
+Year fixed effects Yes Yes Yes Yes Yes Yes Industry fixed effects Yes Yes Yes Yes Yes Yes R2 0.940 0.940 0.880 0.880 0.838 0.837 Observations 38,570 38,570 33,453 33,453 28,898 28,898 Panel C: Changes in junior-level diversity % DiversityJunior t+1 % DiversityJunior t+2 % DiversityJunior t+3
+(1) (2) (3) (4) (5) (6)
+
+Diversity Washing Level -0.014∗∗∗ -0.023∗∗∗ -0.029∗∗∗ (-11.476) (-11.603) (-11.230)
+
+Diversity Washers -0.716∗∗∗ -1.198∗∗∗ -1.402∗∗∗ (-8.672) (-9.155) (-8.698)
+
+Controls Yes Yes Yes Yes Yes Yes
+Year fixed effects Yes Yes Yes Yes Yes Yes Industry fixed effects Yes Yes Yes Yes Yes Yes R2 0.891 0.891 0.822 0.821 0.785 0.784 Observations 37,922 37,922 32,914 32,914 28,466 28,466 This table correlates diversity washing with future firm diversity. Panel A reports the relation between the future percent of diverse employees and our two measures of diversity washing, Diversity-Washing Level and Diversity Washers. Panel B (C) reports similar analyses on the number of diverse senior (junior) employees.
+Untabulated controls include contemporaneous diversity, the natural log of market capitalization, asset growth, the natural log of book-to-market, return on assets, annual return, and annual volatility. All variables are defined in the Appendix A. Test statistics are clustered by firm and included in parentheses. Levels of significance are presented as follows: ∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01.
+56
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Table 9
+Diversity washing and gender and ethnic diversity Panel A: Changes in gender diversity % Femalet+1
+(1) (2) (3) (4)
+
+Diversity Washing LevelGender 0.000 (-0.850)
+
+Diversity WashersGender 0.028
+(0.919)
+
+Diversity Washing LevelEthnic -0.001 (-1.338)
+
+Diversity WashersEthnic -0.038
+(-1.332)
+
+Controls Yes Yes Yes Yes
+Year fixed effects Yes Yes Yes Yes Industry fixed effects Yes Yes Yes Yes R2 0.970 0.970 0.970 0.970
+Observations 39,118 39,118 39,118 39,118 Panel B: Changes in ethnic diversity % Non-Whitet+1
+(1) (2) (3) (4)
+
+Diversity Washing LevelEthnic 0.000 (-0.573)
+
+Diversity WashersEthnic 0.005
+(0.193)
+
+Diversity Washing LevelGender 0.000 (0.888)
+
+Diversity WashersGender 0.040
+(1.590)
+
+Controls Yes Yes Yes Yes
+Year fixed effects Yes Yes Yes Yes Industry fixed effects Yes Yes Yes Yes R2 0.972 0.972 0.972 0.972
+Observations 39,118 39,118 39,118 39,118 This table estimates the relation between the future percent of diverse employees along gender (Panel A) and ethnic diversity (Panel B) and our two measures of diversity washing, Diversity-Washing Level and Diversity Washers. Untabulated controls in both panels include the natural log of market capitalization, asset growth, the natural log of book-to-market, return on assets, annual return, and annual volatility. Panel A (B) also includes contemporaneous percent female (non-white) employees as an untabulated control. All variables are defined in Appendix A. All estimates are based on the full sample of observations, described in section
+2. Test statistics are clustered by firm and included in parentheses. Levels of significance are presented as follows: ∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01.
+
+57
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Table 10
+DEI discussion by diversity washers and its relation to future diversity hiring Panel A: Diversity washing and DEI discussion DEI FLTAgg.
+
+(1) (2) (3) (4)
+
+Diversity Washing Level 0.012∗∗∗ 0.015∗∗∗ (35.255) (40.637)
+
+Diversity Washers 0.776∗∗∗ 0.851∗∗∗ (29.206) (33.451)
+
+Controls Yes Yes Yes Yes
+Year fixed effects No Yes No Yes
+Industry fixed effects No Yes No Yes Pseudo R2 0.181 0.298 0.158 0.265
+Observations 44,598 44,598 44,598 44,598 Panel B: Interaction with the number of forward-looking terms % Diversityt+1 % DiversityJunior t+1 % DiversitySenior t+1
+(1) (2) (3) (4) (5) (6)
+
+Diversity Washing Level × DEI FLTAgg. -0.0003∗∗∗ -0.0007∗∗∗ -0.0005∗∗∗ (-2.8296) (-3.9235) (-3.0855)
+
+Diversity Washers × DEI FLTAgg. -0.0148∗-0.0134 -0.0349∗∗ (-1.6501) (-0.7859) (-2.3320)
+
+Lower-order coefficients Yes Yes Yes Yes Yes Yes Controls Yes Yes Yes Yes Yes Yes
+Year fixed effects Yes Yes Yes Yes Yes Yes Industry fixed effects Yes Yes Yes Yes Yes Yes R2 0.9656 0.9656 0.8911 0.8906 0.9397 0.9396 Observations 39,118 39,118 37,922 37,922 38,570 38,570 This table presents analyses on forward-looking DEI discussions by diversity washers and future diversity hiring. In Panel A, the dependent variable is the number of forward-looking terms in sentences with a diversity keyword and is based on a Poisson regression. In Panel B, the dependent variable is percent diversity in year t + 1, which is regressed on our diversity-washing measures, the number of forward-looking terms and their interactions. In this panel, the dependent variable in columns 1 and 2 is overall diversity; in columns
+3 and 4, it is diversity for junior employees; and in columns 5 and 6, it is diversity for senior employees.
+Untabulated controls for both panels include the natural log of market capitalization, asset growth, the natural log of book-to-market, return on assets, annual return, and annual volatility. Panel B also includes contemporaneous diversity, junior diveristy, and senior diversity for columns 1 and 2, 3 and 4, and 5 and 6.
+All variables are defined in Appendix A. Test statistics are clustered by firm and included in parentheses.
+Levels of significance are presented as follows: ∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01.
+58
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Table 11
+Diversity washing and ESG ratings
+Panel A: Refinitiv
+ESG ScoreRefinitiv Social ScoreRefinitiv
+(1) (2) (3) (4)
+
+Diversity Washing Level 0.001∗∗∗ 0.001∗∗∗ (9.510) (8.077)
+
+Diversity Washers 0.047∗∗∗ 0.041∗∗∗ (8.513) (7.320)
+
+Controls Yes Yes Yes Yes
+Year fixed effects Yes Yes Yes Yes Industry fixed effects Yes Yes Yes Yes R2 0.552 0.549 0.509 0.507
+Observations 19,390 19,390 19,390 19,390 Panel B: Sustainalytics
+ESG ScoreSustainalytics Social ScoreSustainalytics
+(1) (2) (3) (4)
+
+Diversity Washing Level 0.020∗∗∗ 0.022∗∗∗ (4.945) (3.900)
+
+Diversity Washers 1.009∗∗∗ 0.723∗∗ (3.971) (2.049)
+
+Controls Yes Yes Yes Yes
+Year fixed effects Yes Yes Yes Yes Industry fixed effects Yes Yes Yes Yes R2 0.396 0.393 0.319 0.314
+Observations 9,873 9,873 8,467 8,467 This table tests the relation between diversity washing and commercial ESG scores. Panel A reports results with ESG scores from Refinitiv as the dependent variables. Panel B reports results with ESG scores from Sustainalytics as the dependent variables. In both panels, the dependent variable in columns 1 and 2 is the overall ESG scores, and it is the ESG social score in columns 3 and 4. Untabulated controls include the natural log of market capitalization, asset growth, the natural log of book-to-market, return on assets, annual return, and annual volatility. All variables are defined in Appendix A. Test statistics are clustered by firm and included in parentheses. Levels of significance are presented as follows: ∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01.
+59
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Table 12
+Diversity washing and asset ownership Panel A: ESG investor ownership, identified by US SIF ESG OwnershipUS SIF (bps)
+
+(1) (2) (3) (4)
+
+Diversity Washing Level 0.092∗∗∗ 0.078∗∗∗ (4.501) (3.758)
+
+Diversity Washers 7.102∗∗∗ 5.798∗∗∗ (4.882) (4.125)
+
+Controls Yes Yes Yes Yes
+Year fixed effects No Yes No Yes
+Industry fixed effects No Yes No Yes R2 0.065 0.090 0.065 0.090
+Observations 44,598 44,598 44,598 44,598 Panel B: ESG investor ownership, identified by fund names ESG OwnershipName-based (bps)
+
+(1) (2) (3) (4)
+
+Diversity Washing Level 0.024∗∗∗ 0.021∗∗ (2.904) (2.396)
+
+Diversity Washers 1.795∗∗∗ 1.451∗∗ (3.036) (2.403)
+
+Controls Yes Yes Yes Yes
+Year fixed effects No Yes No Yes
+Industry fixed effects No Yes No Yes R2 0.078 0.109 0.078 0.109
+Observations 44,598 44,598 44,598 44,598 This table tests the relation between diversity washing and institutional ownership. The dependent variable in Panel A is the fraction of shares held by ESG investors, which are identified by The Forum for Sustainable and Responsible Investment (US SIF), and the dependent variable in Panel B is the fraction of shares held by mutual funds with an ESG focus, which are identified by the name of the mutual fund. Untabulated controls include the natural log of market capitalization, asset growth, the natural log of book-to-market, return on assets, annual return, and annual volatility. All variables are defined in Appendix A. Test statistics are clustered by firm and included in parentheses. Levels of significance are presented as follows: ∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01.
+
+60
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Table 13
+DEI discussion and diversity washers Panel A: Workplace culture and corporate governance categories Workplace Culture & Equity Corporate Governance
+(1) (2) (3) (4)
+
+Diversity Washing Level 0.071∗∗∗ -0.172∗∗∗ (10.774) (-13.671)
+
+Diversity Washers 4.418∗∗∗ -9.095∗∗∗ (10.042) (-11.248)
+
+Controls Yes Yes Yes Yes
+Year fixed effects Yes Yes Yes Yes Industry fixed effects Yes Yes Yes Yes R2 0.198 0.196 0.096 0.086
+Observations 35,534 35,534 35,534 35,534 Panel B: Employment law and compensation categories Employment Law & Regulations Compensation & Pay Equity
+(1) (2) (3) (4)
+
+Diversity Washing Level 0.157∗∗∗ 0.000 (18.093) (-0.048)
+
+Diversity Washers 8.268∗∗∗ -0.032
+(14.901) (-0.056)
+
+Controls Yes Yes Yes Yes
+Year fixed effects Yes Yes Yes Yes Industry fixed effects Yes Yes Yes Yes R2 0.081 0.069 0.036 0.036
+Observations 35,534 35,534 35,534 35,534 This table presents regressions of the proportion (in percentages) of DEI discussion dedicated to each of the four DEI categories on our measures of diversity washing. Panel A examines the relation with the Workplace Culture and Equity category (columns 1 and 2) and the Corporate Governance category (columns 3 and 4).
+Panel B examines the relation with the Employment Law and Regulation category (columns 1 and 2) and the Compensation and Pay Equity category (columns 3 and 4). Untabulated controls include the natural log of market capitalization, asset growth, the natural log of book-to-market, return on assets, annual return, and annual volatility. All variables are defined in Appendix A. Test statistics are clustered by firm and included in parentheses. Levels of significance are presented as follows: ∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01.
+61
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+Table 14
+Diversity washing and vague DEI discussions Panel A: Number of weasel words
+# of Weasel Words
+(1) (2) (3) (4)
+
+Diversity Washing Level 0.012∗∗∗ 0.016∗∗∗ (28.164) (33.847)
+
+Diversity Washers 0.827∗∗∗ 0.978∗∗∗ (24.954) (29.780)
+
+Controls Yes Yes Yes Yes
+Year fixed effects No Yes No Yes
+Industry fixed effects No Yes No Yes Pseudo R2 0.099 0.171 0.086 0.145
+Observations 44,598 44,598 44,598 44,598 Panel B: Vagueness score
+Vagueness Score
+(1) (2) (3) (4)
+
+Diversity Washing Level 0.017∗∗∗ 0.022∗∗∗ (4.847) (5.748)
+
+Diversity Washers 0.668∗∗∗ 0.830∗∗∗ (2.758) (3.294)
+
+Controls Yes Yes Yes Yes
+Year fixed effects No Yes No Yes
+Industry fixed effects No Yes No Yes R2 0.003 0.012 0.002 0.011
+Observations 34,079 34,079 34,079 34,079 This table presents analyses of the use of vague DEI discussions by diversity washers. Panel A presents Poisson regressions of the number of weasel words in DEI-related sentences and the propensity of firms to diversity wash. Panel B presents regressions of the average vagueness, as assigned by ChatGPT, in DEIrelated sentences and the propensity for firms to diversity wash. Untabulated controls include the natural log of market capitalization, asset growth, the natural log of book-to-market, return on assets, annual return, and annual volatility. All variables are defined in Appendix A. Test statistics are clustered by firm and included in parentheses. Levels of significance are presented as follows: ∗p<0.1; ∗∗p<0.05; ∗∗∗p<0.01.
+62
+Electronic copy available at: https://ssrn.com/abstract=4298626
+
+-----

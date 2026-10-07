@@ -1,0 +1,47 @@
+{
+  "bundle": "aq-01428",
+  "corpus_sha256": {
+    "docs/eni-spa-q1-2026-results-announcement-form-6-k-filed-2026-04-24.txt": "fb44ec0adbeae7754c86620bb95df4a5e4751038457776e458f3994ac37b38de",
+    "docs/eni-spa-q2-2026-results-announcement-form-6-k-filed-2026-08-04.txt": "7af537886c234bafaf1097aab4a3dba2850fa0b0eb7bbde79574d09c253abbc1",
+    "docs/occidental-petroleum-corp-q1-2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-05-05.txt": "c66d8a8d6467a1a37e40321ea6ad128cc6bd8b53d18f2b1e293a58221056790b",
+    "docs/occidental-petroleum-corp-q2-2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-08-05.txt": "63b73a422f76791bc793962a84c57ceaafb10194bf1a51554bddd9454ad6d6b9",
+    "text/D01.txt": "e058f8e3af707ecf2fdbbd6d55412656926188eb8a036b9c2276fc806eb04e7e",
+    "text/D02.txt": "f2cb908c9cb9c91f092949e8d9367e73ce1c2030ce4403866235952f03041e37",
+    "text/D03.txt": "92126fbb8893a6495c1e179073d9e5435f8908b4b2bc4a9c113e59bac88e036b",
+    "text/D04.txt": "8b28c42a748a2ab511d1db7efc1409b0bc659d8b1c41d02df224568bf0689d7c",
+    "text/manifest.json": "19ddcecaba8ef4f1cf039e7c1ea1cdc2af42e0f811b5fd42989a559bbd73d850"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "173d904162fbaf04e12e16a8e18c941a8e6cfd86fc49dfc1f5c47996215e5841",
+  "independence": "One fresh context per packet. No writer history or shared memory.",
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D01, D02",
+    "id": "q01",
+    "levers": "Same series, right edition; Scatter the pieces",
+    "origin": "claude",
+    "revision": "0",
+    "status": "draft",
+    "tags": "Temporal alignment; Cross-document join"
+  },
+  "question_id": "q01",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "About €1.3 billion",
+    "blind solve": "",
+    "components": "- c1: €1.3 billion",
+    "evidence": "- D02 (l.449, Global Gas & LNG Portfolio strategic developments) [c1]: \"In June, Eni booked regasification capacity at the Ravenna terminal equal to 2 bcm/year for a 10-year term.\"\n- D02 (l.110, results dateline) [c1]: \"San Donato Milanese, July 29, 2026\"\n- D02 (l.235, Outlook 2026 preamble) [c1]: \"Eni is raising guidance for business performance and cash flow generation\"\n- D01 (l.74, results dateline) [c1]: \"San Donato Milanese, April 24, 2026\"\n- D01 (l.172, Outlook 2026) [c1]: \"FY’26 GGP adjusted proforma EBIT guided at around €1.3 bln, up 30% from the initial forecast.\"",
+    "feedback log": "",
+    "lever checks": "- Platform document numbers: local D01 = Doc 2 (Eni Q1 2026, April 24) and D02 = Doc 1 (Eni Q2/H1 2026, July 29), per text/manifest.json and the capture's Doc headings; the reasoning cites Doc N, local records cite Dnn.\n- Family and target: edition bridge, aq-00964 q01 mechanism (event reported only in the later release; that release's own post-event guidance is the decoy); medium. Measured platform result pending.\n- Dependency plan: D02 l.449 booking \"In June\" -> D02 outlook dated July 29 (l.110, l.235) postdates June -> latest earlier outlook D01 dated April 24 (l.74) -> D01 l.172 GGP guidance around €1.3 bln.\n- Universe: GGP guidance values in the bundle: the initial forecast (implied €1.0 bln by D01 l.172 \"up 30%\" and D02 l.242 \"40%\"; no initial document in the bundle), D01 l.172 around €1.3 bln (April 24), D02 l.242 over €1.4 bln (July 29). No outlook between April 24 and July 29; D02 l.264 calls the April buyback figure \"last quarter already revised guidance\", the latest prior revision.\n- Necessity: without D02 no passage mentions Ravenna or regasification (D01, D03, D04 grep: none), so the booking month cannot be found and no edition can be chosen (cf. aq-00964 q01 platform document check: \"cannot determine\" without the event's release). Without D01 the bundle offers only D02's \"over €1.4 bln\" and the implied €1.0 bln initial level; €1.3 bln for GGP is printed nowhere else. D03/D04 (Occidental) hold nothing on Eni.\n- Selected-lever checks: same series, right edition: taking the event release's own outlook gives \"over €1.4 bln\" (wrong edition); reading D02's \"40% compared with the initial level\" as the level in force before July gives €1.0 bln (superseded on April 24). Scatter: event month only in D02, figure only in D01.\n- Calculation verification: no arithmetic; date order April 24, 2026 < June 2026 < July 29, 2026.\n- Semantic/ID/overview probes (2026-10-06, caller): \"Ravenna\" D02 l.449 and l.694 (Hera Environmental Hub, unrelated); \"regasification\" D02 l.449 only; GGP guidance lines D01 l.172 and D02 l.242 only; \"1.3 bln\" elsewhere only Enilive/Plenitude EBITDA (D01 l.173, D02 l.245, different businesses). Capture overview: no GGP guidance, Ravenna or June date.\n- Precision/readings: the April outlook states one GGP figure (\"around €1.3 bln\"); the answer repeats it, so no rounding choice. \"Global Gas & LNG Portfolio\" is GGP alone; the guidance names GGP, not \"GGP and Power\".\n- Completeness: complete capture (intake.json: 4 of 4, no gap markers); no gaps affect this candidate.\n- Style/set review: wording overlap with workspace questions ratio 0.23, longest shared run 3 tokens (aq-00964 q01).\n- Closed-book sketch probe (2026-10-06, question-only fresh closed-book-solver, not a final check): \"About €1 billion\", low confidence; it could not date the Ravenna booking.\n- Warnings answered: precision: the answer is the guidance figure as Eni states it (\"around €1.3 bln\"), not a computed rate, so no rounding choice exists and equivalent forms (€1,300 million) are the same answer; naming a decimal format would add nothing. Origin: origin claude is accurate (Claude Code, Opus 5.5 caller); the export tool takes origin user only and the form's \"I wrote this question myself.\" cannot be ticked truthfully for this content; the submission decision is the user's.",
+    "question": "In the month Eni secured ten years of regasification capacity at Ravenna, how much full-year 2026 proforma adjusted EBIT was its guidance expecting from its Global Gas & LNG Portfolio business?",
+    "reasoning": "Step 1. Doc 1 (Eni's results for the second quarter and first half of 2026, dated July 29, 2026): \"In June, Eni booked regasification capacity at the Ravenna terminal equal to 2 bcm/year for a 10-year term.\" The booking month is June. The outlook in Doc 1 (\"Eni is raising guidance for business performance and cash flow generation\") was published on July 29, 2026, after June, so it was not yet Eni's guidance during the booking month.\n\nStep 2. Doc 2 (Eni's results for the first quarter of 2026, dated April 24, 2026) holds the latest outlook published before June: \"FY'26 GGP adjusted proforma EBIT guided at around €1.3 bln, up 30% from the initial forecast.\" So during the booking month the guidance expected about €1.3 billion from the Global Gas & LNG Portfolio business.\n\nDecoy. Doc 1's own outlook reads \"FY'26 GGP adjusted proforma EBIT guidance is raised to over €1.4 bln, representing an increase of 40% compared with the initial level\"; that raise was published on July 29, after the booking month, and the initial level it refers to had already been superseded by the April guidance.",
+    "review": "",
+    "shortcut audit": ""
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "f9d2cc990ec4ae88444b4edfb42fc8d7c821ea613f68bab5ab56748e53c56c4c"
+}

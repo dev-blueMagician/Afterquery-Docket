@@ -6,7 +6,7 @@ metadata:
   type: feedback
   updated: 2026-10-04
   originSessionId: 9e8d8c8c-aa4d-457b-a7c1-04fe73680640
-  modified: 2026-10-06T16:50:15.511Z
+  modified: 2026-10-07T08:32:23.919Z
 ---
 
 ## Current rule
@@ -61,6 +61,17 @@ metadata:
   reasoning or necessary documents clears the note. Exclusion-only documents in a list question are
   the expected case for both. In a list question, also expect the high model to rebuild an item from
   another document's flows or year-to-date columns when its own document is left out.
+- The form names the role explicitly (aq-01333 q01, 2026-10-06): each ticked document is an "Answer
+  component" or an "Exclusion / condition source". An exclusion source takes a reviewer note and needs a
+  quote of what it rules out.
+- The role is not for an edition trap's decoy-carrying release when another marked document dates the
+  event. The platform reviewer returned aq-01333 q01 rev 4 for exactly that, although its difficulty
+  check had passed (2026-10-07): "Doc 5's role in the note is only to rule out its own June 1 range ...
+  without Doc 5 that range doesn't exist to rule out. So the note doesn't make Doc 5 necessary."
+- Leave such a release unticked and quote it nowhere in the evidence. The rev 5 resubmission still names
+  the release in the reasoning's decoy line, without quotes (result pending).
+- Use the role only for a document that rules out an item which exists without it. Details are in
+  reference/platform-quality-checks.md.
 
 - Local removal probe (aq-docket-trial-01, 2026-10-06): give a fresh blind-solver a prepared packet,
   the verbatim question and the instruction to treat one marked document as absent, answer if it can,
@@ -92,6 +103,13 @@ metadata:
   Pick a period whose original and restated sides each come from one irreplaceable document (there:
   calendar January-June 2025, needing the original March quarter and the restated June quarter), list
   only those, and leave the replaceable inputs quoted but unlisted.
+
+- Two-edition edition traps (aq-01428 q01, 2026-10-06, local probes): when the question asks for the
+  value in force at an event printed only in the later release, removing that release leaves the earlier
+  release's value as the only candidate. Two forced-guess probes said "not determined" and then chose it
+  (the gold, p 0.6). The platform's document check does not force a guess (aq-00964 q01 refused twice), so
+  this is a residual risk; to remove it the later release must contribute a number to the answer, which
+  brings its own priors (see [[docket-general-knowledge-check]]).
 
 **Why:** in aq-docket-trial-03 the local question-review sent q02 and q03 back for exactly these
 points, costing two revision rounds each.
@@ -180,3 +198,9 @@ edition's coverage.
   submit now." Document check: without Doc 10 the high model answered 10.871% twice ("Needed document
   10 ✓"), the predicted face-value route; without Doc 12, 8.080% and "Cannot be determined". The
   precision change fixed the removal flag. Platform evidence, one question.
+- 2026-10-06 (aq-01430 sketch c02, local probe): China's share of world demand growth 2000-2025
+  (55.9% at one decimal) took China's 2000 demand (1,347 TWh) from the 2024-data review only. A probe
+  without that review recalled the official statistic (about 1,347-1,356 TWh) and forced 55.9% at
+  p 0.4; any recall within about 1,344-1,360 lands on the gold. A long-run baseline that matches an
+  official national statistic is common knowledge for the document check, even inside a 0.1-point
+  window. Dropped before write-up.

@@ -19,3 +19,12 @@ Results so far (user reports, 2026-10-06, no tier lines): trial-02 q01 "passed i
 **Why:** not stated by the user. Likely reason (inferred): on unrelated-document bundles, list and filter questions kept reviewing Easy or Too easy, and trial-05's two quick-tested list drafts came back "Too easy — solver got it". So the derived-numeric shape looks like the better route to Medium.
 
 **How to apply:** when sketching, look first for derived-numeric designs of this shape. Hand over a list or filter question only when no fair numeric design exists, and say so plainly. Fairness rules still win: one defensible answer, no outside law, and the removal and entity-coincidence checks. See [[docket-local-solver-calibration]] and [[docket-redesign-v2]].
+
+aq-01322 (2026-10-06): offered an edition-trap lookup (q01, reviewed Medium-leaning) and two derived
+numerics reviewed Easy-leaning, the user ran the difficulty check first on the derived carve-out q03
+(answer 5.2%): "Too easy", Low 4/5. Derived shape alone did not lift a signposted carve-out.
+
+aq-01278 (2026-10-06): q02, a derived Q2 growth rate rebuilt on the basis an earlier release's stated figure
+implies (agriculture inside "commercial"), with the later release's narrower printed -2.3% as the answer-shaped
+decoy, passed the difficulty check at Medium (Low 0/5, Medium 1/5). Derived shape plus an untied scope decoy
+worked where a signposted carve-out did not (aq-01322 q03).
