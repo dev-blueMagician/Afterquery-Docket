@@ -13,6 +13,7 @@ New candidates carry `difficulty_target: easy|medium|hard`.
 ```powershell
 python tools/docket_agent.py screen tasks/<slug> --idea iNN
 python tools/check_questions.py tasks/<slug> --q qNN
+python tools/check_questions.py tasks/<slug> --handover --q qNN
 python tools/docket_agent.py prepare tasks/<slug> --q qNN
 python tools/docket_agent.py report tasks/<slug> --q qNN
 python tools/docket_agent.py replay

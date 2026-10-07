@@ -71,8 +71,14 @@ For each candidate return:
     unresolved: <gaps or none>
 
 For promoted sketches also return components (1-10 answer values/names), full step-by-step
-reasoning and component-tagged verbatim evidence for the question template. No old form
-limits, tag omissions or quotas override the current Guide/form.
+reasoning and component-tagged verbatim evidence for the question template. Also return the
+form's role for any necessary document that is not an answer component ("Used to identify", or
+"Exclusion / condition source" with its reviewer note). Return 1-3 Targeted failure modes in the
+template's format. Each needs a Trap and a "How a careless solver fails" cause from the form's lists
+(question-gate Q15, platform-quality-checks), each trap once, and three boxes with 150+ words together:
+where the trap sits (Doc N and the passage), the exact wrong answer and how it arises, and why the gold
+avoids it. Declare only traps whose wrong answers you recomputed from the passages; never one the
+wording already rules out. No old form limits, tag omissions or quotas override the current Guide/form.
 
 Record the actual writer's origin: claude in Claude Code, codex/gpt on those runtimes, and
 user+<agent> for collaboration. Proposals are not validated. Fresh solvers, audit and independent

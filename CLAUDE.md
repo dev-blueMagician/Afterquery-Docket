@@ -61,6 +61,12 @@ For final questions use `python tools/check_questions.py tasks/<slug>` for the f
 fix or explain every WARN. Then prepare the snapshot, launch two fresh blind solvers, a fresh
 shortcut auditor and a no-access closed-book solver, and request independent review.
 
+Every hand-over is the whole form, from `python tools/check_questions.py tasks/<slug> --handover
+--q qNN`. It covers Question, Number of asks, Gold answer, Step-by-step reasoning, Answer components,
+Evidence, Necessary documents with roles, Reasoning tags, and 1-3 Targeted failure modes. Each mode has
+a trap and a cause from the form's lists, and three boxes of 150+ words together. The form blocks Submit
+without them. Declare only traps whose wrong answers Lever checks recompute.
+
 Every new record contains `rev: N` and the `tested_sha256` printed by prepare. The fingerprint
 binds tested form fields and source bytes. Changed fields or documents invalidate the checks
 even if someone forgets to increment the revision. Keep raw returns beside the snapshot.
@@ -86,7 +92,9 @@ document-only chats instead of claiming contaminated results are blind checks.
   opportunities; `notes/ideas.md`: lean sketch decisions; optional `notes/sketches/iNN.md`: input
   quotes for the lightweight screen. Full lever/evidence records follow promotion.
 - `notes/session.md`: checkpoint under 4,000 characters, updated at phase boundaries.
-- `questions/qNN.md`: checked fields plus revision/fingerprint-bound records.
+- `questions/qNN.md`: checked fields plus revision/fingerprint-bound records. Targeted failure modes
+  sit outside the fingerprint; written `## Necessary documents` roles sit inside it.
+- `notes/handover-qNN.md`: the generated paste-ready form; regenerate after any edit.
 - `runs/`: snapshots, question-only check packets and actual raw check returns; never submitted.
 - Keep UTF-8 file bytes. Use editing tools, not PowerShell text redirection.
 - After tool changes run both `python tools/test_docket_tools.py` and

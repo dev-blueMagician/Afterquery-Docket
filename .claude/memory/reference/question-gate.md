@@ -25,7 +25,8 @@ The script checks mechanical records, not independence, uniqueness or platform a
 | Q11 Applicable lever works | Which-items decoy fails; all membership exclusions checked; rounding/exclusion counterfactuals only when those levers are claimed | Targeted attacks; not-applicable acceptable otherwise |
 | Q12 No manufactured failure | No undefined term, unsupported inference or format trap; missing-item comparison labels handled | Reviewer and alternatives |
 | Q13 Measured target | Genuine final exact-content pass at/above Easy/Medium/Hard target | Platform verdict and raw tier line |
-| Q14 Components/evidence | 1-10 answer pieces; asks/numbers covered; necessary sources quoted; tagged contiguous evidence supports the component/input | Floor and recomputation |
+| Q14 Components/evidence | 1-10 answer pieces; asks/numbers covered; necessary sources quoted; tagged contiguous evidence supports the component/input; non-component documents carry the form's role | Floor and recomputation |
+| Q15 Targeted failure modes | 1-3 traps the question really sets, each from the form's list and used once, with a cause from its list; three boxes of 150+ words together naming Doc N and the passage, the exact wrong answer and why the gold avoids it; each wrong answer recomputed in Lever checks; none the wording already rules out | Floor (structure, lists, words) and independent review (truth of each claim) |
 
 ## Final readiness
 
@@ -39,6 +40,8 @@ For new targeted questions:
   candidate does not turn the corpus into a complete one.
 - Explicit final platform pass at/above selected target, matching tested content and observed tier
   line, with verbatim feedback and no target/lower-tier contradiction.
+- Complete Targeted failure modes (Q15); the form blocks Submit without them.
+- Hand-over from `check_questions.py --handover`: every form field in the form's order, Doc N numbers.
 - Authorship and remaining platform-only quality checks reported separately.
 
 `checked` means locally checked, platform pending. Early draft quick tests never transfer

@@ -101,6 +101,45 @@ Promote viable sketches to `questions/qNN.md`, with accurate origin, explicit ta
 Write all form fields, components, tagged verbatim evidence and the full source-to-answer path.
 Each necessary document must contribute an indispensable input after searching the rest of the
 bundle for duplicate/substitute evidence.
+The form gives each ticked document a role: "Answer component" or "Exclusion / condition source"
+(observed 2026-10-06). It also offers "or..." to group alternative documents. An exclusion source
+needs a short reviewer note and a quote of what it rules out. If the needs check still finds it not
+needed, the note turns that into a reviewer warning instead of a block.
+Do NOT use this role for an edition trap's decoy-carrying release when another marked document dates
+the event. A platform reviewer returned such a question (aq-01333 q01, 2026-10-07, "Revision
+requested") even though its difficulty check had passed: "Doc 5's role in the note is only to rule out
+its own June 1 range ... without Doc 5 that range doesn't exist to rule out. So the note doesn't make
+Doc 5 necessary."
+Leave that release unticked, quote it nowhere in the evidence, and date the event from a marked
+document. Use the role only for a document that rules out an item which exists without it.
+In a reviewer's request, "step N" means the Solution explanation's step N. Evidence rows count in the
+form's own order.
+The roles now also include "Used to identify" (2026-10-07). Write a non-default role in the question
+file's `## Necessary documents` ("- D02: Used to identify"; alternatives "- D04 or D09: ..."); without
+it every document is an Answer component. When written, it is part of the fingerprint.
+The form also requires 1 to 3 "Targeted failure modes" (observed 2026-10-07): "name the 1 to 3 traps
+your question sets for a careless solver, and how that solver goes wrong. Pick only traps your question
+really sets: the reviewer reads your reasons." Each mode has:
+- a Trap, used once per task: Look-alike company, Wrong jurisdiction or scope, Wrong kind of entity,
+  Fiscal vs calendar period, Trailing-period total, Older figure inside a newer report, Out-of-range
+  period, Wrong year or edition, Superseded date or version, Look-alike measure, Part vs total, Unit or
+  basis, Linking across documents, Document convention, Figure that must be computed;
+- "How a careless solver fails", the first step that goes wrong: Picks the wrong entity or section,
+  Uses the wrong period or date, Takes the wrong line item, Misapplies a rule or premise, Calculation
+  slip, Wrong members in a list, Right content, wrong form, Rounding, scale or sign;
+- three boxes with at least 150 words together: "Where the trap sits" (document and passage), "The
+  wrong answer a careless solver gives" (the exact answer and how they get it) and "Why the correct
+  answer avoids it".
+Submit is blocked until they are complete. Write them in `## Targeted failure modes` (one "### Failure
+mode N" block each, labelled lines as in template q00.md). Declare only traps your lever checks prove,
+each with the wrong answer it produces, recomputed. Do not declare a slip the wording already rules
+out. They sit outside the fingerprint; the independent review checks them.
+An independent review on 2026-10-07 (aq-01278 q02) set two rules:
+- Pick the cause by the first wrong step. For a solver who uses the right document and table but skips
+  the premise's scope, "Misapplies a rule or premise" fits ("Takes the wrong line item" also fits);
+  "Picks the wrong entity or section" is the weakest, since the entity and section are right.
+- One measured trap is stronger than adding an unobserved one. Cite measured attempts by run, counting
+  equivalent answer forms.
 
 Calculate once from the passages, then independently recalculate using a script/calculator or
 another derivation. Verify input choice, units, signs and rounding as well as arithmetic. For date
@@ -217,6 +256,9 @@ reject the best single question. Record set decisions before hand-over.
 Reuse a measured question's mechanism, not its sentence frame: the form's blocking "Original
 question" check compares a saved question with other tasks' questions, and a draft copying a
 measured pass's frame almost word for word was flagged in local review as a near-copy risk.
+The form's rule-10 warning ("refers to the document set itself") is lexical: it fired on "the group
+of businesses" in a question about a company's business group. Avoid "the group of" (and likely
+"the set of", "the collection of") even for things in the world.
 It happened twice (aq-01322 q01, aq-01333 q01). Before freezing, compare the question's word tokens
 with the earlier questions you have; restructure when the overlap is above about 0.4, a shared run
 reaches 6 or more words, or the closing sentence repeats one already used on the bundle.
@@ -224,6 +266,14 @@ reaches 6 or more words, or the closing sentence repeats one already used on the
 ## 10. Hand-over, feedback and state
 
 `python tools/docket_agent.py report tasks/<slug> --q qNN` reports evidence read-only.
+Hand over with `python tools/check_questions.py tasks/<slug> --handover --q qNN`
+(notes/handover-qNN.md). It gives every form field in the form's order: Question, Number of asks, Gold
+answer, Step-by-step reasoning, Answer components, Evidence (one row per component), Necessary documents
+(roles, alternatives, unticked rest), Reasoning tags and Targeted failure modes. It uses the task page's
+Doc numbers from notes/intake.json. Give the whole set every time, not only changed fields. If the script
+cannot run, write the same blocks by hand in that order. The platform's run history says question,
+answer or necessary-document edits need a new difficulty result. After pasting, the user checks the
+difficulty panel; a page that calls a pass "for an earlier version" is recorded as unknown.
 `python tools/check_questions.py tasks/<slug> --export` writes ready user-origin sheets from checked
 fields. Other origins remain accurate and their export restriction is reported. A sheet is not
 a submission. Freeze the entire question file on confirmed submission/acceptance; later findings
@@ -261,7 +311,8 @@ The script checks mechanical records, not independence, uniqueness or platform a
 | Q11 Applicable lever works | Which-items decoy fails; all membership exclusions checked; rounding/exclusion counterfactuals only when those levers are claimed | Targeted attacks; not-applicable acceptable otherwise |
 | Q12 No manufactured failure | No undefined term, unsupported inference or format trap; missing-item comparison labels handled | Reviewer and alternatives |
 | Q13 Measured target | Genuine final exact-content pass at/above Easy/Medium/Hard target | Platform verdict and raw tier line |
-| Q14 Components/evidence | 1-10 answer pieces; asks/numbers covered; necessary sources quoted; tagged contiguous evidence supports the component/input | Floor and recomputation |
+| Q14 Components/evidence | 1-10 answer pieces; asks/numbers covered; necessary sources quoted; tagged contiguous evidence supports the component/input; non-component documents carry the form's role | Floor and recomputation |
+| Q15 Targeted failure modes | 1-3 traps the question really sets, each from the form's list and used once, with a cause from its list; three boxes of 150+ words together naming Doc N and the passage, the exact wrong answer and why the gold avoids it; each wrong answer recomputed in Lever checks; none the wording already rules out | Floor (structure, lists, words) and independent review (truth of each claim) |
 
 ## Final readiness
 
@@ -275,6 +326,8 @@ For new targeted questions:
   candidate does not turn the corpus into a complete one.
 - Explicit final platform pass at/above selected target, matching tested content and observed tier
   line, with verbatim feedback and no target/lower-tier contradiction.
+- Complete Targeted failure modes (Q15); the form blocks Submit without them.
+- Hand-over from `check_questions.py --handover`: every form field in the form's order, Doc N numbers.
 - Authorship and remaining platform-only quality checks reported separately.
 
 `checked` means locally checked, platform pending. Early draft quick tests never transfer

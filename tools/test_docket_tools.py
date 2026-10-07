@@ -67,6 +67,23 @@ the second-quarter table. 409.8 - 412.6 = -2.8, so revenue missed the forecast b
 - D01 (p. 1) [c1, c2]: "expects second-quarter revenue of $412.6 million"
 - D02 (revenue table) [c1, c2]: "Q2 2025 | 409.8"
 
+## Targeted failure modes
+
+### Failure mode 1
+Trap: Figure that must be computed
+How a careless solver fails: Misapplies a rule or premise
+Where the trap sits: The second-quarter release says revenue was "in line" with the forecast, while its
+revenue table shows 409.8 million dollars for the quarter. The forecast of 412.6 million dollars sits only
+in the first-quarter release, so the comparison has to be made across the two documents rather than read
+from either one of them.
+The wrong answer a careless solver gives: Met the forecast, by 0 million dollars. A careless solver trusts
+the second-quarter wording that revenue was in line with the forecast and reports no miss at all, or it
+compares the table figure with the prose and never opens the earlier release that holds the forecast.
+Why the correct answer avoids it: A careful reader takes the forecast from the first-quarter release and the
+actual figure from the second-quarter table, then subtracts: 409.8 minus 412.6 gives minus 2.8, so revenue
+missed the forecast by 2.8 million dollars. The phrase in line describes the result loosely and does not
+replace the printed figures, which decide the answer that the question asks for.
+
 ## Lever checks
 
 - One document is not enough: the forecast and the actual are in different releases.
@@ -274,6 +291,146 @@ class DocketTools(unittest.TestCase):
         self.assertNotIn("format", self.codes(ordered, "WARN"))
         self.assertEqual(self.codes(GOOD, "WARN"), set())
 
+    def test_targeted_failure_modes_follow_the_form(self):
+        # The form (2026-10-07): 1-3 traps from its list, each once, a cause from its list, and three
+        # boxes of 150+ words together; Submit stays blocked without them.
+        self.assertEqual(self.codes(GOOD) | self.codes(GOOD, "WARN"), set())
+        section = GOOD[GOOD.index("### Failure mode 1"):GOOD.index("## Lever checks")]
+        missing = GOOD.replace(section, "")
+        self.assertIn("failure-modes", self.codes(missing, "WARN"))
+        self.assertNotIn("failure-modes", self.codes(missing))
+        self.assertIn("failure-modes", self.codes(missing.replace("status: draft", "status: checked"), "WARN"))
+        self.assertIn("failure-modes", self.codes(missing.replace("status: draft", "status: ready")))
+        self.assertIn("failure-modes", self.codes(GOOD.replace("Trap: Figure", "Trap: TODO Figure"), "WARN"))
+        frozen = missing.replace("status: draft", "status: submitted")
+        self.assertNotIn("failure-modes", self.codes(frozen) | self.codes(frozen, "WARN"))
+        modes = cq.failure_modes(section)
+        self.assertEqual(len(modes), 1)
+        self.assertTrue(modes[0]["where"].endswith("from either one of them."))
+        # A box may hold paragraphs; the blank line between them survives into the hand-over.
+        split = cq.failure_modes(section.replace("in the first-quarter release, so", "in the first-quarter release.\n\nSo"))
+        self.assertIn("release.\n\nSo the comparison", split[0]["where"])
+        self.assertIn("release.\n\nSo the comparison", cq.unwrapped(split[0]["where"]))
+
+        def block(number: int, trap: str, why: str = modes[0]["why"]) -> str:
+            return (f"### Failure mode {number}\nTrap: {trap}\nHow a careless solver fails: Misapplies a rule or "
+                    f"premise\nWhere the trap sits: {modes[0]['where']}\nThe wrong answer a careless solver gives: "
+                    f"{modes[0]['wrong']}\nWhy the correct answer avoids it: {why}\n\n")
+
+        traps = ["Figure that must be computed", "Part vs total", "Unit or basis", "Look-alike measure"]
+        failing = {
+            "trap not on the list": GOOD.replace("Trap: Figure that must be computed", "Trap: Exact table vs rounded prose"),
+            "cause not on the list": GOOD.replace("Misapplies a rule or premise", "Misreads the table"),
+            "same trap twice": GOOD.replace(section, block(1, traps[0]) + block(2, traps[0])),
+            "four modes": GOOD.replace(section, "".join(block(n, trap) for n, trap in enumerate(traps, 1))),
+            "empty box": GOOD.replace(section, block(1, traps[0], why="")),
+            "under 150 words": GOOD.replace(section, block(1, traps[0], why="Subtract.").replace(
+                modes[0]["where"], "Two releases.")),
+        }
+        for name, text in failing.items():
+            with self.subTest(name=name):
+                self.assertIn("failure-modes", self.codes(text))
+        # The form's own option values are accepted, and figures that may not count as words warn.
+        values = GOOD.replace("Trap: Figure that must be computed", "Trap: derived_or_computed_metric").replace(
+            "Misapplies a rule or premise", "rule_or_premise_misapplication")
+        self.assertEqual(self.codes(values) | self.codes(values, "WARN"), set())
+        figures = GOOD.replace("then subtracts:", "then subtracts: " + "409.8 412.6 " * 3)
+        figures = figures.replace("A careful reader takes", "A reader takes").replace("by 2.8 million dollars.", "by 2.8.")
+        self.assertIn("failure-modes", self.codes(figures, "WARN"))
+        self.assertNotIn("failure-modes", self.codes(figures))
+
+    def test_necessary_document_roles_and_alternatives(self):
+        roles = GOOD.replace("## Targeted failure modes", "## Necessary documents\n\n- D01: Answer component\n"
+                                                           "- D02: Used to identify\n\n## Targeted failure modes")
+        self.assertEqual(self.codes(roles) | self.codes(roles, "WARN"), set())
+        self.assertIn("documents", self.codes(roles.replace("- D02: Used to identify", "- D03: Used to identify")))
+        self.assertIn("documents", self.codes(roles.replace("Used to identify", "Supporting source")))
+        self.assertIn("documents", self.codes(roles.replace("- D02: Used to identify", "- D02 Used to identify")))
+        exclusion = roles.replace("Used to identify", "Exclusion / condition source")
+        self.assertIn("documents", self.codes(exclusion, "WARN"))
+        noted = exclusion.replace("condition source", "condition source | note: Rules out the revenue figure "
+                                                    "restated in a later table")
+        self.assertEqual(len([m for lvl, c, m in cq.check(self.write(exclusion), cq.Bundle(self.bundle))[2]
+                              if c == "documents"]), 2)
+        self.assertEqual(len([m for lvl, c, m in cq.check(self.write(noted), cq.Bundle(self.bundle))[2]
+                              if c == "documents"]), 1)
+        # Alternatives ("Doc 2 or Doc 3") are one necessary slot; each should be quoted.
+        alternatives = roles.replace("documents: D01, D02", "documents: D01, D02, D03").replace(
+            "- D02: Used to identify", "- D02 or D03: Answer component")
+        self.assertNotIn("evidence", self.codes(alternatives))
+        self.assertIn("evidence", self.codes(alternatives, "WARN"))
+        quoted = alternatives.replace('"Q2 2025 | 409.8"\n', '"Q2 2025 | 409.8"\n- D03 (note) [c2]: '
+                                                             '"Operating margin was 14.6% in 2025."\n')
+        self.assertNotIn("evidence", self.codes(quoted) | self.codes(quoted, "WARN"))
+        one_slot = roles.replace("- D01: Answer component\n- D02: Used to identify", "- D01 or D02: Answer component")
+        self.assertIn("documents", self.codes(one_slot))
+
+    def test_fingerprint_binds_roles_but_not_failure_modes(self):
+        meta, sections = cq.parse(self.write(GOOD))
+        legacy = {"metadata": {key: meta.get(key, "").strip() for key in
+                               ("documents", "tags", "difficulty_target", "asks", "answer_type")},
+                  "sections": {key: sections.get(key, "").strip() for key in
+                               ("question", "answer", "components", "reasoning", "evidence")}}
+        canonical = json.dumps(legacy, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+        import hashlib
+        self.assertEqual(cq.submission_sha256(meta, sections), hashlib.sha256(canonical.encode("utf-8")).hexdigest())
+        reworded = GOOD.replace("trusts\nthe second-quarter wording", "believes\nthe second-quarter wording")
+        self.assertEqual(cq.submission_sha256(*cq.parse(self.write(reworded))), cq.submission_sha256(meta, sections))
+        roles = GOOD.replace("## Targeted failure modes", "## Necessary documents\n\n- D01: Answer component\n"
+                                                           "- D02: Used to identify\n\n## Targeted failure modes")
+        self.assertNotEqual(cq.submission_sha256(*cq.parse(self.write(roles))), cq.submission_sha256(meta, sections))
+
+    def test_handover_writes_every_form_field_in_order(self):
+        # The page numbers documents in its own order; intake.json records it for each source.
+        (self.bundle / "notes").mkdir(exist_ok=True)
+        (self.bundle / "notes" / "intake.json").write_bytes(json.dumps({"schema": 1, "documents": [
+            {"number": 1, "source": "docs/b-release-q2.html"}, {"number": 2, "source": "docs/a-release-q1.pdf"},
+            {"number": 3, "source": "docs/c-notes.txt"}]}).encode())
+        self.write(GOOD)
+        with contextlib.redirect_stdout(io.StringIO()) as out:
+            self.assertEqual(cq.handover(self.bundle, ["q01"]), 0)
+        self.assertIn("0 FAIL, 0 WARN", out.getvalue())
+        sheet = (self.bundle / "notes" / "handover-q01.md").read_bytes().decode("utf-8")
+        headings = ["### Question", "### Number of asks", "### Gold answer", "### Step-by-step reasoning",
+                    "### Answer components", "### Evidence", "### Necessary documents", "### Reasoning tags",
+                    "### Targeted failure modes"]
+        self.assertEqual([sheet.index(h) for h in headings], sorted(sheet.index(h) for h in headings))
+        self.assertIn("D01 = Doc 2, D02 = Doc 1", sheet)
+        # Wrapped lines become one paragraph in a box; the reasoning keeps its lines as steps.
+        self.assertIn("```text\nDid the freight company's actual revenue for the second calendar quarter of 2025 miss "
+                      "or beat the revenue it had forecast", sheet)
+        self.assertIn('Where the trap sits:\n\n```text\nThe second-quarter release says revenue was "in line" with the '
+                      "forecast, while its revenue table shows", sheet)
+        self.assertIn("is in\nthe second-quarter table.", sheet)
+        self.assertIn("### Number of asks\n\n2 asks", sheet)
+        self.assertIn("Evidence 4: document Doc 1 (b-release-q2.html), proves component 2. $2.8 million", sheet)
+        self.assertIn("- Tick Doc 2 (a-release-q1.pdf), role: Answer component", sheet)
+        self.assertIn("Leave unticked: Doc 3 (c-notes.txt)", sheet)
+        self.assertIn("Tick: Cross-document join, Temporal alignment\n\nLeave unticked: Unit normalization", sheet)
+        self.assertIn("How a careless solver fails: Misapplies a rule or premise", sheet)
+        self.assertIn("(159 words across the three boxes", sheet)
+        self.assertIn("DRAFT", sheet)
+        self.assertIn("so are the default Answer component roles shown below", sheet)
+        self.assertNotIn("Authorship", sheet)
+        self.assertNotIn("Lever checks", sheet)
+        claude = GOOD.replace("origin: user", "origin: claude").replace("status: draft", "status: checked")
+        self.write(claude)
+        with contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(cq.handover(self.bundle, ["q01"]), 0)
+        sheet = (self.bundle / "notes" / "handover-q01.md").read_bytes().decode("utf-8")
+        self.assertIn("Authorship: origin claude", sheet)
+        self.assertNotIn("DRAFT", sheet)
+        self.write(GOOD.replace("Missed, by $2.8 million", "TODO"))
+        with contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(cq.handover(self.bundle, ["q01"]), 1)
+        self.assertIn("NOT READY TO PASTE", (self.bundle / "notes" / "handover-q01.md").read_bytes().decode("utf-8"))
+        (self.bundle / "notes" / "handover-q01.md").unlink()
+        self.write(GOOD.replace("status: draft", "status: submitted"))
+        with contextlib.redirect_stdout(io.StringIO()) as out:
+            cq.handover(self.bundle, ["q01"])
+        self.assertIn("no hand-over", out.getvalue())
+        self.assertFalse((self.bundle / "notes" / "handover-q01.md").exists())
+
     def test_sibling_questions_on_one_bundle(self):
         self.write(GOOD.replace("id: q01", "id: q02"), "q02")
         self.assertIn("sibling", self.codes(GOOD, "WARN"))
@@ -327,10 +484,13 @@ class DocketTools(unittest.TestCase):
         self.assertNotIn("## q02", sheet)
         self.assertNotIn("## q03", sheet)
         self.assertIn("skipped q03", out.getvalue())
-        self.assertIn("### Gold answer\n\nMissed, by $2.8 million", sheet)
-        self.assertIn("### Answer components\n\n- c1: Missed\n- c2: $2.8 million", sheet)
-        self.assertIn('- D02 (revenue table) [c1, c2]: "Q2 2025 | 409.8"', sheet)
-        self.assertIn("- D02 - docs/b-release-q2.html", sheet)
+        self.assertIn("### Gold answer\n\n```text\nMissed, by $2.8 million\n```", sheet)
+        self.assertIn("### Answer components\n\nComponent 1\n\n```text\nMissed\n```\n\nComponent 2\n\n"
+                      "```text\n$2.8 million\n```", sheet)
+        self.assertIn("proves component 2. $2.8 million (local note: revenue table)\n\n```text\nQ2 2025 | 409.8\n```",
+                      sheet)
+        self.assertIn("- Tick D02 (b-release-q2.html; page number unknown), role: Answer component", sheet)
+        self.assertIn("Trap: Figure that must be computed", sheet)
         self.assertNotIn("Lever checks", sheet)
         self.assertNotIn("outcome:", sheet)
 

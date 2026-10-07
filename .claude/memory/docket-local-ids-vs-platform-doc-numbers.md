@@ -6,7 +6,7 @@ metadata:
   type: project
   updated: 2026-10-04
   originSessionId: 0b3fd638-83b1-473b-8a9e-6c645eb2ec12
-  modified: 2026-10-04T15:25:45.060Z
+  modified: 2026-10-07T13:40:54.389Z
 ---
 
 ## Current rule
@@ -29,6 +29,12 @@ form's number check at the wrong document. A passage attached to the wrong docum
 
 **How to apply:** check the mapping at `/docket-new`; write hand-over reasoning with platform
 numbers; list passages to save by platform number.
+
+Tool support (2026-10-07): `notes/intake.json` records each source's page number ("number"), so
+`python tools/check_questions.py tasks/<slug> --handover --q qNN` maps local ids to Doc N in the
+hand-over: evidence rows, necessary documents and the unticked list. That replaces the manual mapping
+at hand-over. Reasoning text is still written with Doc N by hand. Of 23 bundles checked that day, 15
+have ids that differ from the page's numbers.
 
 ## Evidence and history
 

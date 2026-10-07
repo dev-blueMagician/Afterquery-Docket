@@ -14,7 +14,10 @@ separate from observed Easy/Medium/Hard survival, authorship and submission perm
    never relabel them to bypass export. A valid explicit platform pass must meet that question's
    target; reached/attempted tier counts alone are insufficient.
 2. Report dist/<slug>.md, exported/skipped ids, reasons, target and observed result. The sheet
-   is the exact checked copy of record; avoid retyping form fields into chat.
+   is the exact checked copy of record; avoid retyping form fields into chat. It holds every
+   form field in the form's order (the --handover renderer), Targeted failure modes included;
+   a ready question without them fails the floor. For other origins, --handover writes the same
+   fields to notes/handover-qNN.md with the authorship stated, and it is not an export.
 3. Report applicable unavailable platform checks accurately. Do not attest personal authorship
    or user review. Preparation does not authorize external testing or submission.
 4. Only on confirmed actual submission of an editable question set submitted, update session

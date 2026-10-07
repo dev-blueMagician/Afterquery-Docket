@@ -25,6 +25,11 @@ Record later findings separately in notes/feedback-qNN.md.
    and exact evidence quotes. Each necessary document supplies at least one quote; every
    answer number appears in a component. Tag each 12+ character single-passage quote with
    its component ids, for example - D03 (p. 2) [c1]: "...". No invented evidence or ellipses.
+   Give a document that is not an answer component its form role in ## Necessary documents.
+   Fill ## Targeted failure modes: 1-3 traps from the form's list, each once, each with its cause
+   and three boxes of 150+ words together. Declare only traps whose wrong answer Lever checks
+   recompute (gate Q15). They sit outside the fingerprint, so adding or fixing them needs no new
+   revision; record the change in Lever checks.
 4. In Lever checks record the indispensable fact lost by removing each source after searching
    all remaining documents for replacements, concrete concept-search results, alternate
    printed figures at requested precision and attacks applicable to selected levers. Require

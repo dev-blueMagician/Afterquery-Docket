@@ -6,7 +6,7 @@ metadata:
   type: feedback
   updated: 2026-10-04
   originSessionId: 9f128bdc-b5c0-4b21-a95f-f6bdf88cc634
-  modified: 2026-10-06T01:08:51.453Z
+  modified: 2026-10-07T13:40:38.144Z
 ---
 
 ## Current rule
@@ -55,7 +55,12 @@ metadata:
   for list answer types and accepts the bare word "first".
 - Hand-over: give every form field in its own labelled block each time, question first. A field
   pasted into the wrong box produces warnings that are not about the question. Reasoning in the
-  Question box gave "Over 80 words" and, on the gold answer, "Say the rounding".
+  Question box gave "Over 80 words" and, on the gold answer, "Say the rounding". Since 2026-10-07,
+  `python tools/check_questions.py tasks/<slug> --handover --q qNN` writes them all, in the form's order,
+  to notes/handover-qNN.md: Question, Number of asks, Gold answer, Step-by-step reasoning, Answer
+  components, Evidence rows, Necessary documents with roles, Reasoning tags and Targeted failure modes.
+  It uses the task page's Doc numbers, one evidence row per component, and fenced boxes with wrapped lines
+  joined. See [[docket-handover-all-form-fields]].
 - Comparison wording (rule 9c, the platform's "PIN3"): "which ... fell by the largest
   percentages" was flagged: "'largest' could be read as largest absolute drop or largest
   relative drop. You may want to specify which." The flag came even though both readings give
@@ -93,6 +98,16 @@ number is in the cited document, follows "=", or (in an uncited line) is in a do
 already derived.
 
 ## Evidence and history
+
+- 2026-10-06, aq-01321 q02 (form screenshot from the user): "Step 9: Docs 7, 8 and 9 don't mention 3,941.
+  Check the document number." Step 9 read "(Doc 7, Doc 8, Doc 9): Twelve months ending June 30, 2026:
+  1,942 + 1,999 = 3,941", a result straight after "=" from derived operands. Steps 7 and 8 had the same
+  shape (results 1,999 and 1,942, printed in no document; labels "First half of 2026", "July to December
+  2025") and passed, and the later "3,941 / 19,453 = 20.26%" passed. Working explanation: the label named
+  the exact period the cited document reports as a rounded figure ("$3.9 billion" over the past 12
+  months; its "For 12 Months Ended June 30" table), so the checker treated 3,941 as a claimed document
+  figure. Fix offered: relabel the step as a sum of half-years, or compute it in one step whose operands
+  are all printed values. Result of the fix pending.
 
 - 2026-10-04, first paste (rev 3): "Doc 2 doesn't mention 10.1%" and "Doc 5 doesn't mention
   43.6%". "= 10.123%" in the same steps passed, while the "or 10.1%" restatements were flagged.
@@ -145,3 +160,15 @@ already derived.
   step are accepted, at least when the step names the documents they came from. Working rule: write
   table figures as plain text ("current and long-term debt of 5,175"), not right after a quoted label
   (especially one ending in a parenthesised letter); rev 1's result on the form is pending.
+- 2026-10-06, aq-01320 q01 rev 2 (user screenshot of the form after pasting): a signed computed answer
+  ("-$0.28 per share", question "what was the actual full-year figure minus that range's midpoint?")
+  drew the advisory "Doc 12 states $10.44; your answer has -$0.28. Use it, or say in the question to
+  compute it from the other figures" plus the same for Doc 11's adjusted range and "1 more stated figure
+  differ": the stated-figure matcher keys on the line-item words even when the question asks for a
+  difference no document prints, so treat it as a false positive. "= -0.28" in a step citing "Doc 10 and
+  Doc 12" (derived operand 10.72) showed no number warning. Derive the rest proposed "Cross-document
+  join, Aggregation" for a date-in-force edition question (Temporal alignment is the accurate tag) and
+  the note "Doc 12 on its own may give enough to compute the answer", although Doc 12 lacked both
+  outlook figures and a removal probe without Doc 10 could not determine the answer (forced guess was
+  the decoy). Unlike aq-00949 q01, where the same note was a real guessability signal, check the named
+  document's content and run a removal probe before acting on it.

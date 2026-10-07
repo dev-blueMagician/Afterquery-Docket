@@ -86,6 +86,10 @@ Independent workers for the same run may execute concurrently.
 7. Set checked for local ready or revise; dropped for drop. Run floor and report again.
    Report target, fingerprint, gold validation, shortest verified route and unresolved findings.
    A local ready review is described as locally checked, awaiting platform verification.
+   For a checked question, run python tools/check_questions.py tasks/<slug> --handover --q qNN
+   and hand over notes/handover-qNN.md whole. It carries every form field in the form's order,
+   failure modes included, with Doc N numbers. Say which form fields it replaces. Say whether the
+   platform needs a new difficulty result: question, answer and necessary-document edits do.
    Revise editable content through /docket-add, increment revision and repeat the entire
    process with fresh contexts. After two ineffective revisions drop or develop a different
    dependency rather than retrying until a preferred result appears.

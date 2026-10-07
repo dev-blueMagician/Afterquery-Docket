@@ -34,7 +34,7 @@ proof of a tier or permission for an unsupported key.
    for duplicated tables, comparatives, footnotes and summaries. Show the lost fact and why
    remaining sources cannot settle it. Name any smaller valid source set; never merely
    repeat the author's removal claim.
-3. Run Q1-Q12 and Q14 against evidence and the newer guide. Check concepts and exact words,
+3. Run Q1-Q12, Q14 and Q15 against evidence and the newer guide. Check concepts and exact words,
    single-document/passage routes, hinted answers, all admissible readings, shape and a quote
    from every necessary document. Mark unavailable platform-only checks unknown. Unresolved
    needed extraction gaps cannot support a correctness claim. Inspect every exact gap in
@@ -68,6 +68,12 @@ proof of a tier or permission for an unsupported key.
    encourage varied levers/source relationships where the bundle supports them.
 7. Verify exact revision and fingerprint for every record. Distinguish local readiness from
    observed platform survival. Counts of attempted tiers never establish passes.
+8. When '## Targeted failure modes' is present (gate Q15), check each mode. The trap is real: the
+   passage exists and produces the stated wrong answer, recomputed by you. Trap and cause are the
+   best fit from the form's lists, and no trap repeats. Nothing the wording already rules out is
+   declared. Every claim in the three boxes is true, with no overclaim a platform reviewer could
+   reject. Check '## Necessary documents' roles against how each document is used. A missing
+   section is a hand-over gap, not a correctness finding.
 
 ready means locally supported gold, two matches, closed-book miss, clear shortcut audit,
 applicable fairness checks satisfied and no demonstrated disqualifying shortcut. Record difficulty:
@@ -89,6 +95,7 @@ Return per question, normally within 1,200 words:
                         uniqueness, necessity and shortcut impact with evidence>
     difficulty: easy | medium | hard - <local suitability only; design evidence>
     verdict: ready | revise | drop
+    failure_modes: <each declared trap: real / not real, recomputed wrong answer, label fit, claims>
     findings: <numbered check, location, evidence, consequence, required verification>
 
 Never claim flawlessness, guaranteed passes or successful platform verification from review.

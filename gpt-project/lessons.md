@@ -123,10 +123,45 @@ Then the same single-trap layout with an event the release never ties to its gui
 (trial results announced "In March", printed beside the April release's own later range) passed
 at the High tier (user report, aq-00745 q09). Tied event = Easy; untied = High: for exactly Medium,
 weaken the untied trap slightly rather than strengthening the tied one.
+The anchor's verb matters as much as the layout. aq-01333 q01 rev 1 asked for "the forecast it was
+guiding to when it finished selling" a stake. The sale was reported in the release beside its own
+later range. Result: "Answer not supported" (Low 0/5 · Medium 0/5 · High 1/5), and the high model's
+every-document answer took the decoy 3 of 3 times. With the same layout, "then-current" passed at
+Medium (aq-00964 q01) and "in force when" passed at High (aq-00745 q09). Keep a firm timing verb
+("in force", "then-current", "in effect on the day"), also when rewording to avoid a near copy. The
+high model must reach the gold with every document, or the run fails at any tier.
+The firm end overshoots too. The same content asking for "the forecast in effect on the day it
+finished selling" was "Too easy", Low 5/5. Every low attempt found the day and took the forecast in
+effect then. In this layout an action verb lets no model through and a day-level status cue lets
+every model through. Use the measured middle: "in force when" (High, aq-00745 q09) or
+"then-current" (Medium, aq-00964 q01).
+On aq-01333 itself, "in force when" passed at the Easy tier (2026-10-07). The event's exact day sat
+in the decoy release's body four days before its dateline, so even that anchor let the low model
+through sometimes. A Medium needs extra difficulty beyond the anchor.
+The platform reviewer then returned it ("Revision requested", 2026-10-07). The question and gold were
+correct, but the decoy release ticked as "Exclusion / condition source" was "not necessary", because
+another marked release already dated the sale to May 2026. Leave a decoy-carrying release unticked.
+
+Definition trap across editions (aq-01278 q02, 2026-10-06, "In band — Medium tier", Low 0/5 · Medium
+1/5): the earlier release states a growth figure whose scope only its own numbers reveal ("2.8% in
+commercial insurance" = North America minus personal, i.e. commercial plus agriculture; the segment
+row beside it says 2.3%), and the later release prints the same label on a narrower scope
+("North America Commercial was down 2.3%", three times). The question quoted the earlier figure and
+asked for the later quarter "On that same basis". All 5 low and 4 of 5 medium attempts took the
+printed -2.3%; the right one reconciled the earlier segment row against the bullet. The platform
+added "This question may be too vague" (advisory; the gate passed). Local review had said easy,
+marginal toward medium.
+After submission the platform reviewer returned it: "On the same basis" is undefined, so -2.3% is
+defensible; fix by "asking for the business lines behind the 2.8%", and define the comparison word
+("percentage change in net premiums written ... from a year earlier"). Treat the too-vague advisory with
+wrong answers clustered on one printed figure as a likely revision request: name the scope concretely
+and re-measure before submitting.
 
 Platform gate wording (difficulty check, 2026-10-06): "Ready when 1–3 attempts at a level are
 right, out of up to 5. A level can settle early, for example at 1 right out of 3." An Easy result needs
-the low model to miss at least two of five. aq-00998 q03 (an April 2025 event reported in the previous
+the low model to miss at least two of five. A result can also be "Between levels" (aq-01431 q01, Low
+0/5 · Medium 4/5: "Too hard for the low model but too easy for the medium model. Make it a little
+harder"); the gate fails. Remove the cue the medium model followed rather than adding a second trap. aq-00998 q03 (an April 2025 event reported in the previous
 quarter's release, with that release's own same-label figures as the decoy) was "Too easy", Low 5/5:
 the printed month made the period step trivial, and both inputs sat in one sentence.
 aq-00949 q03 (2026-10-05) was "Too easy", Low 5/5: a rule stated in one plain sentence (the 2020
@@ -150,11 +185,24 @@ reader does not look.
 Wording: when the documents report year-to-date figures, say "three months ended". The Coach
 flagged "quarter ended September 30" as open to a year-to-date reading.
 
+A segment-recast trap is too easy when its pin points at the recast. Naming the restatement was
+"Too easy" twice (trial-02 q04). So was quoting the release's own restated comparison as the
+premise: aq-01333 q02 (2026-10-06), "On that same segment structure", difficulty check "Too easy",
+Low 4/5. The low model went straight to the release that prints the restated figure, the recast note
+and the recast column, and only one attempt took the printed old-basis decoy. Without the pin the
+old-basis figure is a defensible second answer. When the recast is stated plainly beside the needed
+columns, prefer an event-to-edition bridge.
+
 User preference (2026-10-06, trial-02 and trial-05): the user asks for questions shaped like
 trial-02 q01 and trial-06 q02. Those are numeric answers that no document prints, derived over three
 or more dependent steps through a carve-out, a definition or a footnoted remainder, with a printed
 same-label decoy in the reader's path. Try that shape before list or filter questions. When no fair
 one exists, say so plainly; fairness rules still win.
+
+Overlapping windows across editions (aq-01430 q01, 2026-10-07, user report "Easy Tier"): a change
+between two years built from one edition's "last five years" window and a later edition's "since
+2021" window, net of the final year's change (EU coal 2019 to 2021), reached the Easy tier, as local
+review predicted. Window arithmetic behaves like the partial-period family, not like an edition trap.
 
 ## L3. General-knowledge check
 
@@ -214,6 +262,20 @@ Evidence:
   revenue growth) while believing it was the November 2025 initial range. Word-valued rows ("Flat")
   and derived quarter or carve-out figures missed. Prefer word-valued or derived answers over a
   mid-cycle percentage range a model can pattern-match.
+- 2026-10-06 (aq-01428, local): splits of a full-year guidance figure into halves have a half-year
+  prior. The H1 share of FY cash-flow guidance (gold 53%) drew "about 55%"; the second-half amount
+  still needed (gold €6.45 bln) drew €6.30 bln and "about €6.5 billion". Only a fine precision
+  protects such answers. A stated guidance figure asked at a dated event drew the superseded
+  initial level instead (clean miss).
+- 2026-10-06 (aq-01431, local): in a bundle of SEC comment letters, closed-book runs reached a
+  proposal-to-final Federal Register gap (717 days, both dates recalled) and a commenter's first
+  letter after a reopening (68 days, from the recalled reopening date and reopened deadline). They
+  missed issue-level US SIF 2022 AUM figures. SEC rulemaking dates, reopenings and deadlines are
+  general knowledge; so is a commenter's filing date that falls on a public deadline.
+- 2026-10-06 (aq-01430, local): closed-book runs reached a small-integer count difference (8 more
+  countries above a tenth solar, from a yearly trend) and a near-zero change at whole-TWh precision
+  ("+3 TWh, roughly flat", from recalled monthly statistics). Asking one decimal (+2.8) turned the
+  latter into misses. Avoid small integers and near-zero answers at coarse precision.
 
 ## L4. Series editions and necessity
 
@@ -281,6 +343,16 @@ reported a pass; provisionally, an exact recalled figure did not count against i
 widely known dates did (trial-07 q01). The document-check line itself was not supplied, and the
 later wording fix (rev 5) failed as "Too easy" before any removal-test line appeared, so this
 stays unconfirmed.
+- 2026-10-06 (aq-01428, local): with only two editions, an edition trap that asks for the value in
+  force at an event printed only in the later release leaves, once that release is removed, the
+  earlier release's figure as the only candidate. Two forced-guess removal probes said "not
+  determined" and then chose it (the gold). The platform's check does not force a guess, so this is
+  a residual risk; making the later release supply a number fixes it but brings half-year priors
+  (L3). An event anchor the solver must date beats a period-end date written into the question.
+- 2026-10-06 (aq-01430, local): a long-run share (China's part of world demand growth 2000-2025,
+  55.9%) took China's 2000 demand from one review only. A removal probe recalled the official 2000
+  statistic and forced the gold (p 0.4). A baseline that matches an official national statistic
+  counts as common knowledge for the document check, even inside a 0.1-point window.
 
 ## L5. One clear answer: figure choice and precision
 
@@ -358,7 +430,11 @@ Current rule:
 - Precision: the form looks for the rounding in the Question box ("Say the rounding (e.g. 'to one
   decimal place')").
 - Hand-over: every field in its own labelled block, question first. Reasoning pasted into the
-  Question box gave "Over 80 words" and a rounding warning on the gold answer.
+  Question box gave "Over 80 words" and a rounding warning on the gold answer. User, 2026-10-07:
+  every hand-over is the whole form in its order (Question, Number of asks, Gold answer, Step-by-step
+  reasoning, Answer components, Evidence, Necessary documents, Reasoning tags, Targeted failure modes),
+  from `check_questions.py --handover`. After a revision, aq-01278 q02's form still held 8 evidence rows
+  that differed from the new 10 and 2 of the 4 tags (saved page, 2026-10-07; the cause is not known).
 - Comparison wording (the platform's "PIN3"): "which ... fell by the largest percentages" was
   flagged: "'largest' could be read as largest absolute drop or largest relative drop. You may want
   to specify which." It was flagged even though both readings gave the same ranking. Name the
@@ -370,9 +446,11 @@ Current rule:
   earlier capture hid as Markdown pipe tables ("| Gross Margin | 23,327 | 1,824 | 25,151 |"), but
   the platform's own text shows such rows without pipes (a form warning quoted one as "Other
   International (C) - - - - - - - 4 1"). Quote prose or plain rows where they carry the input;
-  otherwise copy the row with the page's Save passage and use that exact text (inference,
-  unconfirmed on the form). The local floor accepts such a row quoted with or without the pipes
-  (tool change, 2026-10-05).
+  otherwise copy the row with the page's Save passage and use that exact text. The local floor
+  accepts such a row quoted with or without the pipes (tool change, 2026-10-05). Observed
+  2026-10-06 (aq-01322): a piped quote ("|U.S. Healthcare Solutions|$998,300|$944,969|5.6%|")
+  passed the form's blocking Verbatim evidence check, since the difficulty check unlocked and echoed
+  it; the depiped form is still unseen.
 - No unnumbered conclusion line restating a result right after the calculation step, and one
   simple a-op-b calculation per step: "(7,926 - 5,175) / 5,175 = 53.2%" followed by "Conclusion:
   total debt grew 53.2%." was flagged whether the step named two documents or one. Either the
@@ -396,6 +474,12 @@ with derived operands passed.
 aq-00745 / aq-00949 (2026-10-05): pipe-table rendering of formerly hidden table blocks. aq-00949 q03
 (2026-10-05, form panels pasted by the user): the one-calculation-per-step and Derive the rest
 observations; the parsing rule is inferred from one paste.
+- 2026-10-06 (form model check, aq-01321 q02 and aq-01428 q01): the form blocks submission when two
+  solvers agree on a non-gold answer ("This question is too vague to submit: two independent solvers ...
+  Both answered ..."). An edition trap with a soft timing anchor ("In the month X happened, how much was its
+  guidance expecting") was blocked because both took the event release's own later guidance. Keep the
+  anchor firm enough for a strong reader ("then in force", "in force when"), and paste exactly the tested
+  question (an extra precision sentence changed the content).
 
 ## L9. An accepted question is finished
 
@@ -432,6 +516,28 @@ review of one bundle unless marked; check the intake scan against them.
   (aq-00745 round 3)
 - Shared item sets are necessary but not sufficient: a strong solver reads every candidate and
   checks the companion documents. (trial-03)
+- Advocacy and comment-letter collections: figures are cited secondhand and are snapshots, not
+  values in force at a date; rule 10 bars answers naming the letters' authors; lists resolve inside
+  one letter. The best fair design was a grouped figure in one letter against its split in another
+  (a ranking carve-out), reviewed Easy (Medium 6-8%). Say early that Medium is unlikely and ask for a
+  quick test. (aq-01431)
+- Program-assessment report sets (one summary plus component reports of one campaign): the summary
+  repeats most component facts, two reports can print the same item list (making either replaceable),
+  and appendix tables disagree or carry typos, so most numeric joins fail fairness or necessity. A
+  usable bridge is a per-item award or recognition list in one report that picks the item whose
+  per-version quantities sit in another report's distribution appendix; check for a version listed
+  late under a misspelled title. Reviewed Easy (Medium ~17%): a single missed row has no printed
+  answer-shaped decoy. Platform: "In band — Easy tier", Low 2/5, every wrong attempt missing the late
+  row. One hidden list member is an Easy mechanism; Medium needs a second independent trap or a
+  printed answer-shaped decoy. (aq-01433)
+- Legal-guidance compendia (regulators' rules, staff Q&As and guidance across two jurisdictions): figures
+  are single-document hypotheticals or rule constants without inputs, so no fair numeric design exists. A body
+  rule reversed by an end note (offences list vs. a footnoted civil-only carve-out) is a tied trap when the body
+  line carries the note marker, and the statute exception it states is partly recalled, which threatens the
+  closed-book check and the law document's necessity. Take the universe from a list only one guidance document
+  prints (a short guide's theme list), not a canonical statutory set. Reviewed Easy (Medium 8-12%). Say early
+  that Medium is unlikely and ask for a quick test. (aq-01432; platform 2026-10-07: the carve-out write-up was
+  "Too easy", Low 5/5, 4 of 5 attempts quoting the end note itself)
 
 ## L11. Authorship
 

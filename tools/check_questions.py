@@ -2,6 +2,7 @@
 
 Usage:
   python tools/check_questions.py tasks/<slug> [--q q01 q02 ...]  check questions; exit 1 on any FAIL
+  python tools/check_questions.py tasks/<slug> --handover [--q ...] write notes/handover-qNN.md: every form field
   python tools/check_questions.py tasks/<slug> --export          write dist/<slug>.md from ready questions
   python tools/check_questions.py --status                        every bundle's questions by status
   python tools/check_questions.py --hook                          PostToolUse hook for question files
@@ -10,7 +11,11 @@ It checks what a script can: fields, lengths, tags, documents, evidence quotes f
 in text/, the wording traps instruction.md names, and the task form's mechanical quality checks
 (captured 2026-10-04, .claude/memory/reference/platform-quality-checks.md): 1-10 answer
 components, each a piece of the answer with a tagged quote of 12+ contiguous characters; no
-semicolon in the answer; 8-80 words; no answer part in the question. It cannot tell whether a question has
+semicolon in the answer; 8-80 words; no answer part in the question. Since 2026-10-07 the form
+also needs 1-3 "Targeted failure modes" (a trap and a cause from fixed lists, three boxes of 150+
+words together) and gives each necessary document a role; '## Targeted failure modes' and the
+optional '## Necessary documents' hold them. --handover prints every form field in the form's
+order, with the task page's Doc numbers. It cannot tell whether a question has
 one answer, is fair, or is hard; the blind solves, the closed-book solve and the review decide
 that. For status ready it confirms two matching blind solves, a closed-book miss, a local
 review, and an explicit platform pass at the requested difficulty. New questions declare
@@ -42,6 +47,43 @@ LEVERS = {"mentions it vs does it", "scatter the pieces", "bury one list item la
           "same series, right edition", "who belongs where", "exact table vs rounded prose",
           "does the hedge apply", "match, then exclude", "ordered answers",
           "calculate across documents", "state the rounding"}
+# The task form's own option lists (value: label), as saved in the task page on 2026-10-07.
+FAILURE_TRAPS = {
+    "wrong_company_in_bundle": "Look-alike company",
+    "wrong_jurisdiction_or_scope": "Wrong jurisdiction or scope",
+    "entity_type_mismatch": "Wrong kind of entity",
+    "fiscal_calendar_offset": "Fiscal vs calendar period",
+    "trailing_window_assembly": "Trailing-period total",
+    "historical_data_in_current_report": "Older figure inside a newer report",
+    "out_of_scope_period_exclusion": "Out-of-range period",
+    "wrong_year_or_edition": "Wrong year or edition",
+    "superseded_or_latest_deadline": "Superseded date or version",
+    "similar_metric_confusion": "Look-alike measure",
+    "subset_vs_total": "Part vs total",
+    "unit_or_basis_mismatch": "Unit or basis",
+    "cross_document_entity_linking": "Linking across documents",
+    "recording_or_format_convention": "Document convention",
+    "derived_or_computed_metric": "Figure that must be computed",
+}
+FAILURE_CAUSES = {
+    "wrong_entity_or_scope": "Picks the wrong entity or section",
+    "wrong_period_or_anchor": "Uses the wrong period or date",
+    "metric_substitution": "Takes the wrong line item",
+    "rule_or_premise_misapplication": "Misapplies a rule or premise",
+    "computation_or_arithmetic_error": "Calculation slip",
+    "set_boundary_membership_error": "Wrong members in a list",
+    "output_form_or_presentation_error": "Right content, wrong form",
+    "precision_rounding_or_sign_error": "Rounding, scale or sign",
+}
+# A failure mode's labelled fields, in the form's order; the last three are its text boxes.
+FAILURE_FIELDS = {"trap": "Trap", "cause": "How a careless solver fails", "where": "Where the trap sits",
+                  "wrong": "The wrong answer a careless solver gives", "why": "Why the correct answer avoids it"}
+FAILURE_BOXES = ("where", "wrong", "why")
+FAILURE_WORDS = 150
+DOC_ROLES = ("Answer component", "Exclusion / condition source", "Used to identify")
+FORM_TAGS = ("Cross-document join", "Temporal alignment", "Unit normalization", "Conditional filter",
+             "Entity resolution", "Aggregation")
+FROZEN = {"submitted", "accepted", "rejected"}
 OUTCOMES = {"match", "wrong-lever", "ambiguous", "not-answerable", "solver-error"}
 DIFFICULTIES = {"easy": 1, "medium": 2, "hard": 3}
 TIER_ALIASES = {"low": "easy", "easy": "easy", "medium": "medium", "high": "hard", "hard": "hard"}
@@ -178,6 +220,9 @@ def submission_sha256(meta: dict, sec: dict, bundle: Bundle | None = None) -> st
     Revision and workflow status are deliberately absent: recording a check or changing
     status does not change the tested submission. Wording, evidence, required documents,
     tags, target, and source-text bytes do. Canonical JSON keeps this portable across paths.
+    The form's document roles ('## Necessary documents') count only when written, so a file
+    without them keeps its earlier fingerprint. Targeted failure modes are the reviewer's
+    reading of the traps, outside what solvers see, and stay out like Lever checks.
     """
     payload: dict = {
         "metadata": {key: meta.get(key, "").strip() for key in
@@ -185,6 +230,8 @@ def submission_sha256(meta: dict, sec: dict, bundle: Bundle | None = None) -> st
         "sections": {key: sec.get(key, "").strip() for key in
                      ("question", "answer", "components", "reasoning", "evidence")},
     }
+    if sec.get("necessary documents", "").strip():
+        payload["sections"]["necessary documents"] = sec["necessary documents"].strip()
     if bundle is not None:
         text_dir = bundle.path / "text"
         manifest = text_dir / "manifest.json"
@@ -440,6 +487,59 @@ def components(section: str) -> tuple[dict[str, str], list[str]]:
     return found, bad
 
 
+def form_choice(value: str, choices: dict[str, str]) -> str | None:
+    """One of the form's options, given by its label or its value; None when it is neither."""
+    key = norm(value).strip(" .")
+    return next((label for slug, label in choices.items() if key in {norm(label), slug}), None)
+
+
+def failure_modes(section: str) -> list[dict[str, str]]:
+    """'## Targeted failure modes': one '### ...' block per trap, holding the form's five labelled
+    fields ('Trap: ...', 'How a careless solver fails: ...', then the three boxes). A box's text runs
+    on over the following lines until the next label or block."""
+    label = re.compile(r"^\s*(?:[-*]\s*)?(" + "|".join(re.escape(v) for v in FAILURE_FIELDS.values())
+                       + r")\s*:\s*(.*)$", re.I)
+    blocks: list[dict[str, list[str]]] = []
+    key = None
+    for line in section.splitlines():
+        if re.match(r"^###\s", line):
+            blocks.append({"heading": [line.lstrip("#").strip()]})
+            key = None
+            continue
+        match = label.match(line)
+        if match and blocks:
+            key = next(k for k, v in FAILURE_FIELDS.items() if v.lower() == match.group(1).lower())
+            blocks[-1][key] = [match.group(2).strip()]
+        elif blocks and key:
+            blocks[-1][key].append(line.rstrip())
+    return [{key: "\n".join(lines).strip() for key, lines in block.items()} for block in blocks]
+
+
+def failure_words(mode: dict[str, str]) -> tuple[int, int]:
+    """Words across a failure mode's three boxes, all of them and those holding a letter."""
+    words = [w for key in FAILURE_BOXES for w in mode.get(key, "").split()]
+    return len(words), sum(1 for w in words if re.search(r"[A-Za-z]", w))
+
+
+def necessary_documents(section: str) -> tuple[list[dict], list[str]]:
+    """'## Necessary documents' lines: '- D04: Answer component', '- D03: Exclusion / condition
+    source | note: <the form's reviewer note>' or '- D04 or D09: Used to identify' (alternatives
+    the form groups with "or...")."""
+    groups, bad = [], []
+    for line in section.splitlines():
+        if not re.match(r"^\s*[-*]\s", line):
+            continue
+        match = re.match(r"^\s*[-*]\s*(D\d{2,3}(?:\s+or\s+D\d{2,3})*)\s*:\s*([^|]+?)\s*"
+                         r"(?:\|\s*note\s*:\s*(.+?))?\s*$", line, re.I)
+        if not match:
+            bad.append(line.strip())
+            continue
+        role = next((r for r in DOC_ROLES if norm(r) == norm(match.group(2))), None)
+        groups.append({"ids": re.findall(r"D\d{2,3}", match.group(1)), "role": role,
+                       "role_text": match.group(2).strip(), "note": (match.group(3) or "").strip()})
+    return groups, bad
+
+
 def check(path: Path, bundle: Bundle) -> tuple[dict, dict, list[tuple[str, str, str]]]:
     meta, sec = parse(path)
     found: list[tuple[str, str, str]] = []
@@ -543,9 +643,33 @@ def check(path: Path, bundle: Bundle) -> tuple[dict, dict, list[tuple[str, str, 
             fail("components", f"nothing separates {first} from {second} in the answer; a grader must tell "
                                "the parts apart")
 
-    # Rule 2: at least two necessary documents that exist.
+    # Rule 2: at least two necessary documents that exist. The form gives each ticked document a
+    # role and groups documents that carry the same fact as alternatives ("Doc 4 or Doc 9").
     documents = re.findall(r"\bD\d{2,3}\b", meta.get("documents", ""))
-    if len(set(documents)) < 2:
+    groups = [[doc_id] for doc_id in dict.fromkeys(documents)]
+    roles_text = sec.get("necessary documents", "")
+    if roles_text:
+        parsed, bad = necessary_documents(roles_text)
+        for line in bad:
+            fail("documents", f"cannot parse '{line[:60]}'; use - D04: Answer component (or Used to identify, or "
+                              "Exclusion / condition source | note: ...), alternatives joined by 'or'")
+        if sorted(d for group in parsed for d in group["ids"]) != sorted(set(documents)):
+            fail("documents", "'## Necessary documents' must list each front-matter document exactly once")
+        for group in parsed:
+            name = " or ".join(group["ids"])
+            if group["role"] is None:
+                fail("documents", f"{name}: '{group['role_text']}' is not one of the form's roles "
+                                  f"({', '.join(DOC_ROLES)})")
+            elif group["role"] == "Exclusion / condition source":
+                note = group["note"]
+                if len(re.findall(r"[A-Za-z0-9]", note)) < 20 or len(set(re.findall(r"[a-z]+", note.lower()))) < 3:
+                    warn("documents", f"{name}: an exclusion source needs the form's reviewer note (20+ letters or "
+                                      "digits, 3+ different words) saying what it rules out")
+                warn("documents", f"{name}: exclusion role; a platform reviewer accepted it only for a document "
+                                  "ruling out an item that exists without it, not for its own decoy (aq-01333 q01)")
+        if parsed and not bad:
+            groups = [group["ids"] for group in parsed]
+    if len(groups) < 2:
         fail("documents", "list at least two necessary documents (rule 2)")
     elif len(set(documents)) > 4:
         warn("documents", f"{len(set(documents))} documents listed; the form's reasoning usually covers 2-4, "
@@ -602,11 +726,51 @@ def check(path: Path, bundle: Bundle) -> tuple[dict, dict, list[tuple[str, str, 
     if len(uncited) > 1 or (uncited and not COUNT.fullmatch(normed[uncited[0]])):
         fail("components", f"no evidence quote for {', '.join(uncited)}; every component needs one "
                            "(one bare count may go uncited)")
-    for doc_id in documents:
-        if doc_id not in cited:
-            fail("evidence", f"{doc_id} is listed as necessary but has no evidence quote")
+    for group in groups:
+        if not any(doc_id in cited for doc_id in group):
+            fail("evidence", f"{' or '.join(group)} is listed as necessary but has no evidence quote")
+        elif not all(doc_id in cited for doc_id in group):
+            warn("evidence", f"alternatives {' or '.join(group)}: quote each one; the form's 'Necessary documents "
+                             "cited' check may want a quote from every ticked document")
     for doc_id in sorted(cited - set(documents)):
         warn("evidence", f"{doc_id} is quoted but not listed as necessary; if the answer needs it, list it")
+
+    # The form's Targeted failure modes (2026-10-07): 1-3 traps from its list, each once, with how a
+    # careless solver fails and three boxes of 150+ words together. Submit stays blocked without them.
+    if status not in FROZEN:
+        modes_text = sec.get("targeted failure modes", "")
+        if not modes_text or "TODO" in modes_text:
+            (fail if status == "ready" else warn)(
+                "failure-modes", "no complete '## Targeted failure modes'; the form blocks Submit until 1-3 traps "
+                                 "are filled in, each proved in Lever checks with the wrong answer it gives")
+        else:
+            modes = failure_modes(modes_text)
+            if not 1 <= len(modes) <= 3:
+                fail("failure-modes", f"{len(modes)} failure modes; the form takes 1 to 3, one "
+                                      "'### Failure mode N' block each")
+            seen = set()
+            for number, mode in enumerate(modes, 1):
+                trap = form_choice(mode.get("trap", ""), FAILURE_TRAPS)
+                if trap is None:
+                    fail("failure-modes", f"failure mode {number}: trap '{mode.get('trap', '')}' is not one of the "
+                                          "form's: " + ", ".join(FAILURE_TRAPS.values()))
+                elif trap in seen:
+                    fail("failure-modes", f"failure mode {number} repeats '{trap}'; the form takes each trap once")
+                else:
+                    seen.add(trap)
+                if form_choice(mode.get("cause", ""), FAILURE_CAUSES) is None:
+                    fail("failure-modes", f"failure mode {number}: '{FAILURE_FIELDS['cause']}' must be one of: "
+                                          + ", ".join(FAILURE_CAUSES.values()))
+                empty = [f"'{FAILURE_FIELDS[key]}'" for key in FAILURE_BOXES if not mode.get(key)]
+                if empty:
+                    fail("failure-modes", f"failure mode {number}: empty box {', '.join(empty)}")
+                total, lettered = failure_words(mode)
+                if total < FAILURE_WORDS:
+                    fail("failure-modes", f"failure mode {number} has {total} words across its three boxes; the "
+                                          f"form needs at least {FAILURE_WORDS}")
+                elif lettered < FAILURE_WORDS:
+                    warn("failure-modes", f"failure mode {number}: only {lettered} of its {total} words hold a letter; "
+                                          "leave a margin in case the form's counter skips bare figures")
 
     # Rule 7: self-contained wording.
     if re.search(r"\.(pdf|html?|docx?|txt|xlsx?|csv|xml)\b", q_norm):
@@ -894,6 +1058,179 @@ def status_all(root: Path = ROOT) -> int:
     return 0
 
 
+def platform_numbers(bundle: Bundle) -> dict[str, int]:
+    """Local Dnn id -> the task page's 'Doc N', from notes/intake.json (the capture's own numbering).
+    Ids follow sorted file names and often differ from the page's numbers."""
+    try:
+        documents = json.loads(read_text(bundle.path / "notes" / "intake.json")).get("documents", [])
+        numbers = {str(doc["source"]).replace("\\", "/"): doc["number"] for doc in documents
+                   if isinstance(doc, dict) and isinstance(doc.get("number"), int) and doc.get("source")}
+    except (OSError, ValueError, AttributeError, TypeError, KeyError):
+        return {}
+    found = {}
+    for doc_id, entry in bundle.manifest.items():
+        source = str(entry.get("source", "")).replace("\\", "/")
+        if source in numbers:
+            found[doc_id] = numbers[source]
+    return found
+
+
+def evidence_rows(section: str) -> list[tuple[str, str, list[str], str]]:
+    """Parsed '## Evidence' lines as (document id, location note, component ids, quote)."""
+    rows = []
+    for line in section.splitlines():
+        match = re.match(r'^\s*[-*]\s*(D\d{2,3})\b(.*?):\s*["“](.+)["”]\s*$', line)
+        if not match or "TODO" in line:
+            continue
+        doc_id, where, quote = match.groups()
+        tag = re.search(r"\[\s*(c\d{1,2}(?:\s*,\s*c\d{1,2})*)\s*\]", where, re.I)
+        ids = re.findall(r"c\d{1,2}", tag.group(1).lower()) if tag else []
+        rows.append((doc_id, re.sub(r"\[[^\]]*\]", "", where).strip().strip("()").strip(), ids, quote))
+    return rows
+
+
+def fenced(text: str) -> str:
+    """A box's exact text, fenced so Markdown neither renders nor reflows it."""
+    mark = "```"
+    while mark in text:
+        mark += "`"
+    return f"{mark}text\n{text.strip()}\n{mark}"
+
+
+def unwrapped(text: str) -> str:
+    """Join a file's wrapped lines into paragraphs, so a pasted box has no break mid-sentence. The
+    reasoning keeps its lines: the form reads them as steps."""
+    paragraphs = re.split(r"\n\s*\n", text.strip())
+    return "\n\n".join(" ".join(line.strip() for line in p.splitlines() if line.strip()) for p in paragraphs)
+
+
+def form_fields(meta: dict, sec: dict, bundle: Bundle) -> str:
+    """Every task-form field of one question in the form's order (Edit Task page, 2026-10-07):
+    Question, Number of asks, Gold answer, Step-by-step reasoning, Answer components, Evidence,
+    Necessary documents, Reasoning tags, Targeted failure modes. Local ids become Doc numbers."""
+    numbers = platform_numbers(bundle)
+
+    def doc(doc_id: str) -> str:
+        name = Path(bundle.manifest.get(doc_id, {}).get("source", "?")).name
+        return f"Doc {numbers[doc_id]} ({name})" if doc_id in numbers else f"{doc_id} ({name}; page number unknown)"
+
+    comps, _ = components(sec.get("components", ""))
+    index = {cid: n for n, cid in enumerate(comps, 1)}
+    asks = meta.get("asks", "?")
+    out = ["### Question\n\n" + fenced(unwrapped(sec.get("question", ""))),
+           "### Number of asks\n\n" + ("1 ask" if asks == "1" else f"{asks} asks"),
+           "### Gold answer\n\n" + fenced(unwrapped(sec.get("answer", ""))),
+           "### Step-by-step reasoning\n\n" + fenced(sec.get("reasoning", "")),
+           "### Answer components\n\n" + "\n\n".join(f"Component {n}\n\n{fenced(comps[cid])}"
+                                                     for cid, n in index.items())]
+    # The form attaches each quote to one component, so a quote tagged [c1, c2] is two rows.
+    rows = [(doc_id, where, cid, quote) for doc_id, where, ids, quote in evidence_rows(sec.get("evidence", ""))
+            for cid in ids or ["?"]]
+    out.append("### Evidence\n\n" + "\n\n".join(
+        f"Evidence {n}: document {doc(doc_id)}, proves component "
+        + (f"{index[cid]}. {comps[cid]}" if cid in index else f"{cid} (not listed)")
+        + (f" (local note: {where})" if where else "") + "\n\n" + fenced(unwrapped(quote))
+        for n, (doc_id, where, cid, quote) in enumerate(rows, 1)))
+
+    documents = list(dict.fromkeys(re.findall(r"\bD\d{2,3}\b", meta.get("documents", ""))))
+    parsed, bad = necessary_documents(sec.get("necessary documents", ""))
+    if not parsed or bad:
+        parsed = [{"ids": [doc_id], "role": "Answer component", "role_text": "Answer component", "note": ""}
+                  for doc_id in documents]
+    lines = []
+    for group in parsed:
+        role = group["role"] or group["role_text"]
+        first, rest = group["ids"][0], group["ids"][1:]
+        line = f"- Tick {doc(first)}, role: {role}"
+        if rest:
+            line += (f"; also tick {', '.join(doc(d) for d in rest)} and choose it in {doc(first).split(' (')[0]}'s "
+                     "\"or...\" box")
+        lines.append(line)
+        if group["note"]:
+            lines.append("\n  Reviewer note:\n\n" + fenced(unwrapped(group["note"])))
+    others = sorted((d for d in bundle.live_ids() if d not in documents), key=lambda d: (numbers.get(d, 999), d))
+    lines.append("\nLeave unticked: " + (", ".join(doc(d) for d in others) or "none"))
+    out.append("### Necessary documents\n\n" + "\n".join(lines))
+
+    tags = {norm(tag) for tag in items(meta.get("tags", ""))}
+    out.append("### Reasoning tags\n\nTick: " + ", ".join(t for t in FORM_TAGS if norm(t) in tags)
+               + "\n\nLeave unticked: " + (", ".join(t for t in FORM_TAGS if norm(t) not in tags) or "none"))
+
+    modes_text = sec.get("targeted failure modes", "")
+    modes = failure_modes(modes_text) if modes_text and "TODO" not in modes_text else []
+    if not modes:
+        out.append("### Targeted failure modes\n\nMISSING: write 1-3 in the question file's "
+                   "'## Targeted failure modes'. The form blocks Submit without them.")
+    else:
+        blocks = []
+        for n, mode in enumerate(modes, 1):
+            total, _ = failure_words(mode)
+            trap = form_choice(mode.get("trap", ""), FAILURE_TRAPS) or mode.get("trap", "?")
+            cause = form_choice(mode.get("cause", ""), FAILURE_CAUSES) or mode.get("cause", "?")
+            blocks.append(f"#### Failure mode {n}\n\nTrap: {trap}\n\n{FAILURE_FIELDS['cause']}: {cause}\n\n"
+                          + "\n\n".join(f"{FAILURE_FIELDS[key]}:\n\n{fenced(unwrapped(mode.get(key, '')))}"
+                                        for key in FAILURE_BOXES)
+                          + f"\n\n({total} words across the three boxes; the form needs at least {FAILURE_WORDS}.)")
+        out.append("### Targeted failure modes\n\n" + "\n\n".join(blocks))
+    return "\n\n".join(out) + "\n"
+
+
+def handover(bundle_path: Path, only: list[str] | None = None) -> int:
+    """Write notes/handover-qNN.md: every form field of a live question, ready to paste. Any origin
+    is handed over with its authorship stated; it is never a submission. Exit 1 on any FAIL."""
+    bundle = Bundle(bundle_path)
+    files = [p for p in bundle.questions() if not only or p.stem in only]
+    if not files:
+        print(f"No question files under {bundle_path / 'questions'}" + (f" matching {only}" if only else "") + ".")
+        return 1
+    numbers = platform_numbers(bundle)
+    worst = 0
+    for path in files:
+        meta, sec, found = check(path, bundle)
+        status = meta.get("status", "?")
+        if status in {"template", "dropped"} | FROZEN:
+            print(f"{path.stem}: status {status}; no hand-over (frozen or not live)")
+            continue
+        fails = [f"{code}: {message}" for level, code, message in found if level == "FAIL"]
+        warns = [f"{code}: {message}" for level, code, message in found if level == "WARN"]
+        ids = sorted(set(re.findall(r"\bD\d{2,3}\b", meta.get("documents", "")))
+                     | {row[0] for row in evidence_rows(sec.get("evidence", ""))})
+        mapping = ", ".join(f"{d} = Doc {numbers[d]}" if d in numbers else f"{d} = unknown" for d in ids)
+        origin = meta.get("origin", "?")
+        head = [f"# {bundle.path.name} {path.stem} hand-over", "",
+                f"Generated {datetime.date.today().isoformat()} by `python tools/check_questions.py "
+                f"tasks/{bundle.path.name} --handover --q {path.stem}` from questions/{path.stem}.md. Regenerate it "
+                "after any edit. It is not a submission.", "",
+                f"- Status {status}, revision {meta.get('revision', '?')}, difficulty_target "
+                f"{meta.get('difficulty_target', 'hard (legacy)')}, origin {origin}.",
+                f"- tested_sha256 {submission_sha256(meta, sec, bundle)}: question, number of asks, answer, answer "
+                "type, components, reasoning, evidence, documents"
+                + (", their roles" if sec.get("necessary documents", "").strip() else "")
+                + ", tags, target and corpus. Targeted failure modes are outside it"
+                + ("." if sec.get("necessary documents", "").strip()
+                   else ", and so are the default Answer component roles shown below."),
+                f"- Local ids and the task page's numbers: {mapping}.",
+                f"- Floor: {len(fails)} FAIL, {len(warns)} WARN."]
+        head += [f"  - FAIL {item}" for item in fails] + [f"  - WARN {item}" for item in warns]
+        if origin.lower() != "user":
+            head.append(f"- Authorship: origin {origin}. The form's authorship and AI-use statements are the "
+                        "user's to make; the export sheet takes origin user only.")
+        if status == "draft":
+            head.append("- DRAFT: not locally checked. Use it for a quick test or a look at the form only.")
+        if fails:
+            head.append("- NOT READY TO PASTE: fix every FAIL first.")
+        head += ["", "Paste each block into the form field of the same name, replacing what the field holds. Copy "
+                 "only the text inside each box. On the platform, an edit to the question, answer or necessary "
+                 "documents needs a new difficulty result.", ""]
+        out = bundle.path / "notes" / f"handover-{path.stem}.md"
+        out.parent.mkdir(exist_ok=True)
+        out.write_bytes(("\n".join(head) + "\n" + form_fields(meta, sec, bundle)).encode("utf-8"))
+        print(f"Wrote {out.as_posix()}: {path.stem} {status} rev {meta.get('revision', '?')}, "
+              f"{len(fails)} FAIL, {len(warns)} WARN")
+        worst = max(worst, 1 if fails else 0)
+    return worst
+
+
 def export(bundle_path: Path, root: Path = ROOT) -> int:
     bundle = Bundle(bundle_path)
     blocks, skipped = [], []
@@ -906,18 +1243,7 @@ def export(bundle_path: Path, root: Path = ROOT) -> int:
             if meta.get("status") != "template":
                 skipped.append(f"{path.stem} ({meta.get('status', '?')}{'; ' + fails[0] if fails else ''})")
             continue
-        documents = []
-        for doc_id in re.findall(r"\bD\d{2,3}\b", meta.get("documents", "")):
-            documents.append(f"- {doc_id} - {bundle.manifest.get(doc_id, {}).get('source', '?')}")
-        evidence = "\n".join(line for line in sec["evidence"].splitlines() if re.match(r"^\s*[-*]\s", line))
-        comps, _ = components(sec.get("components", ""))
-        listed = "\n".join(f"- {cid}: {value}" for cid, value in comps.items())
-        tags = "; ".join(items(meta.get("tags", "")))
-        blocks.append(f"## {path.stem}\n\n### Question\n\n{sec['question']}\n\n### Gold answer\n\n{sec['answer']}\n\n"
-                      f"### Answer components\n\n{listed}\n\n"
-                      f"### Step-by-step reasoning\n\n{sec['reasoning']}\n\n"
-                      f"### Evidence to attach (each to the component in brackets)\n\n{evidence}\n\n"
-                      f"### Reasoning tags\n\n{tags}\n\n### Documents relied on\n\n" + "\n".join(documents) + "\n")
+        blocks.append(f"## {path.stem}\n\n" + form_fields(meta, sec, bundle))
     if not blocks:
         print("Nothing to export: no question is ready with a clean floor.")
         print("\n".join(f"  skipped {s}" for s in skipped))
@@ -927,10 +1253,11 @@ def export(bundle_path: Path, root: Path = ROOT) -> int:
     out.parent.mkdir(exist_ok=True)
     head = (f"# {slug} - submission sheet\n\nGenerated {datetime.date.today().isoformat()} by "
             f"tools/check_questions.py from tasks/{slug}/questions/. Ready questions only, each field "
-            "exactly as checked. Paste each field into the task form and attach the evidence passages with "
-            "'Add selection as evidence'.\n\nTick the form's 11 'Before you submit' items yourself. The floor, "
-            "blind solve and review cover the rule checks; looking at every document and figure, re-doing "
-            "the calculation from the evidence alone, and having written the question are yours to confirm.\n")
+            "exactly as checked and in the form's order. Paste each field into the task form, replacing what it "
+            "holds, and attach each evidence passage to its component.\n\nConfirm any statements the form asks "
+            "you to tick yourself. The floor, blind solve and review cover the rule checks; looking at every "
+            "document and figure, re-doing the calculation from the evidence alone, and having written the "
+            "question are yours to confirm.\n")
     out.write_bytes(("\n---\n\n".join([head] + blocks)).encode("utf-8"))
     print(f"Wrote {out.relative_to(root).as_posix()}: {len(blocks)} question(s).")
     if skipped:
@@ -973,6 +1300,8 @@ def main(argv: list[str]) -> int:
     parser.add_argument("bundle", nargs="?", type=Path, help="tasks/<slug>")
     parser.add_argument("--q", nargs="+", metavar="QID", help="check only these question ids")
     parser.add_argument("--export", action="store_true", help="write dist/<slug>.md from ready questions")
+    parser.add_argument("--handover", action="store_true",
+                        help="write notes/handover-qNN.md with every form field, in the form's order")
     parser.add_argument("--status", action="store_true", help="list every bundle's questions by status")
     parser.add_argument("--hook", action="store_true", help="run as a PostToolUse hook")
     args = parser.parse_args(argv)
@@ -984,6 +1313,10 @@ def main(argv: list[str]) -> int:
         parser.error("give a bundle (tasks/<slug>) or --status")
     if not args.bundle.is_dir():
         parser.error(f"{args.bundle} is not a directory")
+    if args.export and args.handover:
+        parser.error("choose --export or --handover")
+    if args.handover:
+        return handover(args.bundle, args.q)
     return export(args.bundle) if args.export else check_bundle(args.bundle, args.q)
 
 

@@ -37,7 +37,9 @@ automatically validate final fields. Follow the actual form's budget, never an o
 
 Promote viable sketches; write full components, reasoning, tags and verbatim evidence. Calculate
 twice, with a script/calculator or independent derivation for one check; verify inputs/units/signs
-and precision. Record date counting convention. For membership check all candidates/exclusions.
+and precision. Also write the form's 1-3 Targeted failure modes (trap and cause from its lists, each
+trap once, three boxes of 150+ words together) for traps whose wrong answers you recomputed, and a
+document role when it is not an answer component. Record date counting convention. For membership check all candidates/exclusions.
 Reject direct whole-answer lookup, one sufficient source, unsupported premises or defensible
 alternate answers. Search finding inputs/IDs is allowed; there is no vague "trivial route" veto.
 
@@ -67,6 +69,10 @@ Do not force diversity on the best single question or restyle content to hide au
 Use only bundle facts, arithmetic and ordinary word meanings. Record origin gpt/user+gpt accurately;
 user-origin is for user writing. User-only export remains. Freeze submitted/accepted question files;
 later findings go in notes/feedback-qNN.md. Sheets are not submissions.
+
+Hand over the whole form every time, in its order: Question, Number of asks, Gold answer,
+Step-by-step reasoning, Answer components, Evidence, Necessary documents (roles), Reasoning tags,
+Targeted failure modes. Use the task page's Doc numbers (`check_questions.py --handover` does this).
 
 Keep checkpoints under 4,000 characters: phase, target, read coverage/gaps, hook families, sketch
 decisions, states, rounds and next action. After ineffective revisions try a different hook; bounded

@@ -17,6 +17,9 @@ packet; never pass this writer's conversation, gold answer, notes, selected evid
 Read the applicable role prompt explicitly. Give a closed-book worker only the question and
 no tools/files, and an independent reviewer the frozen fields plus raw returns.
 
+Hand over every form field, failure modes included, with
+`python tools/check_questions.py tasks/<slug> --handover --q qNN` (notes/handover-qNN.md).
+
 For tool changes run `python tools/test_docket_tools.py` and `python tools/test_docket_agent.py`.
 Use [tools/docket_agent.py](tools/docket_agent.py) to screen sketches, prepare final checks,
 report current evidence and replay historical rejections without modifying them. Known source

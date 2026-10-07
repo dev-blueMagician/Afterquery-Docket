@@ -96,7 +96,17 @@ automatically into a final exact-content tier pass. No platform access leaves th
 Promote viable sketches to `questions/qNN.md`, with accurate origin, explicit target and revision.
 Write all form fields, components, tagged verbatim evidence and the full source-to-answer path.
 Each necessary document must contribute an indispensable input after searching the rest of the
-bundle for duplicate/substitute evidence.
+bundle for duplicate/substitute evidence. A document that is not an answer component gets its form
+role ("Used to identify", or "Exclusion / condition source" with the reviewer note) in
+`## Necessary documents`; documents carrying the same fact may be grouped with "or".
+
+The form also requires 1-3 Targeted failure modes (2026-10-07). Write them in
+`## Targeted failure modes` once the lever checks prove each trap. Each mode gives one trap from the
+form's list (each trap at most once), one "How a careless solver fails" cause, and three boxes with
+150+ words together: where the trap sits (Doc N and the passage), the exact wrong answer and how it
+arises, and why the gold avoids it. Declare only traps the question really sets, never a slip its
+wording already rules out. Recompute each wrong answer in Lever checks. Failure modes sit outside the
+fingerprint, like Lever checks, but the independent review checks them.
 
 Calculate once from the passages, then independently recalculate using a script/calculator or
 another derivation. Verify input choice, units, signs and rounding as well as arithmetic. For date
@@ -213,7 +223,18 @@ reject the best single question. Record set decisions before hand-over.
 ## 10. Hand-over, feedback and state
 
 `python tools/docket_agent.py report tasks/<slug> --q qNN` reports evidence read-only.
-`python tools/check_questions.py tasks/<slug> --export` writes ready user-origin sheets from checked
+Hand over with `python tools/check_questions.py tasks/<slug> --handover --q qNN`. It writes
+`notes/handover-qNN.md` with every form field in the form's order: Question, Number of asks, Gold
+answer, Step-by-step reasoning, Answer components, Evidence (one row per component, with Doc N),
+Necessary documents (role, alternatives, unticked rest), Reasoning tags (tick and leave unticked) and
+Targeted failure modes. It maps local ids to the task page's Doc numbers from `notes/intake.json`,
+states the origin and floor result, and exits 1 on a FAIL. Give the user the whole set of fields
+every time, not only the changed ones, and say which form state they replace. The platform's run
+history says "any edit to the question, answer or necessary documents needs a new result" and names no
+other field. After pasting, check the difficulty panel before submitting: on 2026-10-07 the same page also
+called its passing result "for an earlier version". Record a pass only when the page shows no such
+conflict. Locally, any change inside the fingerprint is still a new revision with fresh checks.
+`python tools/check_questions.py tasks/<slug> --export` writes ready user-origin sheets with the same
 fields. Other origins remain accurate and their export restriction is reported. A sheet is not
 a submission. Freeze the entire question file on confirmed submission/acceptance; later findings
 and platform status observations go into `notes/feedback-qNN.md`.
