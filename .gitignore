@@ -1,0 +1,10 @@
+dist/
+__pycache__/
+.pytest_cache/
+# machine-specific: holds this host's absolute autoMemoryDirectory path
+.claude/settings.local.json
+# runtime state: session lock and the read-guard bindings that prepare rewrites on every run
+.claude/scheduled_tasks.lock
+.claude/solver-scope.json
+.claude/solver-scope.lock
+.claude/solver-scope.*.tmp

@@ -1,0 +1,27 @@
+# aq-01321 - cross-document hooks
+
+Find facts that combine into a world answer before drafting wording. Record sources/locations,
+input quantities and units/periods, the relationship, a possible ask and one or two selected levers.
+Local ids (Dnn) differ from platform Doc numbers: D01-D03 = Doc 1-3 (ADI), D04 = Doc 6, D05 = Doc 4,
+D06 = Doc 5 (Microchip), D07 = Doc 11, D08 = Doc 12, D09 = Doc 10 (onsemi), D10 = Doc 8, D11 = Doc 9,
+D12 = Doc 7 (TI). Line numbers refer to text/Dnn.txt. Caller notes, 2026-10-06, after a full read.
+
+Bundle shape: four unrelated chipmakers, three consecutive earnings releases each, no cross-references.
+Every outlook is next-quarter only (one edition per forecast period), so the measured aq-00964 edition
+trap (same-label forecast revised in a later edition) has no direct analogue. Dated events are only
+dividend dates, Microchip's intra-quarter guidance updates (D05 L8-12) and release dates.
+
+| Hook | Source inputs and locations | World fact/possible ask | Selected lever(s) | Applicable decoy/counterfactual | Source risks | Decision |
+| --- | --- | --- | --- | --- | --- | --- |
+| h1 | D06 L46 "From the high point at the end of December 2024, we have now reduced the inventory by $320.9 million" (March-quarter release; same paragraph's "reduced inventory by $22.3 million" matches balance sheet 1,057.7 -> 1,035.4); D06 L229 inventories 1,035.4 (Mar 31, 2026); D04 L203 inventories 1,047.3 (Jun 30, 2026). D04 L36 says days of inventory fell 185 -> 175 though dollars rose 11.9 | Dec-2024 peak 1,356.3 (derived); decline to Jun 30, 2026 = 309.0 ($M) or 22.8% | Scatter the pieces; stale same-label figure (aq-00964-like timing) | Printed 320.9 is "as of now" = Mar 31, 2026; stale route 320.9 / 23.7%; now=June route 23.5%; Mar-2025 base (1,293.5) 246.2 / 19.0% | Dec-2024 balance never printed; public Dec-2024 balance may be recalled (~1.36B) by strong models; Jun-2026 figure post-cutoff | sketch i01 |
+| h2 | Quarter end dates: ADI FQ2 ended May 2, 2026 (D02 L13), FQ3 Aug 1 (D03 L13); onsemi Q1 ended April 3, 2026 (D07 L119, D08 L121), Q2 July 3; Microchip and TI quarters end Jun 30. Revenue: ADI FQ2 3,623,465 (thousands, D02 L126; also D03 TTM L337); MCHP 1,484.7 (D04 L167); TXN 5,463 (D11 L59); ON Q1 1,513.3 (D07 L120, D08 L122) | Combined revenue of each company's fiscal quarter that ended in Apr-Jun 2026 = 12,084.5 ($M) | Temporal alignment; unit normalization; aggregation | ON Q2 (1,603.5, ended Jul 3) -> 12,174.7; ADI FQ3 (4,021.9) -> 12,482.9 | ADI and ON inputs duplicated across releases (only D04, D11 individually necessary); prose rounding splits fine precision (state $B to one decimal) | sketch i02 |
+| h3 | onsemi Q2 2026 outlook (D07 L66-73: revenue 1,535-1,635; GAAP GM 37.9-39.9%; non-GAAP 38.0-40.0%; GAAP opex 302-317; non-GAAP 287-302; GAAP EPS 0.60-0.72; non-GAAP 0.65-0.77) vs actuals (D08 L44-48, L257-354). CEO: "revenue, gross margin and earnings per share above the midpoint of guidance" (D08 L23) | Ranged measures that came in below midpoint: GAAP gross margin (38.4 vs 38.9) and GAAP EPS (0.56 vs 0.66; also below the range) | Mentions it vs does it (claim true only on non-GAAP) | Decoy: CEO claim; non-GAAP GM 39.3 / EPS 0.74 above | Opex "below midpoint" sign semantics; points (OI&E, shares) are not ranges | sketch i03 |
+| h4 | Microchip FY2026 FCF 871.0 and net sales 4,713.1 (D06 L66, L408); Q1 FY27 FCF 497.6 / 1,484.7 and Q1 FY26 257.7 / 1,075.5 (D04 L167, L354) | TTM FCF to Jun 30, 2026 = 1,110.9; margin 21.69% | Calculate across documents; state the rounding | Printed FY margin 18.5%, quarter 33.5% | Standard roll-forward (low model knows it) | sketch i04 (Easy-leaning) |
+| h5 | onsemi Q2 outlook midpoints (D07 L68-70) vs Q2 non-GAAP operating income 334.1 (D08 L291) | Implied non-GAAP OI at midpoints 323.65; beat 10.45 | Calculate across documents | Prose "above midpoint" | Method set by question (procedure) | hold |
+| h6 | ADI end-market revenue reclassified each edition: Q1 FY26 Communications 476,797 (D01 L256) vs 1,009,911 - 554,728 = 455,183 implied by D02 (L264, L256); H1 again restated in D03 (L269 minus L261) | Restated figures | Same series, right edition | Original vs restated | Two defensible bases unless the question names the edition (then no trap) | reject (ambiguity) |
+| h7 | TI CHIPS Act: FCF adds proceeds (D10 L218, D11 L218); CFO includes ITC benefit (footnotes D11 L224, supplemental L181-183, D10 L181-183) | FCF ex all CHIPS support, H1 2026 = 4,137 - 1,405 = 2,732 | Footnoted remainder | Proceeds-only removal 3,033 | "Total cash benefit" row prints the sum; wording must name CHIPS | hold |
+| h8 | Microchip net debt (LTD - cash & ST inv.): Dec 31, 2025 5,115.3 (D05 L203, L214), Mar 31 5,256.1 (D06), Jun 30 5,089.0 (D04); prose "$26 million" (D05 L38), "approximately $170 million" (D04 L18) | Mar-quarter change +140.8 | Prose vs table | Dec-Jun change 26.3 coincides with D05's "$26 million" (removal risk) | Sep-2025 balance absent | reject Dec-Jun window; hold Mar quarter |
+| h9 | TI FY2025 (D12) and TTM tables (D10, D11) rebuild Q3 2025 (revenue 4,742; FCF 1,068) | Carve-out | Scatter the pieces | none printed | Q3 2025 figures are public before the closed-book cutoff | reject |
+
+The map is navigation; quotes come from originals/extracted sources. A short valid calculation
+or ID join is eligible. Prior failures suggest tests/priority, not a universal veto.

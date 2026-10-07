@@ -1,0 +1,51 @@
+{
+  "bundle": "aq-01333",
+  "corpus_sha256": {
+    "docs/hewlett-packard-enterprise-company-q1-fy2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-03-09.txt": "377e7e2aa29e311fdd44c15b111cb635db38bc3d55c01959c2ac25c46f053fa9",
+    "docs/hewlett-packard-enterprise-company-q2-fy2025-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2025-06-03.txt": "dfbc76fb25d0393d6626e30e93b429991a5b8e1a7b7095aa708c09edfe96b518",
+    "docs/hewlett-packard-enterprise-company-q2-fy2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-06-01.txt": "052956c7223ae2bfce5b7dc0b3c3b8e9e07628c49e50efb7d1d8077812d90e0e",
+    "docs/hewlett-packard-enterprise-company-q3-fy2025-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2025-09-03.txt": "34b66a6a21a6daac9fc5830dc12849833ae163a5b8d6b929dbf88591e45ca036",
+    "docs/hewlett-packard-enterprise-company-q3-fy2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-09-02.txt": "c083ef59b32abd4cbae7c5284f88e328b21d6583cdf34f9f32a1e1f841324fdc",
+    "docs/hewlett-packard-enterprise-company-q4-fy2025-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2025-12-04.txt": "9a6f88516ad0c5274a353b66b4232405edf8d344e50a06be65181d0b94991aaf",
+    "text/D01.txt": "0941f71457a6ae635c532d38611b1674f9e8df443ad0e0e0aedb028bf3671147",
+    "text/D02.txt": "534835219f0e905d8c12ca9b76ecb48cc84a36e3e7eff8f23ae3800b9fd49edc",
+    "text/D03.txt": "937974a4a8aa3374263adb455f80f21ef3ebf63db7900ba0c98ad26bd125d1d8",
+    "text/D04.txt": "b2be7b4b38d827d7501ec49df259dfe252a68ad19e03c0925fdcbcaa3415f071",
+    "text/D05.txt": "79b591ed679c1f427f2ed72a93f6692096d64e29b3813f52cfd72caf619f3069",
+    "text/D06.txt": "a81289c86e28640daa1fb1ebdf7f44566c305543c17eb1e182379bf3c53f2bb3",
+    "text/manifest.json": "4dc8eaabf5fa0d46991d399171a3a248d4bd9eaa69838feb3b9709ad32de4e44"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "7a537613740ae6f24893b274754bd0fe4f040ebfca23eb44e3ffbabc0c2833aa",
+  "independence": "One fresh context per packet. No writer history or shared memory.",
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D02, D06",
+    "id": "q03",
+    "levers": "Same series, right edition; Calculate across documents",
+    "origin": "claude",
+    "revision": "0",
+    "status": "draft",
+    "tags": "Temporal alignment; Cross-document join"
+  },
+  "question_id": "q03",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "9.3 percentage points",
+    "blind solve": "",
+    "components": "- c1: 9.3 percentage points",
+    "evidence": "- D04 (l.69, Close of Juniper Networks Acquisition; Doc 2; bridge, not marked) [c1]: \"HPE closed its acquisition of Juniper Networks Inc. on July 2, 2025.\"\n- D04 (l.15, dateline; Doc 2; not marked) [c1]: \"HOUSTON – September 3, 2025 – HPE (NYSE: HPE) today announced\"\n- D02 (l.15, dateline; Doc 1) [c1]: \"HOUSTON – June 3, 2025 – Hewlett Packard Enterprise (NYSE: HPE) today announced\"\n- D02 (l.65, Fiscal 2025 Outlook; Doc 1) [c1]: \"non-GAAP operating profit(1)(4) growth to be negative 7% to 0%\"\n- D06 (l.15, dateline; Doc 3) [c1]: \"HOUSTON – December 4, 2025 – HPE (NYSE: HPE) today announced financial results for the fourth quarter ended October 31, 2025.\"\n- D06 (l.243, year-ended non-GAAP reconciliation, columns October 31, 2025 then October 31, 2024; Doc 3) [c1]: \"Non-GAAP earnings from operations $3,353 $3,168\"\n- D04 (l.65, Fiscal 2025 Outlook; Doc 2; decoy) [c1]: \"non-GAAP operating profit(1)(5) growth to be 4% to 7%\"",
+    "feedback log": "",
+    "lever checks": "- Platform document numbers: D01 = Doc 4, D02 = Doc 1 (Q2 FY25, June 3, 2025), D03 = Doc 5, D04 = Doc 2 (Q3 FY25, September 3, 2025), D05 = Doc 6, D06 = Doc 3 (Q4 FY25, December 4, 2025). Reasoning uses platform numbers.\n- Origin and family: sketch i03 from the independent question-author (Claude subagent, run 2, 2026-10-06), promoted by the caller with reworded question and form-shaped reasoning. origin claude. One untied edition trap (aq-00964 q01 layout), target medium; measured platform result pending. The closing is reported in Doc 2 directly below Doc 2's own fiscal 2025 outlook, which postdates it. Doc 2 has no \"updates guidance to reflect\" tie and no \"raising\"/\"previously\" wording on this range, but its narrative is built around the closing (D04 l.17-19). Author tier estimate (local only): Too easy 15%, Easy 35%, Medium 35%, High/Too hard 15%.\n- Dependency plan: closing July 2, 2025 (D04 l.69) -> last fiscal 2025 outlook issued before it = D02 (June 3, 2025), non-GAAP operating profit growth -7% to 0%, midpoint -3.5% -> actual FY25 non-GAAP earnings from operations 3,353 vs FY24 3,168 (D06 l.243) -> growth 5.8396% -> 5.8396 + 3.5 = 9.3396 -> 9.3 percentage points.\n- Universe: fiscal 2025 non-GAAP operating profit growth ranges in the bundle: D02 l.65 (June 3, 2025) -7% to 0%; D04 l.65 (September 3, 2025) 4% to 7%. The other \"non-GAAP operating profit growth\" outlooks are fiscal 2026 (D06 l.65, D01 l.79, D03 l.81, D05 l.87). No document prints actual fiscal 2025 non-GAAP operating profit growth.\n- Necessity: D02 is the only source of the June range. Without it the only fiscal 2025 range left is D04's, giving 0.3. D06 is the only source of FY24 non-GAAP earnings from operations (3,168; Q4 FY24 938 appears only in D06, and D04 has only the nine-month FY24 2,230). Without it the base is missing. FY25's 3,353 can be rebuilt from D04 2,170 + D01 1,183, but FY24 cannot. D04 is not marked: the closing date is public and unique, and without D04 the June range is the only fiscal 2025 range, so the gold is unchanged (same handling as q01's D03).\n- Selected-lever checks: Same series, right edition: D04's own 4%-7% (midpoint 5.5%) gives 0.34 -> 0.3. Calculate across documents: the growth is built from two full-year rows in D06 and compared with D02's range. Other wrong routes: nine-month growth 2,170 / 2,230 gives 0.8; rounding growth to 6% gives 9.5; fiscal 2026 ranges are excluded by \"fiscal 2025\".\n- Calculation verification (Python fractions, 2026-10-06): (3,353 - 3,168) / 3,168 = 5.83965%; + 3.5 = 9.33965 -> 9.3 (0.010 below the 9.35 boundary). Rounding growth to 5.8 or 5.84 first still gives 9.3. Only rounding growth to a whole 6% changes it (9.5). Each input has exactly one stated figure: FY25 3,353 also equals 2,170 + 1,183, and FY24 3,168 equals 2,230 + 938.\n- Semantic/ID/overview probes (2026-10-06): \"Juniper\" with a date occurs only at D04 l.69 (also l.17 \"closing our acquisition\"). \"9.3\", \"5.84\" and \"3.5\" do not occur as answer-shaped figures. The capture overview says Doc 1 \"provided Q3 and full-year FY2025 outlook\" without values, and lists July 2, 2025 and the closing for Doc 2. No overview prints non-GAAP operating profit figures.\n- Closed-book sketch screen (2026-10-06, fresh question-only run): \"about 3.0 percentage points\", low confidence. It misremembered the June 2025 range as 0% to 2% and could not pin fiscal 2025 growth. Misses.\n- Precision/readings: \"percentage points\" is stated. \"That measure\" is non-GAAP operating profit growth, defined as non-GAAP earnings from operations (D02 l.99, \"non-GAAP operating profit (non-GAAP earnings from operations)\"). The base year is fiscal 2024 (D06 FY24 column). \"On the day HPE closed\" fixes July 2, 2025.\n- Completeness: intake.json records no gaps, and the map covers every line.\n- Style/set review: 44 words, one ask. Overlap with every workspace question has ratio at most 0.25 and longest shared run 4 tokens. Different document pair from q01/q02 (D01+D05). Same lever family as q01 but a different event, fiscal year, metric and edition. Neither gives the other away.\n- Warnings answered: D04 is quoted but not listed (bridge and decoy only, see Necessity). The Doc 3 inputs exist only in a pipe-table row, quoted in the platform's space-separated form (form verbatim check unconfirmed). Doc 3 also has a prose dateline quote, so \"Necessary documents cited\" holds either way; use Save passage for the table row at hand-over. origin claude: the export tool accepts only origin user, and the form's \"I wrote this question myself.\" cannot be ticked truthfully for this content.",
+    "question": "On the day HPE closed its Juniper Networks acquisition, it had a forecast range for fiscal 2025 non-GAAP operating profit growth. How many percentage points above that range's midpoint did HPE's actual fiscal 2025 growth in that measure come in? Give one decimal place.",
+    "reasoning": "Step 1. Doc 2: \"HPE closed its acquisition of Juniper Networks Inc. on July 2, 2025.\" This release is dated September 3, 2025, so the fiscal 2025 growth range it prints (4% to 7%) was issued after the closing.\nStep 2. Doc 1: this release, dated June 3, 2025, is the last one issued before the closing. Its fiscal 2025 outlook puts \"non-GAAP operating profit(1)(4) growth to be negative 7% to 0%\", so the midpoint lies below zero by 7 / 2 = 3.5 percentage points.\nStep 3. Doc 3: non-GAAP earnings from operations were 3,353 for the year ended October 31, 2025 and 3,168 for the year ended October 31, 2024 (dollars in millions).\nStep 4. Doc 3: the increase was 3,353 - 3,168 = 185.\nStep 5. Doc 3: actual fiscal 2025 growth was 185 / 3,168 = 5.84%.\nStep 6. Doc 1 and Doc 3: actual growth came in above the midpoint by 5.84 + 3.5 = 9.3 percentage points (to one decimal place).\nDecoy (Doc 2): its own range of 4% to 7% was issued on September 3, 2025, after the closing, so it was not the forecast HPE had on the day of the closing.",
+    "review": "",
+    "shortcut audit": ""
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "cd2388480937397810390be7c6ba00347338fc47dea4af1d6ff43cf9d323e8e0"
+}

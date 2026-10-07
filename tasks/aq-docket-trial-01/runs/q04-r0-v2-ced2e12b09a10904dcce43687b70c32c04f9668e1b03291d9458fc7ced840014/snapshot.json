@@ -1,0 +1,52 @@
+{
+  "bundle": "aq-docket-trial-01",
+  "corpus_sha256": {
+    "docs/arxiv_2601_21106v3.txt": "36546247270ea39d3e03dcc3b7ca45f86ad1671738e2d99c3c5b475ffe6ccf80",
+    "docs/arxiv_2606_16460v3.txt": "5f92c8753eac1430e338a7d6012b1c25a9354e9084055ecfa5b2a8406824ba19",
+    "docs/arxiv_2608_05428v1.txt": "47d2a9b6ccd68dfa935509f45c90200051b9f3970ad5da1de8503d91459891bc",
+    "docs/arxiv_2608_19879v1.txt": "3b6c94d162aa8f4e91854b604ff4b06480c3f7860a8e180cb0f76b0118bf7460",
+    "docs/arxiv_2608_25172v1.txt": "3afa3460083e77c79546ebe8303130fe38242d54e15adaefb8831094d463fbbb",
+    "docs/arxiv_2608_30374v1.txt": "c5f3f6f034b0b1c3067c64ec077356856ea3032cb9aa795a2b308aeaf6341996",
+    "text/D01.txt": "2aa85e46c443e5e7df835f2ac1188fbae86b2b2dc70c588f3f45d4f3de3e13e0",
+    "text/D02.txt": "6855846c598b493d27dd11e06d98e879a21a1147bc4ddca17e07d5bea71e4806",
+    "text/D03.txt": "1b9a55c9351655d1ddba075f52dd66be2c5a74466ad0b37c22b7168ea23f80e0",
+    "text/D04.txt": "5602769a6a51be146641347707cae70e27ebb758f69ec723d24deb05efcd1b64",
+    "text/D05.txt": "61c1f5cda9bba51d8aa146b1aab01b9c300636d92ee2a5ffe457bdb553f0eb3a",
+    "text/D06.txt": "afe9672e75328a3f55904bc3a1b6f588d62c3ecac362b4eed9001fd4a8e1fb84",
+    "text/manifest.json": "ef36f02f724b7e3b03b841c53cd3fcab5ca454fcfe4d27d67f2e195b3bc3a02c"
+  },
+  "difficulty_target": "easy",
+  "form_sha256": "a2bde84f5996ca826f9a649ea4b553ef666aaeb7bacbc93812307892063de583",
+  "independence": "One fresh context per packet. No writer history or shared memory.",
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "easy",
+    "documents": "D02, D05",
+    "id": "q04",
+    "levers": "Scatter the pieces; Calculate across documents",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i16",
+    "status": "draft",
+    "tags": "Cross-document join; Unit normalization; Conditional filter"
+  },
+  "question_id": "q04",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "11.0 percentage points",
+    "blind solve": "",
+    "components": "- c1: 11.0 percentage points",
+    "evidence": "- D02 (Appendix A, text line 723) [c1]: \"For the autoimmune disease dataset, the top 3000 genes ranked by MAD were retained.\"\n- D02 (Appendix A, text line 723) [c1]: \"The dendrogram was cut at r0 = 0.3, and modules containing fewer than\"\n- D02 (Appendix A, text line 725) [c1]: \"20 genes were removed. This resulted in 979 genes grouped into 19 modules.\"\n- D02 (Appendix A, text line 725) [c1]: \"The selected model had K = 9 and q = 8.\"\n- D05 (Sec. 6, text line 783) [c1]: \"contains expression measurements for 3,592 in-tissue Visium spots and 33,538 gene features\"\n- D05 (Sec. 6, text line 783) [c1]: \"retain genes with positive expression in at least 20 spots\"\n- D05 (Sec. 6, text line 783) [c1]: \"The low-expression filtering retains 14,638 genes.\"",
+    "feedback log": "",
+    "lever checks": "- Platform document numbers: local D01-D06 are the task page's Doc 1-6 in the same order, so reasoning \"Doc N\" equals local Dnn. Lines are text/Dnn.txt lines (original line + 2).\n- Family and target: modelled on aq-docket-trial-02 q01 and aq-docket-trial-06 q02 at the user's request (2026-10-06): a percentage at a stated precision built from figures no passage prints, where the base of one share is a remainder stated only in an appendix; target easy (user: \"it's okay if accept in even Low tier\"). Measured platform result pending.\n- Dependency plan: D02 Appendix A (723-725): 3000 genes retained by the MAD ranking -> dendrogram cut -> modules with fewer than 20 genes removed -> 979 genes in 19 modules -> selected model K = 9, q = 8 (also 447, Table 4 at 585) -> 979 / 3000 = 32.633%. D05 Sec. 6 (783): 33,538 gene features -> filter keeps genes expressed in at least 20 spots -> 14,638 genes -> 14,638 / 33,538 = 43.646%. Difference 11.0127 -> 11.0 percentage points.\n- Universe: not applicable (single value).\n- Necessity (local ids = platform Doc numbers): without D02 no document gives the autoimmune study's gene counts (D01's 2,194 genes and D05's counts belong to other datasets); without D05 no document gives the brain section's gene counts. The 3000 is printed only in D02 Appendix A (the main text, Sec. 2 \"top p∗ genes\", Sec. 5.1 and Table 4 give no number of MAD-retained genes); its overview entry is navigation, not a document.\n- Selected-lever checks: scatter the pieces: the four counts sit in two documents, and the autoimmune step's starting count (3000) is only in the last lines of D02 (Appendix A), away from the main text's 9,671 and 979; reading the main text alone gives 979 / 9,671 = 10.12% and an answer of 33.5. Other wrong routes (python): the MAD step's share 3000 / 9,671 gives 12.6; the WGCNA run 975 / 979 gives -55.9; the brain HVG analysis 3,000 / 33,538 gives -23.7; reading Sec. 5.5's \"identified 19 gene modules from 979 genes\" as a starting count of 979 gives -56.4. All differ from 11.0. Calculate across documents: two shares from two documents, then a difference.\n- Calculation verification: Python Decimal, half-up: 979 / 3000 = 32.6333%; 14,638 / 33,538 = 43.6460%; difference 11.0127 -> 11.0. Rounding the shares first to one decimal (43.6 - 32.6) or two decimals (43.65 - 32.63 = 11.02) also gives 11.0 at the asked precision; two decimals were rejected because they split 11.01 and 11.02.\n- Semantic/ID/overview probes: no document prints 32.63, 43.65, 11.0, 2,021 or 18,900 (grep of D02 and D05). The capture overview for Doc 2 lists \"top 3000 genes ranked by MAD · 979 genes grouped into 19 modules\" (navigation; both inputs, not the answer); the Doc 5 overview prints none of 33,538 or 14,638.\n- Precision/readings: one decimal stated. Counts are exact integers. Sec. 5.1 \"Small or weakly defined clusters are removed\" names no other criterion; Appendix A attributes the drop from 3000 to 979 to the size rule only.\n- Completeness: capture complete (notes/intake.json, no gap markers); no source gaps.\n- Style/set review: one ask, 45 words, no dashes. Shares inputs with sketch i10 (quick-test batch S3), which asks for a count difference; only one of q04 and i10 should be submitted.\n- Warnings answered: origin claude (export restriction reported at hand-over). The form number rule was emulated (scratchpad form_numbers.py): step 5 computes the difference from printed counts so that every operand is in Doc 5 or Doc 2.",
+    "question": "Measured against the genes each step started from, by how many percentage points did the share kept by the brain spatial-factor study's low-expression filter exceed the share kept by the autoimmune subtype study's removal of undersized modules for its selected model? Give one decimal place.",
+    "reasoning": "1. Doc 2: Appendix A says that \"the top 3000 genes ranked by MAD were retained\", that hierarchical clustering was then applied and the dendrogram cut, that modules with fewer than 20 genes were then dropped (\"20 genes were removed\"), and that \"This resulted in 979 genes grouped into 19 modules\"; \"The selected model had K = 9 and q = 8\". So the removal of undersized modules started from 3000 genes and kept 979.\n2. Doc 2: the share kept by that step is 979 / 3000 = 32.63%.\n3. Doc 5: the analysed tissue section \"contains expression measurements for 3,592 in-tissue Visium spots and 33,538 gene features\", the low-expression filter keeps genes \"with positive expression in at least 20 spots\", and \"The low-expression filtering retains 14,638 genes.\"\n4. Doc 5: the share kept by the filter is 14,638 / 33,538 = 43.65%.\n5. Doc 5 and Doc 2: the brain filter's share exceeds the autoimmune step's share by 100 × 14,638 / 33,538 - 100 × 979 / 3000 = 11.0 percentage points (to one decimal place).\n6. Decoy, Doc 2: the main text gives only the 9,671 measured genes and the 979 in the final analysis set; 979 / 9,671 = 10.12% is the share left after both the MAD ranking and the module removal, not the share kept by the module removal alone.\n7. Decoy, Doc 2: the WGCNA comparison also used a minimum module size of 20 genes and excluded the 4 genes assigned to the grey module, but its modules were not the ones the selected model used; 975 / 979 = 99.59% belongs to that comparison.",
+    "review": "",
+    "shortcut audit": ""
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "ced2e12b09a10904dcce43687b70c32c04f9668e1b03291d9458fc7ced840014"
+}

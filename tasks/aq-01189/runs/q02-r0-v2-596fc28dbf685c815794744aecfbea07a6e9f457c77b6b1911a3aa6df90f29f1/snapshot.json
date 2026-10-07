@@ -1,0 +1,47 @@
+{
+  "bundle": "aq-01189",
+  "corpus_sha256": {
+    "docs/bhp-group-limited-operational-review-for-the-nine-months-ended-31-march-2026-form-6-k-filed-2026-04-22.txt": "eb95007a7a47a70554fba6ab9ef023862c897faccf2caf50f6d77e0dc171a364",
+    "docs/bhp-group-limited-operational-review-for-the-year-ended-30-june-2026-form-6-k-filed-2026-07-17.txt": "d7776a7f45098fa09388178c5a93a28e0f1826ee07b48bccaa0ca178c966a1e6",
+    "docs/freeport-mcmoran-inc-1q-2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-04-23.txt": "893aea68202ae0b057616ab35fedd440dfc8a8beca01d75e80b168f37668d1c1",
+    "docs/freeport-mcmoran-inc-2q-2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-07-23.txt": "1769916c2ce4c82825d8817ab3ce1c06930f611cb411863830e848bca53d2d61",
+    "text/D01.txt": "40bd727c9efcc3adda7cfea8816088b572b41e517d9d96af2c2957f19b5cf797",
+    "text/D02.txt": "de2fc183b30a8e496848f4c820c08e1d468260a18d3df1c8110514ffb29c1bc2",
+    "text/D03.txt": "dd451160d8dcb4fab48f803be44d1af3c2f9a1c057244ec1fa326535fdfd83d8",
+    "text/D04.txt": "91f253f70eedfadcd791d124882f7feb7743441d7ee36b8f300e93bbd3c4ba31",
+    "text/manifest.json": "79b12a4bedd2d43a6641b1792a461a3a334b972856730d8fd7159920fee43a99"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "136b7aa288a22e99d9c410d3989a0dac038235e8f5c6d85d73abad4b0f7088c7",
+  "independence": "One fresh context per packet. No writer history or shared memory.",
+  "metadata": {
+    "answer_type": "list",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D01, D02",
+    "id": "q02",
+    "levers": "Same series, right edition; Match, then exclude",
+    "origin": "claude",
+    "revision": "0",
+    "status": "draft",
+    "tags": "Cross-document join; Temporal alignment; Conditional filter"
+  },
+  "question_id": "q02",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "Pampa Norte (Spence), NSW Energy Coal",
+    "blind solve": "",
+    "components": "- c1: Pampa Norte (Spence)\n- c2: NSW Energy Coal",
+    "evidence": "- D01 (Doc 3, cover date, L17) [c1, c2]: \"22 April 2026\"\n- D01 (Doc 3, Carajás, L123) [c1, c2]: \"The divestment of Carajás to a subsidiary of CoreX Holding was completed on 2 April 2026\"\n- D01 (Doc 3, non-operated assets, L480) [c1, c2]: \"Our non-operated assets include Antamina, Resolution, Samarco and Vicuña.\"\n- D01 (Doc 3, Spence guidance, L107) [c1]: \"Production guidance for FY26 has been lowered to between 210 and 220 kt (from between 230 and 250 kt previously).\"\n- D01 (Doc 3, NSWEC guidance, L138) [c2]: \"Production guidance for FY26 remains unchanged at between 14 and 16 Mt\"\n- D02 (Doc 4, cover date, L17) [c1, c2]: \"16 July 2026\"\n- D02 (Doc 4, Pampa Norte, L153) [c1]: \"Pampa Norte 213 kt\"\n- D02 (Doc 4, NSWEC, L187) [c2]: \"NSWEC exceeding the top end of production guidance in FY26\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: edition bridge on BHP's FY26 guidance (hook h6) plus one exclusion; difficulty_target medium; measured platform result pending. The trap edition is D01's own updated (\"Current\") ranges and D02's identical FY26e column; the review never ties the Carajás completion to its guidance changes.\n- Dependency plan: D01 supplies the completion date (2 April 2026, L123; also D02 L95), its own date (22 April 2026), the pre-update ranges (L102-L138 prose; table L77-L90 Previous column) and the non-operated list (L480, repeated D02 L943). D02 supplies FY26 actuals (table L80-L92; prose L152-L187).\n- Universe: BHP-operated assets with FY26 production guidance: Escondida (1,261.2 in 1,200-1,275), Pampa Norte (Spence) (212.6 vs 230-250, out below), Copper South Australia (320.7 in 310-340), WAIO (256.9 in 251-262; 291.2 in 284-296), BMA (18.6 in 18-20; 37.3 in 36-40), NSWEC (16.4 vs 14-16, out above). Excluded as non-operated: Antamina (151.5 vs 140-150, out; zinc 96 in 90-110) and Samarco (7.8 vs 7-7.5, out). No guidance: Carajás (divested), WA Nickel. Other D01 guidance lines (group copper, group iron ore, unit costs, feed grade) are not asset production ranges.\n- Necessity: without D01 the earlier Spence range is lost (D02 prints only FY26e 210-220 and FY27e 210-230; its only \"Previous\" column is unit costs, L241) and the answer becomes {NSWEC}. Without D02 there are no FY26 actuals; D01's own expectations (NSWEC \"upper half\", L138) keep NSWEC inside, so D01 alone suggests {Spence} at most. BHP documents only; D03/D04 are Freeport. Platform ids: D01 = Doc 3, D02 = Doc 4.\n- Selected-lever checks: Same series, right edition: Current/FY26e ranges with the exclusion give {NSWEC}. Match, then exclude: skipping the non-operated exclusion gives {Spence, Antamina, Samarco, NSWEC}; Current ranges without the exclusion give {Samarco, NSWEC}. Decoys and wrong routes all differ from the gold (script).\n- Calculation verification: script comparison of every universe member against both editions, strict inequality (below low end or above high end); no boundary values. Prose rounding (Spence 213 kt, NSWEC 16.4 Mt) gives the same classification.\n- Semantic/ID/overview probes: overview (capture L43-61) gives copper/iron ore totals and \"~2 Mt\" only; no per-asset guidance comparison. Only NSWEC's outcome is stated in words (D02 L187); Spence's is not.\n- Precision/readings: the HY26 announcement date is not in the bundle; the reading needs only that D01's 22 April review made the change (\"from between 230 and 250 kt previously\") after 2 April. Pampa Norte row label is \"Pampa Norte (Spence)\"; NSWEC = NSW Energy Coal (D01 L280).\n- Completeness: capture complete; no known source gaps. BHP italics flagged as meaningful are invisible in text (D01 L93/L186/L239); the Previous/Current columns and prose carry the same changes.\n- Style/set review: different company, documents and lever from q01; no shared facts or wording.\n- Warnings answered: pending floor run.",
+    "question": "Which BHP-operated assets had production for the year ended 30 June 2026 outside the FY26 production guidance range that applied on the day BHP completed its divestment of Carajás? List them in any order, or answer none.",
+    "reasoning": "1. Doc 3 is BHP's operational review dated \"22 April 2026\". It records that \"The divestment of Carajás to a subsidiary of CoreX Holding was completed on 2 April 2026\". The guidance changes announced in this review came after that day, so the ranges that applied on 2 April are the ranges as they stood before the review.\n2. Doc 3 lists the assets BHP does not operate: \"Our non-operated assets include Antamina, Resolution, Samarco and Vicuña.\" The BHP-operated assets with FY26 production guidance are therefore Escondida, Pampa Norte (Spence), Copper South Australia, WAIO, BMA and NSWEC; Carajás had no guidance.\n3. Doc 3 gives those ranges: Escondida between 1,200 and 1,275 kt; Spence \"lowered to between 210 and 220 kt (from between 230 and 250 kt previously)\", so 230 to 250 kt applied on 2 April; Copper South Australia between 310 and 340 kt; WAIO between 251 and 262 Mt (284 and 296 Mt, 100% basis); BMA between 18 and 20 Mt (36 and 40 Mt, 100% basis); NSWEC \"between 14 and 16 Mt\".\n4. Doc 4 is BHP's review for the year ended 30 June 2026, dated \"16 July 2026\". FY26 production: Escondida 1,261.2 kt; Pampa Norte (Spence) 212.6 kt; Copper South Australia 320.7 kt; WAIO 256.9 Mt (291.2 Mt, 100% basis); BMA 18.6 Mt (37.3 Mt, 100% basis); NSWEC 16.4 Mt, with \"NSWEC exceeding the top end of production guidance in FY26\".\n5. Comparing the two: Pampa Norte (Spence) at 212.6 kt is below 230 kt and NSWEC at 16.4 Mt is above 16 Mt. Escondida, Copper South Australia, WAIO and BMA are inside their ranges on both bases.\n6. Decoy, Doc 4: its FY26e guidance column repeats the updated Spence range of 210 to 220 kt, which puts Spence inside and leaves only NSWEC. Skipping the exclusion would also add the non-operated Antamina and Samarco.",
+    "review": "",
+    "shortcut audit": ""
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "596fc28dbf685c815794744aecfbea07a6e9f457c77b6b1911a3aa6df90f29f1"
+}

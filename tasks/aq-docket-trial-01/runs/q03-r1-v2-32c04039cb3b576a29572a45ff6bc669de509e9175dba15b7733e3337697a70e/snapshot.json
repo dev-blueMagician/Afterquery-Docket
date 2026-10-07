@@ -1,0 +1,52 @@
+{
+  "bundle": "aq-docket-trial-01",
+  "corpus_sha256": {
+    "docs/arxiv_2601_21106v3.txt": "36546247270ea39d3e03dcc3b7ca45f86ad1671738e2d99c3c5b475ffe6ccf80",
+    "docs/arxiv_2606_16460v3.txt": "5f92c8753eac1430e338a7d6012b1c25a9354e9084055ecfa5b2a8406824ba19",
+    "docs/arxiv_2608_05428v1.txt": "47d2a9b6ccd68dfa935509f45c90200051b9f3970ad5da1de8503d91459891bc",
+    "docs/arxiv_2608_19879v1.txt": "3b6c94d162aa8f4e91854b604ff4b06480c3f7860a8e180cb0f76b0118bf7460",
+    "docs/arxiv_2608_25172v1.txt": "3afa3460083e77c79546ebe8303130fe38242d54e15adaefb8831094d463fbbb",
+    "docs/arxiv_2608_30374v1.txt": "c5f3f6f034b0b1c3067c64ec077356856ea3032cb9aa795a2b308aeaf6341996",
+    "text/D01.txt": "2aa85e46c443e5e7df835f2ac1188fbae86b2b2dc70c588f3f45d4f3de3e13e0",
+    "text/D02.txt": "6855846c598b493d27dd11e06d98e879a21a1147bc4ddca17e07d5bea71e4806",
+    "text/D03.txt": "1b9a55c9351655d1ddba075f52dd66be2c5a74466ad0b37c22b7168ea23f80e0",
+    "text/D04.txt": "5602769a6a51be146641347707cae70e27ebb758f69ec723d24deb05efcd1b64",
+    "text/D05.txt": "61c1f5cda9bba51d8aa146b1aab01b9c300636d92ee2a5ffe457bdb553f0eb3a",
+    "text/D06.txt": "afe9672e75328a3f55904bc3a1b6f588d62c3ecac362b4eed9001fd4a8e1fb84",
+    "text/manifest.json": "ef36f02f724b7e3b03b841c53cd3fcab5ca454fcfe4d27d67f2e195b3bc3a02c"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "8c242e12fa1cc7f92a851dc8f72dfb627da0368bc2edcd51afe295ef3d3bf440",
+  "independence": "One fresh context per packet. No writer history or shared memory.",
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D02, D05",
+    "id": "q03",
+    "levers": "Calculate across documents; Scatter the pieces",
+    "origin": "claude",
+    "revision": "1",
+    "sketch": "i09",
+    "status": "draft",
+    "tags": "Cross-document join; Entity resolution"
+  },
+  "question_id": "q03",
+  "revision": 1,
+  "schema": 2,
+  "sections": {
+    "answer": "13,853 observations",
+    "blind solve": "- 2026-10-06 | rev: 0 | solver: A | tested_sha256: 975f689e3df36539e485d7d4f7bdf18a71c63373825eeed9a2472e56f66b8316 | outcome: match | confidence: high | docs: D02, D05 | answer: 13,853 more observations (14,638 − 785) | readings: spots 2,807 (or 2,407 without held-out spots) rejected by the paper's definition; full-gene 32,753 and HVG 2,215 not the main analysis; confirms n = 785 from Table 1 and from the BIC parameter count (raw: runs/q03-r0-v2-975f689e.../results/returns.md)\n- 2026-10-06 | rev: 0 | solver: B | tested_sha256: 975f689e3df36539e485d7d4f7bdf18a71c63373825eeed9a2472e56f66b8316 | outcome: match | confidence: high | docs: D02, D05 | answer: 13,853 more observations. The brain model's main analysis had 14,638 and the autoimmune model had 785. | readings: spots 2,807/2,407, full-gene 32,753 and HVG 2,215 rejected; held-out spots change columns, not rows\n- 2026-10-06 | rev: 0 | closed-book solve | tested_sha256: 975f689e3df36539e485d7d4f7bdf18a71c63373825eeed9a2472e56f66b8316 | result: misses | answer: unknown (low confidence; assumed observations would be \"spots, beads or patients\")",
+    "components": "- c1: 13,853 observations",
+    "evidence": "- D05 (Sec. 1.1, text line 29) [c1]: \"we will use the term ‘observations’ for the rows of Y and spatial locations for the columns\"\n- D05 (Sec. 1.1, text line 29) [c1]: \"‘observation’ may refer to a spatial location together with its vector of measurements across all genes / features; we do not use this terminology here\"\n- D05 (Sec. 1.1, text line 31) [c1]: \"In the spatial transcriptomics analysis, each gene, corresponding to a row of Y\"\n- D05 (Sec. 6, text line 783) [c1]: \"The low-expression filtering retains 14,638 genes.\"\n- D05 (Sec. 6, text line 783) [c1]: \"We treat the filtered analysis as our main analysis\"\n- D02 (Sec. 2, text line 47) [c1]: \"n and p are the number of samples and genes, respectively\"\n- D02 (Sec. 3, text line 81) [c1]: \"denote the cluster indicator for sample i\"\n- D02 (Sec. 4.1, text line 175) [c1]: \"The posterior probability that observation i belongs to cluster k\"\n- D02 (Sec. 5.1, text line 431) [c1]: \"It contains a total of 785 samples\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: a paper's own definition overriding ordinary usage: the spatial paper calls the rows of its data matrix \"observations\" (genes in the brain case study) and explicitly sets aside the usual spot sense; joined to the autoimmune model's sample count. Target medium; platform result pending.\n- Revision 1 (2026-10-06): evidence and reasoning only, after the rev 0 review. Added D02 line 47 (\"n and p are the number of samples and genes, respectively\") and line 81 (\"denote the cluster indicator for sample i\") so a quote ties \"observation i\" to samples; step 2 now cites them; lever record corrected from \"Who belongs where\" to the actual mechanism (no item is assigned across documents). Question, answer, documents and tags unchanged. All rev 0 records are history; rev 1 needs fresh checks.\n- Dependency plan: D05 29/31 define observations as rows = genes; D05 783 gives the main (filtered) analysis's 14,638 genes (repeated 1055); D02 47/175 make samples the observations; D02 431 gives 785 samples (Tables 1 and 5 sum to 785); 14,638 - 785 = 13,853.\n- Universe: not applicable (one value).\n- Necessity (local ids = platform Doc numbers): without D05 nothing gives the brain analysis's gene count or its definition of observations; without D02 nothing gives the autoimmune sample count. Removal probes for related wording found the remaining papers cannot supply either count; 14,638 and 785 are paper-specific (not round or habitual values).\n- Selected-lever checks: the ordinary-usage decoy changes the answer: spots 3,592 - 785 = 2,807 (training spots 3,192 - 785 = 2,407); full-gene 33,538 - 785 = 32,753; HVG 3,000 - 785 = 2,215; autoimmune genes instead of samples 14,638 - 979 = 13,659.\n- Calculation verification: 14,638 - 785 = 13,853 (python check); integer counts, no rounding.\n- Semantic/ID/overview probes: no passage prints 13,853 or pairs the two counts; the capture's Doc 5 overview lists \"k components · m spatial locations · n observations\" without values; the Doc 2 overview prints no sample count.\n- Precision/readings: one defensible answer rests on the spatial paper's explicit definition and its disclaimer about the spot sense; holding out 400 spots changes columns, not rows.\n- Completeness: capture complete; all inputs are prose, no figure values needed.\n- Style/set review: one ask, 25 words; documents and mechanism differ from q01 (D01, D04) and q02 (D01, D02).\n- Warnings answered: origin claude (export restriction reported at hand-over). Step 3 cites two documents because no single document prints both operands; the form's handling of such a step is unconfirmed.",
+    "question": "How many more observations did the brain spatial-factor study's model have in its main tissue analysis than the autoimmune subtype study's mixture factor model had?",
+    "reasoning": "1. Doc 5: the paper uses \"the term ‘observations’ for the rows of Y\", and in its spatial transcriptomics analysis \"each gene, corresponding to a row of Y\" is a row; it sets aside counting a spot as an observation (\"we do not use this terminology here\"). Its main tissue analysis is the filtered one, where \"The low-expression filtering retains 14,638 genes\", so that model had 14,638 observations.\n2. Doc 2: its data matrix has one row per sample (\"n and p are the number of samples and genes, respectively\"), and its observations are those samples (\"The posterior probability that observation i belongs to cluster k\"); the dataset \"contains a total of 785 samples\".\n3. Doc 5 and Doc 2: 14,638 - 785 = 13,853 more observations.\n4. Decoys in Doc 5 and Doc 2: counting Doc 5's 3,592 in-tissue spots as observations, or taking its full-gene (33,538) or highly-variable-gene (3,000) analysis instead of the main one, gives a different number; Doc 2's 979 genes are its variables, not its observations.",
+    "review": "- 2026-10-06 | rev: 0 | tested_sha256: 975f689e3df36539e485d7d4f7bdf18a71c63373825eeed9a2472e56f66b8316 | verdict: revise | difficulty: easy | findings: gold verified (14,638 - 785 = 13,853); A/B match; closed-book misses (its default reading of observations was spots); D02 and D05 each indispensable, neither count guessable; shortcut clear; no fairness defect; predicted Easy (Medium or above about one in ten) because the deciding definition is a plain sentence containing the question's own keyword; fixes: quote D02 line 47 or 81 to tie observation i to samples, correct the lever label (mechanism is a paper's definition overriding ordinary usage); two-document steps unconfirmed on the form; recommends a platform quick test before the single attempt (raw: runs/q03-r0-v2-975f689e.../results/review.md)",
+    "shortcut audit": "- 2026-10-06 | rev: 0 | tested_sha256: 975f689e3df36539e485d7d4f7bdf18a71c63373825eeed9a2472e56f66b8316 | verdict: clear | findings: answer 13,853; D05 29 (observations = rows = genes; spot sense rejected) + 783/1055 (main filtered analysis 14,638) and D02 431 (785 samples; Table 1 and the BIC parameter count confirm n = 785); both needed; 13,853 printed nowhere; alternatives 2,807, 2,407, 32,753, 2,215, 13,659 rejected; difficulty risk: inputs easy to find by keyword and a plain difference, the trap being spots vs genes, which D05 settles explicitly"
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "32c04039cb3b576a29572a45ff6bc669de509e9175dba15b7733e3337697a70e"
+}

@@ -1,0 +1,13 @@
+# core.autocrlf=true on this host converts checkouts to CRLF. This pins LF for every text file
+# regardless of the local git config, so a checkout leaves the bundle text and scripts byte-identical.
+* text=auto eol=lf
+
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.zip binary
+*.docx binary
+*.xlsx binary
+*.pptx binary

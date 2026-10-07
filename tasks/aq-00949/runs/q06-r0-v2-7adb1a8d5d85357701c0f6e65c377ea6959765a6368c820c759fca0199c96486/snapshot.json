@@ -1,0 +1,53 @@
+{
+  "bundle": "aq-00949",
+  "corpus_sha256": {
+    "docs/eog_ex991_2020-03-16.txt": "7b2406b8ebc03e713400c438cfcdb1eb400a70325bbc39e4fc550bf428486aa7",
+    "docs/eog_ex991_2025-05-01.txt": "5bc995443baf83ef8dd07e93eedd9532eb9cb209448d514e4350063f98a6c509",
+    "docs/eog_ex991_2025-05-30.txt": "21b89e5d3195605900cddc20fb1ad6e8256d6d53eda56f73795d4bab149522ea",
+    "docs/eog_ex991_2025-08-07.txt": "68f243cecf8e3be8065730ded82eac99399e0370e89a79f85814174b73c03ef2",
+    "docs/eog_ex991_2025-11-06.txt": "c591c31840e0894e3c7460010578c351357268fd400d5ee1bf738a457a255df7",
+    "docs/eog_ex991_2026-05-05.txt": "9327b6cdd1de91d1a3eebeaeb9f35cf5d3eaa9907624f9fa0b3c17e0540410b6",
+    "docs/eog_ex991_2026-08-04.txt": "5f6c76d46eb3c8a3ff5d9a63671382f71a8e899a10b42140515938ddd1238e2e",
+    "text/D01.txt": "894c765ba57bd44dda7352356a49706183da2455b6f067a5d44419d23933ad20",
+    "text/D02.txt": "cfda643e89670972dff83f545d97f4c13b3cc21fec8ba71c8f201dd5583a5213",
+    "text/D03.txt": "43e28e897b268dd4b4c8071bb39c94c805ff1c3c0c612430c6f4d4d2b7be8ad6",
+    "text/D04.txt": "be4c14dab61a016c7d9557dbb7626688445801a6881de3af51fc97bc849bb96a",
+    "text/D05.txt": "2d0efea86ff3435b08ca642dd8ccc3fb2610ffe14a061174f8ac42f6d43aba2a",
+    "text/D06.txt": "574b9adaba3a6055424cf49b62b1e89bfb4276f07895eca4b3dbfd7e44ee72cc",
+    "text/D07.txt": "eb61159f4ae758a4ee2ae327432c2178cff4430f2d113f1abfb10deb115788f6",
+    "text/manifest.json": "f04437c1c97815ff6729fa4207ae0ea4ffb1d1b39c28b601c4f4a93b021c7d92"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "fb8d68aed050e562e76bb4631868ab90260924e4fdf916e9657cd6f1a39e194f",
+  "independence": "One fresh context per packet. No writer history or shared memory.",
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D03, D07",
+    "id": "q06",
+    "levers": "Scatter the pieces; Calculate across documents",
+    "origin": "claude",
+    "revision": "0",
+    "status": "draft",
+    "tags": "Cross-document join; Temporal alignment"
+  },
+  "question_id": "q06",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "$0.94 per diluted share",
+    "blind solve": "",
+    "components": "- c1: $0.94 per diluted share",
+    "evidence": "- D03 (line 13, release date) [c1]: \"May 30, 2025\"\n- D03 (line 19, announcement) [c1]: \"today announced a definitive agreement with Canada Pension Plan Investment Board (CPP) and Encino Energy under which EOG will acquire Encino Acquisition Partners\"\n- D07 (line 852, per-Boe table header) [c1]: \"2Q 2026 1Q 2026 4Q 2025 3Q 2025 2Q 2025\"\n- D07 (line 856, per-Boe table, volumes) [c1]: \"Volume - Million Barrels of Oil Equivalent - (a) 128.3 124.5 128.7 119.7 103.2\"\n- D07 (line 612, net income per share bridge, volumes step) [c1]: \"Multiplied by: 2Q 2026 Composite Average Margin per Boe (GAAP) (Including Total Exploration Costs)\"\n- D07 (line 943, per-Boe calculations (GAAP), 2Q 2026 column) [c1]: \"Composite Average Margin per Boe (including Total Exploration Costs) - [(e) / (a) - (j) / (a)] 25.51\"\n- D07 (line 616, net income per share bridge, tax) [c1]: \"Less: Income Tax Benefit (Provision) Imputed (based on 22%)\"\n- D07 (line 645, net income per share bridge, share count) [c1]: \"2Q 2026 Average Number of Common Shares - Diluted 529\"",
+    "feedback log": "",
+    "lever checks": "- Platform document numbers: local D01-D07 equal the task page's Doc 1-7 in the same order, so reasoning \"Doc N\" equals local Dnn.\n- Family and target: a stated method (EOG's quarterly GAAP net income per share bridge) applied to a comparison no edition bridges (year over year), with the latest edition's own printed volume effect for a different comparison as the same-document decoy; target medium (user, 2026-10-05: \"at least Medium\", one attempt). Sketch i09 (notes/ideas.md round 4). Platform quick test on this exact question and answer (user screenshot, 2026-10-05, draft 3): \"Survived — worth writing up\" (the low model's own answer was not shown). Measured platform tier: pending. Replaces q05 as the Medium candidate after q05's review (revise, easy: one prose decision repeating q04's lever).\n- Dependency plan: D03 L13/L19 (May 30, 2025 definitive agreement) -> second calendar quarter of 2025, so the comparison is 2Q 2025 -> 2Q 2026. D07 L852/L856 volumes 103.2 (2Q 2025) and 128.3 (2Q 2026) -> 25.1 MMBoe; D07 L612/L943 current-quarter GAAP margin including total exploration costs 25.51 -> 640.301 -> 640; D07 L616 tax imputed at 22% -> 141; 499; D07 L645 diluted shares 529 -> 0.9433 -> $0.94. The same bridge template for 1Q 2026 -> 2Q 2026 is printed at D07 L608-618 (3.8 x 25.51 = 97; tax (21); 76; 0.14).\n- Universe: not applicable (single value).\n- Necessity: remove D03 -> no other document states when EOG agreed to acquire Encino (grep of D02, D04-D07 for \"definitive agreement\", \"agreed to\", \"announce\", \"May 30\", \"signed\", \"agreement\": no hits); the series shows Encino acquisition-related costs from 2Q 2025 (D04-D07, including financing commitment costs) and the acquisition cash in 3Q 2025, so a solver could infer the agreement quarter: this is the main removal-test risk. Remove D07 -> the 2Q 2026 volumes, margin and diluted shares appear only in D07 (D06 ends at 1Q 2026); 2Q 2025 volumes (103.2) also print in D04-D06, so those editions add nothing D07 lacks. Prepared one-line reviewer note if the platform flags Doc 3 (under 200 characters): \"Doc 3 is the only document that says when EOG agreed to acquire Encino (May 30, 2025); the supplements show only acquisition costs and the cash paid at closing.\"\n- Selected-lever checks: scatter the pieces (the anchor date only in D03; volumes, margin, tax rate and shares only together in D07) and calculate across documents (the method applied once to the year-over-year change). Same-document decoy: D07 L618 prints the volume effect 0.14 for 1Q 2026 -> 2Q 2026. Method variants at the asked precision: basic shares 526 -> 0.95; 2Q 2025 diluted shares 546 -> 0.91; 2Q 2025 margin 14.94 -> 0.55; margin excluding exploration costs 26.26 -> 0.97; no tax -> 1.21; anchoring on the closing quarter (3Q 2025) needs 3Q 2026, which no document reports; anchoring on 1Q 2025 -> 1Q 2026 gives 0.70; summing the printed sequential bridges 3Q 2025, 1Q 2026 and 2Q 2026 gives 0.35 (4Q 2025 has no bridge; adding the method's 4Q 2025 value 0.09 gives 0.44), which is not the method applied to the asked change.\n- Calculation verification (Decimal script, 2026-10-05): 128.3 - 103.2 = 25.1; 25.1 x 25.51 = 640.301; EOG-style whole-million rounding 640, tax 141, 499, 499 / 529 = 0.94329 -> 0.94; unrounded 640.301 x 0.78 / 529 = 0.94411 -> 0.94. Neither path approaches 0.945.\n- Semantic/ID/overview probes (2026-10-05): no document states a year-over-year volume effect or an agreement date outside D03; \"0.94\" prints in D07 only at L420 (4Q 2025 Certain Impairments, per-share effect), unrelated; \"25.1\" and \"141\" print nowhere in D07; \"640\" prints in D07 only as 2023 G&A (L992/L994). The capture overview lists \"May 30, 2025\" for Doc 3 and no bridge figure for Doc 7.\n- Precision/readings: one ask, two decimals (\"nearest cent\"). The GAAP and adjusted (Non-GAAP) bridges use the same 2Q 2026 margin (25.51 in both per-Boe sections), so the adjusted-EPS reading also gives 0.94. Relative or per-day volume readings do not fit the method's MMBoe subtotal.\n- Completeness: complete capture, no gaps.\n- Style/set review: 43 words; one ask; one numeric answer. Different documents and mechanism from q04 (D01/D07 debt ratio) and q05 (D01/D07 cash share); no shared inputs, no sibling giveaway.\n- Form layout: one calculation per step with the result straight after \"=\", mirroring EOG's printed bridge; steps 3-6 reuse the previous step's result as an operand (form behavior for derived operands in a cited step is unobserved; q05 shares this risk); check the reasoning box after pasting.\n- Warnings answered: \"origin\": origin claude is accurate (Claude Code, Opus 5.5 wrote the question); the export tool takes origin user only, and whether to tick \"I wrote this question myself.\" is the user's decision. \"points-or-percent\": false positive; the floor matched \"share\" in \"net income per share\" with \"how much\". The question compares no rate or proportion; it asks for a dollar amount of diluted EPS, pinned to the nearest cent.",
+    "question": "Using the method of EOG's own net income per share bridges, how much did the change in production volumes from the calendar quarter in which EOG agreed to acquire Encino to the same quarter a year later add to GAAP diluted EPS? Round to the nearest cent.",
+    "reasoning": "Step 1. Doc 3 (May 30, 2025): EOG \"today announced a definitive agreement\" under which it \"will acquire Encino Acquisition Partners\", so the agreement fell in the second calendar quarter of 2025.\nStep 2. Doc 7: crude oil equivalent volumes were 103.2 MMBoe in 2Q 2025 and 128.3 MMBoe in 2Q 2026, the same quarter a year later: 128.3 - 103.2 = 25.1 MMBoe.\nStep 3. Doc 7: EOG's net income per share bridge multiplies the volume change by the current quarter's \"Composite Average Margin per Boe (GAAP) (Including Total Exploration Costs)\", which is 25.51 for 2Q 2026: 25.1 x 25.51 = 640 ($ millions, the change in margin).\nStep 4. Doc 7: the bridge then deducts income tax \"Imputed (based on 22%)\": 640 x 22% = 141.\nStep 5. Doc 7: 640 - 141 = 499 ($ millions, the change in net income).\nStep 6. Doc 7: the bridge divides by the quarter's diluted shares, 529 million for 2Q 2026: 499 / 529 = $0.94 per diluted share (to the nearest cent).\nDecoy. Doc 7's own bridge prints \"Change in Diluted Earnings per Share 0.14\" for volumes, but it compares 2Q 2026 with 1Q 2026: 128.3 - 124.5 = 3.8 MMBoe.",
+    "review": "",
+    "shortcut audit": ""
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "7adb1a8d5d85357701c0f6e65c377ea6959765a6368c820c759fca0199c96486"
+}

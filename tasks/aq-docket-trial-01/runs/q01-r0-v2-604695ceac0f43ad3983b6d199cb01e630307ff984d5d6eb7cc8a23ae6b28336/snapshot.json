@@ -1,0 +1,53 @@
+{
+  "bundle": "aq-docket-trial-01",
+  "corpus_sha256": {
+    "docs/arxiv_2601_21106v3.txt": "36546247270ea39d3e03dcc3b7ca45f86ad1671738e2d99c3c5b475ffe6ccf80",
+    "docs/arxiv_2606_16460v3.txt": "5f92c8753eac1430e338a7d6012b1c25a9354e9084055ecfa5b2a8406824ba19",
+    "docs/arxiv_2608_05428v1.txt": "47d2a9b6ccd68dfa935509f45c90200051b9f3970ad5da1de8503d91459891bc",
+    "docs/arxiv_2608_19879v1.txt": "3b6c94d162aa8f4e91854b604ff4b06480c3f7860a8e180cb0f76b0118bf7460",
+    "docs/arxiv_2608_25172v1.txt": "3afa3460083e77c79546ebe8303130fe38242d54e15adaefb8831094d463fbbb",
+    "docs/arxiv_2608_30374v1.txt": "c5f3f6f034b0b1c3067c64ec077356856ea3032cb9aa795a2b308aeaf6341996",
+    "text/D01.txt": "2aa85e46c443e5e7df835f2ac1188fbae86b2b2dc70c588f3f45d4f3de3e13e0",
+    "text/D02.txt": "6855846c598b493d27dd11e06d98e879a21a1147bc4ddca17e07d5bea71e4806",
+    "text/D03.txt": "1b9a55c9351655d1ddba075f52dd66be2c5a74466ad0b37c22b7168ea23f80e0",
+    "text/D04.txt": "5602769a6a51be146641347707cae70e27ebb758f69ec723d24deb05efcd1b64",
+    "text/D05.txt": "61c1f5cda9bba51d8aa146b1aab01b9c300636d92ee2a5ffe457bdb553f0eb3a",
+    "text/D06.txt": "afe9672e75328a3f55904bc3a1b6f588d62c3ecac362b4eed9001fd4a8e1fb84",
+    "text/manifest.json": "ef36f02f724b7e3b03b841c53cd3fcab5ca454fcfe4d27d67f2e195b3bc3a02c"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "fd3869c9f808560e534578b0b3806946c81fce2aac914401a0c1177d2eeb9c13",
+  "independence": "One fresh context per packet. No writer history or shared memory.",
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D01, D04",
+    "id": "q01",
+    "levers": "Calculate across documents; Scatter the pieces",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i01",
+    "status": "draft",
+    "tags": "Cross-document join; Unit normalization"
+  },
+  "question_id": "q01",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "9 iterations",
+    "blind solve": "",
+    "components": "- c1: 9 iterations",
+    "evidence": "- D01 (Sec. 3.2.1, Fig. 5 runtime panel, text line 413) [c1]: \"Sparse DPMM: 65\"\n- D01 (Fig. 5 runtime panel label, text line 431) [c1]: \"a) Runtime (in seconds)\"\n- D01 (Sec. 3.2.1, text line 403) [c1]: \"Sparse DPMM is significantly slower (∼ 5.91 seconds per iteration)\"\n- D04 (Sec. 2.4, text line 379) [c1]: \"The RIGLS algorithm converged after just 2-iterations.\"\n- D04 (Fig. 7 caption, text line 385) [c1]: \"The RIGLS algorithm converged after just two iterations.\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: cross-document arithmetic over two iterative fits; the leukemia count is printed nowhere and must be put together from a runtime label and a time per iteration; target medium. Measured platform result pending.\n- Dependency plan: D01 Fig. 5 runtime 65 s (413, unit 431) and \"∼ 5.91 seconds per iteration\" (403, same benchmark) give 65 / 5.91 = 10.998, i.e. 11 iterations; D04 full repeated-measurements model \"converged after just 2-iterations\" (379, repeated 385); 11 - 2 = 9.\n- Universe: not applicable (one value).\n- Necessity (local ids = platform Doc numbers): without D01 no document gives the Sparse DPMM benchmark runtime or time per iteration (D02, D03, D05, D06 report no iteration counts; D05's runtimes 38.51/88.92/18.51 s concern a different model). Without D04 no document gives the RIGLS count (D01 has only the slice sampler's 1000 MCMC iterations on simulated data and \"fewer iterations in higher dimensions\"). No rounded figure elsewhere approximates either input.\n- Selected-lever checks: wrong routes give different answers: D04's general \"roughly 3-5 iterations\" gives 6 to 8; D01's slice-sampler 1000 gives 998; reading the 65 s runtime as a count gives 63. Not a which-items question; no exclusion or rounding lever claimed.\n- Calculation verification: python: 65/5.91 = 10.9983; with the printed precision of both inputs (64.5 to 65.5 s, 5.905 to 5.915 s) the range is 10.90 to 11.09, so 11 is the only whole number; 11 - 2 = 9. Counting convention: whole iterations.\n- Semantic/ID/overview probes: no passage states an iteration count for the Sparse DPMM benchmark; \"iteration\" in D01 hits 263 (slice sampler, simulation), 403 (time per iteration), 435 (mini-bars). The capture's overview for Doc 4 lists \"2 iterations to convergence\" (an input, not the answer); the Doc 1 overview prints no runtime.\n- Precision/readings: whole iterations. The 65 s may cover several random initialisations; the total iterations in the run are still 11. Figure 5's iteration mini-bars are not in the text (figure-only); the platform documents are the same text, so the answer must come from 65 and 5.91.\n- Completeness: capture complete (notes/intake.json, no gap markers). Content limit: Fig. 5 graphics (mini-bars, panels b and c) are not in any text; impact assessed above.\n- Style/set review: one ask, 40 words, no dashes; levers differ from sketches i02-i05.\n- Warnings answered: origin claude (export restriction reported at hand-over).",
+    "question": "When the leukemia clustering study benchmarked its sparse Dirichlet process mixture model against other clustering methods, how many more iterations did that benchmark run take than the battery ageing study's regularised algorithm needed to converge for its full repeated-measurements model?",
+    "reasoning": "1. Doc 1: in the benchmark against other clustering methods, the runtime panel (\"a) Runtime (in seconds)\") lists \"Sparse DPMM: 65\", and the text says Sparse DPMM is slower at \"∼ 5.91 seconds per iteration\". Iterations in that run: 65 / 5.91 = 11 (to the nearest whole iteration).\n2. Doc 4: for the full repeated-measurements model, \"The RIGLS algorithm converged after just 2-iterations\" (the Figure 7 caption repeats \"converged after just two iterations\"). Difference: 11 - 2 = 9 iterations.\n3. Decoys in Doc 4 and Doc 1: Doc 4's \"In our experience convergence occurs after roughly 3-5 iterations\" describes the method in general, not this fit, which took 2. Doc 1's \"1000 MCMC iterations\" belong to the comparison slice sampler on simulated data, not to the leukemia benchmark.",
+    "review": "",
+    "shortcut audit": "",
+    "source assessment": ""
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "604695ceac0f43ad3983b6d199cb01e630307ff984d5d6eb7cc8a23ae6b28336"
+}

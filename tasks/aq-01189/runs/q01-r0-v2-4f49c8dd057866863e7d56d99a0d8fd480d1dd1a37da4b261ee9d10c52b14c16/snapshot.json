@@ -1,0 +1,47 @@
+{
+  "bundle": "aq-01189",
+  "corpus_sha256": {
+    "docs/bhp-group-limited-operational-review-for-the-nine-months-ended-31-march-2026-form-6-k-filed-2026-04-22.txt": "eb95007a7a47a70554fba6ab9ef023862c897faccf2caf50f6d77e0dc171a364",
+    "docs/bhp-group-limited-operational-review-for-the-year-ended-30-june-2026-form-6-k-filed-2026-07-17.txt": "d7776a7f45098fa09388178c5a93a28e0f1826ee07b48bccaa0ca178c966a1e6",
+    "docs/freeport-mcmoran-inc-1q-2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-04-23.txt": "893aea68202ae0b057616ab35fedd440dfc8a8beca01d75e80b168f37668d1c1",
+    "docs/freeport-mcmoran-inc-2q-2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-07-23.txt": "1769916c2ce4c82825d8817ab3ce1c06930f611cb411863830e848bca53d2d61",
+    "text/D01.txt": "40bd727c9efcc3adda7cfea8816088b572b41e517d9d96af2c2957f19b5cf797",
+    "text/D02.txt": "de2fc183b30a8e496848f4c820c08e1d468260a18d3df1c8110514ffb29c1bc2",
+    "text/D03.txt": "dd451160d8dcb4fab48f803be44d1af3c2f9a1c057244ec1fa326535fdfd83d8",
+    "text/D04.txt": "91f253f70eedfadcd791d124882f7feb7743441d7ee36b8f300e93bbd3c4ba31",
+    "text/manifest.json": "79b12a4bedd2d43a6641b1792a461a3a334b972856730d8fd7159920fee43a99"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "3847a17ac84cf31c9027235ed2b9e00c092944e16adc9acfbda17ffee3fe3ece",
+  "independence": "One fresh context per packet. No writer history or shared memory.",
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D03, D04",
+    "id": "q01",
+    "levers": "Same series, right edition; Calculate across documents",
+    "origin": "claude",
+    "revision": "0",
+    "status": "draft",
+    "tags": "Cross-document join; Temporal alignment; Unit normalization"
+  },
+  "question_id": "q01",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "47.0%",
+    "blind solve": "",
+    "components": "- c1: 47.0%",
+    "evidence": "- D04 (Doc 2, release dateline, L47) [c1]: \"PHOENIX, AZ, July 23, 2026\"\n- D04 (Doc 2, noncontrolling interests, L921) [c1]: \"In May 2026, FCX increased its ownership interest in Cerro Verde from 55.08% to 55.66%.\"\n- D04 (Doc 2, South America outlook, L221) [c1]: \"Copper sales from South America operations are expected to approximate 1.0 billion pounds for the year 2026.\"\n- D03 (Doc 1, release dateline, L47) [c1]: \"PHOENIX, AZ, April 23, 2026\"\n- D03 (Doc 1, South America outlook, L227) [c1]: \"Copper sales from South America operations are expected to approximate 1.05 billion pounds for the year 2026.\"\n- D03 (Doc 1, South America sales, L227) [c1]: \"FCX’s consolidated copper sales volumes from South America operations of 248 million pounds in first-quarter 2026\"\n- D04 (Doc 2, South America sales, L221) [c1]: \"FCX’s consolidated copper sales volumes from South America operations of 245 million pounds in second-quarter 2026\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: edition bridge (hook h1); difficulty_target medium; measured platform result pending. Calibrated on aq-00964 q01 (Medium: event reported only in the later release, whose own later outlook is the decoy) and aq-00745 q09 (High: untied event, calculated ask). Here the 2Q release never ties its South America projection change to the stake purchase.\n- Dependency plan: D04 dates the event (May 2026, L921; footnotes L457/L511 \"prior to May 2026 it was 55.08%\") and gives Q2 South America sales (245); D03 gives the projection in force in May (1.05 billion pounds, issued April 23) and Q1 sales (248). 493 / 1,050 = 46.952% -> 47.0%.\n- Universe: not applicable (single value).\n- Necessity: without D03 the only South America projection is D04's 1.0 billion (49.3%), and Q1 sales survive only inside D04's six-month table (493 total), so the gold is lost. Without D04 there is no Q2 or six-month sales figure and no record of the stake increase; D03 prints only the 55.08% interest (L197, L429, L451). BHP documents (D01, D02) never mention Freeport or Cerro Verde. Platform ids: D03 = Doc 1, D04 = Doc 2.\n- Selected-lever checks: Same series, right edition: decoy is D04's own July projection (same label, issued after the event) -> 49.3%. D04 reprints only the April quarterly estimates (L112, L116, L120, L130), never the April full-year South America projection. Calculate across documents: the projection and the Q1/Q2 inputs come from different releases.\n- Calculation verification: script, 248 + 245 = 493 (matches D04 six-month table \"Total South America\" 493); 493 / 1,050 = 0.469524 -> 47.0%. Wrong routes: July projection 49.3%; production instead of sales 507 / 1,050 = 48.3%; Q2 only 23.3%.\n- Semantic/ID/overview probes: overview summaries (capture L23-41) do not mention South America projections or the stake increase. D04 highlights (L39) date the purchase only as \"During second-quarter 2026\"; L921 and the footnotes pin it to May 2026, after the April 23 release.\n- Precision/readings: one stated figure per input (1.05 billion; 248; 245; six-month 493 agrees). Consolidated basis throughout, matching the release wording \"Copper sales from South America operations\".\n- Completeness: capture complete (4 of 4 in full, no gap markers); no known source gaps.\n- Style/set review: first question in the set.\n- Warnings answered: pending floor run.",
+    "question": "In the first six months of 2026, Freeport-McMoRan's South America operations sold what percentage of the full-year 2026 copper sales volume the company was projecting for them at the time it raised its ownership interest in Cerro Verde, to one decimal place?",
+    "reasoning": "1. Doc 2 is Freeport's release dated \"July 23, 2026\". It reports the stake increase: \"In May 2026, FCX increased its ownership interest in Cerro Verde from 55.08% to 55.66%.\" Its own projection, \"Copper sales from South America operations are expected to approximate 1.0 billion pounds for the year 2026.\", was issued on July 23, 2026, after the increase.\n2. Doc 1 is the release dated \"April 23, 2026\". Its projection was the current one until the July release, so it was in force when the stake was raised: \"Copper sales from South America operations are expected to approximate 1.05 billion pounds for the year 2026.\"\n3. Doc 1: South America sold \"248 million pounds in first-quarter 2026\".\n4. Doc 2: South America sold \"245 million pounds in second-quarter 2026\".\n5. Doc 1 and Doc 2: first-half South America copper sales were 248 + 245 = 493 million pounds.\n6. Doc 1 and Doc 2: 493 million / 1.05 billion = 47.0% (to one decimal place).\n7. Decoy, Doc 2: the July projection gives 493 million / 1.0 billion = 49.3%, but that projection did not exist in May 2026.",
+    "review": "",
+    "shortcut audit": ""
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "4f49c8dd057866863e7d56d99a0d8fd480d1dd1a37da4b261ee9d10c52b14c16"
+}

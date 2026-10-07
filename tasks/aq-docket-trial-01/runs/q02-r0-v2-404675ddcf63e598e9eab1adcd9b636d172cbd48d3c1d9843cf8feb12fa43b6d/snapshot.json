@@ -1,0 +1,52 @@
+{
+  "bundle": "aq-docket-trial-01",
+  "corpus_sha256": {
+    "docs/arxiv_2601_21106v3.txt": "36546247270ea39d3e03dcc3b7ca45f86ad1671738e2d99c3c5b475ffe6ccf80",
+    "docs/arxiv_2606_16460v3.txt": "5f92c8753eac1430e338a7d6012b1c25a9354e9084055ecfa5b2a8406824ba19",
+    "docs/arxiv_2608_05428v1.txt": "47d2a9b6ccd68dfa935509f45c90200051b9f3970ad5da1de8503d91459891bc",
+    "docs/arxiv_2608_19879v1.txt": "3b6c94d162aa8f4e91854b604ff4b06480c3f7860a8e180cb0f76b0118bf7460",
+    "docs/arxiv_2608_25172v1.txt": "3afa3460083e77c79546ebe8303130fe38242d54e15adaefb8831094d463fbbb",
+    "docs/arxiv_2608_30374v1.txt": "c5f3f6f034b0b1c3067c64ec077356856ea3032cb9aa795a2b308aeaf6341996",
+    "text/D01.txt": "2aa85e46c443e5e7df835f2ac1188fbae86b2b2dc70c588f3f45d4f3de3e13e0",
+    "text/D02.txt": "6855846c598b493d27dd11e06d98e879a21a1147bc4ddca17e07d5bea71e4806",
+    "text/D03.txt": "1b9a55c9351655d1ddba075f52dd66be2c5a74466ad0b37c22b7168ea23f80e0",
+    "text/D04.txt": "5602769a6a51be146641347707cae70e27ebb758f69ec723d24deb05efcd1b64",
+    "text/D05.txt": "61c1f5cda9bba51d8aa146b1aab01b9c300636d92ee2a5ffe457bdb553f0eb3a",
+    "text/D06.txt": "afe9672e75328a3f55904bc3a1b6f588d62c3ecac362b4eed9001fd4a8e1fb84",
+    "text/manifest.json": "ef36f02f724b7e3b03b841c53cd3fcab5ca454fcfe4d27d67f2e195b3bc3a02c"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "9cccbc7159f8c16a3658cf46d5654373febb790370bc8614a6bf54cf6de0071c",
+  "independence": "One fresh context per packet. No writer history or shared memory.",
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D01, D02",
+    "id": "q02",
+    "levers": "Same series, right edition; Calculate across documents",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i06",
+    "status": "draft",
+    "tags": "Cross-document join; Conditional filter"
+  },
+  "question_id": "q02",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "6 clusters",
+    "blind solve": "",
+    "components": "- c1: 6 clusters",
+    "evidence": "- D01 (Sec. 3.2, text line 297) [c1]: \"we used a0 = b0 = 10 instead of 28.9076 and clustered the same dataset\"\n- D01 (Sec. 3.2, text line 273) [c1]: \"Following our empirical Bayes approach, we estimated a0 = b0 = 28.9076\"\n- D01 (Sec. 3.2, text line 273) [c1]: \"For a strong choice of prior hyper-parameters, we obtained Kpost = 3 with ARI score of 0.92\"\n- D02 (Sec. 5.2, text line 447) [c1]: \"The optimal model configuration is selected as the combination of (K, q) that minimizes the BIC and is used for all subsequent analyses.\"\n- D02 (Sec. 5.2, text line 447) [c1]: \"the minimum BIC is attained at K = 9 and q = 8\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: configuration trap anchored on the sensitivity check, whose own sentence ends with the decoy (\"For this particular choice, we obtained Kpost = 4\", D01 297); the asked run is the one the check replaced, reported 24 lines earlier (D01 273). Cross-document difference with the autoimmune main model. Target medium; platform result pending.\n- Dependency plan: D01 297 names the replaced setting (28.9076); D01 273 identifies 28.9076 as the empirical Bayes \"strong\" prior and gives Kpost = 3 (Figure 3(b) caption, also on 297: \"obtained using strong hyper-parameters\"); D02 447 gives the main model K = 9 (repeated 451, 579, 585, 725); 9 - 3 = 6.\n- Universe: not applicable (one value).\n- Necessity (local ids = platform Doc numbers): without D01 no leukemia cluster count exists in D02-D06; without D02 no autoimmune cluster count exists elsewhere (D01's competitors' counts are figure-only and concern leukemia). No other document repeats either input.\n- Selected-lever checks: the decoy changes the answer: sensitivity run Kpost = 4 gives 5; WGCNA comparison K = 4 gives 1 (or 0 with both decoys). Not a which-items question; no rounding or exclusion lever.\n- Calculation verification: 9 - 3 = 6; counts are printed integers.\n- Semantic/ID/overview probes: \"sensitivity\" in D01 hits the abstract (simulation sensitivity analyses, 13), the introduction (Negative Binomial simulations, 35) and 297 (the leukemia weaker-prior check); \"on the leukemia samples\" selects 297. The capture's Doc 1 overview prints \"Kpost = 3 · ARI score of 0.92 · Kpost = 4 · ARI score 0.86\" without saying which prior gave which; the Doc 2 overview prints \"K = 9 clusters\".\n- Precision/readings: \"replaced\" reads as the setting swapped out (\"instead of 28.9076\"); \"main\" pins K = 9 against the WGCNA comparison (K = 4).\n- Completeness: capture complete; Figures 3-5 graphics are not in text, but Kpost values are printed in prose.\n- Style/set review: one ask, 33 words; distinct from q01 (different documents and mechanism).\n- Warnings answered: origin claude (export restriction reported at hand-over).",
+    "question": "How many more clusters did the autoimmune subtype study's main BIC-selected model have than the leukemia study's Bayesian model found on the leukemia samples with the prior hyper-parameters that its sensitivity check replaced?",
+    "reasoning": "1. Doc 1: the sensitivity check on the leukemia samples \"used a0 = b0 = 10 instead of 28.9076\", so the replaced prior hyper-parameters are a0 = b0 = 28.9076, the empirical Bayes estimate (\"Following our empirical Bayes approach, we estimated a0 = b0 = 28.9076\"). With that strong prior, \"we obtained Kpost = 3 with ARI score of 0.92\".\n2. Doc 2: the configuration that minimises BIC \"is used for all subsequent analyses\", and \"the minimum BIC is attained at K = 9 and q = 8\". Difference: 9 - 3 = 6 clusters.\n3. Decoys in Doc 1 and Doc 2: the sensitivity run itself (a0 = b0 = 10) gave \"Kpost = 4\", which would wrongly give 9 - 4; Doc 2's WGCNA-based comparison model selected K = 4, which is not the main model.",
+    "review": "",
+    "shortcut audit": ""
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "404675ddcf63e598e9eab1adcd9b636d172cbd48d3c1d9843cf8feb12fa43b6d"
+}

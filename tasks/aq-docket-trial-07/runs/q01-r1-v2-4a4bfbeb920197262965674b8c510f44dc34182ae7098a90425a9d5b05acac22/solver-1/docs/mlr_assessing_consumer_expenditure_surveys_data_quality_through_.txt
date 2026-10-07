@@ -1,0 +1,327 @@
+[… 1,488 characters not captured …]
+
+11/22/2021
+
+Assessing Consumer Expenditure Surveys data quality through the lens of data use
+
+This article describes the uses of BLS Consumer Expenditure Surveys (CE) data at the federal level, discusses the CE program’s approach to assessing data quality, and reviews the data’s fitness for use from the perspective of the data users.
+
+The Consumer Expenditure Surveys (CE) program of the U.S. Bureau of Labor Statistics (BLS) sponsors nationwide household weekly diary and monthly interview surveys each year for the purpose of producing nationally representative estimates of expenditures, income, and demographics.1 The surveys’ main objective is to measure the spending patterns of consumers living in the United States. The surveys are the only federal government data collection efforts that provide information on the complete range of consumers’ expenditures, as well as their income and demographic characteristics. Similar to other large scale federal survey programs, the BLS CE program aggregates the survey data for a primary purpose, which is to provide estimates critical to the Consumer Price Index (CPI), a Principal Federal Economic Indicator.
+
+BLS also uses the CE data to report on the economic well-being of consumers in the United States. In particular, BLS produces a regular series of economic analyses based on CE data. In addition, many other federal agencies rely on CE data, with each individual use increasing both the value of the time that respondents give in answering questions from field interviewers and the return on investment to U.S. taxpayers. Individual organizations also have their own unique set of objectives for data use, sometimes with distinct considerations regarding data quality. In particular, factors such as response rates, measurement error, aggregation, data level, and timeliness differ in importance for each data-user constituent according to their analytic objectives.
+
+This article summarizes the various uses of BLS expenditure data at the federal level, discusses the CE program’s approach to defining and assessing data quality, and reviews fitness for use from the data-user perspective.
+
+One survey with many uses
+
+Although one of the primary purposes of CE data is to update the relative importance of goods and services in the CPI market basket (in addition to other uses within BLS), CE data are also used by many other federal government, nonprofit, and private-sector organizations, as well as individual users, such as policy analysts and other researchers. Government and private agencies use the data to assess spending patterns for specific groups of people, such as those over age 65 or part of low-income households, as well as to make decisions about issues affecting these groups. Policymakers use CE data to gauge the impact of policy changes on different socioeconomic groups. Academic researchers use CE data to assess the spending behavior of different types of families across various products (including newly introduced goods and services) and to examine people’s gift-giving behavior. Market researchers use CE data to analyze consumers and businesses and their interest in various goods and services.2 In this article, we focus on the use of CE data by eight federal government departments or agencies: BLS,3 the Census Bureau, the U.S. Department of Agriculture, the U.S. Department of Defense, the U.S. Department of State, the U.S. Department of Health and Human Services, the U.S. Bureau of Economic Analysis, and the Internal Revenue Service. (See table 1.) The descriptions of CE data uses that follow are based on discussions with agency subject-matter experts and on documentation presented in department and agency materials, including official reports, methodology papers, and websites.Table 1. Use of Consumer Expenditure Surveys data by department or agency, topic, and format
+
+	Department or agency	Topic	Format	Use and frequency
+
+U.S. Department of Agriculture Children	Published tables	Determine the cost of raising a child (periodic)
+
+U.S. Bureau of Economic Analysis Housing	Custom tables	Input for several key components of BEA’s economic statistics, including the national income and product accounts, the input–output accounts, the travel and tourism satellite accounts, and the new outdoor recreation satellite account (annual)
+
+U.S. Bureau of Labor Statistics (BLS) Consumer Price Index	Internal microdata	Estimate lower level spending weights for the Chained Consumer Price Index for All Urban Consumers (C-CPI-U, monthly), the CPI-U, and the Consumer Price Index for Urban Wage Earners and Clerical Workers (CPI-W, annualized from biennial data), as well as spending weights for lower-level index calculations. Select item sampling probabilities (annual). Derive outlet sample frame and selection probabilities for the CPI Commodities and Services Survey (semiannual)
+
+U.S. Census Bureau Construction	Unprocessed microdata	Estimate residential construction spending (monthly)
+
+U.S. Census Bureau Poverty	Custom tables	Use BLS-produced thresholds to produce estimates of poverty based on the Supplemental Poverty Measure methodology (annual)
+
+U.S. Department of Defense Military	Custom tables	Determine cost-of-living allowances for military personnel living off base (annual)
+
+U.S. Department of Health and Human Services Health	Custom tables	Estimate health expenditures for National Health Expenditure Accounts (annual)
+
+Internal Revenue Service Taxes	Custom tables	Calculate alternate sales tax standard deduction tables (annual)
+
+U.S. Department of State Foreign Service cost-of-living allowances	Published tables	Determine cost-of-living allowances for diplomats living overseas (annual)
+
+Source: U.S. Bureau of Labor Statistics and other federal agencies and departments.
+
+The U.S. Bureau of Labor Statistics
+
+The U.S. Bureau of Labor Statistics (BLS), an agency within the U.S. Department of Labor, is responsible for measuring labor market activity, working conditions, price changes and productivity in the U.S. economy. BLS serves as one of the principal agencies of the U.S. Federal Statistical System.4 The BLS CPI program is responsible for measuring the average change over time in the prices paid by urban consumers for a market basket of goods and services. The CPI is among the most widely used measures of inflation and serves as an indicator of the effectiveness of government efforts to control inflation through its fiscal and monetary policy. In addition, business executives, labor leaders, and other private individuals use the index as a guide in making economic decisions. The CPI is used to make cost-of-living adjustments to salaries and pensions paid to millions of American workers and retirees; it is also used to adjust the federal income tax structure to prevent inflation-induced increases in taxes5 and to adjust income eligibility levels for government programs and assistance.
+
+The CPI program uses CE data to (1) calculate expenditure weights for CPI calculation, (2) determine item sampling probabilities, and (3) collect data on outlet point of purchase.6 The CPI program produces three official indexes: the Consumer Price Index for All Urban Consumers (CPI-U); the Chained Consumer Price Index for All Urban Consumers (C-CPI-U); and the Consumer Price Index for Urban Wage Earners and Clerical Workers (CPI-W). Numerous research indexes are also produced, including the Consumer Price Index for Americans 62 years of age and older (R-CPI-E).7 The CPI-U, which is often referred to as the “headline index,” measures the average monthly change in the price of goods and services paid by urban consumers living in the United States. The CPI-U is based on expenditures of urban wage earners and clerical workers; professional, managerial, and technical workers; the self-employed; short-term workers; and the unemployed, retirees, and others who are not in the labor force. The C-CPI-U is similar, except that it is designed to be a closer approximation to a cost-of-living index in that, in its final form, it accounts for any substitution that consumers make across item categories in response to changes in relative prices. Similarly, the CPI-W differs from the CPI-U in that it is based only on expenditures made by those in wage-earning or clerical occupations. The CPI-E is designed to represent the inflation experience of consumers aged 62 years and older currently living in the United States, with expenditure weights derived from the spending behavior of consumer units with reference to people aged 62 years or older.8 Expenditure weights for CPI index calculation
+
+The CPI uses CE data to update the expenditure weights across CPI products and processes. This includes (1) determining lower-level weights used to calculate basic-level indexes from underlying prices collected, (2) updating monthly weights for aggregating basic-level index components into the final estimate of the C-CPI-U, and (3) providing biennial weights for aggregating basic-level index components to calculate the CPI-U, the CPI-W, and the CPI-E.
+
+Lower-level weights for basic indexes. All CPI products are calculated in two stages. In the first stage, basic indexes are calculated for each of the 7,776 item-area combinations. For instance, a basic index is calculated for bananas in Boston as a weighted average of the change in the price of bananas at sampled stores across the Boston area. The weights for the first stage are usually derived from the sampling frame for the category in the area.9 Prior to 2018, the CE was only used to calculate lower-level weights for item categories whose outlet samples were derived from sources other than the Telephone Point of Purchase Survey (TPOPS).10 TPOPS data collection ended in September 2019 and the last TPOPS-sourced sample initiated in the commodities and services survey occurred in August 2020. The first CE-sourced sample initiation in the commodities and services survey began in August 2021. Beginning with this sample, CE data are used to estimate all of the lower-level weights in the basic-level indexes.
+
+Monthly weights for C-CPI-U. The C-CPI-U differs from the CPI-U in the formula and weights used to combine basic indexes. The formula used in the C-CPI-U accounts for consumers’ ability to achieve the same standard of living from alternative sets of consumer goods and services.11 This formula requires consumer spending data that are not immediately available. Consequently, the C-CPI-U, unlike the other two official CPI data series, is published first in preliminary form and is subject to scheduled revisions using updated expenditure data.12 In publishing the final C-CPI-U, the CPI program uses monthly expenditure estimates from each elementary item-area combination to create aggregation weights. The monthly expenditure estimates for an item are summed across 32 areas to obtain a U.S. monthly item expenditure and then allocated across these areas according to each area’s relative expenditure share for the prior 12 months. The CE program delivers microdata on a quarterly basis for the monthly weights in the C-CPI-U.13
+
+Aggregation weights for published indexes. In calculating the CPI-U, the CPI-W and the R-CPI-E, CE data are used to derive the reference period aggregation weights at the second stage of index calculation. Aggregate indexes are produced by averaging across two or more of the 7,776 CPI item-area combinations, such as the all-items index for New York, which is the average of its 243 basic indexes. The aggregation weights in the second stage assign each elementary index a relative importance to the aggregate index, corresponding to consumer expenditure choices (from the CE) among the 243 elementary items in the 32 elementary areas in the CPI sample for the reference period.14 Lastly, these weights are updated biennially and enable the CPI program to keep pace with relatively current spending patterns.
+
+Item-sampling probabilities
+
+The CPI’s classification is composed of approximately 70 expenditure classes divided into 243 item strata. Each item strata consists of entry-level items (ELIs). These ELIs are the first-stage sampling units for consumer goods and services selected within each sample outlet. In other words, ELIs represent the items from which CPI data collectors sample within in each sampled outlet. CE data are used to probabilistically select which ELIs should be priced in each sample. Every year, the CPI program uses the most recent 2 years of CE data to select new item samples because of the changes in the consumer marketplace.15 Commodities and services outlet sample frame
+
+Since 2019, the CE program has collected information on retail stores and service providers for CPI program production use for items purchased by consumers living in the United States. This step replaces the TPOPS, which suffered from rising costs, low response rates, and sample frame issues related to mobile phones. Collecting these data forms the basis for the CPI’s commodities and services sample frame, which allows the CPI to then select the retail establishments consumers frequent most and monitor the prices of a sample of goods and services.
+
+Other federal departments and agencies
+
+U.S. Department of Agriculture (USDA)
+
+The USDA is the federal executive department responsible for developing and executing federal laws related to farming, forestry, rural economic development, and food and nutrition programs (distribution, nutrition assistance and school lunch programs, etc.). The USDA Food and Nutrition Service uses CE data to produce its report Expenditures on Children by Families, which is also known as “The Cost of Raising a Child.”16 Expenditures on children. The USDA, which has been tracking the cost of raising a child since 1960, uses CE data to examine child-related expenses by the age of a child or children, household income, budgetary component (e.g., housing, transportation, education, healthcare, clothing, food, etc.), and geographic region.17 This report fulfills the USDA’s mission in supporting the financial health and well-being of American families. These estimates give families a greater awareness of the expenses they are likely to face while raising children, and they provide valuable information to people planning to start a family. In particular, this report provides insights regarding how child-rearing expenses can reflect economies of scale.18 Families may also use this information to identify financial-health resolutions by understanding the costs of feeding a child and plan for both anticipated and unexpected life events. Additionally, courts and state governments use these data to inform their decisions about child support guidelines and foster care payments. Lastly, financial planners may use this information to provide advice to their clients for family financial planning.19 U.S. Bureau of Economic Analysis (BEA)
+
+BEA is the federal agency responsible for providing official macroeconomic and industry statistics. The cornerstone of BEA’s statistics are the national income and product accounts (NIPAs), which feature estimates of gross domestic product (GDP) and related measures. In a letter to BLS management about the Consumer Expenditure Surveys, BEA Chief Economist Dennis J. Fixler wrote, “This important survey is our only data source for several key components of BEA’s economic statistics.” Fixler continued:
+
+Information from the CE surveys is critical in preparing the national income and product accounts (NIPA’s), the input–output (I–O) accounts, the travel and tourism satellite accounts, and the new outdoor recreation satellite account. Also, beginning with the 2013 Benchmark Revision, BEA uses the CE Surveys’ data to estimate the diesel fuel portion of the personal consumption expenditure (PCE) gasoline and other motor fuel estimate. Data from the CE surveys is also used for comparison purposes [as they were] during the 2012 NIPA/Benchmark I–O reconciliation [when] these data were used as a check on final demand for personal consumption expenditures.20 [See table A-1.]
+
+U.S. Census Bureau
+
+The Census Bureau is the principal agency of the U.S. Federal Statistical System responsible for producing data about the American people and economy.21 The Census Bureau relies on CE data for the calculation of residential housing expenditures and the production of Supplemental Poverty Measure thresholds.
+
+Residential housing expenditures. The Census Bureau uses CE data collected on homeowners’ alterations and repairs to produce the monthly Value of Construction Put in Place report, which is a principal federal economic indicator. This measure provides monthly estimates of the total dollar value of construction work done in the United States each month on new, private residential and nonresidential construction, public construction, and improvements to existing buildings and infrastructure. CE data are used as a source for estimating the monthly value in place data for residential improvements to owner-occupied housing units.22 In addition, regular revisions to the owner-occupied residential improvements estimates are benchmarked to the annual total using CE data.23 Supplemental poverty measure (SPM). The Census Bureau, in cooperation with BLS, produces the SPM.24 The SPM acts as an experimental poverty measure that defines thresholds and resources in a manner different from the official poverty measure. As a result, it is not used to determine eligibility for government programs, but instead is used to evaluate the impact of benefit programs on poverty. In determining the SPM, the CE serves as the source of the expenditure-based poverty thresholds. More specifically, the BLS Division of Price and Index Number Research (DPINR) is responsible for conducting research and producing the SPM thresholds that are based on CE data. The thresholds are experimental and thus not subject to the same review as official BLS projects. The thresholds are posted on the DPINR webpage and sent to the Census Bureau for use in producing experimental poverty estimates.25 Currently, SPM thresholds are based on 5 years of quarterly CE Interview Survey data on out-of-pocket expenditures for food, clothing, shelter, and utilities (FCSU), by consumer units with two children, with values converted to those for a reference unit composed of two adults and two children. A multiplier is applied to FCSU expenditures to account for other basic goods and services (e.g., household supplies, personal care, and nonwork-related transportation) in the thresholds. The Census Bureau applies equivalence scales to the BLS-produced reference-unit poverty thresholds to derive thresholds for consumer units with differing numbers of adults and children. The Census Bureau also adjusts the housing portion of the thresholds for geographic differences in the cost of housing.
+
+U.S. Department of Defense (DOD)
+
+The DOD is the federal executive department that coordinates and supervises all agencies and functions related to national security and the U.S. Armed Forces. The DOD uses CE data to calculate cost-of-living allowances for military personnel who live off base. The DOD uses CE Interview Survey data to calculate the Overseas Cost of Living Allowance (OCOLA), the continental United States (CONUS) Cost of Living Allowance (COLA), and the spendable income table for military personnel.
+
+The DOD regularly uses specially prepared data from BLS on expenditures by military families from the prior 3 years by family size and income bracket to develop the spendable income tables used in the CONUS weights. The OCOLA is a nontaxable allowance paid to U.S. military personnel stationed overseas to partially offset higher overseas prices on nonhousing goods and services.26 OCOLA helps maintain the purchasing power of overseas U.S. military personnel so they can purchase goods and services comparable to those of their CONUS-based counterparts. The DOD computes an OCOLA index by comparing the cost of a specific market basket of goods and services overseas to the cost of the same market basket of goods and services in the CONUS, on average. Holding all else constant, if market-basket costs rise in an overseas location compared with average CONUS costs, then the DOD will increase the COLA for service members stationed in that overseas location.
+
+To compute the OCOLA Index, the DOD uses a CE Interview Survey data to construct a weighted system that places a greater significance on frequently purchased goods and services, such as car insurance, gasoline, and day care. The Armed Forces extract of the CE Interview Survey details how U.S. military families allocate their spendable income across all OCOLA types of goods and services. This extract is used to determine the market basket items and the appropriate weights for each item based on relative expenditures. The overseas weighted-average cost for each market basket item (determined by using location-specific data from the Living Pattern Survey and the Retail Price Schedule survey) is compared with the CONUS weighted-average cost for the same item to produce an index for each item.27 CONUS COLA compensates for nonhousing expenses incurred in areas that exceed average costs in CONUS by more than 8 percent. By statute, the CONUS COLA index must be comparable to the Consumer Price Index. Therefore, the DOD derives a CONUS COLA index by using data on typical expenditures from the CE.28 OCOLA and CONUS COLA payments are based on the amount of average spendable income that is applicable for each regular military compensation level. Spendable income is determined using the expenditures by income level generated by the CE.29 U.S. Department of Health and Human Services (HHS)
+
+The HHS is the federal executive department whose mission “is to enhance the health and well-being of all Americans, by providing for effective health and human services and by fostering sound, sustained advances in the sciences underlying medicine, public health, and social services.”30 The Centers for Medicare & Medicaid Services (CMS), part of HHS, is responsible for publishing the National Health Expenditure Accounts (NHEA), which consists of national health expenditures (historical and projections), state health expenditures, and age and gender estimates. The NHEA provide official estimates of total healthcare spending in the United States by type of good or service delivered (hospital care, physician and clinical services, retail prescription drugs, etc.), as well as the source of funding for those services (private health insurance, Medicare, Medicaid, out-of-pocket spending, etc.) and the sponsors (businesses, households, and governments).31 Measure out-of-pocket healthcare expenditures. The CMS uses CE data specifically to measure out-of-pocket spending for healthcare goods and services not covered by insurance. This includes the amount of coinsurance payments or deductibles required by private insurance plans, health savings accounts (HSAs), as well as public programs such as Medicare and Medicaid.32 The CMS uses CE data in conjunction with several other sources of data (e.g., the Census Bureau’s Service Annual Survey, the Medical Expenditures Panel Survey, and the Medicare Current Beneficiary Survey)33 that serve as a baseline for comparing the accuracy of the CMS estimates of private health insurance spending and benefits.34 In order to publish the NHEA, the CMS requires timely and detailed expenditure data. The CMS utilizes both annual aggregate summaries (using integrated Interview and Diary surveys) and microdata for various income, asset, and healthcare expenditure categories (including the number of policies). In particular, the CMS requires income and asset characteristics at the aggregate level to account for households with older members (who earn less income and hold more assets). The CMS also uses special tabulations of annual data by age prepared by BLS to produce estimates of individually purchased health insurance expenditures.35 Internal Revenue Service (IRS)
+
+The IRS is tasked with administering the Internal Revenue Code and collecting federal taxes. The IRS uses CE data to (1) calculate optional state and local sales tax deductions tables, and (2) determine typical household expenditures in investigating tax repayment issues.
+
+State and local sales tax tables. The IRS uses CE data to develop optional state and local sales tax tables. These tables are based on the Internal Revenue Code, which provides taxpayers with an option to deduct state and local general sales tax instead of state and local income tax.36 This option is especially important to taxpayers residing in states with no income tax. Taxpayers can either deduct their actual sales tax amounts or estimate the deduction using these optional state and local sales tax tables. In addition, taxpayers can use the tables to deduct sales taxes paid on certain specified items, such as motor vehicles, aircraft, or boats. For this purpose, BLS produces special tabulations on the purchase of taxable items, which the IRS uses to prepare the optional state and local tax tables.37 The IRS publishes these tax tables in its annual publication, “Instructions for Schedule A.”38 The IRS also provides an online sales tax deduction calculator, which taxpayers can use to estimate their general sales tax deduction.39 In creating these tables, the IRS uses BLS-produced custom tabulations of integrated CE Interview and Diary surveys data to estimate state and local general sales tax amounts by family size and income bracket. The IRS provides both state and local taxability data at Universal Classification Code levels to BLS, which in turn uses these taxability files to estimate the average sales tax amounts along with household income, family size, and other variables by state and locality.40 Upon receiving these data, the IRS estimates state and local general sales tax amounts by family size and income bracket.41 Collection financial standards. The IRS also uses typical consumer unit expenditures, as reported in the CE, when investigating tax repayment cases. Specifically, the IRS uses CE data to derive its Collection Financial Standards, which help to assess a taxpayer’s ability to pay a delinquent tax liability. These standards measure allowable living expenses for taxpayers regarding healthcare, food, clothing, housing, utilities, and transportation.42 Taxpayers may use the standard monthly amount, which is determined by family size. The IRS specifically derives the national standards on food, clothing, and other items, as well as local standards on transportation, from the CE data:
+
+National standards: food, clothing, and other items. The IRS breaks down the national standards into five categories of necessary expenses: food, housekeeping supplies, apparel and services, personal care products and services, and miscellaneous items. The IRS requires detailed data on aggregate expenditures by income level and family size to determine the national standards on food, clothing, and other items.43
+
+Local standards: transportation. The local transportation standards for taxpayers include vehicle ownership and public transportation by Census Region and Metropolitan Statistical Area (MSA).44 The IRS computes standards for vehicle ownership based on monthly loan or lease payments. The public transportation standards include a single nationwide allowance derived from CE expenditure data on mass transit fares for a train, bus, taxi, ferry, etc.45
+
+U.S. Department of State (DOS)
+
+The DOS is the federal executive department responsible for carrying out U.S. foreign policy and conducting international relations. The State Department’s Office of Allowances uses data from the CE in determining spendable-income tables, a key measure for revising the post-allowance (COLA) payment tables. The post-allowance tables provide COLAs supporting the entire federal civilian overseas workforce.46 Post allowances make it possible for the federal civilian overseas workforce to spend the same portion of their basic compensation for living expenses in a foreign country (where they are “posted”) as they would if they lived in Washington, D.C. The post allowances enable employees to avoid a reduction in their standard of living because of higher costs of goods and services in the location where they are posted.47 Cost-of-living adjustments for the federal civilian overseas workforce. Data from the CE Interview Survey are used to calculate the post allowance payment tables. The information in the tables represents a percentage increase over the cost of living in Washington, D.C., and it is applied to “spendable income”—that is, the amount of money that households have available for spending after deductions for taxes, gifts and contributions, savings (including insurance and retirement), and U.S. shelter and household utility expenses.48 Unlike the DOD allowance, the DOS post allowance for the federal civilian overseas workforce is developed using a slightly different approach. Price data from overseas are collected and compared with those in the Washington, D.C., areas to determine if the federal overseas civilian workforce qualifies for a post (COLA) allowance. The State Department’s Office of Allowances develops a cost index to evaluate expenditure patterns between foreign locations and Washington D.C. The expenditure patterns (index weights) for Washington, D.C., are updated using data from the CE.49 The State Department compares costs in the foreign location for goods and services in 11 categories—food (whether purchased at grocery stores, restaurants, or other venues), tobacco and alcohol, clothing, personal care items, furnishings, household goods, medical services, recreation, public transportation, vehicle-related expenses, and household help—to the cost for those same goods and services in Washington, D.C. If the overall costs of goods and services at a foreign post—after considering expenditure patterns—are at least 3 percent above the cost of the same goods and services in the Washington, D.C., area, then the State Department establishes a post allowance for that location.50 Approach to assessing data quality
+
+In keeping with “Statistical Policy Directive No. 1: Fundamental Responsibilities of Federal Statistical Agencies and Recognized Statistical Units,” BLS is committed to producing data that consistently are of the highest statistical quality; in other words, the agency strives to produce data that are relevant, accurate, coherent, timely, accessible, and interpretable.51 Monitoring data quality in the CE includes procedures conducted by the Census Bureau during data collection and by BLS during data processing and analysis.52 “Fitness for use” is an important component of data quality; as such, the CE is also committed to helping data users assess the fitness for use of the CE data for their purposes. BLS has historically provided a variety of metrics for data users to evaluate the overall quality of its products. Official tables provide standard errors, the public-use microdata user documentation provides response rates, and the datasets contained in the public-use microdata provide all the variables and flags necessary for users to create their own quality measures.53 The CE program defines data quality in a manner that allows for objective measurement, provides an assessment framework, and addresses the fitness-for-use concerns of individual program stakeholders. Based on the Total Quality Management and Total Survey Error paradigms, the definition includes six dimensions: relevance, accuracy, coherence, timeliness, accessibility, and interpretability.54 (See table 2.)Table 2. Data quality dimensions
+
+	Dimension	Description
+
+Relevance The degree to which the survey products meets the user's specific needs in terms of both content and coverage.
+
+Accuracy The degree to which the estimate is similar or dissimilar to the true value of the population parameter. This dimension gives consideration to survey errors stemming from coverage, sampling, nonresponse, construct validity, measurement, and post-collection processing and adjustments.
+
+Coherence The degree to which different sources or methods on the same phenomenon are similar.
+
+Timeliness The interval between the time data are made available to users and the event or the phenomena the data describe.
+
+Accessibility The ease with which statistical information and appropriate documentation describing that information can be obtained from the statistical organization.
+
+Interpretability The availability of adequate information to allow users to properly use and interpret the survey products.
+
+Source: U.S Bureau of Labor Statistics
+
+The CE program continuously evaluates these six dimensions of data quality, in part or in whole, through the assessment of internal indicators of data quality, external indicators of data quality, nonresponse bias study results, and measurement-error study results:
+
+Internal indicators. The CE program supports a systematic and integrated approach for monitoring and reporting on internal data quality indicators. Maintaining a consistent, well-defined set of metrics establishes baselines for monitoring trends in the quality of routine survey production activities over time. For external users, this set of metrics serves as an indication of data quality; for internal users, the metrics are actionable and provide a basis for survey improvements. Because the quality of survey estimates is affected by errors that occur anywhere in the survey cycle, it is expected that these internal metrics will evolve over time as the CE continually researches methods to monitor and improve data quality.55 As of 2019, eight internal indicators are being tracked: final disposition rates of eligible units; records use; expenditure edit rates; income imputation rates; respondent burden; information book use; survey mode; and survey time.56
+
+External indicators. From an external-indicator standpoint, the CE program compares CE data with other data sources that measure the same or similar items. Although every household survey has its own unique set of errors, the monitoring of ratios between sources and any associated change over time can help identify potential underreporting or overreporting of expenditure items. The CE program routinely compares its results to various external sources, including the following: Personal Consumption Expenditures, the Residential Energy Consumption Survey, National Health Expenditure Accounts, the Medical Expenditure Panel Survey, the Current Population Survey, the American Community Survey, the Panel Study of Income Dynamics, the Survey of Consumer Finances, and the American Housing Survey.57
+
+Nonresponse bias. Nonresponse bias is the systematic error that occurs when results collected from respondents differ in meaningful ways from those that would be collected, but by definition are not collectable, from nonrespondents.58 The Office of Management and Budget (OMB) encourages all federal survey programs to study their nonresponse bias, and OMB requires all federal surveys whose response rates are below 80 percent to conduct such a study.59 Both the CE Interview and Diary surveys have response rates below 80 percent and therefore are subject to the OMB requirement.60 The CE program assesses potential nonresponse bias through the continuous monitoring of response rates (both for collection and estimation rates) and with nonresponse-bias studies. The most recently completed nonresponse-bias study concluded that the data in both the CE Interview survey and Diary survey were not missing completely at random.61 This conclusion is similar to that of other studies, which also find the data are not missing completely at random. However, these other studies find that the amount of nonresponse bias is not substantial.62
+
+Measurement error. Measurement error is the difference between the reported value of a variable of interest and the true value of that variable.63 Optimally, measurement error is 0 (i.e., the respondent reports the true value), but it is generally not directly observable in survey data, which, by definition, consist of reported values that may or may not be correct. Therefore, in addition to the external data comparisons mentioned previously, the CE program assesses measurement error through (1) comparisons with other administrative data sources,64 (2) comparisons to respondent expenditure records (e.g., bank statements, credit card statements, etc.), and (3) within-survey subgroup comparisons (such as respondents completing the survey in person or on the telephone or using the information booklet or not). As reported by Roger Tourangeau et al., measurement error evaluation results suggest that overestimation is just as common as underestimation in the CE, and that the degree and direction of measurement error varies considerably by expenditure category and respondent characteristics—therefore, analytic objectives play a large role in determining the data’s fitness for use.65
+
+Fitness for use
+
+Although the regular revision of the CPI remains the primary purpose of the CE, other uses of CE data at the federal level have developed over time. As a result, the CE program continuously endeavors to understand each user’s unique preferences with respect to data quality, as well as the data’s fitness for use. This approach includes addressing concerns of other federal users regarding the six dimensions of data quality mentioned previously: relevance, accuracy, coherence, timeliness, accessibility, and interpretability. It also involves frequently evaluating the survey quality in terms of each federal data user and adjusting production processes as necessary. In recent years, the CE program has also begun an initiative to address specific data quality concerns through the annual release of a data quality profile and more accessible methods research results through an online research library.66 From the CE program perspective, select data quality factors that are critical to major data users include the following:
+
+Cost of raising a child (USDA): relevance. In estimating the cost of raising a child, detailed expenditures by consumer unit are critical to the U.S. Department of Agriculture’s work in estimating the cost of raising a child.
+
+CPI (BLS): relevance, accuracy, and timeliness. Although CE response rates have been declining in recent years, the downward trend does not appear to have affected CPI weights, and the weights for consumer units are quite robust in terms of declining response rates. However, ultimately, the CPI production schedule is highly dependent on receiving CE data on a timely basis.
+
+Out-of-pocket healthcare expenditures (CMS): relevance, accuracy, and timeliness. The Centers for Medicare and Medicaid Services is most concerned with underreporting of healthcare expenditures. Understanding the impact of policies such as the Affordable Care Act on out-of-pocket healthcare spending while also reconciling CE data with other data sources is a major concern of the CMS. Also, because the CMS produces annual estimates, it is imperative that data be available early in the year. The CE program began publishing midyear tables in 2013, and that has helped provide more timely and readily available data. Ultimately, the CE’s level of detail, timeliness, and continuous publication enable the CMS to fulfill its mission of producing national health expenditure estimates.
+
+Residential Housing Expenditures (Census): timeliness. Timely and continuous dissemination of CE data are critical to the Census Bureau’s work in estimating and revising key economic indicators.
+
+Supplemental Poverty Measure (Census): coherence, timeliness, interpretability. For the SPM, data sources that are consistent between threshold and resource definitions, in terms of poverty concepts, are essential. Therefore, priorities include data that are timely, provide simplicity in estimation, stability in the measure over time, and ease of explaining the methodology.
+
+Overall, results from assessments of internal indicators, external indicators, nonresponse bias studies, and measurement error studies show that CE data are generally of high quality for their intended uses.67 However, concerns persist about the impact of declining response rates, measurement error, and a diminishing correspondence to national account aggregates.68 Using observable characteristics, CE samples are designed to be representative of the population, although there is evidence of underrepresentation at the top of the income distribution as well as underreporting of income and expenditures.69 Conclusion
+
+BLS collects, processes, and disseminates expenditures data for numerous stakeholders, each of whom maintains a particular set of preferences with respect to data quality factors related to their intended use of the estimates. Establishing a framework for continually assessing data quality and viewing results through the lens of fitness for use enables the Consumer Expenditure Surveys program to provide high-quality data. These data present an unbiased statistical picture of consumer expenditures—which are used for the Consumer Price Index, by various government agencies and by other data users—in an effort to improve understanding of consumer economic behavior.
+
+Appendix. Uses of Consumer Expenditure Surveys data by the U.S. Bureau of Economic Analysis (BEA)Table A-1. BEA use of Consumer Expenditure Surveys data
+
+	Item	Use	Program area
+
+Food Cross-check and comparison with PCE-comparable items	NIPA
+
+Vehicle renting and leasing PCE auto and truck leasing; PCE other vehicle leasing	I–O, NIPA, TTSA
+
+Travel (out-of-town trips) Travel expenditures	TTSA
+
+Babysitting or other child care in someone else’s home PCE child care	NIPA
+
+Day-care centers, nursery, and preschools PCE nursery schools	NIPA
+
+Taxicabs Total receipts for taxicabs; PCE for taxicabs	I–O, NIPA, TTSA
+
+All items Cross-check and comparison with PCE-comparable items	NIPA
+
+BEA use of various Consumer Price Indexes (CPIs) based on Consumer Expenditure Surveys data
+
+CPI for household fuels PCE housing services for tenant-occupied nonfarm housing and gross housing output	NIPA
+
+CPI for owners’ equivalent rent and residential rent PCE housing services for owner- and tenant-occupied nonfarm housing and gross housing output	NIPA
+
+CPI for housekeeping services Real private household compensation	NIPA
+
+CPI for ship fare Travel expenditures	TTSA
+
+CPI for intercity train fare Travel expenditures	TTSA
+
+CPI for recreational equipment Consumer expenditures	ORSA
+
+CPI for travel (local trips) Travel expenditures	ORSA
+
+Note: CPI = Consumer Price Index; I–O = Input–Output Accounts; NIPA = National Income and Product Accounts; PCE = Personal Consumption Expenditures; TTSA = Travel and Tourism Satellite Account; ORSA = Outdoor Recreation Satellite Account.
+
+Source: U.S. Bureau of Labor Statistics.
+
+Suggested citation:
+
+Adam Safir, and Daniel Dorfman, "Assessing Consumer Expenditure Surveys data quality through the lens of data use," Monthly Labor Review, U.S. Bureau of Labor Statistics, November 2021, https://doi.org/10.21916/mlr.2021.24
+
+Notes
+
+1 “Sponsors” are federal or state agencies on behalf of whom the Census Bureau manages surveys. The funds for these surveys are appropriated to the sponsoring agency, and the work is conducted on a cost reimbursable basis under the auspices of an interagency agreement.
+
+2 See “Consumer Expenditure Surveys: value of the Consumer Expenditure Survey” (U.S. Bureau of Labor Statistics, last modified August 26, 2014), https://www.bls.gov/respondents/cex/cevalue.htm.
+
+3 This article looks only at the secondary uses of the Consumer Expenditures Surveys (CE) data by BLS; the analyses and reports that BLS produces on the CE itself are outside the scope of the article.
+
+4 This section discusses the ways that BLS uses the CE data to produce other BLS products and does not include the CE products and publications themselves, which are not discussed at length in this article.
+
+5 See BLS, “Consumer Price Index: Consumer Price Index overview” (U.S. Bureau of Labor Statistics, last modified January 10, 2020), https://www.bls.gov/cpi/overview.htm.
+
+6 See “Consumer expenditures and income,” Handbook of Methods (U.S. Bureau of Labor Statistics, last modified March 28, 2018), https://www.bls.gov/opub/hom/cex/pdf/cex.pdf.
+
+7 For a complete list of research products available, see “Consumer Price Index: CPI Research Series,” (U.S. Bureau of Labor Statistics, last modified August 5, 2020), https://www.bls.gov/cpi/research-series/.
+
+8 For more information, see “Chapter 17: The Consumer Price Index,” Handbook of Methods (U.S. Bureau of Labor Statistics, updated February 14, 2018), https://www.bls.gov/opub/hom/pdf/cpi-20180214.pdf.
+
+9 Ibid., pp. 4, 18.
+
+10 The Telephone Point of Purchase Survey (TPOPS), conducted by the U.S. Census Bureau, was formerly the source of data on where certain items were purchased by U.S. consumers. Suffering from low response rates and data quality concerns, TPOPS was replaced by the CE in 2018. For more information, see “Telephone Point of Purchase Survey (TPOPS)” (U.S. Census Bureau, last revised October 8, 2021), https://www.census.gov/programs-surveys/tpops.html.
+
+11 The Chained CPI-U uses a superlative index formula designed to reflect consumers’ behavior in response to changes in relative prices. For more information, see “Chapter 17. The Consumer Price Index.”
+
+12 See “Chapter 17. The Consumer Price Index,” p. 4.
+
+13 Ibid., p. 32.
+
+14 Ibid., p. 29.
+
+15 Ibid., p. 12.
+
+16 See Mark Lino, Kevin Kuczynski, Nestor Rodriguez, TusaRebecca Schap, Expenditures on Children by Families, 2015, miscellaneous report no. 1528–2015 (U.S. Department of Agriculture, Center for Nutrition Policy and Promotion, January 2017, revised March 2017), https://fns-prod.azureedge.net/sites/default/files/crc2015_March2017_0.pdf. See also Mark Lino, “The cost of raising a child” (U.S. Department of Agriculture, Center for Nutrition Policy and Promotion, February 18, 2020), https://www.usda.gov/media/blog/2017/01/13/cost-raising-child.
+
+17 For access to all of the past reports, see “Expenditures on children by families reports—all years” (U.S. Department of Agriculture, Center for Nutrition Policy and Promotion, March 26, 2019), https://www.fns.usda.gov/resource/expenditures-children-families-reports-all-years.
+
+18 Economies of scale are achieved when increasing inputs in production by x percent increases average costs by less than x percent. In the present context, consider “inputs” as members of a family, and “costs” as expenditures. A married couple renting a one-bedroom apartment does not spend twice as much for rent on that apartment as a single person would; similarly, their costs for food and other expenses may be less than twice what a single person would spend. If that couple is living in a larger house, and has a child, family size increases by 50 percent. But if there is already a bedroom in the house available for use of the child, the basic housing cost (i.e., rent or mortgage, taxes, and other similar ownership costs) does not change, let alone rise by 50 percent.
+
+19 See Families Projected to Spend an Average of $233,610 Raising a Child Born in 2015, release no. 0004.17 (U.S. Department of Agriculture, January 9, 2016), https://www.usda.gov/media/press-releases/2017/01/09/families-projected-spend-average-233610-raising-child-born-2015.
+
+20 See letter from Dennis J. Fixler to Nora Kincaid of the BLS Office of Administration, dated July 22, 2020, https://www.reginfo.gov/public/do/DownloadDocument?objectID=103672300. The letter was written in response to requests for comments in the Federal Register, vol. 85, no. 113 (U.S. Office of Management and Budget, June 11, 2020), pp. 35665–67, https://www.govinfo.gov/content/pkg/FR-2020-06-11/pdf/FR-2020-06-11.pdf. For a full list of the ways that the U.S. Bureau of Economic Analysis uses CE data, see appendix table A-1.
+
+21 For more information, see “What we do” (U.S. Census Bureau, May 2021), https://www.census.gov/about/what.html#par_textimage.
+
+22 See “Value of construction put in place” (U.S. Census Bureau), https://www.census.gov/econ/overview/co0300.html.
+
+23 See “Construction spending: construction methodology” (U.S. Census Bureau), https://www.census.gov/construction/c30/methodology.html.
+
+24 See “Supplemental Poverty Measure” (U.S. Census Bureau, last revised October 8, 2021), https://www.census.gov/topics/income-poverty/supplemental-poverty-measure.html; see also Liana Fox, The Supplemental Poverty Measure: 2019, report no. P60-272 (U.S. Census Bureau, September 15, 2020), https://www.census.gov/library/publications/2020/demo/p60-272.html.
+
+25 See “Price and index number research: research experimental poverty thresholds” (U.S. Bureau of Labor Statistics, last modified September 3, 2021), https://www.bls.gov/pir/spmhome.htm.
+
+26 See “Overseas cost of living allowances (COLA) frequently asked questions” (U.S. Department of Defense, Defense Travel Management Office, updated April 20, 2020), https://www.defensetravel.dod.mil/site/faqcola.cfm.
+
+27 See “Calculation of overseas COLA index” (U.S. Department of Defense, Defense Travel Management Office), https://www.defensetravel.dod.mil/site/colaIndexCalc.cfm.
+
+28 See U.S. Code, Title 37–Pay and Allowances of the Uniformed Services, section 403b, “Cost-of-living allowance in the continental United States,” pp. 116–117, https://www.govinfo.gov/content/pkg/USCODE-2001-title37/pdf/USCODE-2001-title37.pdf.
+
+29 See “Overseas cost of living allowances (COLA) frequently asked questions.”
+
+30 See the U.S. Department of Health and Human Services (HHS) mission statement, “About HHS,” at https://www.hhs.gov/about/index.html.
+
+31 See “National Health Expenditure Data” (U.S. Centers for Medicare and Medicaid Services, December 17, 2019), https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/NationalHealthExpendData/index.
+
+32 See “National Health Expenditure Accounts: methodology paper, 2017; definitions, sources, and methods” (U.S. Centers for Medicare and Medicaid Services, 2017), p. 15, https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/NationalHealthExpendData/Downloads/DSM-17.pdf.
+
+33 Ibid., p. 16.
+
+34 Ibid., p. 26.
+
+35 Don A. Dillman and Carol C. House, eds., Measuring What We Spend: Toward a New Consumer Expenditure Survey (Washington, DC: National Academies Press, 2013), pp. 25–26, https://www.bls.gov/cex/cnstat.pdf.
+
+36 See U.S. Code, Title 26–Internal Revenue Code, section 164(b)(5), “General sales taxes,” pp. 664–65, https://www.govinfo.gov/app/details/USCODE-2011-title26/&collectionCode=USCODE.
+
+37 Wu-Lang Lee, “BLS Consumer Expenditure Survey data usage: IRS experience” (presentation at the BLS CE Data Users’ Needs Forum, June 21, 2010), pp. 4–5, https://www.bls.gov/cex/duf2010lee1.pdf.
+
+38 Schedule A is the tax form on which filers claim deductions for various items, such as state and local income or sales taxes, property taxes, mortgage interest, charitable contributions, etc. For more information, see “2020 Instructions for Schedule A” (U.S. Department of the Treasury, Internal Revenue Service, January 2021), https://www.irs.gov/pub/irs-pdf/i1040sca.pdf.
+
+39 See “Use the Sales Tax Deduction Calculator” (U.S. Department of the Treasury, Internal Revenue Service, updated October 1, 2021), https://www.irs.gov/credits-deductions/individuals/sales-tax-deduction-calculator.
+
+40 A Universal Classification Code (UCC) is a special code used in the CE program to identify detailed expenditure items or categories. For example, UCC 010110 identifies flour; UCC 010120 identifies prepared flour mixes; UCC 010310 identifies rice; and UCC 020110 identifies white bread. Some items are grouped together in one UCC because sparse data prevent them from being grouped separately. In such cases, data users cannot identify expenditures on the separate items contained in the bundled UCC. See “Consumer Expenditure Surveys public use microdata getting started guide” (U.S. Bureau of Labor Statistics, last modified September 9, 2021), section 7.5, https://www.bls.gov/cex/pumd-getting-started-guide.htm#section7.
+
+41 Lee, “BLS Consumer Expenditure Survey data usage,” p. 5.
+
+42 “Collection Financial Standards” (U.S. Department of the Treasury, Internal Revenue Service, March 25, 2019), https://www.irs.gov/businesses/small-businesses-self-employed/collection-financial-standards.
+
+43 “National standards: food, clothing and other items” (U.S. Department of the Treasury, Internal Revenue Service, updated April 29, 2021), https://www.irs.gov/businesses/small-businesses-self-employed/national-standards-food-clothing-and-other-items.
+
+44 “Local standards: transportation” (U.S. Department of the Treasury, Internal Revenue Service, updated April 5, 2021), https://www.irs.gov/businesses/small-businesses-self-employed/local-standards-transportation.
+
+45 Ibid.
+
+46 Post allowances, which refer to the place where a State Department employee is “posted” (or stationed) are equivalent to cost-of-living allowances.
+
+47 “Office of Allowances: Department of State Standardized Regulations” (U.S. Department of State, updated January 10, 2016), https://aoprals.state.gov/content.asp?content_id=245&menu_id=75.
+
+48 Ibid.
+
+49 “Office of Allowances: frequently asked questions—post (cost of living) allowance” (U.S. Department of State, effective October 11, 2020), https://aoprals.state.gov/content.asp?content_id=166&menu_id=75#06.
+
+50 “Office of Allowances: special notice for post allowance (COLA) changes” (U.S. Department of State, effective October 11, 2020), https://aoprals.state.gov/content.asp?content_id=156&menu_id=75.
+
+51 See “Statistical Policy Directive No. 1: fundamental responsibilities of federal statistical agencies and recognized statistical units,” Federal Register, vol. 79, no. 231, pp. 71610–16 (U.S. Office of Management and Budget, December 2, 2014), https://www.govinfo.gov/content/pkg/FR-2014-12-02/pdf/2014-28326.pdf.
+
+52 “Consumer Expenditure Surveys: data quality in the Consumer Expenditure Surveys” (U.S. Bureau of Labor Statistics, last modified October 19, 2021), https://www.bls.gov/cex/cecomparison.htm.
+
+53 Evan Hubener, Clayton Knappenberger, Yezzi Lee, and Lucilla Tan, “The CE 2017 data quality profile,” Consumer Expenditure Surveys Program Report Series (U.S. Bureau of Labor Statistics, September 7, 2018), p. 4, https://www.bls.gov/cex/dqreport2017.pdf.
+
+54 For more information on how BLS defines CE data quality, see Jeffrey Gonzalez, Catherine Hackett, Nhien To, and Lucilla Tan, “Definition of data quality for the Consumer Expenditure Survey: a proposal,” (U.S. Bureau of Labor Statistics, 2009), p. 2, https://www.bls.gov/cex/research_papers/pdf/ovrvwdataqualityrpt.pdf. See also Gordon Brackstone, “Managing data quality in a statistical agency,” Survey Methodology, vol. 25, no. 2. (Statistics Canada, December 1999) https://www150.statcan.gc.ca/n1/pub/12-001-x/1999002/article/4877-eng.pdf; and Robert M. Groves, Floyd J. Fowler Jr., Mick P. Couper, James M. Lepkowski, Eleanor Singer, Roger Tourangeau, Survey Methodology, 2nd ed. (Hoboken, NJ: John Wiley & Sons, Inc., 2009), https://www.wiley.com/en-us/Survey+Methodology%2C+2nd+Edition-p-9780470465462.
+
+55 See Scott Fricker and Lucilla Tan, “A proposal for a preliminary framework for monitoring and reporting on data quality for the Consumer Expenditure Survey” (U.S. Bureau of Labor Statistics, 2012) https://www.bls.gov/cex/research_papers/pdf/cesrvmeth_quality.pdf.
+
+56 Clayton Knappenberger, Yezzi Lee, and Lucilla Tan, “CE data quality profile reference guide,” Consumer Expenditure Surveys Program Report Series (U.S. Bureau of Labor Statistics, September 9, 2020), https://www.bls.gov/cex/dqreport2019.pdf.
+
+57 Ibid. See also “Consumer Expenditure Surveys: data quality in the Consumer Expenditure Surveys.”
+
+58 The bias may result from differences in propensity to respond, as it relates to the outcome, or from differences related to characteristics related to both propensity to respond and the data collected. In the first case, a mail-in survey asking whether respondents agree or disagree with a statement would suffer from nonresponse bias if those who agree are more likely to mail in their surveys than those who disagree; in the second case, people with income above the median may be more or less likely to answer a survey on income than those with income below the median. Similarly, if the survey regards something correlated with income, such as expenditures, and those with income above the median are more or less likely to answer the survey than those with income below the median, nonresponse bias could result.
+
+59 See “Standards and guidelines for statistical surveys” (U.S. Office of Management and Budget, September 2006), Guideline 3.2.9, p. 16, https://www.ftc.gov/system/files/attachments/data-quality-act/standards_and_guidelines_for_statistical_surveys_-_omb_-_sept_2006.pdf.
+
+60 See Sharon Krieger, Brett McBride, Brian Nix, Barry Steinberg, Michael Sverchkov, and Daniel Yang, “Estimates of the Consumer Expenditure Survey’s nonresponse bias: an updated nonresponse bias study of the Consumer Expenditure Survey for 2007–2016,” internal memorandum, (U.S. Bureau of Labor Statistics, 2020).
+
+61 Ibid.
+
+62 See Boriana Chopova, Jennifer Edgar, Jeffrey Gonzalez, Susan King, Dave McGrath, and Lucilla Tan, “Assessing nonresponse bias in the CE Interview Survey: A summary of four studies,” internal memorandum (U.S. Bureau of Labor Statistics, 2008).
+
+63 See Daniel Kasprzyk, “Measurement error in household surveys: sources and measurement,” in Household Sample Surveys in Developing and Transition Countries, series F, no. 96 (New York: United Nations, 2005), pp. 171–98, https://unstats.un.org/unsd/hhsurveys/pdf/Household_surveys.pdf.
+
+64 See, for example, Quentin Brummet, Denise Flanagan-Doyle, Joshua Mitchell, John Voorheis, Laura Erhard, and Brett McBride, “Investigating the use of administrative records in the Consumer Expenditure Survey,” working paper 2018-01 (U.S. Census Bureau, March 2018), https://www.census.gov/content/dam/Census/library/working-papers/2018/adrm/carra-wp-2018.pdf.
+
+65 Roger Tourangeau, Scott Fricker, Brandon Kopp, and Lucilla Tan, “Report on the state of knowledge of measurement error in the CE” (U.S. Bureau of Labor Statistics, February 2013), https://www.bls.gov/cex/research_papers/pdf/tourangeau-CE-measure-error.pdf.
+
+66 See “Consumer Expenditure Surveys: CE library” (U.S. Bureau of Labor Statistics, last modified November 16, 2021), https://www.bls.gov/cex/research_papers/research-paper-catalog.htm.
+
+67 See the following sources for more information on these issues: Adam Safir and Karen L. Goldenberg, “Mode effects in a survey of consumer expenditures” (U.S. Bureau of Labor Statistics, 2008), https://www.bls.gov/cex/research_papers/pdf/st080200.pdf; William Passero, Thesia I. Garner, and Clinton McCully, “Understanding the relationship: CE Survey and PCE,” working paper 462 (U.S. Bureau of Labor Statistics, 2013), https://www.bls.gov/osmr/research-papers/2013/pdf/ec130020.pdf; Susan L. King, Jennifer Edgar, Jeffrey M. Gonzalez, Boriana Chopova, and Lucilla Tan, “Nonresponse bias in the Consumer Expenditure Survey: a case study” (U.S. Bureau of Labor Statistics, 2008), https://www.bls.gov/cex/research_papers/pdf/cesrvymethsking.pdf; and Roger Tourangeau, Scott Fricker, Brandon Kopp, and Lucilla Tan, “Consumer Expenditure Survey measurement error study phase 1: report on the state of knowledge on measurement error in the CE” (U.S. Bureau of Labor Statistics, 2013), https://www.bls.gov/cex/research_papers/pdf/Tourangeau_CEMeasureError.pdf.
+
+68 Thomas F. Crossley and Joachim K. Winter, “Asking households about expenditures: what have we learned?” NBER Working Paper 19543 (Cambridge, MA: National Bureau of Economic Research, October 2013), https://www.nber.org/papers/w19543.
+
+69 For more on these issues, see Adam Bee, Bruce D. Meyer, and James X. Sullivan, “The validity of consumption data: are the Consumer Expenditure Interview and Diary Surveys informative?” in Christopher Carroll, Thomas Crossley, and John Sabelhaus, eds., Improving the Measurement of Consumer Expenditures (Chicago: University of Chicago Press, 2015), pp. 204–40, https://www.nber.org/system/files/chapters/c12662/c12662.pdf. For more information on the quality of CE survey estimates, see Dillman and House, eds., Measuring What We Spend: Toward a New Consumer Expenditure Survey, pp. 25–26; and Bee, Meyer, and Sullivan, “The validity of consumption data.”
+
+[… 34 characters not captured …]

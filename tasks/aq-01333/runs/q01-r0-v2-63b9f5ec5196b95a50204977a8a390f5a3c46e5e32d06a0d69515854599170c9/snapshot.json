@@ -1,0 +1,51 @@
+{
+  "bundle": "aq-01333",
+  "corpus_sha256": {
+    "docs/hewlett-packard-enterprise-company-q1-fy2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-03-09.txt": "377e7e2aa29e311fdd44c15b111cb635db38bc3d55c01959c2ac25c46f053fa9",
+    "docs/hewlett-packard-enterprise-company-q2-fy2025-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2025-06-03.txt": "dfbc76fb25d0393d6626e30e93b429991a5b8e1a7b7095aa708c09edfe96b518",
+    "docs/hewlett-packard-enterprise-company-q2-fy2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-06-01.txt": "052956c7223ae2bfce5b7dc0b3c3b8e9e07628c49e50efb7d1d8077812d90e0e",
+    "docs/hewlett-packard-enterprise-company-q3-fy2025-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2025-09-03.txt": "34b66a6a21a6daac9fc5830dc12849833ae163a5b8d6b929dbf88591e45ca036",
+    "docs/hewlett-packard-enterprise-company-q3-fy2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-09-02.txt": "c083ef59b32abd4cbae7c5284f88e328b21d6583cdf34f9f32a1e1f841324fdc",
+    "docs/hewlett-packard-enterprise-company-q4-fy2025-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2025-12-04.txt": "9a6f88516ad0c5274a353b66b4232405edf8d344e50a06be65181d0b94991aaf",
+    "text/D01.txt": "0941f71457a6ae635c532d38611b1674f9e8df443ad0e0e0aedb028bf3671147",
+    "text/D02.txt": "534835219f0e905d8c12ca9b76ecb48cc84a36e3e7eff8f23ae3800b9fd49edc",
+    "text/D03.txt": "937974a4a8aa3374263adb455f80f21ef3ebf63db7900ba0c98ad26bd125d1d8",
+    "text/D04.txt": "b2be7b4b38d827d7501ec49df259dfe252a68ad19e03c0925fdcbcaa3415f071",
+    "text/D05.txt": "79b591ed679c1f427f2ed72a93f6692096d64e29b3813f52cfd72caf619f3069",
+    "text/D06.txt": "a81289c86e28640daa1fb1ebdf7f44566c305543c17eb1e182379bf3c53f2bb3",
+    "text/manifest.json": "4dc8eaabf5fa0d46991d399171a3a248d4bd9eaa69838feb3b9709ad32de4e44"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "6d731f7ae3a75c2721636467b6867e69057af7da55cb9dea7d5da7232ce86c95",
+  "independence": "One fresh context per packet. No writer history or shared memory.",
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D01, D05",
+    "id": "q01",
+    "levers": "Same series, right edition; Scatter the pieces",
+    "origin": "claude",
+    "revision": "0",
+    "status": "draft",
+    "tags": "Temporal alignment; Cross-document join"
+  },
+  "question_id": "q01",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "+58.3%",
+    "blind solve": "",
+    "components": "- c1: +58.3%",
+    "evidence": "- D05 (l.644, non-GAAP notes; Doc 6) [c1]: \"In May 2026, the Company sold the remaining equity interest in H3C\"\n- D03 (l.15, dateline; Doc 5; bridge and decoy source, not marked) [c1]: \"HOUSTON – June 1, 2026\"\n- D03 (l.95, H3C update; Doc 5; not marked) [c1]: \"the divestiture of its stake in H3C Technologies Co., Limited was completed on May 28\"\n- D01 (l.15, dateline; Doc 4) [c1]: \"HOUSTON – March 9, 2026 – HPE (NYSE: HPE) today announced\"\n- D01 (l.81, fiscal 2026 full year outlook; Doc 4) [c1]: \"non-GAAP diluted net EPS(1)(4) to be in the range of $2.30 to $2.50\"\n- D05 (l.15, dateline; Doc 6) [c1]: \"HOUSTON – September 2, 2026 – HPE (NYSE: HPE) today announced\"\n- D05 (l.89, fiscal 2026 full year outlook; Doc 6) [c1]: \"non-GAAP diluted net EPS(1) to be in the range of $3.75 to $3.85\"\n- D03 (l.83, fiscal 2026 full year outlook; Doc 5; decoy) [c1]: \"non-GAAP diluted net EPS(1)(4) to be in the range of $3.35 to $3.45\"",
+    "feedback log": "",
+    "lever checks": "- Platform document numbers: local ids follow alphabetical file names and differ from the task page. D01 = Doc 4 (Q1 FY26, March 9, 2026), D02 = Doc 1, D03 = Doc 5 (Q2 FY26, June 1, 2026), D04 = Doc 2, D05 = Doc 6 (Q3 FY26, September 2, 2026), D06 = Doc 3 (Q4 FY25, December 4, 2025). Reasoning uses platform numbers.\n- Family and target: one untied edition trap (aq-00964 q01 / aq-00745 q09 layout), target medium; measured platform result pending. The event is reported in Doc 5 beside Doc 5's own raised range, which postdates it. Doc 5 credits the raise to performance (\"Based on our performance, we are raising our fiscal 2026 guidance\", D03 l.19), not to the sale. The H3C update (D03 l.93-95) sits after the outlook sections. The guidance ladder: tied event Easy (aq-00745 q01), untied event High (aq-00745 q09), two chained traps Too hard (aq-00745 q08).\n- Dependency plan: sale in May 2026 (D05 l.644; exact day May 28 at D03 l.95) -> the latest fiscal 2026 range issued before then is D01's (March 9, 2026), $2.30-$2.50, midpoint 2.40 -> the September range is D05's (September 2, 2026), $3.75-$3.85, midpoint 3.80 -> 1.40 / 2.40 = 58.333%.\n- Universe: fiscal 2026 non-GAAP diluted EPS ranges in the bundle: D06 l.65 (December 4, 2025) $2.25-$2.45; D01 l.81 (March 9, 2026) $2.30-$2.50; D03 l.83 (June 1, 2026) $3.35-$3.45; D05 l.89 (September 2, 2026) $3.75-$3.85. None restates a prior range.\n- Necessity: D01 is the only source of $2.30/$2.50 (grep). Without it the latest pre-sale range is December's $2.25-$2.45, giving +61.7%. D05 is the only source of $3.75/$3.85. Without it the latest range is June's, so the endpoint is missing or becomes 3.40 (+41.7%). D03 is not marked: D05 l.644 places the sale in May 2026 on its own, so the gold is reachable without D03. D03 holds only the exact day and the decoy range. D02, D04 and D06 hold no fiscal 2026 range except D06's December range, which is a wrong-edition decoy.\n- Selected-lever checks: Same series, right edition: D03's own range taken as in force gives +11.8%. The December range gives +61.7%. Using March to June as the endpoints gives +41.7%. Low ends give +63.0% and high ends +54.0%. Scatter the pieces: event in D05/D03, in-force range in D01, endpoint in D05.\n- Calculation verification (Python fractions, 2026-10-06): (3.80 - 2.40) / 2.40 = 0.583333... -> +58.3%, 0.033 from the nearest rounding boundary. Decoy 0.40 / 3.40 = 11.765% -> +11.8%.\n- Semantic/ID/overview probes (2026-10-06): \"58.3\", \"11.8\" and \"61.7\" do not occur in the bundle. \"$2.30\" occurs only in D01, and \"$3.75\" and \"$3.85\" only in D05. \"May 28\" occurs only in D03 l.95, and \"In May 2026\" in D03 l.645 and D05 l.644. The capture overview prints D06's $2.25-$2.45 (decoy) and D03's date \"May 28, 2026\", but not D01's or D05's EPS range.\n- Precision/readings: the midpoints of stated ranges are exact. The only alternative reading of \"in force when HPE completed the sale\" is the June range, which did not exist until four days later. A solver who argues that the March outlook already anticipated \"adjustments related to the sale of H3C\" (D01 l.81-83) still selects the March range.\n- Closed-book sketch screen (2026-10-06, fresh question-only run): \"unknown\", low confidence. It recalled the October/December 2025 ranges but neither the March or September 2026 ranges nor the H3C completion date.\n- Completeness: intake.json records no gaps, and the map covers every line of all six documents.\n- Style/set review: one ask, 46 words, HPE's own term \"non-GAAP diluted net EPS\". Sibling q02 uses the same two documents but different facts (segment recast). Neither gives away the other.\n- Warnings answered: D03 is quoted but not listed (bridge detail and decoy only, see Necessity). points-or-percent: the quantity is a dollar EPS midpoint, not a rate, so \"percentage\" can only mean relative change. Percentage points do not apply. origin claude is accurate. The export tool accepts only origin user, and the form's \"I wrote this question myself.\" cannot be ticked truthfully for this content. The submission decision is the user's.",
+    "question": "By what percentage did the midpoint of HPE's fiscal 2026 non-GAAP diluted net EPS outlook change from the range in force when HPE completed the sale of its remaining H3C shares to the range it gave in September 2026? Give the sign, to one decimal place.",
+    "reasoning": "Step 1. Doc 6: \"In May 2026, the Company sold the remaining equity interest in H3C.\"\nStep 2. Doc 5: this release is dated June 1, 2026 and reports that the divestiture \"was completed on May 28\", so the fiscal 2026 range it gives ($3.35 to $3.45) was issued after the sale and was not yet in force when the sale was completed.\nStep 3. Doc 4: this release, dated March 9, 2026, is the latest one issued before the sale, and it gives fiscal 2026 non-GAAP diluted net EPS \"in the range of $2.30 to $2.50\". That range was in force at completion, with a midpoint of (2.30 + 2.50) / 2 = 2.40.\nStep 4. Doc 6: this release, dated September 2, 2026, gives the range \"$3.75 to $3.85\", with a midpoint of (3.75 + 3.85) / 2 = 3.80.\nStep 5. Doc 4 and Doc 6: change in the midpoint = 3.80 - 2.40 = 1.40.\nStep 6. Doc 4 and Doc 6: as a share of the earlier midpoint, 1.40 / 2.40 = +58.3% (to one decimal place).\nDecoy (Doc 5 and Doc 6): taking Doc 5's own range as the one in force gives a midpoint of (3.35 + 3.45) / 2 = 3.40 and a change of (3.80 - 3.40) / 3.40 = +11.8%. That range was issued four days after the sale.",
+    "review": "",
+    "shortcut audit": ""
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "63b9f5ec5196b95a50204977a8a390f5a3c46e5e32d06a0d69515854599170c9"
+}

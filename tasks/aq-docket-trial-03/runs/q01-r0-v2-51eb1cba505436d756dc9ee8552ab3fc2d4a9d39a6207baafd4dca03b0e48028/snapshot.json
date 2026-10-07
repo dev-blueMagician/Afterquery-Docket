@@ -1,0 +1,53 @@
+{
+  "bundle": "aq-docket-trial-03",
+  "corpus_sha256": {
+    "docs/fr_2023_14549.txt": "d96f7e32a655810da15cac01f4339b8970488a3e9ab128e896d35d9e5fd11677",
+    "docs/fr_2023_25015.txt": "cd58fb767ebd79b1a7665c34d184a5f512c85e0a447d5d1a86d73cf1f121bede",
+    "docs/fr_2024_00449.txt": "14509168d4da02a8c85866a8c7175151c2df944e91edb5826f5c6acc25c523aa",
+    "docs/fr_2024_16457.txt": "a50031a1dc614ca4dec5615fe8ddf0397d4b245f5849cb575d847520678c6549",
+    "docs/fr_2024_30988.txt": "458ba015790d4efed1c8611e2d84d317f1a3bf3991dab7edb34f62b500861fc5",
+    "docs/fr_2025_19692.txt": "2e35d503f770f4b7474a454b74221074dd66281b0c1fd5761c8962904d605ed5",
+    "docs/fr_2026_13295.txt": "ae62eadefd100622ef422cb91647c95ccafdd818caffe02d6a707043a869531e",
+    "text/D01.txt": "8ae6e03d591d5c31bfa84947bc07fb7f1bf0f6ba9a8a05a982a39853b5168f21",
+    "text/D02.txt": "1fb639587f5d0572dc5a7d29bf35fcc459a7080f8851749887cffb50ffb15e9d",
+    "text/D03.txt": "c36d5be71f6d6c723512e37c07388e9a747f73d123f71663d3cc45eaade52282",
+    "text/D04.txt": "259d0d968435ca1ac0392792e28ef05264971ba19316132e079b67782ff767a8",
+    "text/D05.txt": "47842fbae474aa8dc88fbcd026b1fe05befdf2dd935638655930751f95ed4c58",
+    "text/D06.txt": "c5a0f099ac54e4fc45e668886663c6108b735f3649ed8562913dec5c77fe97b7",
+    "text/D07.txt": "a90527f49c3270c75842203ec378ca8d26657c6f1598286ba660bee197bc0c75",
+    "text/manifest.json": "a5b23ca5a74904e0810eb414e77950a3652bbb4627f8cfcb74b2a4368a56219f"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "c4482932d2f1ff96e6a13808497268b8961c1a2a2f510b6d643b554575c8803a",
+  "independence": "One fresh context per packet. No writer history or shared memory.",
+  "metadata": {
+    "answer_type": "date",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D03, D01",
+    "id": "q01",
+    "levers": "Same series, right edition; Scatter the pieces",
+    "origin": "claude",
+    "revision": "0",
+    "status": "draft",
+    "tags": "Temporal alignment; Cross-document join"
+  },
+  "question_id": "q01",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "November 2023",
+    "blind solve": "",
+    "components": "- c1: November 2023",
+    "evidence": "- D03 (L1981, RIN 2137-AF51 abstract) [c1]: \"has scheduled a Gas Pipeline Advisory Committee meeting to discuss the NPRM for November 27 through December 1, 2023\"\n- D03 (L5, Federal Register header) [c1]: \"Federal Register Volume 89, Number 28 (Friday, February 9, 2024)\"\n- D01 (L5, Federal Register header) [c1]: \"Federal Register Volume 88, Number 143 (Thursday, July 27, 2023)\"\n- D01 (L781, RIN 2137-AF52 abstract) [c1]: \"define an idled operational status for natural gas and hazardous liquid pipelines\"\n- D01 (L787, RIN 2137-AF52 timetable) [c1]: \"NPRM................................ 11/00/23\"",
+    "feedback log": "",
+    "lever checks": "- Platform document numbers: local D01-D07 are the task page's Doc 1-7 in the same order (manifest and capture headings checked at intake), so reasoning \"Doc N\" equals local Dnn.\n- Family and target: one untied same-series edition trap, target medium. The bridging event (an advisory committee meeting scheduled for November 27 - December 1, 2023) is printed only in the February 9, 2024 agenda, whose own projection for the target rule (February 2024) is the decoy; the value current at the event sits in the earlier July 27, 2023 edition. This mirrors the only measured Medium pass (aq-00964 q01). Measured platform result: pending.\n- Dependency plan: meeting start November 27, 2023 (D03 L1981) -> agenda editions by Federal Register date: D01 07/27/2023 (L5), D03 02/09/2024 (L5), D04 08/16/2024 (L5) -> latest edition before the meeting = D01 -> D01 RIN 2137-AF52 (\"define an idled operational status\", L781) NPRM 11/00/23 (L787) -> November 2023.\n- Universe: agenda editions in the bundle are D01, D03 and D04 (D01 L87 and D03 L87 also name a February 22, 2023 \"2022 Fall Regulatory Agenda Preamble\", which is older than D01 and not in the bundle). The idled-pipeline rulemaking (RIN 2137-AF52) appears in all three: D01 L787 NPRM 11/00/23; D03 L2007 NPRM 02/00/24; D04 L663 NPRM 12/00/24. \"Gas Pipeline Advisory Committee\" occurs only at D03 L1981.\n- Necessity: without D03 no document mentions the advisory committee meeting or its dates (D01 L759 and D04 L727 abstracts for RIN 2137-AF51 omit it), so the edition cannot be fixed. Without D01, November 2023 for the idled-pipeline proposal is printed nowhere else (D03 02/00/24, D04 12/00/24). D04 is a decoy source only and stays unlisted.\n- Selected-lever checks: Same series, right edition: taking the agenda that reports the meeting (D03, labelled the \"Fall 2023 Agenda\" by D04 L109) gives February 2024; taking the latest agenda (D04) gives December 2024; only the edition published before the meeting gives November 2023. Scatter the pieces: event and decoy in D03; answer in D01.\n- Calculation verification: date ordering only (Python, 2026-10-06): 2023-07-27 < 2023-11-27 < 2023-12-01 < 2024-02-09 < 2024-08-16. Using the meeting's end date (December 1, 2023) gives the same edition.\n- Semantic/ID/overview probes (2026-10-06): \"advisory committee\" -> D03 L1605 (aviation ACPAC), D03 L1981 (gas pipeline), D04 L87 (ACPAC composition); \"idled\"/\"operational status\" -> D01 L777/L781, D03 L1551/L1997/L2001, D04 L249/L653/L657; \"11/00/23\" -> D01 L341 (refund final rule, unrelated) and L787. The capture overview lists \"November 2023\" among Doc 1's dates without context and never mentions the advisory committee or idled pipelines. No passage links the meeting to the idled-pipeline rule's date.\n- Precision/readings: \"then-current regulatory agenda\" = the agenda in effect when the meeting was scheduled to begin, i.e. the latest edition published by then. D03's text predates its own publication (it calls the meeting scheduled), but D03 was not published until February 9, 2024 (and in real life the Fall 2023 agenda was posted online in December 2023, also after the meeting), so it was not then current. Month and year are stated; the timetable gives month precision only (11/00/23).\n- Completeness: complete capture, no source gaps (notes/intake.json; source_gaps empty).\n- Style/set review: plain wording; \"leak-detection proposal\" and \"rule on idled pipelines\" paraphrase the RIN 2137-AF51 and 2137-AF52 titles. Only question in the set so far.\n- Warnings answered: origin claude is accurate (Claude Code, Opus 5.5 caller); the export tool takes origin user only and the form's \"I wrote this question myself.\" cannot be ticked truthfully for this content; the submission decision is the user's.",
+    "question": "When PHMSA's gas pipeline advisory committee was scheduled to begin meeting on the agency's leak-detection proposal, in which month and year did DOT's then-current regulatory agenda expect PHMSA to propose its rule on idled pipelines?",
+    "reasoning": "Step 1. Doc 3: in its entry for the gas pipeline leak detection and repair rulemaking, PHMSA \"has scheduled a Gas Pipeline Advisory Committee meeting to discuss the NPRM for November 27 through December 1, 2023\". Doc 3 itself was published in the Federal Register on Friday, February 9, 2024, after that meeting, so it was not yet DOT's regulatory agenda when the meeting was scheduled to begin.\n\nStep 2. Doc 1: published on Thursday, July 27, 2023, it is the latest agenda edition issued before the meeting, so it was the then-current agenda. Its entry for the rulemaking that would \"define an idled operational status for natural gas and hazardous liquid pipelines\" lists the proposed rule for 11/00/23 = November 2023.\n\nDecoy: Doc 3's own entry for the same idled-pipeline rulemaking lists the proposed rule for 02/00/24 = February 2024, but Doc 3 was published after the meeting.",
+    "review": "",
+    "shortcut audit": ""
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "51eb1cba505436d756dc9ee8552ab3fc2d4a9d39a6207baafd4dca03b0e48028"
+}

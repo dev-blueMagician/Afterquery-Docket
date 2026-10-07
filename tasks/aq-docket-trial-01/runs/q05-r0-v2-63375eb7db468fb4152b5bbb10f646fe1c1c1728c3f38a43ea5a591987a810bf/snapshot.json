@@ -1,0 +1,52 @@
+{
+  "bundle": "aq-docket-trial-01",
+  "corpus_sha256": {
+    "docs/arxiv_2601_21106v3.txt": "36546247270ea39d3e03dcc3b7ca45f86ad1671738e2d99c3c5b475ffe6ccf80",
+    "docs/arxiv_2606_16460v3.txt": "5f92c8753eac1430e338a7d6012b1c25a9354e9084055ecfa5b2a8406824ba19",
+    "docs/arxiv_2608_05428v1.txt": "47d2a9b6ccd68dfa935509f45c90200051b9f3970ad5da1de8503d91459891bc",
+    "docs/arxiv_2608_19879v1.txt": "3b6c94d162aa8f4e91854b604ff4b06480c3f7860a8e180cb0f76b0118bf7460",
+    "docs/arxiv_2608_25172v1.txt": "3afa3460083e77c79546ebe8303130fe38242d54e15adaefb8831094d463fbbb",
+    "docs/arxiv_2608_30374v1.txt": "c5f3f6f034b0b1c3067c64ec077356856ea3032cb9aa795a2b308aeaf6341996",
+    "text/D01.txt": "2aa85e46c443e5e7df835f2ac1188fbae86b2b2dc70c588f3f45d4f3de3e13e0",
+    "text/D02.txt": "6855846c598b493d27dd11e06d98e879a21a1147bc4ddca17e07d5bea71e4806",
+    "text/D03.txt": "1b9a55c9351655d1ddba075f52dd66be2c5a74466ad0b37c22b7168ea23f80e0",
+    "text/D04.txt": "5602769a6a51be146641347707cae70e27ebb758f69ec723d24deb05efcd1b64",
+    "text/D05.txt": "61c1f5cda9bba51d8aa146b1aab01b9c300636d92ee2a5ffe457bdb553f0eb3a",
+    "text/D06.txt": "afe9672e75328a3f55904bc3a1b6f588d62c3ecac362b4eed9001fd4a8e1fb84",
+    "text/manifest.json": "ef36f02f724b7e3b03b841c53cd3fcab5ca454fcfe4d27d67f2e195b3bc3a02c"
+  },
+  "difficulty_target": "easy",
+  "form_sha256": "32fb2ba20055fc13eff0df7e0c9179f70ea07f96bc6c66fb82e1efbbf53ba155",
+  "independence": "One fresh context per packet. No writer history or shared memory.",
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "easy",
+    "documents": "D02, D05",
+    "id": "q05",
+    "levers": "Match, then exclude; Calculate across documents",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i17",
+    "status": "draft",
+    "tags": "Cross-document join; Unit normalization; Conditional filter"
+  },
+  "question_id": "q05",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "2.70 times",
+    "blind solve": "",
+    "components": "- c1: 2.70 times",
+    "evidence": "- D02 (Sec. 5.1, text line 431) [c1]: \"with raw expression measurements available for 9,671 genes\"\n- D02 (Appendix A, text line 723) [c1]: \"For the autoimmune disease dataset, the top 3000 genes ranked by MAD were retained.\"\n- D02 (Appendix A, text line 723) [c1]: \"The dendrogram was cut at r0 = 0.3, and modules containing fewer than\"\n- D02 (Appendix A, text line 725) [c1]: \"20 genes were removed. This resulted in 979 genes grouped into 19 modules.\"\n- D02 (Appendix A, text line 725) [c1]: \"The selected model had K = 9 and q = 8.\"\n- D05 (Sec. 6, text line 783) [c1]: \"contains expression measurements for 3,592 in-tissue Visium spots and 33,538 gene features\"\n- D05 (Sec. 6, text line 783) [c1]: \"retain genes with positive expression in at least 20 spots\"\n- D05 (Sec. 6, text line 783) [c1]: \"The low-expression filtering retains 14,638 genes.\"",
+    "feedback log": "",
+    "lever checks": "- Platform document numbers: local D01-D06 are the task page's Doc 1-6 in the same order, so reasoning \"Doc N\" equals local Dnn. Lines are text/Dnn.txt lines (original line + 2).\n- Family and target: modelled on aq-docket-trial-02 q01 (a carve-out that must exclude a part named only in a note) and aq-docket-trial-06 q02 (a remainder stated only in a footnote) at the user's request (2026-10-06). The autoimmune share needs the genes removed by the undersized-module step alone, which requires excluding the genes the MAD ranking dropped earlier; the intermediate count (3000) is printed only in D02 Appendix A, and the question's base (all genes with expression data) does not point to it. Target easy; measured platform result pending. Sibling of q04 (same inputs, step-local base, review: Too easy about 65%), built to remove q04's signposting wording (\"genes each step started from\") and its \"exceed\" direction.\n- Dependency plan: D02 431 (9,671 genes with expression data) -> D02 Appendix A 723-725 (3000 retained by the MAD ranking -> dendrogram cut -> modules with fewer than 20 genes removed -> 979 genes in 19 modules; selected model K = 9, q = 8, also 447 and Table 4 at 585) -> module removal discards 3000 - 979 = 2,021 -> 2,021 / 9,671 = 20.8975%. D05 783 (33,538 gene features; filter keeps genes expressed in at least 20 spots; 14,638 kept) -> 18,900 discarded -> 18,900 / 33,538 = 56.3540%. Ratio 2.6967 -> 2.70.\n- Universe: not applicable (single value).\n- Necessity (local ids = platform Doc numbers): without D02 no document gives the autoimmune counts (D01's 2,194 genes are a leukemia dataset); without D05 no document gives the brain section's counts. 3000 is printed once in the bundle (D02 Appendix A).\n- Selected-lever checks: match, then exclude: skipping the exclusion of the MAD ranking's removals (all 9,671 - 979 = 8,692 removals charged to the module step) gives 56.354 / 89.877 = 0.63. Other wrong routes (python): the MAD step's removals (6,671) give 0.82; the step-local base (2,021 / 3000) gives 0.84; the WGCNA comparison (4 grey genes) gives about 1,362; the brain HVG analysis (30,538 removed) gives 4.36; the brain kept share (43.646%) gives 2.09. All differ from 2.70, and none is ruled out by a direction word. Calculate across documents: two shares from two documents, then a ratio.\n- Calculation verification: Python Decimal, half-up and half-even: 2,021 / 9,671 = 20.89753%; 18,900 / 33,538 = 56.35399%; ratio 2.69662 -> 2.70. Shares rounded first to one, two or three decimals give 2.6986, 2.6962 and 2.6966, all 2.70. A difference in percentage points was rejected because it is 35.46 exactly but 35.45 from two-decimal shares, which half-even rounding turns into 35.4.\n- Semantic/ID/overview probes: no document prints 2.70, 20.9, 56.35, 2,021, 8,692 or 18,900 as these quantities (grep of D02 and D05). The capture overview for Doc 2 lists \"top 3000 genes ranked by MAD · 979 genes grouped into 19 modules\" (navigation; inputs, not the answer); it does not list 9,671. The Doc 5 overview prints none of 33,538 or 14,638.\n- Precision/readings: two decimals stated; the counts are exact integers. Sec. 5.1 \"Small or weakly defined clusters are removed\" gives no other criterion or count; Appendix A credits the size rule with the drop from 3000 to 979 (Table 2's smallest module has exactly 20 genes). Sec. 5.5 \"identified 19 gene modules from 979 genes\" read as a starting count would leave no removal at all (division by zero), so it is not a usable reading.\n- Completeness: capture complete (notes/intake.json, no gap markers); no source gaps.\n- Style/set review: one ask, 44 words, no dashes. Shares inputs with q04 and sketch i10; submit at most one of them (floor WARN sibling: six words shared with q04, expected for alternatives).\n- Warnings answered: origin claude (export restriction reported at hand-over). Units: the answer is a ratio of two shares, so \"times\" is its unit. Form number rule: steps 4, 7 and 8 use derived operands in steps that name their source documents, the pattern that passed on the form for aq-00949 q05 rev 0 (\"61.91% - 39.19% = 22.7 percentage points\" citing Doc 1 and Doc 7).",
+    "question": "Measured against all the genes each study had expression data for, what is the share discarded by the brain spatial-factor study's low-expression filter divided by the share discarded when the autoimmune subtype study removed undersized modules for its selected model? Give two decimal places.",
+    "reasoning": "1. Doc 2: the autoimmune dataset has \"raw expression measurements available for 9,671 genes\".\n2. Doc 2: Appendix A says that \"the top 3000 genes ranked by MAD were retained\", that their dendrogram was cut, that modules with fewer than 20 genes were then dropped (\"20 genes were removed\"), and that \"This resulted in 979 genes grouped into 19 modules\"; \"The selected model had K = 9 and q = 8\". So the removal of undersized modules took the 3000 retained genes down to 979.\n3. Doc 2: the genes discarded by that removal number 3000 - 979 = 2,021.\n4. Doc 2: as a share of the 9,671 genes with expression data, 2,021 / 9,671 = 20.898%.\n5. Doc 5: the analysed tissue section \"contains expression measurements for 3,592 in-tissue Visium spots and 33,538 gene features\", the low-expression filter keeps genes \"with positive expression in at least 20 spots\", and \"The low-expression filtering retains 14,638 genes.\"\n6. Doc 5: the genes discarded by the filter number 33,538 - 14,638 = 18,900.\n7. Doc 5: as a share of the 33,538 genes with expression data, 18,900 / 33,538 = 56.354%.\n8. Doc 5 and Doc 2: the brain share divided by the autoimmune share is 56.354 / 20.898 = 2.70 (to two decimal places).\n9. Decoy, Doc 2: the main text gives only the 9,671 genes and the 979 in the final analysis set; 9,671 - 979 = 8,692 also counts the genes the MAD ranking had already dropped, so it overstates the module removal.\n10. Decoy, Doc 2: measuring the module removal against the 3000 genes it started from gives 2,021 / 3000 = 67.37%, a different base from the question's.",
+    "review": "",
+    "shortcut audit": ""
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "63375eb7db468fb4152b5bbb10f646fe1c1c1728c3f38a43ea5a591987a810bf"
+}

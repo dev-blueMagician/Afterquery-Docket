@@ -1,0 +1,53 @@
+{
+  "bundle": "aq-00949",
+  "corpus_sha256": {
+    "docs/eog_ex991_2020-03-16.txt": "7b2406b8ebc03e713400c438cfcdb1eb400a70325bbc39e4fc550bf428486aa7",
+    "docs/eog_ex991_2025-05-01.txt": "5bc995443baf83ef8dd07e93eedd9532eb9cb209448d514e4350063f98a6c509",
+    "docs/eog_ex991_2025-05-30.txt": "21b89e5d3195605900cddc20fb1ad6e8256d6d53eda56f73795d4bab149522ea",
+    "docs/eog_ex991_2025-08-07.txt": "68f243cecf8e3be8065730ded82eac99399e0370e89a79f85814174b73c03ef2",
+    "docs/eog_ex991_2025-11-06.txt": "c591c31840e0894e3c7460010578c351357268fd400d5ee1bf738a457a255df7",
+    "docs/eog_ex991_2026-05-05.txt": "9327b6cdd1de91d1a3eebeaeb9f35cf5d3eaa9907624f9fa0b3c17e0540410b6",
+    "docs/eog_ex991_2026-08-04.txt": "5f6c76d46eb3c8a3ff5d9a63671382f71a8e899a10b42140515938ddd1238e2e",
+    "text/D01.txt": "894c765ba57bd44dda7352356a49706183da2455b6f067a5d44419d23933ad20",
+    "text/D02.txt": "cfda643e89670972dff83f545d97f4c13b3cc21fec8ba71c8f201dd5583a5213",
+    "text/D03.txt": "43e28e897b268dd4b4c8071bb39c94c805ff1c3c0c612430c6f4d4d2b7be8ad6",
+    "text/D04.txt": "be4c14dab61a016c7d9557dbb7626688445801a6881de3af51fc97bc849bb96a",
+    "text/D05.txt": "2d0efea86ff3435b08ca642dd8ccc3fb2610ffe14a061174f8ac42f6d43aba2a",
+    "text/D06.txt": "574b9adaba3a6055424cf49b62b1e89bfb4276f07895eca4b3dbfd7e44ee72cc",
+    "text/D07.txt": "eb61159f4ae758a4ee2ae327432c2178cff4430f2d113f1abfb10deb115788f6",
+    "text/manifest.json": "f04437c1c97815ff6729fa4207ae0ea4ffb1d1b39c28b601c4f4a93b021c7d92"
+  },
+  "difficulty_target": "easy",
+  "form_sha256": "64effe98e79ddcfa1a0f1f8aab498e44e0c837d7085ebf45d733991558af8785",
+  "independence": "One fresh context per packet. No writer history or shared memory.",
+  "metadata": {
+    "answer_type": "date",
+    "asks": "1",
+    "difficulty_target": "easy",
+    "documents": "D01, D07",
+    "id": "q03",
+    "levers": "Match, then exclude; Calculate across documents",
+    "origin": "claude",
+    "revision": "0",
+    "status": "draft",
+    "tags": "Cross-document join; Conditional filter; Temporal alignment"
+  },
+  "question_id": "q03",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "2Q 2025",
+    "blind solve": "",
+    "components": "- c1: 2Q 2025",
+    "evidence": "- D01 (line 35) [c1]: \"Net cash from operating activities is expected to fund both capital expenditures and dividend payments\"\n- D01 (line 35) [c1]: \"including facilities and gathering, processing and other expenditures, and excluding acquisitions\"\n- D07 (line 278, cash flow statement) [c1]: \"Net Cash Provided by Operating Activities | 2,289 | 2,032 | 3,111 | 2,612 | 10,044 | 2,966 | 4,669\"\n- D07 (line 744, total capital expenditures) [c1]: \"Total Capital Expenditures (Non-GAAP) (2) (1,484) (1,523) (1,648) (1,639) (6,294) (1,636) (1,587)\"\n- D07 (line 297, cash flow statement) [c1]: \"Dividends Paid | (538) | (528) | (545) | (550) | (2,161) | (544) | (540)\"\n- D07 (line 285, cash flow statement) [c1]: \"Additions to Oil and Gas Properties | (1,381) | (1,699) | (1,492) | (1,543)\"\n- D07 (line 286, cash flow statement) [c1]: \"Additions to Other Property, Plant and Equipment | (102) | (94) | (171) | (112)\"\n- D07 (line 284, decoy source) [c1]: \"Acquisition of Encino Acquisition Partners, LLC, Net of Cash Acquired | — | — | (4,464)\"\n- D07 (line 742, decoy source) [c1]: \"Adjusted Cash Flow from Operations (Non-GAAP) 2,813 2,496 3,031 2,617\"",
+    "feedback log": "",
+    "lever checks": "- Platform document numbers: local D01-D07 equal the task page's Doc 1-7 in the same order (capture headings \"Doc 1 · 2020-03-16\" through \"Doc 7 · 2026-08-04\" match text/manifest.json), so reasoning \"Doc N\" equals local Dnn.\n- Family and target: definition applied to instances (D01's funding test and capital-spending scope applied to D07's quarters); easy. Measured platform result: pending.\n- Dependency plan: D01 L35 test (net cash from operating activities covers capital expenditures plus dividend payments) and scope (excluding acquisitions and non-cash exchanges) -> D07 L278 GAAP CFO, L744 non-GAAP total capital expenditures (excludes property acquisitions, ARO, non-cash exchanges and expensed exploration per D07 endnote 5, L1197), L297 dividends paid, six quarters -> only 2Q 2025 short (2,051 > 2,032).\n- Universe: the six calendar quarters 1Q 2025, 2Q 2025, 3Q 2025, 4Q 2025, 1Q 2026, 2Q 2026; D07 prints all six (L278, L744, L297). Surplus (CFO minus capex and dividends): +267, -19, +918, +423, +786, +2,542.\n- Necessity: remove D01 -> no other document states the funding test or the plan's capital-spending scope (D03 has no funding sentence for capex and dividends; series files hold no 2020 plan). Remove D07 -> 2Q 2026 cash flows exist only in D07 (D06 ends at 1Q 2026, L282/L301/L746), so the window cannot be completed; 2025 quarters repeat in D04-D06.\n- Selected-lever checks: match then exclude (acquisitions). Skipping the exclusion (GAAP total expenditures L756, or net investing outflow L289, both including the Encino purchase L284/L764) gives 2Q 2025 and 3Q 2025. Wrong-measure routes: adjusted CFO / free cash flow (L742/L746) minus dividends gives none; capex only gives none; adding treasury stock purchases (L298) gives 1Q 2025, 2Q 2025 and 4Q 2025.\n- Calculation verification: independent script (scratchpad funding.py) over eight measure combinations; every acquisition-excluding capex measure with GAAP CFO and dividends paid gives 2Q 2025 only (non-GAAP capex -19; oil and gas additions only -195; all cash additions -289). Dividends declared instead of paid also gives 2Q 2025 only (2Q 2025 declared 1.9950 per share, the only quarter with two declarations).\n- Semantic/ID/overview probes: TODO after the shortcut audit.\n- Precision/readings: \"fall short\" means the cash measure is less than capital spending plus dividends; exact integers in $ millions, no rounding. The test's mid-$30 oil assumption is a planning condition, not part of the comparison.\n- Completeness: complete capture, no gaps (intake.json, gap characters 0 for D01-D07).\n- Style/set review: q01 and q02 dropped; this question shares no documents' facts or answer path with them.\n- Warnings answered: TODO after the floor.",
+    "question": "EOG's March 2020 plan update named the cash measure it expected to fund both its capital spending and its dividend payments. Using that measure and the plan's definition of capital spending, in which calendar quarters from 1Q 2025 through 2Q 2026, if any, did the measure fall short of the two combined?",
+    "reasoning": "Step 1. Doc 1 (March 16, 2020): \"Net cash from operating activities is expected to fund both capital expenditures and dividend payments\". The plan's capital spending is exploration and development expenditures \"including facilities and gathering, processing and other expenditures, and excluding acquisitions\" and non-cash exchanges.\nStep 2. Doc 7, 2Q 2025, in millions of dollars: net cash provided by operating activities was 2,032. Total capital expenditures, which leave out property acquisitions, were 1,523, and dividends paid were 528: 1,523 + 528 = 2,051, more than 2,032.\nStep 3. Doc 7, the other quarters: 1Q 2025: 1,484 + 538 = 2,022, below 2,289. 3Q 2025: 1,648 + 545 = 2,193, below 3,111. 4Q 2025: 1,639 + 550 = 2,189, below 2,612. 1Q 2026: 1,636 + 544 = 2,180, below 2,966. 2Q 2026: 1,587 + 540 = 2,127, below 4,669.\nStep 4. Doc 7's cash additions give the same result: 2Q 2025 additions to oil and gas properties of 1,699 and to other property of 94 plus dividends of 528 come to 1,699 + 94 + 528 = 2,321, above 2,032, while every other quarter is covered.\nConclusion: only 2Q 2025 falls short.\nDecoy 1. Doc 7's 3Q 2025 investing outflow includes the Encino purchase of (4,464), which the plan's definition excludes; counting it adds 3Q 2025.\nDecoy 2. Doc 7's free cash flow starts from adjusted cash flow from operations (2,496 in 2Q 2025), not net cash from operating activities, and shows no quarter falling short.",
+    "review": "",
+    "shortcut audit": ""
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "106680fcbf68da0f331911a509254b8a3abfb06e1f20077a0c083055ec5afd9a"
+}

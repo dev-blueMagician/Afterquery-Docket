@@ -1,0 +1,585 @@
+# D01 | docs/arxiv_2601_21106v3.txt
+
+Scalable Dirichlet Process Mixture Models with
+
+Unknown Concentration and Adaptive
+
+Covariance for High-Dimensional Clustering
+
+Applied to Leukemia Transcriptomics
+
+Annesh Pal, Aguirre Mimoun, Rodolphe Thi ́ebaut and Boris P. Hejblum∗ Abstract
+
+Dirichlet process mixture models (DPMM) provide a flexible framework for clustering complex biological data without pre-specifying the number of clusters. Although Markov Chain Monte Carlo (MCMC) methods have bridged the gap between theory and application for such models, they scale poorly to high-dimensional data (e.g. omics data) and suffer from slow and difficult convergence. Variational Inference (VI) provides a faster alternative, but lacks implementation without overly simplifying assumptions such as mean field independence and known covariance. We propose a novel methodology that performs scalable inference of DPMM for clustering using collapsed VI, ensuring coherent and data-driven estimation of the cluster number in a fully Bayesian scheme. To accommodate high-dimensional data, we introduce cluster-specific adaptive covariance modeling with sparsity-inducing priors that improves flexibility while mitigating variance–covariance coupling and over-parameterization. The resulting algorithm scales efficiently with dimension and sample size, substantially reducing computation time compared to state-of-the-art MCMC slice sampler. Realistic simulation studies under Gaussian and negative-binomial settings demonstrate accurate recovery of cluster structure and robust performance across varying signal-to-noise regimes, supported by sensitivity analyses. Application on publicly available leukemia transcriptomic dataset comprising 72 samples and 2,194 gene expressions successfully recovers established subtypes while revealing biological plasticity of one Mixed Lineage Leukemia outlier sample. This theoretically coherent solution for high-dimensional non parametric Bayesian clustering is implemented in the companion R package vimixr.
+
+Keywords: Bayesian non-parametrics; Dirichlet process mixture model; Gene expression data; High-dimensional clustering; Variational inference.
+
+1 Introduction
+
+Clustering is an exploratory data analysis technique to group the data based on measured or estimated inherent similarities (Jain, 2010). Since the early 1 arXiv:2601.21106v3 [stat.ME] 9 Sep 2026
+
+emergence of K-means from 1956 onward (Steinhaus et al., 1956; MacQueen, 1967), clustering has become increasingly prevalent in complex biological data analysis, with diverse approaches including density based (Ester et al., 1996; Campello et al., 2013), graph based (Ertoz et al., 2002; Traag et al., 2019) and probabilistic based approaches (Bock, 1996; Bouveyron et al., 2007) A key limitation, however, is that the number of clusters K (or directly analogous parameters for density and graph based methods) must be preset to implement these approaches. This is an ubiquitous problem in clustering, and bayesian nonparametric mixture models (NPMM) have emerged as an efficient alternative to perform clustering based on probability distributions without pre-specifying K (Gershman and Blei, 2012).
+
+Ferguson (1973) introduced the Dirichlet process DP(α, G0) that underpins DP mixture models (DPMM) as a class of Bayesian NPMM for density estimation, clustering and regression (M ̈uller and Mitra, 2013). DPMM leverage an infinite-dimensional parameter space thanks to a DP prior, yielding a posterior over the observations partitions space with variable K. Although DPMM have been scrutinized for inconsistent posterior estimation of K (Miller and Harrison, 2013), Ascolani et al. (2023) successfully demonstrated their consistency is guaranteed as long as the concentration parameter α is not fixed but data-driven (Escobar and West, 1995).
+
+DPMM often results in analytically intractable likelihoods and posteriors, making Markov Chain Monte Carlo (MCMC) methods a popular inference choice (Neal, 2000). However, these methods exhibit slow and hard to assess convergence (Gershman and Blei, 2012), especially for high dimensions with several hundreds or even thousands of features per sample and limited sample size. Variational inference (VI) approximates the true posterior p(·|data) with a tractable density function q(·) from a (known) family of probability distributions, while optimizing an information-theoretic criterion such as KL divergence (Blei et al., 2017). Rooted in early estimation methods for graphical models (Jordan et al., 1999), VI has gained prominence for its computational efficiency and scalability, particularly in modern machine learning applications involving large datasets (Loya et al., 2025).
+
+Standard DPMM implementation use a stick-breaking DP representation (Sethuraman, 1994), with hyper-priors for α and DP base distribution G0.
+
+Mean-field VI is a widely adopted implementation approach that assumes factorized variational distributions with conjugate priors for model parameters (Blei and Jordan, 2006; Bishop and Nasrabadi, 2006). However, latent allocation variables in DPMM are inherently dependent through their shared mixture proportions across samples. Mean-field VI thus fails to capture the hierarchical relationship and results in inconsistency between cluster numbers estimated from α and the latent allocation variables (details in Supplementary material S4). Kurihara et al. (2007) provided a collapsed VI framework by integrating out (collapsing) the stick-breaking proportions, thus defining a latent allocation prior that depends only on α (1). This integration, however, constructs a non-standard prior with no conjugate hyper-prior for α, leaving collapsed VI without a working implementation that adaptively infers α.
+
+2
+
+Beyond α that has a directly proportional effect on the inferred number of clusters (Teh et al., 2010), the model variance also significantly impacts the estimation of K (Fr ̈uhwirth-Schnatter and Pyne, 2010; Hejblum et al., 2019), a practical challenge that is often ignored in DPMM implementations, e.g. Blei and Jordan (2006). The cluster variance particularly impacts high-dimensional data due to reduced signal-to-noise ratio, high variability and low inter-sample separation (Clarke et al., 2008), where commonly used priors like Inverse-Wishart IW receive criticisms for rigidity and strong variance-covariance coupling (Tokuda et al., 2025). Factorized covariance representations (e.g. Cholesky decomposed factors) exhibit similar variance-covariance dependency due to shared factor elements by linear combinations. Alternative approaches include block diagonal matrices, latent factor models and element-wise distributions (Jing et al., 2024) to introduce conditional independence within the covariance matrices. Additionally, real-world data often deviate from Gaussian assumptions (Hejblum et al., 2019), and transcriptomic data exhibit overlapping clusters due to high dimensionality or biological factors introducing multimodality and high correlation (Clarke et al., 2008; Yu et al., 2017). Cluster-specific distributions that regulate within-cluster spread as well as inter-cluster separability are therefore essential to obtaining robust results.
+
+We propose a novel collapsed VI approach that jointly incorporates adaptive inference of α and model covariance within a DPMM. Combining EulerMaclaurin and Taylor series approximations, we obtain a closed form variational distribution for α with a conjugate Gamma hyper-prior. After evaluating different covariance parameterizations (Table 1) on Gaussian simulated data, we establish the model with sparsity inducing hyper-prior (namely, Sparse DPMM) as optimal (similar to Jing et al. (2024)). Hyper-parameter sensitivity of Sparse DPMM is examined with high dimensional Negative Binomial simulations, and benchmarked against an MCMC slice sampler (NPflow from Hejblum et al.
+
+(2019)) for computation speed. We further apply Sparse DPMM to cluster acute lymphoblastic (ALL), mixed lineage (MLL) and acute myeloid (AML) leukemia sub-types based on gene expression dataset (Armstrong et al., 2002; De Souto et al., 2008) with 2, 194 genes and 72 samples, and compare performance with Kmeans (MacQueen, 1967), DBSCAN (Ester et al., 1996), HDBSCAN (Campello et al., 2013), shared nearest neighbourhood (Ertoz et al., 2002), Leiden (Traag et al., 2019) and HDDC (Bouveyron et al., 2007) techniques. Our Sparse DPMM outperforms the conventional methods for the Leukemia data, while identifying an additional sub-cluster that corresponds to the plastic nature of MLL sub-type. We provide the vimixr R-package implementing our approach and available from CRAN.
+
+3
+
+2 Methods
+
+2.1 Problem set-up
+
+Consider Xn ∈ R d random variables sampled from an unknown mixture of distributions F
+
+Xn|G i.i.d ∼ F for n = 1, . . . , N where F(X) = R
+
+Θ fη(X)G(dη) (Hejblum et al., 2019). We assume a multivariate Gaussian distribution for fη(·) with mean μ and covariance matrix Σ (η = {μ, Σ}). G is the unknown mixing distribution that characterizes the mixture components over the parameter space Θ, thus inducing clustering among Xn. A DP prior on G ∼ DP(α, G0) with concentration parameter α and base distribution G0 (Ferguson, 1973) gives us a non-parametric mixing distribution G(·) = P∞ k=1 πkδηk
+
+(·) where ηk ∈ G0
+
+The mixing proportions πk’s are drawn from a stick-breaking scheme (Sethuraman, 1994), which further introduce latent allocation variables Z = {zn} in the model that follows a categorical distribution with parameters {πk}’s such that probability of zn = k is πk for every n ∈ N. The likelihood of Xn hence follows Xn ∼ Q k MV N(μk, Σk)
+
+I[zn=k]
+
+(Blei and Jordan, 2006). Our objective is to estimate zn as well as ηk = {μk, Σk} to quantitatively evaluate the partitioning of the parameter space Θ.
+
+2.2 Dirichlet process mixture model
+
+A hierarchical Bayesian model follows
+
+Vk ∼ Beta(1, α)
+
+πk := Vk Q j<k(1 − Vj )
+
+μk, Σk ∼ G0 zn ∼ Categorical({πk})
+
+xn|zn ∼ MV N(μzn, Σzn)
+
+This is an illustration of a Dirichlet process mixture model (DPMM), introduced by Antoniak (1974). The concentration parameter α has a direct impact on the posterior expectation of the number of non-empty clusters (Teh et al., 2010). Escobar and West (1995) have proposed a data augmentation scheme that leverages a Gamma hyper-prior α ∼ Gamma(a, b) yielding a posterior distribution that adjust to the actual number of clusters observed in the data with consistency (Ascolani et al., 2023). With a conjugate choice for G0, the model provides an estimate for the unknown parameters of interest.
+
+4
+
+2.3 Choices for G0
+
+The underlying structure of η = {μ, Σ} governs the distributional choice for G0. We use a multivariate Gaussian MV N(0, Σμ) as the prior for μk. Table
+
+1 presents several parameterizations for Σ (and our proposed associated prior distributions). We introduce gradual complexity in terms of covariance paramModel Assumption Parameterization Cluster-specific Prior M1 Known 1 σ Id×d No –
+
+M2 Known Σ No –
+
+M3 Unknown 1 σ
+
+Id×d No σ ∼ Γ(g1, g2)
+
+M4 Unknown Σ No Σ ∼ IW(ν0, V0)
+
+M5 Unknown Σ−1 = LLt No Lij ∼ N(μ0, σ0),L
+
+2 ii ∼ Γ(a0, b0)
+
+M6 Unknown Σk Yes Σk ∼ IW(ν0, V0)
+
+M7 Unknown Σk Yes Σ
+
+−1 kij ∼ Lap(0, c0), Σ
+
+−1 kii ∼ Γ(a0, b0)1[Σ−1 k ∈M+]
+
+M8 Unknown Σk Yes Σ
+
+−1 kij ∼ N(c0, 10−6
+
+), Σ
+
+−1 kii ∼ Γ(a0, b0)1[Σ−1 k ∈M+]
+
+Table 1: Model structure based on choice of covariance matrix Σ; σ is a positive scalar quantity, L is the Cholesky factorized lower triangular matrix for Σ−1 = LLt, M+ represents the set of positive definite matrices (Wang, 2012) and i, j ∈ 1, . . . , d eterization, starting from known variance (M1, M2). For unknown variance, global refers to a common covariance matrix Σ for all cluster (M3, M4, M5), whereas cluster-specific defines each cluster with a unique covariance matrix Σk, along with the mean vectors (M6, M7, M8). The choices of prior distributions all maintain conjugacy, while considering hyper-parameters that establish weakly informative priors (see supplementary Materials S2). Of note, all eight parameterizations and prior choices guarantee that covariance matrices always remain semi-definite positive (see Supplementary materials S2).
+
+2.4 Posterior estimation using collapsed VI
+
+We derive a collapsed variational inference (CVI) approach, where we integrate out (or collapse) the stick-breaking parameters {Vk}, following Kurihara et al.
+
+(2007). This yields a probability distribution p0 of the latent allocation variables {zn} depending only on the DP concentration parameter α:
+
+p0(zn|α) = Y k Z Vk
+
+p0(zn|Vk)p(Vk|α)dVk
+
+= Y k α
+
+Γ(1[zn=k] + 1)Γ(1[zn>k] + α)
+
+Γ(1 + 1[zn≥k] + α)
+
+(1)
+
+where 1[·] represents the indicator function.
+
+We can reconstruct our DPMM as:
+
+α ∼ Gamma(a, b)
+
+μk, Σk ∼ G0 zn ∼ p0(zn|α) (1)
+
+5
+
+xn|zn ∼ MV N(μzn
+
+, Σzn).
+
+The posterior distribution is approximated by a mean-field variational distribution for the DPMM parameters q(α, {μk}, {Σk}, {zn}) = q(α)
+
+Q k≤K q(μk)q(Σk)
+
+Q n q(zn)
+
+(Blei et al., 2017). Although having theoretically “infinite“ prior choices for k, truncated variational distributions with an upper limit k = K enable practical implementation (Ishwaran and James, 2001).
+
+For posterior estimation, we use exponential families of distributions for q(·) and apply coordinate ascent algorithm to update the variational hyper-parameters (Bishop and Nasrabadi, 2006). It ensures guarantee of convergence and provides a closed form update q
+
+∗
+
+(·) that maximizes the Evidence lower bound (ELBO)
+
+(or equivalently minimizing the information-theoretic Kullbach-Leibler (KL) divergence) q
+
+∗
+
+(θi) ∝ exp(Eqθ−i[log p(X, θ)])
+
+∝ exp(Eqθ−i
+
+[log p(X|θ) + log p(θ)])
+
+(2)
+
+where θj ∈ Θ = {α, {μk}, {Σk}, {zn}} and θ
+
+−j = Θ\θj represents the set of all except the j th parameter (Blei and Jordan, 2006; Bishop and Nasrabadi, 2006).
+
+Appropriate prior as well as variational distribution choices facilitate the update of q
+
+∗
+
+(·) hyper-parameters. These updates are used to perform posterior inference for the unknown {zn}, {θi}, thus estimating data cluster as well as distributional partitions corresponding to the cluster allocations. The theoretical updates of the variational parameters involved are fully detailed in the Supplementary material S1-S3. One important innovation from our collapsed VI framework is updating α based on the number of non-empty clusters t < K only, contrary to the mean-field VI implementation from Blei and Jordan (2006) that considers all potential clusters up to the truncation K (including empty ones). Thus, linking Z directly to α (cf Eq: (1)) and together with our theoretical approximations, we can avoid the inconsistencies in cluster number estimates between α and Z that plague Blei and Jordan (2006) algorithm (additional details provided in Supplementary material S3 and S4).
+
+Starting with an initial choice of latent allocation probabilities q ◦ nk, the
+
+DPMM iteratively updates VI parameters based on the coordinate ascent algorithm (Eq: (2)) until ELBO converges (Blei and Jordan, 2006) ELBO = Eq
+
+log p(X, Z, {μk, Σk}, α)
+
+− Eq
+
+log q(Z, {μk, Σk}, α)
+
+= Eq
+
+log p(X|Z, {μk, Σk}, α) + log p(Z, {μk, Σk}, α)
+
+− Eq
+
+log q(Z, {μk, Σk}, α)
+
+.
+
+(3)
+
+ELBO acts as a lower bound of log evidence log p(X) which minimizes reverse KL divergence between the target p(·) and variational q(·) distributions.
+
+6
+
+2.5 Hyper-parameter tuning and model selection
+
+Initialization can significantly impact VI results, due to non-convexity of the ELBO (Blei et al., 2017). This is mitigated by leveraging several random initializations and selecting the optimum based on variational log likelihood (VLL)
+
+term from Eq: (3): Eq[log p(X|Z, {μk, Σk}, α)](= Eq[log p(X|Z)]). VLL implicitly handles model complexity through expectation over q(·), while providing a
+
+numerical fit of the data based on updated variational distribution. It is therefore a good metric to select the best initial values, contrary to the ELBO which is over-influenced by the large number of parameters in high dimension (details in Supplementary material S5 and S6.2).
+
+For the selection of G0 and associated hyper-parameters, we use mean pairwise KL divergence scores:
+
+KLmean = 1 ( K 2 )
+
+P i̸=j∈K 1 2
+
+KL(θi||θj ) + KL(θj ||θi)
+
+, for posterior cluster distributions θi, θj where i ̸= j ∈ K. This score can be interpreted as the distributional separability of the estimated clusters, and provides coherent validation for high dimensional data (instead of geometric counterparts like Silhouette coefficients, see details in Supplementary material S6.2). Standard model selection criteria like BIC fall short in this setting due to unknown cluster number (Liu and Yang, 2011), while the ELBO and VLL are both subjects to numerical artifacts under certain hyper-parameter regimes (e.g. large hyper-parameter values) and thus cannot properly discriminate extreme values from optimal ones.
+
+3 Results
+
+3.1 Numerical study
+
+3.1.1 Effect of G0 covariance structure and prior choices Posterior cluster number estimates depend on α as well as the structure and prior choice of the variance in G0 (Hejblum et al., 2019). To compare model specifications from Table:1, we generated random N = 100 multivariate Gaussian variables of dimension d = 2 and grouped them into Ktrue = 2 clusters, where both clusters share the same covariance (details in Supplementary material S10). Using our vimixr implementation, we estimated the posterior number of clusters Kpost as well as adjusted Rand index (ARI) scores over the generated data for 100 simulation runs. In Figure 1, fixed variance models M1 (diagonal covariance) and M2 (full covariance) establish the performance baseline, while cluster-specific structures (M6-M8) are a necessary complement to α in order to successfully recover the posterior number of non-empty clusters when the covariance is unknown. In this latter case, global diagonal covariance M3 achieves good performances (but only because the data were indeed 7
+
+1 2 3 4
+
+M1 M2 M3 M4 M5 M6 M7 M8
+
+Posterior Cluster number (averaged)
+
+(a) Kpost boxplots
+
+0.00 0.25 0.50 0.75 1.00
+
+M1 M2 M3 M4 M5 M6 M7 M8
+
+ARI Model M1 M2 M3 M4 M5 M6 M7 M8
+
+(b) ARI boxplots
+
+Figure 1: Kpost and ARI scores for different model choice (Ktrue = 2) generated accordng to this model), while both full covariance M4 and Choleskydecomposed covariance M5 yield significantly poor performance. M3 employs uncorrelated mixture distribution for all the variational clusters, thus reducing rigidity and variance-covariance coupling. Such global covariance structures (M3- M5) can prove inadequate for clusters with heterogeneous covariances (Biernacki et al., 2002). Among the latter structures, an IW prior (M6) introduces rigidity (Tokuda et al., 2025), while element-wise priors (M7, M8) decouple variance and covariance terms using conjugate Gamma distributions on the diagonal elements and either Laplace (M7) or Normal (M8) distributions for the off-diagonals (while ensuring semi-definiteness and positivity). The clusterspecific models recovered better than global models, even though the simulated data had cluster agnostic covariance. This setting was deployed to avoid model misspecification issues. However, as expected, the cluster-specific models shows better performance for data simulated using cluster-specific covariance (see Supplementary materials S10).
+
+Compared to global covariance, cluster-specific covariance structures provide better results overall. For different prior choices of the cluster-specific covariance structure, we further illustrated the effect of dimensionality and more clusters by increasing dimension to d = 100 and calculating Kpost and ARI for different Ktrue ∈ {4, 6, 8, 10}. Element-wise prior models show better adaptability with varying cluster number than IW prior model in a high-dimensional setting (Figure 2). M7 and M8 have comparable performances (with M7 slightly better than M8). This can be attributed to the fact that a Laplace distribution is equivalent to a marginalized Gaussian distribution with Exponential prior on the variance parameter. Owing to its sparsity inducing effect (Jing et al., 2024), we call M7 as the Sparse DPMM, and consider it to be the best possible choice 8
+
+0.00 0.25 0.50 0.75 1.00
+
+Ktrue = 4 Ktrue = 6 Ktrue = 8 Ktrue = 10
+
+ARI Model M6 M7 M8
+
+ARI boxplots for cluster−specific models
+
+Figure 2: ARI for different cluster-specific models when Ktrue is varying among the models defined in Table 1.
+
+3.1.2 Computational scalability
+
+We implemented our model framework and its VI estimation in the vimixr R-package (available from CRAN with all 8 parameterizations from Table 1).
+
+For the Sparse DPMM, computations scale linearly with the sample size and quadratically with the dimension (details in Supplementary material S7). Although convergence is often reached with fewer iterations in higher dimensions, the cost for a given K is slightly higher due to computing larger ddimensional precision matrices. We compared computing times with the slicesampler MCMC algorithm implemented in the NPflow R package (Hejblum et al., 2019) for N = 100, d = 100 Gaussian data with K = 2. With 1000 MCMC iterations, the slice sampler often has not converged yet, while our Sparse DPMM systematically reaches convergence in timings that are three orders of magnitude less (details in Supplementary material S7).
+
+3.2 Application to cancer sub-type estimation
+
+We applied the proposed clustering framework on the gene-expression dataset from leukemia sub-type study by Armstrong et al. (2002), previously used as a benchmark for comparative analysis of clustering algorithms (De Souto et al., 2008). Armstrong et al. (2002) showed that leukemia with rearrangement of the MLL gene (mixed lineage leukemia gene, now renamed KMT2A) should be classified as a distinct clinical entity rather than common acute lymphoblastic leukemia. The chromosomal rearrangement of MLL creates fusion genes with various partner genes that influence lineage commitment (Krivtsov and Arm9
+
+strong, 2007). For example, certain MLL rearrangements result in overexpression of HOXA9 and PRG1 genes, which are characteristic markers of acute myeloid leukemia (AML) rather than ALL (Armstrong et al., 2002). Recent studies have further revealed the lineage plasticity of MLL-rearranged leukemia, showing dynamic transitions between lymphoid and myeloid phenotypes (Chen et al., 2022; Janssens et al., 2024).
+
+Working on the Affymetrix data from Armstrong et al. (2002), De Souto et al.
+
+(2008) provides a filtered set of d = 2194 expressed genes for clustering N = 72 leukemia samples into ALL-MLL-AML sub-types (Fig 3(a)). For a strong choice of prior hyper-parameters, we obtained Kpost = 3 with ARI score of 0.92 (Figure 3(b)). Following our empirical Bayes approach, we estimated a0 = b0 = 28.9076 −10 0 10 20
+
+−20 −10 0 10 20 30
+
+PC 1 (16.57%)
+
+PC 2 (5.58%)
+
+Cluster ALL AML MLL
+
+(a) PCA projection: Labelled sub−types
+
+−10 0 10 20
+
+−20 −10 0 10 20 30
+
+PC 1 (16.57%)
+
+PC 2 (5.58%)
+
+Cluster 1 2 3
+
+(b) PCA projection: Sparse DPMM clusters
+
+Figure 3: PCA projection on the first 2 principal components for (a) labelled Leukemia sub-types based on 2194 genes and (b) Sparse DPMM cluster estimates obtained using strong hyper-parameters which corresponded towards lower cluster overlap from KLmean values (details in Supplementary Section S6:2). Along with k0 = N +1 = 73, we applied Sparse DPMM for random initial probability allocation values and chose the best performing model based on VLL. To check the sensitivity of Sparse DPMM with a weaker prior hyper-parameter, we used a0 = b0 = 10 instead of 28.9076 and clustered the same dataset. For this particular choice, we obtained Kpost = 4 with ARI score 0.86. (Figure 4a). Comparing with known sub-types in Figure 3(a), Sparse DPMM with weaker hyper-parameters identifies an additional 4th cluster with one sample replacing a labelled AML sub-type (Figure 4a). Analogous to (Armstrong et al., 2002), we plot a heat-map based on the available genes (De Souto et al., 2008) that are specifically expressed for the known subtypes to compare the lineage of the 4th estimated cluster (Figure 4b). The heat-map reveals a mixed expression pattern for the 4th cluster. The cluster shows elevated expression of genes characteristic of ALL sub-types (CD22 and CD24), suggesting lymphoblastic features. It also displays moderate expression of genes typically overexpressed in MLL sub-types (PROML1, FLT3 and ADAM10). In contrast, genes predominantly expressed in AML sub-types 10
+
+−10 0 10 20
+
+−20 −10 0 10 20 30
+
+PC 1 (16.57%)
+
+PC 2 (5.58%)
+
+Cluster 1 2 3 4
+
+PCA projection: Sparse DPMM clusters
+
+(a) Sparse DPMM clusters using weaker hyper-prarameters
+
+ALL MLL AML
+
+MME(CD10) 1389_at
+
+CD24 266_s_at
+
+DYRK3 39931_at
+
+DNTT(TDT) 34168_at
+
+LIG4 963_at
+
+FOXO1A(FKHR) 40570_at
+
+SPTBN1 39556_at
+
+SPTBN1 39452_s_at
+
+KIAA0867 35260_at
+
+CD22 38522_s_at
+
+CD22 38521_at
+
+POU2AF1 36239_at
+
+MYLK(MLCK) 32847_at
+
+SMARCA4 32579_at
+
+VAMP5 32533_s_at
+
+FLT3 34583_at
+
+FLT3 1065_at
+
+KIAA0428 34306_at
+
+NKG2D 36777_at
+
+ADAM10 40798_s_at
+
+ADAM10 40797_at
+
+PROML1(AC133) 41470_at
+
+KIAA1025 34785_at
+
+CCNA1 34833_at
+
+DKFZp586o0120 40798_s_at
+
+ADAM10 35801_at
+
+ITPA 35985_at
+
+K1AA0920 32184_at
+
+LMO2 1914_at GJB1 39598_at BSG 36162_at ENSA 39011_at ENSA 39010_at ENSA 39012_g_at
+
+CTSD 239_at DF 40282_s_at TFDP2 34741_at TFDP2 633_s_at TFDP2 2013_at DRAP1 39076_s_at
+
+PDE3B 37779_at
+
+ANPEP 39385_at
+
+FZR1(Chromosome 19 clone) 41623_s_at
+
+FZR1(Chromosome 19 clone) 41624_r_at
+
+FZR1(Chromosome 19 clone) 39855_at
+
+RTN2 34408_at
+
+CRYAA 33311_at
+
+CRYAA 33313_g_at
+
+111111111111111111111113 33333333333333333332 3422222222222222222222222222 Sparse DPMM clusters
+
+Expression level
+
+−6 −4 −2 0 2 4 6
+
+(b) Heat map of clusters based on sub-type specific expressed genes Figure 4: 4a) PCA projection on the first 2 principal components for Sparse DPMM clusters obtained using weaker hyper-prarameters; 4b) Heatmap showing comparison between labelled sub-types and Sparse DPMM (weaker) cluster estimates with respect to specifically expressed genes for the labelled sub-types (Armstrong et al., 2002) for all the 72 samples (genes in bold, probe-id in italics) (DF, CTSD and BSG) are not dominantly expressed in this cluster. However, this expression pattern is not clear-cut, with the 4th cluster displaying charac11
+
+teristics intermediate between ALL and MLL rather than fitting cleanly into a single category. This ambiguous profile is consistent with the documented lineage plasticity of MLL-rearranged leukemias, which can undergo dynamic transitions between lymphoid and myeloid phenotypes during disease progression and treatment (Chen et al., 2022; Janssens et al., 2024). The identification of this 4th cluster by Sparse DPMM thus appears to capture this biological reality of MLL heterogeneity rather than representing a technical artifact.
+
+3.2.1 Performance benchmarking with current state of the art clustering techniques For high-dimensional clustering analysis, there are certain popular choice of working algorithms with varying implementation techniques. Methods like DBSCAN (Ester et al., 1996) and HDBSCAN (Campello et al., 2013) are based on density of the data distributed over dimensional space, where data points in the low-density region are identified as noise/outliers and form clusters using core points. Shared nearest neighbours based method (Ertoz et al., 2002) works by grouping data points with higher similarity of shared neighbours across a knearest neighbour graph. Bouveyron et al. (2007) proposed a high dimensional model based clustering that implements dimensionality reduction for each cluster with parsimonious covariance structure and estimate the Gaussian mixture model parameters using EM iterations. Another class of popular methods include graph based algorithms, like Leiden (an upgrade of Louvain, Traag et al.
+
+(2019)) that constructs a k-nearest neighbour graph from the data and detects communities (clusters) by maximizing graph modularity. Classical K-means (MacQueen, 1967), on the other hand, is a partitioning based method that minimizes the within-cluster variance by iteratively assigning data points to their nearest centroids. For performance on the Leukemia dataset, we used the R packages implementing those methods and hyperparameter choice was based on each method default recommendations (see details in Supplementary Material S8). Based on corresponding optimal parameters, these methods are compared with Sparse DPMM implementation with empirical Bayes hyper-parameters, and we validated their performances with run-time (in seconds), estimated cluster numbers and ajusted Rand index (ARI). Due to diversity in methodology of these techniques, we avoided any internal metric for comparison across methods and focused on external validation metrics. Figure 5 shows that Sparse DPMM is significantly slower (∼ 5.91 seconds per iteration) in comparison to alternative methods. However, the performance metrics based on estimated number of clusters and ARI scores validate the (relative) superiority of Sparse DPMM.
+
+4 Discussion
+
+We developed a Bayesian non-parametric mixture model using collapsed variational inference (VI) to perform unsupervised clustering. Our approach hierarchically incorporates the Dirichlet process (DP) concentration parameter α 12
+
+DBSCAN: 0.03 HDDC (k−means): 0.14
+
+HDBSCAN: 0.04 Leiden: 0.01 sNNclust: 0.05 K−means: 0.02
+
+HDDC (random): 0.13 Sparse DPMM: 65
+
+0 2 4 6 DBSCAN HDBSCAN sNNclust HDDC (random)
+
+HDDC (k−means)
+
+Leiden K−means Sparse DPMM
+
+Number of Clusters
+
+b) Estimated Clusters
+
+0.00 0.25 0.50 0.75 1.00 DBSCAN HDBSCAN sNNclust HDDC (random)
+
+HDDC (k−means)
+
+Leiden K−means Sparse DPMM ARI (c) ARI Score
+
+a) Runtime (in seconds)
+
+Benchmark of Clustering Techniques
+
+Figure 5: Performance benchmarking of popular clustering methods against Sparse DPMM; based on a) implementation run-time in seconds (iterations are indicated with mini-bars), b) estimated number of clusters and c) corresponding ARI scores as a variable in the DP mixture model (DPMM) with Gaussian kernels. Based on the importance of adaptive estimation of α (Ascolani et al., 2023), the proposed framework enhances the consistency of collapsed VI model developed by Kurihara et al. (2007). We also illustrated the effect of prior for covariance matrix, and concluded that a cluster-specific Sparse DPMM is the best choice. Implementing our theoretical work into an R-package vimixr, we provide a probabilistic tool to perform exploratory analysis of unstructured and high-dimensional biological data with significant potential applicability.
+
+The Sparse DPMM provides significantly faster convergence than an MCMC slice sampling approach (Hejblum et al., 2019). Comparing with conventional clustering techniques, the iterative nature of Sparse DPMM, added to the model structure complexity, leads to a slower convergence. However, it provides better clustering estimates with empirical Bayes hyper-parameters using gene expression data for leukemia sub-types (Armstrong et al., 2002). Even with weaker hyper-parameters, Sparse DPMM estimates are consistent with gene expression profiles, hence providing a biologically meaningful sub-cluster of the known subtypes. This is particularly reflected by the PCA plot in Figure 4a where the 4th cluster has more numerical proximity towards AML subtype, but the marker genes heatmap in Figure 4b represents more biological proximity towards ALL subtype.
+
+A natural extension of Sparse DPMM is to generalize beyond Gaussian kernels for G0, which becomes eminent for real-world data. For instance, overdispersed count data is better modelled using Negative Binomial distributions, thus avoiding model misspecification for clustering such datasets like gene expression data (Anders and Huber, 2010). Even under such misspecified conditions, Sparse DPMM is able to retrieve malignant cell types across HSC-myeloid differenti13
+
+ation axis based on gene subclones from single cell transcriptomics (details in Supplementary S9). Another aspect is to introduce probabilistic feature selection variables that could be updated simultaneously (Tadesse et al., 2005) or guide the clustering process itself (Rouanet et al., 2024). This can provide insights on the features defining the estimated clusters and prove beneficial for high-dimensional data sets.
+
+As an optimization technique, VI algorithms heavily depend on the initial choice of latent variables (latent allocation vectors {zn} in our case) for a given data.
+
+We advocate random initialization for these parameters, and the choice is based on variational log likelihood (VLL) values. For VI implementation, alternative approaches (Blei et al., 2017) can be explored for further refinement. Based on the analytical properties of VLL, empirical Bayes estimates for the G0 hyperparameters prove to be efficient for robust estimation. Due to their implied significance over effective dimensions and sample size, it becomes important to consider hierarchical hyper-priors for the hyper-parameter a0 = b0. However, the conjugate prior for both unknown shape and rate parameters of a Gamma distribution does not have a closed form (Miller, 1980). So, incorporating an a0 = b0 hyper-prior would add another layer of analytical complexity, along with increased computational cost due to additional model parameters.
+
+The exchangeability of mixture components in DPMM introduces label switching between atoms as they are ordered sequentially through the stick-breaking construction (Papaspiliopoulos and Roberts, 2008). Following Kurihara et al.
+
+(2007), we addressed the issue by ordering the latent allocation probability updates such that the clusters are arranged in decreasing proportions. Alternatively, Fr ̈uhwirth-Schnatter (2011) shows identification methods for finite mixture model, that can be extrapolated to non-parametric mixtures.
+
+Acknowledgments
+
+This work was supported by the University of Bordeaux’s Digital Public Health Graduate School, financed by the PIA 3 through the Agence Nationale de la Recherche (Ref: 17-EURE-0019), by the Programme et Equipement Prioritaire de Recheche Sant ́e Num ́erique (PEPR SN) project SMATCH (Ref: 22-PESN0003). Computer time for this study was provided by the computing facilities MCIA (M ́esocentre de Calcul Intensif Aquitain) of the Universit ́e de Bordeaux and of the Universit ́e de Pau et des Pays de l’Adour.
+
+References
+
+Anders, S. and Huber, W. (2010). Differential expression analysis for sequence count data. Nature Precedings, pages 1–1.
+
+Antoniak, C. E. (1974). Mixtures of dirichlet processes with applications to bayesian nonparametric problems. The annals of statistics, 2(6):1152–1174.
+
+14
+
+Armstrong, S. A. et al. (2002). Mll translocations specify a distinct gene expression profile that distinguishes a unique leukemia. Nature genetics, 30(1):41–47.
+
+Ascolani, F. et al. (2023). Clustering consistency with dirichlet process mixtures.
+
+Biometrika, 110(2):551–558.
+
+Biernacki, C., Celeux, G., and Govaert, G. (2002). Assessing a mixture model for clustering with the integrated completed likelihood. IEEE transactions on pattern analysis and machine intelligence, 22(7):719–725.
+
+Bishop, C. M. and Nasrabadi, N. M. (2006). Pattern recognition and machine learning, volume 4. Springer.
+
+Blei, D. M. and Jordan, M. I. (2006). Variational inference for dirichlet process mixtures. Journal of Bayesian Analysis, 1(1):121–144.
+
+Blei, D. M., Kucukelbir, A., and McAuliffe, J. D. (2017). Variational inference:
+
+A review for statisticians. Journal of the American statistical Association, 112(518):859–877.
+
+Bock, H. H. (1996). Probabilistic models in cluster analysis. Computational Statistics & Data Analysis, 23(1):5–28.
+
+Bouveyron, C., Girard, S., and Schmid, C. (2007). High-dimensional data clustering. Computational statistics & data analysis, 52(1):502–519.
+
+Campello, R. J., Moulavi, D., and Sander, J. (2013). Density-based clustering based on hierarchical density estimates. In Pacific-Asia conference on knowledge discovery and data mining, pages 160–172. Springer.
+
+Chen, C. et al. (2022). Single-cell multiomics reveals increased plasticity, resistant populations, and stem-cell–like blasts in kmt2a-rearranged leukemia.
+
+Blood, The Journal of the American Society of Hematology, 139(14):2198– 2211.
+
+Clarke, R. et al. (2008). The properties of high-dimensional data spaces: implications for exploring gene and protein expression data. Nature reviews cancer, 8(1):37–49.
+
+De Souto, M. C. et al. (2008). Clustering cancer gene expression data: a comparative study. BMC bioinformatics, 9:1–14.
+
+Ertoz, L., Steinbach, M., and Kumar, V. (2002). A new shared nearest neighbor clustering algorithm and its applications. In Workshop on clustering high dimensional data and its applications at 2nd SIAM international conference on data mining, volume 8.
+
+Escobar, M. D. and West, M. (1995). Bayesian density estimation and inference using mixtures. Journal of the american statistical association, 90(430):577–
+
+588.
+
+15
+
+Ester, M. et al. (1996). A density-based algorithm for discovering clusters in large spatial databases with noise. In kdd, volume 96, pages 226–231.
+
+Ferguson, T. S. (1973). A bayesian analysis of some nonparametric problems.
+
+The annals of statistics, 1:209–230.
+
+Fr ̈uhwirth-Schnatter, S. (2011). Dealing with label switching under model uncertainty. Mixtures: estimation and applications, pages 213–239.
+
+Fr ̈uhwirth-Schnatter, S. and Pyne, S. (2010). Bayesian inference for finite mixtures of univariate and multivariate skew-normal and skew-t distributions.
+
+Biostatistics, 11(2):317–336.
+
+Gershman, S. J. and Blei, D. M. (2012). A tutorial on bayesian nonparametric models. Journal of Mathematical Psychology, 56(1):1–12.
+
+Hejblum, B. P. et al. (2019). Sequential dirichlet process mixtures of multivariate skew t-distributions for model-based clustering of flow cytometry data. The Annals of Applied Statistics, 13:638–660.
+
+Ishwaran, H. and James, L. F. (2001). Gibbs sampling methods for stickbreaking priors. Journal of the American statistical Association, 96(453):161–
+
+173.
+
+Jain, A. K. (2010). Data clustering: 50 years beyond k-means. Pattern recognition letters, 31(8):651–666.
+
+Janssens, D. H. et al. (2024). Mll oncoprotein levels influence leukemia lineage identities. Nature Communications, 15(1):9341.
+
+Jing, W., Papathomas, M., and Liverani, S. (2024). Variance matrix priors for dirichlet process mixture models with gaussian kernels. International Statistical Review.
+
+Jordan, M. I. et al. (1999). An introduction to variational methods for graphical models. Machine learning, 37(2):183–233.
+
+Krivtsov, A. V. and Armstrong, S. A. (2007). Mll translocations, histone modifications and leukaemia stem-cell development. Nature reviews cancer, 7(11):823–833.
+
+Kurihara, K., Welling, M., and Teh, Y. W. (2007). Collapsed variational dirichlet process mixture models. 20th International Joint Conference on Artificial Intelligence (IJCAI 2007).
+
+Liu, W. and Yang, Y. (2011). Parametric or nonparametric? a parametricness index for model selection. The Annals of Statistics, 39(4):2074–2102.
+
+Loya, H. et al. (2025). A scalable variational inference approach for increased mixed-model association power. Nature Genetics, 57(2):461–468.
+
+16
+
+MacQueen, J. B. (1967). Some methods of classification and analysis of multivariate observations. In Proc. of 5th Berkeley Symposium on Math. Stat. and Prob., pages 281–297.
+
+Miller, J. W. and Harrison, M. T. (2013). A simple example of dirichlet process mixture inconsistency for the number of components. Advances in neural information processing systems, 26.
+
+Miller, R. B. (1980). Bayesian analysis of the two-parameter gamma distribution. Technometrics, 22(1):65–69.
+
+M ̈uller, P. and Mitra, R. (2013). Bayesian nonparametric inference–why and how. Bayesian analysis (Online), 8(2):10–1214.
+
+Neal, R. M. (2000). Markov chain sampling methods for dirichlet process mixture models. Journal of computational and graphical statistics, 9(2):249–265.
+
+Papaspiliopoulos, O. and Roberts, G. O. (2008). Retrospective markov chain monte carlo methods for dirichlet process hierarchical models. Biometrika, pages 169–186.
+
+Rouanet, A. et al. (2024). Bayesian profile regression for clustering analysis involving a longitudinal response and explanatory variables. Journal of the Royal Statistical Society Series C: Applied Statistics, 73(2):314–339.
+
+Sethuraman, J. (1994). A constructive definition of dirichlet priors. Statistica sinica, 4:639–650.
+
+Steinhaus, H. et al. (1956). Sur la division des corps mat ́eriels en parties. Bull.
+
+Acad. Polon. Sci, 1(804):801.
+
+Tadesse, M. G., Sha, N., and Vannucci, M. (2005). Bayesian variable selection in clustering high-dimensional data. Journal of the American Statistical Association, 100(470):602–617.
+
+Teh, Y. W. et al. (2010). Dirichlet process. Encyclopedia of machine learning, 1063:280–287.
+
+Tokuda, T. et al. (2025). Visualizing distributions of covariance matrices. Journal of Data Science, Statistics, and Visualisation, 5(7).
+
+Traag, V. A., Waltman, L., and Van Eck, N. J. (2019). From louvain to leiden:
+
+guaranteeing well-connected communities. Scientific reports, 9(1):1–12.
+
+Wang, H. (2012). Bayesian graphical lasso models and efficient posterior computation. Bayesian Analysis, 7(4):867 – 886.
+
+Yu, X., Yu, G., and Wang, J. (2017). Clustering cancer gene expression data by projective clustering ensemble. PloS one, 12(2):e0171429.
+
+17
+
+A
+
+A.1 Software and Data availability
+
+Software in the form of R package vimixr with complete documentation is available on CRAN (https://cran.r-project.org/web/packages/vimixr/index.html).
+
+The Leukemia sub-type gene expression data is publicly available online at https://schlieplab.org/Static/Supplements/CompCancer/Affymetrix/armstrong-2002-v2/.
+
+The package implementation is provided in the Zenodo repository https://doi.org/10.5281/zenodo.18405687, along with metadata and results.
+
+18

@@ -1,0 +1,62 @@
+{
+  "bundle": "aq-docket-trial-07",
+  "corpus_sha256": {
+    "docs/mlr_alternative_measurements_of_indian_country_htm.txt": "2fcab949d1e9bf7c4f04baaee0e53caa579f380db053a72f65a06e49611ca5de",
+    "docs/mlr_assessing_consumer_expenditure_surveys_data_quality_through_.txt": "30acf5adaad018d65e5e7f57ac555db3f537c456a4aca5fb7ad3094f5e913edb",
+    "docs/mlr_business_employment_dynamics_by_wage_class_htm.txt": "ec57e71ee37cea8f1942884f1c7888da15bf5b43ccc9c69afe65798e4fd03b91",
+    "docs/mlr_employment_in_rail_transportation_heads_downhill_between_nov.txt": "c0f14142702ff77f160c4f1182def112f94f8e0395c51e25cd665591b67b0b44",
+    "docs/mlr_exploring_midwest_manufacturing_employment_from_1990_to_2019.txt": "a5250b31b44077a76ba16e564dd892d19fa44574429161b4e8e2b41e13654414",
+    "docs/mlr_mapping_employment_projections_and_onet_data_htm.txt": "ec9d663cc98826132fb4d805c6980e73bb89efe8d14907ffb582b299c63d3f70",
+    "docs/mlr_nonstandard_work_schedules_in_29_european_countries_2005_15_.txt": "60013396f7433400e932e5c7002e3c5d3e402817e49a9d95b8f496fbbbf4fab9",
+    "text/D01.txt": "89276c478234df26ac5026e4072aee1f3690bd2d261c4f901234b8844d736911",
+    "text/D02.txt": "939a421f448c26364e297cabba636bb9e093e19654b7cf71ced16a73480e641d",
+    "text/D03.txt": "2f29343215386d988e63a2432a4a442f3923587fef18dd5045266bd089de7510",
+    "text/D04.txt": "1dbf0a33d94cfb5dc7f06d7d4303ce7525345e96c41963522d6ec555e0fc6b03",
+    "text/D05.txt": "7446411698529ebfb503c9cadd79b7bffc08978c4d846d9e4df263091aa5aea2",
+    "text/D06.txt": "d5e6893b383eda4154bcc9c023bd976e668b56d479a1096d1c327818628d1594",
+    "text/D07.txt": "1954375c5465bf3a7b0f48d2833d15610eedb94f785229ddc17575062b8ad771",
+    "text/manifest.json": "d70a6c9df6a466e4b99d002e2322e129c1cce7570dd9edf2ea31dbb77246ab03"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "5d2de8e18f4c8f00eff75472077370465b52ea02cd0d3235d2b5a6da6ca049d3",
+  "independence": "One fresh context per packet. No writer history or shared memory.",
+  "metadata": {
+    "answer_type": "number",
+    "asks": "2",
+    "difficulty_target": "medium",
+    "documents": "D04, D05",
+    "id": "q01",
+    "levers": "Scatter the pieces; Calculate across documents",
+    "origin": "claude",
+    "revision": "0",
+    "status": "draft",
+    "tags": "Cross-document join; Temporal alignment; Aggregation"
+  },
+  "question_id": "q01",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "+10.4% and -8.6%",
+    "blind solve": "",
+    "components": "- c1: +10.4%\n- c2: -8.6%",
+    "evidence": "- D05 (L1793, Chart 5 title) [c1]: \"Durable and nondurable goods employment in the Midwest region of the United States, seasonally adjusted, 1990–2019 (in thousands)\"\n- D05 (L2767, Mar 2010 row) [c1]: \"2,265.8 1,318.5\"\n- D05 (L2763, Feb 2010 row; L2759 Jan 2010 prints the same nondurable value) [c1]: \"2,259.7 1,319.3\"\n- D05 (L3235, Dec 2019 row) [c1]: \"2,674.5 1,456.0\"\n- D05 (L1467, all-manufacturing sentence; decoy) [c1]: \"Postrecession manufacturing employment bottomed out in February 2010 at 3.5 million.\"\n- D05 (L3253, nondurable recovery framed from June 2009; decoy) [c1]: \"recovered 125,000 between June 2009 and December 2019\"\n- D04 (L15, Chart 1 title) [c2]: \"Employment in rail transportation, January 1980–December 2020, seasonally adjusted (in thousands)\"\n- D04 (L1467-L1469, Mar 2010 label and value on separate lines) [c2]: \"Mar 2010 178.8\"\n- D04 (L3274, Chart 5 Dec 2019 row: employment, carloads) [c2]: \"163.4 1,034.3\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: chart turning point read against prose framing, then a cross-document calculation; target medium. Author-side tier estimate (question-author A, 2026-10-06): Easy most likely (too easy about 35%, Easy about 50%, Medium about 10-15%). Measured platform result pending.\n- Dependency plan: D05 Chart 5 nondurable column (360 monthly rows, Jan 1990-Dec 2019) gives the minimum month and both nondurable levels; D04 Chart 1 gives rail levels for Mar 2010 and Dec 2019 (D04 Chart 5 repeats Dec 2019; no other document has rail data, and D04 Charts 2-5 start in 2016/2018). Two subtractions, two divisions.\n- Universe: the nondurable series' five lowest months are Mar 2010 1,318.5; Jan 2010 and Feb 2010 1,319.3; Dec 2009 1,320.6; Nov 2009 1,322.1 (script over all 360 rows). Unique minimum.\n- Necessity: without D05 no Midwest nondurable series exists anywhere in the bundle (D01-D04, D06, D07 searched: \"nondurable\" occurs only in D05); a guessed June 2009 start gives -10.2%. Without D04 no rail employment level exists elsewhere; memory of CES rail levels would have to fix 178.8 and 163.4 to the tenth. Removal probe pending.\n- Selected-lever checks (start month -> nondurable change, rail change): Mar 2010 (gold) +10.4, -8.6; Feb 2010 (all-manufacturing \"bottomed out\" sentence) +10.4, -8.3; Jan 2010 (tie) +10.4, -8.2; Dec 2009 (all-manufacturing data minimum) +10.3, -8.6; Nov 2009 +10.1, -8.5; Jul 2009 (durable minimum) +9.9, -10.2; Jun 2009 (prose recovery base; prose \"9.3-percent\") +9.4, -10.2; Apr 2010 +10.1, -8.9. Only Mar 2010 gives the pair.\n- Calculation verification: Decimal script, values parsed from text/D04.txt and text/D05.txt: 137.5 / 1,318.5 = 10.4285%; -15.4 / 178.8 = -8.6130%. Percent change = (end - start) / start; signs as asked; one decimal, half-up.\n- Semantic/ID/overview probes: no passage names the nondurable low or March 2010 (author A searched all texts for March 2010, 1,318, lowest/low/bottom/trough/peak). Capture overview for Doc 4 lists only all-manufacturing headline figures; Doc 5's lists the 40,000 loss. Strongest surviving route: scan the nondurable column for its minimum.\n- Precision/readings: each input has one printed value (Chart 1 and Chart 5 rail values agree for Dec 2019). Chart 1 total vs Chart 5 component sums differ in D05, but the question uses the nondurable column only.\n- Completeness: every document lacks only its pre-date header and a 34-character tail (markers at text line 3 and the last line); the cited charts and prose are in the captured body. Source assessment pending.\n- Style/set review: plain wording; exact series names; two parallel asks with order stated.\n- Warnings answered: pending floor run. Platform risk: the Mar 2010 rail value prints as a bare \"178.8\" line; the quote spans the month label and the value across lines and may need re-copying with the platform's Save passage.",
+    "question": "Measured from the month in which seasonally adjusted Midwest nondurable goods manufacturing employment reached its lowest level of January 1990 to December 2019, what were the percentage changes to December 2019 in that employment and in seasonally adjusted U.S. rail transportation employment, in that order? Give each to one decimal place with its sign.",
+    "reasoning": "1. Doc 4 (chart of Midwest durable and nondurable goods employment, seasonally adjusted, in thousands, 1990 to 2019): the nondurable goods column reaches its lowest value, 1,318.5, in Mar 2010. Jan 2010 and Feb 2010 both show 1,319.3, and Dec 2019 shows 1,456.0.\n2. Doc 4: 1,456.0 - 1,318.5 = 137.5 thousand.\n3. Doc 4: 137.5 / 1,318.5 = +10.4% (one decimal place).\n4. Doc 5 (chart of employment in rail transportation, seasonally adjusted, in thousands): Mar 2010 is 178.8 and Dec 2019 is 163.4.\n5. Doc 5: 163.4 - 178.8 = -15.4 thousand.\n6. Doc 5: -15.4 / 178.8 = -8.6% (one decimal place).\n7. Doc 4's sentence that manufacturing \"bottomed out in February 2010\" describes all manufacturing, and its nondurable goods passage measures the recovery from June 2009, the business-cycle trough. Neither is the month of the nondurable series' own lowest value.",
+    "review": "",
+    "shortcut audit": "",
+    "source assessment": ""
+  },
+  "source_gaps": [
+    "docs/mlr_alternative_measurements_of_indian_country_htm.txt: incomplete capture (unlocated omitted range; only 62,971 of 63,978 characters could be captured.)",
+    "docs/mlr_assessing_consumer_expenditure_surveys_data_quality_through_.txt: incomplete capture (unlocated omitted range; only 60,870 of 62,392 characters could be captured.)",
+    "docs/mlr_business_employment_dynamics_by_wage_class_htm.txt: incomplete capture (unlocated omitted range; only 54,388 of 55,874 characters could be captured.)",
+    "docs/mlr_employment_in_rail_transportation_heads_downhill_between_nov.txt: incomplete capture (unlocated omitted range; only 44,130 of 45,134 characters could be captured.)",
+    "docs/mlr_exploring_midwest_manufacturing_employment_from_1990_to_2019.txt: incomplete capture (unlocated omitted range; only 47,471 of 48,913 characters could be captured.)",
+    "docs/mlr_mapping_employment_projections_and_onet_data_htm.txt: incomplete capture (unlocated omitted range; only 55,363 of 56,707 characters could be captured.)",
+    "docs/mlr_nonstandard_work_schedules_in_29_european_countries_2005_15_.txt: incomplete capture (unlocated omitted range; only 44,248 of 47,368 characters could be captured.)"
+  ],
+  "source_gaps_sha256": "12d3693f715b9d8fe4dcbc277bc25392169d78d61fe13e3e37e20d3ec546c3c5",
+  "tested_sha256": "0f1cbdadd2b347606dde0b251eb6d7d1c858e966bf5305bbed89f2af83dbf148"
+}

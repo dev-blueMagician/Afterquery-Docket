@@ -1,0 +1,51 @@
+{
+  "bundle": "aq-01333",
+  "corpus_sha256": {
+    "docs/hewlett-packard-enterprise-company-q1-fy2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-03-09.txt": "377e7e2aa29e311fdd44c15b111cb635db38bc3d55c01959c2ac25c46f053fa9",
+    "docs/hewlett-packard-enterprise-company-q2-fy2025-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2025-06-03.txt": "dfbc76fb25d0393d6626e30e93b429991a5b8e1a7b7095aa708c09edfe96b518",
+    "docs/hewlett-packard-enterprise-company-q2-fy2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-06-01.txt": "052956c7223ae2bfce5b7dc0b3c3b8e9e07628c49e50efb7d1d8077812d90e0e",
+    "docs/hewlett-packard-enterprise-company-q3-fy2025-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2025-09-03.txt": "34b66a6a21a6daac9fc5830dc12849833ae163a5b8d6b929dbf88591e45ca036",
+    "docs/hewlett-packard-enterprise-company-q3-fy2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-09-02.txt": "c083ef59b32abd4cbae7c5284f88e328b21d6583cdf34f9f32a1e1f841324fdc",
+    "docs/hewlett-packard-enterprise-company-q4-fy2025-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2025-12-04.txt": "9a6f88516ad0c5274a353b66b4232405edf8d344e50a06be65181d0b94991aaf",
+    "text/D01.txt": "0941f71457a6ae635c532d38611b1674f9e8df443ad0e0e0aedb028bf3671147",
+    "text/D02.txt": "534835219f0e905d8c12ca9b76ecb48cc84a36e3e7eff8f23ae3800b9fd49edc",
+    "text/D03.txt": "937974a4a8aa3374263adb455f80f21ef3ebf63db7900ba0c98ad26bd125d1d8",
+    "text/D04.txt": "b2be7b4b38d827d7501ec49df259dfe252a68ad19e03c0925fdcbcaa3415f071",
+    "text/D05.txt": "79b591ed679c1f427f2ed72a93f6692096d64e29b3813f52cfd72caf619f3069",
+    "text/D06.txt": "a81289c86e28640daa1fb1ebdf7f44566c305543c17eb1e182379bf3c53f2bb3",
+    "text/manifest.json": "4dc8eaabf5fa0d46991d399171a3a248d4bd9eaa69838feb3b9709ad32de4e44"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "4a80832316cf591b07f5b0df6b1ed7a65950a179f9d12f309b8607706dd7e161",
+  "independence": "One fresh context per packet. No writer history or shared memory.",
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D01, D05",
+    "id": "q02",
+    "levers": "Same series, right edition; State the rounding",
+    "origin": "claude",
+    "revision": "0",
+    "status": "draft",
+    "tags": "Cross-document join; Temporal alignment; Aggregation"
+  },
+  "question_id": "q02",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "24.39%",
+    "blind solve": "",
+    "components": "- c1: 24.39%",
+    "evidence": "- D01 (l.45, first quarter fiscal 2026 segment results; Doc 4) [c1]: \"with 23.7% operating profit margin, compared to 29.7% from the prior-year period\"\n- D01 (l.415, segment note 5; Doc 4) [c1]: \"transferring the Telco and Instant On businesses to Corporate Investments and Other from Networking\"\n- D01 (l.415, segment note 5; Doc 4) [c1]: \"The Company reflected these changes to its segment information retrospectively.\"\n- D02 (l.516, segment operating margin table, January 31, 2025 column is the second; Doc 1; not marked) [c1]: \"Intelligent Edge 23.6% 27.4% 21.8%\"\n- D05 (l.464, nine-month segment net revenue, July 31, 2025 column second; Doc 6) [c1]: \"Networking $8,289 $3,814\"\n- D05 (l.469, nine-month segment earnings before taxes; Doc 6) [c1]: \"Networking 1,858 956\"\n- D01 (l.326, segment net revenue, October 31, 2025 column second; Doc 4) [c1]: \"Networking $2,706 $2,722 $1,076\"\n- D01 (l.331, segment earnings before taxes; Doc 4) [c1]: \"Networking $640 $638 $320\"\n- D06 (l.539, fiscal year segment operating margin; Doc 3; decoy) [c1]: \"Networking(6) 23.3% 24.6% (1.3)\"",
+    "feedback log": "",
+    "lever checks": "- Platform document numbers: D01 = Doc 4 (Q1 FY26), D02 = Doc 1 (Q2 FY25), D03 = Doc 5 (Q2 FY26), D04 = Doc 2 (Q3 FY25), D05 = Doc 6 (Q3 FY26), D06 = Doc 3 (Q4 FY25). Reasoning uses platform numbers.\n- Family and target: recast carve-out with a printed same-label decoy (the trial-02 q01 shape the user asked for), target medium; measured platform result pending. The premise names the comparison, not the recast. The solver has to work out that the 29.7% is on the new structure, then rebuild fiscal 2025 from recast rows. Doc 3's printed 23.3% for the same label and year sits in the natural lookup path.\n- Dependency plan: recast note (D01 l.415) -> 9M FY25 recast Networking 3,814 / 956 (D05 l.464/469) + Q4 FY25 recast 2,722 / 638 (D01 l.326/331) -> 1,594 / 6,536 = 24.388%. Equivalent quarterly route: Q1 1,076/320 (D01), Q2 1,084/271 (D03 l.434/439), Q3 1,654/365 (D05 l.438/443), Q4 2,722/638 (D01). The sums match D05's 9M totals.\n- Universe: recast fiscal 2025 quarters exist only as prior-period columns: Q1 (D01), Q2 (D03, also six months in D03), Q3 and 9M (D05), Q4 (D01). No release prints a recast fiscal 2025 full-year column.\n- Necessity: D01 is the only source of recast Q4 FY25 (2,722 / 638). Without it a solver must use D06's original Q4 (2,812 / 648), giving 24.21%, or estimate the moved businesses, giving about 24.52%. D05 is the only source of recast Q3 FY25 (1,654 / 365) and the 9M totals. Without it the original Q3 (D04 1,730 / 360) gives 24.03%, and estimating Q3 from other quarters' deltas gives 24.29-24.37%. None equals 24.39 at two decimals. D03 adds only Q2 FY25 recast, which is derivable (D05 9M minus D01 Q1 minus D05 Q3), so it is not marked. D02 is quoted only to show the basis change (27.4% vs 29.7%).\n- Selected-lever checks: Same series, right edition: the printed old-structure 23.3% (D06), the 9M recast 25.07% (D05 prints 25.1%) and mixed-structure builds (24.21%, 24.03%) all differ. State the rounding: revenue-weighting the printed one-decimal quarterly margins gives 24.37%. An equal-weight average of the four quarterly margins gives 25.05%. Only the exact rows give 24.39%. At one decimal 24.4% would also coincide with D06's printed Q4 FY24 margin \"24.4%\" (l.528) and with one removal estimate, so two decimals are asked.\n- Calculation verification (Python fractions, 2026-10-06): 1,594 / 6,536 = 0.243880... -> 24.39%, 0.003 above the 24.385 boundary. Every route on exact rows (9M + Q4, or four quarters) gives 1,594 / 6,536. Decoy 1,596 / 6,850 = 23.299%.\n- Semantic/ID/overview probes (2026-10-06): \"24.39\", \"1,594\" and \"6,536\" do not occur in the bundle. \"24.4%\" occurs only as Q4 FY24 (D06 l.528). The capture overview prints no segment margins or recast comparatives.\n- Precision/readings: \"the same segment structure\" means the structure behind the quoted 29.7% (D01 l.374), which is the fiscal 2026 composition. Reading \"structure\" as a margin basis still points to Networking segment earnings before taxes over segment revenue, the same measure. The old-structure 23.3% is not on the quoted structure.\n- Closed-book sketch screen (2026-10-06, fresh question-only run): \"about 26%\", low confidence. It recalled the original FY25 margin band (22-24%) but no recast figures.\n- Completeness: intake.json records no gaps, and the map covers every line.\n- Style/set review: one ask, 43 words. It quotes HPE's two printed margins as premise only. Sibling q01 uses the same documents for different facts.\n- Warnings answered: pipe-table inputs: the recast rows exist only in pipe tables. Quotes use the platform's space-separated form, and the form's verbatim check on such quotes is unconfirmed (flag at hand-over). D02 and D06 are quoted but not listed (basis evidence and decoy only). points-or-percent: the ask is a margin level for one year, not a comparison between two rates, so percentage points do not apply. The 29.7%/23.7% premise is HPE's own printed comparison. origin claude: see q01. The export tool accepts only origin user, and the form's \"I wrote this question myself.\" cannot be ticked truthfully for this content.",
+    "question": "HPE says its Networking segment's operating profit margin fell from 29.7% in fiscal Q1 2025 to 23.7% a year later. On that same segment structure, what was Networking's operating profit margin for fiscal 2025 as a whole, to two decimal places?",
+    "reasoning": "Step 1. Doc 4: Networking had \"23.7% operating profit margin, compared to 29.7% from the prior-year period\". Its segment note explains the structure behind that comparison: from fiscal 2026 HPE moved \"the Telco and Instant On businesses to Corporate Investments and Other from Networking\" and reflected the change in its segment information retrospectively.\nStep 2. Doc 1: under the former structure the same quarter (three months ended January 31, 2025) showed an Intelligent Edge margin of 27.4%, so the comparison in Step 1 uses the new structure.\nStep 3. Doc 6: on the new structure, Networking for the nine months ended July 31, 2025 had net revenue of 3,814 and earnings before taxes of 956 (dollars in millions).\nStep 4. Doc 4: on the new structure, Networking for the three months ended October 31, 2025 had net revenue of 2,722 and earnings before taxes of 638.\nStep 5. Doc 4 and Doc 6: fiscal 2025 net revenue = 3,814 + 2,722 = 6,536.\nStep 6. Doc 4 and Doc 6: fiscal 2025 earnings before taxes = 956 + 638 = 1,594.\nStep 7. Doc 4 and Doc 6: operating profit margin = 1,594 / 6,536 = 24.39% (to two decimal places).\nDecoy (Doc 3): the fiscal 2025 Networking margin printed for the year ended October 31, 2025 is 23.3%. That figure is for the pre-2026 segment, which still included Telco and Instant On: 1,596 / 6,850 = 23.30%.",
+    "review": "",
+    "shortcut audit": ""
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "d81d8a8bde585c940921457b74bcc02c86c6cb9a04aad6771b94b83d134cc68f"
+}

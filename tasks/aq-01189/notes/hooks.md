@@ -1,0 +1,22 @@
+# aq-01189 - cross-document hooks
+
+Find facts that combine into a world answer before drafting wording. Record sources/locations,
+input quantities and units/periods, the relationship, a possible ask and one or two selected levers.
+Target: medium (user, 2026-10-05). Local ids: D01 = Doc 3 (BHP 9M to Mar-26, 22 Apr 2026),
+D02 = Doc 4 (BHP FY26, 17 Jul 2026), D03 = Doc 1 (FCX 1Q26, 23 Apr 2026), D04 = Doc 2 (FCX 2Q26,
+23 Jul 2026). Lines are text/Dnn.txt line numbers.
+
+| Hook | Source inputs and locations | World fact/possible ask | Selected lever(s) | Applicable decoy/counterfactual | Source risks | Decision |
+| --- | --- | --- | --- | --- | --- | --- |
+| h1 | D04 L921 "In May 2026, FCX increased its ownership interest in Cerro Verde from 55.08% to 55.66%" (also L457/L511 footnotes; D03 prints only 55.08%, L197/L429/L451). April outlook D03 L227 SA sales "approximate 1.05 billion pounds for the year 2026", L231 SA unit net cash cost "$2.60 per pound"; July outlook D04 L221 "1.0 billion pounds", L225 "$2.56". H1 2026 SA actuals D04 SA table (L196-214): sales 493, unit net cash cost $2.43. | Outlook in force when the stake rose (April edition) combined with an H1 actual from the 2Q release: share of projected SA sales sold in H1 (493/1,050) or H1 unit cost vs estimate (2.60-2.43). | Same series, right edition; Calculate across documents | Decoy: the 2Q release's own July outlook, issued after the May event, same label (493/1,000 = 49.3%; 2.56-2.43 = 0.13). | D04 reprints only the April quarterly estimates (L112/116/120/130), not full-year ones. Calibrated mechanism: aq-00964 q01 Medium, aq-00745 q09 High. | investigate (caller) |
+| h2 | D04 L243 "In June 2026, PTFI submitted its application for extension of its IUPK"; April PTFI credits $1.30, gold $4,500 (D03 L312); July $1.22, $4,000 (D04 L306). | PTFI estimate in force at the IUPK application. | Same series, right edition | July values as decoy. | Credits are negative costs (sign wording); IUPK also discussed in D03 (planned). | hold (sibling of h1) |
+| h3 | D04 L359 new $3.0 billion revolver "In May 2026"; April OCF $8.7B (D03 L332), July $8.3B (D04 L322); H1 OCF $3,543M (D04 summary table L56). | OCF estimate in force at the refinancing vs H1 actual. | Same series, right edition | July $8.3B decoy. | Weak topical link; sibling of h1. | hold |
+| h4 | D02 L172 Faraday private placement "completed in March 2026" (D02 only); D01 FY26 guidance Previous (HY26) vs Current (L77-90, L176-183); D02 FY26 actuals and FY26e (L77-90). | BHP guidance in force at a March event vs FY26 actual. | Same series, right edition | D01 Current / D02 FY26e decoy. | HY26 announcement date not stated in the bundle (D01 L93/L186 only say "since the HY26 Results Announcement"), so "in force in March" is an assumption; contrived link. | weak |
+| h5 | BHP H2 FY26 realised copper US$6.21/lb (D02 L216) vs FCX six-month 2026 realized $6.04 (D04 L95). | Jan-Jun 2026 realized copper price gap across companies (fiscal vs calendar alignment). | Calculate across documents | Wrong period (BHP FY26 5.74, Q4 6.53). | Labelled-cell lookups: measured too-easy profile (trial-07 q05, trial-02 q01). | weak |
+| h6 | Carajás completion "2 April 2026" (D01 L123; D02 L95 footnote); D01 dated 22 April 2026 (L17, L525) with FY26 production guidance Previous/Current (L77-90; prose L102-138, e.g. L107 Spence "from between 230 and 250 kt previously"); D02 FY26 actuals and FY26e (= D01 Current) L80-92; non-operated list D01 L480 / D02 L943. | Assets whose FY26 production fell outside the guidance in force on the completion day (pre-update ranges), BHP-operated only. | Same series, right edition; Match, then exclude | Decoy editions D01 Current / D02 FY26e -> {NSWEC}; skipping the exclusion -> {Spence, Antamina, Samarco, NSWEC}. | HY26 date absent; reading relies on "from ... previously" in the 22 April release. | promoted as i02 |
+| h7 | BHP quarterly copper (D01 L250; D02 L313), FCX six-month production (D04 L89). | Calendar-half decline gap across companies (percentages avoid lb/t conversion). | Calculate across documents | Fiscal-year route 17.7; quarter route 13.7. | Lookup-only path; pipe-cell inputs. | hold |
+
+The map is navigation; quotes come from originals/extracted sources. A short valid calculation
+or ID join is eligible. Prior failures suggest tests/priority, not a universal veto.
+No pound/tonne conversion is printed in any document (checked), so kt vs lb comparisons need outside
+knowledge and are excluded.

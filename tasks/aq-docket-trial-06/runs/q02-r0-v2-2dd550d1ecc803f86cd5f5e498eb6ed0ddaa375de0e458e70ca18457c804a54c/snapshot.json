@@ -1,0 +1,53 @@
+{
+  "bundle": "aq-docket-trial-06",
+  "corpus_sha256": {
+    "docs/gaoreports_gao_01_819t.txt": "2fdd710bb5ce5d602f16f35488c8520fa975b4555bcef36bbbb5aef6d95f4eee",
+    "docs/gaoreports_gao_03_971.txt": "c74f3d3bf26e3a961f24e9d59804a983a463ca158d67c39443102f7469688218",
+    "docs/gaoreports_gao_04_412t.txt": "24d0d6110fcf04fb77b1fc1cdc05753656ddbd29867dca7141c655937997e805",
+    "docs/gaoreports_gao_04_684.txt": "4cae7a5f514c7fc1b4e9a978d214cf6de93f9d0fa45355c99f21aef86d0494f4",
+    "docs/gaoreports_gao_06_387.txt": "1d1356d51f4021fb696ed73dd36ea56f5dd39c007fe3dcf23f37f49554f35367",
+    "docs/gaoreports_gao_08_148r.txt": "e13289736b8c1804cc8725cd4a31d79835a0ace5572d31d666e1968d7d424362",
+    "text/D01.txt": "0ae6cbc3566b773248aa227e790efca5dd0cd70795fc97dfca359ac2298d970b",
+    "text/D02.txt": "74498301210b26f7245f1ceacaeda955e6e9bf0953d285b3461f600a13ee812d",
+    "text/D03.txt": "d3f1d0643a60db255adab0cf86c5fe938fbdf916519326af34ba9c007254ae85",
+    "text/D04.txt": "9224117ceae1c8bc77f92045d07d48a1349296e82e63f11beddf43902f0c5bee",
+    "text/D05.txt": "cedf4150f56402a20f5eb4d02ff77b0e9b2354f7176a7727ae5357d1b33ee6cc",
+    "text/D06.txt": "aa94576896d50c6d6b655a3ff990f674fa912d7575560387e9facbca5c78b8f7",
+    "text/manifest.json": "f8c116dc078e1ae035f1c6b028478e652a051da32fb4d15dedb00d666ba15e9c"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "f9ea284b9315832cdb0f12381aa9054ded3fb31251e0304bc3f8bf451001a920",
+  "independence": "One fresh context per packet. No writer history or shared memory.",
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D02, D05",
+    "id": "q02",
+    "levers": "Scatter the pieces; Calculate across documents",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i06",
+    "status": "draft",
+    "tags": "Cross-document join; Entity resolution; Aggregation"
+  },
+  "question_id": "q02",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "9.8%",
+    "blind solve": "",
+    "components": "- c1: 9.8%",
+    "evidence": "- D05 (Appendix VI, Table 4, Idaho row, text line 819) [c1]: \"The Idaho Department of Finance is\"\n- D05 (Appendix VI, Table 4, Idaho row, text line 821) [c1]: \"on total assets and $100 per branch office\"\n- D02 (Table 3, text line 467) [c1]: \"Idaho 20 7 5 71\"\n- D02 (footnote 8, text line 239) [c1]: \"we identified two uninsured credit unions, one was located in Idaho and the other was located in New Hampshire\"\n- D02 (Appendix I, text line 1179) [c1]: \"As of December 2002, 214 state- chartered credit unions lacked federal deposit insurance, and all but two were privately insured\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: a percentage whose numerator and denominator both need a footnoted remainder (the two uninsured credit unions) inside D02, for a state identified only by a regulator-funding detail in D05. Target medium; measured platform result pending.\n- Dependency plan: D05 819-821 identify Idaho (the only \"$100 per branch office\" in the bundle; grep \"per branch\" hits only D05 821); D02 467 gives Idaho's 20 privately insured credit unions (Table 3; its rows sum to 212); D02 fn 8 (239) puts one uninsured credit union in Idaho; D02 1179 gives the national 214 lacking federal insurance; (20 + 1) / 214 = 9.813% -> 9.8%.\n- Universe: credit unions without federal deposit insurance at December 2002 = 212 privately insured in eight states (D02 1207: Alabama, California, Idaho, Illinois, Indiana, Maryland, Nevada, Ohio; Table 3) + 2 uninsured (Idaho, New Hampshire) = 214 (D02 1179). Idaho = 20 + 1 = 21.\n- Necessity (local ids = platform Doc numbers): without D05 nothing identifies the state (no other document mentions branch fees or state bank regulators' assessment structures); without D02 nothing counts credit unions. Removal probes pending.\n- Selected-lever checks: 20 / 212 = 9.434% -> 9.4% (privately insured only, the report's own scope at D02 155-157); 20 / 214 = 9.346% -> 9.3%; 21 / 212 = 9.906% -> 9.9%; 21 / 213 = 9.859% -> 9.9% (New Hampshire left out). Each differs from 9.8%.\n- Calculation verification: python: 21 / 214 = 0.098131 -> 9.813% -> 9.8%; Table 3 rows 3 + 22 + 20 + 40 + 21 + 5 + 8 + 93 = 212; 212 + 2 = 214 matches D02 1179. Not near a rounding boundary (9.81).\n- Semantic/ID/overview probes: no document prints 21 for Idaho, 9.8% or 9.81%; the bundle overview for Doc 2 and Doc 5 mentions neither Idaho, uninsured credit unions nor branch fees. A search of D02 for \"Idaho\" reaches footnote 8 among its first hits (main too-easy risk).\n- Precision/readings: one decimal stated; the counts are exact integers. D05 Table 4's columns are interleaved in the text, but the Idaho block (817-821) is contiguous and readable.\n- Completeness: capture complete. D02 Figure 1 shading is missing, but Table 3 gives the same per-state counts. D05 Appendix VI footnote bodies are absent; the Table 4 Idaho text is in the body.\n- Style/set review: one ask, 40 words. Shares q01's deciding fact (the two uninsured credit unions) and document pair; only one of q01/q02 can be the trial's single submission.\n- Warnings answered: origin claude (export restriction reported at hand-over). Step 3 cites two documents because the numerator and denominator come from D02 and the state from D05.",
+    "question": "At the end of 2002, what percentage of all U.S. credit unions without federal deposit insurance were located in the state whose bank regulator adds a $100 charge per branch office to its asset-based assessment? Answer to one decimal place.",
+    "reasoning": "1. Doc 5: among the state bank regulators GAO describes, only the Idaho Department of Finance has an assessment structure that \"includes a graduated base fee and excess fee based on total assets and $100 per branch office\", so the state is Idaho.\n2. Doc 2: as of December 2002, 214 state-chartered credit unions lacked federal deposit insurance, and all but two were privately insured; the two uninsured ones were located in Idaho and New Hampshire. Idaho had 20 privately insured credit unions, so Idaho had 20 + 1 = 21 credit unions without federal deposit insurance.\n3. Doc 2 and Doc 5: 21 / 214 = 9.8% (to one decimal place).\n4. Wrong routes: using only the privately insured credit unions (Idaho's privately insured count over the national privately insured total), or adding the uninsured credit union to only one side of the fraction, gives a different value at one decimal place.",
+    "review": "",
+    "shortcut audit": "",
+    "source assessment": ""
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "2dd550d1ecc803f86cd5f5e498eb6ed0ddaa375de0e458e70ca18457c804a54c"
+}

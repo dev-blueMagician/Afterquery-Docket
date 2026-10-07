@@ -1,0 +1,876 @@
+Characterizations of independence between order statistics and rank indicators
+
+Roberto Vila 1 and Frederico Almeida ∗1
+
+1Department of Statistics, University of Bras´ılia, 70910-900, Bras´ılia, Brazil August 7, 2026
+
+Abstract
+
+We study the independence between an order statistic and its corresponding rank indicator for independent nonnegative random variables. A general characterization is established through a probability measure obtained by reweighting the distribution of a single observation according to its conditional probability of occupying a prescribed rank. This framework yields explicit expressions for the associated weighting functions and conditional distributions, as well as distribution-free measures of departure from independence based on Kolmogorov and Wasserstein distances. Special attention is devoted to the minimum and maximum order statistics, leading to new characterizations of independent right- and left-censoring under both single and multiple censoring mechanisms. We also establish sufficient conditions based on proportional hazards and proportional reversed hazards models and derive complete characterizations in the classical single-censoring setting. Discrete and continuous examples, together with numerical illustrations, are presented to demonstrate the applicability of the proposed methodology.
+
+Keywords. Order statistics; Rank indicators; Independent censoring; Right censoring; Left censoring; Proportional hazards; Proportional reversed hazards; Monte Carlo simulation; R software.
+
+Mathematics Subject Classification (2020). 60E05, 60E15, 62N01, 62G30, 62E10.
+
+1 Introduction
+
+The study of independence between order statistics and the mechanisms that determine their ranks plays a central role in probability theory and survival analysis (Arnold et al., 2008; David and Nagaraja, 2003; Balakrishnan and Rao, 1998). In many applications, the quantity of interest is an order statistic, such as the minimum or the maximum of a collection of random variables, together with an indicator identifying the observation responsible for that value. Understanding when these two quantities are independent provides valuable insight into the probabilistic structure of the underlying model and leads to tractable analytical representations.
+
+∗Corresponding author: frederico.almeida@unb.br rovig161@gmail.com
+
+1 arXiv:2608.05428v1 [math.ST] 5 Aug 2026
+
+From a probabilistic perspective, this problem can be interpreted as a particular instance of the more general question of determining when an order statistic is independent of the indicator identifying the observation responsible for that order (David and Nagaraja, 2003; Arnold et al., 2008). For right-censoring, this corresponds to the minimum order statistic, whereas left-censoring is naturally associated with the maximum order statistic.
+
+In survival analysis, it is commonly assumed that the observed time Z and the event indicator δ are independent, where Z = min {Y, C} (for right-censoring) or Z = max {Y, C} (for left-censoring), and δ = 1{Y ⩽C} (or δ = 1{Y ⩾C}). Here, Y and C denote the failure and censoring times, respectively. This assumption, often referred to as independent (or non-informative) censoring, plays a fundamental role in survival analysis: it greatly simplifies the estimation of survival functions and enables valid, unbiased statistical inference under both right- and left-censoring mechanisms (Kaplan and Meier, 1958; Cox, 1972; Aalen, 1978; Fleming and Harrington, 1991; Cox, 1975; Kalbfleisch and Prentice, 2002; Klein and Moeschberger, 2006).
+
+Although independence between the observed time Z and the event indicator δ is not a strict requirement in classical survival analysis theory, its presence is a probabilistic property of considerable interest. When this condition holds, the joint distribution of (Z, δ) simplifies substantially, leading to more tractable analytical expressions, more elegant theoretical developments, and potentially more efficient inferential procedures. Moreover, independence ensures that the distribution of observed times is the same for individuals who experience the event of interest and for those who are censored, eliminating any influence of the event indicator on the distribution of Z. These features make the independence between Z and δ relevant from both theoretical and methodological perspectives, motivating the study of conditions under which this property can be guaranteed (Cox, 1975; Kalbfleisch and Prentice, 2002; Klein and Moeschberger, 2006). Several important classes of models have been proposed to study these conditions, among which proportional hazards and proportional reversed hazards models occupy a particularly prominent position (Cox, 1972; Gupta and Gupta, 1998).
+
+Despite its importance, the independence between Z and δ is not always straightforward, especially in complex probabilistic models or scenarios where various datagenerating mechanisms affect their dependence structure. In this context, identifying the distributions and parameter configurations under which Z and δ are independent, as well as developing rigorous metrics to quantify deviations from this property, represents a significant contribution to the theory of survival analysis. Therefore, it is essential to devise tools that enable a quantitative assessment of the degree of independence. Such investigations yield deeper insights into how the censoring mechanism influences the distribution of observed survival times.
+
+The main contributions of this work are as follows. First, we establish a general characterization of the independence between an order statistic and its corresponding rank indicator through a probability measure obtained by reweighting the distribution of a single observation according to its conditional probability of occupying a prescribed rank. Second, we derive explicit expressions for the associated weighting functions, conditional distributions, survival functions, and density functions. Third, we specialize the general framework to multiple right- and left-censoring schemes, obtaining necessary and sufficient conditions for independence. Fourth, we establish broad sufficient conditions based on proportional hazards and proportional reversed hazards models, together with complete characterizations in the classical single-censoring setting. Finally, we intro2
+
+duce distribution-free measures based on Kolmogorov and Wasserstein distances, complemented by graphical tools and numerical illustrations that quantify departures from independence. Such distances have become standard tools for comparing probability distributions and measuring discrepancies between stochastic models (Shorack and Wellner, 1986; Villani, 2009).
+
+The remainder of this paper is organized as follows. Section 2 introduces the general probabilistic framework and establishes the main characterization result. Sections 3 and 4 apply this framework to multiple right- and left-censoring mechanisms, respectively, deriving measures of departure from independence and characterizations based on proportional hazards and proportional reversed hazards models. Section 5 provides numerical illustrations, and Section 6 concludes the paper.
+
+2 A general characterization
+
+This section develops the general framework underlying the paper. We introduce a probability measure obtained by reweighting the distribution of one observation according to its conditional probability of occupying a prescribed rank and characterize the independence between an order statistic and its corresponding rank indicator in terms of this measure.
+
+Explicit expressions for the associated weighting function and the survival function of the order statistic are also derived.
+
+Theorem 1. Let X1, . . . , Xm be independent nonnegative random variables, let Z = Xk:m, 1 ⩽ k ⩽ m, be the k-th order statistic and, for i = 1, . . . , m, define the rank indicator, indicating whether Xi = Xk:m, by δi = 1 nP j̸=i 1{Xj<Xi}<k⩽1+Pj̸=i 1{Xj⩽Xi}
+
+o.
+
+Furthermore, let
+
+Wk,i(x) = P(δi = 1 | Xi = x), assume that E[Wk,i(Xi)] > 0, and define the probability measure P ∗ k,i(A) = E
+
+Wk,i(Xi)1{Xi∈A}
+
+E[Wk,i(Xi)] , A ∈ B(R+), with survival function S
+
+∗ k,i(z) = 1−P ∗ k,i((−∞, z]), where B(R+) denotes the Borel σ-algebra on R+ = [0,∞). We have
+
+S
+
+∗ k,i(z) = Sk:m(z), z ⩾ 0, if and only if Z and δi are independent.
+
+Proof. For every Borel set A ∈ B(R+), the definition of conditional expectation gives E
+
+Wk,i(Xi)1{Xi∈A}
+
+= E
+
+E[δi| Xi]1{Xi∈A}
+
+= E
+
+δi1{Xi∈A}
+
+= P(Xi ∈ A, δi = 1).
+
+3
+
+Likewise, taking A = R+, E[Wk,i(Xi)] = E[δi
+
+] = P(δi = 1). Since E[Wk,i(Xi)] > 0, it follows that P ∗ k,i(A) = P(Xi ∈ A, δi = 1)
+
+P(δi = 1) = P(Xi ∈ A | δi = 1).
+
+Now, on the event {δi = 1}, the random variable Xi occupies the k-th position among X1, . . . , Xm. Hence, Xi = Z on {δi = 1}, and therefore P(Xi ∈ A, δi = 1) = P(Z ∈ A, δi = 1). Consequently,
+
+P
+
+∗ k,i(A) = P(Z ∈ A | δi = 1), showing that P
+
+∗ k,i is precisely the conditional distribution of Z given δi = 1. In particular, S
+
+∗ k,i(z) = P(Z > z | δi = 1), z ⩾ 0.
+
+Suppose first that S
+
+∗ k,i(z) = Sk:m(z), z ⩾ 0. Since Sk:m(z) = SZ(z), we obtain P(Z > z | δi = 1) = SZ(z), z ⩾ 0.
+
+Because the class of half-lines {(z,∞) : z ⩾ 0} is a π-system generating B(R+), the uniqueness theorem for probability measures implies that P(Z ∈ A | δi = 1) = P(Z ∈ A), A ∈ B(R+). Therefore,
+
+P(Z ∈ A, δi = 1) = P(Z ∈ A)P(δi = 1), A ∈ B(R+).
+
+Since δiis Bernoulli,
+
+P(Z ∈ A, δi = 0) = P(Z ∈ A) − P(Z ∈ A, δi = 1) = P(Z ∈ A)P(δi = 0), which proves that Z and δi are independent.
+
+Conversely, suppose that Z and δi are independent. Then, for every Borel set A, P(Z ∈ A | δi = 1) = P(Z ∈ A).
+
+Using the identity P
+
+∗ k,i(A) = P(Z ∈ A | δi = 1), proved above, we conclude that P
+
+∗ k,i(A) = P(Z ∈ A), A ∈ B(R+).
+
+Hence the two probability measures coincide, and therefore their survival functions satisfy S
+
+∗ k,i(z) = Sk:m(z), z ⩾ 0. This completes the proof. ■
+
+2.1 Explicit expressions
+
+In this subsection, we derive explicit expressions for the weighting functions introduced in Theorem 1, together with corresponding representations for the survival function of the kth order statistic. Particular attention is devoted to the minimum and maximum order statistics, which play a central role in the right- and left-censoring models studied in the subsequent sections.
+
+Proposition 2.1. Let X1, . . . , Xm be independent nonnegative random variables. Then, for every i = 1, . . . , m, Wk,i(x) and Sk:m(z) given in Theorem 1 can be expressed as Wk,i(x) = X
+
+L,E⊆{1,...,m}\{i}
+
+L∩E=∅
+
+|L|<k⩽|L|+|E|+1
+
+Y j∈L
+
+1 − Sj (x
+
+−)
+
+Y j∈E
+
+Sj (x −) − Sj (x) Y ℓ /∈L∪E∪{i} Sℓ(x), x ⩾ 0, 4
+
+and Sk:m(z) = Xm r=m−k+1 X B⊂{1,...,m} |B|=r Y i∈B Si(z)
+
+Y j /∈B
+
+1 − Sj (z)
+
+, z ⩾ 0, where Sj (x
+
+−) = limy↑x Sj (y) = P(Xj ⩾ x).
+
+Proof. Condition on Xi = x and define the random sets L = {j ̸= i : Xj < x}, E = {j ̸= i : Xj = x}. Then L and E are disjoint random subsets of {1, . . . , m} \ {i}. Moreover,
+
+```text
+since |L| observations are strictly smaller than x and |E| + 1 observations (including Xi)
+are equal to x, the value x occupies the consecutive positions |L| + 1, . . . , |L| + |E| + 1 in
+the ordered sample. Hence, δi = 1 if and only if |L| < k ⩽ |L| + |E| + 1.
+```
+
+Therefore, {δi = 1} = [
+
+A,B⊆{1,...,m}\{i}
+
+A∩B=∅
+
+|A|<k⩽|A|+|B|+1
+
+{L = A, E = B}, where the union is disjoint. Moreover, {L = A, E = B} =
+
+\ j∈A {Xj < x} ∩ \ j∈B {Xj = x} ∩ \ ℓ /∈A∪B∪{i} {Xℓ > x}.
+
+The first identity now follows immediately from the independence of X1, . . . , Xm and the equalities P(Xj < x) = 1 − Sj (x
+
+−), P(Xj = x) = Sj (x−) − Sj (x), P(Xj > x) = Sj (x).
+
+The second identity follows immediately from the independence of X1, . . . , Xm and the disjoint decomposition
+
+{Xk:m > z} = [m r=m−k+1 [ B⊆{1,...,m} |B|=r   \ i∈B {Xi > z} ∩ \ j /∈B {Xj ⩽ z}   .
+
+This completes the proof. ■
+
+Proposition 2.2. Let X1, . . . , Xm be independent nonnegative random variables. Then, for i = 1, . . . , m,
+
+W1,i(x) = Y j̸=i Sj (x
+
+−), Wm,i(x) = Y j̸=i
+
+1 − Sj (x)
+
+, x ⩾ 0.
+
+Moreover, S1:m(z) = Ym i=1
+
+Si(z), Sm:m(z) = 1 −
+
+Ym i=1
+
+1 − Si(z)
+
+, z ⩾ 0.
+
+Proof. For k = 1, the condition |L| < 1 ⩽ |L| + |E| + 1 is equivalent to L = ∅. Hence,
+
+W1,i(x) = X
+
+E⊆{1,...,m}\{i}
+
+Y j∈E
+
+Sj (x −) − Sj (x) Y ℓ /∈E∪{i} Sℓ(x).
+
+Applying the distributive law,
+
+W1,i(x) = Y j̸=i
+
+Sj (x) + Sj (x
+
+−) − Sj (x)
+
+= Y j̸=i Sj (x −).
+
+5
+
+Similarly, for k = m, |L| < m ⩽ |L|+|E|+ 1 is equivalent to L∪E = {1, . . . , m} \ {i},
+
+yielding
+
+Wm,i(x) = X
+
+L⊆{1,...,m}\{i}
+
+Y j∈L
+
+1 − Sj (x
+
+−)
+
+Y ℓ /∈L∪{i}
+
+Sℓ(x
+
+−) − Sℓ(x)
+
+.
+
+Again, by the distributive law,
+
+Wm,i(x) = Y j̸=i
+
+1 − Sj (x
+
+−) + Sj (x−) − Sj (x)
+
+= Y j̸=i
+
+1 − Sj (x)
+
+.
+
+The expressions for S1:m and Sm:m follow immediately from Proposition 2.1. ■
+
+3 Right-censoring models
+
+We now specialize the general framework developed in the previous section to rightcensoring mechanisms. In this setting, the observed time corresponds to the minimum order statistic, while the rank indicator identifies the observation responsible for the minimum value. This formulation leads naturally to necessary and sufficient conditions for independence, sufficient conditions based on proportional hazards models, and distributionfree measures of departure from independent censoring.
+
+3.1 Multiple censoring
+
+By setting X1 = Y , Xi = Ci−1 for i = 2, . . . , m, and taking i = 1 in Theorem 1, we obtain a specialization of the general framework to multiple right-censoring models. The following corollary provides a necessary and sufficient condition for the independence between the observed minimum and the associated censoring indicator. An illustrative discrete example is presented at the end of this subsection.
+
+Corollary 3.1. Let Y, C1, . . . , Cm−1 be independent nonnegative random variables, and define
+
+Z = min{Y, C1, . . . , Cm−1}, and δ = 1{Y ⩽Cj , j=1,...,m−1}.
+
+Let P
+
+∗ be the probability measure on R+ defined by P ∗ (A) = E hQm−1 j=1 SCj (Y −)1{Y ∈A} i E hQm−1 j=1 SCj (Y −)
+
+i , A ∈ B(R+), and let S ∗ (z) = 1 − P ∗ ((−∞, z]) denote its survival function. We have S ∗ (z) = SY (z) mY−1 j=1 SCj(z), z ⩾ 0, if and only if Z and δ are independent.
+
+Proof. The proof follows by combining Proposition 2.2 with Theorem 1. ■ 6
+
+Example 3.1 (Multiple geometric censoring). Let Y, C1, . . . , Cm−1 be independent geometric random variables on {0, 1, 2, . . .} with parameters pY , p1, . . . , pm−1, respectively.
+
+Their survival functions are
+
+SY (k) = q k+1 Y , SCj (k) = q k+1 j , where qY = 1 − pY and qj = 1 − pj .
+
+By Corollary 3.1,
+
+P ∗ ({k}) ∝ pY q k Y mY−1 j=1 q k j = pY θ k , θ = qY mY−1 j=1 qj, so that P ∗ ({k}) = (1 − θ)θ k
+
+, k = 0, 1, . . . , that is, Y remains geometrically distributed under P ∗
+
+. Consequently,
+
+S ∗ (k) = θ k+1 = SY (k) mY−1 j=1 SCj (k), which is precisely the condition of Corollary 3.1. Therefore, Z = min{Y, C1, . . . , Cm−1} is independent of δ = 1{Y ⩽Cj , j=1,...,m−1}, or equivalently,
+
+P(δ = 1 | Z = k) = P(δ = 1), k = 0, 1, . . . .
+
+3.2 Proportional hazards models
+
+The characterization obtained for right-censoring is now applied to identify broad classes of continuous distributions for which the observed time and the censoring indicator are automatically independent. This is achieved under the proportional hazards assumption, leading to a simple and easily verifiable sufficient condition that encompasses several classical lifetime models.
+
+Theorem 2 (Proportional hazards). Let Y, C1, . . . , Cm−1 be independent absolutely continuous nonnegative random variables, and define Z = min{Y, C1, . . . , Cm−1}, δ = 1{Y ⩽Cj , j=1,...,m−1}.
+
+Assume that, for each j = 1, . . . , m − 1, hCj(t) = αjhY (t), t ⩾ 0, where h denotes the hazard rate and αj > 0.
+
+Then Z and δ are independent.
+
+7
+
+Proof. Since hCj
+
+(t) = αjhY (t), we have SCj
+
+(t) = SY (t) αj
+
+, j = 1, . . . , m − 1. Hence mY−1 j=1 SCj (t) = SY (t) α , α = mX−1 j=1 αj.
+
+Therefore, f ∗
+
+(t) = hY (t)SY (t)
+
+1+α
+
+E[SY (Y )
+
+α]
+
+.
+
+Moreover,
+
+E[SY (Y )
+
+α ] = Z ∞ 0 hY (t)SY (t) 1+α dt = Z 1 0 u α du = 1 1 + α , where we used the change of variable u = SY (t). Thus, f
+
+∗
+
+(t) = (1 + α)hY (t)SY (t)
+
+1+α = − d dt SY (t)
+
+1+α , which implies S ∗ (t) = SY (t) 1+α = SY (t) mY−1 j=1 SCj (t) = SZ(t).
+
+The result follows from Corollary 3.1. ■ Theorem 2 applies to any family of absolutely continuous distributions that is closed under proportional hazards. Table 1 lists several common examples. In each case, if Y and C1, . . . , Cm−1 belong to the same family and share the common shape (or baseline) parameters indicated in the last column, then hCj(t) = αjhY (t), αj > 0, where αjis simply the ratio of the corresponding scale (or rate) parameters.
+
+Table 1: Continuous families satisfying the assumptions of Theorem 2.
+
+Family Survival function S(t) Hazard rate h(t) Common parameters Exponential exp(−λt) λ None
+
+Weibull exp(−λtβ) λβtβ−1 Shape parameter β Rayleigh exp(−λt2) 2λt None
+
+Gompertz exp− λ γ (eγt − 1)λe γt Shape parameter γ
+
+Lomax (Pareto II) (1 + t/σ)
+
+−κ κ σ + t
+
+Scale parameter σ
+
+Burr XII (1 + t c
+
+)
+
+−k kctc−1 1 + t c
+
+Shape parameter c
+
+General Cox PH model exp{−θH0(t)} θh0(t) Baseline hazard h0 Remark 1. For every family in Table 1, let Y have parameter θY and Cj have parameter θj , while sharing the common parameters listed in the last column. Then hCj
+
+(t) = αjhY (t), αj = θj θY , so that the assumptions of Theorem 2 are satisfied. For example, αj = λj/λY for the exponential, Weibull, Rayleigh and Gompertz families, αj = κj/κY for the Lomax family, and αj = kj/kY for the Burr XII family.
+
+8
+
+The following proposition provides a complete characterization of the independence between the observed time Z and the censoring indicator δ in the classical right-censoring model. It shows that this independence is equivalent to the proportional hazards assumption, thereby establishing a direct probabilistic characterization of proportional hazards.
+
+Proposition 3.1 (Characterization by proportional hazards). Let Y and C be independent absolutely continuous nonnegative random variables, and define Z = min{Y, C}, δ = 1{Y ⩽C}.
+
+Then Z and δ are independent if and only if there exists a constant α > 0 such that hC(t) = αhY (t), t ⩾ 0.
+
+Proof. The sufficiency follows immediately from Theorem 2.
+
+Conversely, suppose that Z and δ are independent. By Corollary 3.1, S
+
+∗
+
+(t) = SY (t)SC(t), t ⩾ 0, where S ∗ (t) = R ∞ t
+
+SC(x)fY (x)dx/R ∞
+
+0
+
+SC(x)fY (x)dx. Differentiating both sides yields SC(t)fY (t)
+
+E[SC(Y )] = SC(t)fY (t) + SY (t)fC(t).
+
+Dividing by SY (t)SC(t) gives hC(t) = αhY (t), where α = {1/E[SC(Y )]} − 1 > 0 is constant. This completes the proof. ■ 3.3 Measures of departure from independent right-censoring Corollary 3.1 naturally gives rise to distribution-free measures of departure from independent right-censoring. These are defined, respectively, as the Kolmogorov and normalized Wasserstein distances between the conditional distribution induced by P ∗ and the unconditional distribution of the observed minimum. Specifically, Kd = sup z⩾0
+
+Z ∞ z mY−1 j=1 SCj(y −) dFY (y)
+
+Z ∞ 0 mY−1 j=1 SCj(y −) dFY (y)
+
+− SY (z)
+
+mY−1 j=1 SCj(z)
+
+and W∗ d = Z ∞ 0
+
+Z ∞ z mY−1 j=1 SCj(y −) dFY (y)
+
+Z ∞ 0 mY−1 j=1 SCj(y −) dFY (y)
+
+− SY (z)
+
+mY−1 j=1 SCj(z)
+
+dz max    Z ∞ 0 y mY−1 j=1 SCj (y −) dFY (y)
+
+Z ∞ 0 mY−1 j=1 SCj (y −) dFY (y)
+
+, Z ∞ 0 SY (z)
+
+mY−1 j=1 SCj (z) dz    .
+
+9
+
+Both measures satisfy 0 ⩽ Kd, W∗ d ⩽ 1, and Kd = 0 =⇒ W∗d = 0, which, by Corollary 3.1, is equivalent to independent right-censoring. Thus, Kd measures the largest discrepancy between the conditional survival function under P ∗ and the survival function of the observed minimum, whereas W∗ d quantifies the overall departure through the corresponding normalized Wasserstein distance of order one.
+
+4 Left-censoring models
+
+We next consider the dual problem associated with left-censoring mechanisms. In contrast to the previous section, the observed time is defined through the maximum order statistic, and the rank indicator identifies the observation attaining the largest value. Building on the general results established in Section 2, we derive characterizations of independence, establish sufficient conditions based on proportional reversed hazards models, and introduce corresponding measures of departure from independence.
+
+4.1 Multiple censoring
+
+By considering the maximum order statistic and setting X1 = Y , Xi = Ci−1 for i = 2, . . . , m, and i = 1 in Theorem 1, we obtain the corresponding characterization for multiple left-censoring models. The following corollary provides a necessary and sufficient condition for the independence between the observed maximum and the associated censoring indicator. An illustrative example is presented at the end of this subsection.
+
+Corollary 4.1. Let Y, C1, . . . , Cm−1 be independent nonnegative random variables, and define
+
+Z = max{Y, C1, . . . , Cm−1}, and δ = 1{Y ⩾Cj , j=1,...,m−1}.
+
+Let P
+
+∗ be the probability measure on R+ defined by P ∗ (A) = E hQm−1 j=1 1 − SCj(Y )
+
+1{Y ∈A} i E hQm−1 j=1 1 − SCj(Y )
+
+i , A ∈ B(R+), and let S ∗ (z) = 1 − P ∗ ((−∞, z]) denote its survival function.
+
+We have S ∗ (z) = 1 −
+
+1 − SY (z)
+
+mY−1 j=1
+
+1 − SCj(z)
+
+, z ⩾ 0, if and only if Z and δ are independent.
+
+Example 4.1 (Multiple left-censoring under a discrete proportional reversed hazards family). Let F0 be the distribution function of a nonnegative integer-valued random variable, and define Fθ(k) = F0(k) θ
+
+, k ∈ N0, θ > 0.
+
+Suppose that Y ∼ FθY and Cj ∼ Fθj
+
+, j = 1, . . . , m − 1, are mutually independent. Then FY (k)
+
+mY−1 j=1 FCj (k) = F0(k) θY + Pm−1 j=1 θj .
+
+10
+
+Moreover, under the probability measure P ∗ of Corollary 4.1,
+
+F ∗ (k) = F0(k) θY + Pm−1 j=1 θj , so that S ∗
+
+(k) = 1 − FY (k) mY−1 j=1 FCj (k) = 1 −
+
+1 − SY (k)
+
+mY−1 j=1
+
+1 − SCj
+
+(k)
+
+.
+
+Hence, the assumptions of Corollary 4.1 are satisfied, implying that Z = max{Y, C1, . . . , Cm−1} is independent of δ = 1{Y ⩾Cj , j=1,...,m−1}, or equivalently,
+
+P(δ = 1 | Z = k) = P(δ = 1), k ∈ N0.
+
+4.2 Proportional reversed hazards models We next consider the dual setting based on proportional reversed hazards models. By combining the characterization for the maximum order statistic with the reversed hazards assumption, we obtain sufficient conditions ensuring independence in left-censoring models. The results parallel those established in the previous section and cover several familiar distribution families.
+
+Theorem 3 (Proportional reversed hazards). Let Y, C1, . . . , Cm−1 be independent absolutely continuous nonnegative random variables, and define Z = max{Y, C1, . . . , Cm−1}, δ = 1{Y ⩾Cj , j=1,...,m−1}.
+
+Assume that, for each j = 1, . . . , m − 1, rCj
+
+(t) = βjrY (t), t ⩾ 0, where r denotes the reversed hazard rate and βj > 0.
+
+Then Z and δ are independent.
+
+Proof. Since rCj(t) = βjrY (t), we have FCj(t) = FY (t) βj
+
+, j = 1, . . . , m − 1. Hence mY−1 j=1
+
+FCj(t) = FY (t) β , β = mX−1 j=1 βj.
+
+Therefore, f ∗
+
+(t) = rY (t)FY (t)
+
+1+β
+
+E[FY (Y )
+
+β]
+
+.
+
+Moreover,
+
+E[FY (Y )
+
+β ] = Z ∞ 0 rY (t)FY (t) 1+β dt = Z 1 0 u β du = 1 1 + β , where we used the change of variable u = FY (t). Thus, f
+
+∗
+
+(t) = (1 + β)rY (t)FY (t)
+
+1+β = d dt FY (t)
+
+1+β , 11
+
+which implies F ∗ (t) = FY (t) 1+β .
+
+Equivalently, S ∗
+
+(t) = 1 − FY (t)
+
+1+β = 1 − FY (t) mY−1 j=1 FCj (t) = SZ(t).
+
+The result follows from Corollary 4.1. ■ Theorem 3 applies to any family of absolutely continuous distributions that is closed under proportional reversed hazards. Table 2 lists several common examples. In each case, if Y and C1, . . . , Cm−1 belong to the same family and share the common shape (or baseline) parameters indicated in the last column, then rCj
+
+(t) = βjrY (t), βj > 0, where βjis the ratio of the corresponding exponent (or shape) parameters.
+
+Table 2: Continuous families satisfying the assumptions of Theorem 3.
+
+Family Distribution function F(t) Reversed hazard rate r(t) Common parameters Power t θ , 0 < t < 1 θ t Support (0, 1) Beta(θ, 1) t θ , 0 < t < 1 θ t Second shape parameter fixed at 1
+
+Pareto I 1 − σ t θ , t > σ θσ t(t − σ)
+
+Scale parameter σ
+
+Exponentiated Exponential 1 − e−λtθ θλe−λt
+
+1 − e−λt Rate parameter λ
+
+Exponentiated Weibull 1 − e−λtβ θ θλβtβ−1e−λtβ
+
+1 − e−λtβ Parameters λ, β
+
+Exponentiated Rayleigh 1 − e−λt2 θ 2θλte−λt2
+
+1 − e−λt2 Parameter λ
+
+General PRH model F0(t) θ θr0(t) Baseline reversed hazard r0 Remark 2. For every family in Table 2, let Y have parameter θY and let Cj have parameter θj , while sharing the common parameters listed in the last column. Then rCj(t) = βjrY (t), βj = θj θY , so that the assumptions of Theorem 3 are satisfied.
+
+In particular,
+
+FCj(t) = FY (t) βj
+
+, which follows from integrating the proportional reversed hazards model. Consequently, FZ(t) = FY (t) mY−1 j=1
+
+FCj(t) = FY (t)
+
+1+Pm−1 j=1 βj , where
+
+Z = max{Y, C1, . . . , Cm−1}, showing that the hypothesis of Theorem 3 holds for all the families listed in Table 2.
+
+12
+
+The following result is the dual counterpart of Proposition 3.1. It shows that, for m = 2, the independence between Z and δ is equivalent to the proportional reversed hazards assumption.
+
+Proposition 4.1 (Characterization by proportional reversed hazards). Let Y and C be independent absolutely continuous nonnegative random variables, and define Z = max{Y, C}, δ = 1{Y ⩾C}.
+
+Then Z and δ are independent if and only if there exists a constant β > 0 such that rC(t) = βrY (t), t ⩾ 0, where rY and rC denote the reversed hazard rate functions of Y and C, respectively.
+
+Proof. The sufficiency follows immediately from Theorem 3 with m = 2.
+
+Conversely, suppose that Z and δ are independent. Then P(Z ⩽ z, δ = 1) = FZ(z)P(δ = 1).
+
+Since P(Z ⩽ z, δ = 1) = R z
+
+0 fY (t)FC(t)dt and P(Z ⩽ z) = FY (z)FC(z), we obtain Z z
+
+0 fY (t)FC(t)dt = P(δ = 1)FY (z)FC(z).
+
+Differentiating both sides with respect to z yields fY (z)FC(z) = P(δ = 1)fY (z)FC(z) + fC(z)FY (z)
+
+.
+
+Dividing both sides by FY (z)FC(z) gives rC(z) = βrY (z), where β = [1 − P(δ = 1)]/P(δ = 1). This completes the proof. ■ 4.3 Measures of departure from independent left-censoring Corollary 4.1 also leads naturally to distribution-free measures that quantify the degree of departure from independent left-censoring. These measures are obtained by comparing the conditional distribution under P ∗ with the distribution of the observed maximum through the Kolmogorov and normalized Wasserstein distances. Specifically, Kd = sup z⩾0
+
+Z ∞ z mY−1 j=1
+
+1 − SCj(y)
+
+dFY (y)
+
+Z ∞ 0 mY−1 j=1
+
+1 − SCj(y)
+
+dFY (y)
+
+−
+
+"
+
+1 −
+
+1 − SY (z)
+
+mY−1 j=1
+
+1 − SCj(z)
+
+\#
+
+and W∗ d = Z ∞ 0
+
+Z ∞ z mY−1 j=1
+
+1 − SCj(y)
+
+dFY (y)
+
+Z ∞ 0 mY−1 j=1
+
+1 − SCj(y)
+
+dFY (y)
+
+−
+
+"
+
+1 −
+
+1 − SY (z)
+
+mY−1 j=1
+
+1 − SCj(z)
+
+\#
+
+dz max    Z ∞ 0 y mY−1 j=1
+
+1 − SCj
+
+(y)
+
+dFY (y)
+
+Z ∞ 0 mY−1 j=1
+
+1 − SCj
+
+(y)
+
+dFY (y)
+
+, Z ∞ 0 "
+
+1 −
+
+1 − SY (z)
+
+mY−1 j=1
+
+1 − SCj
+
+(z)
+
+\# dz    .
+
+13
+
+Both measures take values in the unit interval, 0 ⩽ Kd, W∗ d ⩽ 1, and satisfy Kd = 0 =⇒
+
+W∗ d = 0, which, by Corollary 4.1, characterizes independent left-censoring. Moreover, Kd captures the largest discrepancy between the conditional distribution under P ∗ and the distribution of the observed maximum, whereas W∗ d provides a global measure of this discrepancy through the normalized Wasserstein distance of order one.
+
+5 Numerical Illustration
+
+This section presents a numerical investigation of the theoretical results established throughout the paper. Using Monte Carlo simulations, we evaluate the proposed characterizations under several right- and left-censoring scenarios and examine the performance of the associated distance measures. The results provide additional insight into the conditions under which independence holds and highlight the fundamental differences between the probabilistic structures induced by the minimum and maximum operators.
+
+To illustrate the theoretical findings, this section presents a Monte Carlo (MC) simulation study assessing the proposed characterizations under different sampling scenarios.
+
+To this end, the independence between Z and δ can be characterized using the result established in Subsection 3.3.
+
+Without loss of generality, consider the case where m = 5, in which Yi denotes the failure time and Cij , for j ∈ {1, 2, 3, 4} and i ∈ {1, 2, · · · , n}, represent the censoring times. In addition, the failure and censoring times were generated from Weibull and Exponential distributions, such that Yi ∼ Weibull(α, ϕ), where α > 0 and ϕ > 0 are the shape and scale parameters, respectively. Let Cij ∼ exp(µj ), where µj > 0 is the rate parameter. The observed survival times and failure indicators are defined as follows:
+
+• For the right-censoring mechanism: Zi = min {Yi, Ci} and δi = 1{Yi⩽Ci}, where Ci = min {Ci1, Ci2, Ci3, Ci4} is the overall censoring time.
+
+• For the left-censoring mechanism: Zi = max {Yi, Ci} and δi = 1{Yi⩾Ci}, where Ci = max {Ci1, Ci2, Ci3, Ci4} is the overall censoring time.
+
+The means of these random variables are given by E[Yi] = ϕ −1Γ(1+ 1/α) and E[Cij ] =
+
+1/µj, respectively.
+
+The independence between Zi and δi was assessed by evaluating the proximity between
+
+the conditional survival curves SZi|δi=1(zi) and SZi|δi=0(zi) across R = 100 MC replications.
+
+To examine the effectiveness of the proposed methodology, six scenarios were considered, each characterized by different parameter values: α, ϕ, and µG = P4 j=1 µj . For each scenario, R datasets were generated, each with a fixed sample size of n = 1000. In addition, the following proximity measures were computed: (i) E[Zi
+
+|δi = κ], the conditional
+
+expectation, for κ ∈ {0, 1} and ∀i ∈ {1, 2, . . . , n}; (ii) Wd, the Wasserstein distance; (iii) W∗ d
+
+, the normalized Wasserstein distance; and (iv) Kd, the Kolmogorov distance. Additionally, the probability that an individual experiences the event of interest, P(δi = 1), was also reported. For these similarity measures, values close to zero indicate independence between the two variables. In other words, under this assumption, discrepancies between the conditional distributions (or survival functions) should be negligible, with the corresponding distance measures expected to be close to zero.
+
+The simulation results presented in Table 3 are highly consistent with the theoretical properties of independence between the variables Zi and δi. However, under the specified distributions, this independence is governed primarily by the type of censoring mechanism, 14
+
+the distribution of the failure time Yi , and, in particular, the value of the Weibull shape parameter α.
+
+Table 3: Monte Carlo simulation results for the main performance measures. Here, Wd, W∗ d
+
+, and Kd denote the Wasserstein distance, the normalized Wasserstein distance, and the Kolmogorov distance, respectively. P(δi = 1) represents the failure probability, and E [Zi| δi = κ] for κ = 0, 1 and i = 1, 2, . . . , n denotes the conditional expectation.
+
+Scenario Right-Censoring Case
+
+α ϕ µG E [Zi|δi = 1] E [Zi|δi = 0] P (δi = 1) Wd W∗
+
+d Kd
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | 1.0 | 0.10 | 0.10 | 5.000 | 5.000 | 0.500 | 0.000 | 0.000 | 0.000 |
+| 2 | 1.5 | 0.10 | 0.10 | 6.236 | 4.407 | 0.473 | 0.341 | 0.055 | 0.196 |
+| 3 | 0.5 | 0.10 | 0.10 | 2.918 | 6.495 | 0.546 | 2.682 | 0.413 | 0.325 |
+| 4 | 1.0 | 0.05 | 0.01 | 16.667 | 16.667 | 0.833 | 0.000 | 0.000 | 0.000 |
+| 5 | 0.5 | 0.05 | 0.05 | 5.836 | 12.991 | 0.546 | 2.586 | 0.199 | 0.325 |
+| 6 | 1.5 | 0.05 | 0.20 | 6.005 | 4.092 | 0.131 | 0.394 | 0.066 | 0.205 |
+
+Scenario Left-Censoring Case
+
+α ϕ µG E [Zi|δi = 1] E [Zi|δi = 0] P (δi = 1) Wd W∗
+
+d Kd
+
+|  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | 1.0 | 0.10 | 0.10 | 15.000 | 15.000 | 0.500 | 0.000 | 0.000 | 0.000 |
+| 2 | 1.5 | 0.10 | 0.10 | 11.531 | 16.236 | 0.527 | 30.594 | 1.884 | 0.192 |
+| 3 | 0.5 | 0.10 | 0.10 | 40.514 | 12.918 | 0.454 | 30.934 | 0.764 | 0.320 |
+| 4 | 1.0 | 0.05 | 0.01 | 36.667 | 116.667 | 0.167 | 346.532 | 2.970 | 0.464 |
+| 5 | 0.5 | 0.05 | 0.05 | 81.027 | 25.836 | 0.454 | 57.915 | 0.715 | 0.320 |
+| 6 | 1.5 | 0.05 | 0.20 | 19.877 | 11.005 | 0.869 | 32.643 | 1.642 | 0.360 |
+
+For the right-censoring model characterization, the results from Scenarios 1 and 4 (α = 1) where the Weibull distribution reduces to the exponential distribution and the censoring times follow a similar distribution, show that the conditional distributions of Zi given δi = 1 and δi = 0 coincide. This is demonstrated by the equality of the conditional
+
+expectations, that is, E[Zi|δi = 1] = E[Zi|δi = 0], ∀i ∈ {1, 2, . . . , n}, as well as by the
+
+Wasserstein and Kolmogorov distances both being zero. This behavior, which can be
+
+interpreted as a direct consequence of the memoryless property of the exponential distribution, is further illustrated by the conditional survival curves SZi|δi=1(zi) and SZi|δi=0(zi),
+
+which virtually coincide, as shown in Figure 1.
+
+The results further show that in Scenarios 2 and 6, where α = 1.5, the Weibull distribution exhibits an increasing hazard function. In this case, the conditional expectations satisfy E[Zi
+
+|δi = 1] > E[Zi|δi = 0], indicating that individuals who experience
+
+the event tend to have larger observed survival times, on average, than those who are censored. Consequently, the conditional survival functions diverge moderately, with the performance measures leading to values near zero. The maximum discrepancy between the conditional survival functions increases when the hazard rate exhibits a decreasing hazard rate, α = 0.5 (Scenarios 3 and 5). In this case, the opposite pattern emerges:
+
+E [Zi|δi = 1] < E [Zi|δi = 0], indicating that individuals who experience the event tend,
+
+on average, to have small observed times than those who are censored. These findings demonstrate that Zi and δi are no longer independent, especially when the hazard rate decreases over time, as evidenced by the results shown in Table 3 and panels 2, 3, 5, and
+
+6 of Figure 1.
+
+15
+
+Figure 1: Conditional survival functions under the right-censoring characterization are shown for six simulation scenarios. The blue and black curves represent SZ|δ=1(z) and SZ|δ=0(z), respectively. The shaded region highlights the discrepancy between these conditional survival curves.
+
+16
+
+Figure 2: Conditional survival functions under the left-censoring characterization are shown for six simulation scenarios. The blue and black curves represent SZ|d=1(z) and SZ|d=0(z), respectively. The shaded region highlights the discrepancy between these conditional survival curves.
+
+For the maximum characterization model, the criteria for independence between Zi and δi are particularly stringent. Although setting the Weibull shape parameter to (α = 1) is necessary, it is not sufficient. As shown in Table 3, independence is achieved only when the additional condition ϕ = µG (Scenario 1) is also satisfied. For example, although Scenario 4 fulfills the requirement of (α = 1), the fact that ϕ ̸= µG leads to
+
+```text
+unequal conditional means. In particular, E[Zi|δi = 1] < E[Zi|δi = 0], confirming that
+SZi|δi=1(zi) ̸= SZi|δi=0(zi) in average. As a result, all distance measures are strictly greater
+```
+
+than zero, with the Kolmogorov distance being the smallest among those considered.
+
+Unlike in the right-censoring case, the values of W∗ d were lower when the failure times Yi were generated from a Weibull distribution with a decreasing hazard rate, 0 < α < 1, than with an increasing hazard rate, α > 1. In contrast, the Kolmogorov distance displayed the opposite pattern. The pairs of scenarios (3, 5) yield identical Kolmogorov distance values, even though their conditional means differ substantially. These results indicate that variations in the scale parameter ϕ and the global censoring intensity µG have only a negligible impact on the values of Kd, further underscoring the robustness of this distance measure with respect to these parameters.
+
+Similarly, all conclusions drawn for the left-censoring case are consistent with the patterns observed in Figure 2.
+
+17
+
+5.1 Discussion of numerical results
+
+The results show that the Weibull shape parameter, α, is the primary factor governing the dependence between survival time Zi and event indicator δi. Specifically, for the distributions considered here, no combination of the scale parameters ϕ and µG can ensure independence when α ̸= 1. This conclusion follows directly from the distinct hazard structures of the failure and censoring mechanisms. Under the classical right-censoring framework, where the observed time is defined by the minimum operator, independence between Zi and δiis relatively easy to achieve. The necessary and sufficient condition is that both the failure times Yi and the censoring times Cj, j = 1, . . . , m − 1, are exponentially distributed. Notably, this condition imposes no restrictions on the associated rate parameters, indicating that independence holds across an entire family of exponential models, regardless of the specific values of ϕ and µG. Therefore, independence is a robust and naturally occurring property in conventional survival analysis.
+
+A major finding of this study is the contrast between the minimum and maximum operators. Unlike the minimum operator, the maximum operator in the left-censoring framework requires more than exponential failure and censoring distributions to achieve independence. Although exponentiality is necessary, it is not sufficient; independence occurs only when the failure and censoring times are independent and identically distributed, which, under the adopted parametrization, corresponds to ϕ = µG.
+
+These results demonstrate that achieving independence between the observed time and the event indicator is substantially easier with the minimum operator than with the maximum operator. While the classical survival analysis setting permits independence across a broad range of exponential parameterizations, the maximum construction exhibits this property only under highly restrictive conditions. This fundamental distinction provides a new probabilistic characterization of the two observation mechanisms and shows that the proposed Kolmogorov and Wasserstein distance measures effectively capture their distinct dependence structures.
+
+6 Concluding remarks
+
+This paper developed a general framework for characterizing the independence between an order statistic and its corresponding rank indicator. The proposed approach is based on a probability measure obtained by reweighting the distribution of a single observation according to its conditional probability of occupying a prescribed rank. This construction yields explicit expressions for the associated weighting functions and provides a unified characterization of independence in terms of the equality between conditional and unconditional distributions.
+
+Specializing the general framework to the minimum and maximum order statistics led to new characterizations of independent right- and left-censoring mechanisms, including both single and multiple censoring schemes. In addition, we established broad sufficient conditions based on proportional hazards and proportional reversed hazards models, together with complete characterizations in the classical single-censoring setting.
+
+The proposed Kolmogorov and Wasserstein distance measures further provide natural and distribution-free tools for quantifying departures from independence.
+
+The numerical results corroborate the theoretical findings and demonstrate that the dependence structure is fundamentally determined by the interaction between the failure and censoring mechanisms. Although both the minimum and maximum operators are 18
+
+constructed from the same underlying random variables, they exhibit markedly different probabilistic behaviors. In particular, independence is considerably easier to achieve in the right-censoring setting than in the left-censoring setting. Whereas the minimum operator requires only proportional hazards structures—and, in the classical case, exponential failure and censoring distributions—the maximum operator is governed by considerably more restrictive conditions.
+
+These findings reveal a fundamental distinction between the probabilistic structures associated with the minimum and maximum operators, which are governed, respectively, by the hazard and reversed hazard functions. More broadly, the results show that independence is not merely a consequence of the marginal distributions of the failure and censoring times, but rather a structural property determined by the way in which these variables interact to generate the observed data. In this sense, the proposed framework provides both a theoretical foundation and practical tools for investigating dependence structures in survival analysis.
+
+Finally, several directions for future research arise naturally from the present work.
+
+An immediate extension would be to investigate analogous characterizations under more general dependence structures, including models with dependent failure and censoring times, frailty models, and copula-based formulations. Another promising avenue would be to extend the proposed methodology to progressively censored samples, competing-risks models, recurrent-event data, and multistate processes. From an inferential perspective, the development of asymptotic theory, goodness-of-fit procedures, and hypothesis tests based on the proposed Kolmogorov and Wasserstein measures deserves further attention.
+
+More generally, the probabilistic framework introduced here may provide a useful foundation for studying independence properties involving other order statistics, rank indicators, and related stochastic processes.
+
+Declarations
+
+Ethics Approval Not applicable.
+
+Funding Declaration This study was financed in part by CAPES (Finance Code 001).
+
+Disclosure statement There are no conflicts of interest to disclose.
+
+Author Contributions Statement All authors contributed equally to the conception and design of the study, data analysis, interpretation of the results, manuscript preparation, and revision. All authors read and approved the final version of the manuscript.
+
+Data availability No data were used in this study.
+
+References
+
+Aalen, O. O. (1978). Nonparametric inference for a family of counting processes. The Annals of Statistics, 6(4):701–726.
+
+Arnold, B. C., Balakrishnan, N., and Nagaraja, H. N. (2008). A First Course in Order Statistics. SIAM, Philadelphia.
+
+19
+
+Balakrishnan, N. and Rao, C. R. (1998). Order Statistics: Theory and Methods. Elsevier, Amsterdam.
+
+Cox, D. R. (1972). Regression models and life-tables. Journal of the Royal Statistical Society: Series B, 34(2):187–220.
+
+Cox, D. R. (1975). Partial likelihood. Biometrika, 62(2):269–276.
+
+David, H. A. and Nagaraja, H. N. (2003). Order Statistics. John Wiley & Sons, New York, 3 edition.
+
+Fleming, T. R. and Harrington, D. P. (1991). Counting Processes and Survival Analysis.
+
+John Wiley & Sons, New York.
+
+Gupta, R. C. and Gupta, R. D. (1998). Proportional reversed hazard rate model and its applications. Journal of Statistical Planning and Inference, 71(1):197–211.
+
+Kalbfleisch, J. D. and Prentice, R. L. (2002). The Statistical Analysis of Failure Time Data. John Wiley & Sons.
+
+Kaplan, E. L. and Meier, P. (1958). Nonparametric estimation from incomplete observations. Journal of the American Statistical Association, 53(282):457–481.
+
+Klein, J. P. and Moeschberger, M. L. (2006). Survival analysis: techniques for censored and truncated data. Springer, New York, 2 edition.
+
+Shorack, G. R. and Wellner, J. A. (1986). Empirical Processes with Applications to Statistics. John Wiley & Sons, New York.
+
+Villani, C. (2009). Optimal Transport: Old and New. Springer, Berlin.
+
+20

@@ -1,0 +1,53 @@
+{
+  "bundle": "aq-01322",
+  "corpus_sha256": {
+    "docs/cencora-inc-q1-fy2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-02-04.txt": "832feeed42797c4670c66322d7658463fe9407b8687f21e184d2239c26f10b92",
+    "docs/cencora-inc-q2-fy2025-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2025-05-07.txt": "8685053b7be5d45f7e99ba71f6f7c9f81f6c4a682a3646c7c9c95b956ca6d476",
+    "docs/cencora-inc-q2-fy2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-05-06.txt": "62d39b726291524588f97abb090a3f11ef91b96325ee67c1fb9ac8a9e59df958",
+    "docs/cencora-inc-q3-fy2025-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2025-08-06.txt": "d5eef0ac16475fcda6929ac34ced68e7d6f2d0d1bdebe3a60ebde9f8d545436e",
+    "docs/cencora-inc-q3-fy2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-08-05.txt": "87700baa60d877061bb81c06228f636541e48954386a574b447d908266bbc4a0",
+    "docs/cencora-inc-q4-fy2025-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2025-11-05.txt": "4958de656680d279b02615cf21ba0ea9038bca622d7ce8c5ef0a54dd9908f376",
+    "text/D01.txt": "c88aaef0cbd36a330a14c9a93f36f5dc730edcde27c6b39a76b578394e53972e",
+    "text/D02.txt": "237cd33c21a80c45a31e0cff777eb20375159e0b2cc73bfc5df74eb12af8c838",
+    "text/D03.txt": "9b0766f830a85cfbe4f3c70613d6cf74403004e2f3155545fa70bb7abe1f26dd",
+    "text/D04.txt": "6f33e4e783bd9eabce3187589254ff8003dbf08717228da420d3d0a3e2fcc2ba",
+    "text/D05.txt": "f2ad3da5da4f5b24c6e3084a4937571809d7d49d7e7bdbe38837d31b5823a597",
+    "text/D06.txt": "7e04ac201199dc6cd4e984eb1a8f489f6befcb1723defe4e1634b0991d0039cf",
+    "text/manifest.json": "37134939e418cc433e0092d3239fccd26434e2049d65d18804e1eebdabb1f230"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "fa7168467cd33e2a3e1b161354ef8e6920a0895ddced1dca89e4d2586b2ce4b9",
+  "independence": "One fresh context per packet. No writer history or shared memory.",
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D01, D03",
+    "id": "q02",
+    "levers": "Scatter the pieces; Calculate across documents; State the rounding",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i05",
+    "status": "draft",
+    "tags": "Temporal alignment; Cross-document join; Aggregation"
+  },
+  "question_id": "q02",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "$1.16 billion",
+    "blind solve": "",
+    "components": "- c1: $1.16 billion",
+    "evidence": "- D03 (cash-flow footnote 1; l.639) [c1]: \"to finance a portion of the February 2, 2026 acquisition of OneOncology in the six months ended March 31, 2026\"\n- D03 (dateline; l.15) [c1]: \"fiscal year 2026 second quarter ended March 31, 2026\"\n- D03 (non-GAAP section, reconciliation lead-in) [c1]: \"Below is a reconciliation of operating cash flows to adjusted free cash flows for the six months ended March 31, 2026\"\n- D03 (reconciliation table; l.686) [c1]: \"|Adjusted free cash flows|$(1,280.2)M|\"\n- D01 (non-GAAP section, reconciliation lead-in) [c1]: \"Below is a reconciliation of operating cash flows to adjusted free cash flows for the three months ended December 31, 2025\"\n- D01 (reconciliation table; l.469) [c1]: \"|Adjusted free cash flows|$(2,436.7)M|\"",
+    "feedback log": "",
+    "lever checks": "- Platform document numbers: D01 = Doc 4, D03 = Doc 5 (full mapping in q01). Necessary documents on the form: Doc 4 and Doc 5.\n- Family and target: period identified by a fact plus a year-to-date de-cumulation; medium. Measured platform result: pending.\n- Dependency plan: D03 l.639 February 2, 2026 -> fiscal Q2 2026 (D03 l.15 \"second quarter ended March 31, 2026\") -> D03 l.686 six months $(1,280.2)M -> D01 l.469 Q1 $(2,436.7)M -> Q2 = -1,280.2 - (-2,436.7) = +1,156.5 million -> $1.16 billion.\n- Universe: not applicable (single value). Quarter mapping: fiscal 2026 runs October 1, 2025 to September 30, 2026; Q2 = January 1 to March 31, 2026.\n- Necessity: without D03 the date survives in D05 l.648, but no six-month figure: D05's nine months $1,142.3M less D01's Q1 gives Q2+Q3 = 3,579.0 (3.58). Without D01 no first-quarter adjusted free cash flow exists anywhere (D03 six months, D05 nine months only), and D03's comparative columns cover fiscal 2025. Each is indispensable.\n- Selected-lever checks (wrong routes at two decimals): D01's own Q1 -2.44 (the release whose headline \"Company Completes Acquisition of OneOncology\" gives no date); D03's six-month -1.28; Q2+Q3 3.58; sign error -1.16 (gold +1.16); unadjusted free cash flow (2,424.5 - 1,251.5 = 1,173.0) 1.17.\n- Calculation verification (author script calc1.py and components, 2026-10-06): Q2 operating cash flow -966,530 - (-2,305,169) = 1,338,639; capex 284,994 - 119,376 = 165,618; antitrust gains 28,690 - 12,152 = 16,538 (D03 footnote: $16.5 million in the quarter); 1,338,639 - 165,618 - 16,538 = 1,156,483 thousand.\n- Semantic/ID/overview probes (author): \"February 2, 2026\" only D03 l.639 and D05 l.648; \"February 2026 acquisition\" D03 prose (gross profit, expenses, interest) and D05; no document prints a three-month fiscal Q2 2026 adjusted free cash flow; the overview prints no cash-flow figure.\n- Precision/readings: stated figures for the inputs: printed totals (-1,280.2; -2,436.7), table thousands (-1,280,214; -2,436,697), rounded reconciliation components (-2,305.2 - 119.4 - 12.2 = -2,436.8). Results 1,156.5 / 1,156.483 / 1,156.6 all give 1.16 at two decimals; the nearest $1 million would split (1,156 vs 1,157), hence billions to two decimals.\n- Completeness: complete capture, no gaps.\n- Closed-book sketch screen (2026-10-06): \"unknown ... about $2.48 billion\" invented guess, low confidence: miss.\n- Form risk: both adjusted free cash flow totals sit only in reconciliation table rows (pipe rows); confirm the form's verbatim check with Save passage.\n- Warnings answered: \"origin\": origin claude is accurate; the export tool takes origin user only and the form's \"I wrote this question myself.\" cannot be ticked truthfully; the submission decision is the user's.",
+    "question": "What was Cencora's adjusted free cash flow in the fiscal quarter in which it completed its acquisition of OneOncology? Give billions of dollars to two decimal places.",
+    "reasoning": "Step 1. Doc 5: its cash-flow footnote refers to \"the February 2, 2026 acquisition of OneOncology\", which falls in Cencora's fiscal 2026 second quarter, the quarter ended March 31, 2026. Doc 5 reconciles adjusted free cash flow only for the six months ended March 31, 2026: adjusted free cash flows of $(1,280.2)M.\n\nStep 2. Doc 4: its reconciliation for the three months ended December 31, 2025, the fiscal first quarter, gives adjusted free cash flows of $(2,436.7)M.\n\nStep 3. Doc 4 and Doc 5: the second quarter is the six months less the first quarter. The six-month outflow is smaller than the first-quarter outflow, so the second quarter's adjusted free cash flow was 2,436.7 - 1,280.2 = 1,156.5 million dollars.\n\nStep 4. 1,156.5 million dollars = 1.16 billion dollars (two decimal places).\n\nDecoy: Doc 4, the release that first reports the completed acquisition, prints only the first quarter's $(2,436.7)M, and Doc 5 prints only the six-month $(1,280.2)M. Neither is the quarter's figure.",
+    "review": "",
+    "shortcut audit": "",
+    "source assessment": ""
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "bddecd6c0b1aae62a4d6cb061e3b6bc60abb6de574cfa83b68b92fa71e51b256"
+}

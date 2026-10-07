@@ -1,0 +1,53 @@
+{
+  "bundle": "aq-docket-trial-06",
+  "corpus_sha256": {
+    "docs/gaoreports_gao_01_819t.txt": "2fdd710bb5ce5d602f16f35488c8520fa975b4555bcef36bbbb5aef6d95f4eee",
+    "docs/gaoreports_gao_03_971.txt": "c74f3d3bf26e3a961f24e9d59804a983a463ca158d67c39443102f7469688218",
+    "docs/gaoreports_gao_04_412t.txt": "24d0d6110fcf04fb77b1fc1cdc05753656ddbd29867dca7141c655937997e805",
+    "docs/gaoreports_gao_04_684.txt": "4cae7a5f514c7fc1b4e9a978d214cf6de93f9d0fa45355c99f21aef86d0494f4",
+    "docs/gaoreports_gao_06_387.txt": "1d1356d51f4021fb696ed73dd36ea56f5dd39c007fe3dcf23f37f49554f35367",
+    "docs/gaoreports_gao_08_148r.txt": "e13289736b8c1804cc8725cd4a31d79835a0ace5572d31d666e1968d7d424362",
+    "text/D01.txt": "0ae6cbc3566b773248aa227e790efca5dd0cd70795fc97dfca359ac2298d970b",
+    "text/D02.txt": "74498301210b26f7245f1ceacaeda955e6e9bf0953d285b3461f600a13ee812d",
+    "text/D03.txt": "d3f1d0643a60db255adab0cf86c5fe938fbdf916519326af34ba9c007254ae85",
+    "text/D04.txt": "9224117ceae1c8bc77f92045d07d48a1349296e82e63f11beddf43902f0c5bee",
+    "text/D05.txt": "cedf4150f56402a20f5eb4d02ff77b0e9b2354f7176a7727ae5357d1b33ee6cc",
+    "text/D06.txt": "aa94576896d50c6d6b655a3ff990f674fa912d7575560387e9facbca5c78b8f7",
+    "text/manifest.json": "f8c116dc078e1ae035f1c6b028478e652a051da32fb4d15dedb00d666ba15e9c"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "74b733b252c32b15aefab62c79ee4ae84bf9eb08f8d2fab14fd794f7badfc5c3",
+  "independence": "One fresh context per packet. No writer history or shared memory.",
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D02, D05",
+    "id": "q04",
+    "levers": "Scatter the pieces; Calculate across documents",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i15",
+    "status": "draft",
+    "tags": "Cross-document join; Entity resolution; Aggregation"
+  },
+  "question_id": "q04",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "25.0%",
+    "blind solve": "",
+    "components": "- c1: 25.0%",
+    "evidence": "- D05 (Appendix VI, Table 4, Idaho row, text line 819) [c1]: \"The Idaho Department of Finance is\"\n- D05 (Appendix VI, Table 4, Idaho row, text line 821) [c1]: \"on total assets and $100 per branch office\"\n- D02 (Table 3 title, text line 459) [c1]: \"Table 3: Number and Percent of Web Sites Reviewed without Required Disclosures\"\n- D02 (Table 3 column heading, text line 461) [c1]: \"Total number of privately insured\"\n- D02 (Table 3, text line 467) [c1]: \"Idaho 20 7 5 71\"\n- D02 (Appendix I, text line 1215) [c1]: \"locate Web sites for all 212 privately insured credit unions; however, we were able to only identify 78 Web sites\"\n- D02 (text line 455) [c1]: \"39 of the 78 sites had not included language to notify consumers that the credit union was not federally insured\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: the shape of Trial 6 q02 and Trial 2 q01 (user, 2026-10-06): a state named only by its regulator's fee in Doc 5, and a share Doc 2 never prints, built from Table 3's counts; the same row prints a same-label percentage on a different base (Web sites analyzed). Target medium; measured platform result pending.\n- Dependency plan: D05 819-821 identify Idaho (the only \"$100 per branch office\" in the bundle); D02 Table 3 (459-469) gives Idaho 20 privately insured, 7 Web sites analyzed, 5 without disclosures; 5 / 20 = 25.0%.\n- Universe: Table 3's eight states (Alabama, California, Idaho, Illinois, Indiana, Maryland, Nevada, Ohio); per-credit-union shares 0.0, 13.6, 25.0, 20.0, 19.0, 40.0, 37.5, 15.1 (unique, so no entity coincidence); one Web site per credit union (D02 1213: \"the Web sites of 78 privately insured credit unions\").\n- Necessity (local ids = platform Doc numbers): without D05 nothing identifies the state (no other document mentions a per-branch charge); without D02 nothing gives Web-site results. Sketch probe without D05 (runs/sketch-round2/returns.md): \"not answerable\", forced guess 15.1% (Ohio), p about 0.1.\n- Selected-lever checks: printed 71% (5 / 7 = 71.4%, Web sites analyzed) differs; 5 / 21 = 23.8% (adding Idaho's uninsured credit union, which has no Web-site result) differs; 5 / 212 = 2.4% and 5 / 78 = 6.4% differ.\n- Calculation verification: python: 5 / 20 = 0.25 -> 25.0%; Table 3 columns sum to 212, 78 and 39.\n- Semantic/ID/overview probes: no document prints 25.0% for Idaho; the overview mentions neither Idaho, Web sites nor branch fees. Sketch blind solve (i15 wording, which ended \"as GAO found in 2003\"): 25.0% with 71.4% listed as a second reading; this wording opens with \"Of the privately insured credit unions in the state\" to fix the base.\n- Precision/readings: one decimal; integer counts. \"Found lacking\" attributes the result to GAO's review: 13 of Idaho's 20 credit unions had no Web site GAO could identify (D02 1215), so the share is of what the review found.\n- Completeness: capture complete. Table 3 is a flattened row whose column order is confirmed by its totals (212, 78, 39). D05 Table 4's columns are interleaved, but the Idaho block (817-821) is contiguous.\n- Style/set review: one ask, 46 words. Same bridge as the dropped q02; different deciding fact from q01/q03 (no remainder involved).\n- Warnings answered: origin claude (export restriction reported at hand-over). Step 3 cites both documents because the state comes from Doc 5 and the counts from Doc 2.",
+    "question": "Of the privately insured credit unions in the state whose bank regulator adds a $100 charge per branch office to its assessment, what percentage had a Web site that GAO's 2003 review found lacking the required notice that it had no federal deposit insurance? One decimal.",
+    "reasoning": "1. Doc 5: among the state bank regulators GAO describes, only the Idaho Department of Finance has an assessment structure that \"includes a graduated base fee and excess fee based on total assets and $100 per branch office\", so the state is Idaho.\n2. Doc 2: Table 3 lists, for each state, the total number of privately insured credit unions, the number of Web sites identified and analyzed, and the number and percent of those Web sites without the required disclosures. GAO looked for Web sites of all 212 privately insured credit unions and found 78. Idaho's row shows 20 privately insured credit unions, 7 Web sites analyzed and 5 Web sites without the disclosures.\n3. Doc 2 and Doc 5: 5 / 20 = 25.0% (to one decimal place) of Idaho's privately insured credit unions.\n4. Wrong route: the table's printed percentage is the share of Idaho's analyzed Web sites, not of its privately insured credit unions, so it answers a different question.",
+    "review": "",
+    "shortcut audit": "",
+    "source assessment": ""
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "ff615a1bd4cc8758d76076b05fa4f28089510d0572fff500a1c0107c8b8270a6"
+}

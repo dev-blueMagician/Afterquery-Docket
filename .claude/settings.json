@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(cat:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(head:*)",
+      "Bash(ls:*)",
+      "Bash(sed -n:*)",
+      "Bash(tail:*)",
+      "Bash(wc:*)",
+      "Bash(python -c:*)",
+      "Bash(python tools/extract_text.py:*)",
+      "Bash(python tools/check_questions.py:*)",
+      "Bash(python tools/test_docket_tools.py:*)"
+    ],
+    "deny": [
+      "Bash(rm -rf:*)"
+    ],
+    "ask": []
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/tools/check_questions.py\" --hook",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  },
+  "model": "claude-opus-5-5",
+  "alwaysThinkingEnabled": true,
+  "autoCompactEnabled": false,
+  "env": {
+    "DISABLE_AUTO_COMPACT": "1",
+    "CLAUDE_CODE_EFFORT_LEVEL": "max",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "claude-opus-5-5",
+    "CLAUDE_CODE_SUBAGENT_MODEL_FORCE": "1"
+  }
+}

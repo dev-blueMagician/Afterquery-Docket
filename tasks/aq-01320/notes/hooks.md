@@ -1,0 +1,39 @@
+# aq-01320 - cross-document hooks
+
+Find facts that combine into a world answer before drafting wording. Record sources/locations,
+input quantities and units/periods, the relationship, a possible ask and one or two selected levers.
+Explore forecast/actual, proposal/final dates, changed/conflicting tables, amendments, hedge scope,
+mentions/actions, entity/edition joins, ordered/late items, exclusions and ordinary cross-document
+calculations. Find more viable hooks than questions requested without inventing a quota.
+
+Caller hooks, round 1 (2026-10-06, origin: claude). Local ids; platform Doc N in brackets.
+Target medium. Only Darden has numeric outlook values that differ between editions; Wendy's two
+outlook editions are identical (D09 issue, D07 reaffirm, D08 withdraw), Chipotle's only changed
+item is qualitative (comps "about flat" -> "low single digit range"), and Yum gives no annual outlook.
+
+| Hook | Source inputs and locations | World fact/possible ask | Selected lever(s) | Applicable decoy/counterfactual | Source risks | Decision |
+| --- | --- | --- | --- | --- | --- | --- |
+| h1 | D04 [Doc 10] outlook table: reported diluted EPS cont. ops $10.62 to $10.82 (issued Dec 18 2025); D05 [Doc 11] same row $10.40 to $10.50 (issued Mar 19 2026, release reports Q3 ended Feb 22 2026); D06 [Doc 12] prose: FY2026 reported $10.44, FY ended May 31 2026 with a 14-week Q4 | Actual FY2026 reported EPS vs midpoint of the reported-EPS range in the outlook in force when fiscal Q4 began (Feb 23 2026, derived): 10.72 - 10.44 = $0.28 | Same series, right edition (untied event: quarter start, not tied to the update); calculate across documents | D05's own post-event outlook gives $0.01; adjusted ranges give +$0.04/+$0.02 or $0.16/$0.18 mixes; net EPS (10.38) gives $0.34 | Outlook EPS ranges sit only in pipe-table rows (form verbatim check unconfirmed); anchor dates printed in D05's first sentence may make the check cheap | sketch (lead Medium candidate) |
+| h2 | D04: "Approximately $0.20 related to the addition of the 53rd week"; D05: "Approximately $0.25"; D06: extra week "contributed $0.25" | 53rd-week EPS assumed in the outlook in force at Q4 start vs actual: $0.05 | Same series, right edition | D05 gives $0.00 | "Approximately" inputs (Coach flags approximations) | hold (h1 is cleaner) |
+| h3 | D12 [Doc 1] special-items tax table: intra-entity transfers (89) Q4/FY2025, note: Pizza Hut entity consolidation; D10 [Doc 2] (22) Q1 2026, note: reorganization "began in the fourth quarter of 2025"; D11 [Doc 3] table (79)/(101), note: benefits "$91 million and $113 million", plus "$12 million of tax expense" (Swiss IP) | Total tax benefit from the Pizza Hut legal-entity reorganization through June 30 2026: 89 + 113 = $202M | Scatter the pieces; footnoted remainder | Table route 190; Q2-only 180/168; adding the $359M planned-sale benefit 561; 2026-only 113 | Doc 1 says "single ownership structure", D10/D11 "two isolated" (same reorganization per "began in Q4 2025") | sketch (Easy-leaning) |
+| h4 | D12: Pizza Hut review special items 33 (Q4) / 41 (FY2025) = advisory 32/36 + write-offs 1/5; D11: 44 (Q2) / 81 (YTD 2026) | Special-items charges for the review from its start through the quarter of the sale agreements: 41 + 81 = $122M | Scatter the pieces | Q4-only 114; advisory-only 117 | Plain labelled sums | hold (lookup path) |
+| h5 | D01 [Doc 5]: legal proceedings in labor 11,875 (Q1 2026), adjusted RLOM definition; D02 [Doc 6]: six-month revenue and restaurant costs (no six-month RLOM printed) | H1 2026 restaurant level operating margin excluding the Q1 legal accrual: 24.47% (24.5% at one decimal) | Calculate across documents; method applied to an unreported period | Unadjusted 24.29%; simple average 24.44%; rounded-input weighting 24.48% | Two decimals splits exact vs rounded-input routes; one decimal is safe | sketch (Easy-type, aq-00998 q05 shape) |
+| h6 | D01 and D02 three-month adjusted net income reconciliations (D02 has no six-month reconciliation) | H1 2026 vs H1 2025 adjusted net income change: -13.2% | Calculate across documents | GAAP six-month change -14.1% (D02 alone) | Labelled sums | hold (too-easy profile) |
+| h7 | D03 [Doc 4]/D01: comps guidance "about flat"; D02: "low single digit range", $1.3B authorization June 11 2026 | Comps guidance in force at the June 11 authorization | Edition | D02's raised guidance | D03 and D01 duplicate the value, so neither is individually necessary; qualitative answer | drop |
+| h8 | D09 [Doc 7] outlook = D07 [Doc 8] reaffirmed outlook; D08 [Doc 9] withdrawn | Outlook in force at Q2 end | Edition | "withdrawn" | Duplicate editions break necessity | drop |
+| h9 | D12 KFC market mix (FY2025): China 27, US 13, Europe 12, Asia 11; D10/D11 "Reflects Full Year 2025": 26, 12, 13, 12 | Restated mix | Same series, right edition | n/a | Naming the restatement is no trap; using a share gives two defensible answers | drop |
+| h10 | D05: cash $240.4 vs balance-sheet comparative 5/25/2025 $240.0 and reconciliation comparative 2/23/2025 $224.2 (platform's idea frame) | Year-over-year cash change | Same-label value | $0.4 vs $16.2 | Single document | drop |
+| h11 | D02: income taxes paid H1 $82,670K incl. $93,000K energy credits; D01: Q1 net refund $(55,146)K | Q2 2026 taxes paid excluding credits | Footnoted remainder | several sign routes | When the credits were bought is not stated | drop (premise risk) |
+| h12 | D12 FY2025 + D11 H1 2025/2026 division tables | TTM Pizza Hut share of divisional profit | TTM build | n/a | Routine transformation (measured too easy) | drop |
+
+Independent question-author round 1 (2026-10-06, origin: claude, fresh agent, target medium) reached the
+same bundle verdict: only Darden's outlook editions support a fair Medium mechanism. Its additional hooks:
+
+| Hook | Source inputs and locations | World fact/possible ask | Selected lever(s) | Applicable decoy/counterfactual | Source risks | Decision |
+| --- | --- | --- | --- | --- | --- | --- |
+| h1b | D04 l.88 "An effective tax rate of approximately 13%"; D05 l.88 "approximately 12.5%"; D06 l.261-262 FY2026 EBT 1,388.6 and tax 174.9; D06 l.117 FY2027 "approximately 13.5%" | Actual FY2026 ETR (12.595%, not printed) minus the rate in the outlook in force at the Q4 start: -0.4 pp | Same series, right edition; calculate across documents | D05 +0.1 (sign flips); FY2027 -0.9; adjusted 12.25% -0.7; nine-month 12.69% -0.3 | "approximately" wording; outlook basis unstated; actual inputs in pipe rows; closed-book can land near | sketch i04 (sibling of q01: submit at most one) |
+| h1c | D04 l.78 "Total sales growth of 8.5% to 9.3%"; D05 l.78 "approximately 9.5%"; D06 l.38 "Total sales increased 9.4%" | Actual growth minus outlook midpoint in force at Q4 start: +0.5 pp (decoy -0.1) | Same series, right edition | D05 -0.1 | "midpoint" wording selects the only range (D04); all prose | hold (wording defuses the decoy) |
+| h13 | Chipotlane counts: D03 257/334 (FY2025), D01 42/49, D02 80/100 | H1 2026 pooled Chipotlane share minus FY2025 share: +4.9 pp | Calculate across documents | quarterly-average 5.9; Q4 base 8.4; partner openings 6.8 | 257/334 public since February 2026 (recall) | hold (Too easy ~45%) |
+| h14 | Bahama Breeze count 27 (D05 l.162, 2/22/26) and 13 (D06 l.231, 5/31/26; 28 at 5/25/25) | Q4 FY2026 decline: 14 | Scatter the pieces | D06 year-over-year columns 15 | pipe rows only | hold (Too easy ~55%) |
+| h15 | Wendy's US openings/net, FY2025 (D09) and YTD 2025/2026 (D08) | Q3 2025 net change, H1 closures | TTM/closure inference | n/a | public pre-cutoff quarter; closures inferred | drop |
+| h16 | Chipotle H1 average buyback price (D01 $700.8M at $36.14; D02 $630.7M at $32.55) | Weighted average price | Calculate across documents | simple average 34.345 vs weighted 34.35 | no answer-changing lever | drop |

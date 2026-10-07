@@ -1,0 +1,1715 @@
+# D05 | docs/arxiv_2608_25172v1.txt
+
+Spatially orthogonal factor models for spatial transcriptomics and remote sensing data
+
+Dan Cunha1, Lukas M. Weber2, Mark Friedl3, and Luis Carvalho1 1Department of Mathematics and Statistics, Boston University 2Department of Biostatistics, Boston University School of Public Health 3Department of Earth and Environment, Boston University Abstract
+
+Principal component and factor analyses are often applied to spatial data towards inference on latent modes of spatial variation. These analyses are widespread across domains including spatial transcriptomics and environmental/climate sciences, where the modes of spatial variation are represented by corresponding factors of gene expression or remotely sensed time series measurements. Many methods have been proposed for incorporating spatial information into a probabilistic PCA framework; however, there are three main drawbacks to currently available approaches. First, the loadings matrices in the probabilistic PCA model specification are not orthogonal, and subsequent orthogonalization of those loadings corrupts the original prior spatial information. Furthermore, currently proposed methods assume stationarity in their spatial prior and either fix the prior or use a rule-of-thumb estimator. Finally, dimensionality reduction methods that incorporate spatial information typically do not achieve linear-time computational complexity with respect to the number of spatial locations. To resolve these problems, we first parameterize the model directly with orthogonal loadings. For their prior distribution, we derive the sampling distribution of a singular value decomposition transformation with k unique singular values and m − k repeated singular values. We then show under this model that the maximum a posteriori estimator for the orthogonal loadings is the eigendecomposition of S + 1 nΣ, where S is the empirical covariance matrix and Σ is the prior spatial covariance. We develop a minorizationmaximization-within-EM algorithm that is linear in computational complexity with respect to the number of spatial locations. We further extend our MM-EM algorithm to handle held-out locations and develop a validation strategy for optimizing the nonstationary prior covariance. Our methodology is used to infer the spatial distribution of direction-specific length scales in a human brain spatial transcriptomics case study, as well as a continental-scale phenology case study in sub-Saharan Africa.
+
+1 arXiv:2608.25172v1 [stat.ME] 25 Aug 2026
+
+1 Introduction
+
+In the analysis of spatially indexed data including biological data from spatial transcriptomics technologies and remote sensing data from environmental/climate sciences, there is a demand for answering statistical questions of the following kind. Which combinations of gene expression explain the major modes of spatial variation across biological tissue? Or, what environmental temporal patterns represent important modes of spatial variation geographically? These questions have an important commonality; the corresponding data are spatially indexed, and we expect, a priori, the modes of variation to be spatially distributed.
+
+There are a number of challenges incorporating spatial information into dimensionality reduction models:
+
+• The loadings matrices in the probabilistic principal component analysis (PCA) model specification (introduced below) are not orthogonal, and subsequent orthogonalization of those loadings corrupts the original prior spatial information.
+
+• Currently proposed methods assume stationarity in their spatial prior and either fix the prior or use a rule-of-thumb estimator.
+
+• Dimensionality reduction methods that incorporate spatial information typically do not achieve linear-time computational complexity with respect to the number of spatial locations.
+
+• It is unclear how the incorporation of spatial information changes the resulting maximum likelihood or maximum a posteriori inferences.
+
+The purpose of this work is to build upon probabilistic PCA to address the above challenges.
+
+1.1 Probabilistic principal component analysis
+
+Principal component analysis (PCA) is a tool found ubiquitously throughout scientific application (Pearson, 1901; Hotelling, 1933). A probabilistic characterization of PCA follows Tipping and Bishop (1999). Suppose Y is an n×m matrix, where the rows index observations or features, and the columns index spatial locations. In environmental applications, rows typically correspond to time points (referred to as ‘observations’), while in spatial transcriptomics rows typically correspond to genes (referred to as ‘features’). In this work, in both applied settings, we will use the term ‘observations’ for the rows of Y and spatial locations for the columns. (In addition, we note that in the spatial transcriptomics literature, ‘observation’ may refer to a spatial location together with its vector of measurements across all genes / features; we do not use this terminology here.) We apply the model after removing application-specific mean structure. In the remote sensing analysis, each spatial location, 2
+
+corresponding to a column of Y , is mean-centered across temporal observations. In the spatial transcriptomics analysis, each gene, corresponding to a row of Y , is mean-centered across spatial locations (after initial preprocessing including normalization and transformation). For notational clarity, we assume Y is already mean centered. Let the ith row of Y be denoted as yi. Under the probabilistic PCA model with k components, yi has the following independent conditional likelihood distribution for each ith observation, yi|W, σ2, zi ∼ N(Wzi, σ2Im) where W ∈ R m×k is the loadings matrix and zi represents the k latent factors for the ith observation, zi ∼ N(0, Ik) independently for each i = 1, . . . , n. When ziis marginalized out, the marginal likelihood of yifollows, yi|W, σ2 ∼ N(0, WW′ + σ
+
+2
+
+Im)
+
+Tipping and Bishop (1999) showed that the maximum likelihood estimator for W, in terms of its singular value decomposition ULV ′, is such that Uˆ are the top-k eigenvectors of the empirical covariance matrix S := Y
+
+′Y/n, and Lˆ is related to the eigenvalues of S. But what if we have additional spatial information about the proximity of the m locations? For example, perhaps we have a spatial covariance matrix Σ with proximal information about locations across space. How should that information be included in the model, and how does that incorporation change our inference?
+
+1.2 Incorporating prior spatial information
+
+1.2.1 Prior work
+
+There have been a number of contributions towards incorporating spatial information in PCA or factor analyses in the biological and environmental sciences, and we only review a small number of them here. For a more comprehensive review in the environmental and climate sciences, the reader is referred to Hannachi et al. (2007). Green et al. (1988) study the effect of preprocessing data, using spatial transformations, on the ordering of principal components and their spatial quality. Switzer and Green (1984) develop min/max autocorrelation factors to order components according to their spatial autocorrelation. In the biological setting on the analysis of spatial transcriptomics data, Shang and Zhou (2022) treat the spatial dimension as factors and assume a stationary spatial covariance in their prior distribution.
+
+Townes and Engelhardt (2023) incorporate spatial information in the factor prior within a probabilistic nonnegative matrix factorization. Guo et al. (2026); Zeira et al. (2022); Xu et al. (2024); Zhao et al. (2021); Pham et al. (2023); Hu et al. (2021); Xu et al. (2022); Dong and Zhang (2022) have provided solutions to tasks such as spatial clustering, trajectory inference, spatially variable genes, and tissue sample alignment, each of which use spatial latent embeddings within their solutions.
+
+3
+
+1.2.2 Considerations for incorporating prior spatial information There are two high-level points to deliberate: should the loadings or factors act as the spatial dimension and, should spatial dependence be incorporated into the mean or the errors of the model? Regarding the first question, we follow decades of environmental science research placing the spatial dimension as loadings and the time/gene dimension as factors. As such, the burden is to defend this decision within the biological setting in the context of spatial transcriptomics data. Our reasoning is as follows. We wish to infer orthogonal spatial patterns (that is, spatial patterns that are maximally different in the sense that their inner product is 0) associated with gene expression combinations, which may not themselves be orthogonal, as opposed to inferring orthogonal gene expression combinations that may share similar spatial patterns. In spatial transcriptomics data, we expect that some dominant gene expression programs may overlap in their constituent genes and exhibit spatial organization associated with tissue anatomy, cell-type composition, immune-related processes, or local cellular neighborhoods.
+
+Regarding the second question, our options are to place spatial dependence within the error distribution or within the loadings distribution. The former has been extensively studied in the environmental science literature (Hannachi et al., 2007). In our case study, however, we expect phenological modes of variation to manifest spatially, more so than the errors from the conditional mean function. Furthermore, the GIMMS dataset we are using is relatively robust to errors due to cloud cover compared to other satellite imagery, as it is a 15-day maximum value composite of daily imagery (Fensholt and Proud, 2012).
+
+As such, we proceed by placing spatial dependence on the loadings. However, there is another issue to address. If we place a prior spatial dependence on the columns of the (weighted and rotated) loadings matrix W, then it is unclear how those prior assumptions are transformed if our final inferences are on U, the orthogonal basis of its column space after singular value decomposition. To address this issue, we model Y using the orthogonal matrix U directly, such that yi|U, L, σ2 ∼ N(0, UL2U
+
+′ + σ2
+
+Im) (1)
+
+1.3 Contributions
+
+Our contributions are as follows:
+
+• We derive the sampling distribution for the singular value decomposition when the first k singular values are unique and the remaining m − k are all equal (Proposition 1 in
+
+Section 2).
+
+• We place this distribution on the orthogonal loadings U and their corresponding singular values L, and show that the corresponding maximum a posteriori estimate of U 4
+
+consists of the eigenvectors of S +
+
+1 nΣ, where S is the empirical covariance matrix and
+
+Σ is the prior spatial covariance matrix (Theorem 1 in Section 2).
+
+• As the eigendecomposition of S +
+
+1 nΣ has a cubic computational complexity with respect to the number of spatial locations m, in Section 3 we derive a minorizationmaximization-within-EM (MM-EM) algorithm for estimating the orthogonal loadings U, achieving a linear-time computational complexity with respect to the number of spatial locations.
+
+• In Section 4, we extend our methodology to handle held-out spatial locations and subsequently maximize the held-out predictive distribution with respect to the prior spatial covariance on the orthogonal loadings U under a spatial smoothness assumption.
+
+• In Section 6, we study spatial transcriptomics data from a postmortem human brain tissue section from the dorsolateral prefrontal cortex (DLPFC) region, and identify spatial factors associated with laminar and non-laminar gene expression patterns that are consistent with findings in the existing literature.
+
+• In Section 7, we apply our model and methodology to study phenological modes of spatial variation in sub-Saharan Africa.
+
+2 Spatially orthogonal factor models
+
+2.1 Prior genesis of spatially orthogonal factor loadings We proceed with deriving the prior sampling distribution for U, L, σ2, such that the spatial dependence on the loadings follows a covariance matrix Σ. We will specify the form of Σ in Subsection 2.3 as well as a methodology for estimating Σ in Section 4. Our results build off the seminal results due to James (1964), for the sampling distribution of an eigendecomposition of a Wishart distributed random matrix. However, to align with PCA assumptions, we restrict the eigendecomposition such that the first k eigenvalues are unique and the remaining are repeated. We then take an inverse transformation to achieve conjugacy with the likelihood and reparameterize the eigenvalues to align with PCA parameterization, such that L 2 jj + σ
+
+2 are the first unique k eigenvalues and σ2 are the remaining m − k eigenvalues.
+
+Proposition 1. (Prior genesis) Suppose the prior density p(Y (0)) ∝ etr(− 1 2 Y (0)′ ΣY (0)), is limited to the sample space where Y
+
+(0) has k unique singular values as described above. Then 5
+
+the three Jacobian transformations described above yield the distribution, p(U, L, σ2|Σ) ∝ exp −
+
+1 2 tr(U
+
+(L 2 + σ2 Ik)
+
+−1 − σ−2
+
+Ik
+
+U ′Σ + 1 σ 2 Σ)
+
+Y k j>i
+
+(L 2 jj + σ 2 )
+
+−1 − (L2 ii + σ 2 )
+
+−1
+
+Y k j=1 ((L 2 jj + σ 2 )
+
+−1 − σ−2
+
+)
+
+(m−k)
+
+!
+
+(σ 2∗ 1 2 )
+
+−(ν−m)(m−k)−( m−k 2 )−3
+
+Y k j=1 (L 2 jj + σ 2 )
+
+− (ν−m)+3 2 !
+
+1
+
+2 det(L)(dL)(dσ2)(dU)
+
+Specifically, the conditional prior of U|L, σ2, Σ is a matrix-Fisher-Bingham and conjugate to the likelihood.
+
+We use exterior product theory for our proof following Muirhead (1982). As we will see, these transformations yield an interpretable maximum a posteriori inference of U.
+
+There are a few parameters that control the strength of this prior. The first is the degrees of freedom parameter ν which we take to be equal to m; the smallest value ν can take yielding the above distribution. The second is the variance parameter of Σ, and the third is the length scale. The parameters of Σ have a strong influence on the posterior results for U, but we cannot optimize these directly as the normalizing constant of this prior is difficult to compute. We develop a validation methodology for estimating Σ in Section 4.
+
+2.2 MAP inference of spatially orthogonal factor loadings Proposition 1 establishes the ground work for the following theorem. By deriving the sampling distribution of U, L, σ2 under the repeated eigenvalue constraint and reparameterizing according to PCA assumptions, conjugacy is established and yields an interpretable MAP inference,
+
+Theorem 1. (MAP inference) Let the likelihood distribution of the data be as defined in Equation 1, and let the prior on U, L, σ2be as defined in Proposition 1 for ν ≥ m. Then the unconditional maximum a posteriori (MAP) of U,
+
+U † = argmax U p(U, L, σ2|Y, Σ) are the k eigenvectors of (S +
+
+1 nΣ) associated with the corresponding largest k eigenvalues.
+
+This MAP inference is unconditional on the values of L, σ2in the following sense. We assume without loss of generality that the diagonal values of L are descending in value and σ
+
+2 > 0. Under these assumptions, the MAP for U does not otherwise depend on the values of L, σ2. The MAP values for L, σ2 are more difficult to prove and we leave this step for potential future research.
+
+6
+
+2.3 Spatial covariance models
+
+In this subsection, we describe the nonstationary covariance function used in our studies.
+
+We start by specifying an anisotropic squared exponential stationary function which will be used in the initial stages of our nonstationary estimation procedure, Cs(si, sj ) = φ · etr −
+
+1 2 (si − sj ) ′Σ−1 (si − sj )
+
+where, Σ = λlat 0 0 λlon
+
+While there are many methods for specifying nonstationary covariance functions (Nychka et al., 2002; Jun and Stein, 2008; Cressie and Johannesson, 2008), we follow the nonstationary specification provided by Paciorek and Schervish (2006),
+
+```text
+Cn(si, sj ) = φ|Σi|
+1 4 |Σj | 1 4
+```
+
+Σi + Σj
+
+2
+
+− 1 2 exp(−Qij ) (2) where,
+
+Qij = (si − sj )
+
+′
+
+Σi + Σj 2 −1 (si − sj ) and, Σi =
+
+λlat,i 0
+
+0 λlon,i which serves as the nonstationary extension of the above stationary model using a squared exponential kernel. We develop a validation methodology for estimating this nonstationary covariance function in Section 4.2. As will be detailed in that section, our approach is to estimate the best local stationary covariance at each held-out location in the validation set by maximizing the held-out likelihood for that location, and then rely on spatial smoothness assumptions to generalize to a nonstationary covariance model on the entire spatial domain.
+
+3 Estimation of spatially orthogonal factor loadings Towards estimation, it is typically not possible to store S nor Σ in memory, and therefore it is not computationally feasible to perform an eigendecomposition of S + 1 nΣ as inferred in Theorem 1. Instead, we use the latent variable construction from probabilistic PCA in addition to the prior distribution derived in Proposition 1 and construct a minorizationmaximization-within-EM (MM-EM) algorithm for estimating U. Assuming the observations 7
+
+are independent conditioned on the latent state and the parameters, we have for a single observation, p(yi|zi, U, L) = (2πσ2)
+
+− m 2 etr − 1 2σ 2 (yi − ULzi) ′ (yi − ULzi)
+
+The prior on Z is an isotropic Gaussian; for each ith observation, p(zi) = (2π) − k 2 etr − 1 2 z ′ izi
+
+with the prior p(U, L, σ2|Σ) derived in the previous section. The Q function is the posterior expectation with respect to the latent matrix Z over the log posterior distribution. Let θ := (U, L, σ2),
+
+Q(θ|θ
+
+(t)
+
+)
+
+(c)
+
+= Xn i=1 − m 2 log(σ 2 ) − 1 2σ 2
+
+y ′ iyi − tr (2y ′ iULE[zi ]) + tr(E[ziz ′ i ]L 2 )
+
+− 1 2 tr(U
+
+(L 2 + σ2 Ik)
+
+−1 − σ−2
+
+Ik
+
+U ′Σ + 1 σ 2 Σ)
+
++ X k j>i log (L 2 jj + σ 2 )
+
+−1 − (L2 ii + σ 2 )
+
+−1
+
++ X k j=1
+
+(m − k) log ((L
+
+2 jj + σ 2 )
+
+−1 − σ−2
+
+)
+
+− 1 2 m − k 2
+
++ 3log σ
+
+2
+
+− 3 2 X k j=1 log L 2 jj + σ 2
+
++ log det(L)
+
+The posterior expectations are similar to the probabilistic PCA model, E[zi] = (L (t)2 + σ2(t) Ik)
+
+−1L(t)U(t) ′ yi E[ziz ′ i ] = σ 2(t)
+
+(L (t)2 + σ2(t) Ik)
+
+−1 + E[zi ]E[zi] ′ but easier to compute since the U terms cancel and we only have to invert a diagonal matrix (L
+
+(t)2 + σ2(t)
+
+Ik). The superscript (t) denotes the tth iteration of the EM algorithm.
+
+3.1 MM-algorithm for the M-step of spatially orthogonal loadings We use cyclic maximization steps for the three parameters U, L, σ2such that the maximization of each depends on the previous iteration of the other two. For L and σ
+
+2 we rely on automatic gradient computation for the M-step given their dimensionality is small and the complexity is high for these terms. However, since U is orthogonal, we derive a maximization solution directly. Our observation is that the Q function looks similar to an expression 8
+
+tr(MTU), for some matrix M, which has a maximum for orthogonal U known as the Procrustes solution (Sch ̈onemann, 1966). When the objective function looks like tr(MTU), if
+
+M = BΞC
+
+′ is the SVD of M, then the Procrustes solution is, BC′ = argmax U∈Vk,m tr(MTU)
+
+Taking an MM-EM approach, we utilize convexity properties to minorize the Q function such that at each iteration of the minorization-maximization algorithm (which is employed within the EM iterations) we get an M-step of the form tr(MTU) for some matrix M that doesn’t depend on U (Hunter and Lange, 2004). The M-step for U requires maximizing, Q(U|U
+
+(t)
+
+)
+
+(c)
+
+= Xn i=1 1 σ 2 tr (LE[zi]y ′ iU) − 1 2 tr((L 2 + σ2 Ik)
+
+−1 − σ−2
+
+Ik
+
+U
+
+′ΣU)
+
+where we have rearranged terms in the trace so that U is on the right. Before we can utilize Procrustes algorithm, we need to minorize the term from the prior to get rid of the quadratic dependence on U. Start by noting that each diagonal element of (L
+
+2 + σ2
+
+Ik)
+
+−1 − σ−2
+
+Ik is negative and define Λ = − ((L
+
+2 + σ2
+
+Ik)
+
+−1 − σ−2
+
+Ik), so the goal is minorization of tr(ΛU ′ΣU).
+
+Now use the following relationship, tr(Λ(U − U
+
+(s)
+
+)
+
+′Σ(U − U(s)
+
+)) = tr(ΛU
+
+′ΣU) − tr(ΛU(s)
+
+′ ΣU) − tr(ΛU ′ΣU(s) ) + tr(ΛU (s)
+
+′ ΣU (s)
+
+)
+
+And rearranging so the term of interest is on the left, tr(ΛU
+
+′ΣU) = tr(Λ(U − U(s)
+
+)
+
+′Σ(U − U(s) )) + 2tr(ΛU (s)
+
+′ ΣU) − tr(ΛU (s)
+
+′ ΣU (s)
+
+)
+
+(c)
+
+= tr(Λ(U − U
+
+(s)
+
+)
+
+′Σ(U − U(s) )) + 2tr(ΛU (s)
+
+′
+
+ΣU)
+
+(c)
+
+≥ 2tr(ΛU
+
+(s)
+
+′
+
+ΣU)
+
+Since tr(Λ(U − U
+
+(s)
+
+)
+
+′Σ(U − U(s)
+
+)) ≥ 0 and equal to 0 when U
+
+(s) = U, and tr(ΛU(s)
+
+′ ΣU (s)
+
+)
+
+does not depend on U, we have that 2tr(ΛU
+
+(s)
+
+′
+
+ΣU) is a valid minorization of tr(ΛU ′ΣU).
+
+Keys (2016) develops a similar minorization for a different problem involving estimation of an orthogonal matrix. Plugging this minorization back into the Q function, Q(U|U
+
+(t)
+
+, U(s))
+
+(c)
+
+= Xn i=1 1 σ 2 tr (LE[zi]y ′ iU) − 1 2 tr((L 2 + σ2 Ik)
+
+−1 − σ−2
+
+Ik
+
+U
+
+′ΣU)
+
+(c)
+
+≥ tr 1 σ 2 L Xn i=1 E[zi]y ′ i !
+
+U
+
+!
+
++ tr(ΛU
+
+(s)
+
+′
+
+ΣU)
+
+(c)
+
+≥ tr 1 σ 2 L Xn i=1 E[zi]y ′ i !
+
++ ΛU
+
+(s)
+
+′ Σ !
+
+U
+
+!
+
+9
+
+Where the U
+
+(t) parameter is implicitly conditioned on in the posterior expectations, and the U
+
+(s)
+
+is the previous iterate of U within the minorization maximization algorithm. Thus, the complete M-step with respect to U is, U
+
+(s+1) = B(s)C(s)
+
+′
+
+(3)
+
+Where B and C are the orthogonal matrices from the SVD,
+
+1 σ 2 L Xn i=1 E[zi]y ′ i !
+
++ ΛU
+
+(s)
+
+′ Σ !′ = B (s)Ξ(s)C(s) ′
+
+This completes our derivation of a minorization-maximization within EM algorithm for optimizing the Q function with respect to the orthogonal loadings matrix U. However, this estimation is conditioned on Σ. In the next section, we extend this MM-EM algorithm to include estimation of held-out spatial locations, which serves as the foundation of our validation approach to estimating the parameters within Σ.
+
+4 Methodology for spatial prior estimation The parameterization of Σ in the prior p(U, L, σ2|Σ) can affect downstream inferences greatly.
+
+However, gradient methods for estimation of Σ are not feasible since the normalizing constant is hard to compute and getting posterior samples of U, L, σ2is difficult in the settings we are considering. But due to its strong influence on the posterior, it behooves us to develop a computationally feasible methodology for estimating Σ. We choose to use a validation framework for estimation.
+
+In this framework, spatial locations are selected at random and held-out from training.
+
+From a modeling perspective, we still specify the loadings U at all locations, but treat the held-out outcome variables as latent. In this way, our MM-EM algorithm can be extended to handle those latent locations, yielding estimation of the loadings U at all locations. Predictions of the held-out outcome variables can then be assessed against the observed data and the validation loss can be used to choose the best parameterization of the spatial prior covariance Σ.
+
+4.1 MM-EM algorithm on held-out spatial locations Let p be an indexed set of held-out spatial locations and let yi,p be the corresponding vector of held-out (and consequently treated as latent) outcomes. Let o be the indexed set of training locations and let yi,o be the corresponding vector of training outcomes. We assume each outcome vector is ordered as yi = (y ′ i,o, y ′ i,p)
+
+′
+
+.
+
+10
+
+4.1.1 Posterior distribution of latent states conditioned only on training data We wish to evaluate the posterior distribution p(zi|yo) which, as we will show, does not take the same form as p(zi|yi) when conditioned on all data, since Uo is no longer orthogonal. Firstly, we have p(zi
+
+|yo) = p(zi|yi,o), since the zi are independent across i, the yi are
+
+conditionally independent across i given the model, and the individual entries of yo are conditionally independent across i given the model. Implicitly conditioning on the parameters, p(zi|yi,o) ∝ exp −
+
+1 2σ 2 (yi,o − UoLzi) ′ (yi,o − UoLzi)
+
+exp(− 1 2 z ′ izi)
+
+∝ exp − 1 2σ 2 (−2z ′ iLU′oyi,o + z ′ iLU′oUoLzi + σ 2z′ izi)
+
+∝ exp − 1 2σ 2 (−2z ′ iLU′oyi,o + z ′ i (LU′ oUoL + σ 2 Ik)zi)
+
+Thus, the posterior distribution, zi|yi,o ∼ N (M−1LU′ oyi,o, σ2M−1
+
+) (4)
+
+Where M = (LU′ oUoL + σ 2 Ik).
+
+4.1.2 Expectation step in cross validation The posterior expectations of the log likelihood/prior(depending on which components are observed/missing, respectively) of observation i, amount to evaluating two different terms.
+
+With the expectation implicitly conditioned on yi,o, U(t), L(t), σ2(t), the two expectations of interest arise from the following terms within the Q function, E(yi − ULzi)
+
+′
+
+(yi − ULzi) = E(y
+
+′ iyi − 2y ′ iULzi + z ′ iL 2zi)
+
+= E[y ′ iyi ] − E[2y ′ iULzi ] + tr(E[ziz ′ i ]L 2 )
+
+= y ′ i,oyi,o + E[y ′ i,pyi,p] − 2y ′ i,oUoLE[zi ] − 2tr(E[ziy ′ i,p]UpL) + tr(E[ziz
+
+′ i ]L 2 )
+
+As such, the two expectations with respect to missing outcomes yi,p are E[y ′ i,pyi,p|yi,o] and
+
+E[ziy ′ i,p|yi,o].
+
+To evaluate E[y
+
+′ i,pyi,p|yi,o] = tr(E[yi,py
+
+′ i,p|yi,o]), we use the trace rotation and thus need
+
+```text
+to evaluate cov(yi,p|yi,o) and E[yi,p|yi,o].
+cov(yi,p|yi,o) = cov(UpLzi + σεi,p|yi,o)
+```
+
+= UpLcov(zi|yi,o)LU′ p + σ 2 Ip = σ 2UpL(LU′ oUoL + σ 2 Ik)
+
+−1LU′ p + σ 2 Ip 11
+
+And,
+
+E[yi,p|yi,o] = E[UpLzi + σ
+
+2 εi,p|yi,o]
+
+= UpLE[zi|yi,o]
+
+= UpLM−1LU′ oyi,o
+
+For the second expectation, note,
+
+Ezi,yi,p|yi,o [ziy
+
+′
+
+i,p] = Ezi|yi,o [ziEyi,p|zi,yi,o [y
+
+′ i,p|zi ]]
+
+= Ezi|yi,o [ziEyi,p|zi
+
+[y ′ i,p|zi ]]
+
+The second equality holds by the conditional independence assumption in the model, yi,j ⊥ yi,j∗ |U, L, σ2, zifor j ̸= j
+
+∗
+
+. The inner expectation is the assumed mean function of the likelihood, Eyi,p|zi
+
+[y ′ i,p|zi ] = (U (t)
+
+p L
+
+(t)zi)′
+
+. Plugging this back into the expectation of interest, Ezi,yi,p|yi,o [ziy
+
+′ i,p] = Ezi|yi,o [ziz
+
+′ i ]L (t)U(t) ′ p (5)
+
+Plugging these back into the Q function, we have,
+
+Q(θ|θ
+
+(t)
+
+)
+
+(c)
+
+= Xn i=1 − m 2 log(σ 2 ) − 1 2σ 2
+
+y ′ i,oyi,o + E[y ′ i,pyi,p] − 2y ′ i,oUoLE[zi ] − 2tr(E[ziy ′ i,p]UpL) + tr(E[ziz ′ i ]L 2 )
+
++ log π(U, L, σ2|Σ)
+
+(c)
+
+= Xn i=1 − m 2 log(σ 2 ) − 1 2σ 2
+
+y ′ i,oyi,o + tr σ 2UpL(LU′ oUoL + σ 2 Ik)
+
+−1LU′ p + σ 2 Ip
+
++ tr(UpLM−1LU′ oyi,oy ′ i,oUoLM−1LU′p )
+
+− 2y ′ i,oUoLE[zi ] − 2tr(E[ziz ′ i ]L (t)U(t) ′ p UpL) + tr(E[ziz
+
+′ i ]L 2 )
+
++ log π(U, L, σ2|Σ)
+
+12
+
+4.1.3 Maximization step for U in cross validation
+
+In the case when there are held-out data, the M-step with respect to U is changed by these new expectations in the Q function,
+
+1 σ 2
+
+tr(L Xn i=1
+
+E[zi]y ′ i,o Uo) + tr(L Xn i=1
+
+E[ziy ′ i,p]
+
+Up)
+
+= 1 σ 2
+
+tr(L Pn i=1 E[zi]y ′ i,o Pn i=1 E[ziy ′ i,p]
+
+U)
+
+= 1 σ 2
+
+tr(L hPn i=1 E[zi]y ′ i,o Pn i=1 (E[ziz ′ i ]) L (t)U (t)
+
+′ p i U)
+
+Where U =
+
+U ′ o U ′ p ′
+
+. Putting this together, we have the updated M-step for U is, U
+
+(s+1) = B(s)C(s)
+
+′
+
+Where B and C are the orthogonal matrices from the SVD,
+
+1 σ 2 L hPn i=1 E[zi]y ′ i,o Pn i=1 E[ziz ′ i ]L (t)U (t)
+
+′ p i + ΛU (s)
+
+′ Σ ′ = B (s)Ξ(s)C(s) ′
+
+It is worth taking a moment to discuss the difference between the tth iteration of the EM algorithm and the sth iteration of the minorization-maximization algorithm within the EM algorithm. During the MM-EM algorithm, an E-step is performed conditioned on the value U
+
+(t)
+
+. Then at the M-step, we use a minorization of the Q function at the tth iteration. As such, since the term U
+
+(t) within the M-step equation is from the E-step, it does not update during the minorization-maximization steps. The only U
+
+(s)
+
+term from the minorization of the Q function occurs within the quadratic term in the prior. Only this term from the prior is updated during the minorization-maximization step nested within each EM step.
+
+4.1.4 Prediction of held-out data
+
+We use the log-likelihood on held-out data as our validation metric of interest. The predictive distribution of the held-out outcomes yi,p conditioned on the observed training outcomes yi,o is obtained by marginalizing over the latent states zi.
+
+Since we cannot marginalize over the full posterior of U, L, σ2, we approximate the heldout likelihood by conditioning on the local MAP estimates (U †
+
+, L†, σ2†) obtained for each spatial prior Σ during the validation process. Let yˆi,p = E[yi,p|U †
+
+, L†, σ2†, yi,o] be the predictive mean and let Vp = cov(yi,p|U †
+
+, L†, σ2†, yi,o) be the predictive covariance matrix. The 13
+
+loss function with respect to the parameters of Σ is, L(Σ) = Xn i=1
+
+− 1 2 log |Vp,Σ| − 1 2 (yi,p − yˆi,p) ′V −1 p,Σ (yi,p − yˆi,p)
+
+Where Σ depends on a sill parameter φ and length scale parameters (λlat,λlon) as specified in Section 2.3.
+
+4.2 Validation approach for nonstationary covariance estimation Now that an MM-EM algorithm has been developed for fitting the model when a set of locations has been held-out, we develop an algorithm using validation for estimating the prior nonstationary spatial covariance matrix. Our objective is to estimate the sill parameter φ and the length scales {λlat,i, λlon,i} m i=1 for each of the m spatial locations. To that end, we randomly choose a held-out set of spatial locations Dhold from the spatial domain D.
+
+To estimate the sill φ, we start with an initial stationary length scale (λlat,init, λlon,init) used to construct a stationary squared exponential correlation matrix Cs,λlat,init,λlon,init for the spatial domain D. Then a set of sill values φ ∈ p are each used to fit an SOFM, and the MAP parameters are then used to compute the held-out likelihood from Section 4.1.4. The φ with the largest corresponding held-out likelihood is our estimator.
+
+After the sill is estimated, we need to estimate (λlat,s, λlon,s) for each spatial location s ∈ D. We do this in two stages. In the first stage, we create a stationary covariance matrix for each pair of length scales in a specified set (λlat, λlon) ∈ (l × l). The SOFM model is fit for each pair of length scales, and the held-out likelihood is computed and stored for each held-out spatial location s ∈ Dhold. The (λlat,s, λlon,s) that maximize the held-out likelihood for each location s ∈ Dhold are selected. Then, to generalize our estimates to the entire spatial domain D, we assume the length-scales follow a smooth spatial surface and fit that surface in a second stage of estimation.
+
+4.2.1 P-splines for smoothing local length scales
+
+We use the two-dimensional P-spline model, which we briefly cover here and refer readers to Eilers and Marx (2003) for more information. The log of the length scales is modeled to ensure positivity of our estimates. Since the two vectors of log length scale estimates are evaluated at the same locations Dhold, the following B-spline matrices can be used to fit both of them. Let By ∈ R h×ry be a B-spline basis matrix for the y-axis evaluated at ry knots and Bx ∈ R h×rx be a B-spline basis matrix for the x-axis evaluated at rx knots. The two dimensional B-spline basis matrix B combines By and Bx as follows, B := (Bx ⊗ 1 ′ ry ) ⊙ (1′ rx ⊗ By) 14
+
+The spline regression is then regularized using second-order difference matrices Dx and Dy.
+
+These difference matrices are constructed such that the spline parameters for neighboring knots are penalized with respect to their difference. Please see Eilers and Marx (2003) for details. In the two-dimensional case, the difference matrices are extended to two-dimensions by using Px := (D′ xDx ⊗ Iry ) and Py := (Irx ⊗ D′ yDy). The following loss functions are used to fit the P-splines,
+
+L(αlat;λˆ
+
+lat, γx, γy) = || log(λˆlat) − Bαlat||2
+
+2 + γxα
+
+′ latPxαlat + γyα
+
+′ latPyαlat with a similar loss for the longitudinal length scales, which has the following minimizer, αˆlat = (B
+
+′B + γxPx + γyPy)−1B′ log(λˆ lat)
+
+In this work, we set the number of knots to rx = ry = 10, and use generalized crossvalidation to estimate the γ-regularization parameters (Craven and Wahba, 1978; Eilers and Marx, 1996), which are estimated separately for the latitudinal and longitudinal models.
+
+Once these α parameters are fit, we get predictions for the latitudinal and longitudinal length scales for every location by reevaluating the B-spline basis functions B ̃ at all locations in D, for the same knots that were used during training and then plugging λ ̃ = exp(B ̃αˆ).
+
+The details are summarized in Algorithm 1.
+
+5 Simulation study
+
+The simulation study is aimed at demonstrating the empirical performance of the nonstationary model and methodology from Algorithm 1. The goal is to study estimation of U, L, σ2 .
+
+We run our study on three different data generating spatial covariance models: a stationary model, a nonstationary model, where the length scales evolve smoothly over the spatial domain, and a shape model, where there is a circle in the center of the spatial domain with long length scales and short length scales outside of the circle. We study two spatial domains of
+
+400 and 2500 spatial locations, along with sample sizes (200, 500, 1000, 5000, 10000). There are two σ
+
+2 ∈ {5, 10}. In each simulation, the true U matrix is chosen to be the first k eigenvectors of the underlying spatial covariance, the true eigenvalue parameters L are chosen to maximize the prior conditioned on U, and then the synthetic data are simulated according to the likelihood model. We take k = 3 in this study. Finally, there are twenty replicate simulations. For model setting, we consider maximum spatial lags of 2 and 20, initial length scales λi ∈ {1, 3, 5} and sill values φ ∈ {1, 5, 10, 50, 100, 500, 1000, 5000, 10000, 50000}.
+
+Please see Figure 1 for results of the studies. There are two main approximations made in the Algorithm 1 that may affect the study results. The first is that the prior variance and prior length scales are optimized in two separate conjugate steps and only once in total. The second is that the maximum spatial lag considered in the prior covariance is truncated for computation purposes. Results from Figure 1 demonstrate that estimation of U, L, σ2is not 15
+
+Algorithm 1 Nonstationary spatial model fitting
+
+Input: Spatial domain D, discretized length scale domain l := {li}i and discretized sill domain p := {pi}i.
+
+Step 1: Selection of hold-out set from spatial domain Randomly select set of held-out spatial locations Dhold from spatial domain D.
+
+Define Dkeep = D ∩ DC hold
+
+Step 2: Sill estimation
+
+Conditioned on an initial (λlat,init, λlon,init), create stationary correlation matrix Cs,init using stationary kernel Cs from Section 2.3.
+
+for each sill φ ∈ p do
+
+Run SOFM(Dkeep, Dhold, Σs,φ) conditioned on Σs,φ = φ · Cs,init Compute and store held-out likelihood for Dhold end for
+
+Choose φˆ ∈ p that maximizes held-out likelihood over Dhold Step 3: Local covariance estimation for each pair (λlat, λlon) ∈ (l × l) do
+
+Create stationary covariance matrix Σs,λlat,λlon = φˆ · Cs,λlat,λlon Run SOFM(Dkeep, Dhold, Σs,λlat,λlon)
+
+Compute and store held-out likelihood for each held-out location d ∈ Dhold end for for each held-out location d ∈ Dhold do
+
+Choose pair (λˆ lat,d, λˆlon,d) ∈ (l×l) that maximizes held-out likelihood for dth location.
+
+end for
+
+Step 4: Two-dimensional spline smoothing for generalization Fit a two-dimensional P-spline to the log of λˆ lat.
+
+Fit a two-dimensional P-spline to the log of λˆ lon.
+
+Step 5: Prediction on D
+
+Use the two fitted P-splines to predict length scale parameters λ ̃ lat, λ ̃lon for all locations in D.
+
+Output: The full nonstationary covariance function evaluated at all locations in D.
+
+16
+
+Figure 1: (Left) SOFM run on synthetic data generated as described in Section 5. For each dataset, mean squared error is assessed for the U, L, σ2 parameters. (Right) A synthetic study was run on a single core to assess computational time against number of spatial locations, demonstrating linear computational complexity. Study was run with 3000 samples/features per dataset and k = 3 factors.
+
+sensitive to these approximations. Appendix 14 contains additional studies for varying values of σ, spatial domain size, as well as different maximum spatial lags of the prior covariance function.
+
+6 Case Study: Spatial transcriptomics from the DLPFC brain region
+
+The barcoded-array Spatial Transcriptomics technology was introduced by St ̊ahl et al. (2016), and was subsequently extended and commercialized through technological platforms including 10x Genomics Visium. Spatial transcriptomics measures gene expression, i.e. the relative abundance of RNA transcripts associated with genes, across up to tens of thousands of genes while retaining the spatial coordinates associated with each measurement location within a tissue section. These technologies complement earlier advances in single-cell RNA sequencing (scRNA-seq), which characterize gene expression in individual cells but generally do not retain information about the cells’ spatial locations within the tissue (Amezquita et al., 2020). By preserving this spatial context, spatial transcriptomics can be used to study tissue architecture and the spatial organization of cell types, cell states, and gene expression programs (Rao et al., 2021).
+
+The dorsolateral prefrontal cortex (DLPFC) dataset used here was introduced by Maynard et al. (2021) and consists of spatially resolved gene expression measurements from postmortem human brain tissue sections from the DLPFC region. The full study includes
+
+12 tissue sections from 3 donors, with manual annotations of the cortical layers and white matter providing an anatomical reference for evaluating spatial gene expression patterns.
+
+The data were generated using the 10x Genomics Visium platform, which measures gene expression at spatially indexed capture locations (referred to as spots) approximately 55 μm 17
+
+in diameter and spaced approximately 100 μm center-to-center, with up to approximately 5,000 spots per tissue section.
+
+We analyzed section 151675 from this dataset, which contains expression measurements for 3,592 in-tissue Visium spots and 33,538 gene features. The input expression matrix consists of expression counts per gene and spot, which were normalized and log-transformed following workflows described by Crowell et al. (2026); Amezquita et al. (2020), and subsequently mean-centered per gene across spots. We performed three sets of analyses: a filtered analysis with low-expression filtering applied to retain genes with positive expression in at least 20 spots (consistent with the filtering threshold used by Shang and Zhou (2022)), a full-gene analysis retaining all 33,538 genes, and a ‘highly variable gene’ (HVG) analysis selecting the top 3,000 HVGs following Crowell et al. (2026); Amezquita et al. (2020). The low-expression filtering retains 14,638 genes. Most spatial transcriptomics analysis workflows include low-expression filtering due to high sparsity and large numbers of genes with very low expression in the raw measurements; these genes provide little biological information and modeling them is computationally challenging (Crowell et al., 2026; Amezquita et al., 2020). We treat the filtered analysis as our main analysis in the results below, and include the full-gene analysis in the appendix to show the advantage of our spatial model both computationally as well as its ability to regularize in high dimensions. HVGs are genes with the highest expression variability across cells or spots, and are typically selected as a preprocessing step during workflows to focus on biologically relevant genes that contribute strongly to expression heterogeneity, and to reduce the number of input genes for computational purposes (Amezquita et al., 2020). However, conventional HVG selection does not incorporate spatial information and may remove some genes with spatial expression patterns (Weber et al., 2023); hence we performed all three analyses for demonstration purposes.
+
+We note that in many common workflows for single-cell and spatial transcriptomics and existing factor-analysis methods, expression counts are normalized and subsequently transformed via f(xij ) = log(xij +1), and the resulting transformed values are modeled as continuous variables (Shang and Zhou, 2022; Stuart et al., 2019; Wolf et al., 2018; Palla et al., 2022; Amezquita et al., 2020; Crowell et al., 2026). Although this Gaussian modeling assumption is an approximation (Townes et al., 2019), we adopt it here to enable direct comparison with PCA-based methods and to facilitate computationally efficient estimation, allowing the methodological development to focus on extending spatial covariance modeling from the stationary to the nonstationary setting.
+
+6.1 How does SOFM fit into spatial transcriptomics analysis workflows?
+
+Spatial transcriptomics analysis workflows typically begin with a gene expression count matrix measured at a set of spatial locations, together with spatial coordinates and any associated tissue images. Initial analysis steps include quality control, filtering, normalization, log18
+
+transformation, and feature selection. This is followed by construction of a low-dimensional representation of the gene expression matrix. In many standard workflows, this dimensionality reduction step is performed using PCA (Crowell et al., 2026; Palla et al., 2022), consistent with established workflows for scRNA-seq data (Stuart et al., 2019; Wolf et al., 2018; Amezquita et al., 2020); the PCA calculation itself does not use spatial coordinates.
+
+Alternatively, for spatial transcriptomics data, the dimensionality reduction step may be adapted or replaced using methods that take spatial coordinates into account, so that spatial information is incorporated into the resulting low-dimensional representation (Crowell et al., 2026).
+
+The resulting top principal components (PCs) or other low-dimensional representations may then be used as the input for further downstream analyses, such as nearest-neighbor graph construction, clustering and spatial domain detection, interpretation of genes or gene sets, visualization, and other analyses. The corresponding gene coefficients also provide a gene-level view, allowing each spatial factor to be interpreted through genes with large positive or negative coefficients along that factor. The key distinguishing feature of SOFM is that it incorporates spatial information while preserving orthogonality of the inferred spatial patterns, thereby reducing redundancy among the spatial components.
+
+6.1.1 Comparison to other dimensionality reduction models Several existing methods have proposed modified dimensionality reduction models to incorporate spatial information. Examples include SpatialPCA (Shang and Zhou, 2022), MEFISTO Velten et al. (2022), nonnegative spatial factorization (Townes and Engelhardt, 2023), and GraphPCA (Yang et al., 2024). SpatialPCA is a particularly relevant comparison, which builds on probabilistic PCA by incorporating a prior spatial covariance on the latent factors. SOFM fits into the same broad workflow step, as a spatially aware dimensionality reduction method after preprocessing and before downstream analyses.
+
+There are three main differences between SOFM and SpatialPCA. First, SpatialPCA uses a stationary spatial prior covariance, whereas SOFM estimates a location-varying nonstationary spatial prior covariance. Second, SpatialPCA uses a sample-size-dependent plug-in bandwidth selector, i.e. the Sheather-Jones method (Sheather and Jones, 1991) for datasets with at most 5,000 spatial locations and Silverman’s rule-of-thumb (Silverman, 2018) for larger datasets, whereas SOFM selects covariance parameters by maximizing held-out predictive likelihood. Third, SOFM achieves linear computational complexity in the number of spatial locations, holding other model dimensions fixed. The dense SpatialPCA implementation includes quadratic operations in the number of spatial locations, although low-rank approximations and a sparse-kernel option are also available. Computational complexity with respect to the number of spatial locations is important in this research regime, and methods have been proposed with the goal of linear computational complexity (Weber et al., 2023).
+
+19
+
+6.2 Spatially orthogonal factors in the DLPFC
+
+One defining feature of the DLPFC dataset provided by Maynard et al. (2021) is the joint availability of manual annotations of the cortical layers and white matter, together with the spatial transcriptomics measurements. This additional information about the structure of the tissue has enabled researchers to analyze gene expression patterns within the laminar structure as well as to identify non-laminar spatial patterns. We build on the analyses of Maynard et al. (2021) by developing a supervised laminae-specific PCA-like framework that conditions on the laminar structure, and use SOFM for studying general (i.e. potentially non-laminar) spatial modes of gene expression covariation.
+
+6.2.1 Modes of gene expression covariation within the laminar structure We extend Maynard et al. (2021)’s analysis to characterize gene expression coefficients associated with the cortical layers by developing a model that conditions on the layers as the spatial loadings. Specifically, we develop an extension of the probabilistic PCA method where the spatial loadings U are fixed to an orthogonalization of the laminar structure, obtained by normalizing the columns of the layer-indicator matrix, and the eigenvalue parameters L and σ
+
+2 are estimated using EM. We call this model Laminae-PCA, and use it as a supervised anatomical reference for comparison with SOFM. Please see Appendix Section 12 for more details on the model and methodology.
+
+6.2.2 SOFM: General (potentially non-laminar) modes of gene expression covariation In addition to laminar results, Maynard et al. (2021) identified non-laminar spatially variable genes, including HBB, IGKC, and NPY, with expression patterns associated with blood, immune, and neuronal cell populations, respectively, using methods to identify spatially variable genes (Svensson et al., 2018). We continue this line of scientific reasoning using SOFM and examine whether genes highlighted in the original study receive large-magnitude coefficients in the SOFM decomposition. In particular, we find that HBB and IGKC, which are associated with blood and immune cell populations, respectively, occur among the genes with the most extreme coefficients in one or more SOFM factors.
+
+6.2.3 Results
+
+The SOFM model was fitted using k = 7 factors and 400 held-out spots chosen at random on the tissue section. PCA and Laminae-PCA were also fitted using 7 components to provide directly comparable representations. Following Algorithm 1, the domain of sill values was set to {1, 5, 10, 50, 100, 500, 1000, 5000}, and the estimated sill was φˆ = 500 for the filtered and full-gene analyses, and φˆ = 100 for the 3000-HVG analysis. The length scale domain 20
+
+was set to {0.5, 1, 2, 4}, and the estimates for the filtered analysis are visualized in Figure 2.
+
+The algorithm ran on 32 cores in 38.51 seconds for the filtered analysis, 88.92 seconds for the full-gene analysis, and 18.51 seconds for the 3000-HVG analysis.
+
+We report the top 10 genes with the largest positive and negative coefficients for each factor from each of the models in Appendix Section 10. Using the filtered dataset, the spatial loadings for the three models are shown in Figure 3. We also report whether HBB and IGKC occur among the top 10 genes with the largest positive or negative coefficients for the three models in Tables 1 and 2, for the filtered and 3000-HVG analyses, respectively. Because the sign of each factor is arbitrary, positive and negative coefficients indicate opposite directions along a factor, but should not be interpreted intrinsically as enrichment or depletion. We report the following exploratory findings:
+
+• In Figure 3, SOFM’s first factor shows its largest-magnitude values in the white matter region. The second factor is associated with both layers 1 and 6, and the third factor is associated with a large portion of layer 5. The fourth factor potentially captures a non-laminar factor described below. The fifth factor contrasts layers 2 and 5, which have positive values (red), with layer 3, which has negative values (blue). The blue to red transition in factor 6 appears to correspond primarily to layer 4.
+
+• In Figure 3, SOFM’s Factor 7 appears to be non-laminar and has HBB as the gene with the largest negative coefficient (Figure 6). HBB was one of the non-laminar spatially variable genes highlighted by Maynard et al. (2021).
+
+• In the filtered gene analysis, neither IGKC nor HBB occurs among the 10 genes with the largest positive or negative coefficients for any Laminae-PCA factor (Figure 8).
+
+• SOFM’s Factor 6 in the 3000-HVG analysis (Figure 9) appears to be non-laminar and has HBB as the gene with the largest positive coefficient and IGKC as the gene with the largest negative coefficient. Thus, HBB and IGKC contribute in opposite directions to this factor. Four additional immunoglobulin genes also have large negative coefficients on this factor.
+
+• SOFM’s Factor 7 in the 3000-HVG analysis (Figure 9) has HBB and IGKC as the top two genes with the largest negative coefficients.
+
+• Figure 2 shows the spatial distribution of length scales estimated by SOFM. The estimated length scales vary across the tissue and appear qualitatively strongest in the first cortical layer.
+
+• Figure 2 shows that the first three SOFM factors have larger per-factor contributions to the empirical covariance than the corresponding Laminae-PCA factors.
+
+While the laminar structure is fundamental for understanding anatomical and functional axes of spatial variation in gene expression in the DLPFC, these results provide evidence of 21
+
+Figure 2: (Left) Estimated direction-specific length scales from running Algorithm 1 on the filtered DLPFC data. (Middle) Proportion variance explained pve = diag(U ′SU)/tr(S) with respect to the empirical covariance matrix S comparing loadings matrices U from three models. Note, PCA serves as an upper bound on proportion variance explained of the empirical covariance matrix. (Right) Percent variance explained pve = diag(U ′ΣU)/tr(Σ) with respect to the spatial prior covariance matrix Σ. Please see Appendix Section 13 for details.
+
+strong additional modes of spatial variation in the data, and are consistent with the nonlaminar findings of Maynard et al. (2021). These results provide additional evidence that blood- and immune-associated spatial expression patterns may contribute to major modes of covariation alongside patterns associated with neuronal cell populations and anatomical structure. In future research, we plan to develop a formal inferential procedure for identifying genes associated with each SOFM factor, extending beyond the current ranking of genes by their positive and negative coefficients.
+
+22
+
+Figure 3: (Top) SOFM spatial loadings in the DLPFC using the filtered dataset. (Middle) PCA spatial loadings for comparison. (Bottom) Laminae-PCA loadings constructed from the manual cortical-layer and white-matter annotations provided by Maynard et al. (2021).
+
+The columns show Factors 1–7, ordered by decreasing pseudo-eigenvalue. From left to right, the Laminae-PCA loadings correspond to white matter, layer 3, layer 1, layer 5, layer 2, layer 6, and layer 4. Positive and negative colors indicate opposite factor directions; the sign of each factor is arbitrary.
+
+23
+
+Table 1: Occurrence of HBB and IGKC among the top 10 genes with the largest positive or negative coefficients for each factor and method in the filtered gene analysis.
+
+SOFM Laminae PCA
+
+Gene Positive Negative Positive Negative Positive Negative IGKC Factor 2 Factor 4 Factor 2
+
+HBB Factor 7 Factor 3 Factor 7
+
+Table 2: Occurrence of HBB and IGKC among the top 10 genes with the largest positive or negative coefficients for each factor and method in the 3000-HVG analysis.
+
+SOFM (HVG) Laminae (HVG) PCA (HVG)
+
+Gene Positive Negative Positive Negative Positive Negative IGKC Factor 2 Factor 3 Factor 6 Factor 7 Factor 6 Factor 4 Factor 5 Factor 7 Factor 2 Factor 3 HBB Factor 5 Factor 6 Factor 4 Factor 7 Factor 6
+
+Factor 5 Factor 6 Factor 7 Factor 4
+
+7 Case Study: NDVI of sub-Saharan conterminous Africa 7.1 Phenology and the GIMMS data collection
+
+Phenology is the study of seasonal dynamics and trends of vegetation activity. In recent years, satellite remote sensing has been used to characterize and monitor dynamics in phenology over both space and time (Zhang et al., 2003). The normalized difference vegetation index (NDVI) is the most widely used index for studying phenological dynamics from space-borne sensors. This index uses spectral reflectance in two spectral regions that capture photosynthetic activity of plants. The red band (RED; 0.6-0.7μm) corresponds to the spectrum of light absorbed by photosynthetically active biomass, whereas, the near-infrared radiation (NIR; 0.7-1.1 μm) is strongly reflected by healthy photosynthetic biomass. NDVI is calculated as follows,
+
+NDVI = NIR − RED
+
+NIR + RED
+
+The Advanced Very-High-Resolution Radiometer (AVHRR) has been collecting images in these spectral bands across multiple satellite missions since 1981 (Ehrlich et al., 1994).
+
+These images are preprocessed and productized into a collection of bi-weekly NDVI global measurements at 1/12 degrees spatial resolution known as the Global Inventory Modeling 24
+
+and Mapping Studies (GIMMS) (Pinzon et al., 2023). This dataset is particularly attractive because the NDVI bi-weekly measurements are based on a composite of images collected daily within each bi-weekly interval. As a result, pixel values in images corrupted by atmospheric effects, particularly clouds, are systematically removed yielding high fidelity decadal-scale time series of terrestrial ecosystem dynamics (Fensholt and Proud, 2012).
+
+7.2 Scientific question of interest
+
+Here is our scientific question of interest: by conditioning on long-range spatial dependence of phenological signatures at continental scale, can SOFM estimate useful spatial modes of temporal variation on short time scales (e.g. 1 year)?
+
+This use case is important for scientists who wish to understand large-scale environmental patterns and dynamics when data may only be available for a short time period.
+
+PCA may struggle in these settings due to the high spatial dimension (the 1-year study has 239318 spatial locations and 24 temporal observations), whereas the regularization imposed by the spatial prior in SOFM may prove useful. For this analysis we examine dynamics in NDVI at continental scale over Africa. We use the full 40-year time series as a benchmark to compare our model results from fitting to a single year of data. The 40-year data will help give a sense of major climate regions in general, whereas results from the last year in the dataset may have departures due to noise variation in the climate system, due to climate change (that is, change in the trends of the climate system) (Piao et al., 2019). To that end, we run SOFM and PCA on a single year of GIMMS data and compare the results to running PCA on the full 40 years of data (984 temporal observations). Specifically, we compare results from 01/08/2022-12/24/2022 in the single year study, and from 01/08/1982- 12/24/2022 in the 40 year study. Both studies model sub-Saharan conterminous Africa, and the data are processed by subtracting the mean spatial vector from each time point, as assumed under both the SOFM and PCA models.
+
+7.3 Spatially orthogonal phenological regions in sub-Saharan Africa The estimates of SOFM’s nonstationary spatial covariance are presented in Figure 4. In the left side of the figure, latitudinal length scales λlat,i are plotted for each ith pixel and the longitudinal length scales λlon,i are plotted on the right. In both directions of dependence, we see stronger spatial dependence in the Sahel and sub-humid tropics, whereas climate transition regions from the Sahara to the Sahel and from the Sahel to the humid tropics, where climate gradients are weaker, there is less spatial dependence.
+
+Continuing our analysis of Figure 4, the variance explained by the SOFM model follows closely that of PCA because the PCA represents the upper bound on this metric. When we inspect the amount of variance explained with respect to the spatial prior, the SOFM model is relatively stable, whereas PCA components decrease to 0. The first component of 25
+
+Figure 4: (Left) Latitudinal and longitudinal length scales estimated by SOFM. Dependence ranges from 0 to 3 degrees throughout the subcontinent. (Right) Percent variance explained plots for the empirical covariance matrix and the spatial prior covariance matrix.
+
+both models captures about 50 percent of the total variance. Cross-checking Figure 5, the first factor corresponds to anti-correlated seasonal dynamics of the northern and southern hemispheres of the continent. The proportion of explained variance for the remaining factors drops off quickly. However, many of those factors are spatially similar to the factors found in the model estimated from the full 40-year time series.
+
+By comparing results from the model estimated from a single year of data with results from the model estimated using 40-years of data, we find that SOFM’s single year model identifies a novel spatial pattern not present in corresponding results from PCA. In Figure 5, the second factor from the 40-year PCA model shows loadings that have the largest magnitudes in the humid-tropics. However, the corresponding results from the 1-year SOFM model include two subregions identified in the 40-year PCA model that are not captured by the 1-year PCA model: a subregion in the eastern humid tropics near South Sudan and another in Mozambique. While the 1-year PCA model does not capture these regions from the 40-year PCA model, SOFM does capture these missing regions in its third factor, demonstrating that spatial regularization allows SOFM to find underlying spatial factors that PCA does not find, and those factors are corroborated by long term 40-year patterns.
+
+An interesting next step in this analysis would be to understand why SOFM breaks the humid tropics into these two regions compared to the 40 year model. We leave this for future research.
+
+8 Discussion
+
+In this work, we derived the sampling distribution of the singular value decomposition of a spatially-distributed multivariate matrix under the repeated eigenvalue assumption in the principal component framework (Proposition 1). In applied settings, this model is useful as the loadings themselves tend to be spatially distributed. Using this sampling distribution as a prior on orthogonal loadings of a probabilistic PCA model, we prove the maximum a 26
+
+Figure 5: (Top) SOFM run on a single year of data. (Middle) PCA run on a single year of data. (Bottom) PCA run on 40 years of data.
+
+posteriori orthogonal loadings are the eigenvectors of (S + 1 nΣ) (Theorem 1). This theorem is useful for interpretative purposes, as well as for methodological purposes as estimation can be carried out once for a larger number of factors and then pruned as necessary. As the spatial dimension of our applications is large and the eigendecomposition of (S + 1 nΣ) is not feasible, we provide a probabilistic PCA approach to inference and estimation, yielding a linear-time algorithm with respect to the number of spatial locations for MAP estimation of the orthogonal loadings.
+
+The problem of estimating the underlying spatial dependence structure is also addressed in this work. Under smoothness assumptions of the latitudinal and longitudinal length scales of a nonstationary covariance model, we extend our methodology for MAP inference of the orthogonal loadings when spatial locations are held-out. Using this approach, the held-out predictive distribution is maximized with respect to the length scale parameters. To our knowledge, this approach for estimating the underlying nonstationary spatial covariance is the first of its kind in the application areas covered in this paper.
+
+Our resulting spatially orthogonal factor model provided interpretable results in both case studies. In the spatial transcriptomics case study in the dorsolateral prefrontal cortex brain region, our model identified spatial factors associated with cortical layers, as well as nonlaminar blood- and immune-associated gene expression patterns, consistent with findings from Maynard et al. (2021). The corresponding gene coefficients also identified additional genes associated with these factors. In the environmental science case study, we ran SOFM on a single year of NDVI data to demonstrate the benefits of prior spatial estimation as well as spatial regularization in this setting. We checked these results by showing the resulting 27
+
+phenological regions were not inconsistent with a related model fit to 40 years of data.
+
+Moving forward, in the environmental science applications, there are opportunities to extend our model to incorporate temporal dependence in the latent variable or to derive a new prior distribution where the loadings themselves evolve through time. In the spatial transcriptomics setting, there is an opportunity to extend our methodology by developing formal inferential procedures for identifying genes associated with each SOFM factor.
+
+9 Code availability
+
+Code for running SOFM can be found at https://github.com/daniel-s-cunha/SOFM and the software package can be installed using pip install sofm.
+
+References
+
+Absil, P.-A., Mahony, R., and Sepulchre, R. (2008). Optimization algorithms on matrix manifolds. Princeton University Press.
+
+Amezquita, R. A., Lun, A. T., Becht, E., Carey, V. J., Carpp, L. N., Geistlinger, L., Marini, F., Rue-Albrecht, K., Risso, D., Soneson, C., et al. (2020). Orchestrating single-cell analysis with Bioconductor. Nature Methods, 17(2):137–145.
+
+Craven, P. and Wahba, G. (1978). Smoothing noisy data with spline functions: estimating the correct degree of smoothing by the method of generalized cross-validation. Numerische Mathematik, 31(4):377–403.
+
+Cressie, N. and Johannesson, G. (2008). Fixed rank kriging for very large spatial data sets.
+
+Journal of the Royal Statistical Society Series B: Statistical Methodology, 70(1):209–226.
+
+Crowell, H. L., Dong, Y., Billato, I., Cai, P., Emons, M., Gunz, S., Guo, B., Li, M., Mahmoud, A., Manukyan, A., et al. (2026). Orchestrating spatial transcriptomics analysis with Bioconductor. bioRxiv.
+
+Dong, K. and Zhang, S. (2022). Deciphering spatial domains from spatially resolved transcriptomics with an adaptive graph attention auto-encoder. Nature Communications, 13(1):1739.
+
+Ehrlich, D., Estes, J., and Singh, A. (1994). Applications of noaa-avhrr 1 km data for environmental monitoring. Remote Sensing, 15(1):145–161.
+
+Eilers, P. H. and Marx, B. D. (1996). Flexible smoothing with b-splines and penalties.
+
+Statistical Science, 11(2):89–121.
+
+28
+
+Eilers, P. H. and Marx, B. D. (2003). Multivariate calibration with temperature interaction using two-dimensional penalized signal regression. Chemometrics and Intelligent Laboratory Systems, 66(2):159–174.
+
+Fensholt, R. and Proud, S. R. (2012). Evaluation of earth observation based global long term vegetation trends—comparing gimms and modis global ndvi time series. Remote Sensing of Environment, 119:131–147.
+
+Green, A. A., Berman, M., Switzer, P., and Craig, M. D. (1988). A transformation for ordering multispectral data in terms of image quality with implications for noise removal.
+
+IEEE Transactions on Geoscience and Remote Sensing, 26(1):65–74.
+
+Guo, Y., Liu, J., Cheng, H., and Ma, Y. (2026). JADE: Joint alignment and deep embedding for multi-slice spatial transcriptomics. Advances in Neural Information Processing Systems, 38:25715–25748.
+
+Hannachi, A., Jolliffe, I. T., Stephenson, D. B., et al. (2007). Empirical orthogonal functions and related techniques in atmospheric science: A review. International Journal of Climatology, 27(9):1119–1152.
+
+Hotelling, H. (1933). Analysis of a complex of statistical variables into principal components.
+
+Journal of Educational Psychology, 24(6):417.
+
+Hu, J., Li, X., Coleman, K., Schroeder, A., Ma, N., Irwin, D. J., Lee, E. B., Shinohara, R. T., and Li, M. (2021). SpaGCN: Integrating gene expression, spatial location and histology to identify spatial domains and spatially variable genes by graph convolutional network.
+
+Nature Methods, 18(11):1342–1351.
+
+Hunter, D. R. and Lange, K. (2004). A tutorial on mm algorithms. The American Statistician, 58(1):30–37.
+
+James, A. T. (1964). Distributions of matrix variates and latent roots derived from normal samples. The Annals of Mathematical Statistics, 35(2):475–501.
+
+Jolliffe, I. T. and Cadima, J. (2016). Principal component analysis: a review and recent developments. Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences, 374(2065):20150202.
+
+Jun, M. and Stein, M. L. (2008). Nonstationary covariance models for global data.
+
+Keys, K. L. (2016). Projection algorithms for large scale optimization and genomic data analysis. University of California, Los Angeles.
+
+Maynard, K. R., Collado-Torres, L., Weber, L. M., Uytingco, C., Barry, B. K., Williams,
+
+S. R., Catallini, J. L., Tran, M. N., Besich, Z., Tippani, M., et al. (2021). Transcriptomescale spatial gene expression in the human dorsolateral prefrontal cortex. Nature Neuroscience, 24(3):425–436.
+
+29
+
+Muirhead, R. J. (1982). Aspects of multivariate statistical theory. John Wiley & Sons.
+
+Nychka, D., Wikle, C., and Royle, J. A. (2002). Multiresolution models for nonstationary spatial covariance functions. Statistical Modelling, 2(4):315–331.
+
+Paciorek, C. J. and Schervish, M. J. (2006). Spatial modelling using a new class of nonstationary covariance functions. Environmetrics: The Official Journal of the International Environmetrics Society, 17(5):483–506.
+
+Palla, G., Spitzer, H., Klein, M., Fischer, D., Schaar, A. C., Kuemmerle, L. B., Rybakov, S., Ibarra, I. L., Holmberg, O., Virshup, I., et al. (2022). Squidpy: a scalable framework for spatial omics analysis. Nature Methods, 19(2):171–178.
+
+Pearson, K. (1901). Liii. on lines and planes of closest fit to systems of points in space. The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science, 2(11):559–
+
+572.
+
+Pham, D., Tan, X., Balderson, B., Xu, J., Grice, L. F., Yoon, S., Willis, E. F., Tran, M., Lam, P. Y., Raghubar, A., de Croft, P. K., Lakhani, S., Vukovic, J., Ruitenberg, M. J., and Nguyen, Q. H. (2023). Robust mapping of spatiotemporal trajectories and cell–cell interactions in healthy and diseased tissues. Nature Communications, 14(7739).
+
+Piao, S., Liu, Q., Chen, A., Janssens, I. A., Fu, Y., Dai, J., Liu, L., Lian, X., Shen, M., and Zhu, X. (2019). Plant phenology and global climate change: Current progresses and challenges. Global Change Biology, 25(6):1922–1940.
+
+Pinzon, J., Pak, E., Tucker, C., Bhatt, U., Frost, G., and Macander, M. (2023). Global vegetation greenness (ndvi) from avhrr gimms-3g+, 1981–2022, ornl daac, oak ridge, tennessee, usa.
+
+Rao, A., Barkley, D., Fran ̧ca, G. S., and Yanai, I. (2021). Exploring tissue architecture using spatial transcriptomics. Nature, 596:211–220.
+
+Sch ̈onemann, P. H. (1966). A generalized solution of the orthogonal procrustes problem.
+
+Psychometrika, 31(1):1–10.
+
+Shang, L. and Zhou, X. (2022). Spatially aware dimension reduction for spatial transcriptomics. Nature Communications, 13(1):7203.
+
+Sheather, S. J. and Jones, M. C. (1991). A reliable data-based bandwidth selection method for kernel density estimation. Journal of the Royal Statistical Society: Series B, 53:683–
+
+690.
+
+Silverman, B. W. (2018). Density estimation for statistics and data analysis. Routledge.
+
+St ̊ahl, P. L., Salm ́en, F., Vickovic, S., Lundmark, A., Navarro, J. F., Magnusson, J., Giacomello, S., Asp, M., Westholm, J. O., Huss, M., et al. (2016). Visualization and analysis of gene expression in tissue sections by spatial transcriptomics. Science, 353(6294):78–82.
+
+30
+
+Stuart, T., Butler, A., Hoffman, P., Hafemeister, C., Papalexi, E., Mauck, W. M., Hao, Y., Stoeckius, M., Smibert, P., and Satija, R. (2019). Comprehensive integration of single-cell data. Cell, 177(7):1888–1902.
+
+Svensson, V., Teichmann, S. A., and Stegle, O. (2018). SpatialDE: identification of spatially variable genes. Nature Methods, 15(5):343–346.
+
+Switzer, P. and Green, A. (1984). Technical report no. 6.
+
+Tipping, M. E. and Bishop, C. M. (1999). Probabilistic principal component analysis. Journal of the Royal Statistical Society Series B: Statistical Methodology, 61(3):611–622.
+
+Townes, F. W. and Engelhardt, B. E. (2023). Nonnegative spatial factorization applied to spatial genomics. Nature Methods, 20(2):229–238.
+
+Townes, F. W., Hicks, S. C., Aryee, M. J., and Irizarry, R. A. (2019). Feature selection and dimension reduction for single-cell RNA-Seq based on a multinomial model. Genome Biology, 20(1):295.
+
+Velten, B., Braunger, J. M., Argelaguet, R., Arnol, D., Wirbel, J., Bredikhin, D., Zeller, G., and Stegle, O. (2022). Identifying temporal and spatial patterns of variation from multimodal data using MEFISTO. Nature Methods, 19:179–186.
+
+Weber, L. M., Saha, A., Datta, A., Hansen, K. D., and Hicks, S. C. (2023). nnSVG for the scalable identification of spatially variable genes using nearest-neighbor Gaussian processes. Nature Communications, 14(1):4059.
+
+Wolf, F. A., Angerer, P., and Theis, F. J. (2018). SCANPY: large-scale single-cell gene expression data analysis. Genome Biology, 19(1):15.
+
+Xu, C., Jin, X., Wei, S., Wang, P., Luo, M., Xu, Z., Yang, W., Cai, Y., Xiao, L., Lin, X., et al. (2022). DeepST: identifying spatial domains in spatial transcriptomics by deep learning. Nucleic Acids Research, 50(22):e131.
+
+Xu, H., Fu, H., Long, Y., Ang, K. S., Sethi, R., Chong, K., Li, M., Uddamvathanak, R., Lee, H. K., Ling, J., et al. (2024). Unsupervised spatially embedded deep representation of spatial transcriptomics. Genome Medicine, 16(1):12.
+
+Yang, J., Wang, L., Liu, L., and Zheng, X. (2024). GraphPCA: a fast and interpretable dimension reduction algorithm for spatial transcriptomics data. Genome Biology, 25(287).
+
+Zeira, R., Land, M., Strzalkowski, A., and Raphael, B. J. (2022). Alignment and integration of spatial transcriptomics data. Nature Methods, 19(5):567–575.
+
+Zhang, X., Friedl, M. A., Schaaf, C. B., Strahler, A. H., Hodges, J. C., Gao, F., Reed, B. C., and Huete, A. (2003). Monitoring vegetation phenology using modis. Remote Sensing of Environment, 84(3):471–475.
+
+31
+
+Zhao, E., Stone, M. R., Ren, X., Guenthoer, J., Smythe, K. S., Pulliam, T., Williams,
+
+S. R., Uytingco, C. R., Taylor, S. E., Nghiem, P., et al. (2021). Spatial transcriptomics at subspot resolution with BayesSpace. Nature Biotechnology, 39(11):1375–1384.
+
+32
+
+10 Appendix: DLPFC results
+
+Figures 6, 7, 8, and 9 provide a summary of the spatial loadings and genes with the largest positive and negative coefficients for SOFM, regular PCA, and Laminae-PCA on the filtered gene set, as well as SOFM using the top 3000 HVGs. Note that since the sign of each factor is arbitrary, positive and negative coefficients indicate opposite directions along a factor, but should not be interpreted intrinsically as enrichment or depletion. In addition, Figures 10 and 11 provide results for the full-gene analysis (33,538 genes), which may be compared to the main results shown in Figures 2 and 3 for the filtered analysis (14,638 genes).
+
+33
+
+Figure 6: Genes with the largest positive and negative coefficients for the SOFM model.
+
+34
+
+Figure 7: Genes with the largest positive and negative coefficients for regular PCA.
+
+35
+
+Figure 8: Genes with the largest positive and negative coefficients for Laminae-PCA.
+
+36
+
+Figure 9: Genes with the largest positive and negative coefficients for the SOFM model fitted using the top 3000 highly variable genes (HVGs).
+
+37
+
+Figure 10: (Left) Estimated direction-specific length scales from running Algorithm 1 using the full-gene (33,538 genes) DLPFC dataset. (Middle) Proportion variance explained pve = diag(U
+
+′SU)/tr(S) with respect to the empirical covariance matrix S comparing loadings matrices U from three models. Note, PCA serves as an upper bound on proportion variance explained of the empirical covariance matrix. (Right) Percent variance explained pve = diag(U
+
+′ΣU)/tr(Σ) with respect to the spatial prior covariance matrix Σ. Please see Appendix
+
+Section 13 for details.
+
+Figure 11: Results using the full-gene (33,538 genes) DLPFC dataset. (Top) SOFM spatial loadings in the DLPFC. (Middle) PCA spatial loadings for comparison. (Bottom) LaminaePCA loadings constructed from the manual cortical-layer and white-matter annotations provided by Maynard et al. (2021). The columns show Factors 1–7, ordered by decreasing pseudo-eigenvalue. From left to right, the Laminae-PCA loadings correspond to white matter, layer 3, layer 1, layer 5, layer 2, layer 6, and layer 4. Positive and negative colors indicate opposite factor directions; the sign of each factor is arbitrary.
+
+38
+
+11 Appendix: Proofs of Proposition 1 and Theorem 1
+
+This section contains the proof for Proposition 1.
+
+11.1 Derivation of Jacobian for prior distribution
+
+The derivation is broken into three successive Jacobian steps. The first is the SVD transformation of an ν × m matrix, the second is inverting the singular values, and the third is parameterizing the singular values to align with the PCA model formulation.
+
+To that end, let Y
+
+(0) = V DU′ where V ∈ O(ν), U ∈ O(m), and the upper m × m entries of D are diagonal, and the lower (ν − m) × m entries are zero. That is, we handle the case ν ≥ m here. Take the differential of Y
+
+(0)
+
+, dY (0) = dV DU′ + V dDU′ + V DdU′
+
+Left multiply by V
+
+′ and right multiply by U to isolate the diagonal entries, V ′ dY (0)U = (V ′ dV )D + dD + D(U
+
+′ dU)
+
+′
+
+Since V is orthogonal we have V
+
+′V = Iν, and thus dV ′V + V′dV = 0, yielding the skew symmetric relationship V
+
+′dV = −(V′dV )′
+
+. The same follows for U. Taking the exterior product (V
+
+′dY (0)U) = det(V )m det(U)ν
+
+(dY (0)) = (dY (0)) since U, V are orthogonal. Define Ω = V
+
+′dV and Ψ = U′dU for notational simplicity. We need to isolate all degrees of freedom in V
+
+′dY (0)U and take the exterior product over those degrees of freedom. To that end, break V and U into three and two sets of columns V = (V1:k, Vk+1:m, Vm+1:ν) and U = (U1:k, Uk+1:m).
+
+Then, V ′ dY (0)U =   V ′ 1:k dY (0)U1:k V ′ 1:k dY (0)Uk+1:m V ′ k+1:mdY (0)U1:k V
+
+′ k+1:mdY (0)Uk+1:m
+
+V
+
+′ m+1:νdY (0)U1:k V
+
+′ m+1:νdY (0)Uk+1:m
+
+
+
+
+
+We will evaluate the exterior product of each block separately.
+
+39
+
+11.1.1 Exterior product of top left block
+
+The top left block V
+
+′
+
+1:k dY (0)U1:k has full degrees of freedom. On the diagonal, we simply have Vk i=1 dDii. On the off-diagonal, we have by skew-symmetry, ^ i̸=j (V ′
+
+1:kdY (0)U1:k) = ^ k i=1 ^ k j=i+1
+
+(ΩijDjj − DiiΨij )
+
+! ^ k i=1 i ^−1 j=1
+
+(ΩijDjj − DiiΨij )
+
+!
+
+= ^ k i=1 ^ k j=i+1
+
+(ΩijDjj − DiiΨij )(−ΩijDii + DjjΨij )
+
+= ^ k i=1 ^ k j=i+1 (ΩijΨijD 2 jj − ΩijΨijD 2 ii)
+
+= Y k j>i
+
+D 2 jj − D 2 ii^ k i=1 ^ k j=i+1 ΩijΨij
+
+11.1.2 Exterior product of middle left and top right blocks Now we take the exterior product of the middle left and top right blocks, which do not have any diagonal entries.
+
+^ (V ′ k+1:mdY (0)U1:k)∗
+
+^ (V ′
+
+1:kdY (0)Uk+1:m) = ^m i=k+1 ^ k j=1
+
+(ΩijDjj − Dk+1,k+1Ψij )
+
+^ k i=1 ^m j=k+1
+
+(ΩijDk+1,k+1 − DiiΨij )
+
+= ^m i=k+1 ^ k j=1
+
+(ΩijDjj − Dk+1,k+1Ψij )(−ΩijDk+1,k+1 + DjjΨij )
+
+= ^m i=k+1 ^ k j=1 ΩijΨijD 2 jj − ΩijΨijD 2 k+1,k+1 = Y k j=1 (D 2 jj − D 2 k+1,k+1) (m−k) ^m i=k+1 ^ k j=1 ΩijΨij 11.1.3 Exterior product of middle right block
+
+The middle right block has both diagonal and off-diagonal degrees of freedom for consideration. However, since the diagonal term is the same for all subdiagonal and superdiagonal entries of this block, we only consider the subdiagonal degrees of freedom by skew-symmetry 40
+
+of Ω and Ψ. ^ V ′ k+1:mdY (0)Uk+1:m = (dDk+1,k+1)
+
+^m i=k+1 ^m j=i+1
+
+Dk+1,k+1(Ωij − Ψij )
+
+= (dDk+1,k+1)D ( m−k 2 )
+
+k+1,k+1 ^m i=k+1 ^m j=i+1 (Ωij − Ψij )
+
+11.1.4 Exterior product of the bottom left block
+
+^ (V ′ m+1:νdY (0)U1:k) = ^ν i=m+1 ^ k j=1
+
+(ΩijDjj − 0Ψij )
+
+= Y k j=1 D ν−m jj ^ν i=m+1 ^ k j=1 Ωij
+
+11.1.5 Exterior product of the bottom right block
+
+^ (V ′ m+1:νdY (0)Uk+1:m) = ^ν i=m+1 ^m j=k+1
+
+(ΩijDk+1,k+1 − 0Ψij )
+
+= D (ν−m)(m−k) k+1,k+1 ^ν i=m+1 ^m j=k+1 Ωij
+
+11.1.6 Wedging the blocks together
+
+Wedging each of the 6 blocks together yields,
+
+(dY (0)) = Y k j>i
+
+D 2 jj − D 2 iiY k j=1 (D 2 jj − D 2 k+1,k+1) (m−k)D (ν−m)(m−k)+( m−k 2 )
+
+k+1,k+1 Y k j=1 D ν−m jj (dD)
+
+^ν i=m+1 ^m j=1 Ωij ^m i=k+1 ^m j=i+1 (Ωij − Ψij ) ^m i=k+1 ^ k j=1 ΩijΨij ^ k i=1 ^ k j=i+1 ΩijΨij 11.1.7 Jacobian of inverse transformation
+
+The next step in prior distribution development is to invert the upper m × m block diagonal of D, which has k+1 degrees of freedom. Let Bjj = D
+
+−1 jj for j = 1, . . . , k+1 and 0 otherwise.
+
+41
+
+For each of those k + 1 transformations, we have the Jacobian dDjj = −B −2 jj dBjj . Thus, taking the exterior product of both sides results in,
+
+(dD) = k ^ +1 j=1 dDjj = k ^ +1 j=1 (−B −2 jj dBjj ) = k Y +1 j=1 B −2 jj !
+
+(dB)
+
+Plugging this back into the full Jacobian transformation, we have, (dY (0)) = Y k j>i
+
+B −2 jj − B −2 ii Y k j=1 (B −2 jj − B −2 k+1,k+1) (m−k)B −(ν−m)(m−k)−( m−k 2 )−2 k+1,k+1 Y k j=1 B −(ν−m)−2 jj (dB)
+
+^ν i=m+1 ^m j=1 Ωij ^m i=k+1 ^m j=i+1 (Ωij − Ψij ) ^m i=k+1 ^ k j=1 ΩijΨij ^ k i=1 ^ k j=i+1 ΩijΨij Note that after this part of the transformation, we think of UB−2U ′ as a precision matrix as opposed to a covariance matrix and as such we will also swap notation for the corresponding precision parameter, writing Σ in place of Φ−1to denote its new interpretation.
+
+11.1.8 Jacobian of PCA transformation
+
+The last transformation is needed to create alignment with the PCA model formulation. To that end, define the k × k diagonal matrix L as a mapping of the first k singular values and the parameter σ as a mapping of the k + 1 singular value as follows, Bjj = ( (L 2 jj + σ 2 )
+
+1
+
+2 , for j = 1, . . . , k
+
+(σ 2 )
+
+1
+
+2 , for j = k + 1
+
+With a Jacobian for j = 1, ..., k dBjj = d(L 2 jj + σ 2 )
+
+1 2 = 1 2 (L 2 jj + σ 2 )
+
+− 1
+
+2 (2LjjdLjj + dσ2
+
+)
+
+And for k + 1, dBk+1,k+1 = d(σ
+
+2
+
+)
+
+1 2 = 1 2 (σ 2 )
+
+− 1 2 dσ2 42
+
+In order to plug these results back into the final equation, there are a few steps. First note, (dB) = k ^ +1 j=1 dBjj = ^ k j=1 1 2 (L 2 jj + σ 2 )
+
+− 1
+
+2 (2LjjdLjj + dσ2
+
+) ∧ 1 2 (σ 2 )
+
+− 1
+
+2 dσ2
+
+Only the product of the dL terms and a single dσ2remain since dσ2 ∧ dσ2 = 0, thus, (dB) = ^ k j=1 (L 2 jj + σ 2 )
+
+− 1 2 (LjjdLjj ) ∧ 1 2 (σ 2 )
+
+− 1 2 dσ2 = Y k j=1 (L 2 jj + σ 2 )
+
+− 1
+
+2Ljj!
+
+1 2 (σ 2 )
+
+− 1 2 (dL)(dσ2 )
+
+There are a number of terms to evaluate for the transformation, Y k j>i
+
+B −2 jj − B −2 ii = Y k j>i
+
+(L 2 jj + σ 2 )
+
+−1 − (L2 ii + σ 2 )
+
+−1
+
+The next term, Y k j=1 (B −2 jj − B −2 k+1,k+1) (m−k) = Y k j=1 ((L 2 jj + σ 2 )
+
+−1 − σ−2
+
+)
+
+(m−k)
+
+The next term, B −(ν−m)(m−k)−( m−k 2 )−2 k+1,k+1 = (σ 2∗ 1 2 )
+
+−(ν−m)(m−k)−( m−k 2 )−2 The last term, Y k j=1 B −(ν−m)−2 jj = Y k j=1 ((L 2 jj + σ 2 )
+
+1
+
+2 )
+
+−(ν−m)−2 = Y k j=1 (L 2 jj + σ 2 )
+
+− (ν−m)+2 2
+
+Putting all of these terms together, we arrive at the following full Jacobian of the SVD, 43
+
+inverse, and PCA-reparameterization transformations,
+
+(dY (0)) = Y k j>i
+
+(L 2 jj + σ 2 )
+
+−1 − (L2 ii + σ 2 )
+
+−1
+
+Y k j=1 ((L 2 jj + σ 2 )
+
+−1 − σ−2
+
+)
+
+(m−k)
+
+!
+
+(σ 2∗ 1 2 )
+
+−(ν−m)(m−k)−( m−k 2 )−2
+
+Y k j=1 (L 2 jj + σ 2 )
+
+− (ν−m)+2 2 !
+
+Y k j=1 (L 2 jj + σ 2 )
+
+− 1
+
+2Ljj!
+
+1 2 (σ 2 )
+
+− 1 2 (dL)(dσ2 )
+
+^ν i=m+1 ^m j=1 Ωij ^m i=k+1 ^m j=i+1 (Ωij − Ψij ) ^m i=k+1 ^ k j=1 ΩijΨij ^ k i=1 ^ k j=i+1 ΩijΨij = Y k j>i
+
+(L 2 jj + σ 2 )
+
+−1 − (L2 ii + σ 2 )
+
+−1
+
+Y k j=1 ((L 2 jj + σ 2 )
+
+−1 − σ−2
+
+)
+
+(m−k)
+
+!
+
+(σ 2∗ 1 2 )
+
+−(ν−m)(m−k)−( m−k 2 )−3
+
+Y k j=1 (L 2 jj + σ 2 )
+
+− (ν−m)+3 2 !
+
+1
+
+2 det(L)(dL)(dσ2)
+
+^ν i=m+1 ^m j=1 Ωij ^m i=k+1 ^m j=i+1 (Ωij − Ψij ) ^m i=k+1 ^ k j=1 ΩijΨij ^ k i=1 ^ k j=i+1 ΩijΨij 11.2 Derivation of prior distribution
+
+Following the above sections, we assume the ν × m dimensional Y
+
+(0) ∼ N(0, Φ) where Φ is an m×m spatial covariance matrix and only the first k+1 singular values of Y
+
+(0) are unique.
+
+Define Σ := Φ−1 as reinterpreting the precision Φ−1 as a covariance parameter Σ after the transformation J(D → B−1). Let D0 be the first m rows of D, B0 be the first m rows of B, and U0 be the first k columns of U. Conditioned on these assumptions, we proceed with the three transformations (SVD, inverse of D0, PCA reparameterization) and plug in the 44
+
+Jacobians derived above at each of the following steps, p(Y
+
+(0))(dY (0)) ∝ exp
+
+− 1 2 tr(Y (0)′ Y (0)Φ−1 )
+
+(dY (0)) ∝ exp − 1 2 tr(UD2 0U ′Φ−1 )
+
+Y k j>i
+
+D 2 jj − D 2 iiY k j=1 (D 2 jj − D 2 k+1,k+1) (m−k)D (ν−m)(m−k)+( m−k 2 )
+
+k+1,k+1 Y k j=1 D ν−m jj (dD) ∝ exp − 1 2 tr(UB−2 0 U ′Σ)
+
+Y k j>i
+
+B −2 jj − B −2 ii Y k j=1 (B −2 jj − B −2 k+1,k+1) (m−k)B −(ν−m)(m−k)−( m−k 2 )−2 k+1,k+1 Y k j=1 B −(ν−m)−2 jj (dB) ∝ exp − 1 2 tr(U
+
+(L 2 + σ2 Ik)
+
+1 2 0k,m−k 0m−k,k (σ 2 )
+
+1 2 Im−k −2 U ′Σ)!
+
+Y k j>i
+
+(L 2 jj + σ 2 )
+
+−1 − (L2 ii + σ 2 )
+
+−1
+
+Y k j=1 ((L 2 jj + σ 2 )
+
+−1 − σ−2
+
+)
+
+(m−k)
+
+!
+
+(σ 2∗ 1 2 )
+
+−(ν−m)(m−k)−( m−k 2 )−3
+
+Y k j=1 (L 2 jj + σ 2 )
+
+− (ν−m)+3 2 !
+
+1
+
+2 det(L)(dL)(dσ2)
+
+Finally, redefining U := U(1:k) as the first k columns of the full orthogonal matrix, we can rewrite the prior in the form used for inference, p(U, L, σ2|Σ) ∝ exp −
+
+1 2 tr(U
+
+(L 2 + σ2 Ik)
+
+−1 − σ−2
+
+Ik
+
+U ′Σ + 1 σ 2 Σ)
+
+Y k j>i
+
+(L 2 jj + σ 2 )
+
+−1 − (L2 ii + σ 2 )
+
+−1
+
+Y k j=1 ((L 2 jj + σ 2 )
+
+−1 − σ−2
+
+)
+
+(m−k)
+
+!
+
+(σ 2∗ 1 2 )
+
+−(ν−m)(m−k)−( m−k 2 )−3
+
+Y k j=1 (L 2 jj + σ 2 )
+
+− (ν−m)+3 2 !
+
+1 2 det(L)(dL)(dσ2 )
+
+45
+
+11.3 Proof of Theorem 1
+
+This section contains the proof of Theorem 1.
+
+11.3.1 MAP inference of orthogonal matrix U
+
+Let S = Y
+
+′Y/n, where Y has dimension n × m. The conditional (and marginal over {zi}) posterior distribution of U is proportional to,
+
+p(U|Y, L, σ2, Σ) ∝ |UL2U
+
+′ + σ2 Im| − n 2 etr(− 1 2 nS(UL2U ′ + σ2 Im)
+
+−1
+
+)
+
+etr(− 1 2 ΣU
+
+(L 2 + σ2 Ik)
+
+−1 − σ−2
+
+Ik)
+
+U
+
+′
+
+By the Woodbury Identity on the inverse covariance from the likelihood, (UL2U ′ + σ2 Im)
+
+−1 = σ−2 Im − σ −4U(L−2 + σ−2 Ik)
+
+−1U′
+
+And another application on the inner inverse,
+
+(L −2 + σ−2 Ik)
+
+−1 = σ2 Ik − σ 4 (L 2 + σ2 Ik)
+
+−1
+
+Putting them together,
+
+(UL2U ′ + σ2 Im)
+
+−1 = σ−2
+
+Im + U
+
+(L 2 + σ2 Ik)
+
+−1 − σ−2
+
+Ik
+
+U
+
+′
+
+Which leads to the proportionality of the posterior of interest,
+
+p(U|Y, L, σ2, Σ) ∝ |UL2U
+
+′ + σ2 Im| − n 2 etr(− 1 2 (nS + Σ)U
+
+(L 2 + σ2 Ik)
+
+−1 − σ−2
+
+Ik)
+
+U
+
+′
+
+To get rid of the determinant’s dependence on U, let U ̃ =
+
+U U ⊥
+
+for some U
+
+⊥ to complete the basis as a function of U,
+
+UL2U ′ + σ2 Im = U ̃
+
+L
+
+2 0k,m−k
+
+0m−k,k 0m−k,m−k
+
+U ̃′ + σ 2U ̃U ̃′ = U ̃
+
+L 2 + σ2 Ik 0k,m−k 0m−k,k σ 2 Im−k
+
+U ̃′
+
+Thus, the posterior is proportional to, p(U|Y, L, σ2, Σ) ∝ etr(−
+
+1 2 (nS + Σ)U
+
+(L 2 + σ2 Ik)
+
+−1 − σ−2
+
+Ik
+
+U ′ )
+
+The MAP value of this distribution is evaluated at,
+
+Umap = argmax U tr(U ′ (nS + Σ)U
+
+σ −2 Ik − (L 2 + σ2 Ik)
+
+−1
+
+)
+
+46
+
+By Absil et al. (2008), section 4.8.2, the critical points of this function are eigenvectors of (nS + Σ), and thus it remains to be proved which eigenvectors are the MAP. Note, since the diagonal entries of L are decreasing, the diagonal entries of (σ −2 Ik − (L 2 + σ2 Ik)
+
+−1
+
+) are decreasing. Furthermore, since Ψ := U
+
+′
+
+(nS + Σ)U is a diagonal matrix of eigenvalues of
+
+(nS + Σ), maximizing the trace amounts to choosing the largest eigenvalues in decreasing order by the rearrangement inequality.
+
+12 Appendix: Laminae-PCA
+
+In this appendix, we briefly introduce the Laminae-PCA model used in the DLPFC case study. The defining feature of Laminae-PCA is that the spatial loadings U are fixed to the normalized layer-indicator matrix constructed from the manual cortical layer and white matter annotations provided by Maynard et al. (2021). This model is useful as a supervised anatomical reference for characterizing gene expression coefficients under this structural assumption.
+
+Let Π ∈ {0, 1}
+
+(m×k) be the laminar partition, such that the sum of the columns of Π is an m-length vector of all 1’s. Then define U as the normalization of Π, such that each column of Π is divided by its norm. Then U is orthonormal, i.e. U ′U = Ik since Π was a partition.
+
+Using this construction of the loadings, a probabilistic PCA model follows as usual, yi|U, L, σ2, zi ∼ N(ULzi, σ2Im)
+
+In this setting, the E-step for zi does not change, and maximizing the Q function within the EM framework with respect to L and σ
+
+2 can be carried out using autograd.
+
+13 Appendix: Percent of Variance Explained
+
+We use percent of variance explained as a metric in our case studies to understand the performance of PCA, SOFM, and Laminae-PCA with respect to the empirical covariance matrix as well as the prior covariance matrix. Let R be the covariance matrix of interest and let V be the loadings of a specific model. Then, the percent of variance explained is calculated via, pve = tr(V ′RV )
+
+tr(R)
+
+Note that in our analysis, R can be the empirical covariance matrix, the spatial prior, or the Laminae-PCA model covariance, and the orthonormal V matrix can be from the PCA, SOFM, or Laminae-PCA models. By interchanging these, we can learn how close these models are to each other. For example, no model can perform better than PCA on the empirical covariance matrix S in terms of pve (Jolliffe and Cadima, 2016).
+
+47
+
+14 Appendix: Additional simulation study results
+
+This appendix contains additional simulation studies.
+
+Figure 12: Synthetic study of nonstationary model performance on data generated with a spatial covariance from the circular model, with σ = 10.0, a maximum lag of 20 and size of spatial domain equal to 400.
+
+Figure 13: Synthetic study of nonstationary model performance on data generated with a spatial covariance from the stationary model, with σ = 10.0, a maximum lag of 20 and size of spatial domain equal to 400.
+
+48
+
+Figure 14: Synthetic study of nonstationary model performance on data generated with a spatial covariance from the left-to-right model, with σ = 10.0, a maximum lag of 20 and size of spatial domain equal to 400.
+
+Figure 15: Synthetic study of nonstationary model performance on data generated with a spatial covariance from the circular model, with σ = 10.0, a maximum lag of 2 and size of spatial domain equal to 400.
+
+49
+
+Figure 16: Synthetic study of nonstationary model performance on data generated with a spatial covariance from the stationary model, with σ = 10.0, a maximum lag of 2 and size of spatial domain equal to 400.
+
+Figure 17: Synthetic study of nonstationary model performance on data generated with a spatial covariance from the left-to-right model, with σ = 10.0, a maximum lag of 2 and size of spatial domain equal to 400.
+
+50
+
+Figure 18: Synthetic study of nonstationary model performance on data generated with a spatial covariance from the circular model, with σ = 5.0, a maximum lag of 20 and size of spatial domain equal to 400.
+
+Figure 19: Synthetic study of nonstationary model performance on data generated with a spatial covariance from the stationary model, with σ = 5.0, a maximum lag of 20 and size of spatial domain equal to 400.
+
+51
+
+Figure 20: Synthetic study of nonstationary model performance on data generated with a spatial covariance from the left-to-right model, with σ = 5.0, a maximum lag of 20 and size of spatial domain equal to 400.
+
+Figure 21: Synthetic study of nonstationary model performance on data generated with a spatial covariance from the circular model, with σ = 5.0, a maximum lag of 2 and size of spatial domain equal to 400.
+
+52
+
+Figure 22: Synthetic study of nonstationary model performance on data generated with a spatial covariance from the stationary model, with σ = 5.0, a maximum lag of 2 and size of spatial domain equal to 400.
+
+Figure 23: Synthetic study of nonstationary model performance on data generated with a spatial covariance from the left-to-right model, with σ = 5.0, a maximum lag of 2 and size of spatial domain equal to 400.
+
+53

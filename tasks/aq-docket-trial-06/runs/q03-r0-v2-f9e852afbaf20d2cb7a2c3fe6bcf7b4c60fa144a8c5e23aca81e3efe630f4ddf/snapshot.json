@@ -1,0 +1,53 @@
+{
+  "bundle": "aq-docket-trial-06",
+  "corpus_sha256": {
+    "docs/gaoreports_gao_01_819t.txt": "2fdd710bb5ce5d602f16f35488c8520fa975b4555bcef36bbbb5aef6d95f4eee",
+    "docs/gaoreports_gao_03_971.txt": "c74f3d3bf26e3a961f24e9d59804a983a463ca158d67c39443102f7469688218",
+    "docs/gaoreports_gao_04_412t.txt": "24d0d6110fcf04fb77b1fc1cdc05753656ddbd29867dca7141c655937997e805",
+    "docs/gaoreports_gao_04_684.txt": "4cae7a5f514c7fc1b4e9a978d214cf6de93f9d0fa45355c99f21aef86d0494f4",
+    "docs/gaoreports_gao_06_387.txt": "1d1356d51f4021fb696ed73dd36ea56f5dd39c007fe3dcf23f37f49554f35367",
+    "docs/gaoreports_gao_08_148r.txt": "e13289736b8c1804cc8725cd4a31d79835a0ace5572d31d666e1968d7d424362",
+    "text/D01.txt": "0ae6cbc3566b773248aa227e790efca5dd0cd70795fc97dfca359ac2298d970b",
+    "text/D02.txt": "74498301210b26f7245f1ceacaeda955e6e9bf0953d285b3461f600a13ee812d",
+    "text/D03.txt": "d3f1d0643a60db255adab0cf86c5fe938fbdf916519326af34ba9c007254ae85",
+    "text/D04.txt": "9224117ceae1c8bc77f92045d07d48a1349296e82e63f11beddf43902f0c5bee",
+    "text/D05.txt": "cedf4150f56402a20f5eb4d02ff77b0e9b2354f7176a7727ae5357d1b33ee6cc",
+    "text/D06.txt": "aa94576896d50c6d6b655a3ff990f674fa912d7575560387e9facbca5c78b8f7",
+    "text/manifest.json": "f8c116dc078e1ae035f1c6b028478e652a051da32fb4d15dedb00d666ba15e9c"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "753b5f51914ac055d094aca2f1ca90dd2f3d4effdea774b94c6bf3b36bc9765e",
+  "independence": "One fresh context per packet. No writer history or shared memory.",
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D02, D05",
+    "id": "q03",
+    "levers": "Calculate across documents; State the rounding",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i10",
+    "status": "draft",
+    "tags": "Cross-document join; Aggregation"
+  },
+  "question_id": "q03",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "31.31%",
+    "blind solve": "",
+    "components": "- c1: 31.31%",
+    "evidence": "- D02 (Background, text line 231) [c1]: \"As of December 2002, 9,688 credit unions were federally insured\"\n- D02 (Background, text line 231) [c1]: \"credit unions that are federally chartered must be federally insured\"\n- D02 (Background, text line 233) [c1]: \"As of December 2002, 212 credit unions\"\n- D02 (footnote 8, text line 239) [c1]: \"we identified two uninsured credit unions, one was located in Idaho and the other was located in New Hampshire\"\n- D02 (Appendix I body text, text line 1179) [c1]: \"As of December 2002, 214 state- chartered credit unions lacked federal deposit insurance, and all but two were privately insured\"\n- D05 (Background, text line 191) [c1]: \"As of September 30, 2005, there were 1,846 federally chartered banks and 5,695 state-chartered banks\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: q01's hook (an unprinted credit-union total that needs a footnoted remainder) asked as a percentage at two decimals, the answer shape of Trial 2's q01 (user, 2026-10-06: \"make QA like Trial 2's q01 or Trial 6's q02\"). Target medium; measured platform result pending. An alternative to q01, never to be submitted with it.\n- Dependency plan: D02 231 + D02 1179 (or 233 + fn 8 at 239) = 9,902; D05 191 = 7,541; (9,902 - 7,541) / 7,541 = 31.3088% -> 31.31%.\n- Universe: credit unions at December 2002 = federally insured 9,688 + privately insured 212 + uninsured 2 (D02 231 says federally chartered credit unions must be federally insured, so the three groups are exhaustive); banks at September 30, 2005 = federally chartered 1,846 + state-chartered 5,695.\n- Necessity (local ids = platform Doc numbers): without D02 no document counts credit unions; without D05 no document counts banks. q01's removal probes (runs/sketch-round1/removal-probes.md) carry over for the inputs: without D02 a recalled 9,688 gives 2,147 / 7,541 = 28.47%; without D05 a recalled bank count of about 7,540 to 7,550 gives 31.33% or 31.15%, not 31.31%. Fresh probes for this wording pending.\n- Selected-lever checks (each differs from 31.31% at two decimals): 9,900 credit unions (two uninsured missed) -> 2,359 / 7,541 = 31.28%; 9,688 (federally insured only) -> 28.47%; credit-union base 2,361 / 9,902 = 23.84%; ratio rounded early to 1.313 -> 31.30%; national banks only (9,902 - 1,846) / 1,846 = 436.40%; state-chartered banks only 73.87%; 9,688 / 0.98 = 9,885.7 -> 31.09% (31.10% if rounded to 9,886 first).\n- Calculation verification: python: 9,688 + 214 = 9,902; 1,846 + 5,695 = 7,541; 2,361 / 7,541 = 0.3130884 -> 31.31% (0.0038 above the 31.305 boundary).\n- Semantic/ID/overview probes: no document prints 9,902, 7,541, 2,361 or 31.3; the bundle overview prints 9,688, 1,846 and 5,695 (decoy route 28.47%).\n- Precision/readings: one stated figure per input; the base is fixed by \"measured against the bank count\"; two decimals are needed for the remainder to change the answer (both totals give 31.3% at one decimal).\n- Completeness: capture complete; D05 footnote 6 (on the bank counts) has no body in the source, as in q01.\n- Style/set review: one ask, 35 words; same deciding fact and documents as q01 (alternative, not companion); the 2002-versus-2005 comparison may look contrived to a reviewer.\n- Warnings answered: origin claude (export restriction reported at hand-over). Steps 3 and 4 cite both documents because their operands come from both.",
+    "question": "By what percentage did the number of U.S. credit unions at the end of 2002 exceed the number of U.S. banks on September 30, 2005, measured against the bank count? Answer to two decimal places.",
+    "reasoning": "1. Doc 2: as of December 2002, 9,688 credit unions were federally insured, and 214 state-chartered credit unions lacked federal deposit insurance (212 privately insured plus two uninsured ones, in Idaho and New Hampshire). Federally chartered credit unions must be federally insured, so these two groups are all credit unions: 9,688 + 214 = 9,902 credit unions.\n2. Doc 5: as of September 30, 2005, there were 1,846 federally chartered banks and 5,695 state-chartered banks: 1,846 + 5,695 = 7,541 banks.\n3. Doc 2 and Doc 5: 9,902 - 7,541 = 2,361 more credit unions than banks.\n4. Doc 2 and Doc 5: 2,361 / 7,541 = 31.31% (to two decimal places), measured against the bank count.\n5. Wrong routes: leaving out the two uninsured credit unions named in a footnote, counting only the federally insured credit unions, measuring against the credit-union count, or counting one bank charter type each gives a different percentage at two decimal places.",
+    "review": "",
+    "shortcut audit": "",
+    "source assessment": ""
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "f9e852afbaf20d2cb7a2c3fe6bcf7b4c60fa144a8c5e23aca81e3efe630f4ddf"
+}

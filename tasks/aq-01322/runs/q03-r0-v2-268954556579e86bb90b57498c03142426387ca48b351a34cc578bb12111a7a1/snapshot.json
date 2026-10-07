@@ -1,0 +1,53 @@
+{
+  "bundle": "aq-01322",
+  "corpus_sha256": {
+    "docs/cencora-inc-q1-fy2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-02-04.txt": "832feeed42797c4670c66322d7658463fe9407b8687f21e184d2239c26f10b92",
+    "docs/cencora-inc-q2-fy2025-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2025-05-07.txt": "8685053b7be5d45f7e99ba71f6f7c9f81f6c4a682a3646c7c9c95b956ca6d476",
+    "docs/cencora-inc-q2-fy2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-05-06.txt": "62d39b726291524588f97abb090a3f11ef91b96325ee67c1fb9ac8a9e59df958",
+    "docs/cencora-inc-q3-fy2025-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2025-08-06.txt": "d5eef0ac16475fcda6929ac34ced68e7d6f2d0d1bdebe3a60ebde9f8d545436e",
+    "docs/cencora-inc-q3-fy2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-08-05.txt": "87700baa60d877061bb81c06228f636541e48954386a574b447d908266bbc4a0",
+    "docs/cencora-inc-q4-fy2025-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2025-11-05.txt": "4958de656680d279b02615cf21ba0ea9038bca622d7ce8c5ef0a54dd9908f376",
+    "text/D01.txt": "c88aaef0cbd36a330a14c9a93f36f5dc730edcde27c6b39a76b578394e53972e",
+    "text/D02.txt": "237cd33c21a80c45a31e0cff777eb20375159e0b2cc73bfc5df74eb12af8c838",
+    "text/D03.txt": "9b0766f830a85cfbe4f3c70613d6cf74403004e2f3155545fa70bb7abe1f26dd",
+    "text/D04.txt": "6f33e4e783bd9eabce3187589254ff8003dbf08717228da420d3d0a3e2fcc2ba",
+    "text/D05.txt": "f2ad3da5da4f5b24c6e3084a4937571809d7d49d7e7bdbe38837d31b5823a597",
+    "text/D06.txt": "7e04ac201199dc6cd4e984eb1a8f489f6befcb1723defe4e1634b0991d0039cf",
+    "text/manifest.json": "37134939e418cc433e0092d3239fccd26434e2049d65d18804e1eebdabb1f230"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "c53239815bf5c7d978bc8b76dac857afa9ffd509fa59be0550e396ee9434cb22",
+  "independence": "One fresh context per packet. No writer history or shared memory.",
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D04, D05",
+    "id": "q03",
+    "levers": "Calculate across documents; Same series, right edition",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i03",
+    "status": "draft",
+    "tags": "Cross-document join; Temporal alignment; Aggregation"
+  },
+  "question_id": "q03",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "4.4%",
+    "blind solve": "",
+    "components": "- c1: 4.4%",
+    "evidence": "- D04 (Summary Segment Information, revenue, three months ended June 30; l.423) [c1]: \"|U.S. Healthcare Solutions|$72,876,563|$67,191,598|8.5%|\"\n- D04 (Summary Segment Information, operating income, three months ended June 30; l.431) [c1]: \"|U.S. Healthcare Solutions|$901,793|$698,305|29.1%|\"\n- D05 (Summary Segment Information, revenue, three months ended June 30, 2025 column; l.456) [c1]: \"|U.S. Healthcare Solutions|$74,860,763|$71,342,873|4.9%|\"\n- D05 (Summary Segment Information, operating income, 2025 column; l.465) [c1]: \"|U.S. Healthcare Solutions|$966,178|$833,650|15.9%|\"",
+    "feedback log": "",
+    "lever checks": "- Platform document numbers: D04 = Doc 2, D05 = Doc 6 (full mapping in q01). Necessary documents on the form: Doc 2 and Doc 6.\n- Family and target: restatement carve-out (original minus restated rows of one quarter) with a printed answer-shaped decoy; medium. Measured platform result: pending.\n- Dependency plan: D04 l.423/l.431 original Q3 FY25 U.S. revenue 72,876,563 and operating income 901,793 -> D05 l.456/l.465 restated 71,342,873 and 833,650 -> removed 1,533,690 and 68,143 -> 4.443% -> 4.4%.\n- Universe: not applicable.\n- Necessity: the original quarter figures exist only in D04 (D05/D06 print other periods; D04's own nine-month rows cover a different span). The restated quarter exists only in D05 (D05's nine months less D01's Q1 restated and D03's Q2 restated would rebuild it only by adding two documents; no single substitute). The capture overview gives only rounded headline revenue.\n- Selected-lever checks: D05 l.490 Other's own Q3 FY25 operating margin 4.13% -> 4.1%; both segments' removed amounts combined (68,143 + 18,947) / (1,533,690 + 537,042) = 4.21% -> 4.2%; International only 18,947 / 537,042 = 3.53% -> 3.5%; restated U.S. margin 1.17% and original 1.24% (D04/D05 percentage rows).\n- Wording: the question asks for the margin of the removed amounts (reductions in the U.S. segment's own figures). A looser \"margin of the moved operations\" would admit a complement route through Other (87,104 - 18,947) / (2,107,464 - 537,042) = 4.34% -> 4.3%, because intersegment eliminations grew from (3,469) to (40,201) on restatement; this wording avoids it.\n- Calculation verification: author script calc1.py (2026-10-06) 68,143 / 1,533,690 = 4.4431%.\n- Semantic/ID/overview probes (author): \"71,342,873\" and \"833,650\" only D05; \"72,876,563\" and \"901,793\" only D04; prose rounds them ($72.9 billion, $0.9 billion; D04 segment discussion), visibly approximate.\n- Precision/readings: 4.443% is 0.04 from a rounding boundary; the prose route (0.9 - 0.834) / (72.9 - 71.343) = 4.26% is not a stated-figure reading of the same inputs (D04 prose rounds to $0.1 billion).\n- Completeness: complete capture, no gaps.\n- Closed-book sketch screen (2026-10-06): \"About 3.5% ... a guess\", low confidence: miss.\n- Form risk: every input sits only in segment table rows (pipe rows); confirm the form's verbatim check with Save passage.\n- Warnings answered: \"origin\": origin claude is accurate; the export tool takes origin user only and the form's \"I wrote this question myself.\" cannot be ticked truthfully; the submission decision is the user's.",
+    "question": "Cencora's fiscal 2026 segment restatement reduced the revenue and operating income that U.S. Healthcare Solutions had reported for the quarter ended June 30, 2025. What operating margin did the removed amounts represent, as a percentage to one decimal place?",
+    "reasoning": "Step 1. Doc 2: for the three months ended June 30, 2025, U.S. Healthcare Solutions revenue of 72,876,563 and segment operating income of 901,793 (thousands), as originally reported.\n\nStep 2. Doc 6: the restated 2025 column for the same three months gives U.S. Healthcare Solutions revenue of 71,342,873 and operating income of 833,650 (thousands).\n\nStep 3. Doc 2 and Doc 6: revenue removed 72,876,563 - 71,342,873 = 1,533,690.\n\nStep 4. Doc 2 and Doc 6: operating income removed 901,793 - 833,650 = 68,143.\n\nStep 5. 68,143 / 1,533,690 = 4.4% (one decimal place).\n\nDecoy: Doc 6 prints the restated operating margin of Other for that quarter, 4.13%, but Other also received operations from International Healthcare Solutions, so its margin is not the margin of the amounts removed from the U.S. segment.",
+    "review": "",
+    "shortcut audit": "",
+    "source assessment": ""
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "268954556579e86bb90b57498c03142426387ca48b351a34cc578bb12111a7a1"
+}
