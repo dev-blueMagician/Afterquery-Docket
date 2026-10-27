@@ -1,0 +1,27 @@
+{
+  "bundle": "aq-05023",
+  "corpus_sha256": {
+    "docs/Cars.com-Q1-2026-Earnings-Release.txt": "d92f69fe5ab08211974d2e98509b99880a9d6535b5e40c324bbc3fda778a7eb5",
+    "docs/Cars.com-Q1-2026-Quarterly-Report.txt": "c0d1788cc3e8d07f8b7a9805bd9c473a15d93bdb968695b363e8f4bff3f32098",
+    "docs/Cars.com-Q2-2025-Earnings-Release.txt": "79ed99fc3e076fa2be284aa20eb5769ff794ea2c76abe80d19193e973eaea0fd",
+    "docs/Cars.com-Q2-2025-Quarterly-Report.txt": "65e326d2ee695302bbf283448f2e7d557f717ccb182d21f2bb2c9bf9e0f19bbf",
+    "docs/Cars.com-Q2-2026-Earnings-Release.txt": "3be7a5178f125d368cdda0fb5d1d1b7aafb10f63f3a920f520beddf0ec79ea21",
+    "docs/Cars.com-Q2-2026-Quarterly-Report.txt": "62ac20837f5a70eef52593e461b83c71fb94867ccaa2bec921f225925433dc10",
+    "docs/Cars.com-Q3-2025-Earnings-Release.txt": "eece1474383696e6a5d1aceaeeba077875219b9e8c116fe4a1e8e048347fd79b",
+    "docs/Cars.com-Q3-2025-Quarterly-Report.txt": "c05df0fdf19ea1fd3b28adccf23be1913f052b9c752be5b9752aeefe3f2c75ed",
+    "text/D01.txt": "62256185199398373548ab40bbd6019828e93a3539c4844bfb0c70f0c833cddf",
+    "text/D02.txt": "605d7bd4d5c69b6461ee96bbabc55ff1ff65879d3216933f3f0e463c47f543ac",
+    "text/D03.txt": "42490d427db53e842564b00f47092186c633ada7742d773d2ffe3a7afc06e4e1",
+    "text/D04.txt": "d7da2fb4351f5f868fcc584038fc1c67f8eb0922d449c5ea8cdeaea3629b68aa",
+    "text/D05.txt": "aab1a458c54048d13a85594ab93e6a808f30303d7ac49227fc1f3293d9098e29",
+    "text/D06.txt": "c4dfeb94f730533615ab30e19779f1db51c3e7bb5d1d19b583659ef34d97c099",
+    "text/D07.txt": "88a397e9a61c40e6b9cd458d5b29320e74856860e15415400727cd529841129c",
+    "text/D08.txt": "3fbedb14fbc97a0b5ae6a35fec32f78d536f76892905f98fa71025f3835be8bd",
+    "text/manifest.json": "7492515d468ed45695881ed501c06148b1f2dc1520b80274db580fc8b45a31e1"
+  },
+  "independence": "One fresh context per solve; the packet holds documents and the sentence only.",
+  "question": "What was the aggregate purchase price of the shares Cars.com repurchased from January 1, 2025 through June 30, 2026, to the nearest million dollars?",
+  "schema": 1,
+  "screen_sha256": "35af711f16b582b33f126cd3acf240a8b1055bd426bfbe137175f64e0a7a76e7",
+  "source": "notes/sketches/i03.md"
+}
