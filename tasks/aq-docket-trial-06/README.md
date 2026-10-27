@@ -12,14 +12,18 @@ notes/hooks.md         cross-document hook inventory before wording
 notes/ideas.md         lean sketch decisions and actual preliminary screen results
 notes/sketches/i00.md  optional minimal sketch format, before full components/reasoning
 notes/session.md       the checkpoint, replaced at each phase boundary
-notes/intake.json      capture warnings, source hashes and recovered-capture history
+notes/intake.json      capture warnings, source hashes, the task page's Doc numbers, capture history
+notes/handover-qNN.md  every form field, ready to paste (tools/check_questions.py --handover)
 questions/q00.md       the question format; copy it to qNN.md for each question you write up
 runs/                 frozen field/corpus snapshots, isolated packets and actual raw returns
 ```
 
-Nothing under `notes/` is submitted. From a question file, only the question, gold answer,
-step-by-step reasoning, evidence passages, tags and documents reach the submission sheet,
-through `python tools/check_questions.py tasks/<slug> --export`.
+Nothing under `notes/` is submitted. From a question file, only the form's fields reach the hand-over
+and the submission sheet, in the form's order: question, number of asks, gold answer, step-by-step
+reasoning, answer components, evidence, necessary documents with their roles, reasoning tags and
+targeted failure modes. `python tools/check_questions.py tasks/<slug> --handover --q qNN` writes
+`notes/handover-qNN.md` for any live question, with the task page's Doc numbers; `--export` writes the
+same fields for ready user-origin questions to `dist/<slug>.md`.
 
 New questions default to difficulty_target: easy. Follow WORKFLOW.md v2.1: map readable sources,
 find hooks and screen lean sketches before full write-up (the docket_agent.py screen helper is optional); run the floor,

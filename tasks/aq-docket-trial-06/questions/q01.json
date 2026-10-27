@@ -1,0 +1,114 @@
+{
+  "question": "In 2003 GAO made unannounced visits to privately insured credit unions. Across the states whose bank regulators GAO later interviewed about OCC's 2004 preemption rules, what percentage of the privately insured credit unions they had at the end of 2002 got at least one visit? Answer to one decimal place.",
+  "number_of_asks": 1,
+  "gold_answer": "40.5%",
+  "step_by_step_reasoning": "Step 1. Doc 5: for its review of OCC's preemption rules, GAO interviewed state banking departments and other officials \"in six states (California, Georgia, New York, North Carolina, Idaho, and Iowa)\", and its Table 4 covers the \"six state bank regulators that we interviewed\".\n\nStep 2. Doc 2: as of December 2002, privately insured credit unions were located in only eight states: Alabama, California, Idaho, Illinois, Indiana, Maryland, Nevada and Ohio. California and Idaho are the only states on both lists.\n\nStep 3. Doc 2, Table 3: California had 22 privately insured credit unions and Idaho had 20: 22 + 20 = 42.\n\nStep 4. Doc 2: the unannounced site visits covered credit union locations in Alabama, California, Illinois, Indiana and Ohio only, so no Idaho credit union got a visit.\n\nStep 5. Doc 2, Table 1, note b: one California credit union had its main location and three branch locations visited, and another its main location and one branch location: 3 + 1 = 4 repeat sites.\n\nStep 6. Doc 2, Table 1: GAO visited 21 sites in California: 21 - 4 = 17 different credit unions.\n\nStep 7. Doc 2: 17 / 42 = 40.5%.\n\nStep 8. Doc 2: counting California's sites as if they were credit unions gives 21 / 42 = 50.0%, which counts visits, not credit unions.\n\nStep 9. Doc 2: leaving out Idaho, whose credit unions got no visit, gives 17 / 22 = 77.3%, which drops one of the interviewed states.",
+  "answer_components": [
+    "40.5%"
+  ],
+  "evidence": [
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "state banking departments, consumer groups, state bankers associations, and national and state banks in six states (California, Georgia, New York, North Carolina, Idaho, and Iowa)"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Table 4 provides more detailed information on the funding arrangements for six state bank regulators that we interviewed."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "As of December 2002, 212 credit unions"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "We limited our analysis to those states with privately insured credit unions* Alabama, California, Idaho, Illinois, Indiana, Maryland, Nevada, and Ohio."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "disclosures Total number of privately insured"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "California 22 18 3 17 Idaho 20 7 5 71"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Total 212 78 39 50"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "We conducted unannounced site visits to 57 locations of privately insured credit unions (49 main and 8 branch locations) in five"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "states* Alabama, California, Illinois, Indiana, and Ohio."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "credit unions Total sites visited Total number Total percent"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Alabama 3 5 a 3 60 California 22 21 b 6 29"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "For one credit union, in addition to conducting a site visit at the main location, we conducted site"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "visits at three branch locations. For another credit union, in addition to conducting a site visit at the main location, we conducted a site visit at a branch location."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Used to identify",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Entity resolution",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Unit or basis",
+      "how_a_careless_solver_fails": "Takes the wrong line item",
+      "where_the_trap_sits": "Doc 2, Table 1, \"Number and Percent of Credit Unions Visited without Required Signage in Lobby\", prints California's fieldwork as 21 under \"Total sites visited\", right beside the state's 22 privately insured credit unions. The Highlights page describes the fieldwork as \"unannounced site visits to 57 privately insured credit unions\", and Appendix I repeats \"unannounced site visits to 57 privately insured credit unions (49 main and 8 branch locations)\", so a quick reader treats each visited site as a separate credit union. The body text does speak of locations and of \"the 21 sites visited in California\", but only note b, printed under the table, shows which California sites belonged to the same credit union.",
+      "the_wrong_answer_a_careless_solver_gives": "50.0%. The solver correctly takes California and Idaho as the interviewed states with privately insured credit unions (22 + 20 = 42), then reads California's 21 sites as 21 credit unions visited and divides: 21 / 42 = 50.0%. A solver who also keeps only California writes 21 / 22 = 95.5%.",
+      "why_the_correct_answer_avoids_it": "The question counts credit unions that got at least one visit, not visits. Note b under Table 1 says one California credit union was visited at its main location and at three branch locations, and another at its main location and one branch location. Four of the 21 California sites were therefore repeat visits to two credit unions already counted, so only 21 - 3 - 1 = 17 different California credit unions were visited, and 17 / 42 = 40.5%."
+    },
+    {
+      "trap": "Wrong jurisdiction or scope",
+      "how_a_careless_solver_fails": "Wrong members in a list",
+      "where_the_trap_sits": "Doc 5 names the six states whose bank regulators GAO interviewed (California, Georgia, New York, North Carolina, Idaho and Iowa), while Doc 2's unannounced visits covered only Alabama, California, Illinois, Indiana and Ohio. California is the only state on both lists, so it looks like the whole population. Idaho, an interviewed state with 20 privately insured credit unions in Doc 2's Table 3, appears in neither Table 1 nor the list of visited states.",
+      "the_wrong_answer_a_careless_solver_gives": "77.3%. The solver keeps only the interviewed state where visits took place, California, applies the note b correction and computes 17 / 22 = 77.3%. Without the note b correction the same slip gives 21 / 22 = 95.5%.",
+      "why_the_correct_answer_avoids_it": "The question asks across all the interviewed states, and Doc 2 shows that two of them had privately insured credit unions at the end of 2002: California with 22 and Idaho with 20 (Table 3; the eight-state list in Appendix I). Georgia, New York, North Carolina and Iowa had none. Idaho's 20 credit unions got no visit, but they still belong in the base, so the share is 17 / (22 + 20) = 40.5%."
+    }
+  ]
+}
