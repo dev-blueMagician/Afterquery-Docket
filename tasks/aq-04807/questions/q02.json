@@ -1,0 +1,75 @@
+{
+  "question": "Which areas has EPA said would need no failure-to-attain contingency measures because of an international-emissions demonstration? List alphabetically, or say none.",
+  "number_of_asks": 1,
+  "gold_answer": "Imperial County, Northern Wasatch Front, Phoenix-Mesa",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 4, section on Moderate-area requirements, and its footnote): EPA reads the Clean Air Act as not requiring EPA-approved contingency measures for failure to attain in an area with an approved section 179B(b) demonstration, that is, a showing that the area would have attained but for emissions from outside the United States. The footnote cites EPA's November 2019 proposal \"proposing the same interpretation with respect to Imperial County for the 2008 ozone NAAQS\" and its February 2020 action \"finalizing the same\". So EPA has said this of Imperial County (component c1).\nStep 2. Source input (Doc 7, the same section): the proposal for the Northern Wasatch Front states the same rule and carries the same footnote on Imperial County.\nStep 3. Source input (Doc 4, Proposed Action): EPA proposes that, once it finalizes its approval of the international-emissions demonstration, the contingency measure requirements \"would no longer apply to the Phoenix-Mesa Moderate 2015 ozone nonattainment area\" (component c3).\nStep 4. Source input (Doc 7, Proposed Action): EPA proposes the same for the Northern Wasatch Front: the contingency measure requirements \"would no longer apply to the NWF Moderate 2015 ozone NAA\" (component c2).\nStep 5. Exclusions and decoys: the clean data determinations proposed for the Washington and Baltimore areas would only suspend the duty to submit contingency measures for as long as each area keeps attaining, and they rest on clean monitoring data, not on international emissions, so neither area qualifies. No other area in the documents is said to need no contingency measures because of an international-emissions demonstration.\nStep 6. Final answer, in alphabetical order (Doc 4 and Doc 7): Imperial County, Northern Wasatch Front, Phoenix-Mesa.",
+  "answer_components": [
+    "Imperial County",
+    "Northern Wasatch Front",
+    "Phoenix-Mesa"
+  ],
+  "evidence": [
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "contingency measures for failure to attain for the NAAQS at issue in an area with an approved section 179B(b) demonstration"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "proposing the same interpretation with respect to Imperial County for the 2008 ozone NAAQS"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "85 FR 11817 (February 27, 2020) (finalizing the same)"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "the CAA does not require the State to have EPA approved contingency measures for failure to attain the NAAQS in an area with an approved CAA section 179B(b) demonstration"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "proposing the same interpretation with respect to Imperial County for the 2008 ozone NAAQS"
+    },
+    {
+      "document_number": 4,
+      "component_number": 3,
+      "quote": "the contingency measure requirements of CAA section 172(c)(9) would no longer apply to the Phoenix-Mesa Moderate 2015 ozone nonattainment area"
+    },
+    {
+      "document_number": 7,
+      "component_number": 2,
+      "quote": "the contingency measure requirements of CAA section 172(c)(9) would no longer apply to the NWF Moderate 2015 ozone NAA"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        7
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Wrong jurisdiction or scope",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Wrong jurisdiction or scope: Doc 4 footnote 10 and Doc 7 footnote 17 record EPA proposing and finalizing the same rule for Imperial County under the 2008 standard. A solver who keeps to the two proposals' own areas answers Northern Wasatch Front, Phoenix-Mesa; the gold adds Imperial County."
+}
