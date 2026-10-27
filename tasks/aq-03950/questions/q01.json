@@ -1,0 +1,143 @@
+{
+  "question": "How many witnesses listed in the Welsh Affairs Committee's tourism report gave evidence at hearings attended by Rob Roberts MP?",
+  "number_of_asks": 1,
+  "gold_answer": "9 witnesses",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 6, header): the transcript of the hearing on 20 July 2022 names Rob Roberts among the members present.\nStep 2. Source input (Doc 7, header and Q234): the transcript of the hearing on 1 February 2023 names Rob Roberts among the members present. This transcript is the second panel of that hearing only, and Roberts refers in it to what \"the last panel\" said, so he was there for both panels.\nStep 3. Source input (Doc 2, Doc 3, Doc 4 and Doc 5, headers): the members present on 20 April 2022, 25 May 2022 and 15 June 2022 do not include Rob Roberts, so the witnesses heard on those days are left out. The Roberts who speaks on 15 June 2022 is Ian Roberts of Portmeirion, a witness.\nStep 4. Source input (Doc 1, witness list): under 20 July 2022 the report lists Anthony Pickles, Annette Pritchard and Dorothy Yen. That is 3 witnesses.\nStep 5. Source input (Doc 1, witness list): under 1 February 2023 the report lists Vaughan Gething, Jason Thomas and Heledd Owen of the Welsh Government, and then Stuart Andrew, Duncan Parish and Patricia Yates. That is 6 witnesses. The first three have no transcript among the documents; only the report's list names them all.\nStep 6. Calculation from Steps 4 and 5 (Doc 1, Doc 6 and Doc 7): 3 + 6 = 9 witnesses at the hearings Rob Roberts attended.\nStep 7. Final answer (Doc 1, Doc 6 and Doc 7): 9 witnesses.",
+  "answer_components": [
+    "9 witnesses"
+  ],
+  "evidence": [
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "Members present: Stephen Crabb (Chair); Wayne David; Ruth Jones; Rob Roberts; Dr Jamie Wallis."
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "Members present: Stephen Crabb (Chair); Simon Baynes; Virginia Crosbie; Wayne David; Geraint Davies; Ruth Jones; Ben Lake; Rob Roberts."
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "We are going to move seamlessly over to our second panel now"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "In the last panel, we heard about the huge social media presence of the WWE"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Wednesday 20 July 2022"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Anthony Pickles, Former Head of Tourism Affairs, VisitBritain; Professor Annette Pritchard, Professor of Tourism Management, Leeds Beckett University; Professor Dorothy A. Yen, Professor in Marketing, Brunel Business School, Brunel University London"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Wednesday 1 February 2023"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Vaughan Gething MS, Minister for Economy, Welsh Government; Jason Thomas, Director of Culture, Sport and Tourism, Welsh Government; Heledd Owen, Deputy Director of Marketing, Welsh Government"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Rt Hon Stuart Andrew MP, Minister for Sport, Tourism and Civil Society, Department for Digital, Culture, Media and Sport; Duncan Parish, Deputy Director for Tourism and Cultural Diplomacy, Department for Digital, Culture, Media and Sport; Patricia Yates, Chief Executive, VisitBritain/VisitEngland"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "held five oral evidence hearings"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Members present: Stephen Crabb (Chair); Geraint Davies; Ruth Jones; Ben Lake; Robin Millar; Beth Winter."
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Members present: Stephen Crabb (Chair); Geraint Davies; Ruth Jones; Ben Lake; Robin Millar; Beth Winter."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Members present: Stephen Crabb (Chair); Ruth Jones; Ben Lake; Robin Millar."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Members present: Stephen Crabb (Chair); Ruth Jones; Ben Lake; Robin Millar; Beth Winter."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Ian Roberts, Finance Director, Portmeirion Cymru"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        7
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        2,
+        3
+      ],
+      "role": "Exclusion / condition source",
+      "reviewer_note": "Members present on 20 April 2022 do not include Rob Roberts, so the six witnesses the report lists for that day are not counted."
+    },
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Exclusion / condition source",
+      "reviewer_note": "Members present on 25 May 2022 do not include Rob Roberts, so the five witnesses the report lists for that day are not counted."
+    },
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Exclusion / condition source",
+      "reviewer_note": "Members present on 15 June 2022 do not include Rob Roberts (Ian Roberts is a witness), so that day's four listed witnesses are not counted."
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Part vs total: Doc 7 is only the second panel of the 1 February 2023 hearing, so its header names a part, three of that day's six witnesses. Adding the transcript headers gives 6. The total needs Doc 1's witness list, which adds the Welsh Government panel: 9."
+}
