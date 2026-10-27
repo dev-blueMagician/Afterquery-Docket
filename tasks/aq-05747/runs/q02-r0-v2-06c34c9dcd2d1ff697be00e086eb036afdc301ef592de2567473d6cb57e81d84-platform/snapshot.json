@@ -1,0 +1,49 @@
+{
+  "bundle": "aq-05747",
+  "corpus_sha256": {
+    "docs/the-coca-cola-company-1q-2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-04-28.txt": "3c10e038cc2506162a1bc5930abfa8c90d62d256de7222201b157d60cd7d5381",
+    "docs/the-coca-cola-company-2q-2025-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2025-07-22.txt": "45ca9c23c9487c867cc4902a9cb1c101150d0789d1f6c345a0bb4bc5a18c9943",
+    "docs/the-coca-cola-company-2q-2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-07-28.txt": "eb2b9f38f387cb538765c3c4bd7648dc95d732b3f59410eddf7ce771ae1f3574",
+    "docs/the-coca-cola-company-3q-2025-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2025-10-21.txt": "48a8ec4939757a79dc0a8aadc4d3797cd51899b7e89c7d0479bde8ae9c024aed",
+    "docs/the-coca-cola-company-4q-and-full-year-2025-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-02-10.txt": "e4148de6fec453218379038adbfca57f667396e600c740065cddee0000f5da73",
+    "text/D01.txt": "d197fd4f6b50d920534c80984dfee551bace9d38fcc79275b1e2342250bed027",
+    "text/D02.txt": "92208743479d1fbc3b886d4ff4b678eff1fee28f9acb3465317b75f358b45cc4",
+    "text/D03.txt": "7ffcdc76ccd5b4d6cc8dd688b4e01aa5755eb66b8fc2fa592d987a395cba858a",
+    "text/D04.txt": "80e7a612e70791c1d27a12818d40ff84a1f49a7611f298c9f30ab4f36dd39533",
+    "text/D05.txt": "89f6c327dd5f698a8b84120f3a3c7b061cf6bc90c2b8827ef1524579789e3e94",
+    "text/manifest.json": "ede06d9f615a21e2a7f55168c57acf6e77e75725359f248aa8d5e257ccf1e41f"
+  },
+  "difficulty_target": "hard",
+  "form_sha256": "91e240d9521aa64a6869fea807619de3e5e458273026fc6d629a95ec9d9bf0b8",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "hard",
+    "documents": "D03, D02",
+    "id": "q02",
+    "levers": "Same series, right edition; Calculate across documents",
+    "origin": "claude",
+    "revision": "0",
+    "status": "draft",
+    "tags": "Cross-document join; Temporal alignment; Unit normalization"
+  },
+  "question_id": "q02",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "1.5 percentage points",
+    "components": "- c1: 1.5 percentage points",
+    "evidence": "- D02 (Outlook, Full Year 2025) [c1]: \"The company expects to deliver comparable currency neutral EPS (non-GAAP) growth of approximately 8%.\"\n- D03 (Full Year 2026 Guidance, Current column, comparable EPS) [c1]: \"9% to 10% growth, which includes: •Approx. 3% currency tailwind\"\n- D03 (Definitions, comparable EPS measures) [c1]: \"Comparable currency neutral EPS (non-GAAP) has been adjusted for the impact of fluctuations in foreign currency exchange rates, and comparable currency neutral EPS excluding acquisitions and divestitures (non-GAAP) has been adjusted for the impact of fluctuations in foreign currency exchange rates and the impact of acquisitions and divestitures\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: hook h2, an exclusion present in one of two parallel measures (playbook kind 1 analogue), as the newer guide's \"like for like across a definition change\": the 2025 guidance measure (comparable currency neutral EPS, adjusted for currency only) was replaced in 2026 guidance by one also excluding acquisitions and divestitures; the asked measure's 2026 value is implied, not printed. Target hard. Sentence and answer carried word for word from sketch i02 (origin claude, 2026-10-15). Local strong-solver screen on this exact sentence: 3/3 right, high confidence each (record in notes/sketches/i02.md; raw returns runs/i02-screen-a8db1fecfad6f0eb/returns.md; ledger row 39). User quick test against the High model 2026-10-15: survived (\"i01, i02 all survived\"). Platform difficulty result pending.\n- Dependency plan: Doc 1 ~8% (2025 expectation, July 2025); Doc 5 comparable EPS 9% to 10% including ~3% currency tailwind -> 6% to 7% (cross-check: ex-A&D 7% to 8% less the ~1% A&D headwind gives the same range); midpoint 6.5; 8 - 6.5 = 1.5 percentage points.\n- Universe: not applicable (one derived difference). Editions: July 2025 (Doc 1, \"— Updated\"; Doc 2 repeats ~8% \"— No Update\"); 2026 outlooks February (Doc 3: comparable 7-8%, implied 4-5%), April (Doc 4: 8-9%, implied 5-6%), July (Doc 5 Current column: 9-10%, implied 6-7%).\n- Necessity: D03 (Doc 5) is the only source of the July 2026 outlook (Doc 4 has April's, Doc 3 February's); D02 (Doc 1) gives the July 2025 expectation; Doc 2 (D04) repeats it as \"No Update\" (screen solvers: a weaker substitute that relies on reading \"No Update\"), so Doc 1 is ticked and Doc 2 is not used. Delete-and-guess: without Doc 5, a solver uses April's outlook -> 2.5: no gold; without Docs 1 and 2, a solver uses the 2025 actual 9% (Doc 3) -> 2.5, or recalls the real 2025 guidance (~8%): recall risk noted, the July 2026 figures are not recallable.\n- Selected-lever checks: same series, right edition: April outlook -> 2.5 and February outlook -> 3.5, both rejected by \"July 2026 outlook\"; Doc 5's Prior column ex-A&D 6-7% gives 1.5 by a wrong route (noted, not a second answer). Calculate across documents: 8 (Doc 1) less 6.5 (Doc 5).\n- Targeted failure modes: declared Look-alike measure / Takes the wrong line item -> 0.5 (Doc 5 L202, the printed ex-A&D 7% to 8% row used as the asked measure; recomputed in notes/calc-i01-i02.py). Not declared: the edition and actual-versus-expected slips (2.5, 3.5), which the sentence's dates rule out and no screen solver took.\n- Calculation verification: notes/calc-i01-i02.py computes both routes (9-10 less 3; 7-8 less 1) to 6-7, midpoint 6.5, difference 1.5, and the lure and wrong-edition values. Additive convention as in the company's own reconciliations (\"% Change — Comparable\" less \"% Comparable Currency Impact\" = \"% Change — Comparable Currency Neutral\"). Precision: one decimal, as the sentence states.\n- Semantic/ID/overview probes: \"currency neutral EPS\" across all five texts (guidance lines D02 L209, D04 L205, D05 L223, D01 L167, D03 L202; definitions D02 L475, D05 L492, D01 L378, D03 L472; actual-growth tables in every release).\n- Precision/readings: (a) the printed ex-A&D 7% to 8% taken as the asked measure -> 0.5; rejected by the measure's name and Doc 5's separate definitions. (b) Like for like on the ex-A&D basis (2025: 8% + 1% = 9% against 7.5%) also gives 1.5 (screen solver 3). (c) Currency removed multiplicatively (1.095 / 1.03 - 1 = about 6.3%) -> about 1.7; not the company's additive convention (screen solver 1). (d) The inputs are \"approximately\"; the gold treats ~8% and ~3% as stated points.\n- Completeness: capture complete (5 of 5 documents, no gap characters); all five outlook sections and definitions read in full.\n- Style/set review: one ask, 41 words. Sibling q01 uses Doc 3 and Doc 5's impairment passages; no shared facts, answer paths or wording.\n- Warnings answered: pending the preflight.",
+    "necessary documents": "- D03: Answer component\n- D02: Answer component",
+    "platform validation": "",
+    "question": "By how many percentage points, to one decimal place, was the midpoint of the 2026 growth in comparable currency neutral EPS implied by Coca-Cola's July 2026 outlook below the 2025 growth in comparable currency neutral EPS it expected in July 2025?",
+    "reasoning": "Step 1. Source input (Doc 1, Outlook for full year 2025, release of July 22, 2025): \"The company expects to deliver comparable currency neutral EPS (non-GAAP) growth of approximately 8%.\"\nStep 2. Source input (Doc 5, Full Year 2026 Guidance table, Current column, release of July 28, 2026): comparable EPS (non-GAAP) growth of 9% to 10%, which includes an approximate 3% currency tailwind. The table's other EPS row, 7% to 8%, is for comparable currency neutral EPS excluding acquisitions and divestitures, a separate measure.\nStep 3. Source input (Doc 5 and Doc 1, definitions): comparable currency neutral EPS is adjusted for currency only, while the measure excluding acquisitions and divestitures is also adjusted for acquisitions and divestitures. Doc 1's 2025 figure is for the measure adjusted for currency only, so the 2026 figure for the same measure is comparable EPS growth less the currency tailwind.\nStep 4. Calculation (Doc 1 and Doc 5): low end of the implied 2026 growth in comparable currency neutral EPS: 9 - 3 = 6 (percent).\nStep 5. Calculation (Doc 1 and Doc 5): high end: 10 - 3 = 7 (percent).\nStep 6. Calculation (Doc 1 and Doc 5): sum of the two ends: 6 + 7 = 13.\nStep 7. Calculation (Doc 1 and Doc 5): midpoint of the range: 13 / 2 = 6.5 (percent).\nStep 8. Final answer (Doc 1 and Doc 5): 2025 expectation less the 2026 midpoint: 8 - 6.5 = 1.5 percentage points.",
+    "targeted failure modes": "### Failure mode 1\nTrap: Look-alike measure\nHow a careless solver fails: Takes the wrong line item\n\nWhy these are traps: Look-alike measure: Doc 5's July 2026 table prints 7% to 8% for comparable currency neutral EPS excluding acquisitions and divestitures; using it gives 8 - 7.5 = 0.5. The asked measure, as in Doc 1's 2025 guidance (about 8%), removes only currency: 9-10% less 3% is 6-7%, so 1.5."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "06c34c9dcd2d1ff697be00e086eb036afdc301ef592de2567473d6cb57e81d84"
+}

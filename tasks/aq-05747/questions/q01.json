@@ -1,0 +1,55 @@
+{
+  "question": "Judging by Coca-Cola's earnings releases together, what was the largest single impairment charge the company recorded in fiscal 2025, in millions of dollars?",
+  "number_of_asks": 1,
+  "gold_answer": "1,274",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 3, Asset Impairments, three months and year ended December 31, 2025): the largest charge Doc 3 describes as an impairment is \"a charge of $960 million related to the impairment of our BODYARMOR trademark\"; each other 2025 impairment charge it lists is smaller.\nStep 2. Source input (Doc 3, Transaction Gains/Losses, same period): Doc 3 also records \"a charge of $1,274 million related to our bottling operations in Africa that became held for sale\", without calling it an impairment.\nStep 3. Source input (Doc 5, Transaction Gains/Losses, three and six months ended July 3, 2026): Doc 5 records \"a reduction in the previously recorded impairment charge\" related to the same African bottling operations held for sale. Its second-quarter reduction is larger than its six-month reduction, so the first quarter of 2026 had added to that charge, and the second-quarter reduction is larger than that addition. The impairment charge being reduced therefore includes a charge recorded before 2026.\nStep 4. Inference (Doc 3 and Doc 5): Doc 3's $1,274 million charge is the charge recorded on those same operations when they became held for sale, before 2026. Read together, the releases treat it as an impairment charge.\nStep 5. Comparison (Doc 3 and Doc 5): $1,274 million is larger than the $960 million BODYARMOR impairment, so the largest single impairment charge recorded in fiscal 2025 is 1,274 million dollars. Doc 5's reductions were recorded in 2026 and do not change the fiscal 2025 amount.",
+  "answer_components": [
+    "1,274"
+  ],
+  "evidence": [
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "The company also recorded a charge of $1,274 million related to our bottling operations in Africa that became held for sale"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "the company recorded a charge of $960 million related to the impairment of our BODYARMOR trademark"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "the company recorded a reduction in the previously recorded impairment charge of $66 million and $56 million, respectively, related to our bottling operations in Africa, which are held for sale"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Used to identify",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Conditional filter",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Picks the wrong entity or section"
+    }
+  ],
+  "why_these_are_traps": "Linking: Doc 3 books a $1,274 million charge on its African bottling operations held for sale under Transaction Gains/Losses, never calling it an impairment; its impairment section peaks at $960 million (BODYARMOR), the wrong answer. Doc 5 reduces \"the previously recorded impairment charge\" on those operations, so 1,274."
+}

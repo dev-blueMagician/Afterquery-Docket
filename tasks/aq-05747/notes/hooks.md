@@ -1,0 +1,17 @@
+# aq-05747 - cross-document hooks
+
+Target: hard (user, 2026-10-15: "there is no slot for Easy or Medium Tier for this bundle, we should
+target high"). Design by .claude/memory/reference/hard-playbook.md. Doc N = page number (doc-map).
+
+| Hook | Source inputs and locations | World fact/possible ask | Selected lever(s) | Applicable decoy/counterfactual | Source risks | Decision |
+| --- | --- | --- | --- | --- | --- | --- |
+| h1 | Doc 3 L528 Q4 2025 charge 1,274 "related to our bottling operations in Africa that became held for sale" (no "impairment"); Doc 3 L514 BODYARMOR impairment 960 (largest the 2025 releases call an impairment); Doc 5 L500 "reduction in the previously recorded impairment charge" (66 > Q1 2026's 10, Doc 4 L404) | largest single impairment charge recorded in fiscal 2025 = 1,274 | incidental attribution against the company's own complete-looking account (playbook kind 2); second mention, different words | lure 960 (Doc 3's Asset Impairments account and headline) | Doc 4 substitutes for Doc 5 (weaker); a reader with held-for-sale accounting knowledge may count 1,274 from Doc 3 alone; 1,274 is deep in Doc 3 (form number check false alarm) | sketch i01 (screen 3/3, handed over) |
+| h2 | Doc 1 L209 FY2025 comparable currency neutral EPS ~8% (no A&D exclusion); Doc 5 L202-203 FY2026 ex-A&D 7-8%, comparable EPS 9-10% incl. ~3% currency tailwind; Doc 5 L472 definitions list the two measures separately | July 2026 outlook implies 6-7% for comparable currency neutral EPS; 8 - 6.5 = 1.5 points below July 2025's expectation | like for like across a definition change; an exclusion in one of two parallel measures (playbook kind 1 analogue) | lure 0.5 (printed ex-A&D 7-8%); wrong editions 2.5 (Apr), 3.5 (Feb); 2025 actual 9% gives 2.5 | "approximately" inputs; Doc 2 substitutes for Doc 1; the deciding qualifier sits in the label the search lands on (playbook section 3 risk); 2025 guidance may be recalled | sketch i02 (screen 3/3, handed over) |
+| h3 | Doc 3 L528 1,274; Doc 4 L404 +10; Doc 5 L500 -66 (six months -56) | net impairment on the African bottling operations through Jul 3, 2026 = 1,218 | rebuilt number, YTD trap | lures 1,208, 1,228 | same path as h1 (set conflict); question words lead to all three passages | hold (shares h1's hinge) |
+| h4 | Doc 4 L305/L311 Q1 2025 CFO (5,202), capex (309) (comparatives only); Docs 1-3 fairlife payment 6,069 "made during the first quarter" | Q1 2025 free cash flow excluding the fairlife payment = 558 | quarter no document reports; rebuilt | lure H1 3,927 | playbook section 3: rebuilt numbers cleared by High | hold |
+| h5 | Doc 3 L388/L310 equity income 2,031 and "net of dividends" (1,038); Doc 2 L378/L302 9M 1,556 and (859) | dividends received from equity method investees in Q4 2025 = 993 - 697 = 296 | reading of the indirect-method line; quarter backed out | lures 179, 475 | rebuilt; accounting reading | hold |
+| h6 | Doc 2 L239/Doc 3 L249 Q4 2025 +1 day; Doc 4 L193 Q4 2026 six fewer days; Q3 2025 ended Sep 26 (Doc 2) | fiscal Q4 2026 length 96 - 6 = 90 days | date span | lures 86, 85 | date spans cleared by High | hold |
+| h7 | Doc 1 L509 Q2 2025 "$28 million related to assets held for sale"; Doc 2 L514 Ghana Q3 8, 9M 36 | Ghana charge in Q2 2025 = 28 | second mention, different words | lures 0, 8 | arithmetic link (36 - 8) is easy | hold |
+
+Platform's own idea list (capture): "Average Shares Outstanding" printed twice in Doc 2; rank of
+"% Change - Comparable (Non-GAAP)" across Docs 1-4. Both lookups; not pursued.
