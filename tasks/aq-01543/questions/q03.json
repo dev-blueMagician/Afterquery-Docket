@@ -1,0 +1,60 @@
+{
+  "question": "Taken together, what percentage of the electricity generated in South Korea and in mainland Portugal from January through November 2025 came from renewable sources? Give the percentage to two decimal places.",
+  "number_of_asks": 1,
+  "gold_answer": "15.46%",
+  "step_by_step_reasoning": "Step 1. Doc 4: on a provisional basis for January to November 2025, South Korea's \"total generation estimated at 543.6TWh\", of which \"Renewable generation remained at 57.6TWh\".\n\nStep 2. Doc 4: South Korea's total generation in GWh: 543.6 TWh = 543,600 GWh.\n\nStep 3. Doc 4: South Korea's renewable generation in GWh: 57.6 TWh = 57,600 GWh.\n\nStep 4. Doc 16: between January 1 and November 30, 2025, mainland Portugal generated \"a total of 44 303 GWh\", where a space separates the thousands, so its 44 is in thousands of GWh: 44 TWh = 44,000 GWh.\n\nStep 5. Doc 16: mainland Portugal's total generation: 44,000 + 303 = 44,303 GWh.\n\nStep 6. Doc 16: \"75.1 % coming from renewable sources\": 75.1% * 44,303 = 33,271.553 GWh.\n\nStep 7. Doc 4 and Doc 16: combined generation: 543,600 + 44,303 = 587,903 GWh.\n\nStep 8. Doc 4 and Doc 16: combined renewable generation: 57,600 + 33,271.553 = 90,871.553 GWh.\n\nStep 9. Doc 4 and Doc 16: 90,871.553 / 587,903 = 15.46%.",
+  "answer_components": [
+    "15.46%"
+  ],
+  "evidence": [
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "On a provisional January-November 2025 basis, Korea"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "with total generation estimated at 543.6TWh"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Renewable generation remained at 57.6TWh, or 10.6%"
+    },
+    {
+      "document_number": 16,
+      "component_number": 1,
+      "quote": "between January 1 and November 30, 2025, a total of 44 303 GWh of electricity were generated in Mainland Portugal, with 75.1 % coming from renewable sources"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        16
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Unit normalization",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Figure that must be computed",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    }
+  ],
+  "why_these_are_traps": "Doc 4 prints South Korea's January-November 2025 renewable share (10.6%) and Doc 16 mainland Portugal's (75.1%); averaging them gives 42.85%. Pooling needs generation weights: (57,600 + 33,271.553) / (543,600 + 44,303) GWh = 15.46%."
+}
