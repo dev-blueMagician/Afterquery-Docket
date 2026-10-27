@@ -1,0 +1,409 @@
+AQ-04797 · Academic papers — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-04797
+Saved: 2026-10-14 14:00 (local time)
+Bundle: Academic papers · 9 documents · 86,630 prompt tokens
+Run read: Run 2, the latest of 2
+Attempts read: 4
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 17 runs left · 14 of 60 runs used in the last 24 h (all tasks)
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 3 attempts right
+
+High model: two solvers try up to 3 times each. Ready when both get it wrong at least once and not every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Structure · Which documents it needs, and how they combine
+----------------------------------------------------------
+
+- 1 Force computation instead of lookup: ask for a difference that requires averaging per-cell or per-dataset R² values from tables (e.g., Document 6's Table 8 per-battery results or Document 5's per-scheme Table 5), so the solver must collect several numbers and compute a mean before subtracting. Why: The question reduces to two single-number lookups: the GAT-BiGRU average R² of 0.977 is stated verbatim in Document 6's generalization section ('The average MAE, RMSE, and R2 values for all batteries are 0.608, 0.802, and 0.977'), and the CNN–self-attention R² of 0.959 is stated verbatim in Document 5 ('Before optimization, the average RMSE across 39 batteries was 0.00609 Ah, with an average R2 of 0.959'). No aggregation, table reading, or cross-document synthesis is needed—just 0.977 − 0.959 = 0.018. Both values sit in adjacent, prominently worded sentences, so a solver can find each in one pass. From a run (High model · attempt 1): Both R² values (0.977 in Document 6, 0.959 in Document 5) appear as single stated averages, so the subtraction needed no table reading or averaging. Doc 5 Doc 6
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 2 (Oct 14, 2026, 1:39 PM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+2 runs
+
+Only the latest run, Run 2, is in this file; 1 earlier run is left out.
+
+------------------------------------------------------------------------
+Run 2 · Too easy · Result the gate uses
+Oct 14, 2026, 1:39 PM · Version 219386 (current) · Low — · Medium — · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: question: removed “Relative”, “nominal capacity, which lithium-ion cells besides NASA cell B0005 end their constant-voltage charge at a current no higher than B0005's? List them alphabetical…”; added “On cells each model never saw, what is the GAT-BiGRU SOH model's average R² minus the fast-charging CNN–self-attention model's,”, “three decimal places?”. answer: removed “B0006, B0007, PANASONIC NCA cells”; added “0.018”
+
+Solver summary: Run 2 · Too easy · 3 of 3 right
+Every solver attempt got it (3 of 3).
+
+Your answer: 0.018
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: Note: where it went wrong
+
+Final answer: 0.038 | Your answer (gold): 0.018
+
+Where it went wrong: Without documents, Low model guessed 0.038, showing the answer is not inferable from prior knowledge and depends entirely on the two stated values.
+
+Full answer
+-----------
+
+0.038
+
+Reasoning
+---------
+
+We need answer: "On cells each model never saw, what is the GAT-BiGRU SOH model's average R² minus the fast-charging CNN–self-attention model's, to three decimal places?" Need knowledge from some study/paper comparing battery SOH models, GAT-BiGRU vs CNN-self-attention on unseen cells. Need determine values and subtract.
+
+We need recall or infer specific numbers. Let's recall literature on battery state-of-health estimation using graph attention network BiGRU and CNN self-attention for fast charging. There might be a table comparing generalization performance on unseen cells. The question asks "On cells each model never saw, what is the GAT-BiGRU SOH model's average R² minus the fast-charging CNN–self-attention model's, to three decimal places?"
+
+We need identify average R² for GAT-BiGRU SOH model on cells never saw, and for fast-charging CNN-self-attention model on cells never saw, then difference.
+
+Let's recall a specific paper: maybe "A deep learning framework for state-of-health estimation of lithium-ion batteries using graph attention networks and bidirectional GRU" vs "A CNN with self-attention for state-of-health estimation of lithium-ion batteries under fast charging". But need comparison "On cells each model never saw" sounds like they tested on cells not in training set.
+
+Perhaps the values are: GAT-BiGRU average R² = 0.920? CNN-self-attention average R² = 0.850? Difference ~0.070? But need precise to three decimal places.
+
+Let's think more concretely. There is a 2023/2024 paper: "State-of-health estimation of lithium-ion batteries using graph attention network and bidirectional gated recurrent unit" maybe published in Journal of Power Sources? Or "GAT-BiGRU: A hybrid deep learning model for state-of-health estimation of lithium-ion batteries"?
+
+Another paper: "Fast charging state-of-health estimation for lithium-ion batteries using a convolutional neural network with self-attention mechanism" published in 2022 in Energy? In that paper they might report R² of 0.91 on tested cells? But need on cells never saw.
+
+Actually the phrasing "fast-charging CNN–self-attention model" sounds like model named in comparison table. Let's recall comparison tables in SOH estimation papers often include models: CNN, LSTM, GRU, BiLSTM, CNN-LSTM, GAT-Transformer, etc., with metrics RMSE, MAE, R² on test set and on unseen cells.
+
+We need specifically "On cells each model never saw" which might be a column in table: "Unseen cells" with average R².
+
+Let's recall a table from a 2024 paper maybe titled "Hybrid graph attention network and bidirectional GRU for state-of-health estimation of lithium-ion batteries with different working conditions". In that paper they propose GAT-BiGRU and compare with CNN, LSTM, GRU, BiLSTM, CNN-BiGRU, and maybe CNN-self-attention. They might have two evaluation scenarios: cells seen during training and cells never seen.
+
+But I need be precise.
+
+Let's search mental database for "CNN self-attention fast charging R² 0.814" or similar. There's a 2022 paper by Shen et al. "A deep learning method for predicting the state of health of lithium-ion batteries based on self-attention mechanism and convolutional neural network" maybe for fast charging conditions. They used 72 cells? Actually there is a well-known dataset: 72 commercial LFP/graphite cells charged with 1-step and 2-step fast charging protocols, collected by Stanford/MIT. Many papers use this dataset. One prominent paper: "Identifying degradation patterns of lithium ion cells, predicting, and optimizing failure for electric vehicles" (Severson et al., 2019). Then later papers apply deep learning: "Data-driven prediction of battery cycle life before capacity degradation" (Severson 2019). Then "A deep learning approach to battery state of health estimation with fast charging data" maybe?
+
+Specifically, there is a 2028? No.
+
+There is a 2021/2022 paper: "State-of-health estimation of lithium-ion batteries under fast charging conditions using a convolutional neural network with self-attention" maybe by Li et al., using the fast-charging dataset of 124 cells? Wait the dataset has 124 LFP cells tested under fast charging conditions with different charging protocols, published in 2022 "Data-driven prediction of battery cycle life before capacity degradation" no that's 2019 with 124 cells? Actually Severson 2019 used 124 cells with 1C discharge and various fast charge protocols. Yes, the dataset contains 124 cells, each with different fast charge protocols, cycle life 150-2300 cycles.
+
+Then in 2022, another paper used this dataset for SOH estimation: "State-of-health estimation of lithium-ion batteries using convolutional neural network and long short-term memory" maybe.
+
+But the question mentions "GAT-BiGRU SOH model" and "fast-charging CNN–self-attention model" compared "On cells each model never saw". This sounds like a comparative study where both models are evaluated on leave-one-out or on cells not included in training.
+
+Perhaps the values come from Table III in some paper. Let's try to recall specific R² values reported for unseen cells in these studies.
+
+One study: "Prediction of remaining useful life and state of health of lithium-ion batteries using graph attention networks" maybe reports R² of 0.98?
+
+But we need average R² for GAT-BiGRU on cells never saw minus that of CNN-self-attention.
+
+Let's recall the paper "A graph attention network and bidirectional gated recurrent unit based deep learning model for state-of-health estimation of lithium-ion batteries" (maybe 2023 in Applied Energy?). They might have tested on 12 cells? Actually they might use a dataset of 14 cells? Hmm.
+
+Let's systematically recall datasets used:
+1. Oxford dataset: 8 cells, degradation testing at 40°C.
+2. Stanford/MIT fast-charging dataset: 124 cells.
+3. NASA dataset: 4 cells.
+4. CALCE dataset: many cells at University of Maryland.
+
+The phrase "fast-charging CNN–self-attention model" strongly ties to the Stanford/MIT dataset because it's about fast charging. So likely both models were evaluated on that dataset.
+
+In the CNN-self-attention paper, they might have split data into training (80 cells), validation (20), testing (24?). They report metrics on test cells that the model never saw? Or they do cross-validation leaving some cells out.
+
+The GAT-BiGRU paper might also use the same dataset and compare with prior models including the CNN-self-attention one.
+
+Thus we need the specific average R² values reported in the comparison table for "unseen cells" or "cell-level generalization".
+
+Let's recall a specific comparison table from a 2024 paper using GAT-BiGRU on the fast-charging dataset. The table might list models: Linear regression, SVM, CNN, LSTM, BiLSTM, CNN-LSTM, Transformer, CNN-Self-attention, GAT, GAT-BiGRU, with columns: RMSE, MAE, R² for "Test cells seen" and "Test cells unseen"? Or maybe "Average R²"?
+
+Actually I think I've seen a table in a 2024 article: "State-of-health estimation for lithium-ion batteries based on graph attention network and bidirectional gated recurrent unit with feature fusion" published in Journal of Energy Storage? Let's imagine the table values.
+
+But I need be accurate to three decimal places, so likely the values are like 0.957 and 0.920, difference 0.037? Or 0.932 vs 0.869 difference 0.063?
+
+Let's think about performance levels on this dataset. The SOH estimation task is predicting capacity fade over cycles. Many deep learning models achieve R² around 0.95 on seen cells but drop on unseen cells, maybe to 0.85 or 0.80.
+
+In the CNN-self-attention paper, they might report R² = 0.978 on training cells and 0.889 on testing cells? Or average R² across all test cells?
+
+But we need "average R²" specifically.
+
+Let's recall the CNN-self-attention paper details: Title maybe "A convolutional neural network with self-attention mechanism for state-of-health estimation of lithium-ion batteries under fast charging conditions". They extract features like voltage, current, temperature over charging time, then feed into CNN with self-attention, then FC layers to predict SOH (capacity). They might evaluate using leave-one-out cross-validation (LOOCV) where each cell is left out once. They report average RMSE, MAE, R² over all 124 cells? Or over 20 left-out?
+
+Actually in many battery papers, they split the 124 cells into three sets: 80 for training, 20 for validation, 24 for testing (all cells in each set never seen in others). Then they report metrics on the test set of 24 cells. That is "cells each model never saw" — yes, 24 cells not in training/validation.
+
+So we need the average R² on those 24 test cells for GAT-BiGRU and CNN-self-attention.
+
+Let's recall specific numbers from comparison tables in recent papers using this split (80/20/24).
+
+One well-known comparison is in the paper "Data-driven state-of-health estimation for lithium-ion batteries using deep learning with attention mechanism" but not exactly.
+
+But there is a 2023 paper: "State-of-health estimation of lithium-ion batteries using a transformer-based model with feature extraction" maybe compares with CNN, LSTM, etc.
+
+However, the question specifically mentions "GAT-BiGRU SOH model" and "fast-charging CNN–self-attention model". This sounds like in one paper they propose GAT-BiGRU and compare it with several baseline models, one being the CNN-self-attention model from prior literature. They likely reproduce the baseline results on the same train/test split.
+
+Thus we need to read that table mentally.
+
+Let's recall a 2024 paper: "Hybrid deep learning model combining graph attention network and bidirectional gated recurrent unit for state-of-health estimation of lithium-ion batteries" maybe in Energy Reports? Let's try to recall figures: They might have Figure 5 showing comparison of R² for different models on test set.
+
+Actually, I think I have seen a table like this (Model, RMSE, MAE, R²):
+- Linear regression: RMSE 0.052, MAE 0.041, R² 0.72
+- SVM: RMSE 0.045, MAE 0.035, R² 0.78
+- CNN: RMSE 0.033, MAE 0.026, R² 0.88
+- LSTM: RMSE 0.028, MAE 0.022, R² 0.91
+- BiLSTM: RMSE 0.025, MAE 0.020, R² 0.93
+- CNN-LSTM: RMSE 0.024, MAE 0.019, R² 0.93
+- Transformer: RMSE 0.022, MAE 0.017, R² 0.94
+- CNN-Self-attention: RMSE 0.020, MAE 0.016, R² 0.95?
+- GAT: RMSE 0.018, MAE 0.014, R² 0.96
+- GAT-BiGRU: RMSE 0.016, MAE 0.012, R² 0.97?
+
+But this is for seen? Or unseen?
+
+Wait, there might be two tables: one for interpolation (seen conditions) and one for extrapolation (unseen cells).
+
+Actually, in the fast-charging dataset, charging protocols differ, so leaving out cells with certain protocols tests generalization.
+
+But the question says "On cells each model never saw" — this sounds like they evaluated each model on cells that were not in that specific model's training set. But since they share the same split, it's the same test set.
+
+Thus we need R² for GAT-BiGRU minus CNN-self-attention.
+
+If GAT-BiGRU R² is around 0.958 and CNN-self-attention is 0.920, difference about 0.038.
+
+But I need be closer.
+
+Let's recall specific values from a comparison table in the GAT-BiGRU paper. Maybe Table 2: Performance comparison of different models on the test set.
+
+Actually, I think there is a 2029? No.
+
+Let's try to recall from the paper "State-of-health estimation of lithium-ion batteries using graph attention networks and bidirectional gated recurrent units" published in 2023 in Journal of Power Sources, volume 560? Or maybe in Applied Energy 2023?
+
+Let's mentally search for "GAT BiGRU battery" in my training data. There's a 2023 paper: "A novel state-of-health estimation method for lithium-ion batteries based on graph attention network and bidirectional gated recurrent unit" authors maybe Zhang, Li, etc. They propose extracting health features then using GAT to capture spatial relationships among features, then BiGRU for temporal.
+
+In that paper, they might use the CALCE dataset? Or Oxford?
+
+But the comparison with CNN-self-attention suggests they used the fast-charging dataset, because that's where CNN-self-attention was applied.
+
+Let's recall the CNN-self-attention paper: "State-of-health estimation for lithium-ion batteries using convolutional neural network with self-attention mechanism under fast charging conditions" published in Journal of Power Sources in 2022? Authors might be Li, Zhang, etc.
+
+In that paper, they report results: RMSE = 0.0165? Or R² = 0.977?
+
+Actually, there is a specific result: They achieved an RMSE of 1.11% and R² of 0.97? Or maybe MAE of 0.007?
+
+Let's try to be more data-driven mental: The capacity ranges from about 1.0 to 0.8 (normalized?). They might report RMSE in percent, e.g., 0.81%.
+
+But we just need R² average on unseen cells.
+
+Let's recall that in the fast-charging dataset, there are 124 cells, split into 84 training, 40 testing? Or 100 training, 24 testing?
+
+One specific study used 100 cells for training and 24 for testing. Let's check mental consistency: In the original Severson dataset, there are 124 cells. Many papers split into train/test with 100/24, leaving 24 cells never seen. Yes, that sounds right: 100 cells for training, 24 for testing.
+
+So "cells each model never saw" = 24 cells.
+
+Now, in the CNN-self-attention paper, they might have used 84 cells for training, 40 for testing? Or 100/24?
+
+But regardless, we need the average R² on those 24 cells for both models.
+
+Let's recall a table comparing models on the 24 test cells with metrics: average RMSE, MAE, and R².
+
+Perhaps in the GAT-BiGRU paper, Table 3 lists:
+Model | RMSE | MAE | R²
+CNN | 0.028 | 0.022 | 0.892
+LSTM | 0.024 | 0.019 | 0.916
+BiLSTM | 0.022 | 0.017 | 0.931
+CNN-Self-attention | 0.020 | 0.016 | 0.941
+GAT | 0.019 | 0.015 | 0.948
+GAT-BiGRU | 0.017 | 0.013 | 0.958
+
+Difference in R² = 0.958 - 0.941 = 0.017. That seems small but plausible.
+
+But I need be precise to three decimal places. So maybe values are 0.957 and 0.922, difference 0.035?
+
+Let's examine mental consistency: The CNN-self-attention model was specifically designed for this dataset and achieved good results. Maybe its R² on 24 cells was 0.920. Meanwhile GAT-BiGRU achieved 0.958, difference 0.038 -> round 0.038.
+
+But I need "the GAT-BiGRU SOH model's average R² minus the fast-charging CNN–self-attention model's, to three decimal places". This sounds like they want you to compute from specific values mentioned in the text, maybe "The GAT-BiGRU model achieved an average R² of 0.958, while the CNN-self-attention model achieved 0.920. The difference is 0.038."
+
+But I need be as accurate as possible.
+
+Let's recall specific numbers from a comparison figure. Maybe Figure 6 shows bar chart of R² for each of 24 cells? No, "average R²" sounds like they computed R² for each cell separately then averaged.
+
+In some papers, they report the R² score for each test cell individually in a table or bar chart, then state the average.
+
+For example, in one paper they have Figure 8: R² values for 24 cells using different models. The average R² for CNN is 0.85, for LSTM 0.87, etc., and for proposed model 0.93.
+
+But I need specifically GAT-BiGRU and CNN-self-attention.
+
+Let's think about the performance gap: GAT-BiGRU is a more complex model with graph attention and BiGRU, likely outperforming CNN-self-attention by a noticeable margin, maybe 0.05 in R².
+
+However, I want to check mental recall of actual table values from a specific paper I might have seen.
+
+There's a 2024 paper in "Energy" titled "State-of-health estimation for lithium-ion batteries using graph attention network and bidirectional gated recurrent unit". Let's try to recall its table 2.
+
+Actually, I think I've seen a table like this in a recent article (2024) comparing different models on the fast-charging dataset (124 cells, 100 train, 24 test):
+
+Model | RMSE | MAE | R²
+LR | 0.064 | 0.050 | 0.534
+RF | 0.042 | 0.033 | 0.712
+SVR | 0.038 | 0.030 | 0.768
+CNN | 0.028 | 0.022 | 0.872
+LSTM | 0.024 | 0.019 | 0.905
+GRU | 0.023 | 0.018 | 0.912
+BiLSTM | 0.021 | 0.016 | 0.924
+CNN-LSTM | 0.020 | 0.015 | 0.930
+Transformer | 0.019 | 0.014 | 0.938
+CNN-SA | 0.018 | 0.013 | 0.945
+GAT | 0.017 | 0.012 | 0.952
+GAT-BiGRU | 0.015 | 0.011 | 0.961
+
+But I'm not sure.
+
+Let's recall that in the CNN-self-attention paper, they reported an R² of 0.97? Or maybe 0.986?
+
+Wait, there is a result: "The proposed CNN-SA model achieves an average R² of 0.977, RMSE of 0.0165 and MAE of 0.0118 on the 24 test cells." Or something close.
+
+Actually, I think in one paper they said: "The proposed model achieves R² values of 0.978, 0.965, etc. with an average of 0.970."
+
+But then GAT-BiGRU might achieve average R² of 0.981, difference 0.011?
+
+That doesn't seem like a big deal for a question.
+
+But the question asks "what is the GAT-BiGRU SOH model's average R² minus the fast-charging CNN–self-attention model's, to three decimal places?" This framing sounds like both values are given in the text, and you just subtract. The answer might be a round number like 0.020.
+
+But I need be precise.
+
+Let's recall the specific phrase "fast-charging CNN–self-attention model" might be named exactly like that in a table. For example, in Table 1: "Model comparison on cells never seen" with columns Model, R², RMSE, MAE. The rows might include "CNN–self-attention (fast-charging)" with R² 0.893, and "GAT-BiGRU (SOH)" with R² 0.942, difference 0.049.
+
+But I need to be honest about uncertainty. However, I should provide my best guess.
+
+Let's recall that in the fast-charging dataset, predicting SOH (capacity) is somewhat noisy, and R² values are often in the range 0.85-0.96.
+
+There's a specific result in the paper "State-of-health estimation of lithium-ion batteries using convolutional neural network with self-attention mechanism" (2022, Energy?). Let's recall its evaluation: They divided 124 cells into 84 for training, 40 for testing? Actually they might have used 3-fold cross-validation.
+
+But they might report that for the 24 cells left out, the R² values range from 0.85 to 0.98 with an average of 0.94.
+
+Meanwhile, in the GAT-BiGRU paper, they might report average R² of 0.97.
+
+Thus difference might be around 0.03.
+
+But I need three decimal places, so maybe 0.031?
+
+Wait, but if values are 0.966 and 0.941, difference is 0.025.
+
+Let's try to recall specific numbers from a bar chart of R² for 24 cells. For CNN-SA, the bars might be mostly high, average maybe 0.948. For GAT-BiGRU, bars are slightly higher, average maybe 0.967. Difference 0.019.
+
+But I need "the GAT-BiGRU SOH model's average R² minus the fast-charging CNN–self-attention model's". If average R² for GAT-BiGRU is 0.967 and for CNN-SA is 0.947, then difference = 0.020.
+
+But I need to be closer.
+
+Let's recall that in one comparison table I saw values:
+- CNN: R² = 0.912
+- LSTM: R² = 0.931
+- BiGRU: R² = 0.945
+- CNN-SA: R² = 0.951
+- GAT-BiGRU: R² = 0.963
+
+Difference = 0.012. That seems small.
+
+But maybe the values are:
+- CNN-SA: 0.904
+- GAT-BiGRU: 0.958
+Difference: 0.054.
+
+We need determine which one is correct based on typical performance.
+
+Actually, I think the CNN-self-attention model might have an average R² around 0.92 on unseen cells. Let's check mental reasoning: The CNN-SA model uses charging data from cycles 100-110 to predict capacity degradation curve. For each cell, they extract features and predict SOH at each cycle. The R² might be calculated across all cycles and cells? Or per cell?
+
+But they might report "The average R² of the proposed model for the 24 cells is 0.920" or "0.945".
+
+Meanwhile, the GAT-BiGRU model might report "The average R² is 0.958".
+
+Thus difference could be around 0.038.
+
+But I need be specific to three decimal places, so I need values with three decimal precision.
+
+Perhaps the values are exactly:
+GAT-BiGRU average R² = 0.958
+CNN-self-attention average R² = 0.920
+Difference = 0.038.
+
+That sounds like a round difference with three decimal places.
+
+But wait, 0.958 - 0.920 = 0.038 indeed.
+
+Alternatively, maybe GAT-BiGRU is 0.961 and CNN is 0.929, difference 0.032.
+
+Let's recall that in some papers t
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): 0.018
+
+Where it shortcut: Both R² values (0.977 in Document 6, 0.959 in Document 5) appear as single stated averages, so the subtraction needed no table reading or averaging.Doc 5 Doc 6
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): 0.018
+
+Where it shortcut: The phrase 'cells each model never saw' keyword-matched directly to the generalization/test passages containing the answer numbers.Doc 5 Doc 6
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): 0.018
+
+Where it shortcut: Reached 0.018 via the two verbatim averages; the alternative post-transfer value 0.977 in Document 5 was apparently not a distractor that required resolving.Doc 5 Doc 6
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

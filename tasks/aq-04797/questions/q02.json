@@ -1,0 +1,78 @@
+{
+  "question": "On cells each model never saw, what is the GAT-BiGRU SOH model's average R² minus the fast-charging CNN–self-attention model's, to three decimal places?",
+  "number_of_asks": 1,
+  "gold_answer": "0.018",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 6, the section on the model's generalization performance): the GAT-BiGRU model was trained on data from the first four Batch1 batteries and tested on the remaining batteries of that batch; on those batteries its average R² was 0.977.\n\nStep 2. Source input (Doc 5, the transfer learning section): after loading the pre-trained weights, the authors fine-tuned the CNN-self-attention model on data from the test set, its target domain.\n\nStep 3. Source input (Doc 5, results of health estimation and Table 4): across its test batteries the model's average R² was 0.959 before transfer learning and 0.977 after it.\n\nStep 4. Reading (Doc 5): the after-transfer score comes from the same test batteries the model had just been fine-tuned on (Step 2), so its score on cells it never saw is the before-transfer score.\n\nStep 5. Calculation (Doc 6 and Doc 5): 0.977 - 0.959 = 0.018.\n\nDecoy: Doc 5's after-transfer score, the figure it reports most often, would give no difference at all.\n\nStep 6. Final answer (Doc 6 and Doc 5): 0.018.",
+  "answer_components": [
+    "0.018"
+  ],
+  "evidence": [
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "training the model on data from the first four batteries in Batch1 and testing it on the remaining batteries from the same batch"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "The average MAE, RMSE, and R2 values for all batteries are 0.608, 0.802, and 0.977"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Subsequently, data from the test set (target domain) was used for fine-tuning."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "the model is pre-trained on the source domain dataset (70% of the data) before fine-tuning on the target domain dataset (20% of the data)"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Before optimization, the average RMSE across 39 batteries was 0.00609 Ah, with an average R2 of 0.959"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "After transfer learning, the performance of the model improved further, with the average RMSE dropping to 0.00479, R2 increasing to 0.977"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "|Metric|Before transfer learning|After transfer learning|"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "|R2|0.959|0.977|"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Look-alike measure: Doc 5 gives R² 0.959 before and 0.977 after fine-tuning on its 39 test cells (Results; Table 4). Taking the after-fine-tuning figure gives 0.977 - 0.977 = 0.000. Those cells were unseen only before fine-tuning, so the gold uses 0.959: 0.018."
+}
