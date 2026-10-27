@@ -1,0 +1,1546 @@
+## Joint Research Centre
+
+The adoption of 
+Generative AI in EU public administrations: exploring individual behaviours and organisational approaches  
+
+Mikalef, P., Medaglia, R., Tangi, L., Rodriguez Müller, A.P.
+
+2026
+
+
+-----
+
+This document is a publication by the Joint Research Centre (JRC), the European Commission’s science and knowledge service. It aims to provide evidence-based scientific support to the European policymaking process. The contents of this publication do not necessarily reflect the position or opinion of the European Commission. Neither the European Commission nor any person acting on behalf of the Commission is responsible for the use that might be made of this publication. For information on the methodology and quality underlying the data used in this publication for which the source is neither Eurostat nor other Commission services, users should contact the referenced source. The designations employed and the presentation of material on the maps do not imply the expression of any opinion whatsoever on the part of the European Union concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries.
+
+## Joint Research Centre
+
+https://joint-research-centre.ec.europa.eu
+
+JRC147095 
+EUR 40743
+
+PDF        ISBN 978-92-68-40168-2       ISSN 1831-9424        doi:10.2760/6526635        KJ-01-26-244-EN-N
+
+Luxembourg: Publications Office of the European Union, 2026
+
+© European Union, 2026
+
+The reuse policy of the European Commission documents is implemented by the Commission Decision 2011/833/EU of 12 December 2011 on the reuse of Commission documents (OJ L 330, 14.12.2011, 
+p. 39). Unless otherwise noted, the reuse of this document is authorised under the Creative Commons Attribution 4.0 International (CC BY 4.0) licence (https://creativecommons.org/licenses/by/4.0/). This means that reuse is allowed provided appropriate credit is given and any changes are indicated. 
+
+For any use or reproduction of photos or other material that is not owned by the European Union permission must be sought directly from the copyright holders.
+
+Cover page and chapters covers, © darkovujic - stock.adobe.com
+
+How to cite this report: Mikalef, P., Medaglia, R., Tangi, L. and Rodriguez Müller, A.P., The adoption of Generative AI in EU public administrations: exploring individual behaviours and organisational approaches, Publications Office of the European Union, Luxembourg, 2026, https://data.europa.eu/doi/10.2760/6526635, JRC147095.
+
+Layout: Carmen Capote de la Calle
+
+
+-----
+
+## Contents
+
+Abstract....................................................................................................................................................2
+
+Acknowledgements.................................................................................................................................3
+
+Executive summary..................................................................................................................................4
+
+01. Introduction.......................................................................................................................................7
+
+02. Policy background...........................................................................................................................13
+
+03. Perceptions and uses of generative AI by civil servants..........................................................16 3.1 Nature of technology: empowerment and dependency.............................................................................................18 3.2 Technology strategy: innovation and control.................................................................................................................19 3.3 Technology in use: exploration and regulation...............................................................................................................21
+
+04. Generative AI assimilation in public administrations................................................................22 4.1 Paving the way: anchoring-in and adapting..................................................................................................................23 4.2 Assimilation of generative AI in public administration...............................................................................................25
+
+05. Policy recommendations................................................................................................................32 5.1 Build interoperable generative AI infrastructure.........................................................................................................33 5.2 Strengthen governance and operational readiness....................................................................................................34 5.3 Accelerate public value creation and innovation...........................................................................................................36
+
+06. Conclusions......................................................................................................................................38
+
+References..............................................................................................................................................40
+
+List of abbreviations and definitions..................................................................................................43
+
+List of boxes...........................................................................................................................................44
+
+List of figures........................................................................................................................................45
+
+List of tables..........................................................................................................................................46
+
+Annex I. Case studies, methodological details..................................................................................47
+
+Annex II. The interview protocol..........................................................................................................48
+
+1
+
+
+-----
+
+## Abstract
+
+Generative artificial intelligence (GenAI) is rapidly reshaping public sector work and accelerating policy debates across Europe. Public administrations are increasingly experimenting with GenAI tools to support document drafting, knowledge management, information processing and service delivery, while simultaneously facing growing challenges related to governance, data protection, organisational readiness and technological sovereignty. Against this background, this report examines how GenAI is being adopted and integrated within European public administrations, through interviews, case studies and a review of the literature. It focuses both on the individual use of the technology by civil servants and on the broader organisational processes required for its strategic assimilation.
+
+At the individual level, GenAI adoption is characterised by persistent tensions between empowerment and dependency, innovation and control, and experimentation and regulation. Civil servants increasingly perceive GenAI as a valuable cognitive assistant capable of enhancing productivity, supporting decision-making and improving access to organisational knowledge. At the same time, concerns have emerged regarding reliability, over-reliance, skill erosion, and the widespread use of external commercial tools outside formal organisational channels.
+
+At the organisational level, GenAI adoption requires more than the deployment of technological solutions. The assimilation of GenAI encompasses a careful consideration of several key factors: the availability of secure and user-friendly environments, governance capabilities, data and technological infrastructures, workforce skills, and mechanisms for experimentation, monitoring and continuous adaptation. Different assimilation strategies are possible, depending on the type of value administrations aim to generate through GenAI use. Lighter approaches may be sufficient for operational support, while more advanced forms of cognitive augmentation and human–AI collaboration require deeper organisational integration and more strategic governance arrangements. The value-based framework proposed in this report is intended to support reflection on this topic.
+
+Building on these findings, administrations and EU Member States should reflect on how to best harness the opportunities offered by GenAI. The report proposes a set of operational policy recommendations to support the responsible, secure and scalable adoption of GenAI in the public sector. Overall, it contributes to the emerging debate on how European public administrations can move from fragmented experimentation towards a more strategic and governed integration of GenAI into administrative processes and public service delivery.
+
+
+-----
+
+## Acknowledgements
+
+The authors are grateful to Sven Schade, Philip Boucher and all colleagues in the innovation in public governance (INNPULSE) project team for their contributions to the report and, more broadly, for the continuous discussions and exchanges on the topic. The authors also extend their gratitude to Michele Vespe, Carmen Capote de la Calle, Miriam Giubilei, Francesca Siciliano and the entire Digital Economy and Society Unit at the Joint Research Centre for their support, insightful reviews and valuable feedback. 
+
+The authors also acknowledge the contributions of colleagues from the Directorate-General for Digital Services (DG DIGIT), a long-standing strategic partner in these activities within the context of the Public Sector Tech Watch and the colleagues from the Directorate-General for Communications Networks, Content and Technology (DG CNECT) for their support to the study and its revision. Finally, the authors express their sincere thanks to all interviewees and participating administrations for the time dedicated to the research and for the valuable contributions and perspectives that constitute the foundation of this study. 
+
+Authors
+ → Patrick Mikalef (Norwegian University of Science and Technology)
+
+ → Rony Medaglia (Copenhagen Business School)
+
+ → Luca Tangi (European Commission, Joint Research Centre)
+
+ → A. Paula Rodriguez Müller (European Commission, Joint Research Centre)
+
+
+-----
+
+Executive summary
+
+Aim of the report
+
+Generative artificial intelligence (GenAI) is rapidly entering public administrations across Europe, reshaping how public employees work, how administrations manage knowledge and how governments may design and deliver public services. The speed of diffusion of commercial GenAI tools, combined with changing European policy priorities in relation to AI, technological sovereignty and digital transformation, creates both significant opportunities and important governance challenges for the public sector.
+
+This report explores GenAI adoption in public administrations through two complementary perspectives: individual use and organisational assimilation. On the one hand, it analyses how public employees are already using GenAI tools in their daily activities, the perceived benefits and risks, and the emerging technology-in-use dynamics within administrations. On the other hand, it investigates how administrations are attempting to move from isolated experimentation towards more structured and strategic forms of GenAI assimilation.
+
+The report aims to contribute to the current policy debate by identifying the organisational, technological, governance and contextual conditions required for responsible and effective GenAI adoption in the European public sector, while ensuring alignment with EU values, regulatory frameworks and strategic priorities.
+
+Key conclusions
+The findings show that GenAI adoption in public administrations is already taking place, often through informal and fragmented practices driven by individual employees using commercial tools to support tasks such as drafting, summarisation, learning, coding and analysis. Public employees 
+
+4
+
+increasingly perceive GenAI not only as a productivity tool, but also as a broader cognitive and knowledge support system.
+
+At the same time, the report identifies important tensions shaping current adoption trajectories. 
+Public administrations face a difficult balance between empowerment and dependency, innovation and control, and experimentation and regulation. In many cases, the widespread availability and ease of use of commercial tools creates ‘shadow AI’ dynamics, whereby employees move fluidly between official and external tools depending on convenience and task requirements.
+
+The analysis confirms that successful GenAI adoption requires more than the deployment of technological tools. It depends on a broader list of organisational factors, including governance structures, data and technological infrastructures, workforce capabilities, experimentation mechanisms, and alignment with public sector values and regulatory obligations.
+
+The report also highlights that GenAI adoption should not be understood as a linear or uniform process. Different administrations, and even different units within the same administration, may pursue different assimilation trajectories depending on their operational needs, data sensitivity, organisational maturity and strategic priorities.
+
+Finally, the findings suggest that the current European policy landscape is progressively creating the conditions for a more structured assimilation of GenAI into public administrations. 
+The combination of the AI Act, the AI Continent Action Plan, the Apply AI Strategy and the broader ecosystem of European GovTech companies reflects a transition from isolated experimentation towards a more strategic, governed and sovereign approach to AI adoption in government.
+
+
+-----
+
+Main contributions
+The report contributes to the emerging field of research on GenAI in government in several ways.
+
+First, it provides one of the first structured analyses of GenAI adoption in European public administrations, combining empirical evidence from case studies and interviews with a broader conceptual reflection on organisational transformation and AI governance.
+
+Second, it proposes an analytical distinction between individual use and organisational assimilation, showing how public employees’ practices and organisational assimilation dynamics interact with and influence each other.
+
+Third, the report highlights the importance of examining GenAI at the individual level, exploring how employees’ behaviours, attitudes, expectations and patterns of use shape adoption trajectories. In doing so, it identifies emerging tensions and dilemmas among civil servants, while emphasising the distinctive nature of GenAI technologies, which by design enable highly flexible and personalised forms of use depending on individual needs, skills and attitudes.
+
+Fourth, the report discusses the role of organisational practices and assimilation strategies in enabling or constraining the effective, safe and responsible use of GenAI. To support this analysis, it develops a value-oriented perspective on GenAI assimilation, highlighting how GenAI’s role may develop from operational support and efficiency gains towards more advanced forms of cognitive augmentation and human–AI collaboration.
+
+Finally, the report translates these findings into a set of operational policy recommendations aiming to support public administrations in developing secure, strategic and scalable approaches to GenAI adoption aligned with European values and priorities.
+
+Related and future work of the Joint Research Centre
+
+This report builds on the broader work of the Joint Research Centre (JRC) of the European Commission, and in particular the innovation in public governance project (INNPULSE),(1) on AI and digital transformation in the public sector. 
+It is closely connected to the Public Sector Tech Watch(2) initiative, which monitors the use of emerging technologies in public administrations across Europe and maintains a growing repository of AI and GenAI use cases.
+
+The report also complements ongoing JRC work on AI governance, GovTech ecosystems, digital government transformation, interoperability and citizens’ perceptions of AI in the public sector. Future work will continue to monitor the development of GenAI adoption in governments, with particular attention paid to (i) sovereign and secure GenAI environments, (ii) organisational governance models, (iii) the AI-enabled transformation of public services, (iv) citizens’ trust and acceptance and (v) interoperability and shared infrastructures.
+
+Quick guide
+The report is structured around two main analytical dimensions.
+
+After the introduction (Chapter 1) and the policy background of the report (Chapter 2), the next part (Chapter 3) explores individual use of GenAI in public administrations, examining how public employees perceive and use the technology, the opportunities and risks emerging from daily practices and the tensions associated with hybrid environments combining official and commercial tools.
+
+The fourth part focuses on organisational assimilation (Chapter 4), analysing how administrations are attempting to embed GenAI 
+
+1. JRC, ‘Innovations in public governance’.
+2. Interoperable Europe, ‘Public Sector Tech Watch’.
+
+
+-----
+
+into organisational processes, governance structures, infrastructures and workflows. It introduces a maturity-oriented perspective on GenAI integration and discusses the enabling conditions required for sustainable adoption.
+
+The penultimate chapter translates the findings into policy recommendations (Chapter 5) and reflects on the implications of GenAI adoption for the future of public administration in Europe. 
+Conclusions are provided at the end of the report (Chapter 6).
+
+
+-----
+
+1. Introduction
+
+
+-----
+
+In Europe, the adoption of GenAI in public administrations is gaining notable traction (Tangi et al., 2024; Navajas Cawood et al., 2025; European Commission, 2025). Policy and regulatory frameworks, such as the General Data Protection Regulation (GDPR) and the EU AI Act, provide a structure within which public administrations must operate. Furthermore, the recent Apply AI Strategy underscores the public sector’s pivotal role as a strategic area for AI adoption, advocating for AI’s integration into public operations and the strategic procurement of AI technologies that favour EU-produced, open-source solutions. This aspect is particularly significant in the realm of GenAI, where many providers are located outside the EU. 
+European governments must therefore pursue a balance between innovation, public trust, risk management and legal compliance.
+
+Generative artificial intelligence (GenAI) is rapidly emerging as a transformative element in the digital development of the public sector (European Commission, 2025) (see Box 1 for a definition). Differing from previous waves of automation and analytics, GenAI facilitates the dynamic creation, synthesis and interpretation of complex information. It offers new capabilities in drafting, summarisation, pattern detection and interactive knowledge support, potentially altering how public administrations manage information, make decisions and deliver services (Cordella et al., 2024; Ali et al., 2025). Consequently, European governments face growing pressure to ensure they fully understand not only the technological potential of GenAI but also the organisational, ethical and institutional implications of its adoption (Janssen, 2025). GenAI represents a shift in the perception of AI systems, developing from tools that passively analyse or classify existing data to systems that actively create, transform and enhance them (Navajas Cawood et al., 2025).
+
+Box 1. Defining GenAI.
+
+While acknowledging the diverse definitions of GenAI among practitioners and scholars, for the purpose of this report, ‘GenAI’ is defined as a subset of AI approaches that utilise generative models to create new content such as audio, code, images, text, simulations and videos (Sengar et al., 2024). Unlike traditional machine learning models that focus on classifying or predicting outcomes, generative models learn the underlying distribution of training data and produce new outputs that replicate the stylistic or structural features of those data (Feuerriegel et al., 2024). The outputs of GenAI are assumed to resemble human-like, novel content, emulating human creativity and insight.
+
+At the technical level, GenAI includes a wide array of modelling paradigms. These consist of transformer-based large language models for text generation; generative adversarial networks and variational autoencoders for image and multimedia synthesis; diffusion models for high-fidelity image, video and audio generation; and hybrid innovations that integrate multiple architectures tailored to specific modalities and use cases (Yazdani et al., 2025). Despite variations in architecture and modality, these systems have a common capacity to create ‘new content’ that does not exist verbatim in the training data but is constructed by recombining learned representations. Thus, GenAI facilitates a form of algorithmic creativity, enabling machines to produce human-like, novel outputs (Kirchner et al., 2025).
+
+
+-----
+
+To thoroughly examine the adoption of GenAI in public administrations, two complementary perspectives must be considered (see Figure 1):
+
+ → Individual perceptions and use. The versatile nature of GenAI means its potential applications are highly diverse. 
+Different individuals may utilise GenAI tools in various ways, depending on their needs, skills and attitudes. This necessitates an exploration of how individual civil servants perceive and use these tools.
+
+ → Organisational assimilation. GenAI encompasses a variety of models, each offering unique advantages, disadvantages and levels of suitability for specific tasks. Additionally, these models can be integrated through various means, such as online licences or local server installations. Consequently, it is relevant to investigate how public administrations can manage these diverse options and how they can determine which best aligns with their needs.
+
+Figure 1. Perspectives on GenAI adoption in public administrations.
+
+The individual civil servant’s perception of GenAI and how they ultimately use it
+
+Individual perceptions and use
+
+Organisational assimilation
+
+The approach taken by public administrations for making GenAI accessible to their employees and external users
+
+Source: Authors.
+
+These two perspectives are complementary and exert mutual influence. Individual needs and usage patterns can shape how public administrations choose to assimilate GenAI, while the chosen assimilation model can impact how users engage with the technology. 
+Despite this interdependence, each perspective maintains distinct properties. For instance, two administrations might select the same 
+
+assimilation model, yet their employees may use the system differently and for different tasks. 
+Similarly, identical uses of the technology can be executed across diverse assimilation models. 
+This report considers and dives deep into both perspectives (see Box 2 for a discussion of the methodology and Box 3 for an overview of the case studies).
+
+
+-----
+
+Box 2. Methodology in brief.
+
+To build a robust analytical foundation, the study employs a two-part methodological approach.
+
+First, a structured literature review draws on academic research from the domains of information systems and public administration and on grey literature from published reports of consultancies, international organisations and government agencies. This methodological approach allows for the identification of the foundational framework to be used as a basis for the empirical research.
+
+The second and central approach is a series of case studies. The unit of analysis for each case study is a public administration that is actively integrating GenAI into their processes and service. Eight case studies were conducted, based on 31 semi-structured interviews (see Annex I). The interviewees include public servants and experts with experience using and expertise in GenAI, given their involvement in GenAI projects in the public sector. A short description of the cases is reported in Box 3.
+
+The interviews followed a pre-designed interview protocol, consisting of four main sections (see Annex II). 
+The first section gathers background information on the interviewees’ role, including their responsibilities, length of experience and typical use of digital tools. The second section explores the personal use of GenAI tools by the interviewee. The third section focuses on perceptions, impacts and challenges of the technology. 
+The fourth section focuses on the presence of guidelines and training initiatives in the administration of the interviewee, and on prospects for the future of GenAI development in the public sector.
+
+The interviews were conducted between March and November 2025. All interviews were recorded, transcribed verbatim and anonymised to ensure confidentiality and compliance with ethical guidelines. 
+
+In addition, two online validation workshops were conducted to refine and enrich the findings. The first workshop brought together public officials, who were invited to reflect on the preliminary themes, assess their relevance to their organisational contexts and provide feedback on missing elements or misalignments. The second workshop engaged government employees working directly with AI and data-driven innovation, enabling us to validate the analytical categories from a technical and operational perspective and incorporate practical insights that deepened our understanding of implementation challenges and enabling conditions.
+
+Box 3. The case studies.
+
+Case 1: Municipality of Copenhagen – Denmark
+
+The Municipality of Copenhagen, Denmark’s capital, is a leader in Europe in terms of digital innovation and responsible AI adoption. The municipality has launched several initiatives to explore how AI can improve public services, sustainability and citizen engagement. Through Copenhagen Solutions Lab and dedicated AI pilot programmes, the city is testing GenAI tools to support communication, automate administrative tasks and enhance urban management. Copenhagen has also established secure AI-testing environments for municipal employees and emphasises a ‘learn first, implement later’ approach focused on ethics, transparency and data security. AI is also being applied in smart energy systems and mobility and climate initiatives to support the city’s broader sustainability goals. 
+
+
+-----
+
+Case 2: Municipality of Helsinki – Finland
+
+Helsinki, Finland’s capital and largest municipality, is a flagship of human-centric digital transformation, leveraging strong municipal autonomy, a broad public service remit and a commitment to transparency and ethical AI to become a leading European test bed for GenAI. City-wide digitalisation and data teams are shaping AI governance frameworks – including those on impact assessments, risk controls measures and EU AI Act compliance – while piloting GenAI across key domains: an 860-employee Microsoft Copilot trial supports knowledge-intensive office work, the Education Division uses certain AI tools for lesson planning and multilingual material creation, and developers employ GitHub Copilot for code review, documentation and prototyping, demonstrating Helsinki’s blend of rapid experimentation and rigorous legal and citizen trust safeguards. 
+
+Case 3: Federal Ministry for Economic Cooperation and Development – Germany
+
+Through its internal multi-purpose unified AI assistant, which contains context knowledge of organizational goals and key documents, the Federal Ministry for Economic Cooperation and Development is pioneering secure GenAI use within the German federal administration. It has set up a tightly controlled “AI sandbox” that hosts generative pre-trained transformer models, enforces data segregation and access control, and complies with data governance standards. These measures reflect Germany’s broader commitment to digital innovation while upholding constitutional privacy protections and public sector accountability. The ministry’s initiative showcases how federal ministries can balance organisational agility with legal compliance, offering a nascent blueprint for other European governments seeking human-centric, risk-aware GenAI adoption. 
+
+Case 4: Presidency of the government – Greece
+
+The Greek presidency of the government has positioned AI at the centre of the Member State’s digital transformation agenda. Through the Ministry of Digital Governance and Artificial Intelligence, Greece has promoted a national AI strategy focused on modernising public administration; improving healthcare, education, taxation and citizen services; and strengthening democratic governance. Key initiatives include AI-powered digital assistants for public services, investments in data infrastructure, and training programmes to build AI skills among civil servants and educators. The government has also emphasised ethical, human-centric AI aligned with EU principles, aiming to foster innovation, transparency, accountability and economic competitiveness nationwide. 
+
+Case 5: National Institute for Social Security – Italy
+
+Italy’s National Institute for Social Security (Istituto Nazionale della Previdenza Sociale) is responsible for pensions, welfare, unemployment benefits and digital public services for millions of citizens. In recent years, the institute has become a leading example of AI adoption in the Italian public sector, with the adoption of machine learning systems to automate the classification and processing of official communications and emails. The institute has introduced GenAI virtual assistants on its user portal, designed to streamline access to services and improve user interaction.
+
+Case 6: Directorate-General for Digital Services – European Commission
+
+The European Commission is actively experimenting with GenAI across its vast administration. The Directorate-General for Digital Services is developing GenAI solutions that many directorates-general 
+
+
+-----
+
+are now piloting for policy analysis, document drafting, translation, legal summarisation, knowledge management and inter-directorate-general collaboration, often using dedicated sandboxes and retrieval-augmented generation tools that query internal legislative and research repositories within strict data boundaries. Concurrently, the Commission, under the guidance of the Directorate-General for Digital Services, is building internal governance – including staff guidance, ethical safeguards, procurement rules and security assessment procedures – to ensure responsible, compliant use of GenAI while it continues to shape the EU-wide AI regulatory framework. 
+
+Case 7: Norwegian Labour and Welfare Administration – Norway
+
+The Norwegian Labour and Welfare Administration is piloting GenAI to streamline caseworker tasks such as drafting letters, summarising regulations and supporting internal knowledge search, while also testing Copilot-style tools for software development. The national AI strategy designates agencies like the Norwegian Labour and Welfare Administration as key innovators, but adoption is tempered by strict data privacy, EU and national AI regulation compliance, and the need to maintain public trust and welfare legitimacy. Consequently, the roll-out focuses on robust governance, risk assessment and alignment with long-term demographic and labour market policies. 
+
+Case 8: Government of Catalonia – Spain
+
+The government of Catalonia – a highly decentralised regional administration with competencies in health, education, security, social policy and digital governance – has positioned itself as one of Europe’s most digitally progressive regions. Building on the Catalonia.AI strategy, it has created data spaces, algorithmic governance frameworks and cross-government platforms that underpin a responsible AI approach for both public services and the wider economy. Recent pilot projects focus on secure internal GenAI environments and model-testing sandboxes, deployed under strict safeguards that ensure compliance with the GDPR, national AI guidance and the EU AI Act, while simultaneously improving data cataloguing, quality and risk classification mechanisms for algorithmic systems. This work demonstrates Catalonia’s ambition to combine rapid GenAI experimentation with robust organisational and regulatory safeguards. 
+
+
+-----
+
+2. Policy background
+
+
+-----
+
+The rapid emergence of GenAI has accelerated policy debates across Europe, pushing AI adoption and governance to the centre of the European policy agenda. While the EU had already developed a broad policy framework for AI before the diffusion of GenAI, the rise of large language models and conversational AI has intensified discussions around technological sovereignty, public sector transformation, governance, trust and competitiveness. As a result, recent European initiatives increasingly address not only AI regulation but also the conditions required for the large-scale deployment and assimilation of AI systems across sectors, including public administrations.
+
+To understand the European approach to GenAI, it is necessary to situate it within the broader development of EU AI policymaking. Since the publication of the first communication on AI in 2018 (Artificial intelligence for Europe(3)), the European Commission has progressively shaped a human-centric vision of AI grounded in two complementary objectives: excellence and trust. On the one hand, European policies aim to strengthen research, innovation, industrial capacity and technological sovereignty; on the other hand, they seek to ensure that AI systems remain aligned with European values, fundamental rights, safety requirements and democratic accountability. More recently, the European approach to AI policy has increasingly focused on adoption, implementation and sectoral integration, recognising that the value of AI depends not only on technological development but also on the capacity of organisations and institutions to integrate it effectively into their practices and workflows. This development has been analysed in a recent science for policy brief (Rodriguez Müller et al., 2026).
+
+Within this broader framework, three policy and regulation initiatives are particularly important 
+
+3. Communication from the Commission to the European Parliament, the European Council, the Council, the European Economic and Social Committee and the Committee of the Regions – Artificial intelligence for Europe, COM(2018) 237 final of 25 April 2018.
+
+for understanding the current European approach to AI and GenAI: the AI Act,(4) the AI Continent Action Plan,(5) and the Apply AI Strategy.(6) The AI Act constitutes the regulatory cornerstone of the European approach. It introduces a harmonised, risk-based framework governing the development, deployment and use of AI systems within the EU. Importantly, the regulation includes specific provisions addressing general-purpose AI and GenAI models, introducing obligations related to transparency, documentation, risk management and compliance. The AI Act therefore establishes the legal and governance foundations of the framework within which GenAI systems are expected to operate.
+
+Alongside the regulatory dimension, the AI Continent Action Plan reflects the EU’s strategic ambition to strengthen Europe’s AI ecosystem and technological sovereignty. The plan focuses on enabling conditions for AI development and adoption, including investments in computing infrastructure, access to high-quality data, skill development, innovation capacity and support for AI deployment across sectors. The Apply AI Strategy complements this framework by focusing specifically on AI adoption and organisational transformation. The Strategy promotes an AI-first approach, encouraging organisations to move beyond viewing AI as a stand-alone tool and instead integrate it strategically into processes, services and organisational structures. Importantly, the public sector is identified as one of the strategic sectors in which AI can generate transformative 
+
+4. Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024 laying down harmonised rules on artificial intelligence and amending Regulations (EC) No 300/2008, (EU) No 167/2013, (EU) No 168/2013, (EU) 2018/858, (EU) 2018/1139 and (EU) 2019/2144 and Directives 2014/90/EU, (EU) 2016/797 and (EU) 2020/1828 (Artificial Intelligence Act) (OJ L, 2024/1689, 12.7.2024, ELI: 
+http://data.europa.eu/eli/reg/2024/1689/oj).
+5. Communication from the Commission to the European Parliament, the European Council, the Council, the European Economic and Social Committee and the Committee of the Regions – AI continent action plan, COM(2025) 165 final of 9 April 2025.
+6. Communication from the Commission to the European Parliament and the Council – Apply AI strategy, COM(2025) 
+723 final of 8 October 2025.
+
+
+-----
+
+Administration section, which collects guidelines, policies and procedural documents developed by European public administrations on the use of GenAI tools. 
+
+Another important initiative is GenAI4EU,(8) which supports the development of European GenAI tools through dedicated calls across multiple sectors, including the public sector. In this context, the European Commission is funding dedicated GenAI pilot projects for public administrations under the Digital Europe Programme, aimed at testing scalable and replicable use cases and strengthening European technological sovereignty. These pilots will be complemented by a Coordination and Support Action to foster replication, develop practical procurement guidance and tools, facilitate cooperation between public administrations and European AI providers, and help build a European community of practice for public administrations using GenAI.
+
+Taken together, these policies and initiatives demonstrate that the European approach to GenAI increasingly combines regulation, innovation support, organisational transformation and ecosystem development. At the same time, conditions now appear mature enough for a shift from isolated experimentation towards a more strategic and governed assimilation of GenAI into administrative processes and public service delivery, while ensuring security, trustworthiness and alignment with European values. In this context, identifying and analysing emerging practices and organisational behaviours becomes particularly important to support the development of public sector approaches to GenAI that are both operationally effective and aligned with broader European policy objectives.
+
+impact. The Strategy explicitly encourages public administrations to accelerate AI adoption, stimulate demand for European AI solutions and strengthen organisational readiness through governance mechanisms, interoperability frameworks, training initiatives and shared infrastructures.
+
+Within the policy debate on AI adoption in the public sector, the concept of sovereignty is becoming increasingly central, with significant implications for the adoption of GenAI. The changing geopolitical landscape is reinforcing the need for Europe to strengthen its innovation capacity and reduce strategic dependencies on non-European providers, while remaining open and interconnected within the global technological ecosystem. In this context, public administrations are affected by two different goals. On the one hand, they are required to reflect on the governance of their data, infrastructures and systems, ensuring that critical assets are developed and managed within secure and trustworthy environments, reducing risks related to security breaches or excessive dependence on external providers. On the other hand, public administrations can actively foster innovation through procurement and demand-side policies, incentivising the adoption of European AI solutions and contributing to the development of the European GovTech ecosystem, as envisaged by the Apply AI Strategy.
+
+Beyond the broader policy framework, the European Commission has also developed an ecosystem of initiatives supporting AI and GenAI adoption in the public sector. These include the Public Sector Tech Watch (PSTW) observatory,(7) within which the present research is embedded. 
+The PSTW monitors the use of emerging technologies in public administrations across Europe and, at the time of writing, includes data on more than 200 GenAI-related cases in its repositories. In 2025, PSTW also published one of the first analyses setting out the European landscape of GenAI adoption in the public sector. 
+In addition, the PSTW hosts the GenAI for Public 
+
+7. Interoperable Europe, ‘Public Sector Tech Watch’.
+
+8. The relevant call (Digital-2025-AI-08 – ‘Apply AI: GenAI for the public administrations’) can be found in Digital Europe programme (Digital) – Call for proposals, 22 July 2025.
+
+
+-----
+
+3. Perceptions and uses of generative AI by civil servants
+
+
+-----
+
+GenAI tools are inherently accessible and flexible, and employees can adopt them in ways that reflect their individual needs, competencies and attitudes towards the technology. The same tools may support a wide range of activities, including text drafting and revision, summarisation, learning, coding and image generation. Understanding GenAI adoption in the public sector thus requires an individual-level perspective.
+
+The individual use of GenAI has become widespread in recent years. A 2025 report from Massachusetts Institute of Technology (MIT) highlighted that 90 % of surveyed companies reported regular use of personal AI tools for work-related tasks (MIT NANDA, 2025). Similar dynamics are also emerging in the public sector. 
+A survey conducted by the JRC in early 2024 revealed that 30 % of the public managers interviewed were using ChatGPT or similar tools in their work, while an additional 44 % planned to do so in the future (Tangi et al., 2024). Public servants often employ GenAI to draft or revise reports, polish policy proposals and create content, frequently doing so without formal approval or established institutional guidelines. 
+This unauthorised, self-driven uptake of AI is referred to as ‘shadow use’ (MIT NANDA, 2025; Tangi et al., 2025a).
+
+To analyse these individual dynamics, our analysis draws on the technological frames of reference (TFR) theory (Orlikowski et al., 1994). 
+The TFR theory examines how individuals within organisations interpret technologies, defining interpretation as ‘a collectively constructed set of assumptions, knowledge and expectations regarding a technology and its uses and applications’ (Cornelissen et al., 2014, p. 185). 
+
+In this context, the framework helps explore how civil servants construct meaning around GenAI by framing its drivers, uses, impacts, opportunities and associated challenges (van Hulst et al., 2016).
+
+The TFR theory identifies three interpretive domains relevant to technology adoption and use, namely the:
+
+ → nature of technology (how employees perceive the technology, including its capabilities and limitations);
+
+ → technology strategy (how employees 
+
+understand the rationale for introducing the technology within the organisation, including its intended value and purpose);
+
+ → technology in use (how employees interpret its practical application, including the conditions and consequences of use).
+
+The analysis is structured around these three domains, examining how public servants frame GenAI in the public sector context.
+
+Figure 2 summarises the main findings. Across the interviews, perceptions of GenAI are characterised by three recurring tensions, where opportunities and positive expectations are consistently balanced by concerns, uncertainties and perceived risks. The findings are therefore presented through these tensions, which emerge across all three interpretive domains. The following sections discuss these dynamics in detail.
+
+
+-----
+
+Figure 2. Individual use – main findings. 
+
+Empowerment
+GenAI is perceived as a cognitive partner that augments human intelligence and capabilities
+
+Nature of technology
+
+Dependency
+GenAI is perceived as potentially undermining cognitive autonomy and intellectual integrity
+
+Innovation
+GenAI is understood as a driver of organisational innovation, enhancing efficiency, productivity and decision-making
+
+Technology strategy
+
+Control
+GenAI is understood as weakening traditional mechanisms for behavioural oversight
+
+Exploration
+GenAI is used in practice in an exploratory manner across a range of tasks to identify new ways of working
+
+Technology-in-use
+
+Regulation
+GenAI is used in practice amid uncertainty around appropriate use, including the boundaries between corporate and personal tools
+
+Source: Authors.
+
+3.1 Nature of technology: 
+empowerment and dependency
+The first dimension refers to the interviewees’ understanding of GenAI as a technology, including its capabilities and functionality.
+
+We have a general-purpose chatbot… something similar to other solutions where the user interacts mainly by prompt.
+
+(Project manager)
+
+Public servants mainly describe GenAI as a conversational system, understood as a flexible interface enabling interaction between humans and machines. This interaction is primarily framed as a dialogue mediated through prompts and pre-defined interfaces. These interfaces vary, in terms of different large language model providers and organisational configurations, with some 
+
+administrations developing in-house tools with tailored interfaces. Despite these variations, the perception of GenAI as fundamentally conversational remains stable across contexts. 
+Many interviewees compare internal tools with commercial solutions, highlighting their functional similarity. As one interviewee notes, the organisational tool is ‘basically a ChatGPT clone’.
+
+Beyond the interface dimension, interviewees consistently emphasise the perception of GenAI as a tool capable of processing, structuring and generating knowledge, particularly in unstructured textual environments. The inherently text-based nature of public sector work makes GenAI a natural fit for use in administrative contexts characterised by large volumes of documentation and information flows. 
+
+At a more granular level, interviewees describe a wide range of GenAI capabilities, often closely linked to their daily activities. This reflects the breadth of public servants’ perceptions of the opportunities offered by GenAI. For instance, in some cases, GenAI is seen as a tool for detecting non-compliance factors. Other 
+
+
+-----
+
+interviewees emphasise its potential to transform static documents into interactive knowledge environments, enabling users to sift through organisational information more effectively using conversational access.
+
+as potentially coming at the cost of reduced cognitive depth and self-reliance. This concern is reinforced by the view that the extensive use of these tools can lead to a form of outsourcing of analytical effort and critical thinking.
+
+[GenAI] reads the description or the user reviews… in order to find something that could potentially imply some non-compliance factors.
+
+(Project manager)
+
+Despite this strong emphasis on capabilities, interviewees also show a clear awareness of limitations, particularly in relation to accuracy, contextual understanding and reliability. These limitations are not seen as secondary issues but as intrinsic features of probabilistic systems that require human validation. A recurring concern is the difficulty of capturing nuance and context-specific meaning. As a result, GenAI outputs are not treated as authoritative but as outputs that require interpretation, checking and oversight.
+
+I have become very dependent on it, more so than I’d like to admit.
+
+(Data scientist)
+
+Another important theme is the perceived risk of dependency, particularly at the cognitive level. Several interviewees report increasing reliance on GenAI tools, especially large language models. This dependency is associated with concerns about reduced engagement with underlying processes and gradual skill erosion, with interviewees suggesting that they may ‘lose touch’ with how activities are carried out. 
+In this sense, efficiency gains are perceived 
+
+Taken together, the findings reveal a clear dual framing of GenAI in terms of empowerment and dependency. On the one hand, GenAI is understood as a powerful enabler of productivity, capable of transforming how information is processed, accessed and generated. On the other hand, it is seen as introducing new risks related to accuracy, reliability and the erosion of human skills. Empowerment and dependency are intertwined aspects of how the nature of GenAI is understood: this tension is not resolved in favour of one interpretation over the other. 
+Instead, public servants appear to hold both views simultaneously, recognising the benefits of GenAI while remaining cautious about its implications. 
+This suggests a relatively balanced and reflective understanding of the technology, rather than uncritical enthusiasm or outright scepticism.
+
+3.2 Technology strategy: innovation and control
+The second dimension of the study addresses public servants’ perspectives on why their administrations acquired and implemented GenAI, focusing on the motivations, strategic vision and expected value behind adoption decisions.
+
+A central rationale of the interviewees for adopting GenAI is the expectation that it will enhance efficiency, productivity and decision-making capacity. Its perceived value is mainly framed in terms of efficiency gains and workload reduction, particularly through the automation or acceleration of repetitive tasks. This is closely linked to the nature of bureaucratic work, which is often characterised by high levels of information overload.
+
+However, efficiency is often accompanied by several other adoption drivers. GenAI is also associated with the need to improve how administrations manage large volumes 
+
+
+-----
+
+of information and complex administrative processes, with the aim of supporting faster and more effective decision-making. Another recurring strategic motivation is the need to retain and structure organisational knowledge, particularly in environments characterised by high staff turnover. In this context, GenAI is seen as a means to institutionalise knowledge and reduce dependency on individual expertise, contributing to broader objectives of organisational resilience.
+
+It is very difficult to define data protection measures for a generative AI tool, because in principle any data that users can access could potentially be processed.
+
+(Data scientist)
+
+The idea was to improve decision-making and policy making in the public sector… and do that by making the use of data easier and more widely spread.
+
+(Policy officer)
+
+Furthermore, depending on the domain of application, GenAI is also seen as a tool for improving communication with citizens and, more broadly, service delivery. This is particularly the case for GenAI chatbots, which aim to provide citizens with information about administrative services faster and in more accessible and understandable ways.
+
+The strategic framing of GenAI is closely linked to the need to balance innovation with compliance, leading to what can be described as guard-railed experimentation. Regulatory uncertainty emerges as a key constraint shaping adoption. Interviewees explicitly report difficulties in understanding data protection requirements and the conditions under which GenAI use is permitted within their administrations. This uncertainty is often perceived as widespread across administrations and tends to result in cautious and, in many cases, restrictive implementation approaches, including limiting access to tools or constraining their functionalities. 
+As a result, administrations often restrict the types of data that can be processed, for example limiting use to public or non-sensitive information.
+
+Across the case studies, public servants explicitly recognise the tension between innovation and control. While GenAI is associated with significant transformative potential, its implementation is constrained by governance requirements, risk management considerations and organisational inertia. This creates a gap between expectations and actual use: although expectations are often high, interviewees sometimes struggle to perceive equivalent value in practice. In administrations providing internal tools, this gap is partly attributed to differences between corporate systems and commercial alternatives. 
+Interviewees highlight a perceived discrepancy in available functionalities, noting that much of what is possible with commercial tools is not accessible through internal systems.
+
+There is a lot more functionality in those [commercial tools], … with a discrepancy between what you could do and what is actually available in the work environment.
+
+(Policy officer)
+
+This divergence is often explained by the need for due diligence and risk mitigation. However, such safeguards are sometimes perceived as limiting, making internal tools less convenient or attractive to use. As a result, some users may prefer open, commercial tools, which introduce additional risks for public administrations.
+
+
+-----
+
+choose between more capable external tools and more secure internal alternatives, which are frequently perceived as less advanced in terms of functionality. In some cases, official organisational tools are absent altogether, leading employees to exclusively rely on personal accounts and resulting in informal or shadow use of commercial GenAI tools.
+
+We suspect that the sort of grey area use [of commercial tools] is very significant.
+
+(Data scientist)
+
+Moreover, policies governing the use of commercial tools are often absent, fragmented or unclear, contributing to the widespread diffusion of shadow practices. Despite this, users are generally aware of the associated risks and often adopt self-imposed safeguards. In the absence of formal rules, informal norms of responsible use tend to emerge organically.
+
+This dynamic reveals a persistent tension between experimentation and regulation. 
+Public servants report being motivated to explore new tools that promise efficiency and creativity, yet they operate within strict frameworks designed to protect data integrity and uphold accountability. The result is a continuous negotiation between experimentation and compliance with regulation. Employees adapt their practices within existing constraints, using GenAI mainly for low-risk tasks, while remaining more cautious in sensitive contexts. 
+Some participants note that their administrations have started introducing internal guidelines and approved platforms, although these measures often lag behind actual practices and changing user behaviours.
+
+3.3 Technology in use: exploration and regulation
+
+Across the case studies, GenAI is primarily used as a practical tool embedded in everyday text-intensive work. Interviewees repeatedly describe its use in supporting writing, summarisation and document navigation. GenAI tools are perceived as particularly useful for processing, synthesising and parsing increasingly large volumes of documentation. This type of support is described as especially valuable when working under time pressure and to strict deadlines. At the same time, interviewees recognise the need to curate and validate outputs, assessing what is useful to retain and what should be discarded. This approach reflects a hybrid mode of use in which GenAI functions as a cognitive assistant rather than an autonomous actor.
+
+Sometimes I'm running out of ideas on what to write in an email… and then I let it produce the whole email.
+
+(Project manager)
+
+Public servants report concrete efficiency gains in drafting tasks. Preparing briefs, notes and emails is consistently identified as one of the areas where GenAI provides the greatest benefits. 
+The tools are used not only for proofreading or drafting but also to support ideation and creative thinking. Interviewees claim to have used the technology to generate alternatives, test ideas and structure their thought processes.
+
+While experimentation with GenAI is widespread, it is closely shaped by constraints related to data protection, security and governance. 
+Administrations often impose restrictions that directly influence how and when GenAI can be integrated into workflows. As a result, a dual ecosystem emerges in which public servants 
+
+
+-----
+
+4. Generative AI assimilation in public administrations
+
+
+-----
+
+4.1 Paving the way: anchoring-in and adapting
+
+Although interest in GenAI is growing rapidly, most administrations remain in the early stages of assimilation, and diffusion proceeds considerably slower than in the private sector. Recent surveys show this gap clearly. A Gartner report estimates that fewer than 25 % of government organisations will offer citizen-facing GenAI services by 2027, underscoring the cautious pace of deployment in highly regulated public environments.(9) In 2024, a Deloitte study found that 56 % of government respondents expected GenAI to drive transformative change within the following year, indicating strong expectations even where practical implementation lagged behind.(10) Additional evidence from SAS shows that only 13 % of public organisations use GenAI on a daily basis, while 14 % do not use it at all – the highest non-adoption rate across the sectors surveyed.(11) Yet the same Deloitte survey notes that 78 % of government executives believe their organisations are adopting GenAI ‘somewhat fast’ or ‘very fast’, reflecting growing momentum in exploratory and pilot activities across the public sphere. Taken together, these findings highlight an important paradox: interest in and expectations for GenAI are high, yet actual assimilation remains limited and uneven.
+
+To address this gap, it is first necessary to recognise that the assimilation of GenAI in public administrations is a complex and multidimensional process. It goes beyond the deployment of tools or their integration into existing workflows, instead requiring a broader transformation (Tangi et al., 2025b; Tangi et al., 2026a). This includes assessing organisational needs, monitoring risks and impacts, aligning adoption strategies with EU values and policy priorities, and adapting 
+
+9. Gartner, ‘Gartner predicts less than 25% of government organizations will have generative AI-enabled citizen-facing services by 2027’.
+10. Deloitte Insights, ‘A snapshot of how public sector leaders feel about generative AI’.
+11. SAS, ‘Global market research: China leads world in GenAI usage while US leads in full implementation’.
+
+organisational structures and capabilities, while ensuring that the necessary enabling conditions are in place. These elements are essential to support the strategic assimilation of GenAI into public operations and to prevent assimilation from remaining limited to disconnected add-ons to existing systems or to informal individual use of external online tools without meaningful organisational assimilation.
+
+The assimilation process necessitates that administrations create a conducive environment to ensure that GenAI can thrive. This entails two key steps: first, anchoring GenAI in the EU context, priorities and regulatory framework; and, second, ensuring the presence of sufficient capacities and capabilities, which are the essential factors enabling the assimilation process. These elements are conceptualised in more detail in a dedicated report (Tangi et al., 2026b) and are also highlighted by interviewees.
+
+4.1.1 POLICY, LEGAL AND REGULATORY 
+CONTEXT
+
+GenAI assimilation needs to be embedded within EU visions and priorities, including the objective of strengthening European technological sovereignty, the applicable EU regulatory framework and the public sector’s core mandate of creating public value through, among other things, transparency, accountability and proportionality requirements. 
+This includes the regulatory provisions for general-purpose AI under the AI Act, which define key obligations for the development and deployment of GenAI systems.
+
+At first nobody knew how GDPR applied to generative models, so we moved very carefully.
+
+(Senior manager)
+
+Public administrations operate under strict legal mandates related to privacy, accountability, 
+
+
+-----
+
+transparency and non-discrimination. These requirements both shape and constrain the conditions under which GenAI can be assimilated into public sector operations. The EU regulatory landscape introduces significant compliance requirements that organisations must meet prior to deploying GenAI. While these rules are designed to ensure trustworthy and rights-preserving AI, they can also slow down early adoption, particularly where guidance remains incomplete or interpretations vary across jurisdictions. Regulatory uncertainty therefore represents a key barrier to moving from pilot initiatives to production use, as administrations often face concerns related to liability risks, including those linked to hallucinations, biased outputs or limited explainability.
+
+At the same time, the policy environment can act as an enabling factor when it provides clear guidance, harmonised standards and targeted public investment. In such cases, it reduces uncertainty for public managers, supports more informed investment decisions and helps align organisational initiatives with broader EU priorities. This dual role of regulation – both constraining and enabling – highlights the importance of policy coherence in supporting GenAI assimilation.
+
+More broadly, the regulatory framework should not be understood as a static compliance structure but as a changing governance environment that interacts with technological development. A supportive approach is one that safeguards public values while enabling controlled experimentation and organisational learning, recognising that overly rigid compliance mechanisms may limit the capacity of public administrations to explore and scale up innovative uses of GenAI (Cordella et al., 2024).
+
+4.1.2 TECHNOLOGICAL, ORGANISATIONAL 
+AND CONTEXTUAL ENABLING FACTORS
+GenAI assimilation requires administrations to develop sufficient capacity and capability. This depends on a combination of technological, 
+
+organisational and contextual enabling factors, as highlighted by both the literature and empirical cases (Tangi et al., 2026b).
+
+First, technological investment must be accompanied by investment in human capabilities. 
+As pointed out by the interviewees, public employees often lack clarity on how to integrate GenAI into their work and assess the reliability of its outputs (Salah et al., 2023). Administrations that support experimentation spaces, peer learning and continuous upskilling tend to achieve stronger adoption trajectories (Bright et al., 2025), while limited skills and confidence often lead to ad hoc experimentation or avoidance. Workforce readiness therefore spans multiple levels, from basic AI literacy and responsible use to more advanced skills such as prompt engineering, data validation, interpretability and human oversight. 
+Managers and senior leaders also require the capacity to assess opportunities, govern risks and integrate AI into organisational workflows.
+
+Second, robust data and technological foundations are essential to move beyond experimentation. 
+The interviews and existing literature highlight how fragmented IT systems and weak data governance limit the scalability of GenAI (Cordella et al., 2024). Data quality, interoperability, accessibility and metadata completeness are key prerequisites for reliable use (Beltran et al., 2024; Pandey, 2026). Without well-governed internal data, systems risk hallucinations, inconsistencies and low-value outputs. More advanced administrations therefore invest in secure platforms, retrieval-augmented generation (RAG) architectures and compliant infrastructures supporting the use of sensitive data. These also enable auditability, traceability, model evaluation and continuous monitoring (Papageorgiou et al., 2024), supported by structured data governance frameworks across organisational units (Salah et al., 2023; Taeihagh, 2025).
+
+Third, governance mechanisms are essential to ensure safe and accountable use of GenAI (Papagiannidis et al., 2025). These include structural elements (AI governance bodies 
+
+
+-----
+
+governments are transparent about AI use and its purpose, limitations and safeguards (Janssen, 2025). Societal acceptance therefore acts as an enabling condition, while public scepticism can constrain deployment. This reinforces the need for transparent communication about, ethical safeguards for and participatory approaches to GenAI governance.
+
+We communicate clearly that humans always review AI outputs to keep citizens’ trust.
+
+(IT specialist)
+
+4.2 Assimilation of generative AI in public administration
+4.2.1 FOUR ASSIMILATION STAGES WITH A 
+VALUE-ORIENTED PERSPECTIVE
+
+Drawing on interview evidence and synthesis of the literature, this study identifies four stages of GenAI value realisation: exploratory, operational, transformational and reflective (Figure 3). GenAI introduces dynamics that extend beyond a sequential assimilation logic, characterised by a linear process whereby administrations decide to use a technology, implement it and integrate it into workflows. A key area of differentiation is that pre-assimilation and assimilation phases are not applicable, as GenAI applications are readily usable through web interfaces directly by frontline employees. Thus, the value unfolds progressively, shaped by organisational learning and continued usage and development. Therefore, understanding how GenAI diffuses in public administration requires shifting from a focus on ‘adoption’ towards a staged model of value realisation.
+
+and risk management functions), procedural mechanisms (risk assessments, audits and compliance processes) and relational dimensions enabling coordination across technical, legal and policy actors. Interviewees point out how governance must remain adaptive to developing technologies and regulatory requirements. Within this context, experimentation and structured piloting are key enablers (de Almeida et al., 2025; Taeihagh, 2025). Sandbox environments allow for testing, workflow refinement, risk identification and legitimacy building before scaling-up. 
+However, many pilot projects remain stuck at the proof-of-concept stage due to governance constraints, infrastructure gaps or organisational resistance. Staged scaling-up approaches help address this, progressively integrating successful pilot projects into operations through clear criteria and continuous monitoring (Madan et al., 2023). Together, experimentation and adaptive governance build the organisational learning capacity needed for system-wide transformation.
+
+GenAI assimilation is strengthened through inter-organisational collaboration. Sharing infrastructure, co-developing standards and building communities of practice reduce duplication and improve coherence (Aryfiyanto et al., 2024; Bright et al., 2025). Cross-agency collaboration also enables smaller administrations to access expertise, training and governance frameworks they may lack internally. Some interviewees highlight the importance of collaboration with external ecosystems such as universities and research centres, which enhances capability building and accelerates institutional learning, particularly for complex and changing systems requiring interoperable standards.
+
+Finally, public trust and societal expectations are decisive contextual factors shaping assimilation. 
+GenAI assimilation in government is inherently a legitimacy-seeking process (Beltran et al., 2024; Cordella et al., 2024). Interviewees refer to the need to continuously meet citizens’ expectations. 
+Citizens expect fairness and accountability, and any perceived failure could generate reputational or political risks. Trust increases when 
+
+
+-----
+
+Figure 3. A four-stage model of GenAI assimilation. 
+
+## Exploratory
+
+## Operational
+
+## Transformational
+
+## Reflective
+
+Seeing the potential
+
+Structuring use and building trust
+
+Reconfiguring work and services
+
+Institutional learning and ecosystem integration
+
+Main value
+
+## Awareness
+
+## Efficiency
+
+## Augmentation
+
+## Extension
+
+Ad hoc
+
+## Shadow
+
+## Commercial
+
+## Simple
+
+## Structure
+
+Use
+
+## Tools
+
+## Tasks
+
+Source: Authors.
+
+## Formalised
+
+## Formal
+
+## Corporate
+
+## Complex
+
+These stages capture how GenAI transforms the public sector in iterative, non-linear ways that exceed the logic of simple technology uptake. Table 1 summarises some key characteristics of the assimilation model at different stages.
+
+Table 1. Details of the assimilation model.
+
+## STAGE
+
+DESCRIPTION OF THE 
+STAGE
+
+## MAIN VALUE
+
+## CORE TENSIONS
+
+Stage 1 – 
+Exploratory
+
+Stage 2 – 
+Operational 
+
+Use is driven by individuals or small teams. 
+Experimentation is ad hoc and loosely coordinated. 
+The focus is on exploring capabilities, limits and risks. Organisational commitment remains minimal.
+
+The administration formalises access and governance. Secure environments, training and usage guidelines are introduced. Adoption expands across staff. 
+The focus is on reliability, compliance and safe use.
+
+Awareness. Initial understanding of GenAI potential, limitations and risk profiles
+
+Efficiency. Faster, more consistent execution of routine tasks (e.g. 
+drafting, summarising, proofreading), with improved baseline quality
+
+ → Shadow AI v compliant tools
+ → Experimentation momentum v legal and ethical uncertainty
+ → Fragmented pilots v organisational coherence
+
+ → Tool-level optimisation v process redesign
+ → Human-in-the-loop effort v efficiency expectations
+ → Departmental silos v cross-organisational scaling
+
+
+-----
+
+## STAGE
+
+DESCRIPTION OF THE 
+STAGE
+
+## MAIN VALUE
+
+## CORE TENSIONS
+
+Stage 3 –
+Transformational
+
+Stage 4 – 
+Reflective 
+
+GenAI is integrated into workflows and core systems. Advanced solutions such as retrieval-augmented generation and agents are deployed. 
+Processes and services are redesigned. Organisational routines begin to shift.
+
+The administration systematically evaluates its use of GenAI. Feedback loops and performance monitoring are established. Practices are refined and standardised over time. Insights inform internal strategies and governance approaches.
+
+Augmentation. 
+Enhanced analytical capacity, improved information retrieval and stronger human–AI collaboration for complex tasks
+
+ → Intensive AI reliance v need for oversight
+
+ → Innovation 
+
+momentum v risk of over-reliance
+ → Advanced scaling v uneven adoption
+
+Extension. Generation of insights, patterns and knowledge beyond human cognitive limits, enabling new forms of analysis, prediction and decision-making.
+
+ → Institutional stability v technological acceleration
+ → Local optimisation v system-wide coordination
+ → Compliance orientation v innovation capacity
+
+Source: Authors.
+
+Exploratory. The exploratory stage marks the first encounter between public administrations and GenAI. It is characterised by curiosity and informal sense-making at the individual or unit level. Public servants begin to experiment with GenAI tools in order to understand their capabilities and to test small, low-stakes use cases such as summarising documents, drafting emails or producing first drafts of reports. These experiments usually take place outside formal structures, using commercially available online tools and resulting in fragmented, uneven activity across departments. The primary value created at this stage is awareness: employees develop an intuition for prompt formulation, learn how to verify outputs and discover which types of tasks are suitable for GenAI. Organisational structures are minimal, policies are either ambiguous or absent and experimentation is largely bottom-up rather than driven by a strategic plan.
+
+In the beginning we had nothing – people just tried [commercial tools] with public data.
+
+(Project manager)
+
+The core tension of this stage lies between opportunity and uncertainty. While staff often recognise the productivity potential of GenAI, they also fear compliance breaches, reputational risks or managerial disapproval. A further risk is the proliferation of ‘shadow AI’, when employees use external tools without oversight, potentially exposing sensitive data or violating privacy regulations.
+
+Despite these challenges, exploratory value is essential. It demystifies GenAI, reveals its affordances and limitations and begins to generate internal legitimacy. Leaders start to grasp both the opportunities and the 
+
+
+-----
+
+vulnerabilities associated with the technology, often prompted by grassroots experimentation. 
+Although the tangible benefits at this stage are modest and largely intangible, they lay the groundwork for disciplined scaling and responsible integration in later stages.
+
+this stage administrations also articulate clearer expectations about when AI may be used, which tools are approved and how outputs must be validated. Training initiatives, baseline AI literacy and responsible-use guidelines emerge to build employee confidence.
+
+Operational. The operational stage marks the point at which public administrations move beyond curiosity and begin to apply GenAI in a systematic way to improve everyday workflows. 
+At this stage the value becomes measurable through productivity gains, reduced administrative burden, faster turnaround times and more efficient internal information processing. Typical uses include summarising lengthy documents, preparing briefings and internal reports, producing translations, structuring meeting notes, assisting with coding and supporting routine reporting tasks.
+
+People now use the internal Copilot to summarise long reports or rephrase e-mails – it saves hours.
+
+(Senior manager)
+
+Unlike the exploratory stage, the operational stage is underpinned by early infrastructure and governance mechanisms. Administrations create secure internal environments, define data classification rules that limit AI usage to non-sensitive content and introduce artefacts such as prompt libraries, user guidelines and nascent governance bodies to ensure safer and more consistent application across units. Benefits are unevenly distributed: units with higher digital maturity and stronger skill sets reap faster gains, while others remain hesitant because of skill gaps or cultural resistance. A large difference at this stage concerns the use of general-purpose or task-specific GenAI tools. Some more digitally advanced units tend to adopt tools for specific purposes, such as coding, whereas others still utilise general-purpose GenAI tools to increase the efficiency of auxiliary tasks. At 
+
+The core tension of the operational stage lies between formalisation and constraints. Introducing governance and guard rails can stifle innovation if they become overly rigid, and employees may struggle to trust AI outputs even as they recognise their usefulness. Technical limitations, such as the lack of high-quality internal corpora, further restrict more advanced applications. Nevertheless, early operational successes generate organisational momentum. Demonstrable benefits help win the buy-in of sceptical managers and frontline staff, laying the groundwork for more ambitious forms of value creation in later stages.
+
+Transformational. The transformational stage emerges when public administrations move beyond using GenAI as a productivity enhancer and begin to redesign workflows, roles and service models around the technology. In this stage GenAI shifts from a task-level assistant to a core component of digital service delivery, reshaping how work is organised and how citizens are served. Value is no longer measured merely in efficiency gains; it is reflected in the creation of new public-service capabilities that were previously infeasible.
+
+We have lawyers who rely on the assistant to find similar legal cases and draft templates – it changes how they start their work.
+
+(Policy officer)
+
+Transformation typically starts in knowledge-intensive domains such as policy analysis, legal interpretation, case processing, compliance monitoring and citizen-facing communication. 
+
+
+-----
+
+is often assigned to AI agents in highly structured processes or ones in which GenAI has consistently been operating effectively. Outcome-tracking metrics and quality improvement loops become routine, allowing the administration to understand where AI delivers value, where it introduces risk and how it reshapes the delivery of public services. 
+Governance matures from ad hoc oversight to a dynamic, adaptive regime that can respond swiftly to regulatory updates, technological breakthroughs and changing societal expectations. 
+This adaptive governance is embedded in policy cycles, with regular reviews, impact assessments and stakeholder consultations that keep the AI ecosystem aligned with legal and ethical standards.
+
+Some of us now train colleagues; we act as mentors on prompt design and responsible use.
+
+(Data scientist)
+
+The reflective stage also unfolds at the ecosystem level. Agencies increasingly collaborate across departmental boundaries, sharing best practices, co-developing infrastructure and standardising data exchange protocols. Such cross-government learning creates a shared AI fabric that accelerates innovation, reduces duplication and supports the broader European ambition for sovereign AI, common data spaces and coordinated public sector collaboration.
+
+The core tension of this stage lies between institutionalisation and flexibility. While administrations must stabilise AI practices, embed robust controls and maintain public legitimacy, they must simultaneously retain the agility to adopt new model types, adjust to regulatory shifts and meet emerging societal demands.
+
+In these areas GenAI enables novel services – automated policy drafting, rapid legal summarisation, proactive compliance alerts and personalised citizen outreach – that fundamentally alter existing processes. Realising this potential requires substantial investment in data pipelines, RAG architectures, internal model hosting and continuous model evaluation, thereby providing the technical foundation for large-scale redesign. Governance structures also mature at this stage. Ethics reviews, data protection impact assessments, audit mechanisms and quality assurance procedures become embedded in everyday operations, ensuring that the increased reliance on AI complies with legal and societal expectations. Leadership development is essential; senior managers are trained to understand GenAI’s strategic implications, competency frameworks are updated and new hybrid roles – such as AI curators and validators – are formalised. 
+Only administrations that combine mature governance, robust data foundations and stable political backing can progress to this level of transformation.
+
+The core tension of the transformational stage lies between the ambition to redesign public services and the need to manage institutional risk. As GenAI becomes integral to processes with legal or societal consequences, administrations must preserve legitimacy while pursuing efficiency. A further tension concerns professional identity: 
+workers must move from merely executing tasks to curating, validating and overseeing AI-generated outputs, which can challenge established norms and require cultural adaptation. 
+Successful management of these tensions allows GenAI to become woven into the organisational fabric, unlocking new forms of public value.
+
+Reflective. The reflective stage represents the peak of AI assimilation, in which GenAI is an integral part of the administration’s learning engine. At this level, public administrations systematically capture insights from every AI-enabled interaction, feeding the knowledge back into strategic planning, governance frameworks and capability development. At this point, agency 
+
+
+-----
+
+4.2.2 MECHANISMS OF PROGRESSION 
+AMONG STAGES
+The assimilation of GenAI in public administration does not unfold as a linear or purely technological adoption process. Instead, it progresses through stages of value realisation, each marked by its own tensions and enabling mechanisms. It is 
+
+therefore important to reflect on and outline the main mechanisms that enable progression across stages, highlighting the factors that help administrations consolidate learning, scale pilots, redesign processes and embed GenAI within broader governance and ecosystem arrangements (Table 2).
+
+Table 2. Stage transitions and mechanisms of progression.
+
+STAGE 
+TRANSITION
+
+From exploratory to operational
+
+From operational to transformational
+
+From transformational to reflective
+
+DATA AND TECHNOLOGY
+ → Creation of secure 
+
+internal environments
+ → Early RAG prototypes replacing public tools
+ → Basic data classification 
+
+rules
+
+MECHANISMS OF PROGRESSION
+ORGANISATIONAL
+
+ → Establishment of governance bodies
+ → Training programmes for AI literacy and responsible use
+
+EXTERNAL RELATIONSHIPS
+ → Clarification of regulatory 
+
+boundaries
+
+ → Benchmarking with other agencies’ early pilots
+ → Initial collaboration with 
+
+vendors
+
+ → Integration of RAG into core workflows
+
+ → Application programming interface connectors and data pipelines enabling end-to-end AI workflows
+ → Improved data quality 
+
+and metadata standards supporting automation
+
+ → Continuous model 
+
+monitoring and evaluation pipelines
+
+ → Shared organisational data lakes for cross-unit 
+AI
+
+ → Reusable model 
+
+components, benchmarks and prompt libraries
+
+ → Workflow redesign to embed human–AI collaboration
+ → Role redefinition
+ → Institutionalisation of governance, documentation and audit trails
+
+ → Across-organisational projects using shared datasets
+
+ → Alignment with national and EU policies and strategies
+
+ → Public communication to maintain legitimacy when scaling up
+
+ → Learning loops embedded
+ → Cross-departmental 
+
+knowledge-sharing hubs
+
+ → Strategic alignment 
+
+between AI outcomes and mission objectives
+
+ → Contribution to working groups on standards and shared infrastructure
+ → Collaboration with 
+
+academia for evaluation and testing
+
+Towards continuous innovation and ecosystem integration
+
+ → Modular, interoperable AI infrastructures enabling continuous upgrades
+ → Adoption of sovereign large language models and open-source alternatives
+
+ → Automation of compliance
+
+ → Enterprise-wide 
+
+ → Integration with EU-wide 
+
+strategy for AI life-cycle management
+ → Continuous capacity building and horizon scanning
+
+ → Design of a long-term AI governance strategy
+
+AI ecosystems
+
+ → Formulation of innovative policy recommendations around AI
+
+ → Societal co-creation of trustworthy GenAI services
+
+Source: Authors.
+
+
+-----
+
+Importantly, the maturity model should not be read as a linear pathway with an end point that is desirable for every administration. Depending on existing infrastructure, skills, data sensitivity and the nature of tasks, some administrations may stop at the initial stages, while others may pursue transformational or reflective stages. Within a single administration, different units may occupy different stages; for example, a standardised processing unit may find sufficient benefit in operational gains, whereas an IT department may require advanced tools for code generation and thus need to address model selection, task allocation and human–machine collaboration.
+
+Framing the stages in terms of the value they generate therefore equips public administrations with a strategic lens: by identifying the desired value outcome, they can choose an appropriate assimilation strategy, decide how tightly to integrate AI into existing processes and balance the complexity of use with organisational readiness. This value-oriented approach helps administrations manage the trade-offs between rapid adoption of commercial tools and the need for robust, context-aware governance, ultimately supporting a more nuanced and adaptable path to AI-enabled public service.
+
+At the exploratory–operational interface, the presence of enthusiastic internal champions and the systematic capture of pilot ideas turn ad hoc experimentation into a searchable repository of use cases. Early leadership endorsement creates the political space for a modest governance framework, which in turn legitimises the move from ad hoc to sanctioned tooling.
+
+Moving from the operational to transformational stage hinges on the maturity of both technical and governance foundations. Secure, centrally managed infrastructures and curated prompt libraries give employees confidence to apply AI beyond repetitive tasks, while robust governance boards provide the authority to redesign whole workflows. Measurable productivity gains become the business case that fuels broader process re-engineering.
+
+The leap to reflective value requires the consolidation of data assets and the institutionalisation of multidisciplinary oversight. Continuous monitoring, outcome-tracking metrics and human-in-the-loop approaches turn every AI interaction into a learning datum, informing adaptive policies that can keep pace with changing regulations and model capabilities. Collaborative networks across agencies embed GenAI within a shared ecosystem, turning isolated successes into sectorwide standards.
+
+Finally, continuous innovation is sustained through open benchmarking, knowledge-sharing platforms and AI centres of excellence that keep the public sector aligned with European sovereign AI ambitions. Ongoing evaluation cycles ensure that the governance regime remains both stable for service delivery and flexible enough to incorporate emerging technologies and societal expectations.
+
+By explicitly mapping these mechanisms to each transition, administrations can anticipate the organisational levers they need to pull (i.e. champions, documentation, governance signals, infrastructure, standards and ecosystem partnerships) to move continuously forward while managing the inherent tensions of speed versus control, innovation versus risk and stability versus adaptability.
+
+
+-----
+
+5. Policy recommendations
+
+
+-----
+
+The diffusion of GenAI in the European public sector is accelerating, yet its trajectory remains uneven across countries and administrative levels. The evidence collected through the literature review and case studies indicates that value is unlocked not merely through adopting GenAI tools, but through building the technical and governance capacity that enables scalable use. This requires focused policy interventions that support innovation and ensure compliance with European values and regulation.
+
+Table 3. Policy recommendations.
+
+## PRIORITY AREA
+
+## RECOMMENDATION
+
+The policy recommendations below target three core domains: (i) strengthening GenAI infrastructure; (ii) building governance and operational readiness; and (iii) accelerating public value creation through responsible innovation (Table 3). Each area identifies actionable recommendations that policymakers can adopt to support a trustworthy and effective GenAI ecosystem across Europe.
+
+1. Build interoperable generative AI infrastructure
+
+Recommendation 1.1 – Establish secure-by-design GenAI environments that combine robust safeguards with easy-to-use, intuitive, accessible design Recommendation 1.2 – Develop shared data governance frameworks and authoritative corpora by strengthening organisation-level data assets and aligning them across administrations
+
+2. Strengthen governance and operational readiness
+
+3. Accelerate public value creation and innovation
+
+Recommendation 2.1 – Institutionalise AI governance bodies as central oversight structures responsible for use case evaluation, risk oversight and system monitoring
+Recommendation 2.2 – Standardise workflow integration frameworks by defining common norms, templates and process models Recommendation 2.3 – Introduce training programmes for public servants to support responsible and critical use of AI while maintaining human oversight and judgement
+
+Recommendation 3.1 – Prioritise high-value use cases through structured piloting, within risk-tiered environments with appropriate guard rails Recommendation 3.2 – Promote cross-agency collaboration by enabling structured knowledge exchange and reuse of GenAI prompts, templates, governance models and evaluation outputs
+
+Source: Authors.
+
+5.1 Build interoperable generative AI infrastructure
+RECOMMENDATION 1.1 – ESTABLISH 
+SECURE-BY-DESIGN GENAI 
+ENVIRONMENTS THAT COMBINE ROBUST 
+SAFEGUARDS WITH EASY-TO-USE, 
+INTUITIVE, ACCESSIBLE DESIGN
+
+Public administrations across Europe increasingly recognise the need for secure, sovereign and interoperable GenAI environments that enable staff to work with sensitive information while 
+
+33
+
+remaining compliant with relevant regulatory frameworks. Interviewees consistently highlight the limitations of relying on commercial tools and the consequent need for centrally managed, trusted alternatives. At the same time, the widespread availability and usability of commercial tools creates strong expectations among users. If internal systems are not sufficiently intuitive or functional, there is a significant risk that staff will continue to rely on external tools, with potential implications for data protection, security and compliance.
+
+
+-----
+
+Establishing secure-by-design GenAI environments, such as generative pre-trained transformer or RAG-based platforms, hosted in EU-compliant infrastructures, with internal connectors, usage monitoring and embedded guard rails represents a key enabling step for public administrations. These environments should provide unified access to large language models, domain-specific assistants and internal application programming interfaces, ensuring consistent security standards while enabling economies of scale through shared infrastructure.
+
+The appropriate level of deployment remains an open design question. Centralised approaches at the regional or national level can reduce duplication of technical effort and allow smaller administrations to access high-quality AI capabilities that would be difficult to develop independently. Conversely, larger administrations may have sufficient capacity to develop tailored solutions aligned with their specific operational needs, suggesting that a hybrid and multi-level governance model may be most appropriate.
+
+RECOMMENDATION 1.2 – DEVELOP 
+SHARED DATA GOVERNANCE 
+FRAMEWORKS AND AUTHORITATIVE 
+CORPORA BY STRENGTHENING 
+ORGANISATION-LEVEL DATA ASSETS 
+AND ALIGNING THEM ACROSS 
+ADMINISTRATIONS
+
+GenAI systems are only as reliable as the data and documents on which they are grounded. 
+However, today fragmented data architectures and inconsistent metadata practices limit the quality, traceability and trustworthiness of AI-enabled applications.
+
+A renewed approach is therefore needed to develop robust data catalogues and authoritative document corpora with verified provenance and quality controls. This includes clear rules for document classification, retention and versioning, as well as technical standards for connectors, access controls and audit logs. By providing trusted corpora for retrieval and, where relevant, 
+
+model training, public administrations can reduce hallucination risks and ensure that AI systems reflect accurate, up-to-date and legally sound information.
+
+While building such frameworks and infrastructures at the organisational level is essential, it is not sufficient. Cross-organisational alignment and shared standards are also required to reduce duplication of effort and to avoid fragmentation across administrations. A supra-organisational approach to data governance can support interoperability, ensure consistency across systems and reduce the burden on individual administrations to develop and maintain separate solutions. This, in turn, facilitates scaling-up, making it easier to deploy AI assistants across administrations without repeatedly rebuilding underlying data and document pipelines.
+
+5.2 Strengthen governance and operational readiness
+RECOMMENDATION 2.1 – 
+INSTITUTIONALISE AI GOVERNANCE 
+BODIES AS CENTRAL OVERSIGHT 
+STRUCTURES RESPONSIBLE FOR USE 
+CASE EVALUATION, RISK OVERSIGHT AND 
+SYSTEM MONITORING
+To ensure the responsible adoption of GenAI, administrations should institutionalise AI governance through dedicated cross-functional bodies. Embedding governance structures within the administration is essential to oversee AI use, guide its development, manage associated risks and provide a clear reference point for employees.
+
+In practice, this may involve assigning responsibility to an existing unit or department, or establishing a dedicated AI governance body with partially or fully allocated staff. These bodies should bring together legal, technical, ethical and domain expertise to oversee the different stages of the GenAI life cycle. Their responsibilities may include coordinating impact assessments, maintaining repositories of approved use cases and reviewing human-in-the-loop arrangements. 
+
+
+-----
+
+Furthermore, they should classify tasks according to their level of sensitivity. Low-sensitivity tasks, such as drafting internal memos, may be tested with minimal restrictions, while high-sensitivity tasks, such as policy analysis or legal reasoning, require stricter oversight. Each tier should be associated with clear rules regarding access, review and documentation. In addition, these bodies should support periodic audits addressing performance, fairness, security and compliance with emerging regulatory requirements.
+
+Beyond oversight functions, governance bodies also play an important enabling role. They can be responsible for defining and maintaining standardised workflows and organisational norms, developing predefined prompts for standard activities, and providing role-specific support and training, thereby helping to build awareness and baseline competences across the administration. In doing so, they can also monitor and manage shadow behaviours, whereby employees access and use external online tools outside formal organisational channels, for example through the development of monitoring dashboards and usage-tracking mechanisms.
+
+Institutionalising these mechanisms enables administrations to manage uncertainty, adapt governance approaches as technologies develop and strengthen the internal legitimacy required to scale up AI solutions.
+
+RECOMMENDATION 2.2 – STANDARDISE 
+WORKFLOW INTEGRATION FRAMEWORKS 
+BY DEFINING COMMON NORMS, 
+TEMPL ATES AND PROCESS MODELS
+
+GenAI becomes operationally valuable only when embedded into workflows in a disciplined and consistent manner. A key challenge for public administrations is therefore to move from informal and highly individualised patterns of use towards more structured and standardised forms of adoption. Although GenAI systems are inherently flexible and difficult to fully control, administrations can still shape their use by defining codified practices and validated use 
+
+cases, guiding employees towards forms of adoption that are both effective and safe.
+
+Public administrations therefore need shared templates and workflow frameworks that clarify when and how civil servants should interact with GenAI systems. These frameworks should define appropriate use cases, specify validation and oversight steps, identify situations in which AI tools should not be used and establish escalation pathways for uncertain or sensitive outputs. 
+In addition, norms and templates can support employees in the practical use of GenAI tools. 
+For example, providing standardised prompts for recurrent activities can help ensure more effective, consistent and reliable interactions with these systems.
+
+Standardising these practices can reduce fragmentation in AI adoption across departments, improve accountability and help public employees better understand their changing role in human– AI collaboration. At the same time, it can reduce the risk of over-reliance on AI systems in contexts requiring contextual, ethical or legal judgement.
+
+These norms and practices should also extend to the use of commercial tools, helping administrations shape and guide the shadow use of such systems. Defining good practices, clarifying acceptable uses, responding to frequently asked questions and codifying emerging behaviours can help transform opaque and informal uses into governable practices. In this way, administrations can mitigate risks while preserving the innovative capacity that often drives experimentation and early adoption.
+
+RECOMMENDATION 2.3 – INTRODUCE 
+TRAINING PROGRAMMES FOR PUBLIC 
+SERVANTS TO SUPPORT RESPONSIBLE 
+AND CRITICAL USE OF AI WHILE 
+MAINTAINING HUMAN OVERSIGHT AND 
+JUDGEMENT
+
+GenAI can significantly improve efficiency in public administration, but it also introduces the risk of cognitive dependency and over-reliance 
+
+
+-----
+
+on automated outputs. When public servants rely on AI-generated content without sufficient critical evaluation, the quality of decisions and the integrity of public service may be compromised. 
+Training programmes are therefore essential to ensure that GenAI functions as a support tool rather than a substitute for human reasoning and judgement. Human oversight should remain central in all administrative processes.
+
+Effective implementation requires the development of role-specific training pathways. 
+Policy analysts, for example, may require training on validating AI-generated evidence and interpreting outputs in complex policy contexts, while frontline staff may need guidance on the responsible use of GenAI in citizen interactions and communication. Training should include modules on critical evaluation skills, enabling participants to identify inaccuracies, detect bias and verify outputs against reliable sources.
+
+Another key component is prompt literacy. 
+Public servants should understand how prompts influence outputs, and should learn techniques for iterative refinement to improve reliability and reduce misleading or biased results. Ethical and governance considerations should also be embedded throughout the training process. 
+Participants should learn when the disclosure of AI assistance is appropriate, how to document the use of AI tools and why transparency remains essential for maintaining public trust.
+
+Practical exercises in controlled environments can reinforce these lessons. For example, staff may compare AI-generated drafts with human-written versions and reflect on differences in tone, accuracy, completeness and appropriateness. Peer review activities can further support collaborative learning, reflexivity and accountability.
+
+The importance of these programmes extends beyond technical competence. They help ensure that administrative decisions remain grounded in human reasoning and aligned with public sector values. Well-designed training programmes can enable public servants to harness the benefits of 
+
+GenAI while preserving fairness, accountability and trust. Training should therefore be considered a foundational component of responsible AI adoption in government rather than an optional complement to technological deployment.
+
+An example of a pan-European training initiative for GenAI is the recently established Artificial Intelligence Skills Hub Academy, co-funded by the Digital Europe Programme, designed in coordination with the European Commission’s AI Office and aligned with the EU Apply AI Strategy. 
+The academy aims to deliver modular GenAI literacy across technical, managerial and policy and ethical domains, equipping both private and public sector organisations to integrate GenAI solutions responsibly.
+
+5.3 Accelerate public value creation and innovation
+RECOMMENDATION 3.1 – PRIORITISE 
+HIGH-VALUE USE CASES THROUGH 
+STRUCTURED PILOTING, WITHIN 
+RISK-TIERED ENVIRONMENTS WITH 
+APPROPRIATE GUARD RAILS
+Large-scale transformation is often hindered by the fact that many GenAI initiatives remain in an exploratory phase without clear criteria for progression or scaling-up. At the same time, public administrations face the challenge of balancing innovation with compliance. While there is growing pressure to explore the potential of GenAI to improve efficiency and service delivery, administrations must also comply with strict requirements related to privacy, security, fairness and accountability.
+
+Governments should therefore develop structured piloting pathways based on use cases deployed within risk-tiered and guard-railed environments. 
+Such environments can enable experimentation while limiting exposure to legal, ethical and operational risks. Rather than treating innovation and compliance as opposing objectives, these approaches allow administrations to integrate experimentation within controlled governance frameworks.
+
+
+-----
+
+regarding what is permitted or prohibited, and a lack of clarity on the operational opportunities available for the secure and effective use of these technologies. It is therefore necessary to address GenAI use and assimilation not only at the organisational level but also across administrations.
+
+To accelerate learning and reduce duplication of effort, administrations may establish GenAI knowledge exchange mechanisms through which lessons learned, practices and solutions can be shared. Such mechanisms can strengthen capacity building, support smaller municipalities or agencies with more limited resources and improve alignment between national and local administrations. They also contribute to a more collaborative public sector ecosystem, enabling successful solutions to be adapted and scaled up more rapidly.
+
+Shared guidance on when and how to use commercial tools may also be beneficial, reducing fragmentation and uncertainty among civil servants and supporting a more consistent approach across administrations. This can help limit the proliferation of divergent guidelines, norms and procedures within and across Member States, and foster greater consistency where appropriate.
+
+Over time, such knowledge-sharing practices can contribute to the emergence of a network of centres of excellence, strengthening Europe’s collective capacity to develop sovereign and trustworthy AI systems.
+
+Piloting processes should include clear evaluation criteria, short assessment cycles and evidence-based thresholds for scaling, adapting or discontinuing initiatives. Secure environments should provide approved GenAI tools that comply with organisational and regulatory requirements, including features such as encryption, audit logging and data protection safeguards. Evaluation routines should include periodic reviews of pilot activities, focusing on dimensions such as accuracy, fairness, reliability and operational impact. In addition, red-teaming exercises, which involve a team acting as an adversary to test systems, can help identify vulnerabilities and strengthen safeguards before wider deployment.
+
+Feedback loops are equally important. Public servants should be encouraged to share lessons emerging from experimentation, enabling iterative improvements to governance mechanisms and fostering a culture of responsible innovation and organisational learning.
+
+Such an approach helps ensure that resources are concentrated on initiatives capable of generating measurable public value, while promoting disciplined and evidence-based experimentation. 
+It can also strengthen trust among leaders, employees and citizens by demonstrating that experimentation is transparent, controlled and aligned with the public interest. By embedding innovation within risk-tiered governance environments, administrations can create safer conditions for testing new workflows, refining governance models and scaling up successful approaches more confidently.
+
+RECOMMENDATION 3.2 – PROMOTE 
+CROSS-AGENCY COLL ABORATION BY 
+ENABLING STRUCTURED KNOWLEDGE 
+EXCHANGE AND REUSE OF GENAI 
+PROMPTS, TEMPL ATES, GOVERNANCE 
+MODELS AND EVALUATION OUTPUTS
+
+Much of the innovation in GenAI remains siloed, even when multiple administrations face similar information-processing challenges. At the same time, many administrations face uncertainty 
+
+
+-----
+
+6. Conclusions
+
+38
+
+
+-----
+
+At the organisational level, assimilation is shaped by the dual pressure of rapidly available commercial tools and the transformative nature of GenAI itself, which extends beyond automation towards cognitive augmentation. This creates urgency but also limits the time available for structured design of governance and integration strategies. While most administrations are still in an exploratory phase characterised by uncertainty and incremental learning, emerging evidence from pioneer cases suggests that more structured assimilation pathways are possible, as reflected in the proposed maturity model.
+
+Overall, the findings suggest that successful GenAI adoption in the public sector might depend not solely on technological availability, but on the ability to align individual practices with organisational structures. Bridging this gap is central to ensuring that GenAI delivers sustainable public value while maintaining trust, accountability and institutional consistency.
+
+This report argues that the adoption of GenAI in European public administrations is shaped by two interdependent dimensions: individual use by public employees and organisational assimilation strategies. Taken together, these dimensions reveal a transformation that is both technically driven and institutionally complex, characterised by rapid experimentation, uneven adoption and emerging governance challenges.
+
+At the individual level, the results show that the use of GenAI can vary according to employees’ tasks, needs and organisational context. GenAI has the potential to be not only a tool for text generation or enhancement but also a broader knowledge support system that enables learning, knowledge retention and cognitive support. At the same time, concerns emerge regarding excessive dependency and potential deskilling, raising questions about long-term organisational resilience if access to the technology were reduced or removed.
+
+Despite the perceived value of GenAI, its adoption is associated with efficiency considerations, even when its potential extends well beyond task automation. This can create a tension between the broader promise of GenAI as a cognitive augmentation tool and its more immediate instrumental use. In addition, legitimate constraints related to data protection, privacy and institutional governance, combined with inflated expectations, shaped by technological hype, can contribute to a gap between expected benefits and practical implementation outcomes.
+
+In practice, GenAI use is embedded in a fragmented and hybrid environment. Public employees choose between official corporate tools and commercially available ones, often shifting fluidly between them depending on task requirements and perceived convenience. This technology-in-use reality is difficult to regulate and monitor, giving rise to informal or shadow practices. As a result, organisational strategies must not only define governance rules but also ensure that approved tools are sufficiently usable, accessible and aligned with daily workflows to reduce reliance on external solutions.
+
+
+-----
+
+## References
+
+Ali, H., ul Mustafa, A. and Aysan, A. F. (2025), ‘Global adoption of generative AI: What matters most?’, Journal of Economy and Technology, Vol. 3, pp. 166–176, https://doi.org/10.1016/j.
+ject.2024.10.002.
+
+Aryfiyanto, H. and Alamsyah, A. (2024), ‘Public service with generative AI: Exploring features and applications’, 2024 7th International Conference of Computer and Informatics Engineering (IC2IE), pp. 1–7, https://doi.org/10.1109/ IC2IE63342.2024.10747963.
+
+Beltran, M. A., Ruiz Mondragon, M. I. and Han, 
+S. H. (2024), ‘Comparative analysis of generative AI risks in the public sector’, Proceedings of the 25th Annual International Conference on Digital Government Research, pp. 610–617, https://doi.
+org/10.1145/3657054.3657125.
+
+Bright, J., Enock, F., Esnaashari, S., Francis, J., Hashem, Y. et al. (2025), ‘Generative AI is already widespread in the public sector: Evidence from a survey of UK public sector professionals’, Digital Government: Research and Practice, Vol. 6, No 1, pp. 1–13, https://doi.org/10.1145/3700140.
+
+Cordella, A. and Gualdi, F. (2024), ‘Regulating generative AI: The limits of technology-neutral regulatory frameworks – Insights from Italy’s intervention on ChatGPT’, Government Information Quarterly, Vol. 41, No 4, 101982, https://doi.
+org/10.1016/j.giq.2024.101982.
+
+Cornelissen, J. P. and Werner, M. D. (2014), ‘Putting framing in perspective: A review of framing and frame analysis across the management and organizational literature’, The Academy of Management Annals, Vol. 8, No 1, pp. 181–235, https://doi.org/10.1080/19416520.2014.875669.
+
+de Almeida, P. G. R. and dos Santos Júnior, 
+C. D. (2025), ‘Artificial intelligence governance: 
+
+Understanding how public organizations implement it’, Government Information Quarterly, Vol. 42, No 1, 102003, https://doi.org/10.1016/j.
+giq.2024.102003.
+
+European Commission: Directorate-General for Digital Services, Brizuela, A., Combetto, M., Kotoglou, S. Galasso, G. et al. (2025), Analysis of the generative AI landscape in the European public sector, Publications Office of the European Union, Luxembourg, https://doi.org/10.2799/0409819.
+
+Feuerriegel, S., Hartmann, J., Janiesch, C. and Zschech, P. (2024), ‘Generative AI’ Business & Information Systems Engineering, Vol. 66, No 1, pp. 111–126, https://doi.org/10.1007/s12599- 023-00834-7.
+
+Janssen, M. (2025), ‘Responsible governance of generative AI: Conceptualizing GenAI as complex adaptive systems’, Policy and Society, Vol. 44, No 1, pp. 38–51, https://doi.org/10.1093/polsoc/ puae040.
+
+Kirchner, K., Bolisani, E., Kassaneh, T. C., Scarso, 
+E. and Taraghi, N. (2025), ‘Generative AI meets knowledge management: Insights from software development practices’, Knowledge and Process Management, Vol. 32, No 4, pp. 223–235, https:// doi.org/10.1002/kpm.70004.
+
+Madan, R. and Ashok, M. (2023), ‘AI adoption and diffusion in public administration: A systematic literature review and future research agenda’, Government Information Quarterly, Vol. 40, No 1, 101774, https://doi.org/10.1016/j.
+giq.2022.101774.
+
+MIT NANDA (networked agents and decentralized architecture project) (2025), The GenAI Divide – State of AI in business 2025, https://mlq.ai/ media/quarterly_decks/v0.1_State_of_AI_in_ Business_2025_Report.pdf.
+
+
+-----
+
+Navajas Cawood, E., Vespe, M., Kotsev, A. and Van Bavel, R. (eds), Generative AI outlook report 
+– Exploring the intersection of technology, society, and policy, Publications Office of the European Union, 2025, https://data.europa.eu/ doi/10.2760/1109679 
+
+Orlikowski, W. J. and Gash, D. C. (1994), ‘Technological frames: Making sense of information technology in organizations’, ACM Transactions on Information Systems, Vol. 12, No 2, pp. 174–207, https://doi.
+org/10.1145/196734.196745.
+
+Pandey, J. K. (2026), ‘Unlocking the power and future potential of generative AI in government transformation’, Transforming Government: 
+People, Process and Policy, Vol. 20, No 1, pp. 10– 27, https://doi.org/10.1108/TG-01-2024-0006.
+
+Papageorgiou, G., Sarlis, V., Maragoudakis, M. 
+and Tjortjis, T. (2024), ‘Enhancing e-government services through state-of-the-art, modular, and reproducible architecture over large language models.’ Applied Sciences, Vol. 14, No 18, 8259, https://doi.org/10.3390/app14188259.
+
+Papagiannidis, E., Mikalef, P. and Conboy, K. (2025), ‘Responsible artificial intelligence governance: 
+A review and research framework’, The Journal of Strategic Information Systems, Vol. 34, No 2, 101885, https://doi.org/10.1016/j.jsis.2024.101885.
+
+Rodriguez Müller, P., André, A.-A., Tangi, L., Jugel, L., Schade, S. et al. (2026), ‘The European approach to artificial intelligence policymaking – Unpacking the path to trust and excellence’, Science for Policy Briefs, European Commission: 
+JRC, Seville, JRC146313, https://publications.jrc.
+ec.europa.eu/repository/handle/JRC146313.
+
+Salah, M., Abdelfattah, F. and Al Halbusi, H. 
+(2023), ‘Generative artificial intelligence (ChatGPT & Bard) in public administration research: A double-edged sword for street-level bureaucracy studies’, International Journal of Public Administration, Vol. 49, No 1, pp. 60–66, https:// doi.org/10.1080/01900692.2023.2274801.
+
+Sengar, S. S., Bin Hasan, A., Kumar, S. and Carroll, 
+F. (2024), ‘Generative artificial intelligence: A systematic review and applications’, Multimedia Tools and Applications, Vol. 84, No 21, pp. 23661– 700, https://doi.org/10.1007/s11042-024-20016-1.
+
+Taeihagh, A. (2025), ‘Governance of generative AI’, Policy and Society, Vol. 44, No 1, pp. 1–22, https:// doi.org/10.1093/polsoc/puaf001.
+
+Tangi, L., Combetto, M., Hupont Torres, I., Farrell, E., Schade, S. (2024), The potential of generative AI for the public sector: Current use, key questions and policy considerations’, Science for Policy Briefs, European Commission: JRC, Ispra, JRC139825, https://publications.jrc.ec.europa.eu/ repository/handle/JRC139825.
+
+Tangi, L., Rodriguez Müller, A. P. and Combetto, M. 
+(2025a), ‘A silent partner: The shadow presence of generative artificial intelligence in public administrations’, in: Hofmann, S., Danneels, L., Dobbe, R., Novak, A.-S., Parycek, P. et al. 
+(eds), Electronic Participation, Lecture Notes in Computer Science Vol. 15978, Springer Nature Switzerland, Cham, https://doi.org/10.1007/978-3- 032-02515-9_5.
+
+Tangi, L., Rodriguez Müller, A. P. and Janssen, 
+M. (2025b), ‘AI-augmented government transformation: Organisational transformation and the sociotechnical implications of artificial intelligence in public administrations’, Government Information Quarterly, Vol. 42, No 3, 102055, https://doi.org/10.1016/j.giq.2025.102055.
+
+Tangi, L., Rodriguez Müller, A. P. and van Noordt, 
+C. (2026a), ‘Exploring the challenges for artificial intelligence adoption and implementation in EU public administrations – Results from a case study analysis’, Digital Government: Research and Practice, Vol. 7, No 1, pp. 1–22, https://doi.
+org/10.1145/3776547.
+
+Tangi, L., Rodriguez Müller, A. P., Schade, S., André, A.-A., Combetto, M. et al. (2026b), Advancing AI Adoption in EU Public Administrations – Future directions and opportunities under the apply AI 
+
+
+-----
+
+strategy, Publications Office of the European Union, Luxembourg, https://data.europa.eu/ doi/10.2760/3112501.
+
+van Hulst, M. and Yanow, D. (2016), ‘From policy “frames” to “framing”: Theorizing a more dynamic, political approach’, The American Review of Public Administration, Vol. 46, No 1, pp. 92–112, https:// doi.org/10.1177/0275074014533142.
+
+Yazdani, S., Singh, A., Saxena, N., Wang, Z., Palikhe, 
+A. et al. (2025), ‘Generative AI in depth: A survey of recent advances, model variants, and real-world applications’, preprint, Version 1, https://doi.
+org/10.48550/ARXIV.2510.21887.
+
+
+-----
+
+List of abbreviations and definitions
+
+AI
+
+## Artificial Intelligence
+
+## DG CNECT
+
+Directorate-General for Communications Networks, Content and Technology
+
+## DG DIGIT
+
+## Directorate-General for Digital Services
+
+EU
+
+## European Union
+
+## GDPR
+
+## General Data Protection Regulation
+
+## GenAI
+
+## Generative AI
+
+## INNPULSE
+
+INNovation of PUbLic SErvices and digital transformation of governance
+
+JRC
+
+## Joint Research Centre
+
+## PSTW
+
+## Public Sector Tech Watch
+
+RAG
+
+TFR
+
+## Retrieval-Augmented Generation
+
+## Technological Frames of Reference
+
+
+-----
+
+List of boxes
+
+Box 1. Defining GenAI.......................................................................................................................................................................8
+
+Box 2. Methodology in brief.........................................................................................................................................................10
+
+Box 3. The case studies.................................................................................................................................................................10
+
+Box A1. Interview protocol...........................................................................................................................................................47
+
+
+-----
+
+List of figures
+
+Figure 1. Perspectives on GenAI adoption in public administrations..............................................................................9 Figure 2. Individual use – main findings..................................................................................................................................18 Figure 3. A four-stage model of GenAI assimilation..........................................................................................................26
+
+
+-----
+
+List of tables
+
+Table 1. Details of the assimilation model.............................................................................................................................26 Table 2. Stage transitions and mechanisms of progression...........................................................................................30 Table 3. Policy recommendations..............................................................................................................................................33 Table A1. Overview of the interview data sources..............................................................................................................47
+
+
+-----
+
+Annex I. Case studies, methodological details
+
+Eight case studies have been conducted, based on 31 semi-structured interviews with public servants and experts at different levels in public administrations in Europe involved in the use of GenAI. The cases included administrations in Denmark, Finland, Germany, Greece, Italy, Norway and Spain, and managers working with the European Commission. The interviews were conducted between March and November 2025 by two researchers. The average length of each interview was 35 minutes. Table A1 provides an overview of the interview data sources. The interviews were transcribed with the support of the software Konch,(12) and then manually edited for accuracy. The interviews for the Italian cases were conducted in Italian, and then translated into English.
+
+Table A1. Overview of the interview data sources.
+
+## COUNTRY
+
+## ENTITY
+
+NUMBER OF 
+INTERVIEWEES
+
+## Denmark
+
+## Municipality of Copenhagen
+
+## Finland
+
+## Municipality of Helsinki
+
+## Germany
+
+Federal Ministry for Economic Cooperation and Development
+
+## Greece
+
+Presidency of the Government
+Ministry of Digital Governance University of the Aegean
+
+## Italy
+
+National Institute for Social Security
+
+European 
+Commission
+
+Directorate-General for Digital Services
+
+## Norway
+
+Norwegian Labour and Welfare 
+Administration
+
+## Spain
+
+## Government of Catalonia
+
+Total
+Source: Authors.
+
+12. https://www.konch.ai/.
+
+5
+
+4
+
+4
+
+3
+
+3
+
+3
+
+4
+
+5
+
+31
+
+47
+
+INTERVIEWEES’ 
+POSITIONS
+IT specialist
+Project manager
+Project manager
+IT specialist
+Senior manager
+Data scientist
+Senior manager
+IT specialist
+IT specialist
+Policy officer
+Senior manager
+IT specialist
+Data scientist
+Policy officer
+Senior manager
+Professor
+Project manager
+Senior manager
+Project manager
+Project manager
+Project manager
+Senior manager
+Project manager
+Data scientist
+Data scientist
+IT specialist
+Senior manager
+Project manager
+Project manager
+Senior manager
+Data scientist
+
+DURATION (MINS)
+39
+41
+25
+32
+46
+44
+42
+38
+44
+38
+31
+40
+40
+38
+27
+37
+30
+40
+36
+30
+19
+36
+45
+42
+45
+38
+54
+25
+25
+30
+25
+18 h 42 min
+
+
+-----
+
+Annex II. The interview protocol
+
+To establish a systematic approach, we developed an interview protocol informed by the literature review results. This tool is designed to capture the perspectives of practitioners engaged in the use of GenAI in public administrations, drawing on key themes emphasised in existing research.
+
+The protocol is structured to support semi-structured interviews. It consists of four main sections. The first section gathers background information on the interviewees’ education, professional experience and familiarity with GenAI in the public sector. The second section explores the personal use of GenAI tools by the interviewee. The third section focuses on perceptions, impacts and challenges of the technology. The fourth section focuses on the presence of guidelines and training initiatives in the administration of the interviewee, and on prospects on the future of GenAI development in the public sector.
+
+The full interview protocol is reported in Box A1.
+
+Box A1. Interview protocol.
+
+Interview number:
+Date:
+Location:
+
+Script
+Thank you for agreeing to do this interview. My name is… and I work for…
+
+This interview is part of a study that is being carried out as part of research activities of the Joint Research Centre of the European Commission.
+
+We are interested in understanding the use of generative AI (GenAI) in the public sector.
+
+The interview will last approximately 30 minutes. Although the findings of this study may be published, no information that can identify you will be included. To ensure the accuracy of our understanding of your answers, I would like to record this interview. If at any time during the interview you wish to discontinue the use of the recorder or the interview itself, please feel free to let me know.
+
+Do you have any questions or concerns before we begin?
+
+Then with your permission we will begin the interview.
+
+If participant wishes to discontinue study, ask if they would be willing to share why.
+
+## Questions
+
+A. Interviewee profile
+
+1. Could you briefly describe your current role and responsibilities in your organisation?
+2. How long have you been in this role, and what kind of digital tools do you typically use in your daily work?
+
+
+-----
+
+## B. Use of GenAI
+
+3. Have you personally used any generative AI tools (like ChatGPT or similar) in your work?
+
+3a. If yes: which tools have you used? How frequently?
+
+3b. If no: are you aware of any colleagues who use them, or any plans to introduce them?
+
+4. Are these tools made available officially by your organisation (e.g. a local/private version), or are they used informally (e.g. personal use of online tools)?
+
+5. Can you describe a specific situation where using a generative AI tool helped you or your team?
+
+C. Perceptions, impacts, and challenges
+
+6. In your experience, how do these tools affect the way you approach tasks like writing, decision-making or analysis?
+
+7. What function do you see for these tools? E.g. as a way to automate routine tasks, a partner to augment your thinking and creativity or something else?
+
+8. Have you ever had concerns about using these tools? If so, what were they?
+
+9. How transparent are you with colleagues or managers about your use of these tools? Is this something that’s openly discussed?
+
+D. Governance, training, and the future
+
+10. Are there any internal guidelines, policies or training courses in your organisation about the use of generative AI?
+
+11. In your view, should there be more formal guidance or oversight on how these tools are used in public administrations? Why or why not?
+
+12. Looking ahead, how do you think the use of these tools might evolve in your work or your organisation?
+
+## E. Other
+
+13. Is there anything else you would like to share?
+
+F. End
+
+14. Could you suggest other persons in your network that you think we could interview about the topic of generative AI in the public sector?
+
+15. Thank you for your useful contributions to our research. We will reflect carefully on your answers. 
+Do you have any questions for me?
+
+
+-----
+
+Getting in touch with the EU
+
+In person
+All over the European Union there are hundreds of Europe Direct centres. You can find the address of the centre nearest you online (european-union.europa.eu/contact-eu/meet-us_en).
+On the phone or in writing
+Europe Direct is a service that answers your questions about the European Union. You can contact this service:
+
+— by freephone: 00 800 6 7 8 9 10 11 (certain operators may charge for these calls),
+— at the following standard number: +32 22999696,
+— via the following form: european-union.europa.eu/contact-eu/write-us_en.
+
+Finding information about the EU
+
+Online
+Information about the European Union in all the official languages of the EU is available on the Europa website (european-union.europa.eu).
+EU publications
+You can view or order EU publications at op.europa.eu/en/publications. Multiple copies of free publications can be obtained by contacting Europe Direct or your local documentation centre (european-union.europa.eu/contact-eu/meet-us_en).
+EU law and related documents
+For access to legal information from the EU, including all EU law since 1951 in all the official language versions, go to EUR-Lex (eur-lex.europa.eu).
+EU open data
+The portal data.europa.eu provides access to open datasets from the EU institutions, bodies and agencies. 
+These can be downloaded and reused for free, for both commercial and non-commercial purposes. The portal also provides access to a wealth of datasets from European countries.
+
+
+-----
+
+Science for policy
+The Joint Research Centre (JRC) provides independent, evidence-based knowledge and science, supporting EU policies to positively impact society 
+
+Scan the QR code to visit:
+Joint Research Centre https://joint-research-centre.ec.europa.eu
+
+
+-----
