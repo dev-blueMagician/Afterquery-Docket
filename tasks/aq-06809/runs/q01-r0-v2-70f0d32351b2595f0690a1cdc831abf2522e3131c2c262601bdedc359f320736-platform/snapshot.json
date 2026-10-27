@@ -1,0 +1,49 @@
+{
+  "bundle": "aq-06809",
+  "corpus_sha256": {
+    "docs/fitb_ex991_2026-07-17.txt": "1c6595b541094316e6db78733c608b90f6beda261c090703892e9ada2027fb5a",
+    "docs/fitb_ex992_2026-07-17.txt": "fb8e5d56710cbc24a134183f80fbc0ccb4842122d8fcc03a0e11ce59fc31dcf2",
+    "docs/hban_ex991_2026-07-23.txt": "57e1d915205db24c425a36c90068139359308e23e58411f86de88c146020d423",
+    "docs/hban_ex992_2026-07-23.txt": "bcf2a905dbf84bb9a4c4544bda6d4c5d33dcba39df75eabfd8e4a3ae957d62ca",
+    "docs/key_ex991_2026-07-21.txt": "17c24f36e1f9a86d79a1b9d85146ab1e46aa75270f2402d9af563339a9cee803",
+    "text/D01.txt": "ee73442609b9b643f82cdb93c283ac918de69821614a39ef6f44158ce130dd31",
+    "text/D02.txt": "efcb99a4b1c16b89eff92688d9103c3ecf4278e622fc9d803c5c1dad5c3d4848",
+    "text/D03.txt": "090370606cb0e50be96a91aa5f023ac20992c9b9ac5f419c356aca64137d8580",
+    "text/D04.txt": "0b7488011e3c4ba6da95754954dc1d591c86c00f5e4b3e38f7186496ee9f7b61",
+    "text/D05.txt": "f088fc68bde9fc0907fb2cb6e85dda570030f70fc363ea65e6987e1f8239bf4f",
+    "text/manifest.json": "a2d6287b4cecf6aed5411891eb2cc87f28123acf02de38507991f9cd5b746c7f"
+  },
+  "difficulty_target": "hard",
+  "form_sha256": "11d9d3ca2cac36efba702fa84fc38d76499980c389118212f8dc19702118d7f6",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "hard",
+    "documents": "D05, D04",
+    "id": "q01",
+    "levers": "Ask for a precision the document doesn't print; Look-alike metric",
+    "origin": "claude",
+    "revision": "0",
+    "status": "draft",
+    "tags": "Cross-document join; Temporal alignment; Unit normalization"
+  },
+  "question_id": "q01",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "6",
+    "components": "- c1: 6",
+    "evidence": "- D05 (GAAP to Non-GAAP Reconciliations, columns 6/30/2026, 3/31/2026, 6/30/2025) [c1]: \"Common equity tier 1 (F)|$|17,016 $|17,038 $|16,775\"\n- D05 (same table) [c1]: \"Risk-weighted assets (H) (c)|$|152,317 $|149,338 $|143,427\"\n- D05 (same table, ratio row) [c1]: \"Common equity tier 1 ratio (F/H) (c) 11.2 % 11.4 % 11.7 %\"\n- D05 (table note) [c1]: \"(c)Amounts and ratios as of June 30, 2026 are estimated.\"\n- D04 (Quarterly Capital Under Current Regulatory Standards (Basel III), column dates) [c1]: \"June 30, March 31, December 31, September 30, June 30,\"\n- D04 (same table) [c1]: \"Common equity tier 1 capital|21,388 21,160 17,286 15,924 15,539\"\n- D04 (same table) [c1]: \"Risk-weighted assets (RWA) (1)|$|214,192 $|208,132 $|166,684 $|150,222 $|148,602\"\n- D04 (same table, reconciliation) [c1]: \"CET1 ratio (A/C)|10.0 % 10.2 % 10.4 % 10.6 % 10.5 %\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: hook h10, a precision the documents do not print over a printed tie (Hard shape A): both banks print the regulatory CET1 ratio to one decimal, and the printed declines are identical (20 basis points); the components each prints beside them give 23.76 and 18.12. Target hard. Sentence and answer carried word for word from sketch i06 (origin claude, 2026-10-18). Local strong-solver screen on this exact sentence: 3/3 right, high confidence (one solver medium on which reading is intended) (record in notes/sketches/i06.md; raw returns runs/i06-screen-2cfcfa4976a8bfe0/returns/; ledger row 81). User quick test against the High model, 2026-10-18: survived (\"i06 survived\"); a quick test sets no tier. Platform difficulty result pending. Doc numbers: D05 = Doc 3 (KeyCorp release and supplement), D04 = Doc 5 (Huntington supplement); D03 = Doc 4 (Huntington release) is not used.\n- Dependency plan: Doc 3 CET1 17,038 / 17,016 and risk-weighted assets 149,338 / 152,317 (March 31 / June 30) -> 11.40902% and 11.17144%, fall 0.23758 points; Doc 5 CET1 21,160 / 21,388 and risk-weighted assets 208,132 / 214,192 -> 10.16663% and 9.98543%, fall 0.18119 points; difference 0.05639 points = 5.639 basis points -> 6.\n- Universe: not applicable (one derived difference).\n- Necessity: D05 (Doc 3) is the only KeyCorp document; its CET1 capital and risk-weighted assets appear only in the reconciliation table (L783, L791). D04 (Doc 5) is the only source of Huntington's CET1 capital in dollars (L996, L1015); D03 prints the ratios (10.0, 10.2) and risk-weighted assets in $ billions only (L403), so it cannot give basis-point precision. Delete-and-guess: without D04, a solver has one-decimal ratios only and answers 0 (or cannot answer); without D05, KeyCorp's change is unknown. D01 and D02 (Fifth Third) carry no KeyCorp or Huntington figures.\n- Selected-lever checks: Ask for a precision the document doesn't print: the printed ratios give 11.4 - 11.2 = 0.2 and 10.2 - 10.0 = 0.2, a difference of 0 (D05 L61 also prints the change as \"(20)\"); rejected by \"to the nearest basis point\", since one-decimal ratios cannot resolve basis points and both banks print the components. Look-alike metric: the AOCI-inclusive ratios (KeyCorp \"Marked CET1\" 14,886 / 149,338 -> 14,862 / 152,317, a 21.07 fall; Huntington \"Adjusted CET1\" 19,154 / 208,132 -> 19,347 / 214,192, a 17.03 fall) give 4.04 -> 4; rejected because the question names the regulatory ratio, whose rows carry that name, while the look-alikes are named \"Marked CET1\" and \"Adjusted CET1\".\n- Targeted failure modes: declared Document convention / Rounding, scale or sign -> 0 (Doc 3 L216 and L61, Doc 5 L235 and L1007: one-decimal ratios, both 20 basis points), recomputed in scratchpad calc_aq06809.py. Not declared: the AOCI-inclusive look-alike (4), which no screen solver took (all three named it as weak), per the rule to declare only the lazy-default wrong answer.\n- Calculation verification: Python fractions (scratchpad calc_aq06809.py, 2026-10-18): KeyCorp 11.409018% -> 11.171438% (fall 0.2375800 points), Huntington 10.166625% -> 9.985434% (fall 0.1811914), difference 0.0563886 points = 5.6389 basis points -> 6. Each computed ratio rounds to the printed one-decimal ratio in every column (screen solvers checked June 2025 and December 2025 as well). Inputs are whole millions; a half-million shift moves a ratio by under 0.0004 points, so the result cannot leave the 5.5-6.5 band. Rounding each fall to whole basis points first (24 - 18) also gives 6.\n- Semantic/ID/overview probes: \"common equity tier 1\" and \"CET1\" across all five texts: KeyCorp ratio rows D05 L20, L61, L216, L608, L793 (all one decimal); capital rows only L783 (and the marked line L787); Huntington ratio rows D03 L45, L94, L400, D04 L235, L1007, L1021 (all one decimal); capital rows D04 L996, L1015. No document prints either ratio to two decimals or the declines in basis points beyond KeyCorp's \"(20)\".\n- Precision/readings: (a) printed ratios -> 0 (main alternative; all three screen solvers named it and rejected it on \"nearest basis point\"). (b) AOCI-inclusive ratios -> 4. (c) Relative declines (2.08% vs 1.78%, a 0.30-point gap read as 30 \"basis points\") -> 30, a stretched reading one solver noted. (d) Huntington's risk-weighted assets taken from D03's $ billions (214.2 / 208.1) -> 5.45 -> 5; D04 prints the millions on the line beside the capital it needs. June 30, 2026 figures are estimates in both tables, used as printed.\n- Completeness: capture complete (5 of 5 documents, no gap characters); both capital tables read in full.\n- Style/set review: one ask, 31 words. Only question in the bundle so far; earlier sketches i01-i05, i07 were closed after quick tests or a wording defect; no shared answer path with them (i06 is the only capital sketch).\n- Warnings answered: pending the preflight.",
+    "necessary documents": "- D05: Answer component\n- D04: Answer component",
+    "platform validation": "",
+    "question": "What was the difference, in basis points to the nearest basis point, between the declines in KeyCorp's and Huntington's common equity tier 1 ratios from March 31 to June 30, 2026?",
+    "reasoning": "Step 1. Source input (Doc 3, GAAP to Non-GAAP Reconciliations, capital rows): KeyCorp's common equity tier 1 capital was $17,038 million at March 31, 2026 and $17,016 million at June 30, 2026, against risk-weighted assets of $149,338 million and $152,317 million. Doc 3 computes the ratio as this capital over risk-weighted assets and prints it to one decimal, 11.4% and 11.2%.\nStep 2. Calculation (Doc 3): fall in KeyCorp's ratio from March 31 to June 30: 17,038 / 149,338 - 17,016 / 152,317 = 0.23758%.\nStep 3. Source input (Doc 5, Basel III capital table): Huntington's common equity tier 1 capital was $21,160 million at March 31, 2026 and $21,388 million at June 30, 2026, against risk-weighted assets of $208,132 million and $214,192 million. Doc 5 computes its ratio the same way and prints it to one decimal, 10.2% and 10.0%.\nStep 4. Calculation (Doc 5): fall in Huntington's ratio over the same dates: 21,160 / 208,132 - 21,388 / 214,192 = 0.18119%.\nStep 5. Calculation (Doc 3 and Doc 5): KeyCorp's fall less Huntington's, from the unrounded ratios: 17,038 / 149,338 - 17,016 / 152,317 - 21,160 / 208,132 + 21,388 / 214,192 = 0.05639%.\nStep 6. Final answer (Doc 3 and Doc 5): in basis points, 0.05639% × 10,000 = 5.639, which rounds to 6.",
+    "targeted failure modes": "### Failure mode 1\nTrap: Document convention\nHow a careless solver fails: Rounding, scale or sign\n\nWhy these are traps: Doc 3 prints KeyCorp's CET1 ratio as 11.4% then 11.2% and Doc 5 prints Huntington's as 10.2% then 10.0%: both fall 20 basis points, so a careless solver answers 0. Capital over risk-weighted assets gives falls of 23.76 and 18.12 basis points, a difference of 6."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "70f0d32351b2595f0690a1cdc831abf2522e3131c2c262601bdedc359f320736"
+}
