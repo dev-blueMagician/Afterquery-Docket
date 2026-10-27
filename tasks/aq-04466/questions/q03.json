@@ -1,0 +1,59 @@
+{
+  "question": "How many years separate the earliest and the latest CAMAC publications that the submissions cite?",
+  "number_of_asks": 1,
+  "gold_answer": "14 years",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 3, AIMA's footnote 5, attached to its answer on statutory limited liability for scheme members): AIMA cites a paper by its web address, \"camac_liability_of_members_of_mis_march_2000.pdf\", page 7: a CAMAC paper on the liability of scheme members, dated March 2000 by its file name. No submission cites an earlier CAMAC publication.\n\nStep 2. Source input (Doc 2, Allens' table of collapses and reviews, and its answer on compliance plans): Allens lists the \"CAMAC Report on Managed Investment Schemes (2012)\" and the \"CAMAC Discussion Paper on The establishment and operation of MISs (2014)\", and backs Option 3 of the 2014 discussion paper. No submission cites a later CAMAC publication; the other citations are to the 2012 report or to CAMAC's undated liquidity suggestion.\n\nStep 3. Calculation (Doc 2 and Doc 3): 2014 - 2000 = 14 years.\n\nDecoy: the folder name in the web address is the date the file was posted, not the paper's date. Without the footnote, the earliest publication named in the text is the 2012 report, which understates the span.\n\nStep 4. Final answer (Doc 3 and Doc 2): 14 years.",
+  "answer_components": [
+    "14 years"
+  ],
+  "evidence": [
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "https://treasury.gov.au/sites/default/files/2019-12/camac_liability_of_members_of_mis_march_2000.pdf p 7."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "CAMAC Discussion Paper on The establishment and operation of MISs (2014)"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "We would support adopting Option 3 proposed in the 2014 CAMAC Discussion Paper"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "CAMAC MIS Report July 2012 p 199."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Document convention",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Document convention: Doc 3 cites CAMAC's March 2000 paper only by its web address in footnote 5. A solver reading only named citations takes the 2012 report as the earliest and answers 2 years; the file name dates the paper to 2000, giving 14."
+}

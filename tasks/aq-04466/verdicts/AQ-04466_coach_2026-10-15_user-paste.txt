@@ -1,0 +1,21 @@
+Source: user chat, 2026-10-15, pasted verbatim with the note "i16 failed and the following is Coach's answer:".
+Context (author): the Coach was asked after difficulty Run 5 (q04 rev 0, Version e9bcea, Too easy, High 3/3); the answer discusses q04's question and gold. Saved as received; not a page capture.
+
+---
+
+Why did this come back Too easy?
+Looking at the RUN DATA:
+
+**What happened:** The high model got 3 of 3 right — every attempt reached your answer. Under the check rules, when either high-level solver is right every time, that level is "too easy." That is exactly what triggered the result.
+
+**Why it was easy:** The solver answers were not recorded with their passages or documents, so the RUN DATA does not show precisely where the right answers came from. But two of your three gold-answer items are directly findable by keyword search: the paper's title "Wholesale and Retail Clients Future of Financial Advice" appears explicitly in Doc 15 (footnote 3) and in Doc 5 (footnote 13). A model can find both with a single text search. The third item (AIOFP, Doc 8) requires inference from the phrase "a consultation in 2011," but that inference is relatively short once the other two are found.
+
+**Two automated checks also failed**, which point to the same underlying issue:
+
+1. **"Each description fits one thing"** (FAILED): The description "Treasury's earlier options paper on wholesale and retail clients" matches all three of your answer items. The check flags this as too broad — the question's condition does not narrow the field; it describes exactly the things in the answer.
+
+2. **"Evidence supports its component"** (FAILED): Your reasoning labels a quote from Doc 15 (the Joint Associations submission) as belonging to the AIOFP component. The quote and the component are mismatched in your step-by-step explanation.
+
+**Repeating pattern:** Your last 3 runs all came back Too easy. Each version has been findable through direct search or straightforward inference. The difficulty has not come from the evidence being hard to connect — it has come from the condition being directly searchable in the documents.
+
+Per the guide, hardness should come from the evidence — more hops, two periods to align, a ratio built from separately stated figures (L1–L4) — not from stacking conditions. Here the evidence is too directly stated to resist a keyword search. You may want to consult the guide's harder variations for this task before running again.

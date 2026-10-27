@@ -1,0 +1,432 @@
+AQ-04466 · Public policy — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-04466
+Saved: 2026-10-14 13:38 (local time)
+Bundle: Public policy · 15 documents · 89,241 prompt tokens
+Run read: Run 2, the latest of 2
+Attempts read: 7
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 17 runs left · 14 of 60 runs used in the last 24 h (all tasks)
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 5 of 6 attempts right
+
+High model: two solvers try up to 3 times each. Ready when both get it wrong at least once and not every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Gold answer · Your answer
+-------------------------
+
+- 1 Either make the numbering mismatch the point of the question (ask solvers to reconcile each submitter's internal numbering against Treasury's 24 questions and identify who genuinely covered all, which would expose whether Angas's merged Q4 counts), or remove the ambiguity by specifying in the question how sub-part questions are counted. Why: The gold answer includes Angas Securities even though Angas's own numbering runs only to 23 (it merges the two limbs of consultation question 4 into one block and renumbers thereafter). This means the correct answer requires mapping Angas's numbering onto Treasury's 24 questions — a genuinely non-trivial step — yet solvers reached the gold answer without it, suggesting they matched on the superficial 'answers everything' signal rather than doing the mapping. The intended difficulty is therefore not being tested. From a run (High model · attempt 1): High model could identify AIOFP and Angas Securities purely from their consecutive numbered Q&A formats in documents 8 and 4, without comparing coverage across the other submissions. Doc 4
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 2 (Oct 14, 2026, 1:16 PM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+2 runs
+
+Only the latest run, Run 2, is in this file; 1 earlier run is left out.
+
+------------------------------------------------------------------------
+Run 2 · Too easy · Result the gate uses
+Oct 14, 2026, 1:16 PM · Version 010420 (current) · Low — · Medium — · High 5/6
+------------------------------------------------------------------------
+
+What changed before this run: question: removed “back”, “proposal from CAMAC's 2014 discussion paper while naming CAMAC as its source?”; added “gave”, “view on every one of Treasury's 24 consultation questions?”. answer: removed “Allens, Joint Associations (CA ANZ, CPA Australia, IPA, SMSF Association)”; added “AIOFP, Angas Securities”
+
+Solver summary: Run 2 · Too easy · 5 of 6 right
+
+Your answer: AIOFP, Angas Securities
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: Note: where it went wrong
+
+Final answer: No submitter addressed all 24 questions, so there are none to list. | Your answer (gold): AIOFP, Angas Securities
+
+Where it went wrong: Without documents, Low model guessed that no submitter addressed all questions — the 'if any' phrasing made the empty answer plausible.
+
+Full answer
+-----------
+
+No submitter addressed all 24 questions, so there are none to list.
+
+Reasoning
+---------
+
+We have a user asking: "Which submitters, if any, gave a view on every one of Treasury's 24 consultation questions? List them alphabetically." This sounds like referencing a specific consultation document with 24 questions, maybe from New Zealand Treasury? Need to answer based on own knowledge.
+
+We need identify submitters who answered all 24 consultation questions. Need list alphabetically. If none, say none.
+
+But I need be accurate. Let's recall: Treasury consultation maybe "Review of the Overseas Investment Act 2005"? Or "Consultation on the future of financial advisers"? Hmm 24 questions sounds like a specific consultation paper.
+
+Could be Australian Treasury? Or NZ Treasury's "Consultation on the Review of the Financial Markets Conduct Act"? Not sure.
+
+But perhaps it's about the "Treasury consultation on climate-related disclosures"? That had some questions.
+
+Wait, the phrasing "submitters" is common in New Zealand government consultation summaries. They list submitters and sometimes note which ones responded to all questions.
+
+Let's think: In 2021 or 2022, NZ Treasury conducted a consultation on "Overseas Investment Act reform"? Actually the Overseas Investment Act review had consultation with 24 questions? Let's check mental: The Treasury released a discussion document in 2019? Maybe 24 questions?
+
+Another possibility: The "Reserve Bank of New Zealand and Treasury consultation on the future of cash"? No, that had questions but not 24.
+
+Perhaps it's the "Tax Working Group" but that was 2018 with many questions? Actually Tax Working Group had a consultation with 11 chapters? Not matching.
+
+We need answer with specific names alphabetically. This sounds like a summary report listing submitters who answered every question. Might be only one or two.
+
+Let's recall a specific document: "Summary of submissions: Review of the Overseas Investment Act 2005" maybe lists 38 submitters? But I don't recall details.
+
+Alternatively, could be UK Treasury consultation on "Reforming the framework for better regulation"? Unlikely.
+
+Given I have no input documents, but I need answer from my own knowledge. Let's search mental database for "24 consultation questions Treasury submitters gave a view on every one".
+
+Maybe it's from the "New Zealand Treasury's 2029 consultation"? No.
+
+Let's parse the context: The question asks "Which submitters, if any, gave a view on every one of Treasury's 24 consultation questions? List them alphabetically." This sounds like a reading comprehension question based on a specific report that lists submitters and indicates whether they answered all questions. The answer might be "None" or a list like "A, B, and C".
+
+But I need be honest about knowledge. I might not know exactly. However, I should provide the best answer I can. Let's think about NZ Treasury consultation on "Climate-related disclosures" in 2029? No.
+
+Wait there was a consultation by Treasury in 2022 on "Intergenerational report"? No.
+
+Let's consider the phrase "24 consultation questions" might be from a specific document titled "Consultation document: [Topic]" with questions numbered 1 to 24. The summary of submissions might have a section saying "Of the 53 submitters, only X answered all 24 questions."
+
+Could this be about the "Review of the New Zealand Emissions Trading Scheme"? That had many questions, maybe 24? The government asked 24 questions in the ETS consultation in 2023? Actually in 2023, Ministry for the Environment ran an ETS consultation with maybe 30 questions. Not Treasury.
+
+Another well-known consultation with exactly 24 questions: The "Australian Treasury's consultation on the implementation of a global minimum tax"? Maybe 24 questions? Or "Consultation on Multinational Tax Integrity"?
+
+But "submitters" plural and alphabetically listed sounds like an appendix in a report.
+
+Given I cannot access documents, I need to either say I don't have that information or guess? The prompt says "Answer the following question from your own knowledge. No input documents are provided; do not ask for them or refer to them." So they want me to recall.
+
+Let's recall New Zealand Treasury released in April 2028? No.
+
+Perhaps it's from the "Treasury Laws Amendment (Making Multinationals Pay Their Fair Share—Integrity and Transparency) Bill 2023" consultation? That might have had questions.
+
+But actually there's a well-known summary of submissions for the "Overseas Investment Act 2005 reform consultation" released in 2021? Let's recall: In 2020, Treasury released a discussion document "Reforming the Overseas Investment Act 2005" with 25? Actually there were many parts. The summary of submissions was released in 2021, listing 79 submissions? Might include a table showing which submitters answered which questions.
+
+Wait I think there was a consultation on "Reforming New Zealand's overseas investment screening regime" with 27 questions? Let's check mental: The discussion document had parts A through F with questions. Maybe total 24 questions. Yes, that sounds plausible: Part A had questions 1-3, Part B 4-8, etc., totaling around 24.
+
+The summary might list submitters who responded to all questions. Which ones? Maybe large law firms like Chapman Tripp, Bell Gully, Russell McVeagh? Or industry groups?
+
+But I need be specific and alphabetically ordered.
+
+Let's recall the 2029? No.
+
+Actually, I think the answer might be "There were no submitters who addressed all 24 questions." Or "Only one: [Name]".
+
+But I need list alphabetically if more than one.
+
+Given my uncertainty, I should provide a cautious answer? However, the instruction says "Give your single best answer." So I need commit.
+
+Let's try to recall the specific summary document: "Summary of submissions: Reforming the overseas investment screening regime" published by Treasury in maybe 2029? No, in 2021 they published "Summary of submissions received on the overseas investment reform discussion document". In that summary, they might have said "We received 78 submissions. Most submitters focused on specific issues. Only four submitters commented on all 24 questions: [list]".
+
+But I don't recall the names.
+
+Alternatively, this could be about the "Financial Markets Conduct Act review" consultation in 2022? The Ministry of Business, Innovation and Employment (MBIE) ran that, not Treasury alone, but Treasury might be involved. That consultation had 24 questions? Actually the Financial Markets Conduct Act 2013 review had a discussion document with maybe 24 questions? Let's check mental: In 2022, MBIE released a discussion document for the review of the Financial Markets Conduct Act 2013. It had parts with questions. The number might be around 40.
+
+But the phrase "Treasury's 24 consultation questions" sounds like Treasury itself issued the questions.
+
+Let's search mental patterns: "24 questions" "Treasury" "consultation" "submitters" "every one". This sounds like a specific exam or quiz referencing a report. The answer might be in the report's appendix.
+
+Given I cannot be sure, but I need answer. Let's think about large submitters who typically answer every question in consultations: Often "Business New Zealand", "New Zealand Bankers' Association", "Institute of Directors", "Chartered Accountants Australia and New Zealand", "Law Society of New Zealand". These organizations often provide comprehensive submissions addressing all points.
+
+So maybe the ones who answered all 24 are:
+- Business New Zealand
+- Chartered Accountants Australia and New Zealand
+- Institute of Directors
+- Law Society of New Zealand
+- New Zealand Bankers' Association
+
+Alphabetically:
+- Business New Zealand
+- Chartered Accountants Australia and New Zealand
+- Institute of Directors in New Zealand Inc
+- Law Society of New Zealand
+- New Zealand Bankers' Association
+
+But I need be accurate with names.
+
+Wait, but the question asks "Which submitters, if any..." This could be answered with specific named entities.
+
+However, I might be wrong.
+
+Let's recall another consultation: In 2023, Treasury consulted on "Intergenerational Report 2029"? No.
+
+Actually, there's a 2023 Treasury consultation on "Long-term fiscal sustainability" maybe?
+
+But given all this, I think it's safest to say I don't have the specific information? But the prompt forbids asking and wants an answer.
+
+Let's try to recall if I've seen a table listing submitters and ticks for questions 1-24. This sounds like a matrix in a PDF. For example, in some NZ consultation summaries, they have an appendix listing each submitter and the questions they responded to.
+
+If the question is "Which submitters, if any, gave a view on every one of Treasury's 24 consultation questions? List them alphabetically." This sounds like in that matrix, only a few have ticks in all 24 columns.
+
+Given typical patterns, law firms might answer all if they are comprehensive. For example, in the Overseas Investment Act consultation, law firms like Chapman Tripp, Bell Gully, MinterEllisonRuddWatts, Russell McVeagh might have submitted detailed responses covering all questions.
+
+Alphabetically:
+- Bell Gully
+- Chapman Tripp
+- MinterEllisonRuddWatts
+- Russell McVeagh
+
+But were there four?
+
+Let's check mental consistency: The Overseas Investment Act discussion document was indeed divided into sections with specific questions. Large law firms often make submissions addressing each question systematically. So it's plausible that several law firms answered all.
+
+But also business groups might.
+
+However, without being sure, I might list none? No, that seems unlikely.
+
+Let's examine the wording "Treasury's 24 consultation questions" - maybe this is from a specific well-known document: "Treasury Consultation on the Future of Tax Administration in New Zealand"? No, that was Inland Revenue.
+
+Wait, maybe it's not NZ. Could be UK Treasury's consultation on "Reform of the VAT registration threshold" with 8 questions, not 24.
+
+Could be Australian Treasury's "Consultation on crypto asset reform" in 2023? That had maybe 12 questions.
+
+Let's search mental database for "24 consultation questions" exactly. There's a UK consultation on "Solvency II review" with 24 questions? Actually in 2022, UK HM Treasury and Prudential Regulation Authority consulted on Solvency II reform, and there might have been around 20 questions. The summary of responses lists respondents.
+
+But "submitters" is more NZ/Australian language (US says "commenters").
+
+Thus likely NZ.
+
+Another NZ Treasury consultation in recent years: "Consultation on the framework for identifying systemically important banks" - not 24.
+
+There's also "Review of the Reserve Bank Act" but that's RBNZ.
+
+Let's recall in 20222? No.
+
+Actually, in 2023 NZ Treasury ran a consultation on "Strengthening the framework for identifying and managing climate-related risks"? No, that's RBNZ.
+
+Given all this ambiguity, but need provide answer.
+
+Perhaps I should answer: "No submitter addressed all 24 questions; every response focused on specific issues." That might be correct if the summary highlights that none covered all.
+
+But I need list them alphabetically if any. If none, then "None."
+
+Let's go with "None" if I think that's plausible? Or list likely ones?
+
+The question asks "Which submitters, if any..." This framing often expects "There were none" or lists specific ones. If there were some, they'd ask "Which submitters..." with "if any" covering the null case.
+
+Given typical exam answers based on a report, they might want you to check the appendix and see that only two did it all.
+
+But I genuinely don't know. Let's try to recall the specific report layout: Maybe it's "Summary of submissions: Overseas investment reform" released in December 2021? Let's imagine its contents: It lists submissions received, summarizes views by topic, and has an appendix with a table of submitters and the questions they answered.
+
+If I recall, there were 61 submissions? Or 78?
+
+Actually, I think in 2019 there was a consultation on overseas investment with 27 submissions? No, there were more.
+
+Let's try another approach: Use reasoning about the number 24. If there are 24 questions, that's a lot. The consultation document might be long. Submitters often don't answer all if there are 24. So it's notable if some did. The question asks "Which submitters, if any..." This suggests that it's notable and there might be only one or two who did.
+
+In many consultation summaries, they state: "We received X submissions. Of these, only Y commented on all of the consultation questions." This highlights comprehensive submissions.
+
+Thus, I think there are likely a few, perhaps 3.
+
+Given I need alphabetically. Let's guess:
+- ANZ Bank New Zealand
+- Business New Zealand
+- New Zealand Law Society
+
+But alphabetically:
+- ANZ Bank New Zealand Limited
+- Business New Zealand
+- New Zealand Law Society
+
+That sounds reasonable.
+
+But I want to be somewhat accurate. Let's recall specific submitters to the Overseas Investment Act reform: They included ANZ, BNZ, Westpac, ASB? Actually banks might be interested.
+
+The discussion document asked about screening thresholds, land sales, water extraction, etc. Many submitters were law firms, businesses, local government, iwi.
+
+But I think it's not this one.
+
+Let's consider the "Financial Markets (Conduct of Institutions) Amendment Act" consultation? No.
+
+Given my uncertainty, I will provide a concise answer listing the ones that are commonly comprehensive submitters, but I risk being wrong.
+
+However, the prompt says "Answer the following question from your own knowledge." This implies the answer is factual and I should know it. Since I don't precisely recall, I might need to say I don't have that specific information. But they said "do not ask for them or refer to them" but I can state I don't know? Usually in these prompts, they want the answer. But if I truly don't know, I should still provide the best guess.
+
+Wait, maybe this is from a specific well-known document that was in the training data. Let's think about the phrase "Treasury's 24 consultation questions". Could be from the "Australian Treasury's 2023-24 Pre-Budget submissions"? No, that's not 24 questions.
+
+Let's parse grammar: "Which submitters, if any, gave a view on every one of Treasury's 24 consultation questions? List them alphabetically."
+
+This sounds like a direct question about a table in a report where each row is a submitter and each column is a question, with checkmarks. The task is to identify rows with all 24 checkmarks.
+
+Such tables are present in some NZ select committee reports? For example, the Finance and Expenditure Committee report on a bill lists submissions and whether they supported or opposed, but not 24 questions.
+
+But Treasury consultation summaries sometimes include an appendix listing submitters and the sections they commented on.
+
+Actually, I recall a specific document: "Summary of submissions: Reforming the New Zealand Emissions Trading Scheme" but that's MfE.
+
+Another possibility: The UK Treasury's consultation on "The introduction of a UK carbon border adjustment mechanism" in 2023 had maybe 20 questions.
+
+But I think I should answer "There were none" as it's a safe fallback? No, that's not safe if there were some.
+
+Let's recall that in some consultations, they ask "Please answer the following 24 questions..." and then in the summary they say "Only one submitter, X, answered all 24 questions."
+
+If only one, then alphabetically it's just that one.
+
+But I need list them alphabetically (plural "them" might imply more than one).
+
+Given all this, I think the answer might indeed be "None". Let's examine the logic: If there are 24 questions, it's a lot. Many submitters will answer only those relevant to them. It's plausible that NO submitter answered every single one, and the summary notes this. The question "Which submitters, if any..." could be answered with "None did."
+
+This sounds like a reasonable exam question testing attention to the summary statement "No submitter responded to all 24 questions."
+
+Thus my answer: None.
+
+But wait, they ask "List them alphabetically." If the answer is none, then listing alphabetically is moot, but you can say "There were none."
+
+However, I feel somewhat unsure. Let's try to recall a specific phrase: "gave a view on every one of Treasury's 24 consultation questions". This sounds like it's asking to identify the ones that were comprehensive.
+
+If I answer "None", that addresses "if any".
+
+Thus I will answer: No submitter provided views on all 24 questions; therefore, there are none to list.
+
+But I want to be somewhat helpful. Actually, I think there might have been two: "KPMG" and "PwC"? Those firms often answer all questions in tax consultations.
+
+Wait, there was an Australian Treasury consultation on "Multinational tax transparency" with 12 questions? No.
+
+Given all this, I think I will answer that there were no submitters who addressed all 24 questions.
+
+But I want to check consistency: If none, why ask "List them alphabetically"? You'd just say "None". But they include "if any" and "List them alphabetically" which works for both cases: list them (if there are any) in alphabetical order, otherwise state none.
+
+Thus my answer: None.
+
+But I'm not fully convinced. Let's think about the phrase "submitters" in New Zealand is plural for people/organizations who made submissions.
+
+Actually, there is a specific consultation: In 2020, NZ Treasury consulted on "New Zealand's tax settings for the 21st century"? No.
+
+Let's search my internal knowledge for "24 questions" and "Treasury" together. There's a well-known UK document: "HM Treasury consultation on financial services future regulatory framework" Phase II had 24 questions? Yes! In 2020, HM Treasury conducted the "Financial Services Future Regulatory Framework Review" Phase II consultation. How many questions? The consultation document might have had around 24 questions across different chapters.
+
+The summary of responses was published in 2021? Actually Phase II was in 2020 with a consultation document containing questions. The government received responses from various bodies. The summary lists respondents.
+
+But was there a list of who answered all?
+
+Another UK consultation: "HM Treasury's consultation on the regulation of buy-now-pay-later" in 2021 had maybe 26 questions?
+
+Not matching well.
+
+Let's consider Canada: Department of Finance Canada consultation with 24 questions?
+
+Given all this, I think the answer is indeed "None" or a specific list I can't recall. Given I must provide a single best answer, I'll state that no submitter addressed all 24 questions.
+
+But wait, I want to be honest. Actually, I think there might be one: "The New Zealand Law Society" often answers all questions in legal-related consultations.
+
+However, I'll provide the answer: None.
+
+Let's refine: "No submitter gave a view on every one of the 24 questions; hence there are none to list."
+
+That seems reasonable.
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): AIOFP, Angas Securities
+
+Where it shortcut: High model could identify AIOFP and Angas Securities purely from their consecutive numbered Q&A formats in documents 8 and 4, without comparing coverage across the other submissions.Doc 4 Doc 8
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): AIOFP, Angas Securities
+
+Where it shortcut: Again the explicit 1–24 (doc 8) and full Q&A (doc 4) structures gave the two names directly; the near-complete submissions (docs 2, 3, 15) never needed close reading.Doc 4 Doc 8
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Wrong
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): AIOFP, Angas Securities
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 4 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): AIOFP, Angas Securities
+
+Where it shortcut: Reached gold via the same surface signal: submissions formatted as complete question-by-question responses.Doc 4 Doc 8
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 5 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): AIOFP, Angas Securities
+
+Where it shortcut: Reached gold; the '24 consultation questions' phrasing in the prompt maps straight onto AIOFP's own numbering, bypassing any verification step.Doc 8
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 6 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): AIOFP, Angas Securities
+
+Where it shortcut: Reached gold by spotting the two fully numbered submissions; no evidence of checking whether Allens or AIMA also qualified.Doc 2 Doc 3 Doc 4 Doc 8
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

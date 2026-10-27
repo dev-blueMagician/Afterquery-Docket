@@ -1,0 +1,371 @@
+AQ-04466 · Public policy — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-04466
+Saved: 2026-10-14 11:09 (local time)
+Bundle: Public policy · 15 documents · 89,241 prompt tokens
+Run read: Run 1, the latest
+Attempts read: 4
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 16 runs left · 13 of 60 runs used in the last 24 h (all tasks)
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 3 attempts right
+
+High model: two solvers try up to 3 times each. Ready when both get it wrong at least once and not every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Drop the naming requirement from the question and instead require solvers to know which proposals came from the 2014 discussion paper (as opposed to the 2012 CAMAC report cited by AIMA and AIOFP), e.g. 'Which submitters endorse a reform option put forward in CAMAC's 2014 discussion paper on the establishment and operation of managed investment schemes?' Why: The phrase 'while naming CAMAC as its source' tells the solver exactly what textual marker to look for. It converts a multi-document synthesis task into a string-matching task over a rare token ('CAMAC'), which appears in only a handful of the 15 documents, immediately narrowing the candidate set to docs 2, 3, 11 and 15. From a run (High model · attempt 1): Reached the gold answer; the supporting passages in docs 2 and 15 name CAMAC and the 2014 discussion paper explicitly alongside 'we would support adopting' / 'recommend... should be adopted', so a targeted search suffices. Doc 2 Doc 3 Doc 11 Doc 15
+
+Structure · Which documents it needs, and how they combine
+----------------------------------------------------------
+
+- 2 Remove the 'naming CAMAC as its source' cue from the wording, or make attribution implicit: e.g., ask which submitters endorse a proposal that originated in CAMAC's 2014 discussion paper (without saying they must name CAMAC), so solvers must trace the proposal (Option 3 / the 7-business-day liquidity test) back to its origin rather than grep for 'CAMAC'. Why: The answer is a direct keyword lookup: only two documents (Allens, doc 2; Joint Associations, doc 15) contain the combination 'CAMAC' + '2014 discussion paper' + an explicit statement of support ('We would support adopting Option 3 proposed in the 2014 CAMAC Discussion Paper'; 'The Joint Associations recommend that the objective test of liquidity as suggested by the... (CAMAC) should be adopted'). A solver can find both by searching 'CAMAC' and checking for endorsement verbs, with no need to read across documents or reason about attribution. From a run (High model · attempt 1): Reached the gold answer; the supporting passages in docs 2 and 15 name CAMAC and the 2014 discussion paper explicitly alongside 'we would support adopting' / 'recommend... should be adopted', so a targeted search suffices. Doc 2 Doc 15
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 1 (Oct 14, 2026, 11:06 AM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+1 run
+
+------------------------------------------------------------------------
+Run 1 · Too easy · Result the gate uses
+Oct 14, 2026, 11:06 AM · Version 70e8a6 (current) · Low — · Medium — · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: first run
+
+Solver summary: Run 1 · Too easy · 3 of 3 right
+Every solver attempt got it (3 of 3).
+
+Your answer: Allens, Joint Associations (CA ANZ, CPA Australia, IPA, SMSF Association)
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: Note: where it went wrong
+
+Final answer: None. | Your answer (gold): Allens, Joint Associations (CA ANZ, CPA Australia, IPA, SMSF Association)
+
+Where it went wrong: Without documents, Low model answered 'None', showing the answer is entirely document-dependent and not guessable from general knowledge — the difficulty problem is locatability, not ambiguity.
+
+Full answer
+-----------
+
+None.
+
+Reasoning
+---------
+
+We need answer: "Which submitters, if any, back a proposal from CAMAC's 2014 discussion paper while naming CAMAC as its source? List them alphabetically."
+
+Need determine context likely some consultation submissions referencing CAMAC 2014 discussion paper proposal, and they back it and name CAMAC as source. Need identify submitters alphabetically.
+
+We need answer from own knowledge. Might relate to Australian financial advice or CAMAC (Corporations and Markets Advisory Committee) 2014 discussion paper "The establishment and operation of managed investment schemes" or maybe "Crowd-sourced equity funding"? Let's think.
+
+CAMAC released discussion papers in 2014: perhaps "Managed investment schemes: Issues paper" in March 2014? Another 2014 discussion paper on "Crowd sourced equity funding" released in 2014? Actually CAMAC released a discussion paper in September 2013 on crowd-sourced equity funding, then report in 2014. But the question mentions "proposal from CAMAC's 2014 discussion paper while naming CAMAC as its source" and submitters backing it.
+
+Could be in response to some government consultation, like the "Financial System Inquiry" or "ASIC" etc. But need specific submitter names.
+
+Let's recall CAMAC 2014 discussion paper titled "The establishment and operation of managed investment schemes" maybe proposed changes to registration, etc. Or "CAMAC discussion paper: Managed investment schemes" published in July 2014? Let's search mental database: In 2014, CAMAC released a discussion paper on "Managed investment schemes" inviting submissions by August 2014. The proposals included allowing schemes to be registered with ASIC even if not yet operating, changes to compliance plan provisions, etc. Then they made recommendations in a report in 2015? Actually CAMAC was abolished in 2015.
+
+But the question asks "Which submitters, if any, back a proposal from CAMAC's 2014 discussion paper while naming CAMAC as its source?" This sounds like in some later consultation (maybe on draft legislation), submitters supported a particular proposal that originated from CAMAC's 2014 paper, and they cited CAMAC.
+
+We need list them alphabetically. Maybe there are none? The phrase "if any" suggests possibly none do so. But need be accurate.
+
+Let's parse precisely: "Which submitters, if any, back a proposal from CAMAC's 2014 discussion paper while naming CAMAC as its source? List them alphabetically."
+
+This sounds like a specific analysis of submissions to a consultation where they checked whether submitters attributed a proposal to CAMAC. The answer might be "None" or list specific ones like "Australian Bankers' Association" and "Financial Services Council"?
+
+We need determine exact names.
+
+Let's recall context: In 2017 or 2018, Treasury consulted on "Implementing the ASIC Industry Funding Model" no.
+
+Another possibility: The question refers to submissions to the "Parliamentary Joint Committee on Corporations and Financial Services" inquiry into "Impairment of Customer Loans" no.
+
+But we need answer with alphabetically listed submitters who back a proposal from CAMAC 2014 discussion paper and name CAMAC.
+
+Perhaps it's about the proposal for a "corporate collective investment vehicle" (CCIV). CAMAC in 2014 discussion paper proposed a new type of investment vehicle? Wait, the CCIV regime was introduced later, based on recommendations from the 2016 Asia Region Funds Passport? Actually CAMAC in 2014 released a discussion paper on "A new corporate collective investment vehicle" maybe? Let's check mental: In July 2014 CAMAC released a discussion paper proposing a new corporate collective investment vehicle (CCIV) for Australia. Yes! That sounds right. CAMAC's 2014 discussion paper was about introducing a corporate collective investment vehicle (CCIV) in Australia, similar to UK OEIC or Luxembourg SICAV. The paper proposed a new vehicle with corporate structure and sub-funds. Then in 2017 Treasury released exposure draft legislation for CCIVs, and there was consultation.
+
+So the question likely comes from analysis of submissions to the Treasury consultation on CCIV draft legislation (maybe 2017 or 2018). The question asks which submitters back a proposal from CAMAC's 2014 discussion paper while naming CAMAC as its source.
+
+We need identify submitters who supported some specific proposal that was in CAMAC's 2014 paper, and they mentioned CAMAC.
+
+Let's recall the CCIV consultation submissions. In 2017, Treasury released draft bills for Corporate Collective Investment Vehicle (CCIV) and consultation paper. Many industry bodies made submissions: Financial Services Council (FSC), Property Council of Australia, Australian Financial Markets Association (AFMA), Law Council of Australia, etc. Some may have referenced CAMAC's 2014 proposal.
+
+But we need those who back a proposal from the paper while naming CAMAC as source. Maybe proposal is about "allowing a CCIV to have a single director that is a corporate entity"? Or "sub-fund liability segregation"?
+
+Let's recall details of CAMAC 2014 CCIV discussion paper. It proposed:
+1. A new corporate vehicle, the CCIV, with shares and directors.
+2. The CCIV could have sub-funds (segregated cells) with separate assets/liabilities.
+3. A CCIV must have at least one director, which must be a public company? Or could be corporate director?
+4. The CCIV must have a depositary? No, that was in UK.
+5. Tax treatment flow-through.
+6. Retail and wholesale CCIVs.
+7. The responsible entity concept replaced by directors.
+
+In the 2017 draft legislation, some differences from CAMAC proposal existed. Submissions commented.
+
+But the question specifically "Which submitters, if any, back a proposal from CAMAC's 2014 discussion paper while naming CAMAC as its source?" This sounds like in the consultation summary, they noted that some submitters supported a proposal that was originally in CAMAC paper, but only some named CAMAC.
+
+We need list alphabetically.
+
+Since I don't have direct access, I need to recall or reason. However, I might be able to recall specific submission texts.
+
+Let's list known submitters to 2017 CCIV exposure draft:
+- Association of Superannuation Funds of Australia (ASFA)
+- Australian Financial Markets Association (AFMA)
+- Australian Private Equity and Venture Capital Association (AVCAL) maybe
+- Business Council of Australia?
+- Chartered Accountants Australia and New Zealand (CAANZ)
+- Corporate Tax Association?
+- Financial Services Council (FSC)
+- Law Council of Australia (Business Law Section)
+- Property Council of Australia
+- Real Estate Institute?
+- Tax Institute?
+
+But need those who named CAMAC.
+
+Perhaps the proposal is "that the CCIV should be able to list on a financial market"? Or "that there should be no requirement for a CCIV to have an external compliance plan"? Hmm.
+
+Let's search mental archives for phrases like "CAMAC 2014 discussion paper" in submission texts. I might have seen in Law Council submission referencing CAMAC. Or in FSC submission?
+
+Actually, I think in the 2018 consultation on CCIV regime (maybe second round in 2018), submissions discussed the "depositary" requirement. CAMAC 2014 had proposed a depositary for retail CCIVs? Or not?
+
+Wait, there was also a 2016 report by CAMAC? No, CAMAC was abolished in 2015, but they released the CCIV report in April 2014? Let's check mental timeline: CAMAC released discussion paper in July 2014, then a report in 2014? Actually they might have released a report in October 2014? Not sure.
+
+But the question mentions "CAMAC's 2014 discussion paper" specifically, not report. So submitters might cite the discussion paper.
+
+We need be precise: "Which submitters, if any, back a proposal from CAMAC's 2014 discussion paper while naming CAMAC as its source?"
+
+This sounds like a question from a specific document summarizing submissions, asking to identify submitters meeting both conditions: (1) back a proposal that came from CAMAC 2014 discussion paper; (2) name CAMAC as the source of that proposal.
+
+If none do both, then answer "None" or "There are none".
+
+But we need list alphabetically if any.
+
+Let's think about the analysis of submissions maybe done by Treasury in a summary document. They might have a table: "Proposal X was supported by A, B, C. Of these, only D named CAMAC as source." The question asks "Which submitters, if any..." So likely there is at least one.
+
+We need identify them.
+
+Given this is a knowledge question, maybe it's from a specific exam or quiz about reading submission summaries. But since no documents are provided, I need answer from my training data, which might include the summary document.
+
+Let's recall the Treasury consultation paper on CCIVs released in June 2017? Or August 2018? Actually in August 2018 Treasury released draft legislation and explanatory material for CCIV. Submissions closed in October 2018. Then in 2019 Treasury released a revised draft.
+
+In the 2018 consultation, there were 18 submissions maybe.
+
+The proposals included:
+- The CCIV should be required to have a corporate director with an AFSL.
+- Sub-funds should be separate legal entities? No, they are not.
+- Retail CCIVs should have a compliance plan and compliance plan auditor.
+- Wholesale CCIVs should have less regulation.
+
+One specific proposal from CAMAC 2014 might be "that a CCIV should be permitted to have a single corporate director, rather than requiring multiple directors like a public company". Or "that the corporate director should hold an AFSL authorising it to operate the CCIV".
+
+But I need be more concrete.
+
+Let's recall the actual CAMAC 2014 discussion paper content: It was titled "A Corporate Collective Investment Vehicle" and released in July 2014. The paper discussed the need for Australia to have an internationally competitive investment vehicle. It proposed a vehicle that is a company limited by shares, with one or more sub-funds (called "investment cells" maybe?). Each sub-fund has its own assets and liabilities segregated. The vehicle is managed by a corporate director (called "investment manager"?) holding an AFSL.
+
+Specifically, CAMAC proposed that:
+- A CCIV is a company registered under Corporations Act.
+- It must have at least one director, who must be a public company holding an AFSL.
+- The director is responsible for operating the CCIV.
+- Members (shareholders) have rights similar to unit holders in a MIS.
+- There can be retail and wholesale CCIVs.
+- Retail CCIVs must have a compliance plan, audited, etc.
+- Tax flow-through.
+
+Then in the 2017/2018 draft legislation, the government proposed some modifications.
+
+Now, submissions might have supported the CAMAC proposal that "the director of a CCIV should be required to be a public company" (corporate director). Some might have said this should not be required.
+
+But we need those who back the proposal and cite CAMAC.
+
+Perhaps the specific proposal is "that a corporate collective investment vehicle should be able to issue shares that are redeemable at the option of the shareholder, with redemption price based on net asset value". This is like open-ended.
+
+Actually, I think I need to search my internal knowledge for phrases in submissions. Let's imagine the Law Council submission: They might discuss corporate governance and reference CAMAC's proposal that directors owe duties to the CCIV as a whole and to each sub-fund. Or they might reference CAMAC's discussion of "cross-investment between sub-funds".
+
+But I still don't have clear list.
+
+However, the question asks "Which submitters, if any..." This wording is often used in reports when the answer is indeed "none". For example, "Which submitters, if any, back proposal X while naming Y as its source? List them alphabetically." If the answer is none, then "None" is appropriate. But they said "List them alphabetically" which could apply to an empty list? Usually they'd ask "If any, list them alphabetically." So it's possible there are some.
+
+Let's recall that in the summary of submissions for the 2018 draft, Treasury might have noted: "Several submitters supported the proposal that a CCIV should have a corporate director. This proposal was originally made in CAMAC's 2014 discussion paper. However, only [X] named CAMAC as the source."
+
+We need identify X.
+
+Given typical submissions, the ones that cite original sources are often law firms or academic bodies. For example, "Allens" might cite CAMAC. Or "Herbert Smith Freehills" (HSF). Or "MinterEllison". Or "King & Wood Mallesons".
+
+But also industry bodies like FSC might cite prior reports.
+
+Let's try to recall specific submission documents I might have seen fragments of:
+- Financial Services Council submission (2018) on CCIVs: They supported the regime, discussed corporate director, tax, etc. They might reference CAMAC?
+- Property Council of Australia submission: They supported CCIV for property funds. Might reference CAMAC?
+- Australian Financial Markets Association (AFMA): Might discuss listing.
+- Law Council of Australia (Business Law Section): They often provide detailed legal analysis and cite prior law reform commission reports, including CAMAC.
+- Chartered Accountants ANZ and CPA Australia: Might discuss accounting.
+- Tax Institute: Might discuss tax.
+
+Of these, Law Council is likely to cite CAMAC discussion paper as source for proposals.
+
+But the question asks "submitters" plural "which submitters... List them alphabetically". So maybe more than one.
+
+Let's recall there might be a specific proposal about "the CCIV should be required to have an independent compliance committee for retail schemes"? Or "the depositary model should not be adopted"?
+
+Wait, there's also the proposal that "members of a sub-fund should not be able to vote on matters relating to other sub-funds" etc.
+
+But I think I need to be honest and provide the answer I think is correct, but I need be somewhat sure.
+
+Actually, maybe this is not about CCIV at all. Let's consider other CAMAC 2014 discussion papers. CAMAC in 2014 also released a discussion paper on "The establishment and operation of managed investment schemes" in March 2014? Let's check mental: In March 2014, CAMAC released a discussion paper on "Managed investment schemes" with proposals about registration, compliance committees, etc. Then in 2015 they released a report? Actually in 2015 CAMAC released a report "Managed investment schemes" with recommendations. Yes, that sounds right. The discussion paper was in March 2014, report in July 2015? The proposals included:
+- Allowing schemes to be registered before they start operating.
+- Removing the requirement for a compliance plan for schemes that are not offered to retail clients?
+- Changing the compliance committee membership?
+- Allowing responsible entities to be replaced more easily?
+
+Then later, in 2016 or 2017, there might have been a government consultation on these recommendations? Or in the 2017 Treasury Laws Amendment? Actually some of these were implemented in the Corporations Amendment (Financial Advice Measures) Act? No.
+
+But there was a consultation in 2017 on "Modernising business registration services" not that.
+
+However, the question mentions "back a proposal from CAMAC's 2014 discussion paper while naming CAMAC as its source". This could be in submissions to the 2015 report? No, "submitters" usually refers to people who made submissions to the discussion paper itself. Wait! The question might be asking: In CAMAC's 2014 discussion paper, they invited submissions. Which of those submitters backed a particular proposal that was in the paper, and in doing so named CAMAC as the source? That sounds circular: they are submitting to CAMAC's paper, so they might reference the paper.
+
+But actually, the wording "back a proposal from CAMAC's 2014 discussion paper while naming CAMAC as its source" could mean that in some later consultation (e.g., on draft legislation implementing some recommendations), submitters supported a proposal and said "this was proposed by CAMAC in its 2014 discussion paper". So they name CAMAC as the source of the proposal they are backing.
+
+This is a common pattern in regulatory consultation summaries: they list proposals and then note which submitters supported them, and sometimes note whether they acknowledged the origin.
+
+Thus, we need identify those submitters.
+
+Given all this, I think the answer might indeed be "None". Let's examine logic: If a submitter backs a proposal that originated in CAMAC's paper, they might just discuss the merits without citing CAMAC, especially if the proposal is now in the draft legislation. The consultation summary might check whether anyone actually attributed it back to CAMAC. The answer might be that no submitters did so.
+
+But the phrase "if any" is a hedge. The answer might be "There are none."
+
+However, they ask "List them alphabetically." If the answer is none, there's nothing to list. But they still include "if any" to cover that.
+
+Let's consider the source of the question. It sounds like a specific query from a dataset of questions about a specific document, maybe a "submission summary" table. The question asks "Which submitters, if any, back a proposal from CAMAC's 2014 discussion paper while naming CAMAC as its source? List them alphabetically."
+
+This sounds like it's asking me to read a specific part of a document and extract names. Since I don't have the document, I need to answer based on knowledge. But maybe my training data includes the document.
+
+What document could this be? Perhaps it's the "Submission summary: Treasury Laws Amendment (Corporate Collective Investment Vehicle) Bill 2017" or similar. Let's recall that in 2017, Treasury released exposure draft bills for CCIV and received submissions. Then they might have published a summary of submissions.
+
+Actually, I think in 2018, after receiving submissions on the draft CCIV bills, Treasury might have released a "Summary of stakeholder feedback" in 2019? Or maybe not published.
+
+But there's also the "Board of Taxation" consultation?
+
+Let's try to recall specific phrases from submissions that mention "CAMAC 2014". I think I've seen in a submission: "CAMAC first proposed the CCIV in its 2014 discussion paper..." This might be in the FSC submission, or in a law firm submission.
+
+Let's list law firms that made submissions: Allens, Ashurst, Clayton Utz, Herbert Smith Freehills, King & Wood Mallesons, MinterEllison, Norton Rose Fulbright. Among these, Herbert Smith Freehills made a submission on CCIV in 2017? Actually HSF made a submission in 2017 on the CCIV exposure draft? Let's check mental: In October 2017, Treasury released draft legislation? No, in August 2018. Submissions closed October 2018. The submissions were published on Treasury website. Let's recall some of the published ones:
+1. AFMA
+2. ASFA
+3. Australian Investment Council? Maybe not.
+4. Business Council of Australia?
+5. CAANZ and CPA Australia (joint?)
+6. Corporate Tax Association
+7. Financial Services Council
+8. Law Council of Australia
+9. Property Council of Australia
+10. Real Estate Institute of Australia?
+11. Tax Institute
+
+But also there might be submissions from law firms that are not published? Actually Treasury usually publishes all non-confidential submissions.
+
+If I recall seeing a list of 2018 CCIV submissions on Treasury's website:
+- AFMA
+- ASFA
+- Australian Private Equity and Venture Capital Association Limited (AVCAL)
+- Business Council of Australia
+- Chartered Accountants Australia and New Zealand (CA ANZ)
+- CPA Australia
+- Financial Services Council (FSC)
+- Herbert Smith Freehills
+- Law Council of Australia
+- MinterEllison
+- Property Council of Australia
+- Tax Institute
+
+That sounds right.
+
+Now, in these submissions, who mentions CAMAC?
+
+The Law Council submission might discuss the history and mention CAMAC's 2014 discussion paper and subsequent report.
+
+The FSC might also mention it in the introduction: "The FSC has long supported the introduction of a CCIV, first proposed by CAMAC in 2014..."
+
+But we need
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): Allens, Joint Associations (CA ANZ, CPA Australia, IPA, SMSF Association)
+
+Where it shortcut: Reached the gold answer; the supporting passages in docs 2 and 15 name CAMAC and the 2014 discussion paper explicitly alongside 'we would support adopting' / 'recommend... should be adopted', so a targeted search suffices.Doc 2 Doc 15
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): Allens, Joint Associations (CA ANZ, CPA Australia, IPA, SMSF Association)
+
+Where it shortcut: Reached the gold answer again, consistent with the answer being recoverable by locating the two explicit CAMAC-attributed endorsements rather than by cross-document reasoning.Doc 2 Doc 15
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): Allens, Joint Associations (CA ANZ, CPA Australia, IPA, SMSF Association)
+
+Where it shortcut: Reached the gold answer a third time; the near-identical wording of the two key passages ('2014 CAMAC Discussion Paper' + support verb) makes the lookup reliable.Doc 2 Doc 15
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

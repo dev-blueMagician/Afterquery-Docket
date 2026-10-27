@@ -1,0 +1,142 @@
+AQ-04466 · Public policyEasy or Hard only — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-04466
+Saved: 2026-10-14 18:16 (local time)
+Bundle: Public policyEasy or Hard only · 15 documents · 89,241 prompt tokens
+Run read: Run 4, the latest of 4
+Attempts read: 4
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 19 runs left · 11 of 60 runs used in the last 24 h (all tasks)
+
+Your last 3 runs all came back Too easy. Ask the Coach before running again.
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 3 attempts right
+
+High model: two solvers try up to 3 times each. Ready when both get it wrong at least once and not every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Make the 'no comments' boundary the central work of the question, e.g. ask which submitters expressed a substantive position (not merely 'no comments' or 'no position') on every consultation question, and ensure several near-complete submissions force solvers to check each answer for placeholder responses. Why: The phrase 'gave a view on every one' is the only real discriminator, since Allens (doc 2) reproduces every question but answers Q18 with 'No comments', and AIMA (doc 3) answers Q23 with 'AIMA makes no comments on behalf of its members'. The wording nudges solvers toward the right interpretation, but because the two gold documents are so visually distinctive (full Q&A tables), most solvers never need to reason about this edge case at all. From a run (High model · attempt 1): Reached the gold answer by identifying the two submissions (AIOFP and Angas Securities) that answer every consultation question in full Q&A format, without needing to assess borderline cases like Allens' 'No comments' response. Doc 2 Doc 3
+
+Structure · Which documents it needs, and how they combine
+----------------------------------------------------------
+
+- 2 Include more submissions that answer most but not all questions without announcing their scope up front, or remove the self-eliminating scope statements from the document set, so solvers must actually verify question coverage in each submission rather than triage by introductory paragraphs. Why: The question is easy because only a handful of the 15 submissions are exhaustive question-by-question responses, and the two gold submitters (AIOFP in doc 8, Angas Securities in doc 4) are the only ones that visibly answer every numbered consultation question in a running Q&A format. Most other submissions self-eliminate in their opening paragraphs ('we concentrate on Section 1', 'solely concerned with Chapter 1', 'focused on aspects most relevant to our members'), so a solver can discard most documents without reading them and pattern-match the two complete tables. From a run (High model · attempt 1): Reached the gold answer by identifying the two submissions (AIOFP and Angas Securities) that answer every consultation question in full Q&A format, without needing to assess borderline cases like Allens' 'No comments' response. Doc 1 Doc 3 Doc 4 Doc 5 Doc 8 Doc 9
+- 3 Add submissions of similar length and format to the gold ones that nonetheless omit one or two questions mid-document (not at the start or end), so completeness must be verified question-by-question rather than inferred from document shape or length. Why: The numbering mismatch across documents also helps rather than hinders: Angas Securities (doc 4) uses its own 1–23 numbering while AIOFP (doc 8) uses 1–24, yet both are complete, while partial submissions like Angel Loop (doc 5, only Chapter 1 questions) and Archangel (doc 6, only questions 2–3) are obviously fragmentary. The contrast in document shape makes the complete ones stand out immediately. From a run (High model · attempt 1): Reached the gold answer by identifying the two submissions (AIOFP and Angas Securities) that answer every consultation question in full Q&A format, without needing to assess borderline cases like Allens' 'No comments' response. Doc 4 Doc 5 Doc 6 Doc 8
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 4 (Oct 14, 2026, 3:27 PM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+4 runs
+
+Only the latest run, Run 4, is in this file; 3 earlier runs are left out.
+
+------------------------------------------------------------------------
+Run 4 · Too easy · Result the gate uses
+Oct 14, 2026, 3:27 PM · Version 3adbba (current) · Low — · Medium — · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: question: removed “How many years separate the earliest and the latest CAMAC publications that the submissions cite?”; added “Which submitters, if any, gave a view on every one of Treasury's consultation questions? List them alphabetically.”. answer: removed “14 years”; added “AIOFP, Angas Securities”
+
+Solver summary: Run 4 · Too easy · 3 of 3 right
+Every solver attempt got it (3 of 3).
+
+Your answer: AIOFP, Angas Securities
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: Note: where it went wrong
+
+Final answer: No submitter addressed all of the consultation questions—so there are none to list. (In the submission summary, every party left at least one question unanswered.) | Your answer (gold): AIOFP, Angas Securities
+
+Where it went wrong: With no documents, Low model guessed that no submitter answered every question, missing that AIOFP and Angas Securities each provide a response to all consultation questions.Doc 4 Doc 8
+
+Full answer
+-----------
+
+No submitter addressed all of the consultation questions—so there are none to list. (In the submission summary, every party left at least one question unanswered.)
+
+Reasoning
+---------
+
+Could not load the reasoning — try again.
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): AIOFP, Angas Securities
+
+Where it shortcut: Reached the gold answer by identifying the two submissions (AIOFP and Angas Securities) that answer every consultation question in full Q&A format, without needing to assess borderline cases like Allens' 'No comments' response.Doc 4 Doc 8
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): AIOFP, Angas Securities
+
+Where it shortcut: Again reached gold via the visually distinctive complete Q&A tables in documents 4 and 8; the self-eliminating scope statements in other submissions made triage trivial.Doc 4 Doc 8
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): AIOFP, Angas Securities
+
+Where it shortcut: Reached gold the same way; the question's 'gave a view' wording plus the two exhaustive tables meant no careful per-question verification across the other 13 submissions was required.Doc 4 Doc 8
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

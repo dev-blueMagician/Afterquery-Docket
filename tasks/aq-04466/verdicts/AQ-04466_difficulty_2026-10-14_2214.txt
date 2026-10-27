@@ -1,0 +1,303 @@
+AQ-04466 · Public policyEasy or Hard only — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-04466
+Saved: 2026-10-14 22:14 (local time)
+Bundle: Public policyEasy or Hard only · 15 documents · 89,241 prompt tokens
+Run read: Run 5, the latest of 5
+Attempts read: 4
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 20 runs left · 10 of 60 runs used in the last 24 h (all tasks)
+
+Your last 3 runs all came back Too easy. Ask the Coach before running again.
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 3 attempts right
+
+High model: two solvers try up to 3 times each. Ready when both get it wrong at least once and not every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Rephrase to avoid echoing the paper's title, e.g. 'Which submitters draw on Treasury's pre-2012 consultation work on the retail/wholesale boundary when justifying their threshold recommendations?' This forces solvers to identify which cited prior work is Treasury's options paper rather than CAMAC, the Quality of Advice Review, or the Wallis Inquiry. Why: The question's phrase 'Treasury's earlier options paper on wholesale and retail clients' almost exactly matches the title cited verbatim in the documents ('Wholesale and Retail Clients Future of Financial Advice Options Paper', doc 15; 'Wholesale and Retail Clients Future of Financial Advise 2011', doc 5). A solver can find the answer with a simple keyword search for 'Wholesale and Retail Clients' or 'options paper' rather than reading and comparing submissions. AIOFP (doc 8) is also flagged by the near-verbatim phrase 'A consultation in 2011 asking this exact question'. From a run (High model · attempt 2): Again the distinctive options-paper title appears verbatim in docs 5 and 15, and doc 8's 'A consultation in 2011 asking this exact question' is an unmistakable paraphrase, so a keyword search yields the full gold list. Doc 5 Doc 8 Doc 15
+
+Gold answer · Your answer
+-------------------------
+
+- 2 Specify the expected granularity in the question (e.g. 'list the submitting entities as they identify themselves in their covering letters') or accept any ordering/labelling that identifies the joint submission and its four members. Why: The gold answer's third entry bundles four bodies under one label ('Joint Associations (CA ANZ, CPA Australia, IPA, SMSF Association)'), while the other entries are single submitters. Because the joint submission is signed by all four associations, a solver listing the four associations separately, or listing 'CA ANZ, CPA Australia, IPA, SMSF Association' without the 'Joint Associations' wrapper, produces an equally correct alphabetical list that may not match the gold string. This format looseness, not difficulty, is what the attempts navigated. From a run (High model · attempt 2): Again the distinctive options-paper title appears verbatim in docs 5 and 15, and doc 8's 'A consultation in 2011 asking this exact question' is an unmistakable paraphrase, so a keyword search yields the full gold list. Doc 15
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 5 (Oct 14, 2026, 9:55 PM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+5 runs
+
+Only the latest run, Run 5, is in this file; 4 earlier runs are left out.
+
+------------------------------------------------------------------------
+Run 5 · Too easy · Result the gate uses
+Oct 14, 2026, 9:55 PM · Version e9bcea (current) · Low — · Medium — · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: question: removed “gave a view”, “every one of”, “consultation questions?”; added “rely”, “earlier options paper on wholesale and retail clients?”. answer: removed “Angas Securities”; added “Angel Loop, Joint Associations (CA ANZ, CPA Australia, IPA, SMSF Association)”
+
+Solver summary: Run 5 · Too easy · 3 of 3 right
+Every solver attempt got it (3 of 3).
+
+Your answer: AIOFP, Angel Loop, Joint Associations (CA ANZ, CPA Australia, IPA, SMSF Association)
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: Note: where it went wrong
+
+Final answer: No submitters do—there are none to list. (No submissions rely on Treasury’s earlier wholesale/retail clients options paper.) | Your answer (gold): AIOFP, Angel Loop, Joint Associations (CA ANZ, CPA Australia, IPA, SMSF Association)
+
+Where it went wrong: Without the documents, Low model guessed that no submitter relies on the earlier options paper, showing the answer is not inferable from general knowledge and depends entirely on locating the citations in docs 5, 8 and 15.Doc 5 Doc 8 Doc 15
+
+Full answer
+-----------
+
+No submitters do—there are none to list. (No submissions rely on Treasury’s earlier wholesale/retail clients options paper.)
+
+Reasoning
+---------
+
+We need parse question: "Which submitters, if any, rely on Treasury's earlier options paper on wholesale and retail clients? List them alphabetically." Need answer based on knowledge? This sounds like referencing some specific consultation submissions regarding financial markets, maybe in Australia? Treasury's earlier options paper on wholesale and retail clients. Need identify submitters who rely on that paper.
+
+We need answer from own knowledge. Let's recall context: Maybe Australian Treasury consultation on "Design and Distribution Obligations" or "Wholesale client test"? There was an options paper in 2022? Or about "Financial advice" wholesale vs retail clients?
+
+Let's think: In Australia, there has been debate about wholesale and retail client definitions under Corporations Act. Treasury released an options paper maybe in 2022 or 2023? Actually in 2024? Let's recall: In October 2021, Treasury released a consultation paper "Review of the regulatory framework for managed investment schemes" but not that.
+
+Another possibility: New Zealand? Treasury options paper on wholesale and retail clients? Or UK?
+
+The question asks "Which submitters, if any, rely on Treasury's earlier options paper on wholesale and retail clients? List them alphabetically." This sounds like a specific analysis of submissions to a later consultation, where they check if submitters reference an earlier options paper. Might be from a report summarizing submissions.
+
+We need identify submitters alphabetically. Let's recall Australian Treasury consultation on "Wholesale Investor Test" in 2024? Let's check mental knowledge: In February 2024, Australian Treasury released a consultation paper "Review of the wholesale investor tests" with options paper? Actually there was a Treasury consultation in 2023 on "Review of the regulatory framework for managed investment schemes" including wholesale client thresholds. But there was also an earlier options paper in 2011? Hmm.
+
+Let's search mental database for "Treasury options paper on wholesale and retail clients" maybe released in December 2021? The phrase "wholesale and retail clients" sounds like financial advice clients in Australia: retail clients vs wholesale clients. In 2021, Treasury released a consultation paper on "Review of the wholesale investor and wholesale client tests" maybe not options paper.
+
+But the question specifically asks "Which submitters, if any, rely on Treasury's earlier options paper on wholesale and retail clients?" This sounds like in a current consultation, some submitters cite an earlier Treasury options paper that discussed wholesale and retail clients. The answer might be "None" or list some organizations.
+
+We need be precise and list alphabetically.
+
+Given I don't have direct access, I need reason.
+
+Perhaps this is about the "Financial Markets Conduct Act" in New Zealand? There was an options paper by Treasury in 2021 on "Wholesale and retail clients"? Actually NZ has wholesale investors under Financial Markets Conduct Act 2013. In 2021, the Ministry of Business, Innovation and Employment (MBIE) and Treasury released a discussion document? Not sure.
+
+Let's parse wording: "submitters" plural, "rely on Treasury's earlier options paper on wholesale and retail clients". This sounds like a summary report of submissions to a consultation lists which submitters referred back to an earlier options paper. The question asks "Which submitters, if any..." implying maybe none do.
+
+But we need list them alphabetically if any.
+
+Could be from a specific document like "Summary of submissions: Review of the financial advice regime" but no.
+
+Let's recall in Australia in 2024 there was a consultation on "Delivering Better Financial Outcomes" (DBFO) which included proposals for wholesale clients? Actually the DBFO package was released in 2023 and included a proposal to amend the wholesale client test? Let's check mental: In December 2023, Australian government released "Delivering Better Financial Outcomes" which included changes to financial advice laws. One part was about simplifying the wholesale client test? Or about retail/wholesale?
+
+Wait, there's also the "Quality of Advice Review" led by Michelle Levy, report delivered Dec 2022. The government responded in 2023 with DBFO. In that context, there might be discussion about wholesale clients for financial advice.
+
+But the phrase "Treasury's earlier options paper on wholesale and retail clients" might refer to a 2011 options paper? Let's think.
+
+Actually, in New Zealand in 2022, the Financial Markets Authority and Treasury consulted on "Wholesale investor settings"? There's a 2021 discussion document "Wholesale investor test" maybe.
+
+However, the question format "START QUESTION ... END QUESTION" sounds like it's extracted from a QA dataset about a specific document. The answer likely is a list of names like "ANZ, ASB, etc." But need correct ones.
+
+Let's recall a specific consultation in Australia in 2024: "Treasury Laws Amendment (Delivering Better Financial Outcomes) Bill 2024" maybe had submissions. But an "options paper on wholesale and retail clients" could be part of that.
+
+Alternatively, maybe it's about Canada's? No, "Treasury" capitalized often refers to Australian Treasury or New Zealand Treasury.
+
+We need answer alphabetically. Let's try to recall submissions that cite earlier papers. Maybe in the context of "Review of the wholesale investor tests" consultation that closed in 2024, submitters included Australian Banking Association, Financial Services Council, etc. Some may have relied on earlier Treasury options paper from 2011? That seems unlikely.
+
+Let's systematically recall Australian wholesale client test review: In 2011, Treasury released an options paper "Defining retail clients and wholesale clients"? Actually in 2010-2011 there was a consultation on "Options for reforming the disclosure requirements for retail and wholesale clients of financial products and services"? Let's check mental: In December 2010, Treasury released an options paper titled "Review of disclosure requirements for retail and wholesale clients"? Or in 2011 there was "Discussion Paper: Development of equity and debt capital market disclosure regimes"? Not matching.
+
+But there was indeed a Treasury options paper in January 2011 called "Wholesale and retail clients future of financial advice" maybe? Wait, the Future of Financial Advice (FOFA) reforms in 2011-2012 had an options paper? Let's recall: In April 2010, the government announced FOFA reforms. Then in January 2011, Treasury released an options paper? Actually they released "Future of Financial Advice - Options Paper" in January 2011? Or was it in 2010?
+
+The FOFA options paper was released in January 2011, titled "Future of Financial Advice" and it discussed wholesale vs retail clients? Yes, FOFA introduced best interests duty for retail clients, leaving wholesale clients with different rules. So there was an earlier options paper in 2011.
+
+Now, the current question might be about recent submissions to some consultation that reference that 2011 options paper. Which submitters rely on it?
+
+But without the document, hard to know exactly.
+
+However, maybe the answer is indeed "none". Let's consider: The question asks "Which submitters, if any, rely on Treasury's earlier options paper on wholesale and retail clients? List them alphabetically." The phrase "if any" suggests that there might be none, but they want you to list if there are some.
+
+Could be in a report analyzing submissions to a 2023 consultation, they ask "Which submitters rely on Treasury's earlier options paper..." and the answer might be "No submitters rely on the earlier options paper" or "None".
+
+But they said "List them alphabetically" - if none, then answer "None". But "List them alphabetically" with none is just "None". That could be correct.
+
+But I need be somewhat confident.
+
+Let's recall specific submission lists for a recent consultation on wholesale/retail client definitions. In 2022? Actually in August 2023, Treasury released a consultation paper "Review of the regulatory framework for managed investment schemes" but that was about MIS.
+
+In February 2024, Treasury released "Review of the wholesale investor and wholesale client tests" - yes, I think this happened. The consultation paper might have referred back to an earlier options paper? Wait, they might have released a consultation paper with options? Let's check mental news: In early 2024, there was news about the government proposing changes to the wholesale investor test, including raising the threshold from $2.5m to $10m? Or was that proposed and then dropped? Actually in late 2023/early 2024, there was discussion about changing the wholesale client asset test from $2.5 million to $10 million, but then in 2024 the government dropped the proposal? Let's recall: In December 2021, Treasury had a consultation? No, in 2023, the Parliamentary Joint Committee on Corporations and Financial Services recommended reviewing the test. Then in 2024, Treasury released a consultation?
+
+Actually, I recall in October 2023, the government released a consultation paper on "Review of the wholesale investor tests" with submissions closing in 2024? Or maybe it was released in February 2024.
+
+Let's search mental news headlines: Around late 2023, there was talk of changing the "sophisticated investor" threshold in Australia from $2.5m net assets or $250k income to higher levels, maybe indexed. The government was consulting. Many industry groups made submissions. Some might reference earlier Treasury papers.
+
+But the question mentions "Treasury's earlier options paper on wholesale and retail clients" - that sounds like the 2011 FOFA options paper indeed discussed wholesale and retail clients.
+
+However, I think I need to provide the best answer I can. Given ambiguity, but likely answer is "None" or specific ones.
+
+Wait, the phrasing "Which submitters, if any, rely on Treasury's earlier options paper on wholesale and retail clients?" sounds like it's asking from a specific list of submissions being analyzed. For example, in a report it might say "Several submitters rely on Treasury's earlier options paper... These include X, Y, Z."
+
+If I had to guess names of submitters that might cite old Treasury papers: Maybe "Australian Bankers' Association (ABA)", "Financial Services Council (FSC)", "Chartered Accountants Australia and New Zealand (CAANZ)", "Law Council of Australia", "Property Council of Australia"?
+
+But need alphabetically.
+
+Let's try to recall actual submissions to the 2021? Hmm.
+
+Actually, there is a well-known 2021 Treasury consultation on "Corporate Collective Investment Vehicle" but no.
+
+Let's consider New Zealand context: In 2022, New Zealand Treasury and MBIE released an "Options paper for reform of the Financial Markets Conduct Act 2013"? Not exactly.
+
+But the phrase "wholesale and retail clients" is used in New Zealand's Financial Markets Conduct Act, which distinguishes "wholesale investors" and "retail investors". In 2021, there was a review of wholesale investor settings? Actually in 2021, the FMA released a consultation on "Proposed standard conditions for financial institution licences" but no.
+
+Let's try another angle: The question might come from an exam or quiz based on a specific document that lists submissions. The user asks "Answer the following question from your own knowledge. No input documents are provided..." So they want me to answer based on my training data, which likely includes the document.
+
+Thus I need recall the specific document content. The document might be a report summarizing submissions on some proposed law change, maybe "Financial Markets (Conduct of Institutions) Amendment Bill" in New Zealand? Or in Australia "Treasury Laws Amendment (Measures for Consultation) Bill"?
+
+The phrase "options paper on wholesale and retail clients" sounds like a document titled "Wholesale and retail clients: options paper" released by Treasury. Let's check mental: In Australia, in 2014, Treasury released an options paper for "Streamlining the disclosure obligations for superannuation and managed investment schemes"? No.
+
+Wait, there's a 2024 options paper? Let's search mental database for "options paper wholesale retail clients Treasury 2023". Maybe in December 2023 Treasury released three papers: "Quality of Advice Review", "Delivering Better Financial Outcomes"? Actually they released three tranches.
+
+But specifically, there was an options paper in 2011 for FOFA, and then in 2023 there was a response.
+
+However, the question asks "Which submitters, if any, rely on Treasury's earlier options paper on wholesale and retail clients?" This sounds like in submissions to a current consultation, some parties cite that old 2011 paper as authority. The report listing submissions might highlight this.
+
+If I can't recall specific names, I might answer "No submitters explicitly rely on that earlier options paper" or "None".
+
+But they ask "List them alphabetically" - if answer is none, then "There are none."
+
+But maybe there are two: "Australian Financial Markets Association" and "Financial Planning Association"?
+
+Let's try to be honest but provide plausible answer? No, need best answer.
+
+Actually, I think I've seen a document: "Summary of submissions: Review of the financial advice regulatory framework" but not that.
+
+Let's recall the "Quality of Advice Review" received submissions in 2020? No, Michelle Levy received submissions in 2022. Many industry bodies submitted. Some might have referred back to the 2011 options paper?
+
+But the question mentions "Treasury's earlier options paper on wholesale and retail clients" - in the Quality of Advice Review, they discussed wholesale clients? Maybe not.
+
+Let's parse grammar precisely: "Which submitters, if any, rely on Treasury's earlier options paper on wholesale and retail clients?"
+
+This sounds like it's asking to identify submitters who base their arguments on that earlier paper. If none do, then answer "None".
+
+Given the "if any" framing, it's likely that there are indeed some, but the asker wants to know which ones.
+
+But I need list alphabetically. Let's think of alphabetically ordered lists in reports: often they list submitters like:
+- Australian Banking Association
+- Australian Financial Complaints Authority
+- Australian Institute of Company Directors
+- Australian Securities and Investments Commission
+- Chartered Accountants Australia and New Zealand
+- Consumer Action Law Centre
+- Financial Advice Association Australia
+- Financial Services Council
+- Law Council of Australia
+- Property Council of Australia
+- Super Consumers Australia
+
+Among these, which might cite an old Treasury options paper? Maybe legal bodies like Law Council?
+
+But I genuinely don't know.
+
+Given all this, I think the safest answer is that no submitters rely on it, so there are none to list.
+
+But wait, they said "List them alphabetically" - if the answer is none, listing alphabetically is moot but can state "None."
+
+However, maybe the answer is indeed "None" and that's correct.
+
+But I want to check consistency: If a report asks "Which submitters, if any, rely on X?" and then in the report they list some. The phrase "if any" is often used in these QA datasets when the answer might be an empty list.
+
+Thus I will answer: There are no submitters that rely on that earlier options paper (or none are identified).
+
+But I feel uneasy. Let's provide a concise answer stating that none do.
+
+Wait, but the prompt says "Give your single best answer." So I should state clearly.
+
+Thus: "None — no submitters rely on the earlier options paper."
+
+But they said "List them alphabetically" - maybe I should say "No submitters (none to list)."
+
+I'll go with: No submitters rely on it; therefore, there are none to list alphabetically.
+
+But perhaps they want "N/A". Let's formulate: "There are none; no submitters reference that earlier paper."
+
+That should be okay.
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): AIOFP, Angel Loop, Joint Associations (CA ANZ, CPA Australia, IPA, SMSF Association)
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): AIOFP, Angel Loop, Joint Associations (CA ANZ, CPA Australia, IPA, SMSF Association)
+
+Where it shortcut: Again the distinctive options-paper title appears verbatim in docs 5 and 15, and doc 8's 'A consultation in 2011 asking this exact question' is an unmistakable paraphrase, so a keyword search yields the full gold list.Doc 5 Doc 8 Doc 15
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): AIOFP, Angel Loop, Joint Associations (CA ANZ, CPA Australia, IPA, SMSF Association)
+
+Where it shortcut: The question wording mirrors the cited paper title so closely that locating the three relying submitters reduces to matching the phrase across docs 5, 8 and 15.Doc 5 Doc 8 Doc 15
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
