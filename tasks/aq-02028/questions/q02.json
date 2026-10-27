@@ -1,0 +1,77 @@
+{
+  "question": "Using the whole-port throughput Melbourne's newest container terminal states, how many yearly truck trips would 4 TEU average loads save?",
+  "number_of_asks": 1,
+  "gold_answer": "432,000 truck trips",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 1, establishment of VICT at the Port of Melbourne): in 2014 VICT was awarded the concession for the third international container terminal in the Port of Melbourne, while the existing container terminals are at East Swanson and West Swanson Dock; VICT's first vessel was serviced in March 2017. VICT is therefore the port's newest container terminal.\n\nStep 2. Source fact (Doc 1, same section): VICT states that the Port of Melbourne as a whole, not VICT alone, currently services over 2.88 million TEU annually.\n\nStep 3. Source fact (Doc 8, asset utilisation): the Victorian Transport Association puts the current average load at 2.5 TEU per truck trip, gets yearly truck trips by dividing the port's yearly TEU by the load per trip, and also models a load of 4 TEU per vehicle per trip.\n\nStep 4. Calculation (from Steps 2 and 3; Doc 1 and Doc 8), yearly truck trips at the current average load, in millions: 2.88 / 2.5 = 1.152 million trips.\n\nStep 5. Calculation (from Steps 2 and 3; Doc 1 and Doc 8), yearly truck trips at an average load of 4 TEU, in millions: 2.88 / 4 = 0.72 million trips.\n\nStep 6. Calculation (from Steps 4 and 5; Doc 1 and Doc 8), yearly truck trips saved, in millions: 1.152 - 0.72 = 0.432 million trips.",
+  "answer_components": [
+    "432,000"
+  ],
+  "evidence": [
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "VICT was awarded the concession to design, build and operate the third international container terminal in the Port of Melbourne"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "the existing container terminals at East Swanson and West Swanson Dock"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Our first vessel was serviced in March 2017"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "It currently services over 2.88 million Twenty-foot equivalent Units (TEU) annually"
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "the current average is 2.5 TEU"
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "handled through Melbourne with a load factor of 2.5 TEU vehicle per trip resulting in approximately 1.2million truck trips pa"
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "Increase the load factor to 4 TEU per vehicle per trip"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        8
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Picks the wrong entity or section"
+    },
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Doc 8 prints about 450,000 fewer trips for 4 TEU loads, on VTA's own 3 million TEU, not the newest terminal's figure. Doc 1 gives the port 2.88 million TEU but VICT itself 800,000 TEU (120,000). Correct: 2.88 / 2.5 - 2.88 / 4 = 0.432 million."
+}
