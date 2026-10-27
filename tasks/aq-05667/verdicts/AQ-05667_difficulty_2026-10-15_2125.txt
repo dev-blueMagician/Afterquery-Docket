@@ -1,0 +1,466 @@
+AQ-05667 · Corporate filingsEasy or Hard only — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-05667
+Saved: 2026-10-15 21:25 (local time)
+Bundle: Corporate filingsEasy or Hard only · PERIODIC · 9 documents · 103,353 prompt tokens
+Run read: Run 1, the latest
+Attempts read: 7
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 16 runs left · 8 of 60 runs used in the last 24 h (all tasks)
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 6 attempts right
+
+High model: two solvers try up to 3 times each. Ready when both get it wrong at least once and not every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Rephrase so the target passage is not named, e.g. 'By how much did Sherwin-Williams' actual 2025 change in Interest expense differ from the total 2025 interest-expense impact it had forecast when reporting full-year 2024 results?' This still requires identifying the forecast components without quoting the Outlook language. Why: The phrase 'the increase it had anticipated for that year in its annual report for 2024' points directly at the 2024 10-K Outlook paragraph, which is the only place forward-looking interest guidance appears. A solver searching for 'anticipated' or 'expected to increase' lands immediately on the $40 million sentence, and the $20 million interest component sits two sentences later in the same paragraph. The wording thus flags both the document and the passage. From a run (High model · attempt 4): Reached -10.7 by taking the stated $49.3 million increase from the 2025 10-K and summing the two Outlook figures ($40M + $20M) from the 2024 10-K — pure lookups with one addition, no derivation from financial tables. Doc 3
+
+Gold answer · Your answer
+-------------------------
+
+- 2 Either make the combination explicit and unambiguous (e.g. 'including both refinancing-related and headquarters-transition interest impacts') or, better, remove the ambiguity by asking a question whose answer is a single unambiguous figure, such as the difference between actual 2025 interest expense and the level implied by the 2024 forecast. Why: The gold answer of -10.7 depends on an interpretive choice that the documents never state outright: that the 'anticipated increase' is the sum of the $40 million refinancing-driven increase AND the $20 million interest portion of the ~$100 million headquarters transition costs. The 2024 10-K presents these as separate statements, and a reasonable reading treats only the $40 million as 'the increase it had anticipated' (yielding 9.3). The first attempts that missed likely took that reading; later attempts matched only after hitting the intended sum. The question does not signal that both components must be combined. From a run (High model · attempt 4): Reached -10.7 by taking the stated $49.3 million increase from the 2025 10-K and summing the two Outlook figures ($40M + $20M) from the 2024 10-K — pure lookups with one addition, no derivation from financial tables. Doc 3 Doc 7
+
+Structure · Which documents it needs, and how they combine
+----------------------------------------------------------
+
+- 3 Force derivation instead of lookup: ask for the actual increase as a difference the solver must compute from reported Interest expense line items (465.0 in the 2025 10-K vs 415.7 in the 2024 10-K income-before-taxes tables) rather than the sentence that states '$49.3 million' outright, and keep the anticipated-increase components scattered as they are. Why: Both required numbers are single stated figures: the actual 2025 increase ($49.3 million) appears verbatim in the 2025 10-K MD&A ('Interest expense increased $49.3 million in 2025'), and the anticipated increase is given as two explicit dollar amounts in the 2024 10-K Outlook ('approximately $40 million' from refinancing plus 'approximately $20 million of Interest expense' from the headquarters transition). The only computation is 49.3 - (40 + 20), so a solver needs just two lookups in two documents and one addition — no reading across periods, tables, or segments. From a run (High model · attempt 4): Reached -10.7 by taking the stated $49.3 million increase from the 2025 10-K and summing the two Outlook figures ($40M + $20M) from the 2024 10-K — pure lookups with one addition, no derivation from financial tables. Doc 3 Doc 7
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 1 (Oct 15, 2026, 5:19 PM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+1 run
+
+------------------------------------------------------------------------
+Run 1 · Too easy · Result the gate uses
+Oct 15, 2026, 5:19 PM · Version e1c129 (current) · Low — · Medium — · High 3/6
+------------------------------------------------------------------------
+
+What changed before this run: first run
+
+Solver summary: Run 1 · Too easy · 3 of 6 right
+
+Your answer: -10.7
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: —
+
+Final answer: 15.0 | Your answer (gold): -10.7
+
+Full answer
+-----------
+
+15.0
+
+Reasoning
+---------
+
+We need answer based on knowledge? Need determine Sherwin-Williams actual 2025 increase in interest expense minus the increase anticipated for that year in its annual report for 2024, in millions of dollars to one decimal place.
+
+We need recall or derive figures from Sherwin-Williams annual report 2024 and actual 2025 results? The question sounds like comparing anticipated increase in interest expense for 2025 mentioned in 2024 annual report versus actual increase in 2025.
+
+We need precise figures in millions.
+
+Let's recall Sherwin-Williams 2024 annual report (for year ended Dec 2024) likely included outlook for 2025? They might have said interest expense expected to increase by about $50 million? Or in 2025 actual interest expense increased by some amount, and the anticipated increase was different.
+
+We need "actual 2025 increase in interest expense minus the increase it had anticipated for that year in its annual report for 2024". So need both numbers.
+
+Let's recall Sherwin-Williams financials: Interest expense in 2023, 2024, 2025?
+
+In 2023 interest expense was around $113.7 million? Let's check mental: Sherwin-Williams in 2022 interest expense was $89.8 million? In 2023 maybe $111.5 million? In 2024 maybe $266.8 million? Wait that sounds high due to acquisition financing? Let's recall: Sherwin-Williams acquired Suvinil in 2020? No, in 2024 they acquired Suvinil? Actually Sherwin-Williams acquired Suvinil from BASF in October 2025? Hmm not that.
+
+Let's recall 2024 annual results: Net sales $23.1B? Net income around $3.2B? Interest expense maybe $96.6 million? No that seems low.
+
+We need be precise. Let's recall from 2024 10-K filing: Interest expense was $104.8 million in 2024? Or $397.5? Let's think.
+
+Sherwin-Williams had long-term debt around $11.8B at end 2024? Actually in 2023 long-term debt was about $9.8B? Let's check mental balance sheet: At Dec 31, 2023 total debt maybe $11.2B? At Dec 31, 2024 maybe $11.3B? Not huge change.
+
+But there was a big acquisition in 2024? No, in 2024 they acquired Henkel's industrial coatings? Wait no, that was in 2024? Actually in October 2024 Sherwin-Williams acquired Suvinil? Let's check mental news: In October 2025 Sherwin-Williams acquired Suvinil from BASF for $1.15B? Or was it 2025? Yes, in October 2025 Sherwin-Williams acquired Suvinil from BASF for $1.15B in cash. That might affect 2025 interest? Not likely immediate.
+
+Another acquisition: In October 2027? No.
+
+Perhaps interest expense anticipation was in the 2024 annual report under "2025 Outlook" stating interest expense expected to be about $100M higher? Let's try to recall specific language from 2024 earnings call in Jan 2025: They discussed 2025 guidance? They might have said "interest expense is expected to be approximately $100 million in 2025"? Or "increase of approximately $10 million"?
+
+We need actual 2025 increase minus anticipated increase. Let's gather actual interest expense figures for 2024 and 2025.
+
+From 2025 annual report (for year ended Dec 2025, filed early 2026). Interest expense line: maybe $434.1 million in 2025 vs $396.8 million in 2024? Or $310 vs $250?
+
+Let's recall Sherwin-Williams 2025 full year results announced in January 2026? They reported net sales of $23.6B? Net earnings of about $3.72B? Actually in Jan 2026 Sherwin-Williams reported fourth-quarter and full-year 2025 results: Net sales up 0.7%? Or down? Let's recall news headlines in late Jan 2026: Sherwin-Williams Q4 2025 earnings missed expectations? Or beat?
+
+Let's recall January 27, 2026 earnings release: Sherwin-Williams reported net sales for 2025 of $23.6B? Net income of around $3.8B? Diluted EPS maybe $10.50? Let's try to recall precisely.
+
+Actually in January 2025 they reported 2024 results: net sales $23.1B, net income $3.2B, diluted EPS $13.18? Wait that sounds right: In Jan 2025 Sherwin-Williams announced 2024 net sales of $23.1B up 0.9%, net earnings up 12.1%? Or net income was about $3.188B? Diluted net earnings per share was about $13.18? Yes that sounds correct.
+
+Then in January 2026 they reported 2025 results: net sales about $23.6B? Or $23.7B? Net income about $3.8B? Diluted EPS around $10? No, wait there was stock split? Sherwin-Williams had a 5-for-1 stock split in 2025? Actually they had a 5-for-1 split in 2025? Let's check mental: In March 2025 Sherwin-Williams announced a 5-for-1 stock split? Yes, I think in March 2025 they announced a 5-for-1 stock split, effective in June? Or was it in 2025? Yes, I recall in March 2025 Sherwin-Williams announced 5-for-1 stock split and dividend increase. So EPS figures need adjustment. The 2024 diluted EPS was around $10.69? Let's not confuse.
+
+But we just need interest expense increase.
+
+Let's recall the 2025 10-K filing details: Interest expense for 2025, 2024, 2023.
+
+We need "What was Sherwin-Williams' actual 2025 increase in interest expense minus the increase it had anticipated for that year in its annual report for 2024..."
+
+This sounds like in the 2024 annual report they projected 2025 interest expense to increase by, say, $50.0 million, but actually it increased by, say, $80.0 million, so difference is $30.0? Or maybe anticipated increase was $80M and actual was $20M, difference negative?
+
+We need be accurate.
+
+Let's recall from 2026 earnings call transcript in January 2026: They might discuss interest expense for 2026 expectation being about $80M? Or they said in 2025 interest expense was up about $30M?
+
+We need derive from actual figures if possible.
+
+Let's recall Sherwin-Williams income statement for 2025 and 2024.
+
+We need interest expense line (not interest income).
+
+Looking at mental 10-K for 2023: Interest expense was $113.7 million? Interest income maybe $2.8 million? Net interest expense?
+
+For 2024: Maybe interest expense was $99.2 million? Or $395 million?
+
+Wait, Sherwin-Williams has a lot of debt? At end 2024 long-term debt was about $11.6B? Actually they issued bonds? Let's recall in 2023 they had long-term debt of about $9.6B? In 2024 maybe $10.5B?
+
+But also they have other income/expenses. Let's check mental 2024 income statement lines:
+Net sales: $23,098.5 million
+Cost of goods sold: maybe $12,800?
+Gross profit: $11,300?
+SG&A: maybe $6,500?
+Other general expense/income?
+Interest expense: maybe $95.4 million?
+Other income: maybe ($100)?
+Income before taxes: about $3,800?
+Taxes: about $800?
+Net income: about $3,188?
+
+That sounds right: Net income was about $3,188 million in 2024. Tax rate about 21.5%? So pretax income was about $4,076. If interest expense was $100M, then pretax without interest maybe $4,176.
+
+But actually Sherwin-Williams in 2024 had other income of about $124.8 million? Or other expenses?
+
+Let's check mental 2023 figures: Net sales $23,051.5 million? Net income $2,389? Or $2,390? Yes in 2023 net income was about $2,389 million. In 2024 net income was $3,188 million, a big jump partly due to Suvinil? Wait Suvinil acquisition was in 2025? No, in October 2025 they bought Suvinil, but they might have had a tax adjustment?
+
+Actually in 2024 Sherwin-Williams had a tax benefit? Or in 2025?
+
+Let's recall 2025 net income was about $3,720 million? Or $3,798? Let's check mental news in Jan 2026: Net earnings for full year 2025 were up/down?
+
+The headline might have said: Sherwin-Williams Q4 2025 earnings of $2.23 per diluted share? Or net income of $997 million in Q4?
+
+Let's try to recall specific 2025 annual figures from the Jan 2026 press release:
+- Net sales: $23,711.8 million? Or $23,626.2?
+- Net earnings: maybe $3,815.8 million?
+- Diluted net earnings per common share: maybe $10.47?
+- EBITDA: maybe $5.2B?
+
+But we need interest expense specifically.
+
+In the 2025 10-K, there might be a line:
+Interest expense 2025: $483.1 million?
+Interest expense 2024: $395.2 million?
+Interest expense 2023: $366.4 million?
+
+That sounds plausible if they issued bonds for acquisition? Wait they bought Suvinil for $1.15B in cash in Oct 2025; they might have funded with debt, but that's late in the year.
+
+Alternatively, in 2024 they might have had interest expense of $104.2 million and in 2025 of $110.5 million?
+
+We need be precise with increase in millions to one decimal place, which suggests the figures are in the financial statements with one decimal (e.g., $39.5 million).
+
+The question asks: "What was Sherwin-Williams' actual 2025 increase in interest expense minus the increase it had anticipated for that year in its annual report for 2024, in millions of dollars to one decimal place?"
+
+So they want a specific number like "$15.2 million" or "$-5.3 million". This sounds like in the 2024 annual report they said they expect interest expense in 2025 to be about $X million higher than 2024, maybe due to debt issuance. Then in reality, the increase was $Y million. The question asks actual increase minus anticipated increase.
+
+We need determine X and Y.
+
+Let's recall from the 2024 annual report (10-K filed Feb 2025?). In the "Market Risk" or "Liquidity" section they discuss expected interest expense? Or in the MD&A they discuss 2025 outlook?
+
+Actually in earnings call in Jan 2025, they might have guided for 2025: "We expect interest expense to increase approximately $10 million in 2025"? Or "We expect interest expense to be flat"?
+
+But the question specifically references "the increase it had anticipated for that year in its annual report for 2024". This sounds like in the 2024 10-K there is a forward-looking statement about 2025 interest expense. Maybe in Note on debt? Or in the "Contractual Obligations" table?
+
+Wait, there's often a table of contractual obligations including debt maturities, and then they discuss expected interest payments. For example, in 2024 10-K they might have a table showing interest payments on long-term debt of about $350M per year? But that's not "increase anticipated for that year".
+
+Alternatively, in the 2024 annual report's "Management's Discussion" they discuss factors that could affect 2025, including "We anticipate interest expense will increase approximately $30 million in 2025 due to higher debt levels"?
+
+We need find the actual figures. Let's recall Sherwin-Williams 2025 10-K line for interest expense. Let's try to recall the income statement layout for Sherwin-Williams for 2025, 2024, 2023.
+
+The income statement usually lists:
+Interest expense
+Interest and other income (expense) - net?
+
+Actually in recent 10-Ks:
+Other general expense - net
+Interest expense
+Other income - net
+Other expense - net
+
+Let's recall from 2022 or 2023 filing:
+Interest expense: $91.7 million in 2022, $97.3 in 2023? Or maybe $385 million?
+
+Wait, Sherwin-Williams had a large pension? No.
+
+Let's search mental database for Sherwin-Williams 2024 income statement line items:
+Net sales: 23,098,506?
+Cost of goods sold: 12,571,xxx?
+Gross profit: 10,527,xxx?
+Selling, general and administrative expenses: 6,384,xxx?
+Other general expense (income) - net: maybe (190)?
+Interest expense: maybe 96.6?
+Other income - net: maybe (35)?
+Other expense - net: (something)?
+Income before income taxes: 4,076,xxx?
+Income taxes: 842,xxx?
+Net income: 3,234,xxx?
+
+That sounds about right.
+
+But wait, there was also "Interest income" maybe included in other income.
+
+However, the question mentions "interest expense minus the increase it had anticipated..." This sounds like the actual increase was, say, $40.5 million, and they anticipated $25.0 million, so difference is $15.5 million.
+
+But I need be as accurate as possible.
+
+Let's recall in Jan 2026 earnings call they discussed 2026 guidance? They said "We expect interest expense to be approximately $85 million in 2026, up about $10 million"? Or "interest expense is expected to increase about $50 million"?
+
+Actually, I think in Jan 2026 they guided 2026 diluted EPS to be up/down? They might have said: "In 2026, we expect sales to be up low to mid single digit, diluted net earnings per share up high single digit to low double digit, including approximately $80 million of incremental interest expense..." Hmm that sounds right! Let's examine: In Jan 2026, Sherwin-Williams might have said they expect about $80 million of incremental interest expense in 2026 due to financing the Suvinil acquisition? Or due to refinancing?
+
+Wait, Suvinil acquisition was in Oct 2025 for $1.15B cash. They might have used cash on hand and maybe some debt. But also they might have issued bonds in 2025?
+
+Let's recall in 2025 Sherwin-Williams issued bonds? In July 2025 they might have issued $1B in bonds? Or in 2024 they issued bonds?
+
+Actually in September 2024 Sherwin-Williams issued $1B in senior notes? Or in 2025?
+
+Let's recall news in 2025: Sherwin-Williams announced a $1.25B bond offering? Or maybe they priced senior notes?
+
+But also in Jan 2026 they might discuss 2026 headwinds: "We anticipate approximately $80 million of incremental interest expense and about $60 million of incremental depreciation and amortization..." Or was it for 2025?
+
+We need specifically "actual 2025 increase in interest expense minus the increase it had anticipated for that year in its annual report for 2024".
+
+So in the 2024 annual report (filed Feb 2025) they anticipated an increase for 2025. Let's call that anticipated increase A. Then actual 2025 interest expense minus 2024 interest expense = actual increase B. They want B - A.
+
+We need both B and A precisely.
+
+Let's recall from the 2025 10-K filing (filed Feb 2026?). The income statement for 2025 and 2024 includes interest expense. Let's try to recall or derive the figures.
+
+We need to be precise to one decimal place in millions (e.g., 42.3).
+
+Given that financial reports round to one decimal in millions (like "$395.4 million").
+
+Thus, we need the difference B - A, likely also rounded to one decimal.
+
+Let's try to recall the actual 2025 income statement line for interest expense. Maybe it's listed as:
+2025: $439.2 million
+2024: $396.8 million
+2023: $371.5 million?
+
+If so, B = 439.2 - 396.8 = 42.4 million.
+
+Then what was anticipated in 2024 report? Maybe they anticipated interest expense in 2025 to be about $410 million, an increase of about $15 million? Or maybe they said "We anticipate interest expense will increase by approximately $30 million"?
+
+But wait, the question asks "the increase it had anticipated for that year in its annual report for 2024" - this sounds like there was a specific anticipated increase figure mentioned, not just an expected total. For example: "We anticipate that interest expense will increase approximately $25.0 million in 2025."
+
+If B is 42.4 and A is 25.0, then B - A = 17.4.
+
+But I need be correct.
+
+Let's recall specific language from Sherwin-Williams 2024 10-K in the MD&A section "2025 Outlook" or "Factors Affecting Our Results"?
+
+Actually, in the 10-K there might be a section called "Critical Accounting Estimates" but not outlook.
+
+But in the earnings call transcript (Jan 2025) they might have said: "We expect 2025 interest expense to be about $100 million"? No, that'd be high.
+
+Let's search mental transcript from Jan 2025: The CEO was John Morikis? Actually in 2025 the CEO was Heidi Petz? Wait Sherwin-Williams CEO is Heidi G. Petz, who became CEO in 2026? Let's check: In Jan 2023, John Morikis was CEO. He retired at the end of 2025? Actually Heidi Petz became CEO on Jan 1, 2026? Yes! So in Jan 2025 the CEO was John Morikis. In Jan 2026 Heidi Petz was CEO.
+
+In the Jan 2025 call, they might have discussed 2025 guidance: Sales up low-single digit? Diluted EPS up high-single digit? They might have mentioned "interest expense expected to be approximately flat"?
+
+But also in the 2024 10-K filed in Feb 2025, there might be a table of contractual obligations including debt interest.
+
+Wait, the question mentions "annual report for 2024" - that could be the 10-K filed in 2025, but also could be the glossy annual report to shareholders. In that report, they might have included a "Looking Ahead" section with expected increases.
+
+But actually, this sounds like a specific number comparison that might be mentioned in a financial news article analyzing Sherwin-Williams 2025 results compared to prior expectations. For example, an article might say: "Sherwin-Williams' interest expense rose by $X in 2025, versus the $Y increase it had anticipated in its 2024 annual report, meaning the actual increase was $Z higher."
+
+We need answer that specific difference.
+
+Let's recall Sherwin-Williams 2026 earnings call transcript in Jan 2026. They might have broken down the year-over-year changes. For example, they might have said: "In 2025, interest expense was up about $40 million compared to 2024, about $20 million more than we had expected in our 2024 annual report."
+
+But I need be precise.
+
+Let's recall specific figures from the 2025 annual financial summary in the 2026 press release. The press release usually includes a summary income statement with line items for 2025 and 2024. Let's try to recall the layout:
+
+Sherwin-Williams Co.
+Fourth-Quarter and Full-Year 2025 Financial Results
+
+Net sales:
+Fourth quarter 2025: $5,592.3?
+Fourth quarter 2024: $5,561.0?
+
+Full year 2025: $23,678.9?
+Full year 2024: $23,098.5?
+
+Net earnings:
+Q4 2025: $996.8?
+Q4 2024: $1,029.8?
+
+Full year 2025: $3,815.6?
+Full year 2024: $3,188.3?
+
+Earnings per share:
+Diluted net earnings per share:
+Full year 2025: $10.67?
+Full year 2024: $10.47? Or with split?
+
+But also they might list "Interest expense" separately?
+
+Actually in the press release they often have a table with:
+Net sales
+Net earnings
+Diluted net earnings per share
+EBITDA
+
+But not interest expense.
+
+However, in the 10-K they do.
+
+Let's recall from 2025 10-K (filed Feb 2026) the Consolidated Statements of Income for years ended Dec 31, 2025 and 2024.
+
+Line items might be:
+Net sales: $23,678, ...?
+Cost of goods sold: ?
+Gross profit: ?
+Operating expenses: ?
+Other general expense - net: ?
+Interest expense: ?
+Other income - net: ?
+Income before income taxes: ?
+Income taxes: ?
+Net income: ?
+
+We need just interest expense.
+
+Given that net income in 2025 was about $3.8B and in 2024 about $3.2B, the difference is about $600M. Where did that come from? Maybe gross profit improved? Or there was a big tax benefit?
+
+Wait, in 2024 there might have been a large tax adjustment? Or in 2025?
+
+Actually Sherwin-Williams in 2025 might have had a lower tax rate?
+
+But also they acquired Suvinil in Oct 2022? No, Suvinil was acquired in Oct 2020? Let's check mental: Sherwin-Williams acquired Suvinil in October 2020 for $2.34B? Yes! That's right! In October 2020, Sherwin-Williams acquired Suvinil from BASF for $1.15B? Wait there was an acquisition of Suvinil in 2020? Actually in 2020 Sherwin-Williams acquired Suvinil from BASF for $1.15B. Yes! That was in 2020, not 2025. So my mental error corrected. The 2025 acquisition was maybe of something else? Let's check: In October 2025, Sherwin-Williams acquired Suvinil? No, they already owned it. Wait in Oct 2025 they acquired BASF's architectural coatings business in Brazil? Actually in October 2025 Sherwin-Williams acquired BASF's Brazilian decorative paints business, which is Suvinil? Let's check mental news in Oct 2025: Sherwin-Williams acquired Suvinil from BASF? Or was it the other way?
+
+Let's recall: In October 2025, Sherwin-Williams agreed to acquire Suvinil from BASF for $1.15B? Or did they sell?
+
+Actually there was news in October 2025: BASF sold its Brazilian decorative paints business, Suvinil, to Sherwin-Williams for $1.15B? Wait Sherwin-Williams already owned Suvinil since 2020. So that can't be. Let's check mental consistency: In 2020 Sherwin-Williams acquired Suvinil from BASF for $1.15B. Yes! So they bought it in 2020. Then in October 2025, Sherwin-Williams agreed to sell Suvinil? No, in October 2025 Sherwin-Williams acquired the architectural coatings division of BASF in Brazil? Hmm maybe BASF still had some other paint business.
+
+But regardless, that might not affect interest.
+
+However, in 2025 there was also the acquisition of Nox-Crete? No.
+
+But actually, Sherwin
+
+High model
+==========
+
+Attempt 1 · Wrong
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): -10.7
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Wrong
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): -10.7
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Wrong
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): -10.7
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 4 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): -10.7
+
+Where it shortcut: Reached -10.7 by taking the stated $49.3 million increase from the 2025 10-K and summing the two Outlook figures ($40M + $20M) from the 2024 10-K — pure lookups with one addition, no derivation from financial tables.Doc 3 Doc 7
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 5 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): -10.7
+
+Where it shortcut: Same path: the actual increase and both forecast components are stated verbatim in the two 10-K MD&A sections, so the answer required no cross-document arithmetic beyond 49.3 - 60.Doc 3 Doc 7
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 6 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): -10.7
+
+Where it shortcut: Again relied on the explicitly stated $49.3 million and the $40M/$20M Outlook sentences; nothing had to be computed from the interest expense line items in the income tables.Doc 3 Doc 7
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
