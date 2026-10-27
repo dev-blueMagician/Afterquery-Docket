@@ -1,0 +1,75 @@
+{
+  "question": "By what percentage did State Street's quarter-end servicing fee revenue backlog change from the latest figure it had published before it launched its Digital Asset Platform to its figure for June 30, 2026? Give the sign and round to one decimal place.",
+  "number_of_asks": 1,
+  "gold_answer": "-16.5%",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 8, 4Q25 highlights, note (b)): State Street's Digital Asset Platform was launched on January 15, 2026.\n\nStep 2. Source input (Doc 8, dateline): Doc 8, the release that reports the launch, is dated January 16, 2026, the day after the launch, so the quarter-end figures it reports had not been published before the platform launched.\n\nStep 3. Source input (Doc 7, dateline and 3Q25 highlights): the 3Q25 release, dated October 17, 2025, reported quarter-end servicing fee revenue of $401 million to be installed in future periods.\n\nStep 4. Doc 7 and Doc 8: October 17, 2025 is before the January 15, 2026 launch, and no release in the bundle falls between Doc 7 and Doc 8, so $401 million was the latest such figure published before the platform launched.\n\nStep 5. Source input (Doc 10, 2Q26 highlights): quarter-end servicing fee revenue to be installed in future periods was $335 million at the end of 2Q26 (June 30, 2026).\n\nStep 6. Source input (Doc 10, In this news release): the releases call servicing fee revenue to be installed the \"backlog\".\n\nStep 7. Calculation (Doc 7 and Doc 10): 335 - 401 = -66 ($ millions).\n\nStep 8. Calculation (Doc 7, change as a share of the earlier figure): -66 / 401 = -16.5% (one decimal place).",
+  "answer_components": [
+    "-16.5%"
+  ],
+  "evidence": [
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "State Street’s Digital Asset Platform was launched on January 15, 2026"
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "January 16, 2026"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "October 17, 2025"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "Quarter-end servicing fee revenue of $401 million to be installed in future periods"
+    },
+    {
+      "document_number": 10,
+      "component_number": 1,
+      "quote": "Quarter-end servicing fee revenue of $335 million to be installed in future periods"
+    },
+    {
+      "document_number": 10,
+      "component_number": 1,
+      "quote": "Servicing fee revenue wins (i.e., \"sales\") and backlog (i.e., \"to be installed\")"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        7
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        8
+      ],
+      "role": "Used to identify",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        10
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Wrong year or edition",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Doc 8 lists the Digital Asset Platform launch among its 4Q25 highlights, beside a $320 million backlog, but dates the launch January 15, 2026, a day before its own release. The latest published figure was 3Q25's $401 million (Doc 7): Doc 10's 335 against 401 is -16.5%, not +4.7%."
+}
