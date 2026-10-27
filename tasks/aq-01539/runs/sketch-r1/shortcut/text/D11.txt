@@ -1,0 +1,193 @@
+# D11 | docs/doc-11.txt
+
+1
+IN THE UNITED STATES DISTRICT COURT
+FOR THE DISTRICT OF MONTANA
+BUTTE DIVISION
+IN RE: SNOWFLAKE, INC., DATA
+SECURITY BREACH LITIGATION Cause No. 2:24-md-03126-BMM
+ORDER ON CONSUMER
+PLAINTIFFS’ MOTION TO
+COMPEL DISCOVERY FROM
+TICKETMASTER
+INTRODUCTION
+Consumer Plaintiffs filed a motion to compel discovery from Defendants Live Nation Entertainment, Inc. and Ticketmaster L.L.C. (collectively, “Ticketmaster”).
+(Doc. 680.) Ticketmaster opposes the motion and filed a responsive motion for protective order. (Doc. 697, Doc. 698.) The Court held a hearing on June 11, 2026.
+(Doc. 712.)
+
+BACKGROUND
+This multi-district litigation addresses an alleged “hub-and-spoke” data breach involving cloud-based data storage and analytics provider Defendant Snowflake, Inc. (“Snowflake”). (Doc. 1 ¶ 2.) Snowflake, the “hub,” stores secure sensitive data of numerous companies (“Spoke Defendants”) on Snowflake’s data cloud. (Id.)
+
+Case 2:24-md-03126-BMM-JTJ Document 744 Filed 07/01/26 Page 1 of 22
+
+2
+Plaintiffs include consumer customers of Ticketmaster, LLC, and Live Nation Entertainment, Inc. (collectively “Ticketmaster”), and LendingTree, LLC, and Quotewizard.com, LLC (collectively, “LendingTree”) (“Consumer Plaintiffs”); the Los Angeles Unified School District (“LAUSD Plaintiffs”); and financial institutions whose customers include Consumer Plaintiffs (“Financial Institution Plaintiffs”). Plaintiffs allege threat actors stole the data they provided to the Spoke Defendants and stored on Snowflake’s cloud in the data breach (“Data Breach”).
+Ticketmaster suffered a security breach in April and May of 2024 that compromised the financial and personal information of hundreds of millions of customers after a third party accessed their cloud platform. This multi-district litigation commenced on October 8, 2024, to address the related suits. (Doc. 1.) The parties have engaged in discovery for many months. Substantial completion of discovery documents is due on July 31, 2026. (Doc. 606 Ex. 1.)
+
+The Court appointed U.S. Magistrate Judge John T. Johnston as a Special Master pursuant to Federal Rule of Civil Procedure 53 and the Court’s inherent authority to manage the MDL. (Doc. 383.) The Special Master’s duties have included supervising discovery and attempting to resolve discovery conflicts. (Id.)
+The Special Master has tried to resolve numerous discovery disputes presented by the parties. The parties now have filed several competing motions to compel, with Case 2:24-md-03126-BMM-JTJ Document 744 Filed 07/01/26 Page 2 of 22
+
+3 corresponding and responsive motions for protective orders. (See generally in docket from Doc. 680 to Doc. 738.)
+
+This order pertains to Consumer Plaintiffs’ motion to compel discovery from Ticketmaster related to any breach investigation materials Ticketmaster possesses and Ticketmaster’s fee and cybersecurity expenditure documents. (Doc. 682.)
+Ticketmaster retained CrowdStrike to handle the investigation of the breach on May 17, 2024. (Doc. 702 at 15.) Ticketmaster contends that CrowdStrike had produced no “final written report” as of June 21, 2026. (Doc. 682 at 9, citing Ex. 1 at 14.)
+Ticketmaster further maintains that they do not have to provide a privilege log at this time pursuant to ESI protocol. (Doc. 702 at 28-30.) The Special Master previously had instructed Ticketmaster to “go get” relevant documents as available, but to date, Ticketmaster has provided no documents, privilege log, or information regarding CrowdStrike’s investigation. (Doc. 682 at 10-11.) Ticketmaster agreed to produce a privilege log on May 21, 2026, after the Special Master instructed Consumer Plaintiffs to file a motion to compel. (Id. at 11.)
+
+Consumer Plaintiffs additionally sought documents through several Requests for Production (“RFP”) pertaining to Ticketmaster’s ticketing and fee services, and specifically the amounts allocated to cybersecurity. (Doc. 682 at 11.) Consumer Plaintiffs allege that Ticketmaster represented to customers that its ticketing and fee services covered “the costs of the technology, people and resources needed to Case 2:24-md-03126-BMM-JTJ Document 744 Filed 07/01/26 Page 3 of 22
+
+4 provide a safe and secure ticket-buying experience.” (Id.) Ticketmaster objects that the RFPs were overbroad and beyond the scope of discovery. (Id. at 12-13.)
+Ticketmaster further argues that Consumer Plaintiffs seek documents that do not exist as Ticketmaster “does not allocate ticket or fee services to cybersecurity on a transaction-by-transaction basis” either by dollar amount or percentage. (Doc. 702 at 30-31.) The Court will address each issue in turn.
+
+LEGAL STANDARD
+The Court possesses broad discretion to manage discovery. Hunt v. County of Orange, 672 F.3d 606, 616 (9th Cir. 2012). A motion to compel may be filed when a party disagrees with the objections raised by the other party and wants to compel more complete answers. Nei v. Travelers Property Cas. Co. of Am., 326 F.R.D. 652,
+656 (D. Mont. 2018). Courts may compel the production of evidence within the limits of Fed. R. Civ. P. 26(b)(1). Federal Rule of Civil Procedure 26(b)(1) permits discovery of any nonprivileged matter that would be relevant to any party’s claim or defense and would be proportional to the needs of the case. Evidence need not be admissible to be relevant, and thus discoverable. Oppenheimer Fund, Inc. v.
+Sanders, 437 U.S. 340, 351 (1978).
+
+“Once a party establishes that a discovery request seeks relevant information, ‘[t]he party who resists discovery has the burden to show discovery should not be allowed, and has the burden of clarifying, explaining, and supporting its Case 2:24-md-03126-BMM-JTJ Document 744 Filed 07/01/26 Page 4 of 22
+
+5 objections.’” Schulz v. Mountain W. Farm Bureau Mut. Ins. Co., No. CV 20-88-MDLC, 2021 WL 322725, at *5 (D. Mont. Feb. 1, 2021) (quoting Jensen v. BMW of
+N. Am., LLC, 328 F.R.D. 557, 559-60 (S.D. Cal. 2019)). The movant must have conferred, or attempted to confer, in good faith with the party failing to respond to the discovery requests before filing a motion to compel. Fed. R. Civ. P. 37(a)(1).
+DISCUSSION
+The Court addresses separately Consumer Plaintiffs’ request that Ticketmaster produce documents related to its breach investigation and Consumer Plaintiffs’ request that Ticketmaster produce information related to its fee and cybersecurity expenditures.
+
+I. Documents Related to Breach Investigation
+Consumer Plaintiffs contend that Ticketmaster attempts to use its retention of CrowdStrike as evidence that it responded appropriately to the security breach and in the same breath, that the response should be non-discoverable. (Doc. 682 at 15.)
+Consumer Plaintiffs argue that Ticketmaster’s behavior falls under the “sword and shield” doctrine from Chevron Corp. v. Pennzoil Co., 974 F.2d 1156, 1162 (9th Cir.
+1992). (Doc. 682 at 17.) Consumer Plaintiffs argue that Ticketmaster injected attorney-supervised work into litigation as a defense, and, therefore, impliedly Case 2:24-md-03126-BMM-JTJ Document 744 Filed 07/01/26 Page 5 of 22
+
+6 waived the privilege as to the underlying communications. (Id., citing Bittaker v.
+Woodford, 331 F.3d 715, 719 (9th Cir. 2003) (en banc).)
+
+Consumer Plaintiffs argue that attorney-client privilege does not protect the data breach investigation because it involved a business function and not legal advice. (Id. at 17.) Consumer Plaintiffs assert that “[a]ttorney-client privilege protects confidential communications for the purpose of obtaining legal advice.”
+(Id., citing United States v. Ruehle, 583 F.3d 600, 607 (9th Cir. 2009).) Consumer Plaintiffs argue that “[t]he Ninth Circuit uses the ‘primary purpose’ test, [where] courts look at whether the primary purpose of the communication is to give or receive legal advice, as opposed to business or tax advice.’” (Doc. 682 at 18, citing In re Grand Jury, 23 F.4th 1088, 1091 (9th Cir. 2021).) Consumer Plaintiffs assert the following: (1) “CrowdStrike is a cybersecurity forensics company, not a law firm;” (2) the retention letter between CrowdStrike and Ticketmaster defines the scope of work as a data breach investigation and includes no legal questions; and (3) no legal opinions are involved despite the involvement of the Paul Hastings law firm.
+(Doc. 682 at 18-19.)
+
+Consumer Plaintiffs cite to In re Cap. One Consumer Data Sec. Breach Litig., No. 1:19MD2915 (AJT/JFA), 2020 WL 2731238, at *4 (E.D. Va. May 26, 2020), aff'd, No. 1:19MD2915 (AJT/JFA), 2020 WL 3470261 (E.D. Va. June 25, 2020), to support their contention. (Doc. 682 at 19-20.) In re Cap. One involved substantially Case 2:24-md-03126-BMM-JTJ Document 744 Filed 07/01/26 Page 6 of 22
+
+7 similar facts where a defendant hired an outside company through their counsel to conduct an investigation after a cybersecurity incident. 2020 WL 2731238, at *4.
+The court determined that the fact that “the investigation was done at the direction of outside counsel and the results were initially provided to outside counsel, does not satisfy the ‘but for’ formulation” for the purposes of the business activity test.
+Id. The court partially relied upon the fact that the investigation report had been provided not only to outside counsel, but also to at least several members of the defendant’s involved teams, and it was used by the defendant for “various business and regulatory purposes.” Id. at *5. The court also relied on the fact that the corporation had a preexisting retainer with the investigation firm, a fact not shared here. Id. at *9-10.
+
+The Ninth Circuit in In re Grand Jury stated that the primary purpose test applies to attorney-client privilege claims for dual-purpose communications. In re Grand Jury, 23 F.4th at 1092. “Under the ‘primary purpose’ test, courts look at whether the primary purpose of the communication is to give or receive legal advice, as opposed to business or tax advice.” In re Grand Jury, 23 F.4th at 1091, citing In re County of Erie, 473 F.3d 413, 420 (2d Cir. 2007). Ticketmaster argues that Consumer Plaintiffs erroneously apply the primary-purpose test when the proper test should be the “because-of” test. (Doc. 735 at 4.) Ticketmaster correctly asserts that the primary purpose test applies only to attorney-client privilege claims and the Case 2:24-md-03126-BMM-JTJ Document 744 Filed 07/01/26 Page 7 of 22
+
+8
+Ninth Circuit instead applies the “because of” test to work-product privilege claims.
+See In re Grand Jury Subpoena (Mark Torf/Torf Env't Mgmt.), 357 F.3d 900, 907 (9th Cir. 2004) [“Torf”].
+
+Ticketmaster focuses its briefing on work-product privilege seemingly ignoring its earlier assertions of attorney-client privilege. (Doc. 698 at 8.) Indeed, the first sentence in Ticketmaster’s response brief to Consumer Plaintiffs’ motion to compel argues as follows: “[T]he attorney-client privilege is, perhaps, the most sacred of all legally recognized privileges, and its preservation is essential to the just and orderly operation of our legal system.” (Id., quoting United States v. Bauer, 132 F.3d 504, 510 (9th Cir. 1997).) Ticketmaster’s reply briefing neglects its earlier assertions of attorney-client privilege and argues only work-product privilege. (See generally Doc. 725.) The Court concludes that it appears Ticketmaster has abandoned its earlier assertions of attorney-client privilege. The Court will address separately the issues of attorney-client privilege and work-product privilege for the sake of thoroughness.
+
+A. Attorney-Client Privilege
+The Ninth Circuit concluded that the primary purpose test applies to attorneyclient privilege claims for dual-purpose communications. In re Grand Jury, 23 F.4th at 1092. “Under the ‘primary purpose’ test, courts look at whether the primary purpose of the communication is to give or receive legal advice, as opposed to Case 2:24-md-03126-BMM-JTJ Document 744 Filed 07/01/26 Page 8 of 22
+
+9 business or tax advice.” In re Grand Jury, 23 F.4th at 1091, citing In re County of Erie, 473 F.3d 413, 420 (2d Cir. 2007). The Ninth Circuit specifically distinguished attorney-client privilege from work-product privilege and concluded that a narrow test proves appropriate in the attorney-client privilege context. Id. at 1093-1094. The Ninth Circuit reasoned that a broader test “would create perverse incentives for companies to add layers of lawyers to every business decision in hopes of insulating themselves from scrutiny in any future litigation.” Id. The Ninth Circuit concluded that applying a broader test “to attorney-client privilege might harm our adversarial system if parties try to withhold key documents as privileged by claiming that they were created ‘because of’ litigation concerns.” Id. at 1093.
+
+The primary purpose test protects only those communications made “for the purpose of facilitating the rendition of professional legal services.” Id. at 1092, quoting United States v. Rowe, 96 F.3d 1294, 1296 (9th Cir. 1996) (citation omitted).
+“[T]he ‘client must consult the lawyer for the purpose of obtaining legal assistance and not predominantly for another purpose.’” In re Grand Jury, 23 F.4th at 1092, quoting Restatement (Third) of the Law Governing Lawyers § 72 (2000). The Court sees no evidence that Ticketmaster retained CrowdStrike for the predominant purpose of prospective legal aid. It appears from the agreement that the primary focus of the investigation was for business reasons whether that be regulatory Case 2:24-md-03126-BMM-JTJ Document 744 Filed 07/01/26 Page 9 of 22
+
+10 compliance or system improvements. (Doc. 682 at 18-19.) The involvement of a legal team does not dictate that a legal purpose predominated.
+
+The Ninth Circuit in In re Grand Jury also left open the question of whether the “a primary purpose” test or “the primary purpose test”—which is applied above—should apply in some contexts. In re Grand Jury, 23 F.4th at 1094-95, citing In re Kellogg Brown & Root, Inc., 756 F.3d 754 (D.C. Cir. 2014). The Ninth Circuit specifically recognized that a primary purpose test, as compared to the primary purpose test, may prove appropriate in situations with internal corporate investigations. Id. The Court agrees that “a primary purpose test” could prove appropriate here. The Court remains unconvinced, however, whether such a test would be necessary as it appears that the non-legal, business purpose of the Data Breach investigation predominated here. The agreement suggests that the primary focus of the investigation addressed business reasons, including regulatory compliance and system improvements. The involvement of a legal team does not indicate that a legal purpose predominated.
+
+Ticketmaster also suggests that Consumer Plaintiffs’ RFP #4 (the relevant FRP) proved vague and narrower than Consumer Plaintiffs now suggest. (Doc. 698 at 21.) Ticketmaster next argues that Consumer Plaintiffs seek privileged information because “CrowdStrike’s communications were all created under counsel’s direction” and “[t]hey reflect expert analysis necessary to render legal Case 2:24-md-03126-BMM-JTJ Document 744 Filed 07/01/26 Page 10 of 22
+
+11 advice.” (Id.) Ticketmaster cites U.S. v. Bell, No. C 94-20342 RMW, 1994 WL 665295, at *5 (N.D. Cal. Nov. 9, 1994), to support its argument. (Id. at 22.) Bell stated that “the Ninth Circuit [has] held that a statement of a client’s net worth and related workpapers prepared by an accountant were protected by the attorney-client privilege where they were ‘prepared at the [client’s] attorney’s request, in the course of an attorney-client relationship, for the purpose of advising and defending his clients.’” 1994 WL 665295, at *5. Ticketmaster argues that CrowdStrike’s “work allowed Paul Hastings to provide legal advice.” (Doc. 698 at 22.)
+
+Ticketmaster’s reasoning proves unpersuasive to the Court. The Ninth Circuit has not stated that a communication being created at the direction of counsel serves as a clear factor suggesting legal purpose. The Court finds similarly uncompelling Ticketmaster’s argument that the report helped counsel develop legal advice. The same can be said of many business reports. Legal advice for a corporation necessarily depends on various analyses of that business but such work would not always be subject to privilege merely because an attorney used it. The Ninth Circuit clearly and unequivocally stated that such a result runs contrary to the intentions of the privilege and “would create perverse incentives” for actors trying to insulate themselves from legal scrutiny. In re Grand Jury, 23 F.4th at 1093-94. The Court denies Ticketmaster’s assertions of attorney-client privilege to the extent Ticketmaster has not already abandoned this assertion.
+
+Case 2:24-md-03126-BMM-JTJ Document 744 Filed 07/01/26 Page 11 of 22
+
+12
+B. Work-Product Privilege
+The Ninth Circuit applies a “because of” test to assertions of work-product privilege. Torf, 357 F.3d at 907. Under the “because of” test, the documents remain protected if “in light of the nature of the document and the factual situation in the particular case, the document can be fairly said to have been prepared or obtained because of the prospect of litigation.” Id., quoting Charles Alan Wright, Arthur R.
+Miller, and Richard L. Marcus, 8 Federal Practice & Procedure § 2024 (2d ed.
+1994) (“Wright & Miller”). “The ‘because of’ standard does not consider whether litigation was a primary or secondary motive behind the creation of a document.
+Rather, it considers the totality of the circumstances and affords protection when it can fairly be said that the ‘document was created because of anticipated litigation, and would not have been created in substantially similar form but for the prospect of that litigation[.]’” Torf, 357 F.3d at 908, quoting United States v. Adlman, 134 F.3d 1194, 1995 (2nd Cir. 1998).
+
+The Court remains unpersuaded that work-product privilege applies to the documents at issue here. The Court finds compelling the reasoning provided in Leonard v. McMenamins Inc., No. C22-0094-KKE, 2023 WL 8447918, at *3 (W.D.
+Wash. Dec. 6, 2023). McMenamins noted that “[i]n evaluating whether the given report should be withheld as protected work product [in disputes over cybersecurity consultant reports in the context of data breach litigation], courts consider factors Case 2:24-md-03126-BMM-JTJ Document 744 Filed 07/01/26 Page 12 of 22
+
+13 including whether the report provides factual information to the impacted entity (and others), whether the report constitutes the only investigation and analysis of the data breach, the types of services provided by the consultant, the relationship between the consultant and the impacted entity, and importantly, whether the report would have been prepared in a substantially similar form absent the anticipation of litigation.”
+Id. Like the defendant in McMenamins, Ticketmaster here “withholds nearly all information related to the breach and its response to it on privilege grounds.” Id.
+McMenamins also distinguished the case relied upon by Ticketmaster here, In re Experian Data Breach Litig., 2017 WL 4325583, at *2-3 (C.D. Cal. May 18, 2017).
+Id. McMenamins reasoned that the report/investigation results in Experian had not been provided to the internal incident response team, whereas in McMenamins and here, the report detailed the “only internal investigation arising from the data breach.” McMenamins, 2023 WL 8447918, at *3.
+
+McMenamins emphasized the fact that counsel hired the investigation firm fails to automatically protect the investigative results from discovery. Id. at *3-4. “It is well-established that mere delegation of business functions to an attorney is insufficient to shield otherwise unprotected factual investigation from discovery.”
+Id. at *3, quoting Guo Wengui v. Clark Hill, 338 F.R.D. 7 (D.D.C. 2021).
+McMenamins cites Allied Irish Banks v. Bank of Am., N.A., 240 F.R.D. 96, 99 (S.D.N.Y. 2007), which stated “[t]hat [the plaintiff] hired a law firm to ‘assist’ in the Case 2:24-md-03126-BMM-JTJ Document 744 Filed 07/01/26 Page 13 of 22
+
+14 investigation is of no moment . . .. A party may not insulate itself from discovery by hiring an attorney to conduct an investigation that otherwise would not be accorded work product protection.” McMenamins, 2023 WL 8447918, at *3 (cleaned up).
+McMenamins further quoted Guo Wengui for the contention that counsel’s hiring of a consultant after a data breach “appears to [have been] designed to help shield material from disclosure.” McMenamins, 2023 WL 8447918, at *4, quoting Guo Wengui, 338 F.R.D. at 13 (internal citation omitted).
+
+Ticketmaster attempts to distinguish McMenamins and Guo Wengui by asserting that each of those cases “involved final forensic reports that were used as central business or incident-response records.” (Doc. 735 at 10.) Ticketmaster fails to provide evidence that any final investigative results here were not used for central business or incident-response records. The Court also dedicated significant time at the hearing to understanding Ticketmaster’s assertions that CrowdStrike produced no final report. The Court found Ticketmaster’s repeated assertion lacking in transparency.
+
+Ticketmaster conceded that CrowdStrike communicated investigative results in some form, though it may not have been a formal final report. Ticketmaster provides no case law suggesting that a final report proves necessary to defeat workproduct privilege. CrowdStrike’s investigation collected technical facts and “remediation-related facts” which prove discoverable as they likely would have been Case 2:24-md-03126-BMM-JTJ Document 744 Filed 07/01/26 Page 14 of 22
+
+15 produced in “substantially the same form even in the absence of potential litigation”.
+(See Doc. 698 at 24, 27.); see also In re Facebook, Inc. Consumer Priv. User Profile Litig., No. 18-MD-02843-VC (JSC), 2021 WL 10320123, at *4 (N.D. Cal. Sept. 8, 2021).
+
+The Court concludes that case law and the intentions of the work-product doctrine clarify that it proves proper to compel production of any documents or information Ticketmaster possesses related to the CrowdStrike Data Breach investigation, including but not limited to CrowdStrike’s investigative results. The Court emphasizes that it is not compelling production of documents created by counsel, counsel’s edits, or communications by counsel.
+
+Consumer Plaintiffs also argue that Ticketmaster’s failure to serve a privilege log in a timely manner waives any privilege. (Doc. 682 at 21, citing Burlington N.
+& Santa Fe Ry. Co. v. U.S. Dist. Court for the Dist. of Mont., 408 F.3d 1142, 1149 (9th Cir. 2005).) Burlington identified four factors to consider: (1) the degree to which the assertion enables the court to evaluate the privilege claim; (2) timeliness of the objection and supporting information; (3) the magnitude of the discovery at issue; and (4) particular circumstances making prompt compliance with Rule 26(b)(5) important. 408 F.3d at 1149. Consumer Plaintiffs argue that Ticketmaster should have asserted its privilege objections over a year ago. (Doc. 682 at 22.)
+Case 2:24-md-03126-BMM-JTJ Document 744 Filed 07/01/26 Page 15 of 22
+
+16
+Consumer Plaintiffs contend that Ticketmaster’s purported ESI protocol defense proves improper. (Id. at 22-23.)
+
+Ticketmaster asserts that it properly proceeded under the negotiated ESI protocol which outlines that certain materials presumptively need not be logged.
+(Doc. 698 at 28.) Ticketmaster provides a list of those materials that presumptively need not be logged but fails to identify which category includes these communications. (Id. at 28-29.) Ticketmaster also asserts that it properly acted as the parties agreed to rolling privilege logs with the last one due before discovery closes. (Id. at 29.) Ticketmaster contends that Consumer Plaintiffs are acting hypocritically as they also have asserted privileges without producing a privilege log. (Id.) The Court concludes that it proves unnecessary to resolve this dispute at this time. The Court declines to conclude that Ticketmaster has waived its privileges.
+II. Fee and Cybersecurity Expenditure Documents
+Consumer Plaintiffs seek documents demonstrating “how Ticketmaster sets its ticketing and service fees, how much it collected, and what it actually spent on cybersecurity.” (Doc. 682 at 24.) Consumer Plaintiffs argue that “Ticketmaster charged Plaintiffs substantial fees on top of its ticket prices, promising Plaintiffs these funds would cover, among other things, data security.” (Id.)
+
+Consumer Plaintiffs’ “Interrogatory No. 4 asked Ticketmaster to describe how service fee revenue was allocated to cybersecurity, fraud prevention, and data Case 2:24-md-03126-BMM-JTJ Document 744 Filed 07/01/26 Page 16 of 22
+
+17 protection.” (Id.) Ticketmaster’s answer disclosed “what it paid Snowflake for cloud storage in three years—$750,000 (2022), $1,312,500 (2023), $1,386,467.97 (2024).” (Id.) Consumer Plaintiffs argue that such a response proves incomplete and in bad faith. (Id.) Consumer Plaintiff’s “Document Requests Nos. 12 and 14 sought analyses of whether ticket fees fund cybersecurity initiatives and all budget or costcenter documents relating to information security spending.” (Id.) Ticketmaster offered to produce documents concerning only how much it paid Snowflake in total and claimed “that a Rule 30(b)(6) witness will be unable to answer questions on these issue.” (Id. at 24-25.)
+
+Ticketmaster responds that FRP 12 seeks documents—namely information on how Ticketmaster allocates ticket or service fees to cybersecurity “on a transactionby-transaction basis”—which do not exist. (Doc. 698 at 30-31.) Ticketmaster argues that “[i]t also does not assign a dollar amount or percentage of each fee to cybersecurity.” (Id. at 30.) Ticketmaster asserts that Consumer Plaintiffs’ request represents a fee-allocation request “not a pricing, revenue, or spending request” or “an anti-trust production request.” (Id.) Ticketmaster argues that “Plaintiffs cannot use a nonexistent allocation theory as a gateway to a general audit of Ticketmaster’s business practices.” (Id. at 32.) Ticketmaster’s remaining arguments contend that Consumer Plaintiffs now try to expand their previous requests because the information they seek does not exist. (Id. at 32-33.)
+
+Case 2:24-md-03126-BMM-JTJ Document 744 Filed 07/01/26 Page 17 of 22
+
+18
+The Court remains unpersuaded by Ticketmaster’s arguments. It stretches credulity that Ticketmaster has no information about how it allocates fees, or ticketing revenue, to cybersecurity practices. It appears to the Court that Ticketmaster has been less than forthcoming and has chosen rather to nitpick discovery requests rather than cooperate appropriately with Consumer Plaintiffs.
+Consumer Plaintiffs do not seek information only about Ticketmaster’s alleged “transaction-by-transaction” ticket security allocations. Ticketmaster charged customers fees for security. Ticketmaster must have allocated at least some percentage of these fees to cybersecurity. Some documents must exist that set out that allocation.
+
+The Court remains unconvinced that Ticketmaster’s responses to Consumer Plaintiffs’ discovery request have been “true, explicit, responsive, complete, and candid.” Ivins v. Corr. Corp. of Am., 291 F.R.D. 517, 519 (D. Mont. 2013) (quoting Covad Communications Co. v. Revonet, Inc., 258 F.R.D. 17, 19 (D.D.C. 2009)).
+Ticketmaster’s response to Consumer Plaintiffs’ request takes a narrow view of Consumer Plaintiffs’ request. Ticketmaster’s response proves inherently incomplete and unresponsive as a result of this narrow lens.
+
+The court in Geophysical Sys. Corp. v. Raytheon Co., 117 F.R.D. 646, 647-48 (C.D. Cal. 1987), granted a motion to compel despite the defendant’s assertions that no responsive documents existed. Geophysical Sys. Corp. concluded that the Case 2:24-md-03126-BMM-JTJ Document 744 Filed 07/01/26 Page 18 of 22
+
+19 plaintiff adequately had described the subject matter of the requested documents, despite some “boilerplate” language, and that the defendant may have failed to search for the documents with the same “view of relevance taken by the [c]ourt.” Id.
+at 648. The court in Surowiec v. Cap. Title Agency, Inc., 790 F. Supp. 2d 997, 1010
+(D. Ariz. 2011), similarly granted a motion to compel after it concluded that the defendant had conducted an “inexcusabl[y]” and “unreasonably narrow search of documents” that “[n]ot surprisingly, [] produced ‘zero results.’” The court awarded sanctions after it found that a proper search revealed thousands of responsive documents. Id. at 1010-11.
+
+The discovery process depends on “the good faith and professional obligations” of both parties to seek and produce responsive documents. Smith v. Life Invs. Ins. Co. of Am., No. 2:07-CV-681, 2009 WL 2045197, at *5 (W.D. Pa. July 9, 2009). The Court recognizes that it “cannot order the production of documents that it has no reason to believe exist.” Mizrahi v. Google LLC, 732 F. Supp. 3d 1068, 1070 (N.D. Cal. 2024). The Court believes that responsive documents must exist to Consumer Plaintiffs’ request to provide information detailing Ticketmaster’s fee and cybersecurity allocations and expenditures. The Court reiterates that it does not compel production of transaction-by-transaction breakdowns by dollar or percentage allotted to cybersecurity. The Court rather compels a good-faith response providing Case 2:24-md-03126-BMM-JTJ Document 744 Filed 07/01/26 Page 19 of 22
+
+20 insight into Ticketmaster’s allocation of ticketing and service fees to cybersecurity, beyond simply the amount it has paid Snowflake from 2022 to 2024.
+
+The Court suggests that Consumer Plaintiffs request admission of this fact from Ticketmaster if it is truly the case that no such records or documents exist, or that Ticketmaster truly allocated no fees and spent no money on cybersecurity in the relevant years other than the amount it has paid Snowflake from 2022 to 2024. See e.g. Card Tech. Corp. v. DataCard Inc., 249 F.R.D. 567, 571 (D. Minn. 2008) (stating that “[t]he presumption [or judicial admission] of certain facts does not offend the right to due process and can be narrowly tailored to provide the information not produced in discovery.” (internal citation omitted)). The Court alternatively will consider independently “directing that the matters embraced in the order or other designated facts be taken as established for purposes of the action” pursuant to Fed. R. Civ. P. 37(b)(2)(A)(i), and establish the fact that Ticketmaster has no record of fee analyses or budget details regarding cybersecurity.
+The parties additionally dispute discovery related to document custodians identified by Consumer Plaintiffs and the DOJ antitrust litigation. (Doc. 707 at 22.)
+Ticketmaster asserts that it complied with the DOJ review process that Consumer Plaintiffs demanded. (Doc. 735 at 16.) Consumer Plaintiffs assert that Ticketmaster’s response proves inadequate because it reviewed and produced documents from a different case, the antitrust litigation, rather than review and Case 2:24-md-03126-BMM-JTJ Document 744 Filed 07/01/26 Page 20 of 22
+
+21
+“collect ESI from the[ identified] custodians” as directed by the Special Master.
+(Doc. 707 at 22-23.) The parties failed to provide extensive argument or briefing on this matter. To the extent Ticketmaster has failed to comply with the Special Master’s order to “collect and run search terms across custodial files from January 1, 2022, through December 31, 2024, for individuals Plaintiffs identified through review of the publicly-available files from other antitrust matters,” the Court orders Ticketmaster to do so now. (Doc. 681 at 14.)
+
+III. Sanctions
+Consumer Plaintiffs seek sanctions for Ticketmaster’s discovery abuses pursuant to Federal Rule of Civil Procedure 37, 28 U.S.C. § 1927, and the Court’s inherent powers. (Doc. 682 at 26.) A district court may impose sanctions, including default, for failing to comply with a court order under FRCP 37(b). Dreith v. Nu Image, Inc., 648 F.3d 779, 786 (9th Cir. 2011). Rule 37(b) reads in relevant part as follows:
+
+If a party . . . fails to obey an order to provide or permit discovery, including an order under Rule 26(f), 35, or 37(a), the court where the action is pending may issue further just orders. They may include . . . dismissing the action or proceeding in whole or in part; [and] rendering a default judgment against the disobedient party.
+
+Fed.R.Civ.P. 37(b)(2)(A)(v)–(vi). The Court determines that sanctions prove appropriate at this time. Rule 37 sanctions are “designed to protect courts and opposing parties from delaying or harassing tactics during the discovery process[.]”
+Case 2:24-md-03126-BMM-JTJ Document 744 Filed 07/01/26 Page 21 of 22
+
+22
+Cunningham v. Hamilton County, Ohio, 527 U.S. 198, 199 (1999). The Court warned the parties that it initially would award sanctions of $5000 for discovery abuses and increase the sanctions ten-fold each subsequent time. The Court will impose $5000 in sanctions against Ticketmaster to be awarded to Consumer Plaintiffs.
+
+ORDER
+Accordingly, IT IS ORDERED that Consumer Plaintiffs’ Motion to Compel (Doc. 680) is GRANTED. IT IS FURTHER ORDERED that Ticketmaster’s Motion for Protective Order (Doc. 697) is DENIED. Ticketmaster shall pay $5000 to Consumer Plaintiffs as sanctions for its abuse of the discovery process within 15 days of this order.
+
+DATED this 1st day of July, 2026.
+
+Case 2:24-md-03126-BMM-JTJ Document 744 Filed 07/01/26 Page 22 of 22
+
+-----

@@ -1,0 +1,220 @@
+# D08 | docs/uscourts_mtd_2_24_md_03126_36.txt
+
+1
+IN THE UNITED STATES DISTRICT COURT
+FOR THE DISTRICT OF MONTANA
+BUTTE DIVISION
+IN RE: SNOWFLAKE, INC., DATA
+SECURITY BREACH LITIGATION Cause No. 2:24-md-03126-BMM
+ORDER ON MOTION TO
+DISMISS LAUSD PLAINTIFFS’
+
+CLAIMS
+INTRODUCTION
+This multi-district litigation addresses an alleged “hub-and-spoke” data breach involving cloud-based data storage and analytics provider Defendant Snowflake, Inc. (“Snowflake”). (Doc. 1 ¶ 2.) Snowflake, the “hub,” stores secure sensitive data of numerous companies (“Spoke Defendants”) on Snowflake’s data cloud. (Id.)
+
+Plaintiffs include consumer customers of Ticketmaster, LLC, and Live Nation Entertainment, Inc. (collectively, “Ticketmaster”) and LendingTree, LLC, and Quotewizard.com, LLC (collectively, “LendingTree”) (“Consumer Plaintiffs”); the Los Angeles Unified School District (“LAUSD Plaintiffs”); and financial institutions whose customers include Consumer Plaintiffs (“Financial Institution Plaintiffs”). Plaintiffs allege that the threat actors stole the data they Case 2:24-md-03126-BMM-JTJ Document 594 Filed 10/29/25 Page 1 of 22
+
+2 provided to the Spoke Defendants and stored on Snowflake’s cloud in the data breach (“Data Breach”).
+
+Plaintiffs filed a Fourth Amended Complaint (“FAC”) on July 9, 2025.
+(Doc. 485.) Plaintiffs’ FAC alleges claims against Defendant Snowflake for the interception of their data in the Data Breach. Plaintiffs’ FAC also alleges claims against Spoke Defendants Ticketmaster; Advance Auto Parts, Inc. and Advance Stores Company, Inc. (collectively, “Advance Auto”); LendingTree; AT&T, Inc.
+and AT&T Mobility, LLC (collectively, “AT&T”); Innive, Inc. (“Innive”) and certain “Doe” Defendants associated with the LAUSD Plaintiffs. (Doc. 485.)
+Snowflake filed a motion to dismiss LAUSD Plaintiffs’ claims. (Doc. 500.)
+LAUSD Plaintiffs oppose Snowflake’s motion. (Doc. 519.) The Court held a hearing on October 6, 2025. (Doc. 569.)
+
+BACKGROUND
+The Court previously described the facts in this case in its order on Snowflake and Ticketmaster’s motion to dismiss Consumer Plaintiffs’ claims.
+(Doc. 591.) The Court will only cover facts pertinent to LAUSD Plaintiffs’ claims.
+The Los Angeles Unified School District (“LAUSD”) collected personal information from LAUSD Plaintiffs. (Doc. 485 ¶ 924.) LAUSD contracted with Innive to store the personal information. (Id. ¶¶ 21, 923.) Innive used Snowflake’s systems to store LAUSD Plaintiffs’ data. (Id. ¶ 923.) LAUSD Plaintiffs are Case 2:24-md-03126-BMM-JTJ Document 594 Filed 10/29/25 Page 2 of 22
+
+3 composed of eight students from the LAUSD and four of their parents. (Id. ¶¶ 142– 53.)
+
+LAUSD Plaintiffs allege that threat actors stole the following data to sell on the dark web after the Data Breach: “student and parent names, addresses, phone numbers, dates of birth, email addresses, ethnicity, citizenship, financial information, medical and disability information, academic and discipline records, as well as fields for poverty, homeless, disability, foster, migrant, and more.” (Id. ¶ 974.) Threat actors advertised on the dark web that they possessed the following LAUSD Plaintiff personal information: “Details 4M+ Student (grades K-12) . . .
+name, address, family name, demographics, financials, grades, GPA, performance scoring, medical, student disability information, discipline details, parent/student online login details.” (Id. ¶ 975.) Innive, the service provider, gave no notice to LAUSD Plaintiffs of any breach regarding their students’ personal information.
+(See Id. ¶¶ 142–53, 973.)
+
+LAUSD Plaintiffs allege the following harms: (1) potential and threatened risk of identity theft, misuse, or fraud; (2) lost value of personally identifiable information (“PII”); (3) lost control of PII; (4) mitigation costs and lost time spent investigating and obtaining credit monitoring; (5) emotional distress; (6) PII leaked on the dark web; and (7) invasion of privacy/unauthorized use. (Id. ¶ 978–981.)
+Case 2:24-md-03126-BMM-JTJ Document 594 Filed 10/29/25 Page 3 of 22
+
+4
+LAUSD Plaintiffs seek monetary and nonmonetary relief in the form of an injunction. (Id. at 358.)
+
+LEGAL STANDARD
+Rule 8(a)(2) of the Federal Rules of Civil Procedure requires claimants to include in their complaint “a short and plain statement of the claim showing that the pleader is entitled to relief.” A motion to dismiss under Federal Rule of Civil Procedure 12(b)(6) tests the legal sufficiency of a complaint under the plausibility pleading standard of Rule 8(a)(2). See Navarro v. Block, 250 F.3d 729, 732 (9th Cir.
+2001). Dismissal proves appropriate under Rule 12(b)(6) where the complaint fails to state a claim upon which relief can be granted. Mendiondo v. Centinela Hosp.
+Med. Ctr., 521 F.3d 1097, 1104 (9th Cir. 2008). A court may dismiss a complaint “based on the lack of a cognizable legal theory or the absence of sufficient facts alleged under a cognizable legal theory.” Balistreri v. Pacifica Police Dep’t, 901 F.2d 696, 699 (9th Cir. 1988).
+
+A complaint must contain sufficient factual matter to state a plausible claim for relief on its face to survive a Rule 12(b)(6) motion. Ashcroft v. Iqbal, 556 U.S.
+662, 678 (2009). A claim proves plausible on its face when “the plaintiff pleads factual content that allows the court to draw the reasonable inference that the defendant is liable for the misconduct alleged.” Id. The plausibility standard does not require probability, but “asks for more than a sheer possibility that a defendant Case 2:24-md-03126-BMM-JTJ Document 594 Filed 10/29/25 Page 4 of 22
+
+5 has acted unlawfully.” Id. A court “takes as true and construes in the light most favorable to plaintiffs” all factual allegations set forth in the complaint. Lee v. City of Los Angeles, 250 F.3d 668, 688 (9th Cir. 2001) (internal quotation marks omitted).
+DISCUSSION
+Snowflake seeks to dismiss LAUSD Plaintiffs’ claims contained in the FAC for failure to state a claim upon which relief can be granted under Fed R. Civ. P 12(b)(6). Snowflake first contends that the LAUSD Plaintiffs lack Article III standing to assert their claims. (Docs. 501 at 12.) Snowflake further argues that LAUSD Plaintiffs fail to allege plausible claims of negligence and claims under the Montana Consumer Protection Act (“MCPA”) and the California Consumer Protection Act (“CCPA”). (Doc. 501 at 24–28.) Finally, Snowflake asserts that LAUSD Plaintiffs failed to give Snowflake pre-suit notice for statutory damages under the CCPA. (Doc. 501 at 31.) The Court will address each issue in turn.
+I. ARTICLE III STANDING
+“[T]hose who seek to invoke the jurisdiction of the federal courts must satisfy the threshold [sic] requirement imposed by Article III of the Constitution by alleging an actual case or controversy.” City of Los Angeles v. Lyons, 461 U.S. 95,
+101 (1983); see also Montana Wildlife Fed’n v. Bernhardt, No. 4:18-CV-69- BMM, 2021 WL 4865257, at *1 (D. Mont. June 21, 2021). Article III standing requires the following plausible allegations: (1) that the plaintiff suffered an injury Case 2:24-md-03126-BMM-JTJ Document 594 Filed 10/29/25 Page 5 of 22
+
+6 in fact that is concrete, particularized and actual or imminent; (2) that the injury in fact is fairly traceable to the defendant; and (3) that the injury in fact would likely be redressed by judicial relief and a favorable decision. TransUnion LLC v.
+Ramirez, 594 U.S. 413, 423 (2021); see also Friends of the Earth, Inc. v. Laidlaw Env’t Servs., Inc., 528 U.S. 167, 180–81 (2000) (citations omitted).
+A. Injury in Fact
+A plaintiff’s alleged injury must be “concrete, particularized, and actual or imminent.” TransUnion, 594 U.S. at 423. “General allegations” of injury may suffice at the pleading stage. Lujan v. Defenders of Wildlife, 504 U.S. 555, 560–61 (1992). A complaint in a data breach case must set forth the nature of the stolen data, the manner of the breach, and the real-world harms that predictably would flow from that theft to establish standing. In re Zappos.com, Inc., 888 F.3d 1020, 1027 (9th Cir. 2018).
+
+LAUSD Plaintiffs allege the following injuries: (1) potential and threatened risk of identity theft, misuse, or fraud; (2) lost value of personally identifiable information (“PII”); (3) lost control of PII; (4) mitigation costs and lost time spent investigating and obtaining credit monitoring; (5) emotional distress; (6) PII leaked on the dark web; and (7) invasion of privacy/unauthorized use. (Doc. 485 ¶ 978– 981.) The Court will address only the alleged injuries involving potential and threatened risk of harm, lost control of PII, and emotional distress as LAUSD Case 2:24-md-03126-BMM-JTJ Document 594 Filed 10/29/25 Page 6 of 22
+
+7
+Plaintiffs rely on the same arguments as Consumer Plaintiffs for the other alleged injuries. (Doc. 519 at 19.) The previous order on Snowflake’s motion to dismiss Consumer Plaintiffs’ claims sufficiently outlines the Court’s positions on the other alleged injuries involved. (Doc. 591.)
+
+i. Alleged imminent risk of harm
+A plaintiff sufficiently alleges injury-in-fact by demonstrating a credible threat of real and immediate harm stemming from the theft of their personal information in circumstances where the plaintiff’s personal information has not yet been misused. In re Zappos.com, Inc., 888 F.3d at 1027 (citing Krottner v.
+Starbucks Corp., 628 F.3d 1139 (9th Cir. 2010)). “[C]ourts across the country have recognized that harms that result as a consequence of a plaintiff’s knowledge of a substantial risk of identity theft, including time and money spent responding to a data breach or emotional distress can satisfy concreteness.” In re Data Breach Sec.
+Litig. Against Caesars Ent. Inc. 2025 U.S. Dist. LEXIS 15947, at *19 (D. Nev.
+2025) (quoting Medoff v. Minka Lighting, LLC, No. 2:22-CV-08885-SVW-PVC, 2023 U.S. Dist. LEXIS 81398, at *4 (C.D. Cal. 2023) (collecting cases)).
+The alleged harms of imminent risk may “only qualify as concrete injuries in fact when they are based on a risk of harm that is either ‘certainly impending’ or ‘substantial.’” Id. (quoting I.C. v. Zynga, Inc., 600 F. Supp. 3d 1034, 1052 (N.D.
+Cal. 2022)). For example, the court in Bass v. Facebook, Inc., 394 F. Supp. 3d Case 2:24-md-03126-BMM-JTJ Document 594 Filed 10/29/25 Page 7 of 22
+
+8
+1024, 1035 (N.D. Cal. 2019), determined it to be reasonable to assume that when hackers target and obtain consumers personal information “their goal was to commit further fraud and identity theft.”
+
+In Zappos, the plaintiffs sued after online hackers breached Zappos’s online server. 888 F. 3d at 1023. The hackers obtained names, account numbers, passwords, email addresses, billing and shipping addresses, telephone numbers, and credit and debit card information of over 24 million Zappos customers. Id. The Ninth Circuit concluded that the plaintiffs sufficiently alleged standing due to the risk of identity theft, even when the plaintiffs had not yet suffered actual misuse of the sensitive personal information. Id. at 1027. “[A] person whose PII has been obtained and compromised may not see the full extent of identity theft or identity fraud for years.” Id. at 1028–29.
+
+The facts pertaining to LAUSD Plaintiffs’ claims far exceed the alleged risk of identity theft in Zappos. LAUSD Plaintiffs’ allege that the highly sensitive data collected by LAUSD included various demographic, disability, academic, and financial statuses along with students’ contact information and dates of birth. (Doc.
+485 ¶ 974.) Even though LAUSD Plaintiffs have not yet had their information misused following the Data Breach, they sufficiently have alleged injury-in-fact due to the increased, imminent risk of fraud, identity theft, and other misuse of their personal information. In re Zappos.com, Inc., 888 F.3d at 1027.
+Case 2:24-md-03126-BMM-JTJ Document 594 Filed 10/29/25 Page 8 of 22
+
+9
+LAUSD Plaintiffs have alleged that their information was sold on the dark web on June 1, 2024, after the hackers obtained the data from Snowflake’s servers in April of 2024. (Doc. 485 ¶ 975.) LAUSD Plaintiffs allege that the highly sensitive nature of the data exfiltrated exposes students and their families to future harm in the form of stigma, discrimination, and ongoing risk of identity fraud. (Id.
+¶ 977.) The Court agrees. As the Seventh Circuit recognized, plaintiffs “should not have to wait until hackers commit identity theft or credit-card fraud in order to give the class standing” when “there is an objectively reasonable likelihood such an injury will occur.” Remijas v. Neiman Marcus Grp., LLC, 794 F.3d 688, 693 (7th Cir. 2015).
+
+ii. Loss of Control of Personally Identifiable Information “Intangible harms” that have “a close relationship to harm traditionally recognized as providing for a basis for lawsuits” constitute concrete injuries for
+Article III standing. TransUnion LLC v. Ramirez, 594 U.S. 413, 425 (2021).
+“Disclosure of private information” involves one such harm. Id. “[B]oth the common law and the literal understanding of privacy encompass the individual’s [right to the] control of information concerning his or her person.” Eichenberger v.
+ESPN, Inc., 876 F.3d 979, 983 (9th Cir. 2017) (quoting U.S. Dep’t of Justice v.
+Reps. Comm. for Freedom of the Press, 489 U.S. 749, 763 (1989)). “[T]he common law has provided [privacy] victims with a claim for ‘general’ damages . . .
+Case 2:24-md-03126-BMM-JTJ Document 594 Filed 10/29/25 Page 9 of 22
+
+10
+[meaning] a monetary award calculated without reference to specific harm.” Doe v.
+Chao, 540 U.S. 614, 621 (2004). Courts have found a privacy injury in data breach cases sufficient to confer Article III standing without requiring intentional disclosure. See e.g., Leonard v. McMenamins, Inc., 2022 WL 4017674, at *4–5 (W.D. Wash. Sept. 2, 2022) (emphasis added) (finding injury-in-fact where the plaintiffs did not allege intentional disclosure by the defendant but that cybercriminals stole their “‘highly sensitive’ personal and financial information”).
+LAUSD Plaintiffs allege that they entrusted their “highly sensitive” personal and educational information to their school district. (Doc. 485 ¶¶ 921, 924). The school district stored the data in a compromised Snowflake account through its service provider, Innive. (Id. ¶¶ 160, 923, 976–977). LAUSD Plaintiffs allege that cybercriminals stole their “highly sensitive” data. (Id. ¶ 981.) LAUSD Plaintiffs further allege that the Data Breach has caused loss of control of their personal and educational information. (Id. ¶¶ 924, 977, 981, 1019, 1042.) LAUSD Plaintiffs plausibly have alleged injury-in-fact due to a concrete privacy injury closely related to the common law injury of disclosure of private information. Leonard, 2022 WL 4017674, at *4–5.
+
+Snowflake contends that LAUSD Plaintiffs fail to plausibly allege that their data was stolen because no LAUSD Plaintiffs received a data breach notice and some LAUSD Plaintiffs allege they do not know whether their children’s data was Case 2:24-md-03126-BMM-JTJ Document 594 Filed 10/29/25 Page 10 of 22
+
+11 compromised. (Doc. 501 at 13.) “[W]hile ‘[f]actual allegations must be enough to raise a right to relief above the speculative level,’ a court must ‘assum[e] that all the allegations in the complaint are true (even if doubtful in fact)[.]” Scheibe v.
+ProSupps USA, LLC, 141 F.4th 1094, 1100 (9th Cir. 2025) (citations omitted).
+LAUSD Plaintiffs plausibly have alleged that their data was stolen absent a notice of data breach and specific allegations from some LAUSD Plaintiffs.
+LAUSD Plaintiffs have demonstrated that data from the school district was found for sale on the dark web and the data included information compromised in the Data Breach. (Doc. 485 ¶ 974–75.) LAUSD Plaintiffs conducted an independent investigation of the materials posted on the dark web. (Id. ¶ 974.) The investigation uncovered 11 GB of data that included highly sensitive data on the students’ names, addresses, phone numbers, dates of birth, email addresses, ethnicities, citizenship status, financial information, medical and disability information, academic and disciplinary records, and fields for poverty, housing, foster and migrant status. (Id.) Each of the LAUSD Plaintiffs alleged that they provided the datapoints for the categories of information listed in the dark web sale to LAUSD before the Data Breach. (Id. ¶¶ 142–152, 976.) LAUSD Plaintiffs allege injury-infact based on the theft of their personal information. The allegations withstand scrutiny under Article III standing at this stage of the litigation.
+Case 2:24-md-03126-BMM-JTJ Document 594 Filed 10/29/25 Page 11 of 22
+
+12
+iii. Emotional Distress
+A party may establish standing based on alleged emotional distress when an imminent and credible risk of fraud or identity theft exists. Patterson v. Med. Rev.
+Inst. of America, LLC, 2022 WL 2267673, at *2 (N.D. Cal. June 23, 2022); see also Krottner, 628 F.3d at 1142. The alleged stolen data involved highly sensitive information, including students’ “ethnicit[ies], citizenship, financial information, medical and disability information, academic and discipline records, as well as fields for poverty, homeless, disability, foster, migrant, and more.” (Doc. 485 ¶ 974.) LAUSD Plaintiffs allege that they suffered emotional distress from the exfiltration of this data. For example, Plaintiff Rundle describes the breach as “disrupt[ing] his peace of mind as a parent.” (Id. ¶ 144.) Plaintiff Singer similarly describes feelings of “alarm” at “the thought that her young child’s academic records could follow him/her through the public sphere for years to come.” (Id. ¶ 147.) Plaintiff Harrison and Plaintiff Price also describe “uncertainty and fear.” (Id.
+¶¶ 150, 153.) Given the nature of the data and the emotional distress induced by disclosure of the data, LAUSD Plaintiffs establish injury-in-fact due to the imminent risk of harm.
+
+B. Traceability
+Snowflake next argues that LAUSD Plaintiffs lack Article III standing because the alleged injuries are not “fairly traceable” to the actions of Snowflake.
+Case 2:24-md-03126-BMM-JTJ Document 594 Filed 10/29/25 Page 12 of 22
+
+13
+(Doc. 501 at 21.) Snowflake takes issue with the fact that LAUSD Plaintiffs fail to allege incidences of actual fraud or identity theft within a year of the data breach.
+(Id. at 22.) Snowflake further contends that LAUSD Plaintiffs fail to demonstrate that the data was not already publicly available. (Id. at 22–23.)
+To establish traceability for standing, a party must identify the requisite underlying connection between their stated harms and the Data Breach. Bass v.
+Facebook, Inc., 394 F. Supp. 3d 1024, 1036 (N.D. Cal. 2019). “The burden for sufficiently pleading causation as an element of standing” does not require parties to show proximate causation or but-for causation. Viernes v. DNF Assocs., LLC,
+582 F. Supp. 3d 738, 747 (D. Haw. 2022). Potential exposure or mere speculation of fraud or misuse fails to demonstrate traceability. Greenstein v. Noblr Reciprocal Exch., 2024 WL 3886977, at *2 (9th Cir. 2024).
+
+A court may consider the cumulative nature of the allegations and whether they “fall like dominos, layering on one another to create reasonable inferences” to support traceability. Bozek v. Arizona Lab. Force Inc., 2025 WL 264174, at *4 (D.
+Ariz. Jan. 22, 2025). For instance, the court in Landon v. TSC Acquisition Corp.
+determined that a court reasonably may infer that postings to the dark web following a data breach trace back to the data breach at issue. 2024 WL 5317240, at *4 (C.D. Cal. Nov. 1, 2024).
+
+Case 2:24-md-03126-BMM-JTJ Document 594 Filed 10/29/25 Page 13 of 22
+
+14
+LAUSD Plaintiffs sufficiently allege traceability even without alleging actual incidences of fraud and misuse. LAUSD Plaintiffs allege that their children’s data was stored with LAUSD and its vendors in the compromised Snowflake system. (Doc. 485 at ¶¶ 921, 923, 929–31, 974.) The data allegedly included children’s “names, addresses, dates of birth, contact information, academic and disciplinary records, medical and disability data, and demographic indicators.” (Doc. 519 at 20.) LAUSD Plaintiffs next allege that cybercriminals stole the data and offered this specific data for sale on the dark web following the Data Breach. (Doc. 485 at ¶ 975.) LAUSD Plaintiffs provided photos of the dark web advertisements in the FAC. (Id. at ¶¶ 9, 975.) LAUSD Plaintiffs further allege that they suffered harm shortly after the Data Breach. (Doc. 485 ¶¶ 142–153.) The allegations support a “reasonable inference” that the data in the postings on the dark web arose from the Snowflake Data Breach. Landon, 2024 WL 531240 at *4.
+The allegations exceed mere speculation and potential exposure of personal data. Cf. Greenstein, 2024 WL 3886977, at *2. Plaintiffs allege the potential for fraud, identity theft, blackmail, reputational harm, extortion, and scams. (Doc. 485 ¶¶ 216, 225–27.) The age of the LAUSD Plaintiffs’ children and the sensitive nature of the data involved proves susceptible to long-term misuse. See, e.g., Stacey Steinberg, The Myth of Children’s Online Privacy Protection, 77 SMU L.
+REV. 441, 445 (2024) (“[F]laws in security models can devastate children and their Case 2:24-md-03126-BMM-JTJ Document 594 Filed 10/29/25 Page 14 of 22
+
+15 families . . . children also have far more at stake if sensitive data is collected from their earliest days.”). Plaintiffs show a risk plausibly traceable to the Data Breach.
+LAUSD Plaintiffs have sufficiently satisfied their burden of proving causation at this stage of litigation. Viernes, 582 F. Supp. 3d at 747. The allegations combined “fall like dominos, layering on one another to create reasonable inferences” that support traceability. Bozek, 2025 WL 264174 at *4.
+C. Redressability
+Snowflake contends that the injuries suffered by LAUSD Plaintiffs prove speculative, and, therefore, redressability of those injuries also proves speculative.
+(Doc. 501 at 23.) The Court disagrees. Plaintiffs must establish that “it [is] ‘likely,’ as opposed to merely ‘speculative,’ that the injury will be redressed by a favorable decision.” Greenstein v. Noblr Reciprocal Exch., 2022 WL 17418972, at *5 (N.D.
+Cal. Dec. 5, 2022) (quoting Lujan, 504 U.S. at 560–61). The Court determined that LAUSD Plaintiffs have plead actual, concrete injuries. As a result, LAUSD Plaintiffs have established that a favorable decision likely would redress these concrete injuries. LAUSD Plaintiffs sufficiently have plead an injury-in-fact, traceability, and redressability to establish Article III standing.
+II. LAUSD PLAINTIFFS’ NEGLIGENCE CLAIMS
+A plaintiff must allege the following to establish a negligence claim: (1) the defendant owed them a duty of care; (2) the defendant breached that duty of care; Case 2:24-md-03126-BMM-JTJ Document 594 Filed 10/29/25 Page 15 of 22
+
+16
+(3) the plaintiff’s injury was caused by the defendant’s breach; and (4) the plaintiff suffered damages. Md. Cas. Co. v. Asbestos Claims Ct., 460 P.3d 882, 893 (Mont.
+2020).
+
+LAUSD Plaintiffs’ claims of negligence survive Snowflake’s motion to dismiss for similar reasons as outlined in the Court’s order on Snowflake’s motion to dismiss against Consumer Plaintiffs. LAUSD Plaintiffs plausibly have alleged foreseeability under the element of duty of care. Snowflake knew or should have known Innive stored sensitive data from the LAUSD on its platform. (Doc. 458 ¶¶ 355, 934, 936, 974–77.) A third-party analysis proves unnecessary when the injury alleged traces back to Snowflake’s alleged failures to enact industry-standard safeguards, enable Multi-Factor Authentication (“MFA”), and properly manage security settings. (Id. ¶¶ 238, 287, 292–94.)
+
+Snowflake further argues that LAUSD Plaintiffs failed to allege damages because LAUSD Plaintiffs failed to allege that they incurred expenses due to the Data Breach. (Doc. 501 at 27.) LAUSD sufficiently alleged injury. For the same reasons above discussing Article III standing and injury-in-fact, LAUSD Plaintiffs have sufficiently alleged the element of damages.
+
+III. LAUSD PLAINTIFFS’ MONTANA CPA CLAIM
+To state a claim under the Montana CPA, a plaintiff must allege the following elements: (1) that the plaintiff was a consumer of the defendant’s Case 2:24-md-03126-BMM-JTJ Document 594 Filed 10/29/25 Page 16 of 22
+
+17 services; (2) that the defendant employed an unfair or deceptive act or practice in the conduct of trade or commerce with the plaintiffs; (3) causation; and (4) ascertainable loss. See Kostelecky v. Peas in a Pod LLC, 2022 MT 195, ¶ 45, 518 P.3d 840, 861; § 30-14-101, MCA et seq. For the reasons stated in the order on Snowflake’s motion to dismiss Consumer Plaintiffs’ claims, LAUSD Plaintiffs sufficiently have demonstrated elements two, three, and four. The Court will only address Snowflake’s specific contention that LAUSD Plaintiffs fail to show that they are “consumers” of Snowflake’s “services.” (Doc. 501 at 26–27.)
+A. Consumers of Snowflake’s services
+Snowflake argues that LAUSD Plaintiffs’ Montana CPA claim fails because they are not consumers of Snowflake’s services. (Doc. 418 at 60-61.) Montana law defines “consumer” as “a person who purchases or leases goods, services, real property, or information primarily for personal, family, or household purposes.”
+Mont. Code. Ann. § 30-14-102(1). Montana courts liberally construe the Montana CPA “with a view to effect its object and to promote justice.” McCollough v.
+Johnson, Rodenberg & Lauinger, 610 F. Supp. 2d 1247, 1251–52 (D. Mont. 2009), aff’d in part sub nom. McCollough v. Johnson, Rodenburg & Lauinger, LLC, 637 F.3d 939 (9th Cir. 2011).
+
+LAUSD Plaintiffs allege that they used Spoke Defendants’ services. (Doc.
+485 ¶¶ 142–53, 342.) Spoke Defendants provided the LAUSD Plaintiffs’ data to Case 2:24-md-03126-BMM-JTJ Document 594 Filed 10/29/25 Page 17 of 22
+
+18
+Snowflake for security. LAUSD Plaintiffs benefited from the contracts between LAUSD, Spoke Defendants, and Snowflake. (Id. ¶¶ 958–65.) Snowflake represented to Spoke Defendants that its systems remained secure. Spoke Defendants, in turn, represented to LAUSD and the school district’s families that their data remained secure. The representations created a relationship, although indirect, between Snowflake and the LAUSD Plaintiffs. LAUSD Plaintiffs plausibly have alleged at this stage of litigation a claim under the Montana CPA given the nature of the relationship and services performed.
+
+IV. LAUSD PLAINTIFFS’ CALIFORNIA CPA CLAIM
+Snowflake seeks dismissal of the LAUSD Plaintiffs’ California Consumer Privacy Act (“CCPA”) claims for three reasons. Snowflake argues that LAUSD Plaintiffs failed to allege that Snowflake operated as a “business” under Cal. Civ.
+Code § 1798.140(d)(1). (Doc. 28 at 28.) Snowflake further argues that LAUSD Plaintiffs failed to allege that their personal information was stolen. (Id. at 28.)
+Finally, Snowflake contends that LAUSD Plaintiffs failed to comply with the mandatory pre-suit notice requirement. (Id. at 31.)
+
+Snowflake collected and processed the personal information of LAUSD Plaintiffs’ children through its work with Innive. (Doc. 485 ¶¶ 279, 335, 921, 924.)
+LAUSD Plaintiffs have sufficiently alleged that Snowflake operated as a business Case 2:24-md-03126-BMM-JTJ Document 594 Filed 10/29/25 Page 18 of 22
+
+19 under the CCPA. Cal. Civ. Code § 1798.140(d)(1). The Court will address Snowflake’s other two arguments.
+
+A. Personal Information under the CCPA
+The CCPA provides consumers a private right of action when a consumer successfully claims their “nonencrypted and nonredacted personal information” was exposed to “unauthorized access[,] exfiltration, theft, or disclosure” because of a “business[’s] violation of the duty to implement and maintain reasonable security procedures and practices.” Cal. Civ. Code § 1798.150(a)(1). The “reasonable[ness] [of] security procedures and practices” must be “appropriate to the nature of the information to protect the personal information.” Id.
+
+The CCPA defines “Personal Information” as follows:
+
+An individual’s first name or first initial and the individual’s last name in combination with any one or more of the following data elements, when either the name or the data elements are not encrypted or redacted . . .
+
+(ii) Driver’s license number, California identification card number, tax identification number, passport number, military identification number, or other unique identification number issued on a government document commonly used to verify the identity of a specific individual.
+
+(iii) Account number or credit or debit card number, in combination with any required security code, access code, or password that would permit access to an individual’s financial account.
+
+Cal. Civ. Code § 1798.81.5(d)(1)(A).
+
+Case 2:24-md-03126-BMM-JTJ Document 594 Filed 10/29/25 Page 19 of 22
+
+20
+Snowflake contends that LAUSD Plaintiffs fail to plausibly allege that their personal information was stolen. (Doc. 501 at 28.) The Court previously addressed this issue in its analysis of whether LAUSD Plaintiffs have alleged an injury-infact. LAUSD Plaintiffs plausibly have alleged that their personal information was stolen. LAUSD Plaintiffs investigated the type of information included in the dark web sale postings. (Doc. 485 ¶ 974.) The postings contained information that LAUSD Plaintiffs allege the school district obtained from each family. (Id. ¶¶ 975–976.) LAUSD Plaintiffs further allege that the stolen data constituted personal and medical information under the CCPA. (Id. ¶¶ 1028–30, 1036–37.) Given the information available before discovery, the allegations satisfy the plausibility standard at this stage in the litigation.
+
+Snowflake points to the fact that the school district and Innive failed to provide notice of a breach to Plaintiffs as evidence undermining Plaintiffs’ allegations. (Doc. 501 at 28.) LAUSD Plaintiffs assert that plausible explanations exist for why the school district administration has yet to provide notice, including a potential ongoing criminal investigation or simple negligence of duty. (Doc. 519 at 32.) The Court will not dismiss the complaint when Snowflake fails to demonstrate that Plaintiffs’ claims remain “implausible.” See Schiebe v. ProSupps USA, LLC, 141 F.4th 1094, 1100 (9th Cir. 2025).
+
+Case 2:24-md-03126-BMM-JTJ Document 594 Filed 10/29/25 Page 20 of 22
+
+21
+B. Pre-Suit Notice for Statutory Damages
+Snowflake asserts that LAUSD Plaintiffs failed to provide sufficient pre-suit notice for statutory damages under the CCPA. (Doc. 501 at 31.) Consumers must give a business written notice within 30 days before seeking statutory damages under a CCPA claim. Cal. Civ. Code § 1798.150(b).
+
+The California class members sent the required pre-suit notice on December 27, 2024. (Doc. 485 ¶ 363.) The notice did not specifically identify LAUSD Plaintiffs. (Doc. 501 at 32.) The information contained in the notice, however, provided Snowflake with ample time to cure and discontinue the same conduct that LAUSD Plaintiffs allege has caused injury to them. A determination on the sufficiency of notice at this stage fails to warrant dismissal. See, e.g., In re San Franscico 49ers Data Breach Litig., 2024 WL 3849336, at *3 (N.D. Cal. Aug. 15, 2024).
+
+CONCLUSION
+LAUSD plaintiffs have established Article III standing. LAUSD Plaintiffs similarly have plausibly alleged valid negligence, Montana CPA, and California CPA claims against Snowflake.
+
+ORDER
+Accordingly, IT IS ORDERED that Defendant Snowflake’s Motion to Dismiss (Doc. 500) is DENIED.
+
+Case 2:24-md-03126-BMM-JTJ Document 594 Filed 10/29/25 Page 21 of 22
+
+22
+DATED this 29th day of October 2025.
+
+Case 2:24-md-03126-BMM-JTJ Document 594 Filed 10/29/25 Page 22 of 22
+
+-----

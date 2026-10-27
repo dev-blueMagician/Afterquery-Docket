@@ -1,0 +1,314 @@
+1
+IN THE UNITED STATES DISTRICT COURT
+FOR THE DISTRICT OF MONTANA
+BUTTE DIVISION
+IN RE: SNOWFLAKE, INC., DATA
+SECURITY BREACH LITIGATION Cause No. 2:24-MD-03126-BMM
+ORDER ON MOTIONS TO
+DISMISS FINANCIAL
+INSTITUTION PLAINTIFFS’
+
+CLAIMS
+INTRODUCTION
+This multi-district litigation addresses an alleged “hub-and-spoke” data breach involving cloud-based data storage and analytics provider Defendant Snowflake, Inc. (“Snowflake”). (Doc. 1 ¶ 2.) Snowflake, the “hub,” stores secure sensitive data of numerous companies (“Spoke Defendants”) on Snowflake’s data cloud. (Id.)
+
+Plaintiffs include consumer customers of Ticketmaster, LLC, and Live Nation Entertainment, Inc. (collectively “Ticketmaster”) and LendingTree, LLC, and Quotewizard.com, LLC (collectively, “LendingTree”) (“Consumer Plaintiffs”); the Los Angeles Unified School District (“LAUSD Plaintiffs”); and financial institutions whose customers include Consumer Plaintiffs (“Financial Institution Plaintiffs”). Plaintiffs allege that threat actors stole the data they Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 1 of 36
+
+2 provided to the Spoke Defendants and stored on Snowflake’s cloud in the data breach (“Data Breach”).
+
+Plaintiffs filed a Fourth Amended Complaint (“FAC”) on July 9, 2025.
+(Doc. 485.) Financial Institution Plaintiffs filed an Amended Complaint on April 8, 2025. (Doc. 393.) Plaintiffs’ FAC alleges claims against Defendant Snowflake for the interception of their data in the Data Breach. Plaintiffs’ FAC also alleges claims against Spoke Defendants Ticketmaster; Advance Auto Parts, Inc. and Advance Stores Company, Inc. (collectively “Advance Auto”); LendingTree; AT&T, Inc. and AT&T Mobility, LLC (collectively, “AT&T”); Innive, Inc.
+(“Innive”); and certain “Doe” Defendants associated with the LAUSD Plaintiffs.
+(Doc. 485.)
+
+Snowflake filed a motion to dismiss Financial Institution Plaintiffs’ claims on June 26, 2025. (Doc. 469.) Ticketmaster filed a motion to dismiss Financial Institution Plaintiffs’ claims on June 26, 2025. (Doc. 470.) The Court held a hearing on October 6, 2025. (Doc. 569.)
+
+BACKGROUND
+Snowflake provides its customers, Spoke Defendants, with a data cloud to store, analyze, and share its customers’ data. (Doc. 1 at ¶ 158.) Threat actors used stolen credentials to access Spoke Defendants’ Snowflake accounts in April of 2024. (Id. at ¶ 162-166.) The threat actors allegedly obtained the credentials by Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 2 of 36
+
+3 using malware installed on Spoke Defendants devices, including devices belonging to Ticketmaster. (Id. at ¶ 163.) Consumer Plaintiffs allege that Spoke Defendants and Snowflake promised they would take security measures to keep the Consumer Plaintiffs’ data safe. (Id. at ¶¶ 390-91, 395-96, 624-26, 630-32.)
+
+Snowflake announced the Data Breach on May 30, 2024. (Doc. 393 at ¶ 56.)
+The announcement stated that Snowflake “became aware of potentially unauthorized access to certain customer accounts” and that Snowflake was “investigating an increase in cyber threat activity targeting some of our customers’ accounts.” (Doc. 1 at ¶ 174.) The threat actors began posting advertisements to sell allegedly stolen data from the Data Breach on May 24, 2024. (Id. at ¶ 175-178, 473, and 741.)
+
+Plaintiffs allege that the threat actors obtained the following stolen data from the Data Breach from Ticketmaster Consumer Plaintiffs: “names, addresses, emails, and phone numbers, information regarding tickets purchased through Ticketmaster, order confirmation details, and credit card information, such as the last four digits of their payment cards and expiration dates.” (Id. at ¶ 473.)
+Ticketmaster notified Consumer Plaintiffs of the Data Breach by a notice letter.
+(Id. at ¶ 472.) The notice letter explained that the exposed data “may include email, phone number, credit card information, as well as some other personal information provided to us.” (Id. at ¶ 472.) The threat actor advertised on the dark web to Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 3 of 36
+
+4 possessing the following Consumer Plaintiff personal information: “560 million customers full details (name, address, email, phone), Ticket sales, event information, order details. CC detail – customer, last 4 of card, expiration date.
+customer fraud details much more.” (Id. at ¶ 473.)
+
+New Orleans Firemen’s Federal Credit Union (“Plaintiff” or “NOFFCU”) serves as the representative class member for the Financial Institution Plaintiffs.
+NOFFCU filed its Amended Representative Class Action Complaint (“Complaint”) on April 8, 2025. (Doc. 393.) Plaintiff and the Class Members are financial institutions that issue payment cards, such as debit or credit cards, to their customers. (Id. at ¶ 6.) Financial Institution Plaintiffs seek monetary and nonmonetary relief and assert claims against Defendants for negligence, negligence per se, unjust enrichment, and injunctive and declaratory relief. (Doc. 393.)
+LEGAL STANDARD
+Rule 8(a)(2) of the Federal Rules of Civil Procedure requires claimants to include in their complaint “a short and plain statement of the claim showing that the pleader is entitled to relief.” A motion to dismiss under Federal Rule of Civil Procedure 12(b)(6) tests the legal sufficiency of a complaint under the plausibility pleading standard of Rule 8(a)(2). See Navarro v. Block, 250 F.3d 729, 732 (9th Cir.
+2001). Dismissal proves appropriate under Rule 12(b)(6) where the complaint fails to state a claim upon which relief can be granted. Mendiondo v. Centinela Hospital Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 4 of 36
+
+5
+Med. Ctr., 521 F.3d 1097, 1104 (9th Cir. 2008). A court may dismiss a complaint “based on the lack of a cognizable legal theory or the absence of sufficient facts alleged under a cognizable legal theory.” Balistreri v. Pacifica Police Dep’t, 901 F.2d 696, 699 (9th Cir. 1988).
+
+A complaint must contain sufficient factual matter to state a plausible claim for relief on its face to survive a Rule 12(b)(6) motion. Ashcroft v. Iqbal, 556 U.S.
+662, 678 (2009). A claim proves plausible on its face when “the plaintiff pleads factual content that allows the court to draw the reasonable inference that the defendant is liable for the misconduct alleged.” Id. The plausibility standard does not require probability, but “asks for more than a sheer possibility that a defendant has acted unlawfully.” Id. A court “takes as true and construes in the light most favorable to plaintiffs” all factual allegations set forth in the complaint. Lee v. City of Los Angeles, 250 F.3d 668, 688 (9th Cir. 2001) (internal quotation marks omitted).
+DISCUSSION
+Defendant Snowflake and Defendant Ticketmaster argue that Financial Institution Plaintiffs’ Complaint should be dismissed in its entirety for failure to state a claim upon which relief can be granted under Fed R. Civ. P 12(b)(6). (Doc.
+471 at 11; Doc. 472 at 16.) The Court will address the motions to dismiss by each Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 5 of 36
+
+6
+Defendant jointly and will address each Defendant’s distinct arguments only when necessary. The Court will address each issue in turn.
+
+I. ARTICLE III STANDING
+Defendants claim that Financial Institution Plaintiffs’ claims should be dismissed for failure to establish Article III standing. (Doc. 472 at 13.) “[T]hose who seek to invoke the jurisdiction of the federal courts must satisfy the threshold [sic] requirement imposed by Article III of the Constitution by alleging an actual case or controversy.” City of Los Angeles v. Lyons, 461 U.S. 95, 101 (1983); Montana Wildlife Fed’n v. Bernhardt, No. 4:18-CV-69-BMM, 2021 WL 4865257, at *1 (D. Mont. June 21, 2021). Article III standing requires plausible allegations:
+(i) that the plaintiff suffered an injury-in-fact that is concrete, particularized and actual or imminent; (ii) that the injury-in-fact is fairly traceable to the defendant; and (iii) that the injury in fact would likely be redressed by judicial relief and a favorable decision. TransUnion LLC v. Ramirez, 594 U.S. 413, 423 (2021); Friends of the Earth, Inc. v. Laidlaw Env’t Servs., Inc., 528 U.S. 167, 180-81 (2000) (citations omitted).
+
+a. Injury-in-Fact
+A plaintiffs’ alleged injury must be “concrete, particularized, and actual or imminent.” TransUnion, 594 U.S. at 423. “General allegations” of injury may suffice at the pleading stage. Lujan v. Defenders of Wildlife, 504 U.S. 555, 560-61 Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 6 of 36
+
+7
+(1992). A complaint in a data breach case must set forth the nature of the stolen data, the manner of the breach, and the real-world harms that predictably would flow from that theft to establish standing. In re Zappos.com, Inc., 888 F.3d 1020, 1027 (9th Cir. 2018).
+
+Financial Institution Plaintiffs claim that the Data Breach exposed confidential financial information associated with millions of credit and debit cards (“payment card data” or “PCD”) tied to Ticketmaster accounts. (Doc. 504 at 11.)
+Financial Institution Plaintiffs assert they have been burdened with the costs of reimbursing their customers for fraudulent charges made using those compromised cards, canceling and re-issuing cards, and losing additional time and money to investigate the Data Breach and monitor its impact upon their customers. (Id.)
+Financial Institution Plaintiffs argue the costs of (1) reimbursing fraudulent charges, and (2) canceling and re-issuing payment cards compromised in the Data Breach represent both actual monetary losses and an imminent threat of loss. (Id. at 18, 22.)
+
+Defendants challenge the traceability of the fraud losses to the Data Breach.
+(Doc. 472 at 31; Doc. 417 at 24.) The Court will address the traceability argument below. Defendants do not challenge the fact that the fraud losses constitute an injury-in-fact. Defendants instead argue that the act of reissuing the payment cards proved unnecessary and too speculative to constitute an injury-in-fact. (Doc. 472 at Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 7 of 36
+
+8
+25, 31; Doc. 471 at 25-27.) Defendants characterize the cancelation and re-issuing of payment cards as voluntary and precautionary “mitigation efforts.” (Doc. 527 at 9; Doc. 471 at 24.) Defendants argue that “[o]nly when the risk of future harm is not speculative can the cost of mitigation efforts form a basis for standing.” (Doc.
+527 at 9, quoting Greenstein v. Noblr Reciprocal Exch., 2024 WL 3886977, at *2-
+3 (9th Cir. Aug. 21, 2024)).
+
+The Court does not see at this time how the harm suffered by the Financial Institution Plaintiffs proves too speculative to form the basis of Article III standing.
+The parties agree that the fraudulent charges on the payment cards and associated reimbursements made by the Financial Institution Plaintiffs represent actual monetary losses that clearly prove an injury-in-fact. Monetary harm involves the “easiest Article III injur[y] to identify[.]” Davis v. Prof’l Parking Mgmt. Corp., No. 22-14026, 2023 WL 4542690 (11th Cir. July 14, 2023).
+
+The possibility that “additional cards would incur fraudulent charges” posed an imminent threat to the Financial Institution Plaintiffs. (Doc. 504 at 22.) Injuryin-fact can be based on a “substantial risk that harm will occur, which may prompt plaintiffs to reasonably incur costs to mitigate or avoid that harm.” See In re Adobe Sys., Inc. Privacy Litig., 66 F. Supp. 3d 1197, 1213 (N.D. Cal. 2014) quoting Clapper v. Amnesty Int’l USA, 568 U.S. 398, 414 n.5 (2013). Plaintiffs also cite the Compromised Account Management System (“CAMS”) alerts issued by Visa as Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 8 of 36
+
+9 evidence that the Data Breach compromised unique payment card numbers. (Doc.
+393 at ¶ 143, 181-82.) A substantial risk existed that future harm would occur based on previous fraudulent charges in combination with the CAMS alerts.
+Financial Institution Plaintiffs cite numerous cases where courts have made similar findings. In re The Home Depot Inc., Customer Data Breach Security Litig., 2016 WL 2897520, at *3 (N.D. Ga. 2016), determined that “the banks have pleaded actual injury in the form of costs to cancel and reissue cards compromised in the data breach, costs to refund fraudulent charges, costs to investigate fraudulent charges, costs for customer fraud monitoring, and costs due to lost interest and transaction fees due to reduced card usage. These injuries are not speculative and are not threatened future injuries, but are actual, current, monetary damages. Additionally, any costs undertaken to avoid future harm from the data breach would fall under footnote 5 of [Clapper], specifically as reasonable mitigation costs due to a substantial risk of harm.” Defendants seek to distinguish Home Depot based on a difference in the facts. The hackers in Home Depot had stolen “full, unencrypted PCD, whereas here, the allegedly stolen PCD was partial and/or encrypted.” (Doc. 527 at 12; see also Doc. 524 at 17.) Snowflake also alleges that the facts in Home Depot presented fewer traceability problems. (Doc.
+527 at 12-13.)
+
+Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 9 of 36
+
+10
+Defendants selectively focus their arguments against the assertions made by Financial Institution Plaintiffs concerning the allegedly stolen PCD. Financial Institution Plaintiffs allege that at least partial PCD certainly had been stolen in the Data Breach. (Doc. 504 at 21 n.6.) Financial Institution Plaintiffs assert that only partial PCD has been confirmed stolen but that (1) the CAMS alerts identified additional information that may been included; (2) they have plead that Ticketmaster’s representations about the extent of stolen information may have been incorrect; and (3) stolen PCD already has been used to make fraudulent purchases on its customer cards. (Id.) Financial Institution Plaintiffs sufficiently have plead an injury-in-fact like the injuries recognized in Home Depot.
+Bank of Louisiana v. Marriott International, Inc., 438 F. Supp. 3d 433, 439
+(D. Md. 2020), determined that the plaintiffs had standing when they suffered similar injury to the Financial Institution Plaintiffs. Bank of Louisiana notes that the plaintiffs received a CAMS alert warning that payment cards it had issued may have been compromised by hackers in the data breach and were at risk of being used for fraud. Id. Bank of Louisiana concluded that standing existed even when the plaintiffs “just barely” alleged that some of the cards covered by the CAMS alert were, in fact, used to make fraudulent charges. Id. Financial Institution Plaintiffs make similar allegations here. (Doc. 393 at ¶ 181.)
+
+Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 10 of 36
+
+11
+Defendants argue that the PCD in Bank of Louisiana was unencrypted and therefore not analogous to the case here. (Doc. 527 at 13.) Bank of Louisiana reasoned that “[a]s alleged, the cyber thieves targeted payment card information and, even though some it may have been encrypted, some of it was not. The only reasonable inference to draw from this is that they did not do so out of idle curiosity, but rather to access the payment card information and commit fraud.
+This is confirmed by the alleged fact that payment card information actually has been accessed, and used in a fraudulent manner, and [the plaintiff] has had to reimburse some of its customers for these unauthorized charges.” Bank of Louisiana, 438 F. Supp. 3d at 440.
+
+Like in Bank of Louisiana, “it is not at all speculative or hypothetical to infer that now that all that payment card information is out in cyberspace, there will be future efforts to commit additional fraud. It does not seem either farfetched or gratuitous for [Financial Institution Plaintiffs] to take proactive steps to stop this by cancelling and reissuing the cards identified in the CAMS report, as [Financial Institution Plaintiffs] alleged that it has. Therefore, [Financial Institution Plaintiffs] have alleged sufficient injury stemming from both actual identity fraud and costs associated with an imminent threat of future identity fraud.” Bank of Louisiana,
+438 F. Supp. 3d at 440; see also In re Equifax, Inc., Customer Data Security Breach Litig., 371 F. Supp. 3d 1150, 1160 (N.D. Ga. 2019) (similar). The Court in Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 11 of 36
+
+12
+In re Adobe, 66 F. Supp. 3d at 1215 n.5, recognized that “requiring Plaintiffs to wait for the threatened harm to materialize in order to sue would pose a standing problem of its own, because the more time that passes between a data breach and an instance of identity theft, the more latitude a defendant has to argue that the identity theft is not ‘fairly traceable’ to the defendant’s data breach.”
+b. Traceability
+Financial Institution Plaintiffs must identify the requisite underlying connection between their stated harms and the Data Breach to establish the traceability requirement for standing. Bass v. Facebook, Inc., 394 F. Supp. 3d 1024, 1036 (N.D. Cal. 2019). A party does not need to establish proximate causation to establish Article III standing. In re Data Breach Sec. Litig. Against Caesars Ent. Inc. 2025 U.S. Dist. LEXIS 15947 at *27 (D. Nev. 2025) (citing Lexmark Int’l, Inc. v. Static Control Components, Inc., 572 U.S. 118, 134 (2014)).
+Courts have held that traceability has been satisfied in cases where the plaintiffs receive a “letter that [they were or may have been] subject to the Data Breach.”
+Stallone, 2022 WL 10091489, at *9; Huynh v. Quora, Inc., 2019 WL 11502875, at *4 (N.D. Cal. Dec. 19, 2019).
+
+Defendants argue that Financial Institution Plaintiffs’ allegations of fraudulent charges are not traceable to the information allegedly stolen because it is impossible to make credit card charges with only the last four digits of a Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 12 of 36
+
+13 payment card and the expiration date. (Doc. 527 at 14.) Defendants again ignore the fact that Financial Institution Plaintiffs’ have alleged that at least partial PCD certainly was stolen in the Data Breach, but more information may have been compromised as well. (Doc. 504 at 21 n.6.)
+
+Defendants also characterize as circular Financial Institution Plaintiffs’ argument that traceability has been established purely because fraudulent charges were made on customers’ cards. (Doc. 527 at 14-15; Doc. 524 at 19-21.) The case law rejected by Defendants proscribes this argument. Courts have found that a plaintiff does not need to do more than allege that the data breach at issue was the proximate cause when fraudulent charges have been made on payment cards. See In re Equifax, 371 F. Supp. 3d at 1318.
+
+In re Equifax recognized that “[t]he [p]laintiffs need not explicitly state that other breaches did not cause these alleged injuries, since their allegations that this Data Breach did cause their injuries implies such an allegation.” Id. In re Equifax went further and reasoned that “allowing the [d]efendants to rely on other data breaches to defeat a causal connection would ‘create a perverse incentive for companies: so long as enough data breaches take place, individual companies will never be found liable.’” Id. (citing In re Yahoo! Inc. Customer Data Sec. Breach Litig., 2017 WL 3727318, at *19 (N.D. Cal. Aug. 30, 2017) (quoting In re Anthem, Inc. Data Breach Litig., 162 F.Supp.3d 953, 988 (N.D. Cal. 2016)). Defendants do Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 13 of 36
+
+14 not rely explicitly on other data breaches, but instead emphasize that “credit card fraud occurs every day,” (Doc. 527 at 15) and that there are “countless other reasons why a fraudulent transaction might occur.” (Doc. 524 at 20.) Defendants attempt to make the same argument rejected by the court in In re Equifax.
+Remijas v. Neiman Marcus Grp., LLC, 794 F.3d 688, 696 (7th Cir. 2015), similarly disposed of the argument made by Defendants. Remijas stated that “[t]he fact that [the defendants] or some other store might have caused the plaintiffs' private information to be exposed does nothing to negate the plaintiffs' standing to sue. It is certainly plausible for pleading purposes that their injuries are ‘fairly traceable’ to the data breach at [issue].” Id. Remijas cites In re Target Corp. Data Sec. Breach Litig., 66 F.Supp.3d 1154, 1159 (D. Minn. 2014), for the assertion that plaintiff’s allegations need only plausibly allege that they suffered injuries that are “fairly traceable” to the defendant’s conduct at this stage of pleading. Id.
+Defendants may move for summary judgment on the issue should discovery fail to bear out Financial Institution Plaintiffs’ allegations. Id. Remijas further states that “[i]f there are multiple companies that could have exposed the plaintiffs' private information to the hackers, then ‘the common law of torts has long shifted the burden of proof to defendants to prove that their negligent actions were not the ‘but-for’ cause of the plaintiff's injury.’” Id. (citing Price Waterhouse v. Hopkins, Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 14 of 36
+
+15
+490 U.S. 228, 263, 109 S.Ct. 1775, 104 L.Ed.2d 268 (1989) (O’Connor, J.
+concurring) (citing Summers, 199 P.2d at 3–4).)
+
+Financial Institution Plaintiffs have alleged that Visa issued over a hundred CAMS alerts that indicate that the Data Breach compromised unique payment card numbers. (Doc. 393 ¶ 143.) Financial Institution Plaintiffs’ allegations that fraudulent transfers took place based on the information exposed in the Data Breach and the exposed information indicated by the Visa CAMS makes Financial Institution Plaintiffs’ allegations at least plausible that the fraudulent transactions were related and traceable to the Data Breach. Defendants’ arguments suggesting that the fraudulent transfers were impossible given the nature of the data exposed can be raised at summary judgment. Financial Institution Plaintiffs sufficiently have established that their injuries “adequately raise [their] right to relief above the speculative level and are fairly traceable to the Data Breach.” See generally, Remijas, 794 F.3d at 696 (citing Bell Atl. Corp. v. Twombly, 550 U.S. 544, 570 (2007).)
+
+c. Redressability
+Defendants contend that the speculative nature of the injuries suffered by Financial Institution Plaintiffs also renders speculative redressability of those injuries. (Doc. 472 at 33; Doc. 527 at 16.) The Court disagrees. A plaintiff must establish that “it [is] ‘likely,’ as opposed to merely ‘speculative,’ that the injury Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 15 of 36
+
+16 will be redressed by a favorable decision.” Greenstein, 2022 WL 17418972, at *5 (quoting Lujan, 504 U.S. at 560–61). The Court determined that Financial Institution Plaintiffs have plead actual, concrete injuries. As a result, Financial Institution Plaintiffs have established that a favorable decision likely would redress these concrete injuries. Financial Institution Plaintiffs sufficiently have plead injury-in-fact, traceability, and redressability to establish Article III standing.
+II. FINANCIAL INSTITUTIONS PLAINTIFFS’ NEGLIGENCE CLAIMS
+Financial Institution Plaintiffs must allege the following elements to establish a negligence claim: 1) the defendant owed them a duty of care; 2) the defendant breached that duty of care; 3) the plaintiffs’ injury was caused by the defendant’s breach; and 4) the plaintiffs suffered damages. Md. Cas. Co. v.
+Asbestos Claims Ct., 460 P.3d 882, 893 (Mont. 2020).
+
+a. Preliminary Choice of Law Analysis as Applied to Ticketmaster’s Motion to Dismiss
+Ticketmaster argues that a conflict of law analysis should lead to application of Louisiana law to Financial Institution Plaintiffs’ claims. (Doc. 471 at 21-22.)
+Financial Institution Plaintiffs assert that Montana law should apply at the pleadings stage. (Doc. 503 at 15.) The Court will not partake in a full choice-oflaw analysis as such an analysis would be premature at this point in the Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 16 of 36
+
+17 proceedings. The Court must make a preliminary finding as to choice-of-law, however, considering the outcome determinative effects at the pleadings stage.
+Montana's choice-of-law rules regarding tort claims seek “to apply the law of the state with the ‘most significant relationship to the occurrence and the parties.’” Phillips v. General Motors Corp., 995 P.2d 1002, 1007 (Mont. 2000) (adopting Restatement (Second) of Conflict of Laws § 145(1) (1971)). The specific analysis with respect to tort claims considers the following contacts with a particular state:
+
+(a) the place where the injury occurred;
+
+(b) the place where the conduct causing the injury occurred;
+
+(c) the domicile, residence, nationality, place of incorporation, and place of business of the parties; and
+(d) the place where the relationship, if any, between the parties is centered.
+Phillips, 995 P.2d at 1008.
+
+Ticketmaster argues that the place where the injury occurred is where the Plaintiffs are operating, which is Louisiana. (Doc. 471 at 22.) Some courts have concluded that the place where the injury occurred does not always correspond to the place where the results of the injury were felt. For example, In re Blackbaud, Inc., Customer Data Sec. Breach Litig., No. 3:20-mn-02972-JFA, 2022 WL 2314714, at * 3 (D.S.C. June 28, 2022), found that where the injury occurred was “not where the results of the injury were felt or where the damages manifested Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 17 of 36
+
+18 themselves.” Ticketmaster cites Underberg v. Emps. Mut. Cas. Co., No. CV-15- 112-BLG-CSO, 2016 WL 1466506, at *6 (D. Mont. Apr. 14, 2016), for the contention that courts in the Ninth Circuit adopt the opposite reasoning when determining where the injury occurred. The posture in Underberg differed as the court was analyzing whether venue in Montana would be appropriate. Id.
+Underberg merely stated that Montana was not an improper venue because the injury may have been felt in Montana, and a substantial part of the events or omissions giving rise to the claim occurred in Montana. The Court does not see this discussion as dispositive in this choice-of-law analysis.
+
+The conduct causing injury occurred in Montana as far as the Court can tell at this point in the proceedings. Snowflake is headquartered in Montana and has set up its servers in Montana. Ticketmaster characterizes Snowflake’s role in this case as tangential (Doc. 524 at n.2.) This characterization proves incongruous with Snowflake being the “hub” in this “hub and spoke” litigation, and with the clear allegations that Snowflake’s actions, in concert with the other spoke Defendants, caused the Data Breach. This factor weighs in favor applying Montana law.
+The parties are domiciled in Montana, along with several other states including Louisiana and California. Snowflake represents the common denominator among the parties in the litigation. Snowflake is headquartered in Montana. This factor weighs in favor of applying Montana law. The place where Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 18 of 36
+
+19 the relationship between the parties is centered remains unclear at this point in the proceedings and thus proves to be a neutral factor. The weight of the factors suggests that Montana law most appropriately should be applied at the pleadings stage. The Court will make a conclusive choice-of-law finding after further discovery and the parties may file appropriate motions at that point.
+b. Duty
+Defendants contend that they have no legal duty to protect Financial Institution Plaintiffs from the risk of harm caused by third party threat actors. (Doc.
+472 at 34; Doc. 524 at 28.) Snowflake also contends that it owes no legal duty to Financial Institution Plaintiffs because it “had no relationship with them and did not undertake to protect their data.” (Doc. 472 at 34.) Financial Institution Plaintiffs’ allegations of duty assert that Snowflake owed a duty to take reasonable steps to implement data security measures, “particularly given the heightened threat cloud storage systems face from cyberattacks.” (Doc. 504 at 28.) Financial Institution Plaintiffs allege that Ticketmaster owed a duty to properly protect PCD under industry standards and statutory requirements. (Doc. 503 at 36.) Financial Institution Plaintiffs allege that one of the practices that is commonly included in these industry standards and statutory requirements is Multi-Factor Authentication (“MFA”). (Doc. 393 at ¶ 9.)
+
+Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 19 of 36
+
+20
+The Court declines to engage in discussion on Defendants’ duty “to protect others from the risks of harm directly caused or created by third parties unless a qualifying special relationship or affirmative undertaking existed or occurred under the circumstances at issue.” Md. Cas. Co., 406 P. 3d at 895. The allegations outlined by Financial Institution Plaintiffs on the duty of care relate to the actions or failures by Defendants, not duties related to harms caused by third parties.
+The Montana Supreme Court has stated, “[a]t the most basic level, we all share the common law duty to exercise the level of care that a reasonable and prudent person would under the same circumstances.” Fisher, 181 P.3d at 606. The analysis of duty, under Montana law, “turns primarily on foreseeability.” Poole ex rel. Meyer v. Poole, 1 P.3d 936, 939 (Mont. 2000). In determining whether a duty exists, a court asks, “whether the defendant could have reasonably foreseen that his or her conduct could have resulted in an injury to the plaintiff.” Fisher, 181 P.3d at
+607 (quoting Hinkle v. Shepherd Sch. Dist. No. 37, 93 P.3d 1239, 1245 (Mont.
+2004)). In re Equifax determined that a company owed a duty of care to safeguard the personal information in its custody because defendants “knew of a foreseeable risk to its data security systems but failed to implement reasonable security measures.” In re Equifax, 371 F. Supp. 3d at 1325.
+
+Financial Institution Plaintiffs sufficiently have alleged that Snowflake and Ticketmaster owed a duty to Financial Institution Plaintiffs to survive a motion to Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 20 of 36
+
+21 dismiss. Financial Institution Plaintiffs adequately have alleged that the risk of harm to their data was foreseeable to both Ticketmaster and Snowflake. Financial Institution Plaintiffs have alleged that Defendants could have prevented this Data Breach. (Doc. 393 ¶¶ 1-4, 198, 203, 205.) Financial Institution Plaintiffs have alleged that Snowflake knew of the of the nature of the data stored in Ticketmaster’s account. (Doc. 504 at 29 citing Doc. 393 at ¶ 31.) Financial Institution Plaintiffs plausibly have alleged that Defendants owed a duty of care to protect customer data from foreseeable risk of harm by providing additional security measures, such as MFA requirements and their implementation.
+c. Breach
+Financial Institution Plaintiffs have alleged that Snowflake breached its duties “by failing to use reasonable measures to protect Plaintiff’s and Class Members’ PCD from the hackers who perpetrated the data breach and by failing to provide timely notice of the breach.” (Doc. 393 at ¶ 203.) Financial Institution Plaintiffs detail a list of specific duties and industry standards that Snowflake breached, including the duty to “protect, store and delete PCD after the time period necessary to authorize the transaction,” the duty to “encrypt Payment Card Data,” and the duty to “comply with industry standards for two-factor authentication and security of PCD.” (Id.) Financial Institution Plaintiffs sufficiently have alleged that Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 21 of 36
+
+22
+Snowflake breached industry standards and failed to comply with its own cited standards (Doc. 472 at 44-45). (Doc. 393 at ¶ 203.)
+
+Snowflake argues that it did require customers storing PCD to use MFA.
+The allegations by Financial Institution Plaintiffs suggest that Defendants failed to implement MFA. It can be inferred that this failure to implement MFA arose from Snowflake’s failure to enforce its standards. (Doc. 472 at 44-45.)
+
+Financial Institution Plaintiffs further allege that the industry standard for cybersecurity required Snowflake to take precautionary measures. (Id. at ¶ 8.)
+Snowflake represented that it “provides industry-leading features that ensure the highest levels of security for you and your account users, as well as all the data you store in Snowflake.” (Id. at ¶ 145-46.) Financial Institution Plaintiffs sufficiently have alleged that Snowflake breached the duty of care owed to them. See Ceasars, 2025 U.S. Dist. LEXI 159427 at *32. Financial Institution Plaintiffs similarly have sufficiently plead that Ticketmaster breached its duty. The parties do not argue that issue.
+
+d. Causation
+Snowflake argues that Financial Institution Plaintiffs failed to allege the element of causation because it was Spoke Defendants (Ticketmaster) who failed to implement MFA, network access policies, and other security measures that caused injury to Financial Institution Plaintiffs. (Doc. 472 at 46.) Ticketmaster Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 22 of 36
+
+23 argues that Financial Institution Plaintiffs have failed to plead that Ticketmaster caused their harm. (Doc. 524 at 31-32.)
+
+“[P]roof of causation is satisfied by proof that a party’s conduct was a causein-fact of the damage alleged.” Busta v. Columbus Hosp. Corp., 916 P.2d 122, 139 (Mont. 1996). A party’s act is a cause-in-fact of an event if “the event would not have occurred but for that conduct.” Id. “Proximate cause is one which in a natural and continuous sequence, unbroken by any new, independent cause, produces injury, and without which the injury will occur.” Young v. Flathead County, 757 P.
+2d 772, 777 (Mont. 1988). An intervening act, such as a negligent or criminal act by a third party “will only cut off liability if it is unforeseeable.” Perez v. Station Casinos LLC, 2018 U.S. Dist. LEXIS 133769, at *5 (D. Nev. Aug 8, 2018) (quoting Bower v. Harrah’s Laughlin, Inc., 215 P. 3d 709, 724 (Nev. 2009)). The intervening acts of a third party that are foreseeable “do not break the chain of causation.” Creel v. Loy, 524 F. Supp. 3d 1090, 1100 (D. Mont. 2021) (quoting Fisher, 181 P. 3d at 609). Even in the presence of a third-party threat actor, courts in data breach cases have found the element of causation sufficiently plead at the motion to dismiss phase. See Teeter v. Easterseals-Goodwill Northern Rocky Mountain, Inc., 2023 WL 2330241, at *3 (D. Mont. Mar. 2, 2023).
+
+Financial Institution Plaintiffs sufficiently have alleged that Defendants were the cause-in-fact and proximate cause of Financial Institution Plaintiffs’ injuries.
+Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 23 of 36
+
+24
+Financial Institution Plaintiffs plausibly have alleged that Defendants could have foreseen the chain of negligent and criminal acts leading to Financial Institution Plaintiffs’ injury. Financial Institution Plaintiffs allege that Snowflake provided an option to implement MFA for Spoke Defendants, but that Snowflake’s default setting turned off MFA. (Doc. 393 ¶ 51.) It is reasonably foreseeable that Spoke Defendants would not have used the service when Snowflake’s default setting turned off MFA. Similarly, it is reasonably foreseeable that a threat actor would successfully perform a data breach.
+
+The acts by Spoke Defendants and the threat actors do not cut off liability for Snowflake when the acts were foreseeable. Snowflake, as a sophisticated data storing company, understood the foreseeable risks of data breaches and the importance of data security. (Doc. 393 ¶ 1-2, 31, 163.) Financial Institution Plaintiffs sufficiently have alleged that the Data Breach was foreseeable to Snowflake, specifically in the absence of MFA requirements and other security measures. (Doc. 504 at 42-44.) Financial Institution Plaintiffs also sufficiently have alleged that the Data Breach was foreseeable to Ticketmaster who had control of the information and PCD, including knowledge of what PCD was infiltrated and how the PCD was encrypted. (Doc. 503 at 39.)
+
+e. Damages
+Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 24 of 36
+
+25
+Defendants do not dispute that Plaintiffs adequately have plead damages.
+(Doc. 472 at 25-39; Doc. 504 at 26.) The Court will not address the element of damages beyond finding that Financial Institution Plaintiffs sufficiently have plead damages to survive a motion to dismiss their negligence claims.
+
+f. Economic Loss Doctrine (Ticketmaster)
+
+Ticketmaster contends that the economic loss doctrine bars Financial Institution Plaintiffs’ negligence claims. (Doc. 471 at 20.) Ticketmaster argues that the duties allegedly owed by Ticketmaster derive from contract and that the Financial Institution Plaintiffs alleged solely economic losses. (Id.) The economic loss doctrine precludes recovery in tort for alleged negligence on a topic covered by a contract unless the plaintiff can demonstrate non-economic losses, such as physical injury or property damages. Sheen v. Wells Fargo Bank, N.A., 505 P.3d 625, 632 (Cal. 2022). A party cannot recover in tort for purely economic losses.
+Urban Outfitters, Inc. v. Dermody Operating Co., LLC, 572 F. Supp. 3d 977, 995
+(D. Nev. 2021).
+
+Ticketmaster’s arguments on the economic loss doctrine depend upon the application of Louisiana law which the Court declines to apply at this point as discussed above. Montana does not generally recognize the economic loss doctrine and instead allows for pure economic damages to be recovered in tort actions.
+Jim’s Excavating Serv., Inc. v. HKM Assocs., 878 P.2d 248, 255 (Mont. 1994).
+Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 25 of 36
+
+26
+“Established law in Montana [further] abolish[ed] the requirement of privity of contract to maintain an action in tort.” Id. at 253. The Court determines that the economic loss doctrine does not bar Financial Institution Plaintiffs’ negligence claims.
+
+To the extent that the economic loss doctrine applies to Financial Institution Plaintiffs’ claims against Ticketmaster and Snowflake, the claims still survive a motion to dismiss because Financial Institution Plaintiffs also plead non-economic losses. In data breach cases, “courts within the Ninth Circuit have found that an individual’s loss of control over the use of their identity due to a data breach and the accompanying impairment in value of PII constitutes non-economic harms.”
+Smallman v. MGM Resorts Int’l, 638 F. Supp. 3d 1175, 1188 (D. Nev. 2022).
+Financial Institution Plaintiffs have plead an accompanying impairment in value of PII that they own due to their clients’ loss of control over their identity.
+(Doc. 393 at ¶ 88.) Financial Institution Plaintiffs also sufficiently have plead allegations of the loss of time and the imminent risk of future fraud and identity theft. (Id. at ¶ 183.) These allegations and related allegations in the pleadings constitute non-economic harms. Ceasars, 2025 U.S. Dist. LEXIS 159427, at *33.
+The economic loss doctrine does not preclude Financial Institution Plaintiffs’ negligence claim against Defendants.
+
+Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 26 of 36
+
+27
+III. FINANCIAL INSTITUTIONS PLAINTIFFS’ NEGLIGENCE PER SE CLAIMS
+Financial Institution Plaintiffs allege that they have sufficiently plead a negligence per se claim based on Defendants violations of the FTC Act. (Doc. 504 at 44; Doc. 503 at 40-42.) Negligence per se simply involves negligence that is established as a matter of law and usually arises from a statutory violation.
+Giambra v. Kelsey, 162 P.3d 134, 144 (Mont. 2007) (internal citation omitted).
+Negligence per se in Montana requires proof of the following elements: (1) the defendant violated a particular statute; (2) the legislature intended the statute to protect a specific class of persons; (3) the plaintiff is a member of that class; (4) the legislature intended the statute to prevent plaintiff's injury; and (5) the legislature intended the statute to regulate a member of defendant's class. Olson v. Shumaker Trucking & Excavating Contractors, Inc.,196 P.3d 1265, 1277 (Mont. 2008) (internal citation omitted). To establish the existence of negligence per se settles only the questions of duty and breach. A plaintiff still must prove causation before being entitled to recover. Id.
+
+Defendants argue that no private right of action exists under the FTC Act and that Montana requires a private right of action for a negligence per se claim.
+(Doc. 527 at 25, citing Doyle v. Clark, 254 P.3d 570, 577 (Mont. 2011); Doc. 524 at n.6.). Est. of Petersen v. Koelsch Senior Communities, LLC, No. CV 22-11- BLG-SPW-TJC, 2025 WL 953709, at *10 (D. Mont. Feb. 21, 2025), report and Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 27 of 36
+
+28 recommendation adopted sub nom. The court in Est. of Petersen by & through Petersen v. Koelsch Senior Communities, LLC, No. CV 22-11-BLG-SPW, 2025 WL 914401 (D. Mont. Mar. 26, 2025), held otherwise. Est. of Peterson specifically found Doyle to be an “outlier” and “distinguishable” from other negligence per se cases. Id. at 10. The Court recognizes the conflict in the case law and will adopt the more recent holding in Est. of Petersen. The Court finds that regulating data privacy proves more akin to regulating the “protect[ion] [] of individuals” than “the State’s interest in regulating the disposal of junk vehicles.” Id.
+Section 5 of the FTC Act prohibits “unfair or deceptive acts or practices in or affecting commerce.” 15 U.S.C. § 45. “As other courts have similarly decided, ‘the FTC Act can serve as the basis of a negligence per se claim.’” Johnson v. Nice Pak Prods., Inc., 736 F. Supp. 3d 639, 649 (S.D. Ind. 2024) (citing Perdue v. HyVee, Inc., 455 F. Supp. 3d 749, 760–61 (C.D. Ill. 2020); In re Ambry Genetics Data Breach Litig., 567 F. Supp. 3d 1130, 1143 (C.D. Cal. 2021).) Financial Institution Plaintiffs must sufficiently plead each element of a negligence per se claim resting on the claim that Snowflake allegedly violated the FTC Act.
+Financial Institution Plaintiffs have plead the following elements: (1) Defendants violated Section 5 of the FTC Act (Doc. 393 at ¶ 208); (2) the FTC Act was enacted to protect a specific class of persons (Id. at ¶ 210); (3) Financial Institution Plaintiffs are a member of the class of persons the FTC Act was Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 28 of 36
+
+29 intended to protect (Id. at ¶ 210); (4) the harm alleged by Financial Institution Plaintiffs’ involves the harm the FTC Act was intended to protect (Id. at ¶ 211); and (5) the FTC Act was intended to regulate members of Defendants’ class (Id. at ¶ 207-11.)
+
+Defendants contend that Financial Institution Plaintiffs’ pleadings remain insufficient as Financial Institution Plaintiffs are not in the class of persons whom the FTC Act was intended to protect. (Doc. 527 at 28; Doc. 524 at 24.) Defendants argue that Financial Institution Plaintiffs are not “consumers, competitors, or otherwise harmed by destruction of competition resulting from Defendant’s acts.”
+(Doc. 527 at 28, citing Bellwether Cmty. Credit Union v. Chipotle Mexican Grill, Inc., 353 F. Supp. 3d 1070, 1086 (D. Colo. 2018)).
+
+Other courts have rejected the same argument raised by Defendants. For example, the courts in Arby’s, Home Depot, and Wendy’s. In re Arby’s Rest. Grp.
+Inc. Litig., No. 1:17-CV-0514-AT, 2018 WL 2128441, at *8 (N.D. Ga. Mar. 5, 2018) (citing Home Depot, 2016 WL 2897520, at *4; First Choice Fed. Credit Union v. Wendy’s Co., No. CV 16-506, 2017 WL 9487086, at *4 (W.D. Pa. Feb.
+13, 2017), report and recommendation adopted, No. CV 16-506, 2017 WL 1190500 (W.D. Pa. Mar. 31, 2017)), specifically have determined that financial institutions plaintiffs fall within the class of persons protected by the FTC Act, either because the businesses themselves are consumers or are representatives of Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 29 of 36
+
+30 consumers. Id. Each of these courts found that “the harm alleged in having to reimburse customers for the fraud losses and costs associated with reissuance of cards ‘is the kind the statute meant to protect.’” Id. (citing Home Depot, 2016 WL 2897520, at *4.)
+
+Financial Institution Plaintiffs also sufficiently have plead that Defendants violated Section 5 of the FTC Act. Arby’s, No. 1:17-CV-0514-AT, 2018 WL 2128441, at *8, determined that plaintiffs sufficiently have alleged that the defendant violated the FTC Act when the plaintiffs, like the Financial Institution Plaintiffs here, alleged that: “(1) Section 5 of the FTCA prohibits ‘unfair practices in or affecting commerce’ including, as interpreted and enforced by the FTC, the unfair act or practice by retailers, restaurants and other businesses such as [Defendant’s] of failing to use reasonable measures to protect cardholder data;” (2) [Defendants] “violated Section 5 of the FTCA by failing to use reasonable measures to protect cardholder data and by not complying with applicable industry standards, including [applicable industry standards];” (3) “the FTC has pursued over fifty enforcement actions against businesses as a result of their failure to employ reasonable data security measures;” and (4) orders from these actions “provide further clarification of the measures businesses must take to meet their data security obligations.” (See Doc. 393 at ¶ 206-212 [similar allegations].)
+Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 30 of 36
+
+31
+Financial Institution Plaintiffs sufficiently have plead facts that they sustained damages to satisfy the causation element at this stage. Financial Institution Plaintiffs still will have to prove causation later in the proceedings to be entitled to recover from Defendants. See Olson, 196 P.3d at 1277; see In re Equifax, 362 F. Supp. 3d at 1328 (similar arguments in Georgia). The Court declines to dismiss Financial Institution Plaintiffs’ negligence per se claim at this stage in the proceedings.
+
+IV. FINANCIAL INSTITUTIONS PLAINTIFFS’ UNJUST ENRICHMENT CLAIMS
+Financial Institution Plaintiffs have alleged that (1) a benefit was conferred upon Defendants by the Financial Institution Plaintiff and putative Class Members;
+(2) Defendants knew about or appreciated the benefit; and (3) Defendants accepted or retained the benefit under circumstances rendering it inequitable for the recipient to do so. (Doc. 393 at ¶¶ 214–17, 220–22.) Defendants claim that Financial Institution Plaintiffs have not sufficiently alleged that they conferred a benefit upon Defendants or that they lack an adequate legal remedy. (Doc. 472 at 56-58; Doc. 471 at 41-42.)
+
+Unjust enrichment is a claim sounding in equity, which serves “to prevent or remedy inequitable gain by another.” Assoc. Mgmt. Serv. v. Ruff, 424 P.3d 571,
+594 (Mont. 2018). Montana law requires the following essential elements for an unjust enrichment claim: “(1) a benefit conferred on one party by another; (2) the Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 31 of 36
+
+32 other's appreciation or knowledge of the benefit; and (3) the other’s acceptance or retention of the benefit under circumstances that would render it inequitable for the other to retain the benefit without compensating the first party for the value of the benefit.” Id. at 595. Unjust enrichment is not available where an adequate legal remedy remains available to the claimant. Montana Digital, LLC v. Trinity Lutheran Church, 473 P.3d 1009, 1012 (Mont. 2020).
+
+Financial Institutions Plaintiffs’ pleadings have alleged that they conferred a benefit upon Snowflake by providing it with their valuable PCD. (Doc. 393 at ¶ 214.) Snowflake argues that it receives no benefit from simply storing PCD in a customer’s account. (Doc. 527 at 31.) The premise of Snowflake’s argument may appear logical on the face. This premise conflicts directly with the business model of a data privacy company, however, which depends directly upon the value of storing PCD. It is not necessarily access to the PCD itself that provides value to Snowflake, but rather the business of storing and protecting this PCD.
+Ticketmaster’s arguments suffer the same deficiencies. Indeed, it would be nonsensical to find that Ticketmaster did not receive benefit by way of receiving and retaining consumers’ PCD. It does not matter that Financial Institution Plaintiffs did not directly grant this value to Defendants, so long as it was given by a third party. See N. Cheyenne Tribe v. Roman Cath. Church ex rel. Dioceses of Great Falls/Billings, 296 P.3d 450, 457 (Mont. 2013).
+
+Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 32 of 36
+
+33
+Contrary to Defendants’ assertions, no controlling authorities hold that an unjust enrichment claim cannot be sustained when a plaintiff pleads legal claims in the alternative. (Doc. 527 at 34; Doc. 524 at 37-38.) For example, Snowflake cites Sonner v. Premier Nutrition Corp., 971 F.3d 834, 844 (9th Cir. 2020), and Klaehn
+v. Cali Bamboo LLC, No. 21-55738, 2022 WL 1830685, at *3 (9th Cir. June 3, 2022), which both discuss pleadings standards for the UCL. Although persuasive, neither case provides binding authority on an unjust enrichment claim under Montana law. N. Cheyenne Tribe made no specific holding, as Ticketmaster suggests, that unjust enrichment represents a narrow remedy available only when a plaintiff has proven no other adequate remedy may exist now, or at any point in the proceedings. N. Cheyenne Tribe, 296 P.3d at 457.
+
+Ticketmaster also argues that the VISA Global Compromised Account Recovery Program bars this claim as contractual rules of liability for alleged data incidents already protect Financial Institution Plaintiffs. (Doc. 524 at 35.) Other courts have already disposed of this argument. Arby’s, No. 1:17-CV-0514-AT, 2018 WL 2128441, at *13. Financial Institution Plaintiffs adequately have plead that legal remedies would not make them whole. The Court will not at this time dismiss Financial Institution Plaintiffs’ unjust enrichment claim against Defendants.
+
+Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 33 of 36
+
+34
+V. FINANCIAL INSTITUTIONS PLAINTIFFS’ DECLARATORY AND INJUNCTIVE
+RELIEF CLAIMS
+Defendants argue that Financial Institution Plaintiffs’ claim for Injunctive and Declaratory Relief fails based on the Ninth Circuit’s explicit holding that “the Declaratory Judgment Act does not provide an affirmative cause of action where none otherwise exists.” (Doc. 527 at 35, citing City of Reno v. Netflix, Inc., 52 F.4th 874, 878-79 (9th Cir. 2022); Doc. 524 at 40.) Financial Institution Plaintiffs argue that the Declaratory Judgement Act narrows the scope of City of Reno as it provides that “[i]n a case of actual controversy . . . any court of the United States, upon the filing of an appropriate pleading, may declare the rights and other legal relations of any interested party seeking such declaration, whether or not further relief is or could be sought.” (Doc. 504 at 55-56 quoting 28 U.S.C § 2201.)
+City of Reno clearly forecloses the use of the Declaratory Judgement Act without a separate affirmative cause of action. City of Reno repeatedly states that “the Declaratory Judgment Act does not provide an affirmative cause of action where none otherwise exists.” City of Reno, 52 F.4th at 878. The Ninth Circuit reasons that “[t]he availability of relief under the Declaratory Judgment Act ‘presupposes the existence of a judicially remediable right.’” Id. (citing Schilling v.
+Rogers, 363 U.S. 666, 677 (1960); see also Republic of Marshall Islands v. United States, 865 F.3d 1187, 1199 n.10 (9th Cir. 2017)). Financial Institution Plaintiffs’ argument that the Uniform Declaratory Judgment Act narrows City of Reno ignores Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 34 of 36
+
+35 the extensive case law and reasoning explained in City of Reno. The Court declines to adopt the reasoning from out-of-circuit courts rather than follow Ninth Circuit precedent. The Court will dismiss Financial Institution Plaintiffs’ claim for declaratory and injunctive relief.
+
+CONCLUSION
+The Court concludes that Financial Institution Plaintiffs have sufficiently plead an injury-in-fact, traceability, and redressability to establish Article III standing. The Court determines that Montana law most appropriately should be applied at the pleadings stage. The Court further concludes that Financial Institution Plaintiffs sufficiently have plead the elements of a negligence, negligence per se, and unjust enrichment claim against Defendants. The Court finds that the economic loss doctrine does not bar Financial Institution Plaintiffs’ negligence claim against Defendants. The Court will dismiss Financial Institution Plaintiffs’ claim for declaratory and injunctive relief.
+
+ORDER
+Accordingly, IT IS ORDERED:
+
+1. Defendant Snowflake’s Motion to Dismiss (Doc. 469) is GRANTED in part as to Count IV (Declaratory and Injunctive Relief) and DENIED in part as to Count I (Negligence), Count II (Negligence per se), and Count III (Unjust Enrichment).
+
+Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 35 of 36
+
+36
+2. Defendant Ticketmaster’s and Defendant LiveNation’s Motion to Dismiss (Doc. 470) is GRANTED in part as to Count IV (Declaratory and Injunctive Relief) and DENIED in part as to Count I (Negligence), Count II (Negligence per se), and Count III (Unjust Enrichment).
+
+DATED this 29th day of October, 2025.
+
+Case 2:24-md-03126-BMM-JTJ Document 592 Filed 10/29/25 Page 36 of 36
+
+
+-----

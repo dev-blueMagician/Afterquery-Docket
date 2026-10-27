@@ -1,0 +1,420 @@
+# D04 | docs/doc-04.txt
+
+1
+IN THE UNITED STATES DISTRICT COURT
+FOR THE DISTRICT OF MONTANA
+BUTTE DIVISION
+IN RE: SNOWFLAKE, INC., DATA
+SECURITY BREACH LITIGATION Cause No. 2:24-md-03126-BMM
+ORDER ON MOTIONS TO
+DISMISS CONSUMER
+PLAINTIFFS’ CLAIMS
+INTRODUCTION
+This multi-district litigation addresses an alleged “hub-and-spoke” data breach involving cloud-based data storage and analytics provider Defendant Snowflake, Inc. (“Snowflake”). (Doc. 1 ¶ 2.) Snowflake, the “hub,” stores secure sensitive data of numerous companies (“Spoke Defendants”) on Snowflake’s data cloud. (Id.)
+
+Plaintiffs include consumer customers of Ticketmaster, LLC and Live Nation Entertainment, Inc. (collectively, “Ticketmaster”) and LendingTree, LLC, and Quotewizard.com, LLC (collectively, “LendingTree”) (“Consumer Plaintiffs”); the Los Angeles Unified School District (“LAUSD Plaintiffs”); and financial institutions whose customers include Consumer Plaintiffs (“Financial Institution Plaintiffs”). Plaintiffs allege that the threat actors stole the data Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 1 of 46
+
+2
+Plaintiffs provided to the Spoke Defendants and stored on Snowflake’s cloud in the data breach (“Data Breach”).
+
+Plaintiffs filed a Fourth Amended Complaint (“FAC”) on July 9, 2025.
+(Doc. 485.) Plaintiffs FAC alleges claims against Defendant Snowflake for the interception of their data in the Data Breach. Plaintiffs’ FAC also alleges claims against Spoke Defendants Ticketmaster; Advance Auto Parts, Inc. and Advance Stores Company, Inc. (collectively, “Advance Auto”); LendingTree; AT&T, Inc.
+and AT&T Mobility, LLC (collectively, “AT&T”); Innive, Inc. (“Innive”) and certain “Doe” Defendants associated with the LAUSD Plaintiffs. (Doc. 485.)
+Snowflake filed a motion to dismiss Consumer Plaintiffs’ claims. (Doc.
+417.) Consumer Plaintiffs oppose Snowflake’s motion. (Doc. 474.) Ticketmaster filed a motion to dismiss Consumer Plaintiffs’ claims or alternatively, to strike Consumers’ Complaint. (Doc. 456.) Consumer Plaintiffs oppose Ticketmaster’s motion. (Doc. 488.) The Court held a hearing on October 6, 2025. (Doc. 569.)
+Consumer Plaintiffs filed the FAC after Defendants’ motions to dismiss. The Court considers Defendants’ arguments contained in the motions to dismiss previously filed against earlier amended complaints as applied to the newly filed FAC.
+BACKGROUND
+Snowflake provides its customers, Spoke Defendants, with a data cloud to store, analyze, and share its customers’ data. (Doc. 1 ¶ 158.) Threat actors used Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 2 of 46
+
+3 stolen credentials to access Spoke Defendants’ Snowflake accounts in April of 2024. (Id. ¶ 162-166.) The threat actors allegedly obtained the credentials by using malware installed on Spoke Defendants’ devices, including devices belonging to Ticketmaster. (Id. ¶ 163.) Consumer Plaintiffs allege that Spoke Defendants and Snowflake have promised they would take security measures to keep the Consumer Plaintiffs’ data safe. (Id. ¶¶ 390-91, 395-96, 624-26, 630-32.)
+
+Consumer Plaintiffs allege that the Data Breach easily could have been prevented by Snowflake and Spoke Defendants. (Id. ¶ 164.) Plaintiffs assert that Spoke Defendants had not enabled Multi-Factor Authentication (“MFA”). (Id. ¶ 168.) MFA adds an additional level of security by requiring the customer to provide their username and password and additionally authenticate their identity through another source, such as requiring the user to provide a passcode sent to the linked phone number or email. (Id.) Plaintiffs assert that Snowflake did not require Spoke Defendants to use MFA, the basic and industry-standard cybersecurity measure. (Id.) Snowflake offered free MFA to its customers, including Spoke Defendants since June 2015. (Id. ¶ 169.) Snowflake’s alleged default setting turned off MFA. (Id.) Plaintiffs further allege that the threat actors succeeded in the Data Breach due to Spoke Defendants’ stale credentials. (Id. ¶ 171.) Plaintiffs assert, lastly, that the Data Breach could have been prevented if Spoke Defendants’ access Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 3 of 46
+
+4 to Snowflake’s data cloud had been restricted by certain trusted locations. (Id. ¶ 173.)
+
+Snowflake announced the Data Breach on May 30, 2024, stating that Snowflake “became aware of potentially unauthorized access to certain customer accounts” and that Snowflake was “investigating an increase in cyber threat activity targeting some of our customers’ accounts.” (Id. ¶ 174.) The threat actors began posting advertisements to sell allegedly stolen data from the Data Breach on May 24, 2024. (Id. ¶ 175-178, 473, and 741.)
+
+Consumer Plaintiffs allege that the threat actors obtained from Ticketmaster the following stolen data from the Data Breach: “names, addresses, emails, and phone numbers, information regarding tickets purchased through Ticketmaster, order confirmation details, and credit card information, such as the last four digits of their payment cards and expiration dates.” (Id. ¶ 473.) Ticketmaster notified Consumer Plaintiffs of the Data Breach by a notice letter that explained that the exposed data “may include email, phone number, credit card information, as well as some other personal information provided to us.” (Id. ¶ 472.) The threat actor advertised on the dark web to possessing the following Consumer Plaintiff personal information: “560 million customers full details (name, address, email, phone), Ticket sales, event information, order details. CC detail – customer, last 4 of card, expiration date. customer fraud details [sic] much more.” (Id. ¶ 473.)
+Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 4 of 46
+
+5
+Consumer Plaintiffs allege that the exposure of their stolen information from the Data Breach has resulted in actual fraud and/or will result in actual or imminent identity theft and fraud. (Id. ¶ 229.) Consumer Plaintiffs allege various categories of injury including the following harms: (1) actual or attempted fraud; (2) potential and threatened risk of identity theft, misuse, or fraud; (3) spam calls and messages;
+(4) lost value of personally identifiable information (“PII”); (5) mitigation costs and lost time spent investigating and obtaining credit monitoring; (6) emotional distress; (7) PII leaked on the dark web; (8) invasion of privacy/unauthorized use; and (9) lack of the benefit of the bargain. (Doc. 1 ¶ 256.)
+
+LEGAL STANDARD
+Rule 8(a)(2) of the Federal Rules of Civil Procedure requires claimants to include in their complaint “a short and plain statement of the claim showing that the pleader is entitled to relief.” A motion to dismiss under Federal Rule of Civil Procedure 12(b)(6) tests the legal sufficiency of a complaint under the plausibility pleading standard of Rule 8(a)(2). See Navarro v. Block, 250 F.3d 729, 732 (9th Cir.
+2001). Dismissal proves appropriate under Rule 12(b)(6) where the complaint fails to state a claim upon which relief can be granted. Mendiondo v. Centinela Hospital Med. Ctr., 521 F.3d 1097, 1104 (9th Cir. 2008). A court may dismiss a complaint “based on the lack of a cognizable legal theory or the absence of sufficient facts Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 5 of 46
+
+6 alleged under a cognizable legal theory.” Balistreri v. Pacifica Police Dep’t, 901 F.2d 696, 699 (9th Cir. 1988).
+
+A complaint must contain sufficient factual matter to state a plausible claim for relief on its face to survive a Rule 12(b)(6) motion. Ashcroft v. Iqbal, 556 U.S.
+662, 678 (2009). A claim proves plausible on its face when “the plaintiff pleads factual content that allows the court to draw the reasonable inference that the defendant is liable for the misconduct alleged.” Id. The plausibility standard does not require probability, but “asks for more than a sheer possibility that a defendant has acted unlawfully.” Id. A court must “take[] as true and construe [] in the light most favorable to plaintiffs” all factual allegations set forth in the complaint. Lee v.
+City of Los Angeles, 250 F.3d 668, 688 (9th Cir. 2001) (internal quotation marks omitted).
+
+DISCUSSION
+Defendants Snowflake and Ticketmaster seek to dismiss Consumer Plaintiffs’ claims contained in the FAC on various grounds. Snowflake and Ticketmaster first contend that Consumer Plaintiffs lack Article III standing to assert their claims. (Docs. 418 at 25-45 and 457 at 37-51.) Snowflake and Ticketmaster next request dismissal of Consumer Plaintiffs’ claims for failure to state a claim upon which relief can be granted under Fed R. Civ. P 12(b)(6). The Court will address each issue in turn.
+
+Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 6 of 46
+
+7
+I. ARTICLE III STANDING
+“[T]hose who seek to invoke the jurisdiction of the federal courts must satisfy the threshold [sic] requirement imposed by Article III of the Constitution by alleging an actual case or controversy.” City of Los Angeles v. Lyons, 461 U.S. 95,
+101 (1983); Montana Wildlife Fed’n v. Bernhardt, No. 4:18-CV-69-BMM, 2021 WL 4865257, at *1 (D. Mont. June 21, 2021). Article III standing requires plausible allegations: (i) that the plaintiff suffered an injury in fact that is concrete, particularized and actual or imminent; (ii) that the injury in fact is fairly traceable to the defendant; and (iii) that the injury in fact would likely be redressed by judicial relief and a favorable decision. TransUnion LLC v. Ramirez, 594 U.S. 413,
+423 (2021); Friends of the Earth, Inc. v. Laidlaw Env’t Servs., Inc., 528 U.S. 167, 180-81 (2000) (citations omitted).
+
+a. Injury in Fact
+A plaintiffs’ alleged injury must be “concrete, particularized, and actual or imminent.” TransUnion, 594 U.S. at 423. “General allegations” of injury may suffice at the pleading stage. Lujan v. Defenders of Wildlife, 504 U.S. 555, 560-61 (1992). A complaint in a data breach case must set forth the nature of the stolen data, the manner of the breach, and the real-world harms that predictably would flow from that theft to establish standing. In re Zappos.com, Inc., 888 F.3d 1020, 1027 (9th Cir. 2018). Consumer Plaintiffs allege the following injuries: (1) actual Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 7 of 46
+
+8 or attempted fraud; (2) potential and threatened risk of identity theft, misuse, or fraud; (3) spam calls and messages; (4) lost value of personally identifiable information (“PII”); (5) mitigation costs and lost time spent investigating and obtaining credit monitoring; (6) emotional distress; (7) PII leaked on the dark web;
+(8) invasion of privacy/unauthorized use; and (9) lack of the benefit of the bargain.
+(Doc. 485 ¶ 256.)
+
+i. Consumer Plaintiffs who allege actual or attempted fraud
+Ticketmaster Consumer Plaintiffs have alleged that the Data Breach exposed their names, addresses, email addresses, phone numbers, credit card numbers, and information about their Ticketmaster purchases. (Doc. 485 ¶¶ 440-41.) Numerous Consumer Plaintiffs, including customers of Ticketmaster, allege that this exposure of personal information caused actual fraud, or attempted fraud, that occurred after the Data Breach. (Id. ¶¶ 25 (Anderson), 30 (Fitzgerald), 40 (Lozoya), 66 (Xian).)
+For example, Plaintiff Anderson, a customer of Ticketmaster, experienced fraudulent payment card activity in December of 2024 following the Data Breach.
+(Id. ¶ 25-26.) As a result, Anderson obtained new credit card information from his financial institution. (Id.) Consumer Plaintiffs who have alleged detection of actual or attempted fraud after the Data Breach sufficiently have alleged a concrete, injury in fact. Defendants’ arguments about whether actual or attempted fraud was possible or occurred remains more appropriately addressed in a summary judgment Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 8 of 46
+
+9 motion, not at the motion to dismiss stage. The Court must take as true the alleged facts in the FAC. Lee, 250 F.3d at 688.
+
+ii. Consumer Plaintiffs who alleged imminent risk of harm but no misuse of their information
+A plaintiff sufficiently alleges injury in fact by demonstrating a credible threat of real and immediate harm stemming from the theft of their personal information in circumstances where the plaintiff’s personal information has not yet been misused. In re Zappos.com, Inc., 888 F.3d at 1027 (citing Krottner v.
+Starbucks Corp., 628 F.3d 1139 (9th Cir. 2010)). The alleged harms of imminent risk may “only qualify as concrete injuries in fact when they are based on a risk of harm that is either ‘certainly impending’ or ‘substantial.’” Id. (quoting I.C. v.
+Zynga, Inc., 600 F. Supp. 3d 1034, 1052 (N.D. Cal. 2022)). For example, the court in Bass v. Facebook, Inc., 394 F. Supp. 3d 1024,1035 (N.D. Cal. 2019), determined it to be reasonable to assume that when hackers target and obtain consumers personal information “their goal was to commit further fraud and identity theft.”
+
+In Zappos, the plaintiffs sued after online hackers breached the defendant’s online server. 888 F. 3d at 1023. The hackers obtained names, account numbers, passwords, email addresses, billing and shipping addresses, telephone numbers, and credit and debit card information of over 24 million of the defendant’s customers. Id. The Ninth Circuit concluded that the plaintiffs sufficiently alleged Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 9 of 46
+
+10 standing due to the imminent risk of identity theft, even when the plaintiffs had not yet suffered actual misuse of the sensitive personal information. Id. at 1027. “[A] person whose PII has been obtained and compromised may not see the full extent of identity theft or identity fraud for years.” Id. at 1028–29.
+
+The facts resemble Zappos. The Data Breach exposed Consumer Plaintiffs’ sensitive data including their names, addresses, email addresses, phone numbers, credit card numbers, and information about their Ticketmaster purchases. (Doc.
+485 ¶¶ 440-41.) Consumer Plaintiffs who have not yet had their information misused following the Data Breach, sufficiently have alleged injury in fact due to the increased, imminent risk of fraud, identity theft, and other misuse of their personal information. (Doc. 474 at 20-21.) Consumer Plaintiffs have alleged that their information was sold on the dark web after the hackers obtained the data from Snowflake’s servers in April 2024. This allegation further establishes future misuse to be likely and imminent. (Doc. 485 ¶¶ 155-158.) Consumer Plaintiffs also contend that the Data Breach forced them to engage and invest in credit monitoring to establish injury. Medoff v. Minka Lighting, LLC, No. 2:22-CV-08885-SVWPVC, 2023 U.S. Dist. LEXIS 81398, at *4 (C.D. Cal. 2023). The fact that other Consumer Plaintiffs have alleged that actual fraud has occurred following the Data Breach further strengthens Consumer Plaintiffs’ argument that an imminent risk of identity theft or fraud is certainly impending.
+
+Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 10 of 46
+
+11
+Consumer Plaintiffs sufficiently have alleged that their personal information, given to Ticketmaster and stored on Snowflake’s server, was fraudulently obtained by hackers in the Data Breach. Consumer Plaintiffs also sufficiently have alleged that a credible and imminent threat exists due to the sensitive nature of the stolen data. Consumer Plaintiffs, despite not alleging actual instances of fraud, sufficiently have plead injury in fact to establish the first element of Article III standing. In re Zappos.com, Inc., 888 F.3d at 1027. As the Seventh Circuit recognized, plaintiffs “should not have to wait until hackers commit identity theft or credit-card fraud in order to give the class standing” when “there is an objectively reasonable likelihood such an injury will occur.” Remijas v. Neiman Marcus Grp., LLC, 794 F.3d 688, 693 (7th Cir. 2015).
+
+iii. Loss Value of Personally Identifiable Information (“PII”)
+
+A party may have a cognizable theory of damages for diminution in the value of PII when they allege “details about the existence of an economic market for selling stolen PII, including that PII can be bought and sold at identifiable prices on established market.” Smallman v. MGM Resorts Int’l, 638 F. Supp. 3d 1175, 1191 (D. Nev. 2022). Consumer Plaintiffs allege that their stolen personal information “is valuable property” (Doc. 485 ¶¶ 192, 195) and that a market exists for the stolen personal information. (Id. ¶¶ 197, 202-03.) Consumer Plaintiffs plausibly have alleged injury in fact due to the diminution in value of their PII by Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 11 of 46
+
+12 alleging that a market exists for the PII stolen in the Data Breach. Smallman, 638
+F. Supp. 3d at 1191.
+
+iv. Mitigation Efforts – lost time spent investigating, credit monitoring
+Consumer Plaintiffs allege that they have lost time and money on mitigation activities such as time spent investigating and credit monitoring, as well as future costs associated with credit monitoring. (Doc. 485 ¶¶ 238, 242, 249-50, 252.)
+Defendants argue that Plaintiffs’ mitigation conduct cannot confer standing when they inflicted the harm onto themselves. (Doc. 418 at 26.) The Court disagrees.
+“[C]ourts across the country have recognized that harms that result as a consequence of a plaintiff’s knowledge of a substantial risk of identity theft, including time and money spent responding to a data breach or emotional distress can satisfy concreteness.” In re Data Breach Sec. Litig. Against Caesars Ent.. Inc.
+2025 U.S. Dist. LEXIS 15947 at *19 (D. Nev. 2025) (quoting Medoff, 2023 U.S.
+Dist. LEXIS 81398, at *4 (collecting cases)). Injury in fact can be based on a “substantial risk that harm will occur, which may prompt plaintiffs to reasonably incur costs to mitigate or avoid that harm.” In re Adobe, 66 F. Supp. 3d at 1213 (quoting Clapper, 568 U.S. at 414 n.5). The Court in In re Yahoo! Inc, Customer Data Sec. Breach Litig., 999 F. 3d 1247, 1263 (11th Cir. 2021), determined that out-of-pocket mitigation expenses were sufficient to establish injury, such as allegations of injury for payments made for credit monitoring services.
+Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 12 of 46
+
+13
+Consumer Plaintiffs have established that a substantial risk of harm is certain as explained above. Consumer Plaintiffs sufficiently have alleged injury due to the mitigation injuries incurred following the Data Breach. Consumer Plaintiffs’ allegations of lost time and money investigating their accounts, mitigating the theft of future identity theft, and paying for credit monitoring services establishes injury in fact.
+
+v. Benefit of the Bargain / Overpayment (Ticketmaster)
+
+Consumer Plaintiffs assert that each purchase of tickets on Ticketmaster resulted in a service fee wherein Ticketmaster promised Consumer Plaintiffs that the service fee “covers the costs of the technology, people, and resources needed to provide a safe and secure ticket-buying experience.” (Doc. 485 ¶ 428-30.)
+Consumer Plaintiffs further claim that Ticketmaster failed to use the service fees paid by them to promote additional security measures. (Id. ¶ 430.) Ticketmaster opted not to implement MFA and did not encrypt the Consumer Plaintiffs sensitive information. (Id.) Consumer Plaintiffs allege that they did not receive the benefit of the bargain for the service fees paid to Ticketmaster to establish an injury in fact.
+(Doc. 485 ¶¶ 428-430.)
+
+In Smallman, the trial court found that a benefit-of-the-bargain theory could support the finding of injury in fact when the plaintiffs “overpaid for hotel services that should have been—but were not—accompanied by reasonable data security.”
+Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 13 of 46
+
+14
+638 F. Supp. 1189-90. Similarly, in Baton v. Ledger SAS, 740 F. Supp. 3d 847, 877 (N.D. Cal. 2024), the trial court determined that the plaintiff had “purchased the product with the expectation that the PII he provided in connection with the purchase would be secure . . .. He did not get the benefit of the bargain.”
+Ticketmaster Consumer Plaintiffs sufficiently have plead that they did not receive the benefit of the bargain to establish an injury in fact. Consumer Plaintiffs were promised a safe and secure ticket-buying experience in exchange for providing the service fee to Ticketmaster. Like Baton, Consumer Plaintiffs expected that the PII given to Ticketmaster in connection to the purchase of tickets would remain secure. Consumer Plaintiffs’ payment of the service fee derived from the fact that Ticketmaster had promised to provide a secure experience.
+Consumer Plaintiffs allegations that Ticketmaster did not implement the necessary security measure to fulfill this promise sufficiently alleges injury in fact under a benefit of the bargain theory.
+
+vi. Emotional distress
+A party may establish standing based on alleged emotional distress when an imminent and credible risk of fraud or identity theft exists. Patterson, 2022 WL 2267673, at *2; Krottner, 628 F.3d at 1142. Plaintiffs allege that they suffered “aggravation, agitation, anxiety, anguish, loss of dignity, intrinsic harm, and emotional distress” as a result of the Data Breach. (Doc. 485 ¶¶ 253.) These Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 14 of 46
+
+15 emotional distress allegations suffered by Consumer Plaintiffs establish injury in fact due to the imminent risk of harm.
+
+b. Traceability
+Defendants next contend that Consumer Plaintiffs have failed to establish Article III standing because the alleged injuries are not “fairly traceable” to the Defendants and the Data Breach. (Doc. 418 at 39; Doc. 457 at 49-50.) Defendants take issue with Consumer Plaintiffs who did not receive a Data Breach notification letter and those who alleged fraudulent transfers have taken place without alleging the exposure of CVV codes in the Data Breach. (Doc. 418 at 28-29; Doc. 457 at 50-51.)
+
+To establish traceability for standing, a party must identify the requisite underlying connection between their stated harms and the Data Breach. Bass v.
+Facebook, Inc., 394 F. Supp. 3d 1024, 1036 (N.D. Cal. 2019). A party does not need to establish proximate causation to establish Article III standing. In re Data Breach Sec. Litig. Against Caesars Ent. Inc. 2025 U.S. Dist. LEXIS 15947 at *27 (citing Lexmark Int’l, Inc. v. Static Control Components, Inc., 572 U.S. 118, 134 (2014)). Courts have held that the plaintiffs’ receipt of a “letter that [they were or may have been] subject to the Data Breach” satisfies traceability. Stallone v.
+Farmers Grp., Inc., 2022 WL 10091489, at *9 (D. Nev. Oct. 15, 2022); Huynh v.
+Quora, Inc., 2019 WL 11502875, at *4 (N.D. Cal. Dec. 19, 2019). Consumer Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 15 of 46
+
+16
+Plaintiffs allege that a majority received notice letters from Ticketmaster and other Spoke Defendants that their data may have been exposed in the Data Breach. (Doc.
+485 ¶ 24, 39, 44, 48, 56, 60, 65.) Those Consumer Plaintiffs that received a notice letter about the Data Breach have established traceability. Stallone, 2022 WL 10091489, at *9.
+
+Those Consumer Plaintiffs who did not receive a notice from Spoke Defendants that their data may have been exposed in the Data Breach still can establish traceability (Plaintiffs Fitzgerald, Garcia-Nixon, and Neve). Consumer Plaintiffs allege that their personal information appeared for sale on the dark web following the Data Breach. (Doc. 485 ¶ 24, 29, 61, 441.) Consumer Plaintiffs allege that they began to suffer harm shortly after the Data Breach. (Doc. 485 ¶¶ 25, 30, 35, 40, 49, 57, 66.) The court in Landon v. TSC Acquisition Corp., 2024 WL 5317240, at *4 (C.D. Cal. Nov. 1, 2024), concluded that it was reasonable to infer that the postings to the dark web following a data breach were traceable to the data breach at issue. A court may consider the cumulative nature of the allegations and whether they “fall like dominos, layering on one another to create reasonable inferences” to support traceability. Bozek v. Arizona Lab. Force Inc., 2025 WL 264174, at *4 (D. Ariz. Jan. 22, 2025).
+
+The Court finds that the following allegations by Consumer Plaintiffs’ create a reasonable inference that Consumer Plaintiffs’ injuries are connected to the Data Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 16 of 46
+
+17
+Breach: 1) that they were customers who provided their information to Spoke Defendants; 2) that Spoke Defendants’ data was stolen by threat actors; 3) that they observed postings online by hackers who were selling the stolen data from the Data Breach; and 4) that they experienced harms related to the Data Breach. The dark web postings include claims that the information had been retrieved from Spoke Defendants “Livenation / Ticketmaster.”
+
+It proves reasonable to infer that Consumer Plaintiffs’ information that had been exposed in the Data Breach plausibly could have been used to commit fraud and harm to Consumer Plaintiffs. This inference seems especially true given the sensitive nature of the PII exposed and the fact that Consumer Plaintiffs data appeared for sale on the dark web. Consumer Plaintiffs who suffered injuries following the Data Breach and following receipt of notification that their data may have been exposed establish traceability.
+
+Consumer Plaintiffs further allege that Visa issued over a hundred Compromised Account Management System (“CAMS”) alerts that indicate that the Data Breach compromised unique payment card numbers. (Doc. 485 ¶ 475.) The Court considers Consumer Plaintiffs’ allegations that fraudulent transfers took place based on the information exposed in the Data Breach and that the Visa CAMS indicated the information had been exposed. These two factors make Consumer Plaintiffs’ allegations at least plausible that the fraudulent transactions Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 17 of 46
+
+18 incurred by Consumer Plaintiffs were related and traceable to the Data Breach.
+Defendants’ arguments suggesting that the fraudulent transfers were impossible given the nature of the data exposed more properly should be raised at summary judgment after the parties have engaged in discovery. Consumer Plaintiffs that alleged actual or attempted fraud sufficiently have established that their injuries are fairly traceable to the Data Breach.
+
+c. Redressability
+Defendants contend that the injuries suffered by Consumer Plaintiffs prove speculative, and, therefore, redressability of those injuries also proves speculative.
+(Doc. 418 at 45; Doc. 474 at 43-44.) The Court disagrees. A plaintiffs must establish that “it [is] ‘likely,’ as opposed to merely ‘speculative,’ that the injury will be redressed by a favorable decision.” Greenstein, 2022 WL 17418972, at *5 (quoting Lujan, 504 U.S. at 560–61). The Court determined that Consumer Plaintiffs have plead actual, concrete injuries. As a result, Consumer Plaintiffs have established that a favorable decision likely would redress these concrete injuries. Consumer Plaintiffs sufficiently have plead an injury in fact, traceability, and redressability to establish Article III Standing.
+
+II. CONSUMER PLAINTIFFS’ NEGLIGENCE CLAIMS
+A plaintiff must allege the following to establish a negligence claim: the defendant owed them a duty of care, the defendant breached that duty of care, the Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 18 of 46
+
+19 plaintiffs’ injury was caused by the defendant’s breach, and the plaintiffs suffered damages. Md. Cas. Co. v. Asbestos Claims Ct., 460 P.3d 882, 893 (Mont. 2020).
+a. Duty
+Snowflake contends that it owes no duty to protect Consumer Plaintiffs from the risk of harm caused by third party threat actors. (Doc. 418 at 46.) Consumer Plaintiffs allegations of duty assert, however, that Ticketmaster owed a duty to take reasonable steps in “obtaining, retaining, securing, safeguarding, and deleting” Consumer Plaintiffs’ data in its possession. Consumer Plaintiffs further allege that Snowflake had a “duty to implement adequate data security systems, protocols, and practices to protect” Consumer Plaintiffs’ data. (Doc. 485 ¶¶ 295, 579.) The Court declines to engage in discussion on Snowflake’s duty “to protect others from the risks of harm directly caused or created by third parties unless a qualifying special relationship or affirmative undertaking existed or occurred under the circumstances at issue.” Md. Cas. Co., 406 P. 3d at 895. The allegations outlined by Consumer Plaintiffs on the duty of care relate to the actions or failures by Defendants, not duties related to harms caused by third parties.
+
+The Montana Supreme Court has stated, “[a]t the most basic level, we all share the common law duty to exercise the level of care that a reasonable and prudent person would under the same circumstances.” Fisher v. Swift Transp. Co.,
+181 P.3d 601, 606 (Mont. 2008). The analysis of duty, under Montana law, “turns Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 19 of 46
+
+20 primarily on foreseeability.” Poole ex rel. Meyer v. Poole, 1 P.3d 936, 939 (Mont.
+2000). In determining whether a duty exists, a court asks, “whether the defendant could have reasonably foreseen that his or her conduct could have resulted in an injury to the plaintiff.” Fisher, 181 P.3d at 607 (quoting Hinkle v. Shepherd Sch.
+Dist. No. 37, 93 P.3d 1239, 1245 (Mont. 2004)). The court in In re Equifax, Inc., Customer Data Sec. Breach Litig., 362 F. Supp. 3d 1295, 1325 (N.D. Ga. 2019), similarly determined that a defendant owed a duty of care to safeguard the personal information in its custody because defendants “knew of a foreseeable risk to its data security systems but failed to implement reasonable security measures.”
+Consumer Plaintiffs sufficiently have alleged that Snowflake owed a duty to Consumer Plaintiffs to survive a motion to dismiss. Consumer Plaintiffs adequately allege that the risk of harm to their data proved foreseeable to both Ticketmaster and Snowflake. Consumer Plaintiffs allege that Ticketmaster’s parent company explicitly reported that it faced data security risks two months before the Data Breach. (Doc. 485 ¶ 462.) Consumer Plaintiffs allege that Defendants understand the importance of data security, data breaches prove common, and that Defendants could have taken steps to prevent this Data Breach. (Doc. 485 ¶¶ 1-5, 7-9, 167-78, 244-48, 466.) Consumer Plaintiffs plausibly allege that Defendants owed a duty of care to provide additional security measures, such as MFA requirements and Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 20 of 46
+
+21 implementation, to protect Consumer Plaintiffs’ data from foreseeable risk of harm.
+
+b. Breach
+To sufficiently plead breach, Plaintiffs “must be clear on the relevant standard of care . . . the source of that standard, and what factual allegations show that the duty was breached.” Jasso v. Citizens Telecommc’ns Co., 2007 WL 97036, at *5 (E.D. Cal. Jan. 9, 2007). Snowflake represented that it “provides industryleading features that ensure the highest levels of security for you and your account users, as well as all the data you store in Snowflake.” (Doc. 485 ¶ 271.) Consumer Plaintiffs allege that the industry standard for cyber security required Snowflake to have taken precautionary measures. Consumer Plaintiffs claim that Snowflake breached their duties by failing to take precautionary measures that were allegedly the industry standard for cyber security.
+
+Consumer Plaintiffs’ FAC includes specific factual allegations about how Snowflake breached its duty of care to Consumer Plaintiffs. (Doc. 474 at 51.) For example, Consumer Plaintiffs allege that Snowflake failed to require MFA or automatically opt Spoke Defendants into using MFA, failed to monitor account credentials, failed to require password rotation, failed to restrict access to trusted IP addresses, and failed to disable inactive accounts. (Doc. 485 ¶¶ 164-173, 286-91, Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 21 of 46
+
+22
+294, 296.) Consumer Plaintiffs sufficiently have alleged that Snowflake breached the duty of care owed to them. See Ceasars, 2025 U.S. Dist. LEXI 159427 at *32.
+c. Causation
+Snowflake argues that Consumer Plaintiffs failed to allege the element of causation because it was Spoke Defendants who failed to implement MFA, network access policies, and other security measures causing injury to Consumer Plaintiffs. (Doc. 418 at 57.) “[P]roof of causation is satisfied by proof that a party’s conduct was a cause-in-fact of the damage alleged.” Busta v. Columbus Hosp.
+Corp., 916 P.2d 122, 139 (Mont. 1996). A party’s act is a cause-in-fact of an event if “the event would not have occurred but for that conduct.” Id. “Proximate cause is one which in a natural and continuous sequence, unbroken by any new, independent cause, produces injury, and without which the injury will occur.”
+Young v. Flathead County, 757 P. 2d 772, 777 (1988).
+
+An intervening act, such as a negligent or criminal act by a third party, “will only cut off liability if it is unforeseeable.” Perez v. Station Casinos LLC, 2018 U.S. Dist. LEXIS 133769, at *5 (D. Nev. Aug. 8, 2018) (quoting Bower v.
+Harrah’s Laughlin, Inc., 215 P. 3d 709, 724 (Nev. 2009). The intervening acts of a third party that are foreseeable “do not break the chain of causation.” Creel v. Loy,
+524 F. Supp. 3d 1090, 1100 (D. Mont. 2021) (quoting Fisher, 181 P. 3d at 609).
+Even in the presence of a third-party threat actor, courts in data breach cases have Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 22 of 46
+
+23 found the element of causation sufficiently plead at the motion to dismiss phase.
+See Teeter v. Easterseals-Goodwill Norther Rocky Mountain, Inc., 2023 WL 2330241, at *3 (D. Mont. Mar. 2, 2023).
+
+Consumer Plaintiffs sufficiently have alleged that Snowflake’s conduct was the cause-in-fact and proximate cause of Consumer Plaintiffs’ injuries. Consumer Plaintiffs plausibly have alleged that Snowflake could have foreseen the chain of alleged negligent and criminal acts leading to Consumer Plaintiffs’ injuries.
+Consumer Plaintiffs allege that Snowflake provided an option to implement MFA for Spoke Defendants. Consumer Plaintiffs allege, however, that the default setting provided by Snowflake turned off MFA. (Doc. 485 ¶ 169.) It is reasonably foreseeable that Snowflake’s decision to having MFA defaulted to off would lead to Spoke Defendants not using the MFA service.
+
+Similarly, it is reasonably foreseeable that a threat actor successfully would execute a data breach. The acts or omissions by Spoke Defendants and the threat actors do not cut off Snowflake’s potential liability when the acts or omissions were foreseeable. Snowflake, as a sophisticated data storing company, understood the foreseeable risks of data breaches and the importance of data security. (Doc.
+485 ¶ 7.) Consumer Plaintiffs sufficiently have alleged that the Data Breach would have been foreseeable to Snowflake, specifically in the absence of an MFA requirement and other security measures. (Doc. 474 at 56.)
+
+Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 23 of 46
+
+24
+d. Damages
+Ticketmaster argues that Consumer Plaintiffs’ damages are not recoverable due to the insufficient allegations of injury-in-fact. (Doc. 457 at 72.) Ticketmaster relies on Weaver v. Aetna Life Ins. Co., 2008 WL 4833035, at *4 (D. Nev. Nov. 4, 2008). The Weaver court dismissed a plaintiff’s negligence claim for lack of damages and reasoned that it did so based on the same reasons that it had addressed in its Article III standing analysis. Id. The Court discussed at length that Consumer Plaintiffs sufficiently have alleged injury. For the same reasons above discussing Article III standing and injury-in-fact, Consumer Plaintiffs sufficiently have alleged the element of damages to survive a motion to dismiss the negligence claims.
+
+e. Economic Loss Doctrine (Ticketmaster)
+
+Ticketmaster contends that the economic loss doctrine bars Consumer Plaintiffs’ negligence claims. (Doc. 4577 at 69.) Ticketmaster argues that the duties allegedly owed by Ticketmaster derive from contract and that Consumer Plaintiffs have alleged only economic losses. (Id.) Plaintiffs counter that they have alleged three distinct types of non-economic losses: 1) loss of control over the use of their information; 2) time spent responding to the Data Breach; and 3) emotional distress. (Doc. 488 at 72.)
+
+Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 24 of 46
+
+25
+The economic loss doctrine precludes recovery in tort for alleged negligence on a topic covered by a contract unless a plaintiff also can demonstrate noneconomic losses, such as physical injury or property damages, exist. Sheen v. Wells Fargo Bank, N.A., 505 P.3d 625, 632 (Cal. 2022). A party cannot recover in tort for purely economic losses. Urban Outfitters, Inc. v. Dermody Operating Co., LLC, 572 F. Supp. 3d 977, 995 (D. Nev. 2021). In data breach cases, “courts within the Ninth Circuit have found that an individual’s loss of control over the use of their identity due to a data breach and the accompanying impairment in value of PII constitutes non-economic harms.” Smallman, 638 F. Supp. 3d at 1188.
+Consumer Plaintiffs sufficiently have plead allegations of the loss of use of their identity because of the Data Breach, loss of time, and imminent risk of identity theft. These allegations constitute non-economic harms. Smallman, 638 F.
+Supp. 3d at 1188; Ceasars, 2025 U.S. Dist. LEXIS 159427, at *33. The economic loss doctrine does not preclude Consumer Plaintiffs’ negligence claims against Defendants.
+
+III. CONSUMER PLAINTIFFS’ MONTANA CPA CLAIM
+Consumer Plaintiffs allege a violation of Montana Unfair Trade Practices & Consumer Protection Act (“Montana CPA”). Mont. Code Ann. § 30-14-101, et seq. To state a claim under the Montana CPA, Plaintiffs must allege the following elements: (1) that Plaintiffs were consumers of defendant’s services; (2) that the Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 25 of 46
+
+26 defendant employed an unfair or deceptive act or practice in the conduct of trade or commerce with plaintiffs; (3) causation; and (4) ascertainable loss. See Kostelecky
+v. Peas in a Pod LLC, 518 P.3d 840, 861 (Mont. 2022), citing Mont. Code Ann. § 30-14-101, et seq.
+
+a. Consumers of Snowflakes’ services
+Snowflake argues that Consumer Plaintiffs’ Montana CPA claim fails because Consumer Plaintiffs were not consumers of Snowflake’s services. (Doc.
+418 at 60-61.) Montana law defines a “consumer” as “a person who purchases or leases goods, services, real property, or information primarily for personal, family, or household purposes.” Mont. Code. Ann. § 30-14-102(1). Montana “[c]ourts have recognized that a person need not purchase the product directly from the defendant in order to qualify as a ‘consumer.’” Moore v. Wells Fargo Bank, 2015 WL 13767367, at *2 (D. Mont. Nov. 25, 2015). The Montana courts instead require that the plaintiff “prove that he purchased or leased some product or service which the defendant played a role in providing.” Id. (emphasis added).
+Consumer Plaintiffs allege that they have purchased goods such as concert tickets and lending/insurance services from Spoke Defendants. Consumer Plaintiffs allege that Snowflake played a part in providing those concert tickets or lending/insurance services based on Spoke Defendants having made promises about data security relying on the services that Snowflake provides to them.
+Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 26 of 46
+
+27
+Snowflake plausibly played a role in providing the services that Spoke Defendants offered. Spoke Defendants could not have promised secure data storage without Snowflake’s services. Snowflake provided the promised secure data storage to which Consumer Plaintiffs agreed in exchange for Consumer Plaintiffs purchasing goods and services from Spoke Defendants and providing their sensitive information. Consumer Plaintiffs allege that “they had a relationship with Snowflake as a result of Snowflake maintaining their most sensitive data.” (Doc.
+485 ¶ 343.) Snowflake’s Shared Responsibility Model further emphasizes the role Snowflake played in providing protection to Consumer Plaintiffs’ data. Although not directly, Consumer Plaintiffs are consumers of Snowflake through the intermediary, Spoke Defendants. Consumer Plaintiffs’ plausibly have alleged that Consumer Plaintiffs are consumers of Snowflake’s services under the Montana CPA claim.
+
+b. Unfair or deceptive acts by Defendants
+Defendants next contend that Consumer Plaintiffs failed to plead that Defendants engaged in an unfair or deceptive practice. (Doc. 418 at 61; Doc. 457 at 73.) The Montana Supreme Court has determined that an “unfair act” is “one which offends established public policy and which is either immoral, unethical, oppressive, unscrupulous, or substantially injurious to consumers.” Roher v.
+Knudsen, 203 P. 3d 759, 764 (Mont. 2009). “A deceptive act, on the other hand, is Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 27 of 46
+
+28 one that is likely to mislead consumers,” where “[f]alse representations as to the characteristics, use, or benefits of what is being sold may constitute a deceptive act.” Est. of Petersen v. Koelsch Senior Cmtys., LLC, No. CV 22-11-BLG-SPWTJC, 2025 WL 953709, at *14 (D. Mont. Feb. 21, 2025), report and recommendation adopted, No. CV 22-11-BLG-SPW, 2025 WL 914401 (D. Mont.
+Mar. 26, 2025) (citations and quotations omitted). Courts interpreting the Montana CPA also consider (1) the FTC’s and federal courts’ interpretations of the FTC Act, and (2) the Montana Department of Justice rules. Anderson v. ReconTrust Co., N.A., 407 P. 3d 692, 700 (Mont. 2017). “Whether the defendant’s conduct meets the definitions of an unfair or deceptive act or practice is generally a question for the jury.” Koelsch Senior Cmtys., 2025 WL 953709, at *13.
+
+Consumer Plaintiffs allege in the FAC that “the FTC’s enforcement actions have established that a company’s failure to maintain reasonable and appropriate data security of consumer Personal Information violates the FTC Act’s prohibition on ‘unfair or deceptive acts.’” (Doc. 485 ¶ 180, citing FTC v. Wyndham Worldwide Corp., 799 F.3d 236, 244-47 (3d Cir. 2015)). Consumer Plaintiffs claim that the allegations of Defendants’ failure to implement reasonable security measures constitute as an “unfair and deceptive” practice. Consumer Plaintiffs’ allegations against Snowflake involve allegations of unfairness while the claims against Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 28 of 46
+
+29
+Ticketmaster involve allegations of unfairness and deceptive representations directly to the Consumer Plaintiffs.
+
+Snowflake had a Shared Responsibility Model and Security Addendum wherein both Spoke Defendants and Snowflake agreed to take appropriate security measures to ensure that Consumer Plaintiffs’ PII remained secure. (Doc. 418 at 62.) The circumstances here prove similar to the FTC’s enforcement action in In the Matter of Blackbaud, Inc., No. C-4804, 2024 WL 2724023, at *1 (F.T.C. May 17, 2024). The FTC asserted claims against a cloud service provider for a data breach. Id. Consumer Plaintiffs’ allegations of Snowflake’s failure to implement industry standards as a data cloud service provider in protecting Consumer Plaintiffs’ PII establish an “unfair” act at the motion to dismiss stage.
+Consumer Plaintiffs also allege that Ticketmaster made a deceptive representation that the service fee paid by Consumer Plaintiffs would “cover the cost of technology, people, and resources needed to provide a safe and secure ticket-buying experience” when Ticketmaster instead failed to adopt adequate security measures like the use of MFA or encryption of sensitive data. (Doc. 485 ¶ 519-20.) Consumer Plaintiffs assert that Ticketmaster’s conduct additionally proves unfair. Ticketmaster failed to meet the profits it made from the payment of Consumer Plaintiffs’ service fees with the appropriate measures to protect Consumer Plaintiffs’ PII. (Doc. 485 ¶ 456.) These allegations sufficiently allege an Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 29 of 46
+
+30 unfair or deceptive practice by Defendants as required under a Montana CPA claim.
+
+Ticketmaster argues that appropriate measures like hashing out credit card information were taken. Consumer Plaintiffs detail in the FAC how hashing, as opposed to encrypting payment card information, proves insufficient. (Doc. 485 ¶ 457-61.) Defendants’ arguments relating to whether they implemented reasonable and appropriate security measures represents a factual dispute to be decided by the jury. The Court is obligated at this stage to take as true all the allegations contained in the FAC. Lee, 250 F.3d at 688.
+
+c. Causation
+Ticketmaster argues that Consumer Plaintiffs’ Montana CPA claim fails because Consumer Plaintiffs did not allege causation or that they relied on any false statement made by Defendants to their financial detriment. (Doc. 457 at 75.)
+The Montana Supreme Court determined in Anderson that the plaintiffs’ Montana CPA claim failed because “the amended complaint was devoid of any factual assertion that, but for their reliance on [the defendant’s] initial alleged misrepresentation regarding their loan modification eligibility, [the plaintiffs] would have” not been harmed. 407 P. 3d at 700. Other courts have found no causation under a Montana CPA claim where “there [was] no evidence Plaintiffs Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 30 of 46
+
+31 were even aware of the representations or relied upon them to their financial detriment.” Koelsch Senior Cmtys., 2025 WL 953709, at *14.
+
+Consumer Plaintiffs allege that they would have purchased tickets elsewhere, or not at all, if they had been aware that Ticketmaster would not have adequately protected their personal information. (Doc. 485 ¶ 28, 33, 38, 43, 47, 51, 55, 59, 64, 69, 432.) Consumer Plaintiffs alleged that they expected Ticketmaster to provide a safe and secure ticket-buying experience by paying the added service fee to obtain concert tickets. Consumer Plaintiffs further allege that they “relied upon . . . Ticketmaster’s express and implied commitments to protect the privacy of their Personal Information when they decided to utilize Ticketmaster’s services.” (Id. ¶ 444.)
+
+Further, Plaintiffs adequately allege that the unfair acts conducted by Snowflake, such as failing to implement adequate security measures, caused injury to Consumer Plaintiffs. The Court previously determined that Consumer Plaintiffs have suffered ascertainable damages from the alleged security measure failures by Defendants. These allegations prove sufficient to establish causation and damages under a Montana CPA claim to survive a motion to dismiss.
+
+IV. CONSUMER PLAINTIFFS’ MASSACHUSETTS GENERAL LAW
+CHAPTER 93A CLAIM (“MASSACHUSETTS CPA”) (SNOWFLAKE)
+
+“To succeed on a claim based on a deceptive act or practice, a consumer must show (1) a deceptive act or practice on the part of the seller; (2) an injury or Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 31 of 46
+
+32 loss suffered by the consumer; and (3) a causal connection between the seller’s deceptive act or practice and the consumer’s injury.” Gottlieb v. Amica Mut. Ins.
+Co., 57 F.4th 1, 10 (1st Cir. 2022) (quotation and citation omitted).
+a. Private right of action
+Snowflake claims that Consumer Plaintiffs have no private right of action for Data Breach related claims under the Massachusetts CPA Chapter 93A. (Doc.
+418 at 64.) Snowflake argues that Mass. Gen. Laws Ch. 93H governs claims relating to data breaches, not Massachusetts CPA Chapter 93A. (Id.)
+Consumers have no private right of action under Chapter 93H. The power to enforce claims under Chapter 93H rests solely with the Massachusetts Attorney General. Mass. Gen. Laws Ch. 93H, § 6. “[T]he power to enforce Chapter 93H is limited to the State Attorney General – the statute does not incorporate or otherwise authorize a private right of action.” Katz v. Pershing, LLC, 806 F. Supp.
+2d 452, 458 (D. Mass. 2011).
+
+The regulations set forth in 201 Mass. Code Regs. § 17.00 et seq., related to data security and data breaches implement the provisions of Ch. 93H. The regulations “establish [the] minimum standards to be met in connection with the safeguarding of personal information contained in both paper and electronic records.” 201 Mass. Code Regs. § 17.00 et seq. The district court in Katz concluded that “[the plaintiff] cannot maintain an action under Chapter 93A based Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 32 of 46
+
+33 on an alleged violation of Chapter 93H.” 806 F. Supp. 2d at 458-59 (citing Owen Weaver, A Missed Opportunity to Bolster Consumer Protection in Massachusetts:
+How Massachusetts Residents Are Still Without a Private Right of Action After the TJX Security Breach, 43 NEW ENG. L. REV. 677, 704-706 (2009)).
+
+Other courts routinely have allowed consumers to make claims under the Massachusetts CPA. These claims generally relate to unfair and deceptive practices under Chapter 93A for data security breaches and data security failures. See In re MAPFRE Data Disclosure Litig., 2025 WL 975669, at *15 (D. Mass. Mar. 31, 2025); In re Shields Health Care Grp., Inc. Data Breach Litig., 721 F. Supp. 3d 152, 169 (D. Mass. 2024); In re LastPass, 742 F. Supp. 3d at 131; In re Am. Med.
+Collection Agency, Inc. Customer Data Sec. Breach Litig., 2021 WL 5937742, at *31 (D.N.J. Dec. 16, 2021); see also In re TJX Cos. Retail Sec. Breach Litig., 524
+F. Supp. 2d 83, 95 (D. Mass. 2007). For example, in In re Shields Health Care Grp., Inc. Data Breach Litig., the court denied the defendant’s motion to dismiss the consumer plaintiffs’ Massachusetts CPA claim under Chapter 93A when the allegations stemmed from defendant’s “fail[ure] to keep their private information safe.”
+
+Consumer Plaintiffs’ Massachusetts CPA claim relies on Snowflake’s alleged failures to meet the reasonable standards in protecting Consumer Plaintiffs’ PII. Courts have held such allegations sufficient to allege a Massachusetts CPA Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 33 of 46
+
+34 claim against Defendants under Massachusetts caselaw. See In re Shields Health Care Grp., Inc. Data Breach Litig., 721 F. Supp. 3d at 169. Consumer Plaintiffs may proceed with a private right of action under Chapter 93A to assert these claims for alleged data security failures.
+
+b. Consumer Plaintiffs Engaged in Trade or Commerce with Snowflake
+Consumer Plaintiffs allege that “Snowflake makes certain representations concerning data security to its customers—here, the Spoke Defendants.” (Doc. 485 ¶ 378.) Consumer Plaintiffs further assert that Snowflake’s “unfair trade practices” involve failing to maintain and implement reasonable data security practices to safeguard Consumer Plaintiffs’ PII. (Id. ¶ 381.) Snowflake argues that these allegations fail to establish a Massachusetts CPA claim because they do not allege that Snowflake was engaged in trade or commerce with Consumer Plaintiffs as requires by Massachusetts CPA § 2(a). (Doc. 418 at 67.)
+
+Contractual privity is not required to establish a Massachusetts CPA claim.
+Steinmetz v. Coyle & Caron, Inc., 862 F.3d 128, 141 (1st Cir. 2017). Courts have determined that the defendant’s unfair or deceptive practice must occur in the context of “some business, commercial, or transactional relationship.” Id. For example, the court in Pompilio v. Architectural Fireplace of New Eng., Inc., 2018 WL 7197608, at *3-4 (Mass. App. Div. Oct. 25, 2018), dismissed a Massachusetts CPA claim because the parties had only a “minor or insignificant business Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 34 of 46
+
+35 relationship.” (quoting Standard Register Co. v. Bolton-Emerson, Inc., 649 N.E. 2d 791, 795 (Mass. App. Ct. 1995). The First Circuit in In re TJX Companies Retail Sec. Breach Litigation, 565 F. 3d 489 (1st Cir. 2009), determined that there was a “close enough connection” to defendant under the circumstances where the defendant regularly sought payment from plaintiffs through an intermediary.
+Consumer Plaintiffs’ FAC alleges that they had a business, commercial, or translational relationship with Snowflake, through the intermediary Spoke Defendants. Snowflake played a role in the transactions between Consumer Plaintiffs and Spoke Defendants. Spoke Defendants represented to consumers that they could provide security measures in exchange for Consumer Plaintiffs purchasing tickets because of Spoke Defendants relationship with Snowflake.
+Spoke Defendants could represent that Consumer Plaintiffs data would be safe and secure due to its relationship with Snowflake and the representations that Snowflake made about data security. Consumer Plaintiffs further allege that Spoke Defendants made the Consumer Plaintiffs aware that Spoke Defendants affiliated with third parties in maintaining the Consumer Plaintiffs’ PII. (Doc. 485 ¶ 443.)
+Consumer Plaintiffs sufficiently have alleged a business relationship with Snowflake to support the Massachusetts CPA claim.
+
+Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 35 of 46
+
+36
+V. CONSUMER PLAINTIFFS’ CALIFORNIA CPA CLAIM
+Defendants allege that the California Consumer Plaintiffs’ (Xian) California Consumer Privacy Act (“CCPA”) must be dismissed for the following three reasons: (1) the alleged payment card information does not constitute as “personal information” under the CCPA; (2) no named California Consumer Plaintiffs alleged that their passport numbers were exposed in the Data Breach; and (3) the California Consumer Plaintiffs failed to comply with the mandatory pre-suit notice requirement. (Docs. 457 at 52-53, 418 at 75-79.) Snowflake also argues that Consumer Plaintiffs failed to allege that Snowflake operated as a “business” under Cal. Civ. Code § 1798.140(d)(1). Consumer Plaintiffs sufficiently have alleged that Snowflake collects and processes personal information of consumers from Spoke Defendants to be considered a business under the CCPA. See Karter v. Epiq Systems, 2021 WL 4353274, at *2 (C.D. Cal. July 16, 2021); In re Blackbaud, 2021 WL 3568394 (D.S.C. Aug. 12, 2021)
+
+a. Personal Information under the CCPA
+The CCPA identifies when a consumer plaintiff has a private right of action:
+Any consumer whose nonencrypted and nonredacted personal information, as defined in [Section 1798.81.5(d)(1)(A) of the California Civil Code] . . .
+is subject to an unauthorized access and exfiltration, theft, or disclosure as a result of the business’ violation of the duty to implement and maintain reasonable security procedures and practices appropriate to the nature of the information to protect the personal information may institute a civil action . .
+. .
+
+Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 36 of 46
+
+37
+Cal. Civ. Code § 1798.150(a)(1). The CCPA defines “Personal Information” as follows:
+
+An individual’s first name or first initial and the individual’s last name in combination with any one or more of the following data elements, when either the name or the data elements are not encrypted or redacted . . .
+(ii) Driver’s license number, California identification card number, tax identification number, passport number, military identification number, or other unique identification number issued on a government document commonly used to verify the identity of a specific individual.
+
+(iii) Account number or credit or debit card number, in combination with any required security code, access code, or password that would permit access to an individual’s financial account.
+
+Cal. Civ. Code § 1798.81.5(d)(1)(A).
+
+Consumer Plaintiffs allege that “[t]he information exposed in the Data Breach constitutes “personal information” as defined in Cal. Civ. Code § 1798.81.5, et seq.” (Doc. 485 ¶ 360.) Consumer Plaintiffs claim that the Data Breach exposed their full names. (Doc. 485 ¶ 473.) Consumer Plaintiffs further assert that they adequately have alleged that the Data Breach exposed their payment information and passport information. (Doc. 474 at 74-75.) Defendants contend that the facts compare to Gardiner v. Walmart Inc., 2021 WL 2520103, at *3 (N.D. Cal. Mar. 5, 2021), where the court dismissed the CCPA claim because the plaintiff failed to allege specific covered categories of information had been stolen.
+
+Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 37 of 46
+
+38
+California Consumer Plaintiff Xian claims that she gave Ticketmaster “at least her name, address, email, phone, number, account information for payment, and transaction information.” (Doc. 485 ¶ 65.) Consumer Plaintiffs argue that Xian also has alleged that she experienced actual fraud following the Data Breach. As a result, Consumer Plaintiffs contend that it is more than plausible that her “credit or debit card number, in combination with any required security code” has been obtained by threat actors. (Doc. 474 at 75.) Consumer Plaintiffs’ allegations that Visa issued over a hundred CAMS alerts indicates that the Data Breach compromised unique payment card numbers and further supports the claim that “personal information,” as defined by Cal. Civ. Code § 1798.81.5(d)(1)(A), has been subject to unauthorized access. (Doc. 485 ¶ 475.) Ticketmaster’s own notice letter informing Consumer Plaintiffs of the Data Breach indicated that “credit card information” may have been compromised. (Id. ¶ 472.) The Court finds that Consumer Plaintiffs sufficiently have alleged that the Data Breach exposed full credit card information to survive a motion to dismiss the CCPA claims.
+Consumer Plaintiffs also plausibly allege that “passport numbers may have been impacted for some individuals.” (Doc. 485 ¶ 457.) Ticketmaster informed the Iowa Office of the Attorney General that passport numbers may have been impacted. (Id.) Ticketmaster further indicated that this information potentially remained subject to unauthorized access. (Id.) Taking these allegations as true, Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 38 of 46
+
+39
+Consumer Plaintiffs sufficiently have alleged that the Data Breach exposed “personal information” as defined by the CCPA.
+
+Discovery by the parties may reveal that California Consumer Plaintiffs were not part of the limited number of people who had passport numbers impacted in the Data Breach. The Court determines that at the motion to dismiss stage Consumer Plaintiffs have made a plausible showing that passport information, in combination with names of consumers, have been exposed to state a CCPA claim.
+Consumer Plaintiffs’ allegations relating to disclosure of names and passport information plausibly establish that California Consumer Plaintiffs’ personal information was “subject to an unauthorized access, exfiltration, theft, or disclosure.” Cal Civ. Code § 1798(a)(1). Consumer Plaintiffs sufficiently have alleged a CCPA claim against Defendants.
+
+b. Pre-suit Notice
+Snowflake argues that Consumer Plaintiffs failed to provide sufficient 30- day pre-suit notice pursuant to Cal. Civ. Code § 1798.150(b). (Doc. 418 at 77-78.)
+The CCPA requires a 30-day notice “identifying the specific provisions of [the CCPA] [that] the consumer alleges have been violated.” Id.; In re LastPass Data Sec. Incident Litig., 742 F. Supp. 3d 109, 132 (D. Mass. 2024). The California class members whose personal information had been compromised sent a notice Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 39 of 46
+
+40 letter on behalf of the class on December 27, 2024. (Doc. 485 ¶ 363.) The notice letter alleged Snowflake’s specific violations of the CCPA.
+
+Snowflake contends that the letter was vague and failed to enable Snowflake to engage in the objective of the pre-suit notice “to allow the defendant an opportunity to cure the defect outside of court.” Griffey v. Megellan Health Inc., 2022 WL 1811165, at *6 (D. Ariz. June 2, 2022). On the other hand, courts have determined that notice letters differ in class actions with how claimants need to be identified. See In re Shields Health Care Grp., Inc. Data Breach Litig., 721 F.
+Supp. 3d 152, 168 (D. Mass. 2024). The Court finds that Consumer Plaintiffs presuit notice was sufficient. Consumer Plaintiffs identified and explained the specific alleged violations of the CCPA. Consumer Plaintiffs further identified that the letter was being sent on behalf of California class members who were injured in the Data Breach, including California Consumer Plaintiff Xian. Consumer Plaintiffs adequately identified the claimants in the notice letter.
+VI. CONSUMER PLAINTIFFS’ BREACH OF CONTRACT CLAIMS
+(TICKETMASTER)
+
+Ticketmaster asserts that Consumer Plaintiffs’ breach of contract claim fails because Consumer Plaintiffs fail to identify the contractual provisions breached and recoverable damages. (Doc. 457 at 59.) Ticketmaster claims that the elements of breach of contract claim are similar in the home states of the Consumer Plaintiffs (California, Massachusetts, Montana, New York, and Washington D.C.).
+Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 40 of 46
+
+41
+The Court will analyze the sufficiency of Consumer Plaintiffs at the motion to dismiss stage under Montana law.
+
+A plaintiff must establish the following elements to allege a viable breach of contract claim: (1) the existence of a contract, (2) plaintiffs’ performance, (3) defendant’s breach, and (4) resulting damages. Lindstrom v. Polaris Inc., No. CV 23-137-BLG-SPWTJC, 2024 WL 4237732, at *10 (D. Mont. Aug. 9, 2024), report and recommendation adopted, No. CV 23-137-BLG-SPW, 2024 WL 4275619 (D.
+Mont. Sept. 24, 2024) (citing Kostelecky v. Peas in a Pod LLC, 518 P.3d 840, 852 (Mont. 2022)). The court in Zappos “dismisse[d] the contractual claims” where the plaintiffs “allege[d] that Zappos breached a contract to safeguard their data[;]” and pointed to “statements on Zappos’s website indicat[ing] that its servers were protected by a secure firewall and that customers’ data was safe.” In re Zappos.com, Inc., No. 3:12-CV-00325-RCJ, 2013 WL 4830497, at *3 (D. Nev.
+Sept. 9, 2013). The court held unequivocally that these statements “do not create any contractual obligations[.]” Id.
+
+Consumer Plaintiffs have alleged that they entered into an agreement with Ticketmaster, via Ticketmaster’s Privacy Policy and Terms of Use, wherein the Consumer Plaintiffs agreed to provide their PII to Ticketmaster in exchange for ticketing services. (Doc. 485 ¶ 501.) Ticketmaster promised that it would use security measures to protect Consumer Plaintiffs’ information. (Id. ¶ 402.)
+Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 41 of 46
+
+42
+Consumer Plaintiffs also allege that the payment of the service fee in exchange for Ticketmaster providing a “safe and secure transaction” created an implied contract.
+(Id. ¶ 502.) Consumer Plaintiffs have alleged that Ticketmaster breached its contractual obligations by failing to secure and safeguard their PII. (Id. ¶ 508.)
+Consumer Plaintiffs’ claim that Ticketmaster’s security measure failures included the following omissions: (1) failing to enable MFA; (2) failing to rotate or disable its stale credentials; and (3) failing to implement access to certain trusted locations and users. (Id. ¶ 456, 520.)
+
+Ticketmaster argues that it did not promise, either explicitly or impliedly, in the contract against any of the alleged failures. As a result, none of these alleged failures can amount to breaches by Ticketmaster. Ticketmaster promised to “have security measures in place to protect [Consumer Plaintiffs] information” and that “[t]he security measures [used] depend[ed] on the type of information collected.”
+(Doc. 457 at 59-60.) Ticketmaster provided some security measures. The court in Zappos.com, Inc., 2013 WL 4830497, at *3, dismissed a breach of contract claim where the defendants agreed generally to keep the plaintiffs data “safe” and safeguard the plaintiffs’ data. The court concluded that the statements relating to keeping the plaintiffs’ data safe did “not create any contractual obligations.” Id. “In order for breach of contract action to be based on an instrument in writing, the Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 42 of 46
+
+43 writing must express the obligation sued upon.” Miron v. Herbalife Int’l, Inc., 11
+F. App’x 927, 929 (9th Cir. 2001) (cleaned up) (citations omitted).
+Ticketmaster promised in its agreement that it would have security measures in place and provide a safe ticket buying experience. Ticketmaster did have security measures in place and its promise of a safe buying experience does not create an express contractual obligation. Ticketmaster expressly indicated in the Terms of Use that it cannot guarantee the site always would be safe and secure.
+(Doc. 457 at 62.) As the court in In re Sony Gaming Networks & Customer Data Sec. Breach Litig., 903 F. Supp. 2d 942, 968 (S.D. Cal. 2012), stated, “in the presence of clear admonitory language that Sony’s security was not ‘perfect,’ no reasonable consumer could have been deceived.” Whether Ticketmaster’s chosen security measures proved adequate or reasonable more appropriately falls under a negligence claim. Consumer Plaintiffs have not sufficiently alleged a breach of contract claim against Ticketmaster.
+
+VII. CONSUMER PLAINTIFFS’ CALIFORNIA UNFAIR COMPETITION
+LAW (“UCL”) CLAIM (TICKETMASTER)
+
+A claim for unfair competition under California’s UCL arises out of “any unlawful, unfair or fraudulent business act or practice.” Cal. Bus. & Prof. Code § 17200. California’s UCL represents an equitable law that allows only equitable remedies. Silvercrest Realty, Inc. v. Great Am. E&S Ins. Co., 2012 WL 13028094, at *2 (C.D. Cal. Apr. 4, 2012). Ticketmaster argues that Consumer Plaintiffs’ UCL Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 43 of 46
+
+44 claim fails because Consumer Plaintiffs failed to plead that legal remedies would not be adequate.
+
+The Ninth Circuit has affirmed the dismissal of UCL claims where the plaintiff “fail[ed] to demonstrate that she lacks an adequate legal remedy.” Sonner
+v. Premier Nutrition Corp., 971 F.3d 834, 845 (9th Cir. 2020). In Sonner, the plaintiff brought a class action complaint that demanded injunctive relief under the UCL and damages under an Illinois consumer protection statute and a CLRA claim. Id. at *838. The plaintiff sought leave to amend and file a second amended complaint to drop her claim for damages under the CLRA claim. Id. The court held that a plaintiff must “establish that she lacked an adequate remedy at law before securing equitable restitution for past harm under the UCL and CLRA.” Id. at *844. The Ninth Circuit in In re Apple Processor Litig. No. 22-16164, 2023 WL 5950622, at *5-6 (9th Cir. Sept. 13, 2023), similarly dismissed the plaintiffs’ UCL claim at the motion to dismiss stage when the plaintiffs failed to show how the money they sought through restitution differed from the money they sought as damages.
+
+Consumer Plaintiffs seek the following equitable remedies: (1) prospective injunctive relief prohibiting Defendants from continuing to engage in their unlawful data security practices, which puts Plaintiffs’ Personal Information at risk of future data breaches; and (2) restitution and disgorgement for past harms for Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 44 of 46
+
+45 which there is no adequate remedy at law. (Doc. 1 ¶¶ 555–56.) Consumer Plaintiffs appropriately plead that no adequate remedy at law exists to address past harms, and, therefore, restitution proves appropriate.
+
+Consumer Plaintiffs have not demonstrated or explained how the money sought for restitution differs from the money amounts sought as legal damages. In re Apple Processor Litig., 2023 WL 5950622, at *6. Consumer Plaintiffs rely on allegations of “unlawful conduct as alleged in the First through Fourth and Sixth Claims for Relief in this Part.” (Doc. 485 ¶ 539.) The facts underlying Consumer Plaintiffs’ UCL claims appear to be the same facts that support other claims for which Consumer Plaintiffs seek damages. Consumer Plaintiffs have not shown that legal remedies would be inadequate as outlined by Sonner. Consumer Plaintiffs’ UCL claims must be dismissed.
+
+VIII. CONSUMER PLAINTIFFS’ GENERAL BUSINESS LAW § 349 CLAIM
+(TICKETMASTER)
+
+Ticketmaster asserts that the New York General Business Law (“GBL”) §
+349 claims brought by New York Consumer Plaintiffs Anderson and Fitzgerald must be dismissed. A GBL § 349 claim allows for recovery for “[d]eceptive acts or practices in the conduct of any business, trade or commerce or in the furnishing of any service in this state are hereby declared unlawful.” Plaintiffs must plead actual injury for a valid GBL § 349 claim to survive. Koenigsberg v. Bd. of Trs. of Columbia Univ., No. 23 CIV. 1044 (PGG), 2024 WL 1256270, at *9 (S.D.N.Y.
+Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 45 of 46
+
+46
+Mar. 22, 2024). Consumer Plaintiffs sufficiently have alleged deceptive acts by Ticketmaster and actual injury to survive a motion to dismiss.
+
+CONCLUSION
+The Court determines that Consumer Plaintiffs have sufficiently alleged all claims asserted against Snowflake. Consumer Plaintiffs similarly have sufficiently alleged claims under the Montana CPA, NY GBL § 349, CCPA, and negligence against Ticketmaster. Consumer Plaintiffs claims alleged against Ticketmaster for Breach of Contract and California UCL should be dismissed as the factual allegations do not support a claim for relief.
+
+ORDER
+Accordingly, IT IS ORDERED that
+1. Defendant Snowflake’s Motion to Dismiss (Doc. 417) is DENIED.
+
+2. Defendants Ticketmaster and Live Nation’s Motion to Dismiss (Doc. 456) is GRANTED in part as to Count I (Breach of Contract) and Count IV (California UCL) and DENIED in part as to Count II (Montana CPA);
+
+Count III (NY GBL § 349); Count V (CCPA); and Count VI (Negligence).
+DATED this 28th day of October 2025.
+
+Case 2:24-md-03126-BMM-JTJ Document 591 Filed 10/28/25 Page 46 of 46
+
+-----
