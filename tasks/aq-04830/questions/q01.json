@@ -1,0 +1,84 @@
+{
+  "question": "For the 2024-25 financial year, the Australian Government's tax receipts and its non-tax receipts both exceeded the amounts the 2024-25 Budget had forecast. What is the larger of the two percentages by which they exceeded those forecasts, to one decimal place?",
+  "number_of_asks": 1,
+  "gold_answer": "5.7%",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 3, Fiscal forecasting performance, Tax receipts): tax receipts grew 3.9 per cent in 2024-25 against 0.6 per cent forecast at the 2024-25 Budget, and were $15.3 billion higher than forecast.\nStep 2. Source input (Doc 3, Non-tax receipts): non-tax receipts grew 7.1 per cent against 4.4 per cent forecast at the same Budget, and were $3.2 billion higher than forecast.\nStep 3. Source input (Doc 1 and Doc 3, Table 3.1 budget aggregates, 2024-25 Actual column): tax receipts were $657.8 billion and non-tax receipts $59.1 billion. Table 3.1 prints each year's column as a separate block; this is the 2024-25 Actual block because its underlying cash balance is -10.0 ($ billion), -0.4 per cent of GDP, the 2024-25 deficit Doc 3 reports, and its gross debt of 928.6 ($ billion) is the figure the balance sheet table prints under \"Actual 2024-25\".\nStep 4. Calculation (Doc 1 and Doc 3): forecast tax receipts = 657.8 - 15.3 = 642.5 ($ billion).\nStep 5. Calculation (Doc 1 and Doc 3): forecast non-tax receipts = 59.1 - 3.2 = 55.9 ($ billion).\nStep 6. Calculation (Doc 1 and Doc 3): tax receipts' excess over their forecast = 15.3 / 642.5 = 2.4%.\nStep 7. Calculation (Doc 1 and Doc 3): non-tax receipts' excess over their forecast = 3.2 / 55.9 = 5.7%.\nStep 8. Final answer (Doc 1 and Doc 3): the larger of 2.4% and 5.7% is 5.7%, for non-tax receipts.\nStep 9. Look-alike measure (Doc 1 and Doc 3): read as gaps, the growth rates in Steps 1 and 2 rank tax receipts first: 3.9 - 0.6 = 3.3 percentage points, more than non-tax receipts' 7.1 less 4.4. They do not measure how far the amounts exceeded their forecasts: Step 6 shows the $15.3 billion was 2.4% of the forecast tax amount, not 3.3. So the decoy answer, 3.3 for tax receipts, is wrong; the dollar gaps over the forecast amounts give 5.7%.",
+  "answer_components": [
+    "5.7%"
+  ],
+  "evidence": [
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Tax receipts grew 3.9 per cent in 2024–25 rather than 0.6 per cent forecast at the 2024–25 Budget"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Tax receipts were $15.3 billion higher than forecast."
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Non-tax receipts grew 7.1 per cent in 2024–25 rather than 4.4 per cent forecast at the 2024–25 Budget"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Non-tax receipts were $3.2 billion higher than forecast."
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "The underlying cash balance was a deficit of 0.4 per cent of GDP in 2024–25"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Actual Estimates 2024-25 2025-26 2026-27 2027-28 2028-29 2029-30 Total(a)"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Tax receipts 757.0 699.5 Per cent of GDP 23.8 23.6 Non-tax receipts"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "-10.0 -0.4 717.0 25.8 657.8 23.7 59.1 2.1"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Actual 2024-25 $b 665.4 24.0 227.4 8.2 892.8 32.1 1,507.4 54.3 -614.5 -22.1 -841.9 -30.3 928.6 33.4"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Look-alike measure: Doc 3 gives 2024-25 forecast misses as growth rates and dollar gaps. Comparing growth gaps (tax 3.9 against 0.6 per cent) picks tax receipts, 3.3%. Dollar gaps over forecast amounts (Doc 1 outcomes less the gaps) give tax 2.4%, non-tax 5.7%."
+}
