@@ -1,0 +1,103 @@
+{
+  "question": "Once EPA's 2026 significant-new-use proposal is final, a large recycler reclaims a covered oxide with 90%-efficient dust controls, exporting to non-FEOCs among: a Chinese province's 15%-owned Thai firm; a Chinese city's 10%-owned Polish firm, with city-held notes convertible into another 20%; a Japanese firm whose one Chinese-province-picked director, of seven, alone has two votes. What would notifying EPA cost altogether?",
+  "number_of_asks": 1,
+  "gold_answer": "$45,602",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 7, proposed significant new uses): it is a significant new use to process the substance, where processing includes recycling or reclaiming it from batteries, except with dust controls of a minimum capture and control efficiency of 99%, and a SNUN is required prior to any significant new use. The recycler's 90% controls are below that minimum, so it must notify EPA with a SNUN.\n\nStep 2. Source input (Doc 7, estimated costs for SNUN submissions): a SNUN submission costs an estimated $45,496 for large business submitters. The estimate already includes preparing and submitting the SNUN and the user fee.\n\nStep 3. Source input (Doc 7, estimated costs for export notifications): a person exporting a substance that is the subject of a SNUR gives EPA a one-time notice for the first export to a particular country, at approximately $106 per notification.\n\nStep 4. Source input (Doc 4, final interpretation, government and control tests): a government of a foreign country includes a subnational government, and an entity is controlled when 25% or more of its board seats, voting rights or equity interest, each metric evaluated independently, is held by that government. The province's stake in the Thai firm is below that threshold and nothing else ties the firm to a covered nation, so the Thai firm is not an FEOC.\n\nStep 5. Source input (Doc 4, response to comments and explanation on equity interests): equity interests include contingent equity interests, and the amount that can be reasonably determined is included in the 25% control calculation, without consideration of whether conversion is imminent or within the holder's control. The city's stake in the Polish firm together with the stake its convertible notes carry is three tenths, above 25%, so the Polish firm is an FEOC and receives no export.\n\nStep 6. Source input (Doc 4, response to comments on board seats): DOE values a board seat at its voting power on the board, and a seat holding 25% of the board voting power makes the entity a controlled FEOC. The province's director casts two of the eight board votes, a quarter, so the Japanese firm is an FEOC and receives no export, although the province fills only one of seven seats.\n\nStep 7. Final answer (Doc 7 and Doc 4): the SNUN plus one export notice, for Thailand, in dollars: 45,496 + 106 = 45,602.",
+  "answer_components": [
+    "$45,602"
+  ],
+  "evidence": [
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "If a SNUN is submitted, costs are an estimated $45,496 per SNUN submission for large business submitters"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "These estimates include the cost to prepare and submit the SNUN (including registration for EPA's Central Data Exchange (CDX)), and the payment of a user fee."
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "a one-time notice to EPA must be provided for the first export or intended export to a particular country"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "the estimated cost of the export notification requirement on a per unit basis is approximately $106"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "It is a significant new use to manufacture, process (all processing includes recycling or reclaiming substances from batteries or other items containing the PMN substance), or use the substance, except with the use of dust controls with an overall minimum capture and control efficiency of 99%."
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "A SNUN is required prior to any significant new use."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "(i) A national or subnational government of a foreign country;"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "(i) 25% or more of the entity's board seats, voting rights, or equity interest, with each metric evaluated independently, are cumulatively held by that other entity"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "DOE intends to refer to percent value of the ownership interest, to include capital or profit interests and contingent equity interests, in the company held by an individual or entity, with the amount of contingent interest that can be reasonably determined included for the purpose of determining FEOC compliance."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "should be included in the 25% control calculation, without consideration of whether conversion is imminent or within the control of the equity-owning entity"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "DOE intends for the value of a board seat to equal the value of its voting power on the board"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "that seat holds 25% of the board voting power, then that entity would be considered a controlled FEOC"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        7
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    },
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Look-alike measure: one of seven seats looks like 14%, but Doc 4's comment response values a seat by board voting power, two of eight votes, 25%. Part vs total: the city's 10% stake omits the notes' 20%, which Doc 4 counts as contingent equity. Either adds $106: $45,708 or $45,814."
+}
