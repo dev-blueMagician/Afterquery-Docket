@@ -1,0 +1,69 @@
+{
+  "question": "An HHS-funded county has 50,000 or more people and 15 or more employees. How many more days did HHS's interim rule give it before any federal rule required it to meet WCAG 2.1?",
+  "number_of_asks": 1,
+  "gold_answer": "350 days",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 3, SUMMARY and DATES): for State and local government entities with a total population of 50,000 or more, the Justice Department's compliance date for the WCAG 2.1 requirements is extended from April 24, 2026, to April 26, 2027, and that interim rule is effective April 20, 2026.\n\nStep 2. Source input (Doc 4, SUMMARY and DATES): for recipients of HHS assistance with fifteen (15) or more employees, the date for meeting the web accessibility requirements, which adopt WCAG 2.1, is extended from May 11, 2026, to May 11, 2027, and that interim rule is effective May 7, 2026.\n\nStep 3. Source input (Doc 3 and Doc 4, coverage): Doc 4 says the Justice Department's rule applies to State and local government entities whether or not they receive Federal financial assistance, and that some recipients of HHS assistance are also public entities under that rule. The county is one of them, so both rules bind it.\n\nStep 4. Application (Doc 3 and Doc 4): April 20, 2026 is before May 7, 2026, so just before HHS's interim rule took effect the Justice Department's date was already April 26, 2027 while HHS's date was still May 11, 2026. The first date on which any federal rule required the county to meet WCAG 2.1 was then May 11, 2026.\n\nStep 5. Application (Doc 3 and Doc 4): once HHS's interim rule took effect, HHS's date became May 11, 2027, which is later than April 26, 2027. The first date on which any federal rule requires it became April 26, 2027.\n\nStep 6. Calculation (Doc 3 and Doc 4): 12 months of 30 days each, in days: 12 × 30 = 360.\n\nStep 7. Calculation (Doc 3 and Doc 4): a common year is 5 days longer than that, and no leap day falls between May 11, 2026 and May 11, 2027, so that year has, in days: 360 + 5 = 365.\n\nStep 8. Final answer (Doc 3 and Doc 4): April 26, 2027 falls 15 days before May 11, 2027, so the days from May 11, 2026 to April 26, 2027 are: 365 - 15 = 350.",
+  "answer_components": [
+    "350 days"
+  ],
+  "evidence": [
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "The compliance date for State and local government entities with a total population of 50,000 or more is extended from April 24, 2026, to April 26, 2027."
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Effective date: This IFR is effective April 20, 2026."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "The compliance date for recipients with fifteen (15) or more employees is extended from May 11, 2026, to May 11, 2027."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Effective date: This IFR is effective May 7, 2026."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "DOJ's rule applied to State and local government entities covered by title II of the ADA, regardless of whether those entities also receive Federal financial assistance."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "There is significant overlap between covered entities under both rules since some recipients of financial assistance from HHS are also public entities governed by title II of the ADA."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Conditional filter"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Superseded date or version",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Superseded date or version: Doc 4's SUMMARY keeps the old HHS date, May 11, 2026, which bound the county first before HHS's rule. Comparing only the extended dates, where Doc 3's April 26, 2027 comes first, gives 0 days. The gold counts from May 11, 2026: 350."
+}

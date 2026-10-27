@@ -1,0 +1,77 @@
+{
+  "question": "Discounting at 7% with compliance dates delayed by one year, what is DOJ's web rule's annualized benefits minus costs, divided by HHS's, as a whole percentage?",
+  "number_of_asks": 1,
+  "gold_answer": "524%",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 3, regulatory review section, the footnote that gives the components of the net-benefit figure stated for the one-year-longer compliance dates, 7 percent discount rate): 10-year average annualized benefits of $4,509.5 million and 10-year average annualized costs of $3,249 million.\n\nStep 2. Source input (Doc 4, Table 1 and Table 3, both at 7%, \"Annualized\" row, IFR column, which is the schedule delayed by one year; the Baseline column is the 2024 rule on its initial timeline): annualized costs of 820.3 million dollars and annualized benefits of 1,061.0 million dollars.\n\nStep 3. Calculation from Step 1, the Justice Department side of the Doc 3 and Doc 4 comparison: 4,509.5 - 3,249 = 1,260.5 (derived, millions of dollars).\n\nStep 4. Calculation from Step 2, the HHS side of the Doc 3 and Doc 4 comparison: 1,061.0 - 820.3 = 240.7 (derived, millions of dollars).\n\nStep 5. Calculation from Steps 3 and 4 (Doc 3 and Doc 4): 1,260.5 / 240.7 = 524% (derived, rounded to a whole percentage as asked).",
+  "answer_components": [
+    "524%"
+  ],
+  "evidence": [
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "With the longer dates, the rule was expected to generate 10-year average annualized net benefits of $1.3 billion using a 7 percent discount rate."
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "The 2024 rule was expected to generate the 10-year average annualized benefits of $4,509.5 million, while incurring the 10-year average annualized costs of $3,249 million using a 7 percent discount rate."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "We assessed the potential impacts of this IFR by comparing the policy scenario to an analytic baseline scenario of allowing the 2024 final rule to take effect under its initial implementation timeline."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Table 1--10-Year Undiscounted and Discounted (at 7%) Cost Savings From a One-Year Implementation Delay, in 2022 Dollars [Millions]"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Annualized...................................... .............. 934.7 .............. 820.3 .............. -114.3"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Table 3--10-Year Undiscounted and Discounted (at 7%) Foregone Benefits From a One-Year Implementation Delay, in 2022 Dollars [Millions]"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Annualized...................................... .............. 1,265.6 .............. 1,061.0 .............. -204.6"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Older figure inside a newer report",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    },
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Older figure: Doc 4's Costs and Benefits prose restates the 2024 analysis ($1,265.6 and $934.7 million, original dates), giving 381%. Look-alike measure: its \"$90.2 million\" net decrease gives 1,397%. The gold takes Tables 3 and 1's IFR annualized cells, 1,061.0 minus 820.3, giving 524%."
+}
