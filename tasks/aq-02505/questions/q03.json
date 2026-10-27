@@ -1,0 +1,105 @@
+{
+  "question": "In any order, which entities, if any, first placed on the UFLPA Entity List from November 25, 2024 through August 3, 2026 mine or source copper or lithium?",
+  "number_of_asks": 1,
+  "gold_answer": "Xinjiang Nonferrous Metals Industry Group, Zijin Mining Group, Baiyin Nonferrous Group, Xinjiang Baiyin Mining Development, SDIC Xinjiang Lithium Industry",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 2, summary, appendix 1 and the company's description): the update that publishes the UFLPA Entity List as of November 25, 2024 adds five entities to the section 2(d)(2)(B)(ii) list, one of them Xinjiang Nonferrous Metals Industry Group Co., Ltd., which \"mines, smelts, and processes raw metallic materials, including copper, lithium\". It was first placed on the list on November 25, 2024 and qualifies.\n\nStep 2. Source input (Doc 2, the section 2(d)(2)(B)(ii) list as of November 25, 2024): Xinjiang Habahe Ashele Copper Co., Ltd. is already on that list but is not one of the update's five additions, so it was first placed on the list before November 25, 2024.\n\nStep 3. Source input (Doc 4, appendix 1): the update that publishes the list as of January 15, 2025, superseding the November 25, 2024 list, adds thirty-five entities to the section 2(d)(2)(B)(v) list, among them Zijin Mining Group Co., Ltd. and Xinjiang Habahe Ashele Copper Co., Ltd.\n\nStep 4. Source input (Doc 4, descriptions): Zijin Mining Group is \"principally engaged in the exploration and extraction of metals, including zinc, copper\", and it is on no earlier list, so it was first placed on January 15, 2025 and qualifies. Ashele mines copper, but its January 15, 2025 placement put an entity already on the list onto a second sub-list, so it is excluded. Xinjiang Zijin Zinc Industry Co., Ltd. and Xinjiang Zijin Nonferrous Metals Co., Ltd. handle zinc only and do not qualify.\n\nStep 5. Source input (Doc 6, appendix 1 and the Baiyin paragraph): the update that publishes the list as of August 3, 2026, superseding the January 15, 2025 list, adds forty-three new entities. Among them are Baiyin Nonferrous Group Co., Ltd. and its wholly-owned subsidiary Xinjiang Baiyin Mining Development Co., Ltd., and \"Baiyin Nonferrous and Xinjiang Baiyin are sourcing copper and molybdenum from the XUAR\", so both qualify.\n\nStep 6. Source input (Doc 6, the SDIC paragraph): the same update adds SDIC Xinjiang Luobupo Potash Co., Ltd. and its wholly-owned subsidiary SDIC Xinjiang Lithium Industry Co., Ltd., which \"source potassium and lithium, respectively\". The subsidiary sources lithium and qualifies; the parent sources potassium and does not.\n\nStep 7. Source input (Doc 6, the Xinjiang Tianhongji paragraph): Xinjiang Tianhongji Technology Co., Ltd. \"produces negative electrode materials for lithium batteries\" but \"sources carbon materials\", so it neither mines nor sources lithium and does not qualify.\n\nStep 8. Completeness (Doc 2, Doc 4 and Doc 6): no other description of an entity these three updates add mentions copper or lithium; the Western Gold and Shandong Gold companies produce gold.\n\nStep 9. Answer (Doc 2, Doc 4 and Doc 6): Xinjiang Nonferrous Metals Industry Group, Zijin Mining Group, Baiyin Nonferrous Group, Xinjiang Baiyin Mining Development and SDIC Xinjiang Lithium Industry, in any order.",
+  "answer_components": [
+    "Xinjiang Nonferrous Metals Industry Group",
+    "Zijin Mining Group",
+    "Baiyin Nonferrous Group",
+    "Xinjiang Baiyin Mining Development",
+    "SDIC Xinjiang Lithium Industry"
+  ],
+  "evidence": [
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "This update adds five entities to the section 2(d)(2)(B)(ii) list of the UFLPA and twenty-five entities to the section 2(d)(2)(B)(v) list of the UFLPA."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Xinjiang Nonferrous Metals Industry Group Co., Ltd. is a company based in Urumqi, Xinjiang Uyghur Autonomous Region that mines, smelts, and processes raw metallic materials, including copper, lithium, beryllium, nickel, manganese, and gold."
+    },
+    {
+      "document_number": 4,
+      "component_number": 2,
+      "quote": "This update also adds thirty-five entities to the section 2(d)(2)(B)(v) list of the UFLPA"
+    },
+    {
+      "document_number": 4,
+      "component_number": 2,
+      "quote": "Zijin Mining Group Co., Ltd. is a global mining company based in Shanghang County, Fujian that is principally engaged in the exploration and extraction of metals, including zinc, copper, lead, silver, gold, iron ore, and sulfuric acid."
+    },
+    {
+      "document_number": 6,
+      "component_number": 3,
+      "quote": "This update adds forty-three new entities to the UFLPA Entity List, two of which appear on two separate sub-lists."
+    },
+    {
+      "document_number": 6,
+      "component_number": 3,
+      "quote": "that Baiyin Nonferrous and Xinjiang Baiyin are sourcing copper and molybdenum from the XUAR"
+    },
+    {
+      "document_number": 6,
+      "component_number": 4,
+      "quote": "Baiyin Nonferrous owns and sources material from at least one mine in the XUAR, which is operated by its wholly-owned subsidiary, Xinjiang Baiyin Mining Development Co., Ltd."
+    },
+    {
+      "document_number": 6,
+      "component_number": 4,
+      "quote": "that Baiyin Nonferrous and Xinjiang Baiyin are sourcing copper and molybdenum from the XUAR"
+    },
+    {
+      "document_number": 6,
+      "component_number": 5,
+      "quote": "is a wholly-owned subsidiary of SDIC Lop Nur and is also located in Bayingolin Mongol Autonomous Prefecture and produces lithium carbonate."
+    },
+    {
+      "document_number": 6,
+      "component_number": 5,
+      "quote": "SDIC Lop Nur and SDIC Lithium source potassium and lithium, respectively, from the brine from the Lop Nur Salt Lakebed"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Conditional filter",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Out-of-range period",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    },
+    {
+      "trap": "Look-alike company",
+      "how_a_careless_solver_fails": "Picks the wrong entity or section"
+    }
+  ],
+  "why_these_are_traps": "Out-of-range period: Doc 4 adds Ashele Copper in January 2025, but Doc 2's November 25, 2024 list already carries it outside that update's five additions; including it gives six names. Look-alike company: Doc 6's SDIC Lop Nur Potash sources potassium; only subsidiary SDIC Lithium sources lithium; the parent fails."
+}
