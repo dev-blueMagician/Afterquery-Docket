@@ -1,0 +1,499 @@
+AQ-06835 · Corporate filingsHard only — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-06835
+Saved: 2026-10-18 20:10 (local time)
+Bundle: Corporate filingsHard only · Stryker Corporation, Zimmer Biomet Holdings, Inc. and Edwards Lifesciences Corporation · 9 documents · 83,721 prompt tokens
+Run read: Run 1, the latest
+Attempts read: 7
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 16 runs left · 1 of 60 runs used in the last 24 h (all tasks)
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 4 of 6 attempts right
+
+High model: two solvers try up to 3 times each. Ready when both get it wrong at least once, even if every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Reading the runs and writing suggestions…
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 1 (Oct 18, 2026, 8:04 PM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+1 run
+
+------------------------------------------------------------------------
+Run 1 · Too easy · Result the gate uses
+Oct 18, 2026, 8:04 PM · Version 65213d (current) · Low — · Medium — · High 4/6
+------------------------------------------------------------------------
+
+What changed before this run: first run
+
+Solver summary: Run 1 · Too easy · 4 of 6 right
+
+Your answer: 17.55%
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: —
+
+Final answer: 19.78% | Your answer (gold): 17.55%
+
+Full answer
+-----------
+
+19.78%
+
+Reasoning
+---------
+
+We need answer: For Zimmer Biomet's 2025 quarter with the highest adjusted gross margin, what was its reported operating profit margin? Give percentage to two decimal places.
+
+Need recall Zimmer Biomet 2025 quarterly results? Need determine quarters in 2025 (likely Q1, Q2, Q3, maybe Q4 not reported yet?). Need adjusted gross margin for each quarter in 2025, identify highest, then reported operating profit margin for that same quarter.
+
+We need knowledge of Zimmer Biomet financial reports in 2025.
+
+Let's recall Zimmer Biomet Holdings, Inc. reports quarterly earnings.
+
+2025 Q1 results? Let's recall figures.
+
+Zimmer Biomet Q4 2024 and full year 2024 reported around Feb 2025? Actually Zimmer Biomet reported Q4 and full-year 2024 results on Feb 5, 2025? Let's check mental: In Feb 2025, Zimmer Biomet announced results for fourth-quarter and full-year 2024. Net sales $2.024B? Or $2.1B? Let's recall precisely.
+
+Then Q1 2025 results reported in May 2025? Q2 in August 2025? Q3 in October/November 2025?
+
+We need adjusted gross margin for each 2025 quarter (Q1, Q2, Q3). Let's recall reports.
+
+Zimmer Biomet Q1 2025 earnings: Net sales around $1.97B? Net earnings? Adjusted gross margin maybe 70.9%? Or 71.1? Operating profit margin reported?
+
+Let's recall details.
+
+We need "reported operating profit margin" not adjusted. So need operating profit divided by net sales for that quarter.
+
+Need identify quarter with highest adjusted gross margin among 2025 quarters.
+
+Let's recall each quarter's adjusted gross margin figures from press releases.
+
+Zimmer Biomet typically reports gross profit margin and adjusted gross margin. For Q1 2025: Gross profit was maybe $1.34B? Margin around 68.5? Adjusted gross margin maybe 71.2? Let's try to recall precisely.
+
+Actually in 2024, Zimmer's gross margin was around 71% adjusted? Let's check mental consistency: Zimmer Biomet gross margin usually around 70-72 percent adjusted.
+
+Let's recall Q2 2025 report (around August 2025): Net sales $2.17B? Net earnings $240M? Adjusted EPS $1.81? Gross margin? Maybe adjusted gross margin was 71.2?
+
+We need be precise.
+
+Let's recall the press release headlines in 2025:
+
+- February 5, 2025: Zimmer Biomet Holdings, Inc. Announces Financial Results for Fourth Quarter and Full Year 2024.
+  Net sales for Q4 2024 were $2,117.4 million? Or $2,024? Actually Zimmer's quarterly sales are around $2B. In Q4 2024 net sales were $2,024.3 million? Let's check mental: For full year 2024 net sales were $8,282.6 million? Or $8.3B? Yes Zimmer 2024 full year net sales were about $8.28B. Quarterly average about $2.07B. So Q4 2024 net sales might be $2,175? Hmm not necessary.
+
+- Around May 2025 (maybe May 1, 2025?): Zimmer Biomet announced financial results for first quarter 2025. Net sales of $1,958.7 million? Net earnings of $200.8 million? Diluted EPS of $0.91? Adjusted diluted EPS of $1.81? Let's check consistency: In Q1 2024 net sales were about $1.89B, up 3.5%. So Q1 2025 net sales maybe $1,995? Actually need correct.
+
+- Around August 2025 (August 6, 2025?): Zimmer Biomet announced Q2 2025 results. Net sales $2,174.8 million? Net earnings $260.5 million? Adjusted EPS $2.00?
+
+- Around October/November 2025 (maybe November 4, 2025?): Zimmer Biomet announced Q3 2025 results. Net sales $2,234.6 million? Net earnings? Adjusted EPS $1.82?
+
+But we need specifically the quarter in 2025 with the highest adjusted gross margin. Let's recall adjusted gross margin figures mentioned in each report.
+
+In Q1 2025 report, they might have said: "Gross profit was $1,267.5 million, gross margin 64.3 percent, adjusted gross margin 70.8 percent"? Or 71.1?
+
+In Q2 2025: "Gross profit was $1,455.8 million, gross margin 67.0 percent, adjusted gross margin 71.3 percent"?
+
+In Q3 2025: "Gross profit was $1,503.6 million, gross margin 67.3 percent, adjusted gross margin 71.3 percent"? Or maybe Q3 was 70.9?
+
+We need highest. Could be Q2 or Q3 at 71.4?
+
+But also need reported operating profit margin for that quarter. Operating profit margin = operating profit / net sales.
+
+Let's try to recall operating profit figures.
+
+In Q1 2025, operating profit might be around $359.6 million? Margin about 18.2? Or maybe $356M on sales $1.99B => ~17.9.
+
+In Q2 2025, operating profit might be around $401M on sales $2.17B => ~18.5?
+
+In Q3 2025, operating profit might be $375M on sales $2.23B => ~16.8?
+
+But need correct pairing with highest adjusted gross margin quarter.
+
+Let's dig mental details from press release language.
+
+Zimmer Biomet reports include:
+- Net Sales
+- Net Earnings
+- Basic EPS
+- Diluted EPS
+- Adjusted net earnings
+- Adjusted diluted EPS
+- Operating cash flow
+- Free cash flow
+
+Also in the "Financial Results" table they have:
+Net Sales
+Cost of products sold, excluding intangible amortization
+Intangible amortization
+Gross Profit
+Gross margin %
+Research and development
+Sales and marketing
+General and administrative
+Restructuring and other cost reduction initiatives
+Certain claims
+Acquisition, integration, divestiture, and other
+Operating profit
+Operating profit margin?
+
+Actually they present operating profit and operating profit as percent of net sales?
+
+Let's recall Q2 2021? No.
+
+But maybe easier: The question asks "For Zimmer Biomet's 2025 quarter with the highest adjusted gross margin, what was its reported operating profit margin? Give the percentage to two decimal places."
+
+This sounds like there are three quarters (Q1-Q3) with adjusted gross margins like 70.9, 71.2, and 71.0, with highest being Q2 at 71.2, and operating profit margin for Q2 was 17.85? Or 19.30?
+
+We need be accurate.
+
+Let's recall specific numbers from Q2 2025 earnings report released Aug 6, 2025.
+
+The headline might have said:
+Net sales of $2,174.4 million, an increase of 7.8 percent?
+Net earnings of $260.8 million?
+Diluted earnings per share of $1.14?
+Adjusted diluted earnings per share of $2.00?
+
+Also they might have said gross profit was about $1,446.9 million, gross margin 66.5 percent? Or 66.9?
+
+Wait, need more precise mental retrieval.
+
+Let's recall Zimmer Biomet's 2024 quarterly gross margins: In Q2 2024 gross margin was around 66.1%, adjusted gross margin around 71.0? Or 70.8?
+
+Actually in 2023, Zimmer gross margin was about 70.5 adjusted. So in 2025 it's likely around 71.
+
+Let's try to recall from the actual press release text I might have seen.
+
+In August 2025, Zimmer Biomet reported second-quarter 2025 results. The first paragraph: "Zimmer Biomet Holdings, Inc. ... today reported financial results for the second quarter ended June 30, 2025... Net sales of $2,174.8 million... Net earnings of $259.6 million... Diluted earnings per share of $1.12... Adjusted diluted earnings per share of $2.00..."
+
+Then they have a table:
+Net Sales 2025: $2,174.8; 2024: $2,013.8? Increase of 8.0 percent?
+Net Earnings: $259.6 million?
+Operating Cash Flow: ?
+
+But also they discuss gross margin: "Gross profit was $1,453.8 million... gross margin was 66.9 percent... adjusted gross margin was 71.3 percent"? Or maybe gross profit was $1,456.2 million with margin 66.9, adjusted gross margin 70.9?
+
+We need identify the quarter with highest adjusted gross margin across 2025. Let's recall Q3 2025 report in Nov 2024? No, Nov 2025.
+
+Perhaps Q3 2025 net sales were $2,234.6 million, net earnings of $273.4 million, diluted EPS $1.18, adjusted diluted EPS $1.82. Gross margin maybe 66.9 percent, adjusted gross margin 71.1 percent?
+
+But we need only one.
+
+Alternatively, maybe Q1 had adjusted gross margin 70.9, Q2 71.1, Q3 71.3 being highest. Or Q1 highest?
+
+Let's recall that in recent reports Zimmer mentioned adjusted gross margin of about 71.2 percent consistently.
+
+But actually there might be four quarters if Q4 2025 reported in Feb 2026, but the question says "2025 quarter" - could include Q4 if reported? But they said "2025 quarter with the highest..." likely among Q1-Q4 but Q4 might be in Feb 2026. However they ask "reported operating profit margin" for that quarter. If Q4 2025 report came in Feb 2026, it's still a 2025 quarter.
+
+But need correct quarter.
+
+Let's try to recall the exact figures for gross margin and operating profit for each quarter in 2025 from financial statements.
+
+We need reported operating profit margin = Operating profit / Net sales * 100.
+
+Let's recall the income statement line items for each quarter.
+
+From 10-Q filings? Maybe easier: In Q1 2025, operating profit was $358.2 million? Net sales $1,989M => 17.99? Or 18.0?
+
+But we need two decimal places, so likely 17.99 or 18.01, etc. Or maybe 19.42.
+
+Let's try to recall Zimmer's 2025 Q1 income statement figures:
+Net Sales: maybe $1,988.8 million?
+Cost of products sold: maybe $649.5 million? Wait that'd be gross profit about $1,339M => margin ~67.3? Hmm.
+
+Actually Zimmer's cost of products sold includes amortization. The gross profit margin reported is usually around 62? Wait no, medical device gross margins are high, around 70 percent. But Zimmer reports gross profit margin in the 60s? Let's check mental: In 2028? No.
+
+Wait, Zimmer's income statement:
+Net Product Sales: $8,xxx million.
+Cost of products sold, excluding intangible amortization: maybe $2,xxx million.
+Intangible amortization: maybe $300 million.
+Total cost: maybe $2,600 million.
+Gross profit: maybe $5,600 million => margin around 68 percent. Yes, that sounds right: gross margin around 68 percent, and adjusted gross margin (excluding amortization and other adjustments) around 71 percent.
+
+So reported gross margin is in the 60s, adjusted is in the 70s.
+
+Thus for Q1 2025, gross margin might be around 64.5? Or 65.5?
+
+But we need adjusted gross margin specifically.
+
+Let's recall from the Q1 2025 press release: They might have said "Gross margin was 64.5 percent and adjusted gross margin was 70.8 percent"? Or "Gross margin was 70.8 percent and adjusted was 71.1"? No, adjusted is usually only slightly higher (by 1-2 points?) Wait, the difference between gross margin and adjusted gross margin might be about 4-5 points due to amortization and other items? Let's check mental for 2024 full year: Gross profit was about $5,679 million on sales $8,283 million => gross margin about 68.6 percent. Adjusted gross margin was about 71.2 percent? Difference about 2.6 points. Yes, that sounds right. So gross margin is in high 60s, adjusted in low 71s.
+
+Thus in quarterly reports, gross margin might be around 67, adjusted around 71.
+
+But we need the quarter with the highest adjusted gross margin. The differences are likely small, maybe 70.9, 71.0, 71.1, 71.3.
+
+We need corresponding operating profit margin, which is operating profit divided by net sales. Operating profit is gross profit minus operating expenses (R&D, S&M, G&A, etc.). Given gross profit is around 67-68% of sales, and operating expenses maybe around 40-45%, operating margin might be around 20-25%. But wait Zimmer's operating margin is actually around 25-30? Let's check mental: In 2024, operating profit was about $1,600M? On sales $8,283M => about 19.3%. Or maybe operating profit was $2,000M => 24%. Let's check mental from income statement: Zimmer's operating expenses include heavy sales and marketing (~40%?). Actually medical device companies have high S&M, maybe 35-40% of sales. So operating margin might be around 20-28 percent.
+
+Specifically in Q2 2024, operating profit was maybe $565M on sales $2B => ~28? Hmm no that'd be high.
+
+Let's recall Zimmer's 2024 full year operating profit was about $1,711.5 million? Or net earnings were around $1,000M? Let's try to recall from 2024 annual report: Net earnings were about $1,956 million? Or $1.9B? Wait that sounds high. Actually Zimmer in 2024 had net earnings of about $1,000M? Let's check mental consistency: Zimmer's 2023 net earnings were about $1.98B? Or was that revenue? No, revenue was $7.4B in 2023. Net earnings in 2023 were about $1,942 million? That sounds high (net margin ~26%). Yes, Zimmer had high net earnings in 2023 due to tax adjustments? Hmm.
+
+Actually in 2023, Zimmer Biomet net earnings were $1,984 million? Or was that revenue? Wait revenue in 2023 was $7,394 million. Net earnings might have been around $1,940 million? That'd be net margin 26%, plausible.
+
+But in 2024, net earnings might be around $1,000M due to some charges?
+
+This is not precise enough. But we just need one quarter's operating profit margin.
+
+Let's recall specific quarterly income statement figures for 2025.
+
+Perhaps in the 10-Q for three months ended Sept 2025? Or six months?
+
+But maybe easier: The question might come from a specific chart or table comparing quarters in 2025. The phrase "adjusted gross margin" and "reported operating profit margin" sounds like they are comparing metrics across quarters and asking for one value.
+
+We need answer with two decimal places, like "20.15%" etc.
+
+Given it's a specific quarter, we need correct number.
+
+Let's recall the actual numbers in the Q3 2025 report released on Nov 4, 2025? Or Nov 5?
+
+The report might include:
+Net Sales: $2,234,576?
+Cost of products sold, excluding intangible amortization: $718,xxx?
+Intangible amortization: $154,xxx?
+Gross Profit: $1,499,xxx?
+Gross Margin: 67.1 percent?
+Adjusted Gross Margin: 71.2 percent?
+
+Operating profit: maybe $508,xxx? Margin maybe 22.75?
+
+But we need correct.
+
+Let's systematically recall Zimmer Biomet's 2025 quarterly earnings announcements with specific figures.
+
+Announcement 1: Feb 5, 2025 (Q4 and FY 2024).
+Net sales for Q4 2024: maybe $2,117.4 million? Net earnings: $296.5 million?
+But not needed.
+
+Announcement 2: Around May 1, 2025? Let's check mental news headlines in early May 2025: Many companies reported Q1. Zimmer might have reported on May 1, 2025.
+Headlines: Zimmer Biomet Q1 2025 earnings beat expectations? Or miss?
+Let's recall in May 2025, Zimmer Biomet reported Q1 revenue of $1.97B vs expectation $1.98B? Or maybe $1.99B?
+
+Actually I think in Q1 2025 Zimmer reported net sales of $1,988.8 million, up 3.5 percent? Or up 3.7 percent?
+
+Let's try to recall the adjusted EPS figure: Maybe $1.81, beating expectation of $1.78?
+
+Also they might have raised guidance?
+
+Let's recall in August 2025, Zimmer reported Q2 net sales of $2,174.8 million, up about 7.8 percent. Adjusted EPS was $2.00, beating expectation of $1.98? Or maybe missing?
+
+Then in November 2025, Zimmer reported Q3 net sales of about $2,234.5 million, up about 8.1 percent? Adjusted EPS was $1.82, missing expectation of $1.85?
+
+Thus the quarters have sales: Q1 ~$1.99B, Q2 ~$2.17B, Q3 ~$2.23B.
+
+Now, adjusted gross margin for each:
+We need to check in each report.
+
+In Q1 report, they might have said: "Gross profit was about $1.3B, gross margin was about 65.5 percent, and adjusted gross margin was about 70.9 percent."
+
+In Q2 report: "Gross profit was about $1.46B, gross margin about 67.0 percent, adjusted gross margin about 71.3 percent."
+
+In Q3 report: "Gross profit was about $1.5B, gross margin about 67.1 percent, adjusted gross margin about 71.2 percent."
+
+Thus highest might be Q2 at 71.3.
+
+But we need the reported operating profit margin for Q2.
+
+What was operating profit in Q2 2023? Not relevant.
+
+But we can try to derive operating profit from gross profit and operating expenses listed.
+
+In Q2 2025, gross profit might be $1,453.8M (margin 66.9%). Then subtract:
+R&D: maybe $65.5M?
+Sales and marketing: maybe $719.5M?
+General and administrative: maybe $200.5M?
+Other: maybe $30M?
+Operating profit = gross profit - R&D - S&M - G&A - other.
+
+If gross profit is $1,453.8M, and S&M alone might be around $600M? Actually S&M for Zimmer is large, maybe $700M in quarter? Let's check consistency: For full year 2024, S&M was about $2.8B, quarterly average $700M. Yes.
+
+R&D might be around $120M? G&A around $250M? Restructuring maybe $20M?
+
+So operating expenses total maybe $1,050M. Then operating profit = $1,453.8 - $1,050 = ~$400M. Margin = 400/2,174.8 = ~18.4%.
+
+But need precise figure likely in the report.
+
+Actually in Q2 2029? No.
+
+But wait, operating profit might include other income/expense? But approximately.
+
+However, the question asks "what was its reported operating profit margin?" This sounds like in the report they explicitly state "Operating profit margin was X%" in a table. So we just need that number.
+
+Thus we need recall or derive precisely.
+
+Let's recall the table in Zimmer's earnings release includes:
+Operating profit
+Operating profit as a percent of net sales
+
+For Q2 2025, the table might show:
+Operating profit: $406.3 million? Or $390.1? Margin: 18.67? Or 18.5?
+
+But we need two decimal places.
+
+Let's recall that in Q1 2025, operating profit might have been around $358.5 million on sales $1,988.8 => 18.03.
+
+In Q2, maybe $407.2M on $2,174.8 => 18.72.
+
+In Q3, maybe $424.1M on $2,234.6 => 18.98?
+
+But need correct quarter.
+
+But wait, there might also be Q4 2025 figures reported in Feb 2026: Net sales maybe $2,273M, operating profit maybe $460M => 20.24.
+
+But we need highest adjusted gross margin quarter, which might be Q4.
+
+Let's recall Q4 2025 report in Feb 2026? Actually Zimmer might report Q4 and full year 2025 in February 2026. Yes, that sounds right: They reported Q4 2024 in Feb 2025, so Q4 2025 likely in Feb 2026.
+
+But the question says "Zimmer Biomet's 2025 quarter..." That could include Q4 2025, but they ask "what was its reported operating profit margin" - if Q4 was reported in Feb 2026, it's still a 2025 quarter.
+
+But we need to identify which quarter had highest adjusted gross margin among all four in 2025.
+
+We need figures for Q4 2025 adjusted gross margin.
+
+Let's recall in Feb 2026, Zimmer reported Q4 2025 results? I think yes, in February 2026 they reported Q4 and full-year 2025. Let's recall headlines in Feb 2026: Zimmer Biomet reported Q4 2025 revenue of about $2.29B? Or net earnings?
+
+Actually in February 2025 they reported Q4 2024. So in February 2026 they should report Q4 2025.
+
+What were those figures? Net sales for Q4 2025 might be around $2,286 million? Net earnings maybe $300M? Adjusted EPS maybe $2.30?
+
+But I'm not sure.
+
+However, the question might be designed for someone who looked at a table of 2025 quarters and compared adjusted gross margins and operating profit margins. The answer might be one specific number.
+
+We need be as accurate as possible.
+
+Let's recall the exact wording in Zimmer's earnings reports: They have a section "Sales and Earnings" with tables for three months and nine months.
+
+For the three months ended June 2020? No.
+
+But maybe I can recall specific figures from the 10-Q for the three months ended Sept 30, 2025 filed with SEC around Nov 2025.
+
+Let's try to recall or reconstruct the income statement for three months ended Sept 30, 2025 and 2024.
+
+The 10-Q filing includes:
+Net Product Sales:
+- Knees?
+- Hips?
+- S.E.T.?
+
+But also a condensed consolidated statement of earnings.
+
+For three months ended Sept 30, 2025:
+Net Sales: maybe $2,234,589?
+Cost of products sold, excluding intangible amortization: maybe $711,xxx?
+Intangible amortization: maybe $153,xxx?
+Total Cost of Products Sold: maybe $865,xxx?
+Gross Profit: maybe $1,369,xxx? Wait that'd be margin about 61? No, that can't be right because we said gross margin is high 60s.
+
+Wait, net sales are $2.2B. Cost of products sold excluding amortization might be around $650M? Plus amortization $150M => total cost ~$800M => gross profit ~$1.4B => margin ~63%? That sounds more correct. Yes, gross margin in the low 60s? Wait 1.4/2.2 = 63.6%. But I think reported gross margin is around 67. So cost might be around $730M + $150M = $880M => gross profit $1,354M => margin ~60.6? Hmm that'd be low. Let's check mental consistency: For full year 2024, net sales were $8.3B and gross profit was around $5.6B => margin 67.5. So quarterly gross profit should be about $1.45B on $2.1B sales => about 69. So cost should be around $650M? Let's do: $2.2B sales, gross profit $1.5B => cost $700M. Yes, cost of products sold is about $700M (including amortization?). So gross margin about 68.
+
+Thus for Q3, gross profit might be around $1,505M, margin
+
+High model
+==========
+
+Attempt 1 · Wrong
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): 17.55%
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Wrong
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): 17.55%
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): 17.55%
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 4 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): 17.55%
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 5 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): 17.55%
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 6 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): 17.55%
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

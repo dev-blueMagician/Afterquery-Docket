@@ -1,0 +1,79 @@
+{
+  "question": "For Stryker's 2025 quarter with the lowest adjusted gross profit margin, what was its reported operating income margin? Give the percentage to two decimal places.",
+  "number_of_asks": 1,
+  "gold_answer": "18.74%",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 1, consolidated statements of earnings, three months and full year ended December 31, 2025): net sales 7,171 (fourth quarter) and 25,116 (full year); operating income 1,804 (fourth quarter) and 4,889 (full year) ($ millions).\nStep 2. Source input (Doc 1, reconciliation of non-GAAP measures, three months and full year 2025): adjusted gross profit 4,679 (fourth quarter) and 16,391 (full year) ($ millions).\nStep 3. Source input (Doc 3, consolidated statements of earnings, three and six months ended June 30, 2025): net sales 6,022 (second quarter) and 11,888 (six months); operating income 1,950 (six months) ($ millions).\nStep 4. Source input (Doc 3, reconciliation of non-GAAP measures, three and six months 2025): adjusted gross profit 3,934 (second quarter) and 7,779 (six months) ($ millions).\nStep 5. Calculation (Doc 1): fourth-quarter 2025 adjusted gross profit margin = 4,679 / 7,171 = 65.25%.\nStep 6. Calculation (Doc 3): second-quarter 2025 adjusted gross profit margin = 3,934 / 6,022 = 65.33%.\nStep 7. Calculation (Doc 3): first-half 2025 adjusted gross profit margin = 7,779 / 11,888 = 65.44%.\nStep 8. Calculation (Doc 1 and Doc 3): third-quarter 2025 adjusted gross profit, full year less fourth quarter less first half = 16,391 - 4,679 - 7,779 = 3,933 ($ millions).\nStep 9. Calculation (Doc 1 and Doc 3): third-quarter 2025 net sales = 25,116 - 7,171 - 11,888 = 6,057 ($ millions).\nStep 10. Calculation (Doc 1 and Doc 3): third-quarter 2025 adjusted gross profit margin = 3,933 / 6,057 = 64.93%.\nStep 11. Comparison (Doc 1 and Doc 3): the second quarter's 65.33% is below the first-half 65.44%, so the first quarter's margin is above 65.44%. The third quarter's 64.93% is below that, below the second quarter's 65.33% and below the fourth quarter's 65.25%, so the third quarter of 2025 has the lowest adjusted gross profit margin.\nStep 12. Calculation (Doc 1 and Doc 3): third-quarter 2025 operating income as reported = 4,889 - 1,804 - 1,950 = 1,135 ($ millions).\nStep 13. Calculation (Doc 1 and Doc 3): third-quarter 2025 reported operating income margin = 1,135 / 6,057 = 18.74%, rounded as the question asks.",
+  "answer_components": [
+    "18.74%"
+  ],
+  "evidence": [
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "|Net sales|$7,171|$6,436|11.4%|$25,116|$22,595|11.2%|"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "|Operating income|$1,804|$581|210.5%|$4,889|$3,689|32.5%|"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "|Adjusted|$4,679|$2,135|$380|$2,164|$(107)|$331|$1,726|16.1%|$4.47|"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "|Adjusted|$16,391|$8,221|$1,567|$6,603|$(402)|$934|$5,267|15.1%|$13.63|"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "|Net sales|$6,589|$6,022|9.4%|$12,609|$11,888|6.1%|"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "|Operating income|$1,659|$1,113|49.1%|$2,595|$1,950|33.1%|"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "|Adjusted|$3,934|$1,993|$396|$1,545|$(106)|$228|$1,211|15.9%|$3.13|"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "|Adjusted|$7,779|$4,101|$789|$2,889|$(179)|$402|$2,308|14.9%|$5.97|"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Figure that must be computed",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Doc 1 prints a 65.2% fourth-quarter 2025 adjusted gross profit margin, the lowest any release prints for 2025, so a careless solver picks the fourth quarter and answers 25.16%. The third quarter, printed nowhere, is full year less first half (Doc 3) less fourth quarter: 64.93%, lower, so 18.74%."
+}
