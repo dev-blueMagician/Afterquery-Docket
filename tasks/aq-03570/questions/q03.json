@@ -1,0 +1,68 @@
+{
+  "question": "In US SIF's 2022 figures for ESG fund assets by issue, the assets of funds addressing climate change as a stand-alone issue were what percentage larger than those of funds addressing the second-ranked issue? Give one decimal place.",
+  "number_of_asks": 1,
+  "gold_answer": "91.7%",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 12, the paragraph on investors' need for emissions information and its footnote 4): citing the US SIF Foundation's 2022 Report on US Sustainable Investing Trends, the letter says that of the $8.4 trillion in funds that consider ESG factors, $3.45 trillion address climate change/carbon and $1.23 trillion apply fossil fuel divestment policies.\n\nStep 2. Source input (Doc 7, its account of US SIF's 2022 report and the section on climate-related greenwashing): the same report counts $8.4 trillion in funds that disclose an ESG investing methodology at the beginning of 2022. Doc 7 gives climate change and fossil fuel divestment a combined $4.8 trillion, and says the next largest ESG categories, military/weapons and tobacco, are addressed in funds with $1.8 trillion and $1.7 trillion.\n\nStep 3. Application (Doc 7 and Doc 12): the $4.8 trillion covers two issues together, and Doc 12 gives each of them its own figure, so as a stand-alone issue the figure for funds addressing climate change is Doc 12's $3.45 trillion, which is still the largest. Fossil fuel divestment, at $1.23 trillion, is smaller than both military/weapons and tobacco, so the second-ranked issue is military/weapons at $1.8 trillion.\n\nStep 4. Calculation (Doc 7 and Doc 12): the gap in trillion dollars: 3.45 - 1.8 = 1.65\n\nStep 5. Final answer (Doc 7 and Doc 12): the gap as a percentage of the second-ranked issue's figure: 1.65 / 1.8 = 91.7% (to one decimal place)",
+  "answer_components": [
+    "91.7%"
+  ],
+  "evidence": [
+    {
+      "document_number": 12,
+      "component_number": 1,
+      "quote": "of the $8.4 trillion AUM in funds that consider ESG factors in their investment decision-making, $3.45 trillion address climate change/carbon and $1.23 trillion apply fossil fuel divestment policies"
+    },
+    {
+      "document_number": 12,
+      "component_number": 1,
+      "quote": "US SIF Foundation, 2022 Report on US Sustainable Investing Trends Executive Summary"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "In its 2022 report tallying the assets under management (AUM) of ESG funds, the US SIF Foundation"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "at the beginning of 2022, $8.4 trillion of U.S.-domiciled assets under professional management were funds that disclose an ESG investing methodology"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "attention to climate change and fossil fuel divestment is by far the most significant of the ESG claims made by asset managers, addressed in funds with a combined $4.8 trillion in AUM"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "The next largest ESG categories, military/weapons and tobacco, are addressed in funds with $1.8 trillion and $1.7 trillion in AUM, respectively."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        7
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        12
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Part vs total: Doc 7 gives climate change and fossil fuel divestment a combined $4.8 trillion beside military/weapons at $1.8 trillion. Taking that total for climate change gives 166.7%. Doc 12 splits it: climate change/carbon is $3.45 trillion, which is 91.7% larger than military/weapons."
+}
