@@ -1,0 +1,89 @@
+{
+  "question": "How far, in percentage points, is Foodstuffs North Island's 2015 to 2019 ROACE in the Commission's final report from the top of the range of overseas grocers' returns that Foodstuffs' profitability consultant treats as comparable with a return measured that way? Give one decimal place.",
+  "number_of_asks": 1,
+  "gold_answer": "2.1 percentage points above",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 1, the final report's profitability finding): the Commission's estimate of the return on average capital employed (ROACE) of Foodstuffs North Island, averaged over five years, is 13.1%.\n\nStep 2. Source input (Doc 1, the same finding, on what changed after the draft report): the estimates for the Foodstuffs co-operatives are now on a whole of business basis, which covers the entire co-operative, including its ownership of the property used for retail stores. In the draft report the focus was on the individually owned stores.\n\nStep 3. Source input (Doc 11, the sections on calculating profitability and on benchmarks): when the consultant wrote, the Commission had said it intended to measure Foodstuffs at the level of its stores, on the assumption that the stores are renters of their land and buildings. The consultant calls a return measured that way highly levered. A return with the value of all assets in capital employed is unlevered, and the consultant describes the co-operatives' whole of business return as unlevered. A benchmark fits only returns that are also unlevered unless it is raised to the same leverage.\n\nStep 4. Source input (Doc 11, the section on calculating profitability): the average unlevered return on capital employed of the international sample of grocery retailers was between approximately 9 per cent and 11 per cent. Restated at the leverage of Foodstuffs' stores assumed to be renters, that range becomes approximately 22 per cent to 25 per cent.\n\nStep 5. Matching (Doc 1 and Doc 11): the final report's 13.1% is the whole of business figure, with the stores' property counted, so on the consultant's reasoning it is an unlevered return. The comparable range is the unlevered one, whose top is 11 per cent. The range restated for renters fits only the store-level measure, which the final report did not use for this figure.\n\nStep 6. Calculation (Doc 1 and Doc 11): 13.1 − 11 = 2.1\n\nStep 7. Final answer (Doc 1 and Doc 11): the ROACE of Foodstuffs North Island is 2.1 percentage points above the top of the comparable range.",
+  "answer_components": [
+    "2.1 percentage points above"
+  ],
+  "evidence": [
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "are 12.7% for Woolworths NZ, 12.8% for Foodstuffs SI and 13.1% for Foodstuffs NI"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "including the centralised functions provided by the co-operatives and ownership of property used for retail stores"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "In the draft report, our focus was on the individually owned and operated stores that directly engage in grocery retailing."
+    },
+    {
+      "document_number": 11,
+      "component_number": 1,
+      "quote": "to calculate those returns on the assumption that the stores are renters of the land and buildings assets that are employed"
+    },
+    {
+      "document_number": 11,
+      "component_number": 1,
+      "quote": "for the measured ROACE to be an unlevered return, the value of all assets needs to be included in capital employed"
+    },
+    {
+      "document_number": 11,
+      "component_number": 1,
+      "quote": "close to (and in many cases higher than) the Foodstuffs cooperatives when the latter is"
+    },
+    {
+      "document_number": 11,
+      "component_number": 1,
+      "quote": "calculated on an unlevered, whole of business basis"
+    },
+    {
+      "document_number": 11,
+      "component_number": 1,
+      "quote": "can only be applied to benchmark returns for the grocery retailers that are also truly unlevered"
+    },
+    {
+      "document_number": 11,
+      "component_number": 1,
+      "quote": "the average unlevered return on capital employed for the international sample of grocery retailers was between approximately 9 per cent and 11 per cent"
+    },
+    {
+      "document_number": 11,
+      "component_number": 1,
+      "quote": "this range would adjust to approximately 22 per cent to 25 per cent to be consistent with the leverage"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        11
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Conditional filter"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Unit or basis",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    }
+  ],
+  "why_these_are_traps": "Unit or basis: Doc 11 says the Commission meant to measure Foodstuffs' stores as renters, so a careless solver takes its renter-leverage range of 22 to 25 per cent and answers 11.9 below. Doc 1's final figure counts the co-operative's store property, so the unlevered range applies: 2.1 above."
+}

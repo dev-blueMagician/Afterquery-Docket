@@ -1,0 +1,110 @@
+{
+  "question": "What margin did the Foodstuffs co-operative with the higher ROACE in the Commission’s final report earn over the years covered by that ROACE, using a measure that Foodstuffs’ profitability consultant considers comparable across companies and that does not make any adjustments for leasing or gearing?",
+  "number_of_asks": 1,
+  "gold_answer": "22.2%",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 1, the final report's profitability finding): the return on average capital employed (ROACE), averaged across the same five years for each retailer, is 12.8% for Foodstuffs SI and 13.1% for Foodstuffs NI. Doc 1 names these co-operatives in full as Foodstuffs South Island and Foodstuffs North Island, so Foodstuffs North Island has the higher ROACE.\n\nStep 2. Source input (Doc 11, the summary of its comparison of margins): only the gross profit margin and the EBITDAR margin can be benchmarked across firms without an adjustment for the degree of renting or leverage. The NPAT margin is affected by how a firm is financed and cannot be benchmarked without an adjustment.\n\nStep 3. Source input (Doc 8, the paragraph on exchange rates in its price analysis): cost of goods sold is 77.8% of revenue for FSNI, the abbreviation Doc 8 gives for Foodstuffs North Island, measured on a whole of business basis for the same five years as the ROACE. Doc 8 prints no gross profit margin and no EBITDAR margin for FSNI. The margin it does print for FSNI is an NPAT margin, which Step 2 rules out, and the only gross profit margin it prints belongs to Woolworths NZ. No document gives the figures an EBITDAR margin would need.\n\nStep 4. Source input (Doc 11, the profit and loss rows of Table 1): gross profit is sales less cost of goods sold, so the gross profit margin is the share of revenue left after cost of goods sold.\n\nStep 5. Calculation (Doc 8 and Doc 11): 100 − 77.8 = 22.2\n\nStep 6. Final answer (Doc 1, Doc 8 and Doc 11): the gross profit margin of Foodstuffs North Island over those years was 22.2 per cent of revenue, the only margin of a kind the consultant accepts that the documents give for it.",
+  "answer_components": [
+    "22.2%"
+  ],
+  "evidence": [
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "12.8% for Foodstuffs SI and 13.1% for Foodstuffs NI"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "averaged across 2015 to 2019"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Foodstuffs North Island (Foodstuffs NI) and Foodstuffs South Island (Foodstuffs SI)"
+    },
+    {
+      "document_number": 11,
+      "component_number": 1,
+      "quote": "only the gross profit margin and EBITDAR margin can be benchmarked across firms without having to make an adjustment for the degree of renting or leverage"
+    },
+    {
+      "document_number": 11,
+      "component_number": 1,
+      "quote": "margin will be affected by the extent of equity vs. debt / lease finance employed by the firm, and so also cannot be benchmarked across firms unless an adjustment is made"
+    },
+    {
+      "document_number": 11,
+      "component_number": 1,
+      "quote": "[3] Cost of goods sold"
+    },
+    {
+      "document_number": 11,
+      "component_number": 1,
+      "quote": "[4] Gross Profit"
+    },
+    {
+      "document_number": 11,
+      "component_number": 1,
+      "quote": "[25] Gross profit margin (%)"
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "Cost of Goods Sold: 77.8% for FSNI and 77.6% for FSSI (measured on a WOB basis for the period 2015 to 2019)"
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "Foodstuffs North Island (FSNI) and Foodstuffs South Island (FSSI)"
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "FSNI submitted its NPAT margin is 4%"
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "gross profit margin was 24.4%"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        8
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Used to identify",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        11
+      ],
+      "role": "Exclusion / condition source",
+      "reviewer_note": "Doc 11 says which kinds of margin compare across firms; it rules out Foodstuffs North Island's 4% NPAT margin, which Doc 8 prints whether or not Doc 11 is read."
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    },
+    {
+      "trap": "Look-alike company",
+      "how_a_careless_solver_fails": "Picks the wrong entity or section"
+    }
+  ],
+  "why_these_are_traps": "Look-alike measure: Doc 8's margins paragraph prints Foodstuffs North Island's NPAT margin, 4%, a kind Doc 11's margin summary rules out. Look-alike company: Doc 8's cost-share sentence also gives Foodstuffs South Island's 77.6%, which yields 22.4%. The gold uses the higher-ROACE co-operative's own 77.8%: 22.2%."
+}
