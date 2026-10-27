@@ -1,0 +1,482 @@
+AQ-06708 · Corporate filingsHard only — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-06708
+Saved: 2026-10-19 04:26 (local time)
+Bundle: Corporate filingsHard only · Pinterest, Inc. and Snap Inc · 7 documents · 90,458 prompt tokens
+Run read: Run 1, the latest
+Attempts read: 7
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 16 runs left · 2 of 60 runs used in the last 24 h (all tasks)
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 6 attempts right
+
+Solver A 0/3 · Solver B 3/3 · Not Hard: Solver B solved 3/3
+
+High model: two solvers (Solver A, Solver B) try up to 3 times each. Hard = each of the two Hard solvers gets it wrong at least once in its three runs, even if every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+No specific changes were suggested for this version. The verdict and the run history show where the solvers landed.
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 1 (Oct 18, 2026, 10:04 PM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+1 run
+
+------------------------------------------------------------------------
+Run 1 · Too easy · Result the gate uses
+Oct 18, 2026, 10:04 PM · Version 15ae28 (current) · Low — · Medium — · High 3/6
+------------------------------------------------------------------------
+
+What changed before this run: first run
+
+Solver summary: Run 1 · Too easy · 3 of 6 right
+
+Your answer: 3.8
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: —
+
+Final answer: Snap’s gross margin was about 54.5% in Q3 2025 and about 58.6% in Q4 2025, an increase of 4.1 percentage points. | Your answer (gold): 3.8
+
+Full answer
+-----------
+
+Snap’s gross margin was about 54.5% in Q3 2025 and about 58.6% in Q4 2025, an increase of 4.1 percentage points.
+
+Reasoning
+---------
+
+We need answer from own knowledge: Snap's gross margin rose from Q3 to Q4 2025 by how many percentage points? Need determine gross margin figures for Snap Q3 2025 and Q4 2025.
+
+Recall Snap Inc earnings reports in 2025. Q3 2025 results announced around October 2025? Q4 2025 results announced around February 2026?
+
+Need gross margin values. Let's recall Snap Q3 2025 financial highlights: Revenue was $1.75 billion? Or $1.706B? Actually Snap Q3 2025 revenue was $1,726 million? Wait need correct.
+
+Let's recall Snap earnings in Q3 2025 (reported in October 2025?): Revenue came in at $1.73B? Or $1.707B? Let's recall details: In Q2 2025 revenue was $1.34B up 9%. In Q3 2025 revenue was $1.73B? No that sounds high (up 9.8?). Let's check mental: Snap Q1 2025 revenue $1.36B, Q2 $1.345B? Actually need correct sequence.
+
+Snap 2024 revenues: Q1 $1.195B, Q2 $1.247B, Q3 $1.373B, Q4 $1.557B. In 2025: Q1 revenue was $1.36B (up 14%). Q2 revenue was $1.345B? Wait that'd be down, unlikely. Let's recall actual reports: Snap Q1 2025 revenue $1.36B, up 14 percent. Q2 2025 revenue was $1.468B? Or $1.34B? Let's think. In July 2025 Snap reported Q2 revenue of $1.34B, up 9 percent year-over-year, missing expectations? Yes I think Q2 2025 revenue was $1.34B, up 9%. Then Q3 2025 revenue was $1.51B? Or $1.73B? Let's recall news headlines in October 2025: Snap Q3 revenue was $1.73B? Actually I think Snap Q3 2025 revenue exceeded expectations at $1.73B, up 9.8 percent? Or maybe $1.706B? Let's check mental consistency: Q4 2024 was $1.557B, so Q3 2025 being $1.73B is about 11% growth? Hmm.
+
+But the question specifically asks gross margin rose from third quarter to fourth quarter 2025 by how many percentage points? So need gross margin for Q3 and Q4.
+
+We need precise gross margin figures reported. Let's recall Snap's gross margin in recent quarters is around 58%? Or maybe 54%? Actually gross margin for Snap has been in the 50s. In Q2 2025 gross margin was 54%? Let's recall from earnings report tables.
+
+Let's recall Snap Q4 2025 earnings report released in February 2026: Revenue was $1.89B? Or $1.86B? Net income? Gross margin might have been 59.1%? Or 58.8%?
+
+We need the increase in percentage points from Q3 to Q4. Maybe Q3 gross margin was 54.6% and Q4 was 59.0%, increase of 4.4? Or Q3 55.1% and Q4 59.0% increase 3.9?
+
+Let's recall details from Snap's Q4 2025 earnings call in Feb 2026: They reported revenue of $1.97B? Wait I think Snap Q4 2025 revenue was $1.71B? No, need correct.
+
+Let's recall news in early Feb 2026: Snap reported Q4 2025 revenue of $1.71B? Or $1.88B? Actually there was news that Snap's Q4 revenue was $1.71B beating expectations of $1.70B? Or was that for another company?
+
+Let's systematically recall Snap earnings headlines around Feb 2029? No.
+
+We need answer to one decimal place, likely something like 4.1 percentage points.
+
+But I need be somewhat accurate based on knowledge.
+
+Let's recall Snap's income statement for Q3 and Q4 2025 from financial news.
+
+In October 2025, Snap reported Q3 2025:
+- Revenue: $1.73B? Or $1,706,765? Actually I think revenue was $1,706,984? Wait that's in thousands? Let's check mental: Snap's Q3 2025 revenue was $1.706B? Yes maybe $1.707B, up 9.8 percent.
+- Net income? Maybe $18M? Or loss?
+- Gross profit? Maybe $1.0B?
+- Gross margin? Maybe around 59%?
+
+Wait there might be two gross margins: GAAP gross margin and adjusted? The question likely refers to reported gross margin in earnings summary.
+
+Let's recall in Feb 2026, Snap reported Q4 2025 revenue of $1.88B? Or $1.9B? And net income of $45.6M? Or $45M?
+
+Actually I recall in Feb 2026 Snap announced Q4 2025 revenue was $1.71B? Let's search mental news headlines: Around Feb 2, 2026? Or Feb 4? Many tech companies reported: Meta, Google, Snap? Let's recall timeline in early Feb 2026: On Feb 3? Or Feb 4? Snap might have reported on Feb 4, 2026 after market close. The headline said Snap Q4 revenue was $1.71B? Or $1.89B?
+
+Let's recall stock reaction: Snap shares fell? Or rose? I think Snap shares dropped after Q4 report because guidance was weak? Or maybe they rose? Let's think. In Feb 2026, Snap stock might have fallen ~15% after Q1 2026 guidance disappointed? Or maybe it crashed because of revenue miss?
+
+Actually I recall in February 2026, Snap Inc. reported fourth-quarter revenue of $1.71B versus $1.70B expected, but guidance for Q1 was $1.59B-$1.64B? Wait no.
+
+Let's try to recall specific figures from the earnings table:
+For three months ended Dec 31, 2025 compared to Dec 31, 2024.
+Revenue maybe $1,886,685? That's $1.887B, up about 11%?
+Cost of revenue maybe $769,186?
+Gross profit maybe $1,117,499?
+That'd be gross margin about 59.2%.
+
+For three months ended Sep 30, 2025:
+Revenue maybe $1,726,952?
+Cost of revenue maybe $783,xxx?
+Gross profit maybe $943,xxx?
+Gross margin maybe 54.6%?
+
+That'd be an increase of about 4.6? Hmm but need correct.
+
+Let's recall that Snap's cost of revenue includes infrastructure costs, which are somewhat stable, so gross margin improves with revenue scale. From Q3 to Q4 revenue likely increased seasonally (holiday ad spending). So gross margin might increase a few points because revenue up but costs up less.
+
+But we need precise figures reported, probably in the 10-Q or 10-K.
+
+Let's recall the exact numbers from Snap's 10-Q for three months ended Sept 30, 2025 and Dec 31, 2025.
+
+We need gross margin = gross profit / revenue.
+
+From mental image of financial statements:
+For 2024 Q4: Revenue $1,557,297, Cost of revenue $667,xxx? Gross profit $889,xxx? Margin around 57%?
+
+Actually let's recall Snap's 2023 gross margins were around 58%. In 2024 they improved.
+
+But maybe the figures are:
+Q3 2025:
+Revenue: $1,706,663
+Cost of revenue: $762,xxx?
+Gross profit: $944,xxx?
+Margin = 55.3?
+
+Q4 2025:
+Revenue: $1,886,764?
+Cost of revenue: $765,xxx?
+Gross profit: $1,121,xxx?
+Margin = 59.4?
+Difference = 4.1?
+
+But I need be closer.
+
+Let's recall news reports after Q4 2025 earnings mentioned gross margin of 59 percent? Or "gross margin of 59.1 percent, up from 54.8 percent in the prior year"? Wait that'd be year-over-year, not quarter-over-quarter.
+
+Actually in earnings reports they often discuss gross margin for the quarter and compare to prior year same quarter. For Q4 2025 they might say gross margin was 59 percent, up from 58 percent a year earlier? Or up 400 basis points?
+
+But the question asks "By how many percentage points did Snap's gross margin rise from the third quarter to the fourth quarter of 2025?" This sounds like they are comparing sequential quarters using figures in the report (maybe in a table showing three months and nine months?). Or maybe in an article summarizing Q4 results they listed Q3 gross margin and Q4 gross margin.
+
+We need the specific increase. Let's try to recall the actual income statement lines for three and nine months ended Sept 30, 2025 and Dec 31, 2025? Wait they report quarterly in 10-Q for three months and nine months? Actually 10-Q reports three and nine months. The 10-K reports full year and three months? Let's recall the layout:
+For the three months ended Dec 31, 2025 and 2024.
+For the twelve months ended Dec 31, 2025 and 2024.
+
+But also in the earnings press release they might have a table with three months ended Dec 31, 2025 and Sep 30, 2025? No, usually they compare to prior year quarter.
+
+However, the question asks specifically "from the third quarter to the fourth quarter of 2025" - that is sequential. This might come from a financial summary article that lists metrics for each quarter.
+
+Let's recall Snap Q3 2025 gross margin was 52.0? Or 54.0?
+
+We need answer with one decimal place. So likely the two margins are like 54.3% and 58.8%, difference 4.5.
+
+But I need be as accurate as possible.
+
+Let's recall Snap's Q4 2025 earnings call transcript mentions gross margin? They might say "Our gross margin in Q4 was 58 percent, up from 54 percent in Q3"? Or "gross margin expanded to 59 percent"?
+
+Actually, I think Snap's gross margin in recent quarters:
+Q1 2025: around 51%?
+Q2 2025: around 53%?
+Q3 2025: around 54%?
+Q4 2025: around 59%?
+
+That'd be a big jump of 5 points in one quarter, maybe too large.
+
+But wait revenue in Q4 is usually higher due to seasonal advertising, and costs might be somewhat fixed, so margin can jump.
+
+Let's try to recall specific cost of revenue figures. Snap's infrastructure costs (servers, bandwidth) are large but somewhat scale with users, not revenue. So if revenue jumps 15% quarter-over-quarter but costs stay flat, margin improves.
+
+What was Snap's revenue in Q3 vs Q4 2025? If Q3 was around $1.71B and Q4 around $1.89B, that's about 10.5% increase. If cost of revenue is flat around $770M, then gross profit goes from ~$940M to $1,120M, margins 55% to 59%, indeed about 4 points.
+
+Thus the answer might be around 4.0 or 4.1.
+
+But I need be precise: maybe Q3 gross margin was 54.8% and Q4 was 59.0%, increase of 4.2 percentage points. Or Q3 was 54.1 and Q4 58.8 => 4.7.
+
+Let's try to derive from likely revenue and cost figures.
+
+We need revenue for Q3 2021? No.
+
+Let's recall from Snap's 10-Q filed for three months ended Sept 30, 2025 (filed around Nov 2025?). The income statement might show:
+Three months ended Sept 30, 2025 and 2024.
+Revenue: $1,706,734?
+Cost of revenue: $780,xxx?
+Operating expenses etc.
+Gross profit: ?
+
+Actually I think in 2025 Snap's revenue was:
+Q1: $1,363,177?
+Q2: $1,345,000? No that'd be down. But maybe Q2 was indeed $1,345,307? Wait that'd be up 9 percent from Q2 2024 ($1.24B). Yes! Q2 2024 revenue was about $1.247B, up 9% => $1.36B? Wait 1.247B *1.09 = $1.359B. So Q2 2025 revenue might be around $1.34B? That'd be up 8.7%. So Q2 was about $1.34B. Then Q3 might be around $1.51B (up about 10% from Q3 2024's $1.37B). Yes! Q3 2024 revenue was $1,373,476? Actually yes, Snap Q3 2024 revenue was $1.373B. Up about 9.8% => about $1.507B? Or maybe $1.51B.
+
+Wait but I earlier thought Q3 was $1.73B, that'd be up 26%, unrealistic. So correct Q3 2025 revenue is likely around $1,507,000? Or $1.537B?
+
+Then Q4 2024 revenue was $1.557B. If up about 10%, Q4 2025 revenue is around $1.72B? Or maybe up 9.3% => $1.70B.
+
+But wait in Feb 2026 headlines said Snap Q4 revenue was $1.71B? Yes! That sounds right: Q4 2025 revenue was $1.71B, beating expectations of $1.70B. So Q4 revenue was about $1.71B, up maybe 10% from Q4 2024 ($1.557B => actually that's up about 9.8%). Yes! So Q4 2025 revenue was $1,706,?? Wait no, $1.71B is about 9.8% increase from $1.557B.
+
+Thus Q3 2025 revenue was likely around $1.55B? Wait Q3 2024 was $1.373B, up 9% => about $1.497B, maybe rounded to $1.50B.
+
+But wait there was also news that Snap Q3 2025 revenue was $1.60B? Or exceeded expectations?
+
+Let's recall in October 2025, Snap reported Q3 revenue of $1.51B? Or $1.6B?
+
+Actually in October 2025, Snap might have reported Q3 revenue of $1.51B, up 9 percent, missing? Or beating?
+
+But then Q4 was $1.71B? That'd be a huge sequential jump of $200M (13%). That sounds right for seasonal ad business: Q4 is usually stronger than Q3. Yes, from $1.51B to $1.71B is about 13%, plausible.
+
+Thus gross margin might be calculated with costs.
+
+But wait if Q4 revenue was $1.71B and Q3 was $1.51B.
+
+Now, what about gross margin figures? Let's recall in the Feb 2026 press release they might have listed:
+- Gross profit for three months ended Dec 31, 2025 was maybe $1,013,xxx?
+- Gross profit for three months ended Dec 31, 2024 was maybe $898,xxx?
+
+But we need Q3 figures.
+
+Let's recall the 10-Q filing for three months ended Sept 30, 2025 included:
+Revenue: $1,506,xxx?
+Cost of revenue: $693,xxx?
+Gross profit: $813,xxx?
+That'd be margin about 54%.
+
+Then for Dec 31, 2025 (10-K? Or 10-Q for three months? Actually 10-K for full year includes three months? No, 10-K has full year and comparative prior full year, but also might include quarterly financial data unaudited? Usually they include quarterly financial information in a separate table).
+
+But we can try to recall from the 2025 10-K filed in Feb 2026? The income statement for three months ended Dec 31, 2025 might be in Note? Or in the quarterly summary table.
+
+Actually in 10-K they often present quarterly results in a table:
+Quarter ended:
+Dec 31, 2025: Revenue ?, Net income?
+Sep 30, 2025: Revenue ?, Net income?
+Jun 30, 2025: etc.
+
+But I don't have those figures precisely.
+
+However, the question asks "By how many percentage points did Snap's gross margin rise from the third quarter to the fourth quarter of 2025?" This sounds like in that quarterly summary table they list gross margin? Or maybe in an article they discuss gross margin improvement.
+
+But perhaps it's easier: The gross margin in Q3 was 54.5% and in Q4 was 58.8%, difference 4.3.
+
+But I need one answer. Let's think about likely round numbers.
+
+Actually I recall seeing in a recent financial summary for Snap:
+Q3 2025 gross margin: 55.1%
+Q4 2025 gross margin: 59.0%
+Difference: 3.9?
+
+But need be correct.
+
+Let's recall Snap's overall 2025 gross margin was around 54.5%? Or maybe 58?
+
+Wait in 2024, Snap's gross margin was around 54.5% for the full year? Let's check mental: Snap 2024 full year revenue was about $5.36B, cost of revenue about $2.4B, gross profit about $2.96B, margin about 55.2%. Yes, full year 2024 gross margin was about 55.1? Or 54.7? Actually I think gross profit in 2024 was about $2,938,xxx on revenue of $5,360,xxx => about 54.8%. So quarterly margins likely in that range, but Q4 might be higher.
+
+If full year 2024 margin was 54.8, then quarterly might vary: Q1 ~53, Q2 ~54, Q3 ~55, Q4 ~58? That'd average around 55.
+
+But in 2025, revenue was about $6B? Actually full year 2025 revenue might be around $6.0B? Let's check mental: 2025 revenue was about $5.99B? Or $6.0B? Yes I think Snap 2025 full year revenue was about $5.99B, up about 12 percent. Cost of revenue might be about $2.5B? Gross profit maybe $3.5B? Margin about 58%? Wait that'd be high.
+
+Let's recall in Feb 2026 they said full year 2025 revenue was $6.0B, up 12 percent. Net income was $270M? Or maybe net income was $45M?
+
+Actually in Feb 2026, Snap reported Q4 and full year 2025? The press release might have said:
+For the full year 2025:
+Revenue: $5.93B?
+Net income: $45.8M?
+Daily active users: 474 million?
+
+But I'm not sure.
+
+Let's recall specific news headlines in Feb 2023? No.
+
+Given all this ambiguity, I need to provide the best single answer. Let's analyze the likely figures in the earnings report table for three months ended Dec 31 and Sept 30, 2025.
+
+We need gross profit divided by revenue.
+
+Perhaps we can approximate cost of revenue for these quarters.
+
+Snap's cost of revenue comprises:
+1. Infrastructure costs (hosting, etc.)
+2. Content costs? Maybe not.
+3. Revenue share?
+
+Infrastructure costs are somewhat tied to daily active users and usage, but also have fixed components.
+
+In Q3 and Q4 2025, DAUs might have been around 477M and 474M? Wait Snap's DAUs in Q4 2025 were 474 million? Or 477 million?
+
+Actually in Feb 2026 they said daily active users reached 477 million in Q4? Or was it 474 million? Let's recall: In Feb 2026 they said Snapchat had 477 million daily active users, up 5 percent? Or 947 million? No, 477 million sounds right (up about 5 million).
+
+Thus user base didn't change much, so infrastructure costs might be flat.
+
+If revenue went from $1.51B to $1.71B, and costs flat around $680M, then gross profit went from ~830M to ~1,030M, margins 55% to 60%, difference 5.
+
+But need precise.
+
+Let's recall that in the Q4 2021? Not relevant.
+
+Actually, I think I should try to recall the specific line items from the 10-K filed with SEC in Feb 2026. Let's imagine the Consolidated Statements of Operations for the three months ended Dec 31, 2025 and 2024, and for Sept 30? Wait the 10-Q filed in Nov 2025 for three months ended Sept 30, 2025.
+
+In 10-Q, they present:
+Consolidated Statements of Operations (Unaudited)
+For the three months ended Sep 30, 2021? No.
+
+But I might recall seeing a table with columns for "Three months ended Sep 30, 2025" and "Three months ended Sep 30, 2024" and "Nine months ended..." So they don't have Q3 vs Q4 in same filing.
+
+However, in the 10-K filed in Feb 2026, they present:
+Consolidated Statements of Operations
+For the years ended Dec 31, 2025 and 2024.
+But they also present quarterly financial information (unaudited) in a separate table with columns for each quarter of 2025 and 2024.
+
+That table might include:
+Quarter ended: Dec 31, Sep 30, Jun 30, Mar 31 for 2025 and 2024.
+For each: Revenue, Cost of revenue, Gross profit, Operating expenses, etc. Or maybe just revenue and net income?
+
+But the question asks specifically about gross margin rising from Q3 to Q4. This could be calculated from that quarterly table if it lists gross profit.
+
+Thus we need the gross profit for Q3 and Q4 2025.
+
+Let's try to recall or derive revenue for each quarter of 2025:
+We need Q1, Q2, Q3, Q4.
+
+We know full year 2025 revenue was likely about $6.0B. Let's see if quarters sum:
+If Q1 was $1.36B
+Q2 was $1.35B? That'd be flat. But maybe Q2 was $1.48B?
+Wait need correct.
+
+Actually I recall in 2025 Snap's quarterly revenues were approximately:
+Q1: $1.36B
+Q2: $1.48B? Or $1.34B?
+Q3: $1.73B? No that'd be huge.
+But wait there was news in Jan 2026? No.
+
+Let's recall news headlines for each quarter in 2025:
+- In April 2025, Snap reported Q1 revenue of $1.36B, up 14%, beating expectations.
+- In July 2025, Snap reported Q2 revenue of $1.34B? Or was it $1.35B? Actually I think Q2 revenue was $1.345B, up 9 percent, missing expectations of $1.35B? Yes that sounds right: revenue was $1.345B, up 9 percent.
+- In October 2025, Snap reported Q3 revenue of $1.51B? Or $1.59B? Wait if Q1 was 1.36, Q2 was 1.345 (down?), that'd be weird but possible if seasonal? Actually ad revenue can be seasonal: Q2 and Q4 stronger. So Q1 and Q3 might be lower. So Q2 being 1.34 and Q1 1.36 is plausible (flat).
+
+But then in October 2025, they might have reported Q3 revenue of $1.51B, up about 9.8 percent? Or maybe $1.51B was up 9.8?
+
+Then in Feb 2026, Q4 revenue was about $1.71B, up about 9.8 percent? Wait that'd be up about 10 percent year-over-year, but sequential up about 13 percent.
+
+But wait if Q2 was 1.345 and Q3 was 1.51, that's up 12% sequential, which might be high but okay.
+
+But actually I think in October 2025, Snap's Q3 revenue was $1.73B. Let's check consistency: Q3 2024 was $1.373B. To reach $1.73B that's up 26%, impossible given they said growth was in single digits or low teens. So Q3 2025 definitely was not $1.73B. So correct Q3 revenue is likely around $1.51B (up ~10%). Yes! So my earlier $1.73B was wrong; that might be for another company or a misremember.
+
+Thus Q4 2025 revenue was likely around $1.71B? Wait Q4 2024 was $1.557B. Up 10% => $1.713B. Yes! So Q4 was about $1.71B. So the sequential increase from Q3 ($1.51B) to Q4 ($1.71B) is about $200M or 13%, which is typical for holiday season.
+
+Thus gross margin might be calculated with costs. Let's recall cost of revenue in Q2 or Q3 might be around $680M?
+
+But actually we need the gross margin values, not revenue.
+
+Let's recall from the 2028? No.
+
+But we can try to compute gross profit if we know gross margin for full year or other quarters.
+
+However, maybe there's a simpler mental recall: In the Feb 2026 earnings report, they said gross margin was 59 percent in Q4, up 400 basis points from the prior quarter? Or up from 54 percent?
+
+Wait the phrase "gross margin rose from the third quarter to the fourth quarter of 2025" sounds like it was mentioned in a news article summarizing the report, perhaps saying "gross margin improved to 58.8 percent in the fourth quarter, up from 54.1 percent in the third quarter, a rise of 4.7 percentage points"?
+
+We need be precise.
+
+Let's recall that in Snap's 2026 10-K, there is a table with quarterly data for 2025:
+Quarter ended Dec 31, 2025:
+Revenue: $1,708,xxx?
+Cost of revenue: maybe $696,xxx?
+Gross profit: maybe $1,011,xxx?
+Margin: about 59.2?
+
+Quarter ended Sep 30, 2025:
+Revenue: $1,507,xxx?
+Cost
+
+High model
+==========
+The Hard solvers keep only right or wrong, not their reasoning. To see how a solver worked, use View reasoning on an attempt from another step, such as the document check.
+
+Attempt 1 · Wrong
+-----------------
+Docs: Not kept · Note: —
+
+Final answer: not shown | Your answer (gold): 3.8
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Wrong
+-----------------
+Docs: Not kept · Note: —
+
+Final answer: not shown | Your answer (gold): 3.8
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Wrong
+-----------------
+Docs: Not kept · Note: —
+
+Final answer: not shown | Your answer (gold): 3.8
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 4 · Right
+-----------------
+Docs: Not kept · Note: —
+
+Final answer: not shown | Your answer (gold): 3.8
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 5 · Right
+-----------------
+Docs: Not kept · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): 3.8
+
+Where it shortcut: Reached the gold answer; the same headline bullet in document 7 discloses the Q3-to-Q4 gross margin change, letting the solver confirm the magnitude without combining Q1/Q2/full-year cost of revenue across documents 5, 6 and 7.Doc 7
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 6 · Right
+-----------------
+Docs: Not kept · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): 3.8
+
+Where it shortcut: Reached the gold answer; document 7's highlight bullet states the sequential gross margin increase, so the multi-document computation the question appears to demand was avoidable.Doc 7
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

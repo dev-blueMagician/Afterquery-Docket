@@ -1,0 +1,53 @@
+{
+  "bundle": "aq-06708",
+  "corpus_sha256": {
+    "docs/Pinterest-Q1-2026-Earnings-Release.txt": "1960446e60ef0584ba58eb31aae9db7893e0fafcec607a181062936fd2d857d2",
+    "docs/Pinterest-Q1-2026-Quarterly-Report.txt": "7497b390411208c5ebf0cff383fc98aa903ddc59aa19d967a23d7c3a386b9864",
+    "docs/Pinterest-Q2-2026-Earnings-Release.txt": "af1df5173ca5f79ab5c785c1cb696dbeb7f90f705d150bdccb59f884c5f9ee99",
+    "docs/Pinterest-Q4-2025-Earnings-Release.txt": "4659a49bc7cdf1886042118e6d3f4f4506af4d9e57945000d5dd6ee5e642ab5a",
+    "docs/Snap-Inc-Q1-2026-Earnings-Release.txt": "0fac724f5a71a31cae962b2b5418ad870a660b4ed7beaf8fb3e79db793f07b62",
+    "docs/Snap-Inc-Q2-2026-Earnings-Release.txt": "a26144f9fd9086c665e5d62e7910546f62a1f29de62364702166216dcc95f146",
+    "docs/Snap-Inc-Q4-2025-Earnings-Release.txt": "c22ea21092ba435830a30fecef7f5ed78d2aefc825a4235cf16fb15062e9686f",
+    "text/D01.txt": "efa217981de2401e3532a0bc650dd3e84b63afee0214efa45b13189f5ed1e92f",
+    "text/D02.txt": "8549adacf9118c462ab77dfbdff87738944638b92cd052cf9df472e4ac0703c1",
+    "text/D03.txt": "c0c60426e6f33526de96fa75836848c86a1427a1eeb879774ee78ba560c68267",
+    "text/D04.txt": "655358767481e8355407ae72475cefda4ca69584d2812eb92cf3bb6bbd0c3d1a",
+    "text/D05.txt": "aa86937f8212188f64c6ea94f580a1b7f9009bdcae1985f7df98d78794211c17",
+    "text/D06.txt": "a3940a0d57828d54e27692a50a146ea3fbc9d0b4e95697dcbc57c19c95ff6c83",
+    "text/D07.txt": "0853e55760e105933bcb7882c20bbb00b86901ffbd494af568be7ff75d74bfb0",
+    "text/manifest.json": "bfaca451222c403f0cd2bb2d040e6babe2f2b2fa845d7eeee84a5e0f4e90a2a0"
+  },
+  "difficulty_target": "hard",
+  "form_sha256": "4105811f6ed20aaf4c6d6d8aeebf1eb11b9f92d78f524f811d74fff8d980c1ba",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "hard",
+    "documents": "D07, D06",
+    "id": "q01",
+    "levers": "Exact table vs rounded prose; Ask about a period no document reports on its own",
+    "origin": "claude",
+    "revision": "0",
+    "status": "draft",
+    "tags": "Cross-document join; Temporal alignment"
+  },
+  "question_id": "q01",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "3.8",
+    "components": "- c1: 3.8",
+    "evidence": "- D07 (l.223, statement of operations, three months and year ended December 31) [c1]: \"|Revenue|$1,716,461|$1,557,283|$5,931,447|$5,361,398|\"\n- D07 (l.225, statement of operations) [c1]: \"|Cost of revenue|702,443|671,660|2,669,575|2,474,237|\"\n- D06 (l.145, statement of operations, three and six months ended June 30) [c1]: \"|Cost of revenue|667,885|653,333|1,333,126|1,292,912|\"\n- D06 (l.311, supplemental table, Q1 2025 to Q2 2026) [c1]: \"|Revenue|$1,363,217|$1,344,930|$1,506,839|$1,716,461|$1,528,791|$1,598,993|\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: hook h17, the bank's 3M move (a rounded headline beside a quarter that must be backed out of another release) applied to a margin; levers \"Exact table vs rounded prose\" (D07 headline L9: \"Fourth quarter gross margin of 59%, up 4 percentage points sequentially\") and \"Ask about a period no document reports on its own\" (Q3 2025 cost of revenue printed in no document). Target hard. Sentence and answer carried word for word from sketch i09 (origin claude, 2026-10-18). Local strong-solver screen on this exact sentence: 3/3 right at high confidence (record in notes/sketches/i09.md; ledger row 61). User quick test against the High model 2026-10-19: \"survived\". Platform difficulty result pending.\n- Dependency plan: D07 gives Q4 2025 revenue 1,716,461 and cost of revenue 702,443, full-year 2025 cost of revenue 2,669,575 and the rounded headline; D06 gives first-half 2025 cost of revenue 1,292,912 (six-month 2025 column) and Q3 2025 revenue 1,506,839 (its supplemental table, also in D05 and D07). Q3 cost of revenue 2,669,575 - 702,443 - 1,292,912 = 674,220; margins 55.26% (Q3) and 59.08% (Q4); rise 3.82 -> 3.8.\n- Universe: not applicable (one value).\n- Necessity: D07 is the only source of Q4 2025 and full-year 2025 cost of revenue (searched \"Cost of revenue\" in D05-D07; D05 and D06 print 2025 only for Q1, Q2 and the first half). D06 is the only source of Q2 2025 and first-half 2025 cost of revenue (D05 prints Q1 2025 only: 639,579; 639,579 + 653,333 = 1,292,912). Delete-and-guess: without D06, Q3 cost of revenue cannot be rebuilt and a solver answers the headline's 4 (or 4.1 with the full-year margin); without D07, no Q4 or full year exists. Q3 2025 revenue alone is substitutable (D05, D06, D07 tables). Recall: not a public headline figure.\n- Selected-lever checks: exact vs rounded prose: the headline's whole-number \"4 percentage points\" gives 4.0 at the asked precision; the exact change is 3.82 (59.0761 - 55.2560). Period no document reports: using the full-year 2025 margin (1 - 2,669,575 / 5,931,447 = 54.99%) as the Q3 stand-in gives 4.08 -> 4.1; using the first-half margin (52.26%) gives 6.82 -> 6.8 (notes/calc-hooks.py h17).\n- Targeted failure modes: declared Figure that must be computed / Rounding, scale or sign -> 4.0 (D07 L9 headline, the lazy default; recomputed: the headline states 4). Not declared (predicted only, no attempt took them): 4.1 (full year as Q3), 6.8 (first half as Q3), 3.7 (the headline's rounded 59% for Q4 with exact Q3: 59 - 55.26 = 3.74).\n- Calculation verification: notes/calc-hooks.py (h17): Q3 cost of revenue 674,220; Q3 margin 55.2560%; Q4 margin 59.0761%; change 3.8201 points -> 3.8. Units: thousands of dollars for inputs; margins as percent of revenue; change in percentage points, rounded once at the end (the reasoning's rounded shares 44.74% and 40.92% give the same 3.82).\n- Semantic/ID/overview probes: \"gross margin\" appears only in D07's headline (L9); \"cost of revenue\" in all Snap statements; no \"nine months\" or \"September 30, 2025\" column in any document; the bundle overview mentions no gross margin.\n- Precision/readings: (a) gross margin = (revenue - cost of revenue) / revenue, the basis of Snap's headline (59.08% rounds to its 59%; Q4 2024 56.87% gives its \"2 percentage points year-over-year\" 2.21). (b) Revenue rounded to $ millions: 3.81 -> 3.8. (c) Margin excluding stock-based compensation and D&A in cost of revenue (not defined in the bundle; screen solvers checked it): 3.82 -> 3.8. (d) Relative change (6.9%) rejected by \"percentage points\". (e) Calendar quarters = Snap's fiscal quarters.\n- Completeness: capture complete (7 of 7 documents, no gap characters); D05-D07 read in full.\n- Style/set review: one ask, 23 words; the bundle's only promoted question so far.\n- Warnings answered: pending preflight.",
+    "necessary documents": "- D07: Answer component\n- D06: Answer component",
+    "platform validation": "",
+    "question": "By how many percentage points did Snap's gross margin rise from the third quarter to the fourth quarter of 2025? Answer to one decimal place.",
+    "reasoning": "Step 1. Source input (Doc 7, condensed consolidated statements of operations, three months and year ended December 31, 2025): fourth-quarter 2025 revenue was 1,716,461 and cost of revenue 702,443; cost of revenue for the full year 2025 was 2,669,575 (thousands of dollars).\nStep 2. Source input (Doc 5, condensed consolidated statements of operations, six months ended June 30, 2025): first-half 2025 cost of revenue was 1,292,912 (thousands of dollars).\nStep 3. Source input (Doc 5, supplemental financial information and business metrics, third-quarter 2025 column): third-quarter 2025 revenue was 1,506,839 (thousands of dollars).\nStep 4. Calculation (Doc 7 and Doc 5): no release prints third-quarter 2025 cost of revenue; it is the full year less the fourth quarter less the first half: 2,669,575 - 702,443 - 1,292,912 = 674,220 (thousands of dollars, derived).\nStep 5. Calculation (Doc 7): fourth-quarter 2025 cost of revenue as a share of revenue: 702,443 / 1,716,461 = 40.92% (derived); gross margin is the rest of revenue.\nStep 6. Calculation (Doc 7 and Doc 5): third-quarter 2025 cost of revenue as a share of revenue: 674,220 / 1,506,839 = 44.74% (derived).\nStep 7. Final answer (Doc 7 and Doc 5): gross margin rose by as much as the cost-of-revenue share fell from the third quarter to the fourth: 674,220 / 1,506,839 - 702,443 / 1,716,461 = 3.8% of revenue, a rise of that many percentage points, rounded as the question asks.",
+    "targeted failure modes": "### Failure mode 1\nTrap: Figure that must be computed\nHow a careless solver fails: Rounding, scale or sign\n\nWhy these are traps: Doc 7's headline says Q4 gross margin was 'up 4 percentage points sequentially', a whole-number rounding, giving 4.0. No release prints Q3 2025 cost of revenue; backing it out (full year less Q4 less Doc 5's first half) gives margins of 55.26% and 59.08%, so 3.8."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "a99e6e2df0d8fafe14e925317c9b550ce4c4096c2f1e59a147fd40e2c0c0c65d"
+}
