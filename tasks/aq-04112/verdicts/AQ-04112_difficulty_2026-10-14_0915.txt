@@ -1,0 +1,453 @@
+AQ-04112 · Public policy — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-04112
+Saved: 2026-10-14 09:15 (local time)
+Bundle: Public policy · 3 documents · 82,696 prompt tokens
+Run read: Run 3, the latest of 3
+Attempts read: 4
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 18 runs left · 13 of 60 runs used in the last 24 h (all tasks)
+
+Your last 3 runs all came back Too easy. Ask the Coach before running again.
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 3 attempts right
+
+High model: two solvers try up to 3 times each. Ready when both get it wrong at least once and not every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Reading the runs and writing suggestions…
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 3 (Oct 14, 2026, 9:13 AM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+3 runs
+
+Only the latest run, Run 3, is in this file; 2 earlier runs are left out.
+
+------------------------------------------------------------------------
+Run 3 · Too easy · Result the gate uses
+Oct 14, 2026, 9:13 AM · Version daf97b (current) · Low — · Medium — · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: question: removed “Judging by all the evidence the committee heard, which witnesses,”, “put a figure on how long it takes”, “train a new worker?”, “in any order.”; added “Which organisations,”, “sent written evidence but no witness”, “the Commons inquiry into food and farming labour shortages, yet were named at its hearings of 26 October and 9 November 2021?”, “alphabetically.”. answer: removed “Charlie Dewhirst, Nick Allen, Tom Southall”; added “Association of Labour Providers, Kernock Park Plants, Royal College of Veterinary Surgeons”
+
+Solver summary: Run 3 · Too easy · 3 of 3 right
+Every solver attempt got it (3 of 3).
+
+Your answer: Association of Labour Providers, Kernock Park Plants, Royal College of Veterinary Surgeons
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: —
+
+Final answer: (Alphabetical order; all submitted written evidence, did not provide an oral witness, but were named in the 26 October and/or 9 November 2021 sessions.) | Your answer (gold): Association of Labour Providers, Kernock Park Plants, Royal College of Veterinary Surgeons
+
+Full answer
+-----------
+
+The organisations were:
+
+- Association of Labour Providers
+- British Growers Association
+- British Poultry Council
+- Food and Drink Federation
+- Fresh Produce Consortium
+
+(Alphabetical order; all submitted written evidence, did not provide an oral witness, but were named in the 26 October and/or 9 November 2021 sessions.)
+
+Reasoning
+---------
+
+We need answer: Which organisations sent written evidence but no witness to Commons inquiry into food and farming labour shortages, yet were named at its hearings of 26 October and 9 November 2021? List alphabetically.
+
+Need identify UK House of Commons inquiry into food and farming labour shortages, likely Environment, Food and Rural Affairs Committee (EFRA) inquiry "Labour shortages in the food and farming sector" in 2021. Need organisations that submitted written evidence but did not give oral evidence, yet were named during hearings on 26 October and 9 November 2021.
+
+We need determine which ones were named in those hearings. Need list alphabetically.
+
+Let's recall the inquiry details. The EFRA Committee held an inquiry into labour shortages in food and farming sector in 2021. Oral evidence sessions were on 26 October 2021 and 9 November 2021 and maybe others (e.g., 16 November?). Written evidence was published. Need identify organisations that only sent written evidence but were mentioned/named during the hearings on those two dates.
+
+We need be precise with organisation names.
+
+Let's recall the hearing on 26 October 2021. Witnesses might include:
+- Nick Allen (British Meat Processors Association)
+- Charlie Adamson (British Poultry Council? Or maybe Charlie Adamson from Cumberland?)
+Wait need correct.
+
+Actually the inquiry sessions:
+Session 1 on Tuesday 26 October 2021:
+Witnesses:
+- Nick Allen, CEO, British Meat Processors Association
+- Kate Nicholls, CEO, UKHospitality
+- James Withers, Chief Executive, Scotland Food and Drink? Or maybe not.
+
+Let's check mental: The committee heard from industry bodies. On 26 Oct 2021 witnesses were:
+1. Nick Allen, British Meat Processors Association
+2. Kate Nicholls, UKHospitality
+3. James Withers, Scotland Food & Drink?
+4. Maybe Tom Bradshaw, NFU? No that might be on 16 Nov?
+
+Another session on Tuesday 9 November 2021 witnesses might include:
+- Michael Gove? No he was Secretary of State and appeared later? Actually Michael Gove and George Eustice might have appeared on 16 Nov? Let's recall: On 16 November 2021 the committee heard from:
+- George Eustice MP, Secretary of State for Environment, Food and Rural Affairs
+- Kevin Foster MP, Minister for Future Borders and Immigration
+But wait that might be correct for 16 Nov.
+
+But the question mentions hearings of 26 October and 9 November 2021. So on 9 Nov witnesses might have included:
+- Tom Bradshaw, Deputy President, NFU
+- Mark Bridgeman, President, Country Land and Business Association?
+- Or maybe representatives from recruitment agencies?
+
+Let's recall published transcripts.
+
+We need organisations that sent written evidence but no witness, yet named at hearings on those days. This sounds like in the hearings, witnesses or members referred to submissions from other organisations that weren't present.
+
+We need list them alphabetically. This is a specific answer likely from the report's list of written evidence providers, with some named in oral sessions.
+
+Let's recall the written evidence list for this inquiry. The committee received written evidence from many organisations:
+- ALP (Association of Labour Providers)
+- British Egg Industry Council? Or BEIC?
+- British Growers Association
+- British Meat Processors Association (they also gave oral?)
+- British Poultry Council (maybe gave oral? Charlie Adamson?)
+- British Summer Fruits
+- Compagnie des Fruits et Légumes? No.
+- Dairy UK?
+- FDF (Food and Drink Federation)?
+- Fresh Produce Consortium?
+- GLA (Gangmasters and Labour Abuse Authority) maybe gave oral?
+- Horticultural Trades Association?
+- Institute for Government?
+- Landworker's Alliance?
+- National Farmers' Union (NFU) - Tom Bradshaw might have given oral on 9 Nov?
+- National Pig Association?
+- Recruitment & Employment Confederation?
+- Scottish Government?
+- UKHospitality (Kate Nicholls oral on 26 Oct)
+- Various individual companies: G's Growers, etc.
+
+But question specifically asks "Which organisations, if any, sent written evidence but no witness to the Commons inquiry... yet were named at its hearings of 26 October and 9 November 2021?"
+
+This sounds like there might be none? But they ask "if any" and "List them alphabetically." Maybe there are some.
+
+We need parse the transcript references. Let's think about what was said on 26 Oct and 9 Nov.
+
+On 26 Oct, members might have mentioned evidence from organisations not present, e.g., "We have received written evidence from the Association of Labour Providers..." Or "British Poultry Council sent written evidence..." But need correct ones named on both? Or named at its hearings (plural) of 26 Oct and 9 Nov?
+
+Actually maybe the answer is "none". Let's examine: The committee might have listed organisations that submitted written evidence and also those who gave oral. In the report they may list oral witnesses on 26 Oct and 9 Nov, and separately written evidence. The question asks which organisations sent written evidence but no witness, yet were named at its hearings of 26 October and 9 November 2021. This could be a quiz about knowing that certain organisations were named in the hearings despite not being witnesses.
+
+But I need be as accurate as possible.
+
+Let's recall the transcript for 26 October 2021 (published as HC 542?). The committee members present: Neil Parish (Chair), Sheryll Murray, Julian Sturdy, etc. The witnesses:
+- Nick Allen (BMPA)
+- Kate Nicholls (UKHospitality)
+- James Withers (Scotland Food & Drink)
+
+During questioning, they might reference other bodies like NFU, ALP, British Poultry Council, etc.
+
+On 9 November 2021, witnesses might be:
+- Tom Bradshaw (NFU England and Wales?)
+- Mark Bridgeman (CLA)?
+- Maybe also someone from the poultry sector?
+
+Wait, let's search mental database for news coverage in Nov 2021. There was news about labour shortages and the committee hearings. On 26 October they heard from meat processors and hospitality. On 16 November they heard from ministers. But there might have been a session on 9 Nov with farmers.
+
+Actually I think the oral evidence sessions were:
+- Tuesday 26 October 2021: Nick Allen (BMPA), Kate Nicholls (UKH), James Withers (Scotland Food and Drink)
+- Tuesday 16 November 2021: Tom Bradshaw (NFU), Mark Bridgeman (CLA), and maybe others?
+But the question lists 26 October and 9 November. So 9 Nov must be a session.
+
+Let's check mental news: On 9 November 2021, the EFRA committee might have heard from:
+- George Dunn (Tenant Farmers Association)?
+- Or maybe from recruitment firms?
+
+Alternatively, the inquiry might have had sessions on 26 Oct, 9 Nov, and 16 Nov. Yes, that sounds right: three sessions.
+
+Let's recall the report published in 2022: "Labour shortages in the food and farming sector". In the report, they list oral evidence taken on:
+- 26 October 2025? No.
+
+We need specifically organisations that sent written evidence but no witness, named at hearings on 26 Oct and 9 Nov.
+
+Perhaps in the hearings, the chair named organisations that had submitted written evidence but were not present, asking witnesses to comment on their submissions. For example, on 26 Oct they might have said "We have received written evidence from the British Poultry Council..." and on 9 Nov similarly named others.
+
+But the question asks "Which organisations, if any..." implying maybe there are specific ones that fit both conditions (sent written evidence, no witness, and named at both hearings?). Or named at its hearings (the hearings on those dates).
+
+We need list alphabetically. Let's try to recall the written evidence lists published with the report. The report might include an appendix listing all written evidence received, with some marked as published.
+
+Let's recall seeing a list of written submissions for EFRA labour shortages inquiry in 2021-22. The submissions included:
+- ALP0001? Or ALP?
+- BEIC?
+- BGA?
+- BMPA?
+- BPC?
+- British Summer Fruits?
+- CLA?
+- Dairy UK?
+- DEFRA?
+- FDF?
+- FPC?
+- GLA?
+- HCTA?
+- Landworkers Alliance?
+- NFU?
+- NPA?
+- RHA?
+- UKH?
+- Various companies.
+
+But we only care about those named in the hearings but didn't send a witness.
+
+Actually, maybe the answer is indeed "none" because all organisations named at the hearings were present as witnesses. But the wording "if any" allows for none. However, they ask "List them alphabetically" which could be an empty list, but usually they'd want names.
+
+We need be precise.
+
+Let's recall the transcript of 26 October 2021. At the start, the chair might have said: "We have received written evidence from a number of organisations including the Association of Labour Providers, the British Meat Processors Association, the British Poultry Council..." No, that doesn't fit.
+
+Let's try to recall specific questions. Nick Allen was asked about labour shortages in meat processing, need for butchers, etc. Kate Nicholls about hospitality. James Withers about Scotland.
+
+On 9 November, maybe witnesses were from farming sector: Tom Bradshaw (NFU), George Dunn (Tenant Farmers Association), and maybe someone from horticulture?
+
+Wait, I think on 9 November 2022? No, need correct year.
+
+Given I need provide a single best answer. Let's think about the report's appendix on oral and written evidence. The report lists:
+Oral evidence:
+- 26 October 2021: Nick Allen, Kate Nicholls, James Withers
+- 9 November 2021: Tom Bradshaw, George Dunn, Mark Price? Hmm.
+- 16 November 2021: George Eustice, Kevin Foster
+
+But I'm not sure.
+
+However, the question specifically mentions "were named at its hearings of 26 October and 9 November 2021". This sounds like there are organisations that were named in both hearings.
+
+Let's recall that in the 26 October hearing, they might have mentioned "the Food and Drink Federation" and "the National Farmers Union". In the 9 November hearing, they might also have mentioned them.
+
+But we need those that sent written evidence but had no witness present at either hearing.
+
+Perhaps the answer includes:
+- Association of Labour Providers
+- British Poultry Council
+- Food and Drink Federation
+- National Pig Association
+
+But I need be correct.
+
+Let's recall that in the report, there is a section summarising written evidence. For example:
+"We received 28 written submissions... from organisations including the Association of Labour Providers (ALP), British Egg Industry Council, British Growers Association, British Meat Processors Association, British Poultry Council, British Summer Fruits, CLA, Dairy UK, Food and Drink Federation, Fresh Produce Consortium, Gangmasters and Labour Abuse Authority, Horticultural Trades Association, Landworkers' Alliance, National Farmers' Union, National Pig Association, Recruitment and Employment Confederation, Scotland Food and Drink, UKHospitality, and others."
+
+Of these, those who also gave oral evidence were:
+- British Meat Processors Association (Nick Allen on 26 Oct)
+- UKHospitality (Kate Nicholls on 26 Oct)
+- Scotland Food and Drink (James Withers on 26 Oct)
+- NFU (Tom Bradshaw on 9 Nov?)
+- CLA (Mark Bridgeman on 9 Nov?)
+
+Thus, the ones that sent written but didn't witness might be all the rest. But the question asks "Which organisations, if any, sent written evidence but no witness... yet were named at its hearings..." So they want the subset of those remaining that were specifically named during the oral sessions.
+
+We need identify which ones were named.
+
+Let's examine the transcript for 9 November 2021. If Tom Bradshaw (NFU) was present, he might mention other organisations? Or members might cite written evidence from other bodies.
+
+But actually, the question might come from a specific exam or quiz about parliamentary inquiries, asking to identify organisations that submitted written evidence but were not called as witnesses, but were mentioned in the hearings on those dates.
+
+We need list alphabetically. Let's try to recall specific mentions in the published transcript.
+
+For 26 October 2021 (HC 542-i?), the Q numbers might be 1-100.
+
+At Q1, chair Neil Parish might have introduced the inquiry and said they had received written evidence from various organisations, listing some.
+
+Actually, in UK committee hearings, they often start by listing the witnesses and then saying "We have also received written evidence from..." Let's recall the standard opening: "We have received written evidence from X, Y, Z, which is published on our website."
+
+Yes! At the beginning of each session, the chair lists the organisations that have submitted written evidence for that session? Or lists all?
+
+Let's recall the opening of the 26 October session. The chair Neil Parish might have said:
+"Before we begin, I remind everyone that we are meeting in person... We have received written evidence from the Association of Labour Providers, the British Meat Processors Association, the British Poultry Council..." No, that sounds right.
+
+But actually they list the witnesses present. Let's try to reconstruct precisely.
+
+The session on 26 October 2021 was in Committee Room 6. The members present: Neil Parish, Sheryll Murray, Julian Sturdy, Mrs. Sheryll Murray, etc. The witnesses were Nick Allen, Kate Nicholls, James Withers.
+
+The chair might have said: "We have received written submissions from a number of organisations, including the Association of Labour Providers, British Growers Association..." But I'm not sure.
+
+However, the question asks for organisations that sent written evidence but no witness to the inquiry, yet were named at its hearings of 26 October and 9 November 2021. This sounds like: there were organisations named in the hearing on 26 Oct and also named on 9 Nov, but they never sent a witness.
+
+We need list them alphabetically. Perhaps there are three.
+
+Let's recall news reports summarizing the 9 Nov session. On 9 Nov 2021, the committee heard that labour shortages were causing welfare issues, pigs being culled, etc. The witnesses might have included:
+- Zoe Davies (National Pig Association)?
+- Charlie Dewhirst (National Pig Association)?
+Wait, there was news about pigs being culled due to butcher shortages. The National Pig Association (NPA) might have given evidence. Actually, Zoe Davies is CEO of NPA. Did she appear?
+
+Let's check mental news in November 2022? No.
+
+But there was a well-known session where farmers talked about culling pigs. That might have been on 9 November? Or was it a separate session?
+
+Actually, I think there was a session specifically on pigs on 9 November? Let's recall: In November 2021, there was news that 600 pigs had been culled on farms. The EFRA committee held a session maybe on 16 Nov? Or on 9 Nov?
+
+Wait, the committee held an emergency session? Let's recall: In October/November 2021, there was a crisis with pigs. The committee might have heard evidence on 9 November from the National Pig Association and others.
+
+Let's search mental news headlines in Nov 2021: On 9 November 2021, there might have been a committee hearing where Zoe Davies of NPA said 600 pigs culled, and they needed butchers. Yes! I think Zoe Davies did appear. Or maybe she sent written evidence?
+
+Let's check consistency: Zoe Davies was CEO of NPA and was in the news in October/November 2021 talking about culling pigs. She might have given oral evidence on 9 November.
+
+If so, then NPA might have sent a witness (Zoe Davies).
+
+But the question asks for those that sent written evidence but no witness, yet named.
+
+Let's recall the report lists oral witnesses:
+- Nick Allen
+- Kate Nicholls
+- James Withers
+- Tom Bradshaw
+- Mark Bridgeman
+- Zoe Davies?
+- Charlie Adamson?
+
+Actually, Charlie Adamson was from OJK? No.
+
+Given my uncertainty, I need to provide the best answer I can with reasoning, but they want just the list.
+
+Let's recall the published list of written evidence for the inquiry (published as part of the report in March 2022?). The list might be in alphabetical order of organisation. The report mentions receiving evidence from 29 organisations. Among them, those who also gave oral evidence are marked.
+
+But we need those named in the hearings.
+
+Let's try to recall specific phrases in the transcript. For example, on 26 October, Q10 might be: "We have had written evidence from the British Poultry Council saying... Mr Allen, do you agree?"
+
+If British Poultry Council sent written evidence but didn't send a witness (Charlie Adamson might have sent written but not oral?), then BPC might be named.
+
+Also, the Food and Drink Federation (FDF) sent written evidence and might have been named.
+
+The Association of Labour Providers (ALP) sent written evidence and might have been named.
+
+But we need those named at both hearings? Or named at the hearings (plural)?
+
+The wording: "were named at its hearings of 26 October and 9 November 2021" could mean they were named during those hearings (i.e., in either one).
+
+But "its hearings of 26 October and 9 November" plural, so maybe they were named in both.
+
+Let's think about what was common to both sessions. In both sessions, they might have discussed the seasonal worker pilot scheme, and named the organisations involved.
+
+But maybe it's simpler: The question asks "Which organisations, if any, sent written evidence but no witness to the Commons inquiry... yet were named at its hearings of 26 October and 9 November 2021?"
+
+This sounds like a question testing knowledge of the inquiry's procedural record: They list all organisations that gave oral evidence on those days, and separately list those that sent written evidence. Some organisations appear in both lists (they sent written and also sent a witness). The question asks for those that are in the written list but not in the oral list, but were mentioned by name in the oral sessions.
+
+But without the transcript, it's hard.
+
+However, maybe the answer is indeed "none". Let's examine that possibility: Every organisation that was named during the hearings of 26 Oct and 9 Nov was actually present as a witness. So there are no organisations that sent only written evidence but were named.
+
+But wait, on 26 Oct the witnesses were Nick Allen (BMPA), Kate Nicholls (UKHospitality), James Withers (Scotland Food and Drink). During that session, they might have named other organisations like NFU, but those other organisations might not have sent written evidence? Or they might have.
+
+But the question says "sent written evidence but no witness... yet were named". If none were named, then answer is "None". The phrase "if any" supports that.
+
+But they also say "List them alphabetically" - if none, then "There were none" is appropriate.
+
+But I need be somewhat sure.
+
+Let's recall that in the report, there's a table of oral and written evidence. The oral evidence was taken on 26 October, 9 November, and 16 November. For each session, they list the witnesses.
+
+For 26 October: Nick Allen, Kate Nicholds, James Withers.
+For 9 November: Maybe Tom Bradshaw, George Dunn, and Charlie Dewhirst?
+For 16 November: George Eustice and Kevin Foster.
+
+The written evidence was received from many, including those who also testified.
+
+In the transcript of 26 October, they might reference "the written evidence we received from the National Farmers Union" even though NFU wasn't present (they came on 9 Nov?). So NFU sent written evidence and also sent a witness on 9 Nov. So they are not in the category "no witness".
+
+Thus we need those who sent written, never sent a witness to any session, but were named on 26 Oct or 9 Nov.
+
+Which ones never sent a witness? Possibly:
+- Association of Labour Providers
+- British Egg Industry Council
+- British Growers Association
+- British Poultry Council
+- British Summer Fruits
+- Dairy UK
+- Food and Drink Federation
+- Fresh Produce Consortium
+- Gangmasters and Labour Abuse Authority
+- Horticultural Trades Association
+- Landworkers Alliance
+- National Pig Association? Wait Zoe Davies might have come.
+- Recruitment and Employment Confederation
+- Others.
+
+Of these, which were named in the hearings?
+
+Given the crisis was about meat, poultry, horticulture, hospitality. They might have named British Poultry Council, N
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): Association of Labour Providers, Kernock Park Plants, Royal College of Veterinary Surgeons
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): Association of Labour Providers, Kernock Park Plants, Royal College of Veterinary Surgeons
+
+Where it shortcut: Reached the gold answer; Document 1's Witnesses and Published written evidence lists plus the 'Written evidence from witnesses' headers in Documents 2 and 3 pre-compute the set difference, leaving only a literal string match.Doc 1 Doc 2 Doc 3
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): Association of Labour Providers, Kernock Park Plants, Royal College of Veterinary Surgeons
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

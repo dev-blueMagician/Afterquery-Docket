@@ -1,0 +1,75 @@
+{
+  "question": "Judging by all the evidence the committee heard, which witnesses, if any, put a figure on how long it takes to train a new worker? List them in any order.",
+  "number_of_asks": 1,
+  "gold_answer": "Charlie Dewhirst, Nick Allen, Tom Southall",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 2, the Chair's question to the first panel and Charlie Dewhirst's answer): asked how long it takes to train a good butcher, Charlie Dewhirst of the National Pig Association says it is \"around 18 months\" from scratch to being up to speed, and about six months to make someone relatively competent. That is a figure for training a new worker, so he is in the list.\nStep 2. Source input (Doc 2, Nick Allen of the British Meat Processors Association, at the end of his answer on the Government's recent measures): speaking of bringing British recruits in and training them up, he says \"It is 18 months once you are trained\", and that it is not a course of three or four months. That is a figure for the same training, so he is in the list.\nStep 3. Source input (Doc 3, Tom Southall of the Cold Chain Federation, answering the Chair on short-term relief): he says lorry drivers take between six months and a year to train from scratch. That is a figure too, for another trade, so he is in the list.\nStep 4. Left out (Doc 2): Ian Wright also says \"18 months\", but his \"18 months to two years\" is how long his members expect labour shortages to last, not how long training takes.\nStep 5. Left out (Doc 3): Kate Nicholls speaks of a \"two-year hiatus\" and a \"two-year bridge\", which is a break in training, not the time it takes to train a worker.\nStep 6. Final answer (Doc 2 and Doc 3): Charlie Dewhirst, Nick Allen, Tom Southall.",
+  "answer_components": [
+    "Nick Allen",
+    "Charlie Dewhirst",
+    "Tom Southall"
+  ],
+  "evidence": [
+    {
+      "document_number": 2,
+      "component_number": 2,
+      "quote": "On the training of a butcher for the pig industry, how long does it take to train a good butcher?"
+    },
+    {
+      "document_number": 2,
+      "component_number": 2,
+      "quote": "Charlie Dewhirst: You will get chapter and verse from Nick Allen in your next session. It is around 18 months, I believe, from scratch to being up to speed. You can make them relatively competent around six months, but it isn’t simple."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Then we need to start working out whether they want us to employ more British people, and how we bring those people in and train them up. It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Q74 Julian Sturdy: Thanks a lot, Nick. Ian, did you want to just briefly come in on that as well?"
+    },
+    {
+      "document_number": 3,
+      "component_number": 3,
+      "quote": "Tom Southall: I would agree with that. That short-term relief needs to be for a minimum of one year. It takes time to train people up. As I mentioned, we need to do a thorough review of what we can deliver with a domestic workforce. For example, drivers take six to 12 months to train from scratch on average."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "they are expecting labour shortages to continue for the next 18 months to two years"
+    },
+    {
+      "document_number": 3,
+      "component_number": 3,
+      "quote": "We have had a two-year hiatus. We need a two-year bridge just to get it right before we can restart"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: Doc 2 holds two witnesses on a butcher's training time, Charlie Dewhirst and Nick Allen, and the first points to the second. A solver who stops at that hearing answers with two names. Doc 3's Tom Southall gives a lorry driver's training time: three names."
+}

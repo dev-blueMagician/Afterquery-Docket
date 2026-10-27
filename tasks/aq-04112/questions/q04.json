@@ -1,0 +1,147 @@
+{
+  "question": "Which organisations, if any, sent written evidence but no witness to the Commons inquiry into food and farming labour shortages, yet were named at its hearings of 26 October and 9 November 2021? List them alphabetically.",
+  "number_of_asks": 1,
+  "gold_answer": "Association of Labour Providers, Kernock Park Plants, Royal College of Veterinary Surgeons",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 1, the list of published written evidence at the end of the report): the report lists every organisation and person that sent the inquiry written evidence. The Association of Labour Providers, Kernock Park Plants, the Royal College of Veterinary Surgeons and the Department for Environment, Food and Rural Affairs are all on it.\nStep 2. Source input (Doc 2 and Doc 3, the witness lists at the head of each hearing): nine bodies on that list sent witnesses to these two hearings: the National Farmers Union, the British Poultry Council, the National Pig Association, the British Meat Processors Association, the British Veterinary Association and the Food and Drink Federation on 26 October, and UKHospitality, the British Retail Consortium and the Cold Chain Federation on 9 November. They sent a witness, so they are out.\nStep 3. Source input and decoy (Doc 1, the report's list of witnesses, which covers every hearing of the inquiry; Doc 2 and Doc 3): the Department for Environment, Food and Rural Affairs sent its Secretary of State and a Director-General to a later hearing. It is named at both hearings, as \"DEFRA\" and \"Defra\", and the Chair of the second says its Secretary of State is coming in, but it sent a witness to the inquiry, so it is out too.\nStep 4. Source input (Doc 2, the hearing of 26 October 2021, Mrs Murray's question to the first panel): she has \"Kernock Plants\" in her constituency, a large family business. That is Kernock Park Plants under a short form of its name; no other Kernock appears in any of the documents. In.\nStep 5. Source input (Doc 2, the same hearing, Dr Hudson's question to the second panel): he names the Royal College of Veterinary Surgeons in full. In.\nStep 6. Source input (Doc 3, the hearing of 9 November 2021, Ian Byrne's question to the first panel): he quotes the Association of Labour Providers on the factors driving labour shortages. In.\nStep 7. Decoys left out (Doc 1, Doc 2 and Doc 3): a place or an unnamed group names no organisation. Derek Jarman's \"Cornish and Lincolnshire daffodil market\" does not name Lincolnshire County Council, and the Chair's \"some Northern Irish companies\" does not name the Northern Ireland Pork and Bacon Forum, though both sent written evidence. No other organisation on the list that sent no witness is named at either hearing.\nStep 8. Final answer (Doc 1, Doc 2 and Doc 3): Association of Labour Providers, Kernock Park Plants, Royal College of Veterinary Surgeons.",
+  "answer_components": [
+    "Association of Labour Providers",
+    "Kernock Park Plants",
+    "Royal College of Veterinary Surgeons"
+  ],
+  "evidence": [
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "The following written evidence was received and can be viewed on the inquiry publications page of the Committee"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Association of Labour Providers (LS0088)"
+    },
+    {
+      "document_number": 1,
+      "component_number": 2,
+      "quote": "Kernock Park Plants (LS0004)"
+    },
+    {
+      "document_number": 1,
+      "component_number": 3,
+      "quote": "Royal College of Veterinary Surgeons (LS0009)"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Department for Environment, Food and Rural Affairs (LS0063)"
+    },
+    {
+      "document_number": 2,
+      "component_number": 2,
+      "quote": "I: Tom Bradshaw, Vice-President, National Farmers Union; Graeme Dear, Chair, British Poultry Council; Derek Jarman, Chair Designate, British Protected Ornamentals Association; and Charlie Dewhirst, Policy Adviser, National Pig Association."
+    },
+    {
+      "document_number": 2,
+      "component_number": 3,
+      "quote": "II: Nick Allen, Chief Executive Officer, British Meat Processors Association; James Russell, Senior Vice-President, British Veterinary Association; and Ian Wright, Chief Executive Officer, Food and Drink Federation."
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "I: Kate Nicholls OBE, Chief Executive Officer, UKHospitality; Andrew Opie, Director of Food and Sustainability, British Retail Consortium; Tom Southall, Policy Director, Cold Chain Federation."
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "The following witnesses gave evidence."
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "The Rt Hon George Eustice MP, Secretary of State, Department for Environment, Food and Rural Affairs; David Kennedy, Director-General, Food, Farming and Bio-Security, Department for Environment, Food and Rural Affairs"
+    },
+    {
+      "document_number": 2,
+      "component_number": 2,
+      "quote": "We have been having crisis meetings with DEFRA since February"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "We have the Secretary of State for Defra coming in, which is great"
+    },
+    {
+      "document_number": 2,
+      "component_number": 2,
+      "quote": "Mrs Murray: I have one last part to that question, Chair. I do understand, Derek. I have Kernock Plants in my constituency. It is a quite large family going concern."
+    },
+    {
+      "document_number": 2,
+      "component_number": 3,
+      "quote": "Dr Hudson: You have touched on the fact that the Royal College of Veterinary Surgeons has been trying to look at that."
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Ian Byrne: It is good to see you physically and not virtually. The Association of Labour Providers gives a number of factors that are driving labour shortages in the food supply chain."
+    },
+    {
+      "document_number": 2,
+      "component_number": 2,
+      "quote": "the Cornish and Lincolnshire daffodil market is early"
+    },
+    {
+      "document_number": 1,
+      "component_number": 2,
+      "quote": "Lincolnshire County Council (LS0051)"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "We took some evidence privately from some Northern Irish companies"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Northern Ireland Pork and Bacon Forum (LS0065)"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    },
+    {
+      "trap": "Wrong jurisdiction or scope",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: Doc 2 calls Kernock Park Plants \"Kernock Plants\"; exact matching drops it (two names). Wrong jurisdiction or scope: Doc 1's witness list shows Defra testifying later; checking only these hearings' panels keeps Defra (four names). The gold matches the short name and tests witnesses inquiry-wide."
+}

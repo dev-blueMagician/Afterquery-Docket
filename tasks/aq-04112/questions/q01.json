@@ -1,0 +1,84 @@
+{
+  "question": "At the Association of Labour Providers' unit costs, what would it cost to recruit, for three years, the staff Nick Allen's example plant lacked?",
+  "number_of_asks": 1,
+  "gold_answer": "£1,273,150",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 1, Table 3 in the section on the cost of using the immigration system): the Association of Labour Providers costs a business recruiting workers for three years through the Skilled Worker Visa route, line by line, with a unit cost and a total for each line. For the sponsor application the total is the same as the unit cost, so a company pays it once. Every other line is charged for each worker, and two of them for each year as well.\nStep 2. Source input and calculation (Doc 1, Table 3): the charges paid once for each worker are the visa at £610, the Certificate of Sponsorship at £199, recruitment at £2,000 and travel at £800: 610 + 199 + 2,000 + 800 = 3,609 pounds.\nStep 3. Source input and calculation (Doc 1, Table 3): the charges paid every year for each worker are the Immigration Skills Charge at £1,000 and the Immigration Health Surcharge at £624: 1,000 + 624 = 1,624 pounds a year. The sponsor application, the one line a company pays once, is a further £1,000.\nStep 4. Source input (Doc 2, Nick Allen of the British Meat Processors Association, in his first answer to the Chair): he takes a meat plant as his example and says that on any morning it is \"150 people short\".\nStep 5. Calculation (Doc 1 and Doc 2): worker-years for those staff over the table's three years: 150 × 3 = 450.\nStep 6. Calculation (Doc 1 and Doc 2): once-only charges for all of them: 150 × 3,609 = 541,350 pounds.\nStep 7. Calculation (Doc 1 and Doc 2): yearly charges over the three years: 450 × 1,624 = 730,800 pounds.\nStep 8. Calculation (Doc 1 and Doc 2): with the one sponsor application added: 541,350 + 730,800 + 1,000 = 1,273,150 pounds.\nStep 9. Check (Doc 1 and Doc 2): the sponsor application is counted once, as in the table, where its total equals its unit cost. Scaling the table's whole cost up to the larger head count would count that application more than once.\nStep 10. Final answer (Doc 1 and Doc 2): recruiting them would cost £1,273,150.",
+  "answer_components": [
+    "£1,273,150"
+  ],
+  "evidence": [
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "The Association of Labour Providers (ALP) provided the data set out in Table 3 to illustrate the full costs over three years for a business recruiting 50 workers through the Skilled Worker Visa route."
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Sponsor application - large company £1,000 £1,000"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Skilled worker visa £610 £30,500"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Certificate of Sponsorship £199 £9,950"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Recruitment - advertising, short-listing, interviewing, translation and interpretation"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "£2,000 £100,000"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Travel from home country to place of work Est £800 £40,000 Immigration Skills Charge £1,000/year £150,000"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Immigration Health Surcharge £624/year £93,600"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "If you are running a meat plant at the moment and you have 1,000 people, you wake up in the morning and you know you are 150 people short already."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Unit normalization",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Unit or basis",
+      "how_a_careless_solver_fails": "Rounding, scale or sign"
+    }
+  ],
+  "why_these_are_traps": "Unit or basis: Doc 1's Table 3 charges the sponsor application once per company and every other line per worker. Scaling its £425,050 total for 50 workers up to Doc 2's 150 charges the application three times: £1,275,150. Priced line by line with one application, the cost is £1,273,150."
+}
