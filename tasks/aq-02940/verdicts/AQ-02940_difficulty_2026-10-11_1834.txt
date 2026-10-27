@@ -1,0 +1,3296 @@
+AQ-02940 · Public policy — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-02940
+Saved: 2026-10-11 18:34 (local time)
+Bundle: Public policy · 16 documents · 113,873 prompt tokens
+Attempts read: 11
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+9 of 10 runs left · 5 of 50 runs used in the last 24 h (all tasks)
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Between levels.
+
+Between levels
+
+Too hard for the low model but too easy for the medium model. Make it a little harder, so the medium model reaches your answer only some of the time, then run the check again.
+
+- Low model: 0 of 5 attempts right
+- Medium model: 5 of 5 attempts right
+
+Ready when 1–3 attempts at a level are right, out of up to 5. A level can settle early, for example at 1 right out of 3.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Optionally add 'taking into account all of each bank's stated timing requirements' to signal that Westpac's request contains more than the six-month minimum, without revealing the first-of-month rule itself. Why: The phrase 'its deadline for submissions' requires the solver to pick 13 July 2026 from Doc 1 and not be distracted by the cross-submission window ('two weeks after publication of submissions') or the survey deadline of 29 June 2026 mentioned in the same document. This was handled correctly by all attempts, so the wording is fair, but the question gives no signal that a day-level rounding rule (first-of-month) is part of Westpac's request, which is the sole discriminator between 243 and 262. That is legitimate difficulty, not ambiguity. From a run (Low model · attempt 1): Computed 13 March 2027 (243 days) by applying ASB's 8-month minimum from 13 July 2026, but ignored Westpac's separate requirement that changes 'align with a first-of-month effective date' (Doc 14), which pushes the date to 1 April 2027. Doc 1 Doc 14
+
+Gold answer · Your answer
+-------------------------
+
+- 2 No change to the gold value; if the prompt is revised to request the date, extend the gold to '1 April 2027 (262 days)'. Why: The gold answer '262 days' is supported: 13 July 2026 + 8 months = 13 March 2027 (243 days), and Westpac's first-of-month alignment pushes the earliest compliant date to 1 April 2027, which is 262 days after 13 July 2026. The answer format (bare number) is matchable; no change needed, though answers stating '1 April 2027' with a different day count would be wrong and should be distinguished from a correct date with correct count. From a run (Medium model · attempt 1): Correctly combined ASB's 'no earlier than 8 months' (Doc 4) with Westpac's first-of-month alignment (Doc 14), rounding 13 March 2027 to 1 April 2027 and counting 262 days from 13 July 2026 (Doc 1). Doc 4 Doc 14
+
+Structure · Which documents it needs, and how they combine
+----------------------------------------------------------
+
+- 3 Keep the two-document structure but consider asking for the concrete start date alongside the day count, so a solver must show which constraint (ASB's 8 months vs Westpac's first-of-month alignment) actually binds and why. Why: The question hinges on combining two constraints from different submissions: ASB's 'no earlier than 8 months from the announcement date' (Doc 4) and Westpac's 'minimum six-month implementation period' plus 'any interchange changes should align with a first-of-month effective date' (Doc 14). Solvers that reached the answer applied both, rounding 13 March 2027 (13 July 2026 + 8 months) forward to 1 April 2027 for the first-of-month rule, giving 262 days. Solvers that missed applied only the month arithmetic (243 days, 13 March 2027) and overlooked the first-of-month sentence in Westpac's submission, which sits in a separate paragraph from the six-month request. From a run (Low model · attempt 1): Computed 13 March 2027 (243 days) by applying ASB's 8-month minimum from 13 July 2026, but ignored Westpac's separate requirement that changes 'align with a first-of-month effective date' (Doc 14), which pushes the date to 1 April 2027. Doc 1 Doc 4 Doc 14
+
+This question may be too vague: several solvers agreed on an answer that is not your gold "262 days". The solvers answered "**So the caps could first start 243 days later, on 13 March 2027.**". Tighten the question so only one answer fits, or check the gold.
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is between difficulty levels, so the gate does not pass.
+
+The gate reads Run 1 (Oct 11, 2026, 6:26 PM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+Between levels means the solvers’ results fell between two tiers: too hard for one level and too easy for the next, so no single tier fits.
+
+1 run
+
+------------------------------------------------------------------------
+Run 1 · Between levels · Result the gate uses
+Oct 11, 2026, 6:26 PM · Version 659f9e (current) · Low 0/5 · Medium 5/5 · High —
+------------------------------------------------------------------------
+
+What changed before this run: first run
+
+Solver summary: Run 1 · Between levels · 5 of 10 right
+5 of 10 solver attempts got it by quoting the same passage: Doc 4 (“ASB Recommendation 3: Set an implementation date of no earlier than 8 months from the ann…”).
+
+3 of 10 gave the same wrong answer: “So the caps could first start **243 days later**, on **13 March 2027**.”.
+
+5 wrong attempts quoted the same passage: Doc 4 (“Set an implementation date of no earlier than 8 months from the announcement date and Com…”).
+
+Your answer: 262 days
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: —
+
+Final answer: If the Commission had issued its decision right when submissions closed, ASB asked for roughly a 90‑day (three‑month) implementation window while Westpac requested about 180 days (six months). To satisfy both banks the start date must meet the longer request, so the earliest possible start is 180 days after the decision date. | Your answer (gold): 262 days
+
+Full answer
+-----------
+
+The caps could first start 180 days (about six months) later.
+
+If the Commission had issued its decision right when submissions closed, ASB asked for roughly a 90‑day (three‑month) implementation window while Westpac requested about 180 days (six months). To satisfy both banks the start date must meet the longer request, so the earliest possible start is 180 days after the decision date.
+
+Reasoning
+---------
+
+We need parse question: "Had the Commerce Commission's final decision come on its deadline for submissions, how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?" Need answer from knowledge about Commerce Commission decision, caps, ASB and Westpac timing requests, deadline for submissions, etc. Likely refers to New Zealand Commerce Commission decision on interchange fees? Or on bank capital? Let's think carefully.
+
+Question mentions "caps first start" "ASB's and Westpac's timing requests" "Commerce Commission's final decision come on its deadline for submissions". This sounds like Commerce Commission study/report on retail banking? Or on credit card interchange fees? Actually in New Zealand, Commerce Commission regulates interchange fees for Visa and Mastercard? Let's recall: In 2022? The Commerce Commission was given powers to regulate merchant service fees. They made final decision in 2022? Let's recall details.
+
+In New Zealand, Retail Payment System Act 2022 gave Commerce Commission power to regulate merchant service fees for Mastercard and Visa. The Commission conducted a study and then made initial and final decisions? They set caps on interchange fees. The final decision was made in ... Let's recall: In November 2022? Or in 2023? Actually the Retail Payment System Act was passed in November 2022. The Commerce Commission then developed standards. In May 2024? Let's check mental: In May 2024, Commerce Commission released draft decision? Or final?
+
+But question mentions "deadline for submissions" and "ASB's and Westpac's timing requests". Might relate to a different issue: The Commerce Commission's decision on banking sector? Wait there was a market study into personal banking services in New Zealand, conducted by Commerce Commission. The final report was released in August 2024? Actually yes! The Commerce Commission conducted a market study into personal banking services, report released in August 2024? Let's recall: In June 2023 the Commerce Commission launched a market study into competition in personal banking services. They released a draft report in March 2024? And final report in August 2024? In that report they made recommendations including capital requirements? Hmm no, caps?
+
+Wait "caps first start" sounds like caps on interchange fees, not banking study. But also ASB and Westpac made submissions about timing of implementation. Let's recall the specific consultation on interchange fee caps.
+
+Under the Retail Payment System Act, the Commission can issue standards setting caps on interchange fees. They proposed caps: for credit cards 0.8%, for debit cards (contactless) 0.2%, online debit 0.0? Actually they proposed reducing interchange fees. Let's recall the timeline: The Commission released a consultation paper in maybe December 2023? Then submissions closed? Then they made a preliminary decision? Or direct final decision?
+
+Actually I think in November 2022 the Act passed. Then in December 2023 the Commission released draft standards for consultation? Let's recall news headlines in late 2023/early 2024: Commerce Commission proposed capping merchant service fees, saving businesses $260m a year. The draft decision was released in December 2023? Submissions closed in February 2024? Then the final decision was expected by maybe some date?
+
+But the question asks: "Had the Commerce Commission's final decision come on its deadline for submissions, how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?" This sounds like computing a date based on decision date equal to submission deadline, then adding some days requested by ASB and Westpac for implementation lead time, and seeing the earliest start date that satisfies both.
+
+We need determine the submission deadline date, then the decision date hypothetically same day. Then apply both banks' requested implementation periods (maybe 6 months and 18 months? Or 90 days and 180 days?). Need find the later of the two, then compute days after decision.
+
+Let's search mental knowledge: In the interchange fee consultation, banks might have requested implementation timelines. ASB might have said they need 6 months, Westpac might have said 12 months? Or maybe they requested that caps start no earlier than a certain date?
+
+Actually there was news about the Commerce Commission delaying the start of fee caps? Let's recall: In May 2024? The Commission announced that interchange fee caps would come into effect in phases? Or maybe they announced the caps take effect in December 2024?
+
+Wait I need be precise.
+
+Let's recall New Zealand news in 2024 about credit card surcharges being banned and interchange fees capped. In December 2022? No, in 2023? Let's recall specific figures: The Commission set caps of 0.8 percent for credit cards and 0.2 percent for contactless debit cards, and 0 percent for online debit. These caps were to come into force in 2025? Actually I think they come into effect in 2025? Let's check mental: There was an announcement in late 2024? Or maybe in 2023?
+
+Let's parse the question wording precisely: "Had the Commerce Commission's final decision come on its deadline for submissions..." This implies there was a specific deadline for submissions to the Commission's draft decision, and the final decision was delayed and came later. The question asks hypothetically if the final decision had come right on that submission deadline, then how many days later could the caps first start, while satisfying both ASB's and Westpac's timing requests?
+
+So we need identify:
+1. The deadline for submissions.
+2. The actual final decision date? Not necessary except for comparison?
+3. ASB's requested timing (maybe "six months from the decision" or "from 1 July 2025"? Hmm.
+4. Westpac's requested timing.
+5. Compute the later date, subtract the hypothetical decision date (submission deadline), get days.
+
+This sounds like a specific exam or quiz question based on a news article describing the Commerce Commission's decision and bank submissions.
+
+Let's recall the news article around the Commerce Commission's final decision on merchant service fees, maybe released in December 2024? Or in 2025?
+
+Actually I recall in December 2024 the Commerce Commission announced that businesses will save $260m per year with caps on merchant fees, effective 2025? Let's think: In December 2024 they might have released the final decision setting caps that take effect on 13 May 2025? Or on 1 April?
+
+Wait there was also legislation banning surcharges on in-store card payments, effective from 2025? The government introduced a Bill? Hmm.
+
+Let's recall: In New Zealand, from 2025, surcharges on in-person card payments (using Visa and Mastercard) are banned? Or being regulated? Actually in December 2024? No, in August 2024? Let's not confuse.
+
+We need answer likely a round number like 182 days, or 273 days, etc.
+
+But I need be somewhat accurate based on real data.
+
+Let's recall the Retail Payment System Act consultation process:
+- The Commission released a draft decision for consultation? Maybe in September 2024?
+- Submissions closed on maybe 10 October? Or 18 December?
+- Then final decision was delayed and eventually released?
+
+Actually I think there was a consultation on the "Merchant Service Fee" standards in 2024. Let's recall news headlines around December 2024: Commerce Commission announces lower fees for businesses using Visa and Mastercard. The announcement said that from 1 May 2025? Or 13 May?
+
+Let's recall details of the caps: For domestic consumer credit cards, interchange fee capped at 0.8% (down from about 1.2?). For domestic contactless debit cards, capped at 0.2% (down from about 0.4?). For online debit transactions, capped at 0%. For commercial/prepaid cards, caps at 1.0%? Or 1.2? Actually yes, commercial cards capped at 1.0? Or maybe 1.5?
+
+The Commission said this will save merchants about $260 million a year.
+
+The implementation date: Maybe 1 December 2024? No.
+
+Let's search mental news archives: In December 2024, Commerce Commission Chair John Small announced? Or was it in November 2023?
+
+Wait, there was also a separate issue: The Commerce Commission was investigating bank market power. The final report was released on 20 August 2024. That report recommended capital requirements? Actually no, that report said competition was lacking and recommended measures including open banking accelerated.
+
+But the question mentions "caps" - not in banking study.
+
+Thus it's likely the merchant service fee caps.
+
+Let's recall submissions from banks: ASB, Westpac, ANZ, BNZ? They might have requested longer implementation periods.
+
+The question specifically asks "how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?" This sounds like ASB requested caps start after X months, Westpac after Y months, and we take the longer one.
+
+Perhaps ASB requested 6 months after decision, Westpac requested 18 months? Or maybe ASB wanted them to start on 1 May 2026 and Westpac on 1 November 2025?
+
+But we need compute "how many days later" relative to the decision date (which equals submission deadline).
+
+We need determine the exact submission deadline date.
+
+Let's recall the consultation timeline for the interchange fee standards:
+The Commission might have released the draft standards in, say, December 2023, with submissions closing in February 2024? Or in 2024?
+
+Actually I think in December 2023 the Commission released preliminary views, then in 2024 they made a decision? Let's check mental consistency: The Retail Payment System Act was passed in November 2022. The Commission then had to develop standards. They might have taken a year of study. In December 2023 they released a "draft decision" proposing caps? Then they called for submissions, with a deadline of maybe 12 February 2024?
+
+But then the question mentions "Had the Commerce Commission's final decision come on its deadline for submissions..." If submissions closed in February 2024, and the decision came later (maybe in December 2024?). The hypothetical is if it came on that deadline (Feb 2024).
+
+Then ASB and Westpac might have requested implementation delays of, say, 12 months and 18 months from decision? That'd be Feb 2025 and Aug 2025.
+
+But the question asks "how many days later could the caps first start..." This sounds like computing the date that is the latest requested start date, then counting days from the decision date.
+
+We need be precise.
+
+Let's recall actual implementation date announced: Maybe 13 May 2024? No.
+
+Actually there was news in May 2024? Let's check mental news in May 2024: Commerce Commission announced caps on interchange fees? Or was it in November 2024?
+
+Let's try to recall specific news article wording: Around late 2024, headlines said "Credit card fees to be slashed, saving businesses $260m a year" and "The caps will take effect on 13 May 2025 for credit cards and..." Hmm maybe there was a phased implementation: First phase in December 2024? Or in May 2025?
+
+Wait, there was also an announcement that surcharges on in-store payments using cards will be banned by 2025? Let's recall in late 2024 the government said it was banning surcharges on in-store payments using Visa and Mastercard, effective by May 2026?
+
+This is getting muddled. Let's systematically recall New Zealand payment system regulation timeline:
+- Nov 2022: Retail Payment System Act passed.
+- Dec 2023: Commission issues draft standards? Actually maybe in Dec 2023 they said they'd be reducing fees.
+- Throughout 2024: Consultation.
+- Dec 2024? Or maybe in Nov 2024, the Commission made its decision?
+- The caps take effect in phases: Maybe first on 1 Dec 2024? No that'd be quick.
+
+But actually I think the Commission released its decision in December 2024, with caps taking effect in 2025? Let's check mental news in Dec 2024: Yes, around 10 December 2024 there might have been an announcement.
+
+However, the question sounds like it's asking about a specific computation that was mentioned in an article explaining the delay. For example, an article might have said: "The Commission's final decision was due by [date] but was delayed. Had it come on time (the submission deadline of X), then with ASB wanting 180 days and Westpac wanting 270 days, the caps could have started on Y, which is Z days later."
+
+But I need answer only the number of days.
+
+Let's recall that in submissions, banks requested various implementation times:
+- Maybe ANZ requested 6 months?
+- BNZ requested 9 months?
+- ASB requested 18 months?
+- Westpac requested 12 months?
+
+But we only care about ASB and Westpac.
+
+Let's recall that in the final decision, the Commission might have said the caps will take effect on 13 May 2025? Or on 1 December 2025?
+
+Wait there's also the concept of "first start" - maybe there are two phases: one for credit cards and one for debit? Or one for domestic and one for international?
+
+Actually the caps apply differently for different card types and might be implemented in two stages: first for consumer cards, then for commercial?
+
+But the question asks "the caps first start" - singular.
+
+Let's think about the submission deadline for the draft decision. If the draft was released with a call for submissions that closed on, say, 18 December 2024? No that'd be after decision.
+
+Perhaps the Commission released a preliminary decision in March 2024, submissions closed on, say, 18 April 2024?
+
+But then they delayed the final decision until, say, December 2024. The article might discuss that if they had met the original timeline (decision by the submission deadline? That sounds weird - usually there's a period after submissions close for the Commission to consider them and then issue a decision. The "deadline for submissions" is not the decision deadline. But the question says "final decision come on its deadline for submissions" - meaning the date by which submissions had to be made was also the date they could have made the decision?
+
+Let's parse grammar: "Had the Commerce Commission's final decision come on its deadline for submissions..." This sounds like there was a deadline for the Commission to make submissions? No, "its deadline for submissions" - the Commission had a deadline for receiving submissions. So hypothetically, if the Commission had issued its final decision on the same day that submissions closed.
+
+Thus we need:
+- Date submissions closed: call it D.
+- Hypothetical decision date: D.
+- Then apply implementation lead times requested by ASB and Westpac.
+- The caps could first start on D + max(requested days).
+- The question asks "how many days later" - so likely max(requested days).
+
+Thus we just need the longest implementation period requested by either ASB or Westpac, expressed in days.
+
+But maybe they requested specific calendar dates, not periods. For example, ASB requested implementation on 1 July 2025, Westpac on 1 January 2026, etc. But if decision date is D, then we can compute days.
+
+But the question asks "how many days later could the caps first start..." This sounds like they want the number of days after D.
+
+Thus we need determine D and then the start date, then subtract.
+
+But maybe they just want the number of days of the longest requested implementation period (e.g., 18 months = 547 days?). But they said "how many days later" which usually means compute the difference in days.
+
+However, without knowing D precisely, we can still compute the difference between D and the start date if we know both. But if they ask "how many days later could the caps first start" with the decision on D, then it's just (start date - D).
+
+But they might want just the implementation period in days.
+
+We need identify the actual requested implementation periods from ASB and Westpac.
+
+Let's recall news coverage of bank submissions on interchange fee caps. In maybe February 2024, banks made submissions. Some might have argued for longer transition periods.
+
+Specifically, I think banks wanted more time to adjust their systems. Maybe they requested 18 months?
+
+But wait, there's also the banking study where ASB and Westpac made submissions about capital? No.
+
+Let's search mental database for "ASB Westpac timing requests Commerce Commission caps submissions". Might be in an article summarizing submissions.
+
+Perhaps in December 2023, the Commission released draft standards and called for submissions by 12 February 2024? Or by 18 January?
+
+Actually I think there was a consultation that closed on 18 February 2024? Or on 10 March?
+
+But then in the news, they mentioned that if the decision had come then, and with banks asking for 6 months and 12 months, the caps could have started in ... Hmm.
+
+Let's try to recall the actual final decision announcement date and the effective date. If we know the effective date and the actual decision date, and if we know the banks requested implementation periods relative to decision, we might back-calculate.
+
+Say final decision was announced on 10 December 2024, and caps take effect on 13 May 2025? That's about 5 months (154 days). But that's not a round number.
+
+Alternatively, decision might have been in November 2022? No.
+
+Wait, there might also be caps on bank fees? No.
+
+Let's recall specific news in late 2024 about "interchange fee caps to take effect in December 2024"? Actually maybe the caps took effect immediately for some?
+
+No, let's recall seeing news headlines in late 2024 like "Shoppers to save as card fees capped from next year". Maybe they said "from 1 January 2025"? Or "from 13 May 2025"?
+
+Let's recall that in Australia, the Reserve Bank proposed caps? No, that's different.
+
+Actually, I think in New Zealand the Commission announced in December 2024 that from 13 May 2025, interchange fees for credit cards will be capped at 0.8%, and for contactless debit at 0.2%, saving merchants $260m. Yes, that sounds right: effective date 13 May 2025.
+
+If decision was in December 2024 and effective in May 2025, that's about 5 months. But banks might have requested longer?
+
+But wait, there might be two phases: The first caps come into effect on 13 May 2025? Or maybe on 1 December 2025?
+
+Let's check mental consistency: The Commission might have given businesses about 6 months to adjust. So decision in Dec 2024, effect in May 2025 (~5-6 months).
+
+But the question mentions "Had the Commerce Commission's final decision come on its deadline for submissions..." This suggests the decision was delayed significantly past the submission deadline. If submissions closed, say, in February 2024, and the decision eventually came in December 2024 (10 months late). If it had come in February 2024, and then with implementation periods requested by banks (say ASB 18 months, Westpac 12 months?), the caps could have started in, say, August 2025? But they actually started in May 2025, which is earlier than that, so that doesn't align.
+
+Thus maybe the decision was delayed, but the implementation date was fixed regardless? Or maybe the implementation date was pushed back because of the delayed decision?
+
+Wait, the question asks "how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?" This sounds like: The decision was delayed. Because of the delay, the start date was pushed back? Or they want to compute what the start date could have been if the decision had been on time, accounting for the banks' requested lead times.
+
+Specifically:
+- Submissions close on date S.
+- Hypothetically, decision is made on S.
+- ASB requests that caps start no earlier than S + A days.
+- Westpac requests S + W days.
+- To satisfy both, start must be no earlier than max(A,W).
+- So "how many days later" = max(A,W).
+
+Thus we need just the longest requested lead time in days.
+
+But we need be precise about the number. Let's recall the actual submissions. Maybe ASB said they need 12 months, Westpac said they need 6 months? Or vice versa?
+
+Low model
+=========
+
+Attempt 1 · Wrong
+-----------------
+Docs: Doc 1, Doc 4, Doc 14 · Note: Note: where it went wrong
+
+Final answer: So the caps could first start 243 days later, on 13 March 2027. | Your answer (gold): 262 days
+
+Where it went wrong: Computed 13 March 2027 (243 days) by applying ASB's 8-month minimum from 13 July 2026, but ignored Westpac's separate requirement that changes 'align with a first-of-month effective date' (Doc 14), which pushes the date to 1 April 2027.Doc 4 Doc 14
+
+How it got there: Quoted Doc 4 (“Set an implementation date of no earlier than 8 months from the announcement date and Com…”), and 2 more passages.
+
+Passages quoted:
+
+- Quoted Doc 4: “Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation.”
+- Quoted Doc 14, p. 6: “Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support orderly delivery”
+- Quoted Doc 14, p. 6: “changes taking effect from 1 March 2027 at the earliest”
+
+Named Doc 1, Doc 4, Doc 14
+
+Full answer
+-----------
+
+The submission deadline was 12 pm Monday 13 July 2026 (Document 1). If the final decision had been issued that day:
+
+- ASB asked for an implementation date no earlier than 8 months from the announcement, with scheme confirmation within 2 months so acquirers have 6 months to implement (Document 4).
+
+→ 8 months after 13 July 2026 = 13 March 2027.
+
+- Westpac asked for a minimum 6‑month implementation period and said changes should take effect no earlier than 1 March 2027 (Document 14).
+
+→ 6 months after 13 July 2026 is 13 January 2027, but Westpac’s explicit floor is 1 March 2027.
+
+To satisfy both, the earliest start date must meet the stricter of the two: 13 March 2027.
+
+Counting from 13 July 2026 to 13 March 2027:
+
+31 (Jul–Aug) + 31 (Aug–Sep) + 30 (Sep–Oct) + 31 (Oct–Nov) + 30 (Nov–Dec) + 31 (Dec–Jan) + 31 (Jan–Feb) + 28 (Feb–Mar) = 243 days.
+
+So the caps could first start 243 days later, on 13 March 2027.
+
+Reasoning
+---------
+
+We need answer based on input documents. Need understand Commission's draft decision deadline for submissions and proposed implementation period, then determine final decision date? Need parse carefully.
+
+Question: "Had the Commerce Commission's final decision come on its deadline for submissions, how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?"
+
+Need identify:
+- Deadline for submissions: From document 1, submissions due by 12pm Monday 13 July 2026, cross-submissions two weeks after publication.
+But "final decision come on its deadline for submissions" likely means final decision issued on the submission deadline date? Let's determine date: submissions by 12pm Monday 13 July 2026. So final decision hypothetically on 13 July 2026? Or maybe on publication of submissions? Need understand context.
+
+Then need determine caps start date that satisfies both ASB and Westpac timing requests.
+
+Read ASB and Westpac submissions for implementation timing requests.
+
+Document 4 (ASB): "Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation." So ASB requests implementation date no earlier than 8 months from announcement (final decision) date. They also want schemes confirm no later than 2 months from announcement, leaving acquirers 6 months.
+
+Document 14 (Westpac): "Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support orderly delivery..." Wait need check exact wording. In document 14 paragraph 3.21: "Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support orderly delivery..." But is that tied to final decision date? Need understand if they propose specific date regardless, or relative? Let's parse context: They discuss December implementation carries risks, recommend minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest. This sounds like they want at least 6 months, and specifically not before March 1, 2027, but if decision comes later then maybe later. However the question asks "how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?" This sounds compute the earliest date that satisfies both conditions relative to decision date of 13 July 2026? Let's check consistency.
+
+If decision/announcement date = 13 July 2026.
+ASB: implementation no earlier than 8 months after announcement => 13 March 2027? Wait 8 months after July 13, 2026 is March 13, 2027.
+Westpac: minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest. If decision is July 13, 2026, then six months later is Jan 13, 2027, but they say 1 March 2027 at the earliest. So Westpac's request is effectively no earlier than March 1, 2027 (and at least 6 months). To satisfy both, need date that is no earlier than max(March 13, 2027? Wait ASB says no earlier than 8 months => March 13, 2027. Westpac says no earlier than March 1, 2027 and at least 6 months. The stricter is ASB's 8 months -> March 13, 2027? But need "how many days later could the caps first start" likely means the earliest date satisfying both, then compute days after decision deadline.
+
+Check decision deadline: submissions close 13 July 2026. If final decision comes on that date, then 8 months later is 13 March 2027. Let's compute days between 13 July 2026 and 13 March 2027.
+
+Need be precise: July 13, 2026 to March 13, 2027.
+Months:
+July 13 to Aug 13 (31)
+Aug 13 to Sep 13 (31)
+Sep 13 to Oct 13 (30)
+Oct 13 to Nov 13 (31)
+Nov 13 to Dec 13 (30)
+Dec 13 to Jan 13 (31)
+Jan 13 to Feb 13 (31) -> but 2027 not leap year? 2027 is not leap year (divisible by 4? 2024 was, 2028 will be). So Feb has 28 days.
+Feb 13 to Mar 13 (28)
+Total days: 31+31+30+31+30+31+31+28 = 243 days? Let's sum precisely:
+Jul 13-Aug 13: 31
+Aug 13-Sep 13: 31 -> total 62
+Sep 13-Oct 13: 30 -> 92
+Oct 13-Nov 13: 31 -> 123
+Nov 13-Dec 13: 30 -> 153
+Dec 13-Jan 13: 31 -> 184
+Jan 13-Feb 13: 31 -> 215
+Feb 13-Mar 13: 28 -> 243.
+
+So 243 days later? But need "how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?" If earliest start date is March 13, 2027, that's 243 days after July 13, 2026.
+
+But check Westpac said "changes taking effect from 1 March 2027 at the earliest" regardless of decision date? Actually they said "minimum six-month implementation period... with changes taking effect from 1 March 2027 at the earliest". If decision is July 13, 2026, then 6 months is Jan 13, 2027, but they want March 1, 2027 at earliest, which is about 7.5 months. So Westpac's constraint is March 1, 2027. ASB wants no earlier than 8 months = March 13, 2027. So the satisfying both is March 13, 2027 (since that's later than March 1). So days later = 243.
+
+But wait, the question says "Had the Commerce Commission's final decision come on its deadline for submissions..." The deadline for submissions was 12pm Monday 13 July 2026. Yes.
+
+However, need check if there is any other interpretation: Maybe the final decision comes on the deadline for submissions, meaning on 13 July 2026 they issue final decision same day? Then caps could first start satisfying both requests. ASB wants implementation no earlier than 8 months from announcement date, and schemes confirm rates no later than 2 months after announcement leaving acquirers 6 months. So if announcement is July 13, 2026, schemes should confirm by Sept 13, 2026, and acquirers have 6 months to implement by Mar 13, 2027. So yes, first start March 13, 2027.
+
+But Westpac also requests "minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest". So March 13 is okay (after March 1 and more than 6 months).
+
+Thus answer: 243 days later, on 13 March 2027.
+
+Need present clearly, maybe mention the date and days count. Let's also verify if there is any hidden nuance about "deadline for submissions" being 13 July 2026 at 12pm, but cross-submissions run for two weeks after publication of submissions. Not relevant.
+
+Therefore answer: The caps could first take effect on 13 March 2027, which is 243 days after 13 July 2026.
+
+Need cite sources: Document 1 for submission deadline (12pm Monday 13 July 2026). Document 4 for ASB's 8-month request. Document 14 for Westpac's minimum six months and 1 March 2027 earliest.
+
+Let's provide concise answer.
+
+Attempt 2 · Wrong
+-----------------
+Docs: Doc 1, Doc 4, Doc 14 · Note: —
+
+Final answer: So the caps could first start 243 days later, on 13 March 2027. | Your answer (gold): 262 days
+
+How it got there: Quoted Doc 4 (“Set an implementation date of no earlier than 8 months from the announcement date and Com…”), and 2 more passages.
+
+Where it left your evidence: It quoted Doc 14, p. 6 (“Westpac considers that a minimum six-month implementation period, with changes taking eff…”) instead of your evidence for part 1 (“Additionally, any interchange changes should align with a first-of-month effective date.”).
+
+Passages quoted:
+
+- Quoted Doc 4: “Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation.”
+- Quoted Doc 14, p. 6: “Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support orderly delivery”
+- Quoted Doc 14, p. 6: “minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest”
+
+Named Doc 1, Doc 4, Doc 14
+
+Full answer
+-----------
+
+The submission deadline in the draft paper is 12 p.m. Monday 13 July 2026 (Doc 1). If the final decision had come on that date, the caps could not take effect until both issuers’ requested timelines were met.
+
+- ASB asks for an implementation date no earlier than 8 months from the announcement/decision date (Doc 4, Recommendation 3). From 13 July 2026, that is 13 March 2027.
+- Westpac asks for a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest (Doc 14, para 3.21).
+
+To satisfy both, the start must be no earlier than the later of those two bounds: 13 March 2027 (ASB’s 8-month floor is stricter than Westpac’s 1 March floor).
+
+Counting from the decision date of 13 July 2026 to 13 March 2027:
+
+- Remaining in 2026 (Jul 14 – Dec 31): 171 days
+- Jan 2027: 31
+- Feb 2027: 28
+- Mar 1–13, 2027: 13
+
+Total = 243 days
+
+So the caps could first start 243 days later, on 13 March 2027.
+
+Reasoning
+---------
+
+We need parse problem: "Had the Commerce Commission's final decision come on its deadline for submissions, how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?"
+
+Need understand context: draft decision paper with submissions due by 12pm Monday 13 July 2026 (from doc1). Need determine final decision date if came on deadline for submissions? That is 13 July 2026.
+
+Then need determine earliest start date for caps that satisfies both ASB and Westpac requests regarding implementation period/timing.
+
+Need read ASB and Westpac submissions for their requested implementation timelines.
+
+From doc4 (ASB): "Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation." So ASB wants implementation date no earlier than 8 months from announcement (final decision) date.
+
+From doc14 (Westpac): "Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support orderly delivery..." Wait need understand if final decision on 13 July 2026, then 6 months later is 13 Jan 2027, but they say from 1 March 2027 at earliest. But need "satisfying both ASB's and Westpac's timing requests" - need the later of the two? Let's parse precisely.
+
+We need "how many days later could the caps first start while satisfying both" => need compute earliest date that meets both conditions, then days after 13 July 2026.
+
+ASB: implementation date no earlier than 8 months from announcement date. If announcement/final decision on 13 July 2026, 8 months later is 13 March 2027 (since July +8 = March). Specifically 13 March 2027.
+
+Westpac: minimum six-month implementation period, with changes taking effect from 1 March 2027 at earliest. Let's check consistency: 13 July 2026 +6 months = 13 Jan 2027, but they ask for 1 March 2027 at earliest, which is about 7.5 months. So Westpac's request is effectively start no earlier than 1 March 2027.
+
+Need satisfy both => start date must be no earlier than max(13 Mar 2027, 1 Mar 2027) = 13 March 2027? Wait need "satisfying both ASB's and Westpac's timing requests" means the date must be acceptable to both. ASB says no earlier than 8 months from announcement => 13 March 2027 or later. Westpac says from 1 March 2027 at earliest => 1 March 2027 or later. To satisfy both, need date that is not earlier than either constraint, so the earliest is the later of the two lower bounds: 13 March 2027 (since ASB requires not earlier than 13 Mar, Westpac allows 1 Mar but 13 Mar is later and thus okay for Westpac since it's after 1 Mar). So caps could first start on 13 March 2027.
+
+Now compute days later from 13 July 2026 to 13 March 2027.
+
+Let's calculate precisely.
+
+From July 13, 2026 to March 13, 2027.
+
+We need account for months:
+July 13 to Aug 13 = 31
+Aug 13 to Sep 13 = 31
+Sep 13 to Oct 13 = 30
+Oct 13 to Nov 13 = 31
+Nov 13 to Dec 13 = 30
+Dec 13 to Jan 13 = 31
+Jan 13 to Feb 13 = 31
+Feb 13 to Mar 13 = 28 (2027 is not leap year; 2026 not leap either, but Feb 2027 has 28 days).
+
+Let's sum: 31+31+30+31+30+31+31+28 = 243? Let's do precisely:
+Jul 13-Aug 13: 31
+Aug 13-Sep 13: 31 =>62
+Sep 13-Oct 13: 30 =>92
+Oct 13-Nov 13: 31 =>123
+Nov 13-Dec 13: 30 =>153
+Dec 13-Jan 13: 31 =>184
+Jan 13-Feb 13: 31 =>215
+Feb 13-Mar 13: 28 =>243
+
+So 243 days later? Wait need "how many days later could the caps first start" meaning the number of days after the decision date. If decision on July 13 and start on March 13 next year, that's 243 days after? Let's check with direct date difference.
+
+We can verify by computing day of year.
+2026 is not leap year. Days from Jan 1:
+Jul 13 is day 194? Let's compute precisely:
+Jan 31
+Feb 28 =>59
+Mar 31 =>90
+Apr 30 =>120
+May 31 =>151
+Jun 30 =>181
+Jul 13 =>194. Yes.
+
+2027 Mar 13 is day 31+28+31+13? Let's compute:
+Jan 31
+Feb 28 =>59
+Mar 13 =>72. So day 72 of 2027.
+
+Total days between July 13, 2026 and Mar 13, 2027 excluding start? Actually "how many days later" usually means the difference in dates: Mar 13, 2027 minus Jul 13, 2026 = 243 days. Let's check with another method: remaining days in 2026 after Jul 13 (not including Jul 13?) If we count Jul 14 through Dec 31:
+Jul remaining: 31-13 = 18
+Aug 31 =>49
+Sep 30 =>79
+Oct 31 =>110
+Nov 30 =>140
+Dec 31 =>171
+Then Jan 31 =>202
+Feb 28 =>230
+Mar 13 =>243. Yes if excluding Jul 13 and including Mar 13? Actually if we ask "how many days later could the caps first start" and the start date is Mar 13, then the number of days after Jul 13 is 243 (since Jul 14 is 1 day later). So answer 243 days.
+
+But need check if there's any other interpretation: Maybe ASB wants implementation period of 6 months after scheme confirms rates 2 months after announcement? Let's parse ASB recommendation 3 exactly: "Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation."
+
+This sounds like announcement date + 2 months for scheme confirmation, then 6 months implementation = 8 months total. So indeed implementation date no earlier than 8 months from announcement. So our interpretation correct.
+
+Westpac said "minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest". If decision comes on 13 July 2026, 6 months is Jan 2027, but they specify 1 Mar 2027 earliest, likely accounting for not implementing over Christmas/peak. So Westpac constraint is 1 Mar 2027.
+
+Thus satisfying both => 13 Mar 2027, which is 243 days after 13 July 2026.
+
+We should present reasoning concisely with citation.
+
+Check if there is any other date constraint from other docs? The question specifically asks "while satisfying both ASB's and Westpac's timing requests". So yes.
+
+Need answer with number of days. Probably 243 days. Let's also mention date 13 March 2027.
+
+Let's craft final answer with explanation of submission deadline, decision date, ASB 8 months, Westpac 1 March 2027, thus earliest is 13 March 2027, 243 days later.
+
+Attempt 3 · Wrong
+-----------------
+Docs: Doc 1, Doc 4, Doc 14 · Note: —
+
+Final answer: So the caps could first start 243 days later, on 13 March 2027. | Your answer (gold): 262 days
+
+How it got there: Quoted Doc 4 (“Set an implementation date of no earlier than 8 months from the announcement date and Com…”), and 1 more passage.
+
+Passages quoted:
+
+- Quoted Doc 4: “Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation.”
+- Quoted Doc 14, p. 6: “Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support orderly delivery”
+
+Named Doc 1, Doc 4, Doc 14
+
+Full answer
+-----------
+
+The submission deadline was 12 pm on Monday 13 July 2026 (Document 1). If the final decision had been issued then:
+
+- ASB requested an implementation date no earlier than 8 months from the announcement date, with scheme confirmation within 2 months to allow acquirers 6 months to implement (Document 4, Recommendation 3).
+
+→ 8 months after 13 July 2026 = 13 March 2027.
+
+- Westpac requested a minimum 6-month implementation period, with changes taking effect from 1 March 2027 at the earliest (Document 14, para 3.21).
+
+To satisfy both, the caps could not start before the later of those two dates: 13 March 2027.
+
+Counting from 13 July 2026 (exclusive):
+
+- July: 18 days
+- Aug–Jan: 31 + 30 + 31 + 30 + 31 + 31 = 184 days
+- Feb 2027: 28 days
+- Mar 1–13: 13 days
+
+Total = 243 days
+
+So the caps could first start 243 days later, on 13 March 2027.
+
+Reasoning
+---------
+
+We need answer based on documents.
+
+Need understand timeline: draft decision date 4 June 2026? Actually paper published 4 June 2026. Submissions due by 12pm Monday 13 July 2026 (document 1). Cross-submissions two weeks after publication. Final decision originally? Need determine "Had the Commerce Commission's final decision come on its deadline for submissions" -> deadline for submissions is 13 July 2026? Wait need parse precisely.
+
+Question: "Had the Commerce Commission's final decision come on its deadline for submissions, how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?"
+
+So need identify final decision date hypothetical = submission deadline = Monday 13 July 2026 at 12pm? Or maybe publication of submissions then cross-submission runs two weeks, but "deadline for submissions" is 13 July 2026.
+
+Then need determine earliest start date that satisfies both ASB and Westpac implementation timing requests.
+
+Read ASB recommendation 3: "Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation."
+
+Thus ASB wants implementation date no earlier than 8 months from announcement (final decision) date.
+
+Read Westpac submission point 3.21: "Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support orderly delivery..." Wait they say minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest. But need combine with ASB's 8 months? Let's parse carefully.
+
+We need "how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?" This sounds compute the later of the two requested earliest start dates relative to the hypothetical decision date (13 July 2026).
+
+Need check Westpac's request precisely: They ask for minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest. But that is tied to maybe decision around now? Wait they submitted on 21 July 2026? Actually document 14 dated 21 July 2026? Let's check. The submission date is 21 July 2026? The document is dated 21 July 2026? Actually header "21 July 2026" but the draft decision was 4 June 2026 with submissions by 13 July. So Westpac submitted after deadline? Maybe not relevant. But they say "minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest". That implies if decision is made around now (July 2025? No). But we need apply both requests relative to decision date of 13 July 2026.
+
+Let's compute 8 months after 13 July 2026 = 13 March 2027? Actually 8 months from July 13 2026 -> March 13 2027.
+
+Westpac requests minimum six months, with effect 1 March 2027 at earliest. If decision is 13 July 2026, six months later is 13 January 2027, but they specifically say take effect 1 March 2027 at earliest (maybe due to not during holiday). So Westpac's requested earliest start is 1 March 2027.
+
+ASB requests no earlier than 8 months from announcement, which is 13 March 2027.
+
+Thus satisfying both requires the later date: 13 March 2027? Or 1 March 2027? Wait "satisfying both ASB's and Westpac's timing requests" means the start date must be no earlier than each of their requested earliest dates. ASB: no earlier than 13 March 2027. Westpac: no earlier than 1 March 2027, but also minimum six months (13 Jan 2027). The stricter is ASB's 13 March 2027. So caps first start on 13 March 2027.
+
+But question asks "how many days later could the caps first start..." likely they want number of days after the decision date (13 July 2026) to 13 March 2027? Or maybe to 1 March? Let's read precisely: "Had the Commerce Commission's final decision come on its deadline for submissions, how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?"
+
+So decision date = submission deadline = Monday 13 July 2026.
+
+Need "how many days later could the caps first start" => the start date is X days after 13 July 2026. Need compute X for 13 March 2027? Let's check.
+
+From July 13, 2026 to March 13, 2027:
+July remaining: 18 days (since July has 31, 31-13=18, but not including 13? If "later" means after that date, then July 14 through July 31 = 18 days? Let's do precisely counting days after July 13 exclusive.)
+August:31
+September:30
+October:31
+November:30
+December:31
+January:31
+February:28 (2027 not leap year)
+March 1-13:13
+Total = 18+31+30+31+30+31+31+28+13 = 243? Let's sum: 18+31=49; +30=79; +31=110; +30=140; +31=171; +31=202; +28=230; +13=243. So 243 days later (if start on March 13). But need check if they include the decision day? Typically "how many days later" means date difference. From July 13 to March 13 is 243 days later (not counting July 13).
+
+But wait Westpac said "with changes taking effect from 1 March 2027 at the earliest". That is 232 days after July 13? Let's compute to March 1: 18+31+30+31+30+31+31+28+1 = 231? Let's do precisely: July 14-31 (18), Aug 31 (49), Sept 30 (79), Oct 31 (110), Nov 30 (140), Dec 31 (171), Jan 31 (202), Feb 28 (230), Mar 1 (231). So March 1 is 231 days after July 13 (exclusive). But ASB wants 8 months -> March 13 (243 days). So satisfying both means start no earlier than March 13, 2027, which is 243 days later.
+
+However need check if ASB said "Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation." So implementation date no earlier than 8 months after announcement. Yes March 13, 2027.
+
+But wait there might also be consideration of scheme release cycles (BER cycle April 2027). ASB said "ANZ suggests that all changes be tied to the structured update schedule used by the schemes, namely the BER cycle, specifically the April 2027 release. Failing that we consider that the implementation period should be a minimum of 6 months." That's ANZ, not ASB. ASB said 8 months, with scheme confirmation within 2 months to allow acquirers 6 months. So ASB's request is 8 months.
+
+Thus answer likely 243 days, start date 13 March 2027. But need present "how many days later could the caps first start" => 243 days later (on 13 March 2027).
+
+Let's verify no other hidden constraints. Westpac said minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest. So if decision is July 13, 2026, six months is Jan 13, 2027, but they specify 1 March 2027 at earliest (probably to avoid Christmas). So Westpac allows March 1. ASB requires March 13. So both satisfied on March 13.
+
+But question wording "how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?" This could be interpreted as "what is the earliest date that satisfies both, and how many days after the decision is that?" Yes, 243 days.
+
+Need provide reasoning referencing documents.
+
+Check document 4 (ASB) recommendation 3: "Set an implementation date of no earlier than 8 months from the announcement date..."
+
+Check document 14 (Westpac) point 3.21: "Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest..."
+
+Thus answer: decision on 13 July 2026; earliest start satisfying both is 13 March 2027, which is 243 days later.
+
+But need be precise about "deadline for submissions" being 12pm Monday 13 July 2026. Yes.
+
+Thus answer 243 days (on 13 March 2027). We'll present.
+
+Attempt 4 · Wrong
+-----------------
+Docs: Doc 1, Doc 4, Doc 14 · Note: —
+
+Final answer: So the caps could first start 243 days later, on 13 March 2027. | Your answer (gold): 262 days
+
+How it got there: Quoted Doc 4 (“Set an implementation date of no earlier than 8 months from the announcement date and Com…”), and 1 more passage.
+
+Passages quoted:
+
+- Quoted Doc 4: “Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation.”
+- Quoted Doc 14, p. 6: “Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support orderly delivery”
+
+Named Doc 1, Doc 4, Doc 14
+
+Full answer
+-----------
+
+The submissions closed at 12pm on Monday 13 July 2026 (Document 1), so assume the final decision is issued that day.
+
+- ASB asks for an implementation date no earlier than 8 months from the announcement (Document 4, Recommendation 3).
+
+13 July 2026 + 8 months = 13 March 2027.
+
+- Westpac asks for a minimum six-month implementation period, with changes taking effect no earlier than 1 March 2027 (Document 14, para 3.21).
+
+From 13 July 2026, six months is 13 January 2027, but Westpac’s explicit floor is 1 March 2027.
+
+To satisfy both conditions, the start date must meet the later of the two: 13 March 2027 (which is after Westpac’s 1 March 2027 floor and exactly ASB’s 8-month point).
+
+Counting from 13 July 2026 to 13 March 2027:
+
+- Jul–Dec 2026: 18 + 31 + 30 + 31 + 30 + 31 = 171 days
+- Jan–Mar 2027: 31 + 28 + 13 = 72 days
+- Total = 243 days
+
+So the caps could first start 243 days later, on 13 March 2027.
+
+Reasoning
+---------
+
+We need parse problem: "Had the Commerce Commission's final decision come on its deadline for submissions, how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?"
+
+Need understand deadlines and requests.
+
+We need identify submission deadline/date for this draft decision, then "final decision come on its deadline for submissions" means final decision issued on that date. Then determine earliest implementation date that satisfies both ASB's and Westpac's timing requests.
+
+Need parse documents for proposed implementation periods and requests.
+
+Document 1 (Draft Decision) says seeking feedback by 12pm Monday 13 July 2026, cross-submissions two weeks after publication. So submission deadline is 13 July 2026? But there may also be other submissions with dates 16 July, 17 July, 20 July, etc., but formal consultation closing date likely 13 July 2026 at 12pm. However the question says "had the Commerce Commission's final decision come on its deadline for submissions" - likely means if final decision was made on the submission deadline, which is 13 July 2026? Or maybe 20 July? Let's read carefully.
+
+In Document 1: "Please submit your views by 12pm on Monday 13 July 2026 and will allow two weeks after publication of submissions for cross-submissions." So the deadline for submissions is 13 July 2026.
+
+But there are submissions dated 16 July, 17 July, 20 July - maybe they were late or part of cross-submissions? Actually cross-submissions run for two weeks once submissions published. But not necessary.
+
+Now need ASB's and Westpac's timing requests.
+
+Document 4 is ASB submission dated 20 July? Actually "20 July 2026" maybe? Let's inspect ASB's recommendations.
+
+In Document 4 (ASB): Recommendation 3: "Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation."
+
+Also earlier in ASB: "Two to three months is therefore insufficient... ASB Recommendation 3: Set an implementation date of no earlier than 8 months from the announcement date..."
+
+But also they mention "For the domestic rate changes announced in July 2025, the details... allowing us 3 months..." But the specific request is implementation date no earlier than 8 months from announcement date (final decision).
+
+Now Westpac's request: Document 14 (Westpac submission) section 3.21: "Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support orderly delivery..." Wait need check precisely.
+
+Let's read Westpac doc relevant part: "End of year implementation period increases operational risk... Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest..." Hmm that sounds like they want at least six months, and specifically not before 1 March 2027? But we need "satisfying both ASB's and Westpac's timing requests" - need the later of the two? Let's parse exactly.
+
+We need "how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?" So compute the earliest start date that meets both conditions, then subtract the decision date (deadline for submissions) to get days later.
+
+Need determine decision date: deadline for submissions is 13 July 2026? But Westpac mentions "changes taking effect from 1 March 2027 at the earliest" - that might be tied to a specific decision date? Let's understand context: The draft decision was published 4 June 2026, with submissions by 13 July 2026. Westpac submission dated 21 July 2026 maybe? Actually document says "21 July 2026". They might be assuming final decision around now? But the question asks hypothetically "Had the Commerce Commission's final decision come on its deadline for submissions..." So decision date = 13 July 2026.
+
+Then ASB requests implementation no earlier than 8 months from announcement date. 8 months after 13 July 2026 = 13 March 2027? Let's compute: July 13 2026 + 8 months = March 13, 2027.
+
+Westpac requests minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest. If decision is 13 July 2026, six months later is 13 January 2027, but they specifically say 1 March 2027 at the earliest, perhaps because they want to avoid Dec-Feb period and align to first of month? Actually they said "with changes taking effect from 1 March 2027 at the earliest" - that might be independent of decision date? Let's check: If decision came around now (July 2026), six months later is Jan 2027, but they want 1 March 2027 at the earliest, which is about 7.5 months. But they said "minimum six-month implementation period... taking effect from 1 March 2027 at the earliest". That sounds like they want both conditions: at least six months, and also not during Dec-Feb, so earliest practical is March 1, 2027. But if decision is 13 July 2026, then 1 March 2027 is about 7 months and 18 days (231 days?). Meanwhile ASB wants no earlier than 8 months, i.e., March 13, 2027.
+
+We need satisfy both: so the caps could first start on the later date, which is March 13, 2027? Or maybe March 1 doesn't satisfy ASB's 8 months (since March 1 is only ~7.6 months after July 13). So the earliest that satisfies both is March 13, 2027? Let's verify.
+
+But need "how many days later could the caps first start" - likely they want the number of days between 13 July 2026 and 13 March 2027? Or maybe to 1 March? Let's examine precisely.
+
+We need parse Westpac's wording: "Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support..." This could be interpreted as: the implementation period should be at least six months, and therefore (given current timeline?) the changes should take effect no earlier than 1 March 2027. But if the decision date shifts (hypothetical on submission deadline), then "1 March 2027" might still be fixed? Actually no, they likely anchored to the draft decision publication in June and expected final decision maybe late 2026? Let's not overanalyze. The question asks "Had the Commerce Commission's final decision come on its deadline for submissions, how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?"
+
+Thus we need apply both conditions relative to the decision date (the deadline).
+
+ASB: implementation date no earlier than 8 months from announcement (decision) date.
+
+Westpac: minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest? Hmm if decision is on 13 July 2026, then six months is 13 Jan 2027, but they said 1 March 2027 at earliest. That is more than six months. So the Westpac condition might actually be "at least six months, but also not before 1 March 2027 regardless"? But if decision is 13 July 2026, then 1 March 2027 is about 7 months and 16 days, which indeed is >6 months. So both conditions satisfied if date is on or after 1 March 2027? Wait but ASB wants no earlier than 8 months (13 March 2027). So the binding constraint is ASB's 8 months: March 13, 2027. But we need "satisfying both" - yes March 13 is after March 1, so it satisfies Westpac's "no earlier than March 1" and also is 8 months. So the earliest possible is March 13, 2027.
+
+But wait, Westpac said "minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest". If decision is 13 July 2026, then to have a minimum six-month period ending on 1 March 2027, the decision would need to be by 1 Sept 2026. But since decision is 13 July, that is satisfied (more than 6 months to March 1). So Westpac's request is essentially "no earlier than 1 March 2027". Meanwhile ASB says "no earlier than 8 months from announcement" = March 13, 2027. So the caps could first start on March 13, 2027, which is 243 days? Let's compute exactly.
+
+We need "how many days later" - from 13 July 2026 to 13 March 2027.
+
+Let's compute days:
+July 2026 remaining after 13: July has 31 days, so 31 -13 = 18 days (not including 13? Depending on "later" meaning after the date, so 13 July to 14 July is 1 day later). We'll compute the date difference.
+
+From July 13, 2026 to March 13, 2027.
+
+Let's count months:
+July 13 to Aug 13 = 31
+Aug 13 to Sept 13 = 31
+Sept 13 to Oct 13 = 30
+Oct 13 to Nov 13 = 31
+Nov 13 to Dec 13 = 30
+Dec 13 to Jan 13 = 31
+Jan 13 to Feb 13 = 31
+Feb 13 to Mar 13 = 28 (2027 is not leap year? 2026 is not leap, 2027 not leap, Feb has 28).
+
+Total days = 31+31+30+31+30+31+31+28 = 243 days.
+
+Check: 31 (Jul) +31 (Aug) =62; +30=92; +31=123; +30=153; +31=184; +31=215; +28=243. Yes, 243 days.
+
+But need check if Westpac's request might be interpreted as "implementation period should be minimum 6 months" not "no earlier than March 1 regardless". If so, then with decision on 13 July 2026, Westpac's earliest is Jan 13, 2027. ASB's earliest is Mar 13, 2027. So satisfying both is Mar 13, 2027, still 243 days later. So same answer! Wait check: Westpac said "with changes taking effect from 1 March 2027 at the earliest" - that sounds like they want March 1 regardless of decision date? But even if it's just 6 months, it's Jan 13, which is earlier than Mar 13, so ASB still binds. Thus the answer is 243 days later (March 13, 2027).
+
+But need verify if submission deadline is indeed 13 July 2026. Document 1 said "Please submit your views by 12pm on Monday 13 July 2026..." Yes.
+
+But there might also be cross-submissions running two weeks after publication of submissions, but not relevant for final decision date.
+
+Thus answer: 243 days, with caps able to start on 13 March 2027.
+
+Need present reasoning concisely, citing ASB's 8-month request and Westpac's 6-month/minimum March 1 2027 request, and decision on 13 July 2026.
+
+But wait, check if ASB said "no earlier than 8 months from the announcement date" - yes recommendation 3: "Set an implementation date of no earlier than 8 months from the announcement date..."
+
+Thus if announcement (final decision) is 13 July 2026, then 8 months later is 13 March 2027.
+
+Westpac said "minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest..." Even if decision on 13 July, six months is 13 Jan 2027, but they want not before Mar 1 2027, so binding is Mar 13? Actually need both satisfied: date must be >= Jan 13 AND >= Mar 1. So earliest is Mar 1? Wait no, ASB requires >= Mar 13. So combine: date >= max(Jan 13, Mar 1, Mar 13) = Mar 13.
+
+But wait, is Westpac's Mar 1 tied to decision being made around now (July 2026)? If decision is 13 July 2026, then Mar 1 is about 7.5 months later, which is >6 months, so okay. So yes, Mar 13 is after Mar 1, satisfying Westpac.
+
+Thus answer 243 days, caps could first start on 13 March 2027.
+
+But the question asks "how many days later could the caps first start..." So answer is 243 days later (on 13 March 2027).
+
+Let's also check if there is any other request in Westpac about aligning to first of month and avoiding pre-Christmas deployment? They said avoid pre-Christmas deployment and at least six months. But with decision in July, that's not an issue.
+
+Thus answer should be 243 days.
+
+Need provide citation references: Document 4 (ASB) recommendation 3; Document 14 (Westpac) paragraph 3.21; Document 1 submission deadline 13 July 2026.
+
+Let's craft answer.
+
+Attempt 5 · Wrong
+-----------------
+Docs: Doc 1, Doc 4, Doc 14 · Note: —
+
+Final answer: So the caps could first start 243 days later, on 13 March 2027. | Your answer (gold): 262 days
+
+How it got there: It used Doc 1 for the submission deadline, Doc 4 for ASB's 8-month request, and Doc 14 for Westpac's timing, then calculated days to 13 March 2027.
+
+Where it left your evidence: It stopped at 13 March 2027 as the start date, missing Westpac's additional requirement for a first-of-month effective date which pushes the date to 1 April 2027.
+
+Passages quoted:
+
+- Quoted Doc 4: “Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation.”
+- Quoted Doc 14, p. 6: “Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support orderly delivery”
+
+Named Doc 1, Doc 4, Doc 14
+
+Full answer
+-----------
+
+The submissions closed at 12pm on Monday 13 July 2026 (Document 1). If the final decision had been issued that same day:
+
+- ASB asks for an implementation date no earlier than 8 months from the announcement (Document 4, Recommendation 3) → 13 March 2027.
+- Westpac asks for a minimum six-month period, with changes taking effect no earlier than 1 March 2027 (Document 14, §3.21).
+
+To satisfy both, the earliest permissible start is the later of the two: 13 March 2027.
+
+Counting from 13 July 2026 to 13 March 2027 is 243 days.
+
+So the caps could first start 243 days later, on 13 March 2027.
+
+Reasoning
+---------
+
+We need answer question based on input docs.
+
+Need understand context: Commerce Commission draft decision with proposed implementation, submissions have recommendations on implementation period.
+
+Question: "Had the Commerce Commission's final decision come on its deadline for submissions, how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?"
+
+Need determine deadline for submissions, then final decision date equals that? Then need earliest start date that satisfies both ASB and Westpac requests.
+
+Need parse docs for deadlines and implementation requests.
+
+From Document 1 (Draft Decision): Seeking feedback by 12pm Monday 13 July 2026. Cross-submissions run two weeks after publication. So submission deadline is 13 July 2026. The question says "Had the Commerce Commission's final decision come on its deadline for submissions" => final decision date = 13 July 2026? Or maybe the deadline for submissions is 13 July 2026, and if final decision came on that date.
+
+Need determine ASB's request and Westpac's request regarding implementation timing.
+
+From Document 4 (ASB submission): Recommendation 3: "Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation."
+
+So ASB wants implementation no earlier than 8 months from announcement (final decision) date.
+
+From Document 14 (Westpac submission): "Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support orderly delivery..." Wait need understand precisely. They say minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, if decision made around now? But need general request? Let's read carefully.
+
+In Westpac doc section 3.21: "December implementation carries operational risks... Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support..." This sounds like they propose at least 6 months, and specifically if decision now then effective date 1 March 2027. But we need "Westpac's timing requests" in general maybe minimum six months. Need satisfy both ASB and Westpac. ASB asks no earlier than 8 months. Westpac asks minimum six months, but also mentions 1 March 2027 earliest. To satisfy both, need at least 8 months (the longer one). But question asks "how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?"
+
+If final decision on 13 July 2026, then 8 months later? Need compute exact date? "How many days later" likely means number of days after decision date. Need determine the earliest date that is both >=8 months after decision and >=6 months after decision and also maybe aligns with Westpac's specific 1 March 2027? Wait need "while satisfying both ASB's and Westpac's timing requests" -> need meet both conditions. ASB: no earlier than 8 months from announcement. Westpac: minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest. But if decision is 13 July 2026, 6 months later is 13 Jan 2027, but Westpac says 1 March 2027 at earliest. That is about 7 months and ~16 days? Actually July 13 2026 to March 1 2027 is 231 days? Let's compute precisely.
+
+But need "how many days later could the caps first start" - likely compute the earliest date satisfying both, then subtract decision date to get days.
+
+We need be precise with days counting? Let's compute.
+
+Decision date: 13 July 2026.
+
+ASB requests implementation date no earlier than 8 months from announcement date. So earliest is 8 months after 13 July 2026 = 13 March 2027? Depending on months. July 13 + 8 months = March 13, 2027.
+
+Westpac requests minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest. So Westpac's earliest is 1 March 2027 (which is about 7 months 18 days? Actually July 13 to March 1 next year is 231 days). To satisfy both, need date that is not earlier than ASB's 13 March 2027 and not earlier than Westpac's 1 March 2027. The later is 13 March 2027. So caps could first start on 13 March 2027. How many days after 13 July 2026?
+
+Let's count days from July 13, 2026 to March 13, 2027.
+
+We need exact day count (including or excluding start?). Typically "how many days later" means difference in dates. Let's compute.
+
+From July 13, 2026 to March 13, 2027.
+
+Months:
+July remaining: 31 -13 = 18 days (not including July 13? If we count "later" on March 13, then days elapsed include full days after July 13 up to March 13). Let's do standard date difference: March 13, 2027 minus July 13, 2026.
+
+Let's compute precisely using mental or reasoning.
+
+August: 31
+September: 30
+October: 31
+November: 30
+December: 31
+January: 31
+February: 28 (2027 not leap year)
+March: 13
+
+Sum: 18 (July) +31+30+31+30+31+31+28+13 = ?
+
+18+31=49
++30=79
++31=110
++30=140
++31=171
++31=202
++28=230
++13=243.
+
+So 243 days later (if excluding start date). If including start? Usually "243 days later" means on the 243rd day after. So answer likely 243 days, on 13 March 2027.
+
+But need check if Westpac's request specifically ties to decision announcement date? They said "minimum six-month implementation period... changes taking effect from 1 March 2027 at the earliest". That is specific date regardless? But if decision is on submission deadline 13 July 2026, then 6 months is Jan 2027, but they say 1 March 2027 earliest, maybe assuming decision comes around now (July 2026?). Actually they submitted on 21 July 2026? Wait doc dated 20? Or 21? They mention "given the timing..." But for the purpose of satisfying Westpac's request, need effective date no earlier than 1 March 2027. So combine with ASB's 8 months => 13 March 2027. So 243 days.
+
+But need verify ASB said "Set an implementation date of no earlier than 8 months from the announcement date..." Yes. So announcement date = final decision date = 13 July 2026. 8 months = 13 March 2027.
+
+Thus answer: 243 days later, on 13 March 2027.
+
+Need present reasoning concisely with citations.
+
+Check document references:
+Document 4 ASB recommendation 3.
+Document 14 Westpac section 3.21.
+Document 1 submission deadline 12pm Monday 13 July 2026.
+
+Thus answer: The caps could first take effect on 13 March 2027, which is 243 days after the 13 July 2026 decision/deadline.
+
+Need ensure correct interpretation: "Had the Commerce Commission's final decision come on its deadline for submissions" -> yes 13 July 2026.
+
+Therefore answer 243 days (on 13 March 2027).
+
+Medium model
+============
+
+Attempt 1 · Right
+-----------------
+Docs: Doc 1, Doc 4, Doc 14 · Note: Note: where it shortcut
+
+Final answer: 262 | Your answer (gold): 262 days
+
+Where it shortcut: Correctly combined ASB's 'no earlier than 8 months' (Doc 4) with Westpac's first-of-month alignment (Doc 14), rounding 13 March 2027 to 1 April 2027 and counting 262 days from 13 July 2026 (Doc 1).Doc 1 Doc 4 Doc 14
+
+How it got there: It used Doc 1 for the deadline, Doc 4 for ASB's 8-month request, and Doc 14 for Westpac's first-of-month requirement, calculating days to 1 April 2027.
+
+Passages quoted:
+
+- Quoted Doc 4: “ASB Recommendation 3: Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation.”
+- Quoted Doc 4: “Our preference would be for the Commission to set an implementation date of no earlier than 8 months from the announcement date and for the Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implemen”
+- Quoted Doc 1: “We are seeking feedback on our draft decision and draft Amendment Pricing Standard by 12pm on Monday 13 July 2026 and will allow two weeks after publication of submissions for cross-submissions.”
+- Quoted Doc 4: “Set an implementation date of no earlier than 8 months from the announcement date”
+- Quoted Doc 4: “allow acquirers 6 months for implementation”
+
+Named Doc 1, Doc 4, Doc 14
+
+Full answer
+-----------
+
+262
+
+Reasoning
+---------
+
+Let me analyze the question carefully. The question asks: "Had the Commerce Commission's final decision come on its deadline for submissions, how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?"
+
+First, I need to find:
+1. The deadline for submissions
+2. ASB's requested implementation period
+3. Westpac's requested implementation period
+4. Calculate how many days after the deadline the caps could first start while satisfying both requests
+
+Let me search through the documents for this information.
+
+First, the deadline for submissions:
+
+From Document 1 (the main Commerce Commission document), I see in section 1.20-1.21:
+"1.20 This paper seeks views on:
+1.20.1 the proposed interchange fee caps on commercial credit transactions;
+1.20.2 the premiums applied as part of our methodology, including any quantitative evidence to support your views;
+1.20.3 our proposed implementation period; and
+1.20.4 how we have proposed to give effect to our draft decision through the draft Amendment Pricing Standard published alongside this paper.
+1.21 We are seeking feedback on our draft decision and draft Amendment Pricing Standard by 12pm on Monday 13 July 2026 and will allow two weeks after publication of submissions for cross-submissions."
+
+So the deadline for submissions is 12pm on Monday, July 13, 2026.
+
+Now, let's find ASB's requested implementation period.
+
+From Document 4 (ASB Bank Limited submission):
+"ASB Recommendation 3: Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation."
+
+Also, in the appendix:
+"Our preference would be for the Commission to set an implementation date of no earlier than 8 months from the announcement date and for the Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation."
+
+So ASB wants at least 8 months from the announcement date (which would be the final decision date) for implementation.
+
+Now, Westpac's requested implementation period.
+
+From Document 14 (Westpac submission):
+"3.21 December implementation carries operational risks that may negatively affect customers. Interchange changes require pricing, billing, systems, scheme and customer communication changes, all of which need adequate time for implementation, testing and transition. Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support orderly delivery, reduce customer disruption and maintain the stability of critical payments infrastructure."
+
+Also:
+"3.22 Implementation over the December to February period would introduce additional operational complexity. This period typically coincides with heightened transaction volumes, including holiday spending and tourism activity, as well as industry technology change freezes and reduced resource availability. As a result, the capacity to safely implement, monitor and remediate material pricing, billing and systems changes is more constrained than at other times of the year.
+
+3.23 Additionally, any interchange changes should align with a first-of-month effective date. Merchant service fees are generally billed on a monthly cycle, and mid-month changes would create additional complexity where transactions within the same billing period are subject to different pricing. Aligning implementation to the start of a month would support clearer billing, simpler reconciliation and a more effective customer transition."
+
+Westpac wants a minimum six-month implementation period, with changes taking effect from March 1, 2027 at the earliest, and they want it to align with a first-of-month effective date.
+
+The question states: "Had the Commerce Commission's final decision come on its deadline for submissions..."
+
+The deadline for submissions is July 13, 2026 (12pm). But the final decision would come after the submission period and cross-submission period. The document says: "We are seeking feedback on our draft decision and draft Amendment Pricing Standard by 12pm on Monday 13 July 2026 and will allow two weeks after publication of submissions for cross-submissions."
+
+So the final decision would come after the cross-submission period, which ends two weeks after publication of submissions. But the question says "Had the Commerce Commission's final decision come on its deadline for submissions", which is a hypothetical scenario where the final decision comes on July 13, 2026 (the submission deadline).
+
+So we're to assume the final decision date = July 13, 2026.
+
+Now, ASB wants implementation date no earlier than 8 months from announcement date (final decision date).
+Westpac wants minimum six-month implementation period, with changes taking effect from March 1, 2027 at the earliest, and aligned to first of month.
+
+Let's calculate both:
+
+ASB: 8 months from July 13, 2026 = March 13, 2027. But since they want it aligned to first of month (implied by "implementation date"), it would be April 1, 2027? Wait, let me check ASB's exact wording.
+
+ASB says: "Set an implementation date of no earlier than 8 months from the announcement date"
+
+They don't explicitly say first of month, but in the appendix they say: "allow acquirers 6 months for implementation" after the schemes confirm rates (which should be within 2 months of announcement).
+
+Westpac explicitly says: "changes taking effect from 1 March 2027 at the earliest" and "Aligning implementation to the start of a month would support clearer billing..."
+
+But wait, if final decision is July 13, 2026:
+- 6 months later = January 13, 2027
+- 8 months later = March 13, 2027
+
+Westpac says "minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest". March 1, 2027 is about 7.5 months after July 13, 2026.
+
+ASB wants 8 months from announcement date, so March 13, 2027, but likely they'd want it at start of month, so April 1, 2027.
+
+But the question is asking for the earliest date that satisfies BOTH requests.
+
+Westpac says "from 1 March 2027 at the earliest" - so March 1, 2027 is acceptable for Westpac.
+ASB wants "no earlier than 8 months from the announcement date" - 8 months from July 13, 2026 is March 13, 2027.
+
+So March 1, 2027 is before March 13, 2027, which would not satisfy ASB's request.
+
+The earliest date satisfying both would be the later of:
+- Westpac's earliest: March 1, 2027
+- ASB's earliest: 8 months from July 13, 2026 = March 13, 2027
+
+But both want it at start of month (Westpac explicitly, ASB implicitly for billing purposes). So likely April 1, 2027.
+
+Wait, let me double-check ASB's request. ASB says: "Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation."
+
+So the 8 months includes 2 months for schemes to confirm rates + 6 months for acquirers to implement.
+
+If final decision is July 13, 2026:
+- Schemes confirm rates by September 13, 2026 (2 months)
+- Acquirers implement by March 13, 2027 (6 months after that)
+
+But they say "implementation date of no earlier than 8 months from the announcement date", so March 13, 2027.
+
+Westpac wants minimum 6 months implementation period, but says "from 1 March 2027 at the earliest". Given final decision July 13, 2026, 6 months would be January 13, 2027, but they specifically say March 1, 2027 at earliest, which is 7.5 months.
+
+Why March 1? Because of the December-February period issues they mention. They want to avoid implementing during Dec-Feb.
+
+So for Westpac, earliest acceptable is March 1, 2027.
+For ASB, earliest acceptable is 8 months from decision = March 13, 2027.
+
+But both would prefer start of month. Westpac explicitly says "Aligning implementation to the start of a month". ASB doesn't explicitly say, but it's standard practice.
+
+So the earliest start of month that is >= March 13, 2027 is April 1, 2027.
+
+But wait - March 13, 2027 is a Saturday. The next business day would be Monday March 15, but they'd likely want start of month for billing cycles.
+
+Actually, let's calculate the exact number of days.
+
+Final decision date (hypothetical): July 13, 2026
+ASB minimum: 8 months = March 13, 2027
+Westpac minimum: March 1, 2027 (but they say "at the earliest", and mention avoiding Dec-Feb)
+
+The later date is March 13, 2027.
+
+But implementation dates are typically first of month. So April 1, 2027.
+
+Days from July 13, 2026 to April 1, 2027:
+
+July 13 to July 31: 18 days
+August: 31
+September: 30
+October: 31
+November: 30
+December: 31
+January: 31
+February: 28 (2027 not leap year)
+March: 31
+April 1: 1 day
+
+Wait, no - we want days from July 13, 2026 to April 1, 2027.
+
+Better to calculate total days:
+From July 13, 2026 to April 13, 2027 is exactly 9 months? No, months have different lengths.
+
+Standard way: count days.
+
+July 13 to Aug 13: 31 days (July has 31)
+Aug 13 to Sep 13: 31 days
+Sep 13 to Oct 13: 30 days
+Oct 13 to Nov 13: 31 days
+Nov 13 to Dec 13: 30 days
+Dec 13 to Jan 13: 31 days
+Jan 13 to Feb 13: 31 days
+Feb 13 to Mar 13: 28 days (2027 not leap)
+Mar 13 to Apr 13: 31 days
+
+But we want to April 1, not April 13.
+
+From July 13, 2026 to March 13, 2027 is 8 months.
+Days in each month:
+Jul 13-31: 18
+Aug: 31
+Sep: 30
+Oct: 31
+Nov: 30
+Dec: 31
+Jan: 31
+Feb: 28
+Mar 1-13: 13
+Total: 18+31+30+31+30+31+31+28+13 = 243 days
+
+Then March 13 to April 1 is 19 days (March has 31 days, 31-13+1=19? Wait: March 13 to March 31 is 18 days, plus April 1 is 19 days).
+
+Actually, from date A to date B, number of days later is (B - A).
+
+July 13, 2026 to April 1, 2027.
+
+Let me use a different approach. Total days from Jan 1, 2026 to July 13, 2026, and to April 1, 2027.
+
+2026 is not leap year.
+Jan: 31
+Feb: 28
+Mar: 31
+Apr: 30
+May: 31
+Jun: 30
+Jul 13: 13
+Total to July 13: 31+28+31+30+31+30+13 = 194 days
+
+2027 not leap.
+Jan: 31
+Feb: 28
+Mar: 31
+Apr 1: 1
+Total to April 1, 2027: 31+28+31+1 = 91 days of 2027, plus all 365 of 2026? No.
+
+Days from July 13, 2026 to April 1, 2027 = (days left in 2026 after July 13) + (days in 2027 to April 1)
+
+Days in 2026 after July 13: 365 - 194 = 171 days? Wait, July 13 is day 194, so days from July 14 to Dec 31 = 365 - 194 = 171 days. But "days later" usually includes the start date or not?
+
+If final decision is July 13, and implementation starts April 1, how many days later.
+
+Typically, "X days later" means if day 0 is July 13, then day X is the implementation date.
+
+So July 13 = day 0
+July 14 = day 1
+...
+April 1, 2027 = ?
+
+Days from July 13 to April 1 next year.
+
+July: 31-13 = 18 days (14th to 31st)
+Aug: 31
+Sep: 30
+Oct: 31
+Nov: 30
+Dec: 31
+Jan: 31
+Feb: 28
+Mar: 31
+Apr 1: 1
+
+But this counts from July 14 to April 1.
+
+Number of days between July 13 and April 1 is the number of midnights between, or inclusive?
+
+Standard: if event on July 13, and next event on July 14, that's 1 day later.
+
+So days later = (April 1, 2027 - July 13, 2026) in days.
+
+Calculate total days:
+2026: July 13 to Dec 31.
+July: 31-13 = 18 days (14-31)
+Aug: 31
+Sep: 30
+Oct: 31
+Nov: 30
+Dec: 31
+Total 2026: 18+31+30+31+30+31 = 171 days
+
+2027: Jan 1 to April 1.
+Jan: 31
+Feb: 28
+Mar: 31
+Apr: 1
+Total 2027: 31+28+31+1 = 91 days
+
+But this 171 + 91 = 262 days is from July 14 to April 1 inclusive? Let's see.
+
+From July 13 to July 14 is 1 day later.
+July 13 to July 13 next year is 365 days later (non-leap).
+
+July 13, 2026 to July 13, 2027 = 365 days.
+April 1, 2027 is before July 13, 2027.
+
+Days from April 1 to July 13, 2027:
+Apr: 30-1+1=30? Better: April has 30 days, so April 1 to May 1 is 30 days, etc.
+
+April 1 to July 13:
+Apr: 30 days (1-30)
+May: 31
+Jun: 30
+Jul: 13
+Total: 30+31+30+13 = 104 days
+
+So July 13, 2026 to April 1, 2027 = 365 - 104 = 261 days.
+
+Check: 261 days after July 13, 2026.
+July 13 + 261 days.
+July 13 to Dec 31: 171 days (as above, July 14-Dec 31 = 171 days, so July 13 to Dec 31 = 172 days? Messy.
+
+Use known fact: July 13 to Jan 13 is 6 months? Approximately 184 days.
+
+Standard calculation: number of days between two dates.
+
+I can calculate the day of year.
+
+July 13, 2026: day 194 (as calculated: 31+28+31+30+31+30+13=194)
+April 1, 2027: day 91 (31+28+31+1=91)
+
+But 2027 is next year, so days = (365 - 194) + 91 = 171 + 91 = 262 days.
+
+If July 13 is day 0, then April 1, 2027 is day 262.
+
+Confirm with smaller example: Jan 1 to Jan 2 is 1 day later. Day of year Jan 1=1, Jan 2=2, difference 1. So days later = day2 - day1.
+
+Here, day of year for July 13, 2026 = 194
+Day of year for April 1, 2027 = 91, but in next year, so total days = (365 - 194) + 91 = 171 + 91 = 262.
+
+Yes, 262 days later.
+
+But is April 1 the correct date?
+
+ASB wants 8 months from announcement. Announcement (final decision) hypothetical on July 13, 2026.
+8 months later: March 13, 2027.
+But they likely want start of month, so April 1, 2027.
+
+Westpac wants March 1, 2027 at earliest, but March 1 is before March 13, so doesn't satisfy ASB.
+Next start of month after March 13 is April 1.
+
+Westpac says "changes taking effect from 1 March 2027 at the earliest", implying March 1 is acceptable for them, but they also say "Aligning implementation to the start of a month", so April 1 is fine for Westpac.
+
+ASB says "implementation date of no earlier than 8 months from the announcement date". 8 months from July 13 is March 13. So implementation date >= March 13. Since dates are start of month, April 1 is the first start of month >= March 13.
+
+March 1 is before March 13, so not allowed for ASB.
+April 1 is after March 13, allowed for both.
+
+So implementation starts April 1, 2027.
+
+Days from July 13, 2026 to April 1, 2027 = 262 days.
+
+But let's confirm the deadline for submissions.
+
+Document 1: "We are seeking feedback on our draft decision and draft Amendment Pricing Standard by 12pm on Monday 13 July 2026"
+
+July 13, 2026 is a Monday? Let me check: 2026, July 13. 2024 is leap, 2025 not, 2026 not. Jan 1, 2026 is Thursday (since 2025 Jan 1 Wed, 2026 Jan 1 Thu). July 13: Jan 31, Feb 28, Mar 31, Apr 30, May 31, Jun 30, Jul 13 = 31+28+31+30+31+30+13=194 days. 194 mod 7 = 194/7=27*7=189, remainder 5. Thu +5 = Tuesday? Wait.
+
+Standard: Jan 1, 2026 is Thursday (2025 not leap, 365 days, 365%7=1, so 2026 Jan 1 = 2025 Jan 1 +1 day. 2025 Jan 1: 2024 leap, 2024 Jan 1 Mon, 2025 Jan 1 Wed, so 2026 Jan 1 Thu).
+
+Day 194: 194 % 7 = 5 (since 189=27*7, 194-189=5). Thu +5 = Tuesday. But document says Monday 13 July 2026. Inconsistency?
+
+Perhaps I miscalculated. 2026 is not leap. Days to July 13: Jan 31, Feb 28, Mar 31, Apr 30, May 31, Jun 30, Jul 13 = 31+28=59, +31=90, +30=120, +31=151, +30=181, +13=194. Yes.
+
+194 days from Jan 1. Jan 1 is day 1. So July 13 is day 194.
+
+Day of week: Jan 1, 2026 Thursday.
+Day 1: Thu
+Day 2: Fri
+...
+Day 7: Wed
+Day 8: Thu
+So day N: (N-1) mod 7 days after Thu.
+
+Day 194: (193) mod 7. 193 /7 = 27*7=189, remainder 4. So 4 days after Thu = Monday. Yes! 193 mod 7 = 4, Thu +4 = Monday. Correct.
+
+So July 13, 2026 is Monday.
+
+Now, April 1, 2027: 2027 not leap. Jan 1, 2027: 2026 not leap, 365 days, 365%7=1, so 2027 Jan 1 = Friday (2026 Jan 1 Thu +1 = Fri).
+
+April 1: day 91 (31+28+31+1=91). (91-1)=90 mod 7 = 90/7=12*7=84, rem 6. Fri +6 = Thursday. But not needed.
+
+Days between: from July 13, 2026 (day 194 of 2026) to April 1, 2027 (day 91 of 2027).
+
+Total days = (365 - 194) + 91 = 171 + 91 = 262 days.
+
+Since July 13 is the decision date (day 0), April 1 is 262 days later.
+
+But the question: "how many days later could the caps first start"
+
+So 262 days.
+
+But let's make sure about ASB's request. ASB says "8 months from the announcement date". Is that calendar months or 240 days?
+
+In business, "8 months" usually means same day 8 months later, so July 13 + 8 months = March 13, 2027.
+
+Westpac says "minimum six-month implementation period" but then says "from 1 March 2027 at the earliest". Given decision July 13, 6 months is Jan 13, but they want March 1, so they are asking for more than 6 months due to the Dec-Feb issue.
+
+But for the hypothetical where decision is July 13, Westpac's earliest is March 1, 2027.
+
+ASB's earliest is March 13, 2027.
+
+The caps can first start on the later of the two earliest dates, but aligned to start of month as both prefer.
+
+Westpac explicitly requires start of month: "Aligning implementation to the start of a month would support clearer billing..."
+
+ASB doesn't explicitly say, but in context of "implementation date" and billing, it's implied. Also in their appendix: "allow acquirers 6 months for implementation" after schemes confirm, and schemes confirm within 2 months, so 8 months total, and implementation date likely start of month.
+
+Moreover, Westpac says mid-month changes create complexity.
+
+So both would require start of month.
+
+Earliest start of month >= max(March 1, March 13) = March 13, so April 1.
+
+March 1 is a Monday in 2027? March 1, 2027: 2027 Jan 1 Fri, day 60 (31+28+1=60? Jan 31, Feb 28, Mar 1 = 60). 59 mod 7 = 3 (56+3), Fri+3=Mon. Yes March 1, 2027 Monday.
+
+March 13, 2027: 12 days later, Saturday.
+
+April 1, 2027: Thursday as calculated.
+
+So April 1 is first start of month after March 13.
+
+Days from July 13, 2026 to April 1, 2027 = 262 days.
+
+But is there a possibility that "8 months" for ASB means 8 calendar months to the same date, but they might accept March 13 even if not start of month? But Westpac insists on start of month.
+
+Westpac: "any interchange changes should align with a first-of-month effective date."
+
+So implementation must be first of month.
+
+ASB doesn't explicitly say, but given Westpac's strong statement and industry practice, the Commission would likely set it to first of month.
+
+Moreover, ASB says "implementation date", which in payments is typically first of month.
+
+So April 1, 2027.
+
+262 days after July 13, 2026.
+
+But let's confirm with another calculation.
+
+July 13, 2026 to April 13, 2027 is exactly 9 months? No.
+
+Number of days in each month from July 2026 to March 2027:
+
+Jul 2026: 31-13+1=19 days? Better not.
+
+From July 13 to Aug 13: 31 days (since July 31 days)
+Aug 13 to Sep 13: 31
+Sep 13 to Oct 13: 30
+Oct 13 to Nov 13: 31
+Nov 13 to Dec 13: 30
+Dec 13 to Jan 13: 31
+Jan 13 to Feb 13: 31
+Feb 13 to Mar 13: 28 (2027 not leap)
+Mar 13 to Apr 13: 31
+
+But we want to April 1.
+
+From July 13 to March 13: 8 months.
+Days: as above, 31+31+30+31+30+31+31+28 = 243 days? Let's add: 31(Jul-Aug)+31(Aug-Sep)+30(Sep-Oct)+31(Oct-Nov)+30(Nov-Dec)+31(Dec-Jan)+31(Jan-Feb)+28(Feb-Mar) = 31*5=155, 30*2=60, 28=28, total 155+60+28=243 days.
+
+July 13 to March 13 is 243 days later? July 13 to Aug 13 is 31 days, so yes, July 13 + 243 days = March 13.
+
+Then March 13 to April 1: March has 31 days, so March 13 to April 1 is 31 - 13 + 1 = 19 days? March 13 to March 31 is 18 days (14-31), April 1 is next day, so 19 days after March 13.
+
+Thus July 13 to April 1 = 243 + 19 = 262 days.
+
+Yes.
+
+Now, the question: "how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?"
+
+So 262 days.
+
+But let's make sure about Westpac's request. Westpac says "minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest"
+
+In the hypothetical, final decision July 13, 2026.
+Six months would be January 13, 2027.
+But they say March 1, 2027 at earliest, which is specific.
+
+Why March 1? Because of "Implementation over the December to February period would introduce additional operational complexity... industry technology change freezes and reduced resource availability."
+
+So they don't want implementation during Dec-Feb, so earliest March 1.
+
+ASB wants 8 months, so March 13.
+
+Thus April 1 is first possible.
+
+Is there any other constraint?
+
+The Commission's proposed implementation period: in Document 1, section 3.80: "We propose a two to three-month implementati
+
+Attempt 2 · Right
+-----------------
+Docs: Doc 1, Doc 4, Doc 10, Doc 14 · Note: —
+
+Final answer: 262 | Your answer (gold): 262 days
+
+How it got there: It used Doc 1 for the deadline, Doc 4 for ASB's 8-month request, and Doc 14 for Westpac's first-of-month requirement, calculating days to 1 April 2027.
+
+Passages quoted:
+
+- Quoted Doc 1: “We are seeking feedback on our draft decision and draft Amendment Pricing Standard by 12pm on Monday 13 July 2026 and will allow two weeks after publication of submissions for cross-submissions.”
+- Quoted Doc 4: “ASB Recommendation 3: Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation.”
+- Quoted Doc 4: “Our preference would be for the Commission to set an implementation date of no earlier than 8 months from the announcement date and for the Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implemen”
+- Quoted Doc 14, p. 6: “with changes taking effect from 1 March 2027 at the earliest”
+- Quoted Doc 4: “Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation.”
+
+Named Doc 1, Doc 4, Doc 14, Doc 10
+
+Full answer
+-----------
+
+262
+
+Reasoning
+---------
+
+To answer this question, I need to find information about:
+1. The Commerce Commission's deadline for submissions
+2. ASB's requested implementation timeline
+3. Westpac's requested implementation timeline
+4. Calculate how many days after the submission deadline the caps could first start while satisfying both ASB's and Westpac's timing requests
+
+Let me search through the documents for this information.
+
+First, the submission deadline:
+From Document 1 (the main draft decision paper), I can see in section 1.21:
+"We are seeking feedback on our draft decision and draft Amendment Pricing Standard by 12pm on Monday 13 July 2026 and will allow two weeks after publication of submissions for cross-submissions."
+
+So the submission deadline was 12pm on Monday, July 13, 2026.
+
+Now, let's find ASB's requested implementation timeline.
+
+From Document 4 (ASB Bank Limited submission):
+"ASB Recommendation 3: Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation."
+
+Also: "Our preference would be for the Commission to set an implementation date of no earlier than 8 months from the announcement date and for the Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation."
+
+So ASB wants implementation date no earlier than 8 months from the announcement date (which would be the final decision date).
+
+Now for Westpac's requested implementation timeline.
+
+From Document 14 (Westpac submission):
+"3.21 December implementation carries operational risks that may negatively affect customers. Interchange changes require pricing, billing, systems, scheme and customer communication changes, all of which need adequate time for implementation, testing and transition. Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support orderly delivery, reduce customer disruption and maintain the stability of critical payments infrastructure."
+
+"3.22 Implementation over the December to February period would introduce additional operational complexity. This period typically coincides with heightened transaction volumes, including holiday spending and tourism activity, as well as industry technology change freezes and reduced resource availability. As a result, the capacity to safely implement, monitor and remediate material pricing, billing and systems changes is more constrained than at other times of the year."
+
+"3.23 Additionally, any interchange changes should align with a first-of-month effective date. Merchant service fees are generally billed on a monthly cycle, and mid-month changes would create additional complexity where transactions within the same billing period are subject to different pricing. Aligning implementation to the start of a month would support clearer billing, simpler reconciliation and a more effective customer transition."
+
+So Westpac wants:
+- Minimum six-month implementation period
+- Changes taking effect from March 1, 2027 at the earliest
+- Implementation should align with first-of-month effective date
+- Avoid December-February period
+
+The question asks: "Had the Commerce Commission's final decision come on its deadline for submissions, how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?"
+
+The submission deadline was July 13, 2026 (12pm). But the "final decision" would come after the submission deadline, after considering submissions and cross-submissions. The document says they'll allow two weeks after publication of submissions for cross-submissions.
+
+However, the question specifically says: "Had the Commerce Commission's final decision come on its deadline for submissions..."
+
+This is a hypothetical - it's asking us to assume the final decision came on the submission deadline date (July 13, 2026), not after the consultation process.
+
+So we need to calculate from July 13, 2026:
+- ASB wants implementation no earlier than 8 months from announcement date (final decision date)
+- Westpac wants minimum 6-month implementation period, with changes taking effect from March 1, 2027 at earliest, and aligned to first of month
+
+Let me calculate both:
+
+ASB: 8 months from July 13, 2026 = March 13, 2027
+But since Westpac wants first-of-month effective date, this would be April 1, 2027 (since March 13 is not the first of the month)
+
+Westpac: Minimum 6 months from July 13, 2026 = January 13, 2027
+But Westpac specifically says "with changes taking effect from 1 March 2027 at the earliest"
+And they want first-of-month effective date, so March 1, 2027
+
+Wait, but Westpac also says: "Implementation over the December to February period would introduce additional operational complexity... As a result, the capacity to safely implement, monitor and remediate material pricing, billing and systems changes is more constrained than at other times of the year."
+
+So Westpac doesn't want implementation during Dec-Feb, meaning the earliest would be March 1, 2027.
+
+ASB wants 8 months from announcement, which would be March 13, 2027, but since they'd need first-of-month, that would be April 1, 2027.
+
+But wait - let me double-check ASB's request. They say: "Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation."
+
+So the 8 months includes 2 months for schemes to confirm rates + 6 months for acquirers to implement.
+
+If final decision is July 13, 2026:
+- Schemes have until September 13, 2026 (2 months) to confirm rates
+- Acquirers then have 6 months from September 13, 2026 = March 13, 2027
+- But Westpac wants first-of-month, so April 1, 2027
+
+Westpac wants minimum 6-month implementation period from final decision, but specifically says "with changes taking effect from 1 March 2027 at the earliest" and wants to avoid Dec-Feb period.
+
+If final decision is July 13, 2026:
+- 6 months would be January 13, 2027
+- But Westpac says earliest March 1, 2027 (to avoid Dec-Feb)
+- And first-of-month, so March 1, 2027
+
+So ASB's earliest possible date (with first-of-month requirement) would be April 1, 2027
+Westpac's earliest possible date would be March 1, 2027
+
+To satisfy BOTH, we need the later date, which is April 1, 2027.
+
+Now, how many days after July 13, 2026 is April 1, 2027?
+
+Let me calculate:
+- July 13 to July 31, 2026: 18 days (31-13)
+- August 2026: 31 days
+- September 2026: 30 days
+- October 2026: 31 days
+- November 2026: 30 days
+- December 2026: 31 days
+- January 2027: 31 days
+- February 2027: 28 days (2027 not leap year)
+- March 2027: 31 days
+- April 1, 2027: 1 day
+
+Wait, but we want up to April 1, 2027, not including April 1? Or including?
+
+Actually, if implementation starts on April 1, 2027, that's the first day the caps are in effect.
+
+So days from July 13, 2026 to April 1, 2027:
+
+July: 31 - 13 = 18 days (July 14 to July 31)
+August: 31
+September: 30
+October: 31
+November: 30
+December: 31
+January: 31
+February: 28
+March: 31
+April 1: 1
+
+Total = 18 + 31 + 30 + 31 + 30 + 31 + 31 + 28 + 31 + 1 = 262 days
+
+Wait, let me verify with a different approach.
+
+From July 13, 2026 to July 13, 2027 is 365 days (not leap year).
+April 1, 2027 is 103 days before July 13, 2027 (April has 30 days, so 30-1+1=30? Wait...)
+
+Better to calculate directly:
+- Days from July 13 to April 1 next year.
+
+July 13 to Aug 13: 31 days
+Aug 13 to Sep 13: 31 days
+Sep 13 to Oct 13: 30 days
+Oct 13 to Nov 13: 31 days
+Nov 13 to Dec 13: 30 days
+Dec 13 to Jan 13: 31 days
+Jan 13 to Feb 13: 31 days
+Feb 13 to Mar 13: 28 days (2027 not leap)
+Mar 13 to Apr 1: 19 days (since April 1 is 19 days before April 20? Wait no)
+
+Actually, March has 31 days, so March 13 to April 1 is 31 - 13 + 1 = 19 days? No:
+March 13 to March 31 = 18 days
+April 1 = 1 day
+Total 19 days
+
+But we want July 13 to April 1, not to March 13.
+
+Let me use a standard calculation:
+July 13, 2026 to April 1, 2027.
+
+Days in each month:
+July 2026: 31 - 13 = 18 (14th to 31st)
+August 2026: 31
+September 2026: 30
+October 2026: 31
+November 2026: 30
+December 2026: 31
+January 2027: 31
+February 2027: 28
+March 2027: 31
+April 1, 2027: 1
+
+Sum: 18 + 31 + 30 + 31 + 30 + 31 + 31 + 28 + 31 + 1 = 262 days
+
+But wait - is the submission deadline July 13 at 12pm, and implementation starts April 1 at 12am? The question asks for "how many days later", so we need to be precise.
+
+Actually, the submission deadline is "12pm on Monday 13 July 2026". Implementation would typically start at beginning of day (12am) on the effective date.
+
+So from July 13, 2026 12:00 PM to April 1, 2027 12:00 AM.
+
+That's 261.5 days, but since we're counting whole days for "how many days later", it would be 261 days if we consider the start of April 1 as 261 full days after July 13 12pm? This is getting messy.
+
+Typically in these calculations, we count the number of days between dates, not including the start date but including the end date, or vice versa. But the question says "how many days later could the caps first start", so if final decision is July 13, and caps start April 1, then April 1 is X days after July 13.
+
+Let's calculate the difference in days:
+April 1, 2027 - July 13, 2026 = ?
+
+Using a date calculator approach:
+- Days from July 13 to Dec 31, 2026: 171 days (since July 13 is day 194 of year, 365-194+1=172? Wait)
+
+Better: 
+2026 is not leap year.
+Day of year for July 13: Jan 31, Feb 28, Mar 31, Apr 30, May 31, Jun 30, Jul 13 = 31+28+31+30+31+30+13 = 194
+So days remaining in 2026: 365 - 194 = 171 days (from July 14 to Dec 31)
+
+2027 up to April 1: Jan 31, Feb 28, Mar 31, Apr 1 = 31+28+31+1 = 91 days
+
+Total days from July 13, 2026 to April 1, 2027 = 171 + 91 = 262 days.
+
+But this counts July 13 as day 0? Let's see:
+If today is July 13, tomorrow July 14 is 1 day later.
+July 14 is day 195, so days from July 13 to July 14 = 1 day.
+Days from July 13 to Dec 31 = 365 - 194 = 171 days (July 14 to Dec 31 is 171 days)
+Then Jan 1 to April 1, 2027 = 91 days (Jan 1 is day 1, April 1 is day 91)
+So July 13, 2026 to April 1, 2027 = 171 + 91 = 262 days.
+
+Yes, April 1, 2027 is 262 days after July 13, 2026.
+
+But wait - the submission deadline is 12pm July 13. If final decision comes at that exact time, and implementation starts at 12am April 1, then it's 261.5 days later. But the question likely expects whole days, and "days later" typically means calendar days difference.
+
+In regulatory contexts, implementation dates are usually calendar dates, so the number of days between July 13 and April 1.
+
+Let me confirm with a smaller example: Jan 1 to Jan 2 is 1 day later.
+Day of year Jan 1 = 1, Jan 2 = 2, difference = 1 day.
+So date2 - date1 in day-of-year = days later.
+
+July 13, 2026: day 194
+April 1, 2027: day 91 of 2027
+But 2027 is separate year.
+
+Total days = (365 - 194) + 91 = 171 + 91 = 262 days.
+
+Yes, 262 days.
+
+But earlier I thought ASB wants April 1, 2027 and Westpac wants March 1, 2027, so to satisfy both, April 1, 2027.
+
+Wait, let me re-read Westpac: "Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest"
+
+And ASB: "implementation date of no earlier than 8 months from the announcement date"
+
+If announcement date (final decision) is July 13, 2026:
+- 6 months = January 13, 2027
+- 8 months = March 13, 2027
+
+But Westpac says "from 1 March 2027 at the earliest" - which is later than 6 months (Jan 13), so they're imposing a stricter requirement due to the Dec-Feb issue.
+
+ASB's 8 months is March 13, 2027.
+
+Westpac's earliest is March 1, 2027.
+
+But ASB also says: "Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation."
+
+So the 8 months = 2 months (for schemes) + 6 months (for acquirers).
+
+If final decision July 13:
+- Schemes have until Sept 13 to confirm rates
+- Acquirers then have 6 months from Sept 13 = March 13
+- But implementation date should be first of month, so April 1
+
+Westpac wants implementation from March 1 at earliest, first of month.
+
+So ASB's required date (with first-of-month) is April 1, 2027
+Westpac's required date is March 1, 2027
+
+To satisfy both, must be April 1, 2027 or later. Earliest is April 1, 2027.
+
+Days from July 13, 2026 to April 1, 2027 = 262 days.
+
+But let me verify the 8 months calculation.
+
+July 13 + 8 months = March 13, 2027.
+Since Westpac requires first-of-month effective date (and ASB likely would too, as Westpac points out "merchant service fees are generally billed on a monthly cycle"), the implementation date would need to be April 1, 2027 (first of month after March 13).
+
+Westpac says "changes taking effect from 1 March 2027 at the earliest" and "aligning implementation to the start of a month".
+
+March 1, 2027 is a first-of-month date.
+
+But ASB's timeline pushes to March 13, so first-of-month after that is April 1.
+
+Westpac is okay with March 1, but ASB needs until April 1.
+
+So the binding constraint is ASB's requirement, giving April 1, 2027.
+
+Days: July 13, 2026 to April 1, 2027.
+
+Let me count months:
+Jul 13 to Aug 13: 31 days
+Aug 13 to Sep 13: 31 days
+Sep 13 to Oct 13: 30 days
+Oct 13 to Nov 13: 31 days
+Nov 13 to Dec 13: 30 days
+Dec 13 to Jan 13: 31 days
+Jan 13 to Feb 13: 31 days
+Feb 13 to Mar 13: 28 days (2027 not leap)
+Total to Mar 13: 31+31+30+31+30+31+31+28 = 243 days
+
+Then Mar 13 to Apr 1: 19 days (Mar 14 to Apr 1 is 19 days? Mar has 31 days, 31-13=18 days left in Mar, plus Apr 1 = 19 days)
+
+243 + 19 = 262 days. Yes.
+
+From July 13 to April 1 next year is 262 days.
+
+But the question says: "how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?"
+
+And "Had the Commerce Commission's final decision come on its deadline for submissions"
+
+Deadline for submissions was July 13, 2026 (12pm).
+
+Final decision on that date (hypothetically).
+
+Caps first start on April 1, 2027.
+
+Days later: 262 days.
+
+But let me check if there's any other constraint.
+
+Westpac also says: "Implementation over the December to February period would introduce additional operational complexity... As a result, the capacity to safely implement, monitor and remediate material pricing, billing and systems changes is more constrained than at other times of the year."
+
+But since we're implementing April 1, which is after Feb, this is satisfied.
+
+ASB's 8 months includes 2 months for schemes to confirm rates. The final decision is the announcement date, so schemes get 2 months from final decision to confirm rates.
+
+In this hypothetical, final decision = submission deadline = July 13.
+
+So schemes have until Sept 13 to confirm rates.
+
+Then acquirers have 6 months from Sept 13 = March 13.
+
+Implementation April 1.
+
+Westpac wants minimum 6 months from final decision, but says earliest March 1. 6 months from July 13 is Jan 13, but they don't want Dec-Feb, so March 1 is their floor.
+
+April 1 satisfies both.
+
+Is there any mention of the submission deadline being the final decision date? No, the final decision comes after submissions and cross-submissions.
+
+But the question explicitly says: "Had the Commerce Commission's final decision come on its deadline for submissions"
+
+So we're to assume final decision date = submission deadline = July 13, 2026.
+
+Thus, 262 days.
+
+But let me confirm the submission deadline date.
+
+Document 1, section 1.21: "We are seeking feedback on our draft decision and draft Amendment Pricing Standard by 12pm on Monday 13 July 2026"
+
+Yes, July 13, 2026.
+
+And it's a Monday, which matches (July 13, 2026 is a Monday? Let me not worry, the document says Monday 13 July 2026).
+
+Now, April 1, 2027 - is that a Thursday? Doesn't matter.
+
+Days calculation seems solid at 262.
+
+But wait - in Document 10 (Mastercard submission), they say: "A minimum of nine months is required for domestic rate changes and twelve months for cross-border changes, from the date of final announcement."
+
+But the question is only about ASB and Westpac's requests, not Mastercard's.
+
+The question: "satisfying both ASB's and Westpac's timing requests"
+
+So only ASB and Westpac.
+
+ASB: 8 months from announcement (final decision) for implementation date, with first-of-month implying April 1, 2027
+Westpac: minimum 6 months but not before March 1, 2027, first-of-month so March 1, 2027
+
+Later date is April 1, 2027.
+
+Days from July 13, 2026 to April 1, 2027 = 262 days.
+
+But let me calculate exactly:
+
+July 13 to July 31: 18 days (14-31)
+August: 31
+September: 30
+October: 31
+November: 30
+December: 31
+January: 31
+February: 28
+March: 31
+April 1: 1
+
+Sum: 18+31=49; +30=79; +31=110; +30=140; +31=171; +31=202; +28=230; +31=261; +1=262.
+
+Yes, 262 days.
+
+If implementation starts on April 1, and final decision was July 13, then April 1 is 262 days after July 13.
+
+For example, July 13 + 1 day = July 14.
+July 13 + 262 days = April 1, 2027.
+
+Yes.
+
+So answer should be 262.
+
+But let me make sure about Westpac's "1 March 2027 at the earliest". Is that a hard constraint?
+
+"Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest"
+
+So they are saying: even though 6 months would be January, they don't want it before March 1.
+
+And ASB's timeline naturally leads to April 1.
+
+So yes, April 1 is the earliest satisfying both.
+
+Thus, 262 days.
+
+Attempt 3 · Right
+-----------------
+Docs: Doc 1, Doc 3, Doc 4, Doc 5, Doc 6, Doc 9, Doc 10, Doc 14 · Note: —
+
+Final answer: 262 | Your answer (gold): 262 days
+
+How it got there: It used Doc 1 for the deadline, Doc 4 for ASB's 8-month request, and Doc 14 for Westpac's first-of-month requirement, calculating days to 1 April 2027.
+
+Passages quoted:
+
+- Quoted Doc 1: “We are seeking feedback on our draft decision and draft Amendment Pricing Standard by 12pm on Monday 13 July 2026 and will allow two weeks after publication of submissions for cross-submissions.”
+- Quoted Doc 4: “ASB Recommendation 3: Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation.”
+- Quoted Doc 4: “Our preference would be for the Commission to set an implementation date of no earlier than 8 months from the announcement date and for the Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implemen”
+- Quoted Doc 1: “Following consultation, we will issue the final Amendment Pricing Standard and publish our reasons for the decision. We will then have an implementation period before the new commercial credit interchange fee levels apply. Figure 1.2 provides indicative dates for the next steps of this work.”
+- Quoted Doc 14, p. 6: “changes taking effect from 1 March 2027 at the earliest”
+
+Named Doc 1, Doc 4, Doc 14, Doc 3, Doc 5, Doc 6, Doc 9, Doc 10
+
+Full answer
+-----------
+
+262
+
+Reasoning
+---------
+
+Let me analyze the question and find the relevant information in the provided documents.
+
+The question asks: "Had the Commerce Commission's final decision come on its deadline for submissions, how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?"
+
+First, I need to find:
+1. The deadline for submissions
+2. ASB's timing request
+3. Westpac's timing request
+4. Calculate how many days after the deadline the caps could first start while satisfying both requests
+
+Let me search for the deadline for submissions first.
+
+From Document 1 (the main document), I see in section 1.21:
+"We are seeking feedback on our draft decision and draft Amendment Pricing Standard by 12pm on Monday 13 July 2026 and will allow two weeks after publication of submissions for cross-submissions."
+
+So the deadline for submissions is 12pm on Monday, July 13, 2026.
+
+Now, let me find ASB's timing request.
+
+From Document 4 (ASB Bank Limited submission):
+"ASB Recommendation 3: Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation."
+
+Also, in the appendix:
+"Our preference would be for the Commission to set an implementation date of no earlier than 8 months from the announcement date and for the Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation."
+
+So ASB wants implementation date no earlier than 8 months from announcement date.
+
+Now, Westpac's timing request.
+
+From Document 14 (Westpac submission):
+"3.21 December implementation carries operational risks that may negatively affect customers. Interchange changes require pricing, billing, systems, scheme and customer communication changes, all of which need adequate time for implementation, testing and transition. Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support orderly delivery, reduce customer disruption and maintain the stability of critical payments infrastructure."
+
+"3.22 Implementation over the December to February period would introduce additional operational complexity. This period typically coincides with heightened transaction volumes, including holiday spending and tourism activity, as well as industry technology change freezes and reduced resource availability. As a result, the capacity to safely implement, monitor and remediate material pricing, billing and systems changes is more constrained than at other times of the year."
+
+"3.23 Additionally, any interchange changes should align with a first-of-month effective date. Merchant service fees are generally billed on a monthly cycle, and mid-month changes would create additional complexity where transactions within the same billing period are subject to different pricing. Aligning implementation to the start of a month would support clearer billing, simpler reconciliation and a more effective customer transition."
+
+So Westpac wants:
+- Minimum 6-month implementation period
+- Changes taking effect from March 1, 2027 at the earliest
+- Implementation should align with first-of-month effective date
+- Avoid December-February period
+
+The question states: "Had the Commerce Commission's final decision come on its deadline for submissions..."
+
+The deadline for submissions is July 13, 2026 (12pm). But the "final decision" would come after the submission period and cross-submission period.
+
+From Document 1, section 1.21: "We are seeking feedback on our draft decision and draft Amendment Pricing Standard by 12pm on Monday 13 July 2026 and will allow two weeks after publication of submissions for cross-submissions."
+
+And section 1.24: "Following consultation, we will issue the final Amendment Pricing Standard and publish our reasons for the decision. We will then have an implementation period before the new commercial credit interchange fee levels apply. Figure 1.2 provides indicative dates for the next steps of this work."
+
+Figure 1.2 is mentioned but not shown in the text provided. However, from the context, the final decision would come after the cross-submission period.
+
+The cross-submission period is 2 weeks after publication of submissions. But we don't know exactly when submissions would be published.
+
+However, the question says: "Had the Commerce Commission's final decision come on its deadline for submissions..."
+
+This is a bit confusing. The deadline for submissions is when stakeholders submit their feedback (July 13, 2026). The final decision would come later, after reviewing submissions.
+
+But the question specifically says: "Had the Commerce Commission's final decision come on its deadline for submissions..."
+
+So it's a hypothetical: what if the final decision was issued on July 13, 2026 (the submission deadline)?
+
+Then, how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?
+
+Let's calculate based on this hypothetical.
+
+ASB wants implementation date no earlier than 8 months from announcement date (which in this hypothetical is July 13, 2026).
+
+Westpac wants:
+- Minimum 6-month implementation period
+- Changes taking effect from March 1, 2027 at the earliest
+- First-of-month effective date
+- Avoid December-February
+
+Let's calculate 8 months from July 13, 2026:
+- July 13 + 8 months = March 13, 2027
+
+But Westpac wants first-of-month, so April 1, 2027 would be the first first-of-month after March 13, 2027.
+
+Westpac also says "changes taking effect from 1 March 2027 at the earliest", but March 1, 2027 is before March 13, 2027, so the ASB requirement of 8 months (March 13) would be later than Westpac's March 1 earliest date.
+
+Westpac also wants to avoid December-February, but March 13/April 1 is after that period.
+
+Let me double-check the dates.
+
+July 13, 2026 + 8 months:
+- July 13 to August 13 = 1 month
+- August 13 to September 13 = 2 months
+- September 13 to October 13 = 3 months
+- October 13 to November 13 = 4 months
+- November 13 to December 13 = 5 months
+- December 13 to January 13 = 6 months
+- January 13 to February 13 = 7 months
+- February 13 to March 13 = 8 months
+
+So 8 months from July 13, 2026 is March 13, 2027.
+
+Westpac wants first-of-month effective date, so the first possible date would be April 1, 2027.
+
+Westpac also says "changes taking effect from 1 March 2027 at the earliest", but since ASB requires 8 months (March 13), and Westpac wants first-of-month, April 1, 2027 satisfies both.
+
+Now, how many days from July 13, 2026 to April 1, 2027?
+
+Let me calculate:
+- July 13 to July 31: 18 days (31-13=18)
+- August: 31 days
+- September: 30 days
+- October: 31 days
+- November: 30 days
+- December: 31 days
+- January: 31 days
+- February: 28 days (2027 is not a leap year)
+- March: 31 days
+- April 1: 1 day
+
+Wait, but we're calculating from July 13 to April 1, so:
+- July 13 to July 31: 18 days
+- August: 31
+- September: 30
+- October: 31
+- November: 30
+- December: 31
+- January: 31
+- February: 28
+- March: 31
+- April 1: 1 day? No, April 1 is the end date, so we don't add an extra day.
+
+Actually, the number of days from date A to date B is (B - A).
+
+From July 13, 2026 to April 1, 2027.
+
+Let me calculate total days:
+July: 31 - 13 = 18 days (July 14 to July 31 is 18 days? Wait, July 13 to July 14 is 1 day, so July 13 to July 31 is 18 days)
+Actually, better to use a standard approach.
+
+Number of days from July 13, 2026 to April 1, 2027:
+
+July 13 to August 13 = 31 days (since July has 31 days)
+August 13 to September 13 = 31 days
+September 13 to October 13 = 30 days
+October 13 to November 13 = 31 days
+November 13 to December 13 = 30 days
+December 13 to January 13 = 31 days
+January 13 to February 13 = 31 days
+February 13 to March 13 = 28 days (2027 not leap year)
+March 13 to April 1 = 19 days (March has 31 days, 31-13=18, plus April 1 = 19 days)
+
+But this is messy. Let's just calculate total days.
+
+From July 13, 2026 to July 13, 2027 is 365 days (not leap year).
+But we only go to April 1, 2027.
+
+Days from July 13, 2026 to April 1, 2027:
+
+July: 18 days left (14-31)
+August: 31
+September: 30
+October: 31
+November: 30
+December: 31
+January: 31
+February: 28
+March: 31
+April: 1 (but up to April 1, so just 1 day? No)
+
+Actually, from July 13 to April 1 next year.
+
+Standard way: calculate day of year.
+
+July 13, 2026: July has 31 days, so Jan(31)+Feb(28)+Mar(31)+Apr(30)+May(31)+Jun(30)+Jul(13) = 31+28+31+30+31+30+13 = 194th day of 2026.
+
+April 1, 2027: Jan(31)+Feb(28)+Mar(31)+Apr(1) = 31+28+31+1 = 91st day of 2027.
+
+Days in 2026 after July 13: 365 - 194 = 171 days? Wait, 2026 is not leap, 365 days.
+
+Day of year July 13, 2026: 
+Jan 31, Feb 28 (59), Mar 31 (90), Apr 30 (120), May 31 (151), Jun 30 (181), Jul 13 (194). Yes, 194.
+
+Days remaining in 2026: 365 - 194 = 171 days (from July 14 to Dec 31).
+
+Days in 2027 up to April 1: 91 days (Jan 1 to Apr 1).
+
+But from July 13, 2026 to April 1, 2027 is 171 + 91 = 262 days? Let's verify.
+
+From July 13 to July 14 is 1 day, so to Dec 31 is 365 - 194 = 171 days later? No.
+
+If July 13 is day 194, then July 14 is day 195, ..., Dec 31 is day 365. So number of days from July 13 to Dec 31 inclusive is 365 - 194 + 1 = 172 days? But we want exclusive or inclusive?
+
+Better: difference in dates.
+
+April 1, 2027 minus July 13, 2026.
+
+Compute total days.
+
+2026-07-13 to 2027-04-01.
+
+Using known values: from 2026-07-13 to 2027-07-13 is 365 days.
+
+2027-04-01 to 2027-07-13: April (30-1+1=30? April 1 to April 30 is 30 days, but to July 13).
+
+April 1 to May 1: 30 days
+May 1 to June 1: 31 days
+June 1 to July 1: 30 days
+July 1 to July 13: 12 days
+Total: 30+31+30+12=103 days from April 1 to July 13.
+
+So from July 13, 2026 to April 1, 2027 = 365 - 103 = 262 days.
+
+Yes, 262 days.
+
+But is that correct? 365 - 103 = 262, yes.
+
+Confirm with another way: July 13 to Jan 13 is 6 months? Approximately 184 days, but varies.
+
+July 13 to August 13: 31
+Aug 13 to Sep 13: 31
+Sep 13 to Oct 13: 30
+Oct 13 to Nov 13: 31
+Nov 13 to Dec 13: 30
+Dec 13 to Jan 13: 31
+Total 184 days to Jan 13, 2027.
+
+Jan 13 to Feb 13: 31
+Feb 13 to Mar 13: 28
+Mar 13 to Apr 1: 19 days (Mar 13 to Mar 31 is 18 days, Apr 1 is 19th day)
+
+From July 13 to Mar 13 is 184 + 31 + 28 = 243 days? Let's see:
+
+July 13 to Jan 13: 6 months, but days: 31+31+30+31+30+31=184 days (Jul13-Aug13, Aug13-Sep13, Sep13-Oct13, Oct13-Nov13, Nov13-Dec13, Dec13-Jan13)
+
+Jan 13 to Feb 13: 31 days
+Feb 13 to Mar 13: 28 days (2027 not leap)
+So July 13 to Mar 13: 184 + 31 + 28 = 243 days.
+
+Then Mar 13 to Apr 1: March has 31 days, so 31 - 13 + 1 = 19 days? From Mar 13 to Mar 14 is 1 day, to Apr 1 is 31 - 13 + 1 = 19 days? Mar 13 to Mar 31 is 18 days (14-31), Apr 1 is 19th day after Mar 13.
+
+So total days from July 13, 2026 to April 1, 2027 = 243 + 19 = 262 days. Yes.
+
+But the question is: "how many days later could the caps first start"
+
+"Later" than what? Than the final decision date, which in this hypothetical is the submission deadline, July 13, 2026.
+
+So caps could first start on April 1, 2027, which is 262 days after July 13, 2026.
+
+But let's confirm the requirements.
+
+ASB: implementation date no earlier than 8 months from announcement date. Announcement date = final decision date = July 13, 2026 (hypothetical). 8 months later is March 13, 2027.
+
+Westpac: minimum 6-month implementation period (so 6 months from final decision = January 13, 2027), but also "changes taking effect from 1 March 2027 at the earliest", and first-of-month effective date, and avoid Dec-Feb.
+
+So the binding constraints are:
+- ASB: not before March 13, 2027
+- Westpac: not before March 1, 2027, but first-of-month, so April 1, 2027 (since March 13 is after March 1, but not first-of-month; next first-of-month is April 1)
+
+Westpac says "changes taking effect from 1 March 2027 at the earliest", but also "aligning implementation to the start of a month". March 1, 2027 is a Monday, first of month. But ASB requires not before March 13, so March 1 is too early per ASB.
+
+Next first-of-month after March 13 is April 1, 2027.
+
+Westpac also says "Implementation over the December to February period would introduce additional operational complexity", but April is after that, so fine.
+
+So earliest possible date satisfying both: April 1, 2027.
+
+Days from July 13, 2026 to April 1, 2027: 262 days.
+
+But let's make sure about the "deadline for submissions" vs "final decision".
+
+The question: "Had the Commerce Commission's final decision come on its deadline for submissions..."
+
+Deadline for submissions is July 13, 2026 (12pm).
+
+Final decision coming on that date is hypothetical.
+
+Then caps first start date satisfying both requests.
+
+ASB: 8 months from announcement (final decision) date.
+
+Westpac: min 6 months, but specifically "from 1 March 2027 at the earliest" and first-of-month.
+
+In the hypothetical, final decision = July 13, 2026.
+
+8 months later = March 13, 2027.
+
+Westpac's earliest is March 1, 2027, but since March 13 > March 1, ASB's date is later.
+
+But Westpac requires first-of-month, so March 13 not allowed; next is April 1.
+
+Westpac says "changes taking effect from 1 March 2027 at the earliest", which might imply March 1 is acceptable for them, but ASB pushes it to March 13, and Westpac's first-of-month requirement pushes to April 1.
+
+Westpac: "Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support..."
+
+And "aligning implementation to the start of a month"
+
+So for Westpac, the effective date must be a first-of-month, and >= March 1, 2027.
+
+For ASB, effective date >= 8 months from announcement = March 13, 2027.
+
+So the effective date must be a first-of-month >= max(March 1, 2027, March 13, 2027) = March 13, 2027.
+
+First first-of-month on or after March 13, 2027 is April 1, 2027.
+
+Yes.
+
+Now, days from July 13, 2026 to April 1, 2027.
+
+As calculated, 262 days.
+
+But let's confirm the date count.
+
+July 13, 2026 to April 1, 2027.
+
+List the days:
+
+- July 13 to July 31: 18 days (14th to 31st inclusive is 18 days? 31-13=18, but from 13th to 14th is 1 day later, so to 31st is 18 days later? Better not to confuse.
+
+Standard date difference: April 1, 2027 - July 13, 2026 = 262 days.
+
+I can calculate:
+
+Days in July 2026 after 13th: 31 - 13 = 18 days (14th to 31st)
+
+August: 31
+
+September: 30
+
+October: 31
+
+November: 30
+
+December: 31
+
+January 2027: 31
+
+February: 28
+
+March: 31
+
+April 1: 1 day? But up to April 1, so if we include April 1, but "days later" usually means difference.
+
+If final decision on July 13, caps start on April 1, how many days later.
+
+July 13 to July 14 is 1 day later.
+
+So from July 13 to April 1 next year.
+
+Number of days = (April 1, 2027 - July 13, 2026) in days.
+
+As computed, 262 days.
+
+For example, from Jan 1 to Jan 2 is 1 day later.
+
+So from July 13 to April 1 is 262 days later.
+
+Confirm with a known point: July 13 to Jan 13 is about 184 days, Jan 13 to April 1 is about 78 days, total 262. Yes.
+
+Jan 13 to Apr 1: Jan 18 days left (14-31), Feb 28, Mar 31, Apr 1 = 18+28+31+1=78? But from Jan 13 to Apr 1.
+
+Jan 13 to Feb 13: 31 days
+Feb 13 to Mar 13: 28
+Mar 13 to Apr 1: 19
+Total 78 days from Jan 13 to Apr 1.
+
+July 13 to Jan 13: as before 184 days.
+
+184 + 78 = 262. Yes.
+
+So 262 days.
+
+But the question is: "how many days later could the caps first start"
+
+And "while satisfying both ASB's and Westpac's timing requests"
+
+In the hypothetical where final decision is on submission deadline (July 13, 2026).
+
+But is the submission deadline the same as the final decision date in this hypothetical? The question says "had the Commerce Commission's final decision come on its deadline for submissions", so yes, final decision date = submission deadline = July 13, 2026.
+
+Now, just to be thorough, let's check if there are other timing requests.
+
+Document 3 (ANZ submission): "ANZ suggests that all changes be tied to the structured update schedule used by the schemes, namely the BER cycle, specifically the April 2027 release. Failing that we consider that the implementation period should be a minimum of 6 months."
+
+But the question asks for ASB and Westpac only.
+
+Document 5 (BNZ): "BNZ strongly recommends a period of at least six months from the final decision date before the new settings take effect." and "avoid a pre-Christmas deployment"
+
+But again, only ASB and Westpac.
+
+Document 6 (Citibank): "Citi recommends a minimum implementation period of twelve months"
+
+But not asked.
+
+Document 9 (Kiwibank): "The implementation period for any CCC Interchange Caps should be at least six months from the final decision."
+
+Document 10 (Mastercard): "A minimum of nine months is required for domestic rate changes and twelve months for cross-border changes, from the date of final announcement."
+
+But the question specifies "both ASB's and Westpac's timing requests", so we only care about those two.
+
+ASB: 8 months from announcement, and schemes confirm rates within 2 months, acquirers 6 months implementation. But the implementation date is 8 months from announcement.
+
+Westpac: min 6 months, but effective from March 1, 2027 earliest, first-of-month, avoid Dec-Feb.
+
+In hypothetical, announcement = final decision = July 13, 2026.
+
+ASB implementation date >= July 13 + 8 months = March 13, 2027.
+
+Westpac implementation date >= March 1, 2027, first-of-month, not in Dec-Feb.
+
+So combined: first-of-month >= March 13, 2027 => April 1, 2027.
+
+Days from July 13, 2026 to April 1, 2027 = 262 days.
+
+But let's confirm the month count.
+
+July 13 to August 13: 1 month
+
+To September 13: 2
+
+October 13: 3
+
+November 13: 4
+
+December 13: 5
+
+January 13: 6
+
+February 13: 7
+
+March 13: 8 months. Yes.
+
+March 13, 2027 is a Saturday? But dates don't matter, just calendar.
+
+April 1, 2027 is Thursday.
+
+But the day of week doesn't matter.
+
+Now, days between: from July 13, 2026 to April 1, 2027.
+
+Calculate exactly:
+
+2026-07-13 to 2027-04-01.
+
+Days = (2027-04-01) - (2026-07-13)
+
+In Python: (date(2027,4,1) - date(2026,7,13)).days = 262
+
+Yes, definitely 262.
+
+But the question says "how many days later could the caps first start"
+
+"Later" than the final decision date.
+
+So 262 days later.
+
+But is it 262 or 261? If final decision on day 0, caps start on day 262, so 262 days later.
+
+For example, if decision July 13, caps start July 14, that's 1 day later.
+
+So yes, difference in days.
+
+Now, but in the documents, the deadline is "12pm on Monday 13 July 2026", but since it's a specific time, but for day count, we consider the date.
+
+Similarly, implementation date is a date.
+
+So 262 days.
+
+But let's see if Westpac's "March 1, 2027 at the earliest" is a hard constraint.
+
+Westpac: "Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support..."
+
+In the hypothetical, final decision July 13, 2026, six months later is January 13, 2027, which is before March 1, 2027, so the March 1 constraint is binding for Westpac, but ASB has March 13, which is later.
+
+But Westpac also says "at the earliest", meaning not before March 1, but can be later.
+
+And first-of-month.
+
+So April 1 satisfies.
+
+ASB says "no earlier than 8 months", so March 13 or later.
+
+April 1 is later.
+
+Now, is there any other constraint?
+
+Westpac: "Implementation over the December to February period would introduce additional operational complexity" — April is fine.
+
+ASB: in appendix, "allow acquirers 6 months for implementation" but that's after schemes confirm rates, which is within 2 months of announcement.
+
+But the implementation date is set as 8 months from announcement.
+
+In the hypothetical, announcement = July 13.
+
+Schemes confirm rates by September 13 (2 months).
+
+Acquirers implement by March 13 (6 months from Sept 13? But ASB says "implementation date of no earlier than 8 months from announcement date", and
+
+Attempt 4 · Right
+-----------------
+Docs: Doc 1, Doc 3, Doc 4, Doc 5, Doc 6, Doc 9, Doc 10, Doc 11, Doc 12, Doc 13 · Note: —
+
+Final answer: 262 | Your answer (gold): 262 days
+
+How it got there: It used Doc 1 for the deadline, Doc 4 for ASB's 8-month request, and Doc 14 for Westpac's first-of-month requirement, calculating days to 1 April 2027.
+
+Passages quoted:
+
+- Quoted Doc 1: “We are seeking feedback on our draft decision and draft Amendment Pricing Standard by 12pm on Monday 13 July 2026 and will allow two weeks after publication of submissions for cross-submissions.”
+- Quoted Doc 1: “Indicative dates for our next steps on commercial credit card interchange fees”
+- Quoted Doc 1: “indicative dates for the next steps”
+- Quoted Doc 1: “Please submit your views by 12pm on Monday 13 July 2026.”
+- Quoted Doc 4: “ASB Recommendation 3: Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation.”
+
+Named Doc 1, Doc 3, Doc 4, Doc 5, Doc 6, Doc 9, Doc 10, Doc 11, Doc 12, Doc 13
+
+Full answer
+-----------
+
+262
+
+Reasoning
+---------
+
+Let me analyze the question carefully. The question asks: "Had the Commerce Commission's final decision come on its deadline for submissions, how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?"
+
+First, I need to find:
+1. The deadline for submissions (when the Commerce Commission's final decision would come)
+2. ASB's requested implementation timeline
+3. Westpac's requested implementation timeline
+4. Calculate the maximum of these two timelines (since we need to satisfy both)
+
+Let me search through the documents for this information.
+
+First, the deadline for submissions:
+From Document 1 (the main Commerce Commission document), I can see in section 1.21:
+"We are seeking feedback on our draft decision and draft Amendment Pricing Standard by 12pm on Monday 13 July 2026 and will allow two weeks after publication of submissions for cross-submissions."
+
+Also in Figure 1.2 "Indicative dates for our next steps on commercial credit card interchange fees" - though the actual figure isn't shown in the text, it mentions "indicative dates for the next steps".
+
+From Document 3 (ANZ submission), it says: "Please submit your views by 12pm on Monday 13 July 2026."
+
+From Document 4 (ASB submission), it says: "Please submit your views by 12pm on Monday 13 July 2026."
+
+From Document 5 (BNZ submission), it says: "Please submit your views by 12pm on Monday 13 July 2026."
+
+From Document 6 (Citibank submission), it says: "17th July 2026" at the top, but the submission deadline would be the same.
+
+From Document 9 (Kiwibank submission), it says: "Date: 17 July 2026" but the deadline for submissions was July 13.
+
+From Document 10 (Mastercard submission), it says: "16 July 2026" at the top.
+
+From Document 11 (Retail NZ submission), it says: "20 July 2026" at the top.
+
+From Document 12 (Revolut submission), it says: "20 July 2026" at the top.
+
+From Document 13 (TSB submission), it says: "20 July 2026" at the top.
+
+From Document 14 (Westpac submission), it says: "21 July 2026" at the top.
+
+From Document 15 (Paymark submission), it says: "30 June 2026" at the top.
+
+From Document 16 (Restaurant Association submission), it says: "20 July 2026" at the top.
+
+So the deadline for submissions was Monday, July 13, 2026 at 12pm.
+
+Now, the question says: "Had the Commerce Commission's final decision come on its deadline for submissions..." This is a bit confusing. The deadline for submissions is when stakeholders submit their feedback, not when the Commission makes its final decision. The Commission would make its final decision AFTER the submission deadline.
+
+But the question specifically says: "Had the Commerce Commission's final decision come on its deadline for submissions..." So we're to assume a hypothetical scenario where the final decision was made on July 13, 2026 (the submission deadline).
+
+Now, let's find ASB's and Westpac's timing requests.
+
+From Document 4 (ASB submission):
+
+"ASB Recommendation 3: Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation."
+
+Also: "Our preference would be for the Commission to set an implementation date of no earlier than 8 months from the announcement date and for the Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation."
+
+So ASB wants at least 8 months from announcement (final decision) to implementation.
+
+From Document 14 (Westpac submission):
+
+"Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support orderly delivery, reduce customer disruption and maintain the stability of critical payments infrastructure."
+
+Also: "3.22 Implementation over the December to February period would introduce additional operational complexity. This period typically coincides with heightened transaction volumes, including holiday spending and tourism activity, as well as industry technology change freezes and reduced resource availability."
+
+And: "3.23 Additionally, any interchange changes should align with a first-of-month effective date."
+
+Westpac is saying they want a minimum 6-month implementation period, but also that it should not be over December-February, and should align with first of month.
+
+Since the hypothetical final decision date is July 13, 2026:
+- 6 months later would be January 13, 2027
+- But Westpac says not to implement over December-February, and to align with first of month
+- So the earliest would be March 1, 2027 (as they explicitly state "changes taking effect from 1 March 2027 at the earliest")
+
+Let me calculate the days from July 13, 2026 to March 1, 2027.
+
+July 13 to July 31: 18 days
+August: 31 days
+September: 30 days
+October: 31 days
+November: 30 days
+December: 31 days
+January: 31 days
+February: 28 days (2027 is not a leap year)
+March 1: 1 day
+
+Total: 18 + 31 + 30 + 31 + 30 + 31 + 31 + 28 + 1 = 231 days
+
+But wait, Westpac says "minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest". Six months from July 13 would be January 13, but they're saying March 1 because of the December-February restriction.
+
+Now for ASB: 8 months from July 13, 2026.
+July 13 + 8 months = March 13, 2027
+
+Let me calculate days from July 13, 2026 to March 13, 2027.
+
+July 13 to July 31: 18 days
+August: 31
+September: 30
+October: 31
+November: 30
+December: 31
+January: 31
+February: 28
+March 1 to March 13: 13 days
+
+Total: 18 + 31 + 30 + 31 + 30 + 31 + 31 + 28 + 13 = 243 days
+
+But wait, ASB says "8 months from the announcement date". Is that 8 calendar months or 8*30 days? Typically in regulatory contexts, it's calendar months.
+
+July 13 + 8 months = March 13, 2027.
+
+Westpac wants March 1, 2027 at earliest (231 days from July 13)
+ASB wants 8 months = March 13, 2027 (243 days from July 13)
+
+To satisfy both, we need the later date, which is March 13, 2027, which is 243 days after July 13, 2026.
+
+But let me double-check the day count.
+
+From July 13, 2026 to March 13, 2027:
+
+July: 31 - 13 = 18 days (14th to 31st)
+August: 31
+September: 30
+October: 31
+November: 30
+December: 31
+January: 31
+February: 28 (2027 not leap year)
+March: 13
+
+Total: 18 + 31 + 30 + 31 + 30 + 31 + 31 + 28 + 13 = 243 days. Correct.
+
+But wait - the question asks: "how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?"
+
+"Days later" than what? Than the final decision date (which we're assuming is July 13, 2026).
+
+So the answer should be 243 days.
+
+But let me check if there's any other interpretation.
+
+Westpac says "minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest". Given a July 13 decision, 6 months is Jan 13, but they don't want Dec-Feb implementation, so March 1.
+
+ASB says "8 months from the announcement date".
+
+8 months from July 13 is March 13.
+
+March 13 is later than March 1, so to satisfy both, it would be March 13, which is 243 days after July 13.
+
+But is "8 months" exactly 8 calendar months, or 240 days (8*30)? In regulatory contexts, it's almost always calendar months.
+
+Let me check Document 4 again: "ASB Recommendation 3: Set an implementation date of no earlier than 8 months from the announcement date"
+
+And in the detailed section: "Our preference would be for the Commission to set an implementation date of no earlier than 8 months from the announcement date"
+
+This strongly suggests calendar months.
+
+Similarly, Westpac: "a minimum six-month implementation period" - but then specifies "from 1 March 2027 at the earliest" which for a July 13 decision is more than 6 calendar months (it's about 7.5 months).
+
+Actually, July 13 to March 1 is 7 months and 16 days, so about 7.5 months.
+
+But Westpac says "minimum six-month implementation period" but then gives a specific date constraint.
+
+Given the hypothetical final decision date of July 13, 2026:
+- Westpac's constraint: not before March 1, 2027 (231 days later)
+- ASB's constraint: not before 8 months later = March 13, 2027 (243 days later)
+
+The later date is March 13, 2027, which is 243 days after July 13, 2026.
+
+So the caps could first start 243 days after the final decision (which in this hypothetical is on the submission deadline of July 13, 2026).
+
+But let me verify the day count once more.
+
+July 13, 2026 to March 13, 2027.
+
+Using a date calculator approach:
+- Days in July after 13th: 31 - 13 = 18
+- August: 31
+- September: 30
+- October: 31
+- November: 30
+- December: 31
+- January: 31
+- February: 28 (2027 not leap year)
+- March 1-13: 13
+
+Sum: 18+31=49; +30=79; +31=110; +30=140; +31=171; +31=202; +28=230; +13=243. Yes.
+
+Actually, wait - when we say "days later", if the decision is on July 13, then July 14 is 1 day later, July 15 is 2 days later, etc.
+
+So March 13, 2027 is 243 days after July 13, 2026.
+
+Let me confirm with a smaller example: July 13 to July 14 is 1 day later. 31-13=18 days in July remaining, but July 14 is 1 day after July 13.
+
+So from July 13 to March 13 next year:
+
+Number of days = (March 13, 2027 - July 13, 2026) in days.
+
+Yes, 243 days.
+
+But the question says: "how many days later could the caps first start"
+
+So if final decision is July 13 (day 0), then caps start on day 243.
+
+Answer should be 243.
+
+Wait, but let me check if Westpac has any other constraint.
+
+Westpac: "Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest"
+
+And "3.23 Additionally, any interchange changes should align with a first-of-month effective date."
+
+March 1 is first of month, March 13 is not. But ASB didn't specify first of month, just 8 months.
+
+ASB says "8 months from the announcement date" - if announcement is July 13, 8 months later is March 13.
+
+But would ASB accept March 1? March 1 is less than 8 months (it's about 7.5 months).
+
+July 13 to March 1 is 7 months and 16 days (since July 13 to Feb 13 is 7 months, then Feb 13 to March 1 is 16 days in Feb? Wait no.
+
+Better: July 13 to August 13 = 1 month
+...
+to February 13 = 7 months
+February 13 to March 13 = 1 month, so 8 months.
+
+February 13 to March 1 = 16 days (in non-leap year), so March 1 is 7 months 16 days after July 13.
+
+So March 1 is before 8 months.
+
+ASB wants no earlier than 8 months, so March 13 or later.
+
+Westpac wants no earlier than March 1, but also first of month.
+
+So the dates that satisfy both:
+- Must be >= March 13 (for ASB's 8 months)
+- Must be first of month (for Westpac's requirement)
+
+Next first of month after March 13 is April 1.
+
+But Westpac says "from 1 March 2027 at the earliest", and March 1 is before ASB's 8 months.
+
+ASB's 8 months is March 13.
+
+Westpac requires first of month, and no earlier than March 1.
+
+But March 1 is too early for ASB.
+
+April 1 is first of month, and after March 13.
+
+But is that what Westpac wants? Westpac says "minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest" and "align with a first-of-month effective date".
+
+Given decision July 13, six months is Jan 13, but they say not before March 1 due to Dec-Feb issues.
+
+But they don't explicitly say it must be first of month after March 1; they say "at the earliest" March 1, and "align with first-of-month".
+
+So possible dates: March 1, April 1, May 1, etc.
+
+But March 1 is before ASB's 8 months (March 13).
+
+So earliest satisfying both: April 1, 2027?
+
+But ASB didn't say first of month, just 8 months.
+
+The question is to satisfy both requests.
+
+ASB request: implementation date no earlier than 8 months from announcement.
+
+Westpac request: minimum 6-month implementation period, but not during Dec-Feb, and first-of-month effective date. Explicitly "from 1 March 2027 at the earliest".
+
+For a July 13 announcement:
+- 8 months = March 13
+- Westpac's earliest = March 1, but must be first of month.
+
+March 1 is a first of month, but it's before March 13, so doesn't satisfy ASB.
+
+Next first of month is April 1.
+
+April 1 is after March 13, so satisfies ASB (since 8 months is March 13, April 1 is later).
+
+But does Westpac require it to be exactly March 1 or just not before March 1 and first of month?
+
+"from 1 March 2027 at the earliest" means March 1 or later, and "align with a first-of-month effective date" so March 1, April 1, etc.
+
+ASB: "no earlier than 8 months" so March 13 or later.
+
+So the earliest date that is >= March 13, is a first of month, and >= March 1 (which is redundant) is April 1, 2027.
+
+But April 1 is more than 8 months.
+
+8 months from July 13 is March 13.
+
+April 1 is about 8.5 months.
+
+But the question is: "how many days later could the caps first start while satisfying both"
+
+So if final decision July 13, caps start April 1.
+
+Days from July 13 to April 1.
+
+July 13 to July 31: 18 days
+Aug: 31
+Sep: 30
+Oct: 31
+Nov: 30
+Dec: 31
+Jan: 31
+Feb: 28
+Mar: 31
+Apr 1: 1
+
+Total: 18+31+30+31+30+31+31+28+31+1 = let's calculate:
+18+31=49
++30=79
++31=110
++30=140
++31=171
++31=202
++28=230
++31=261
++1=262 days.
+
+But is this correct? Westpac says "from 1 March 2027 at the earliest", but they also say "minimum six-month implementation period". Six months from July 13 is Jan 13. But they don't want Dec-Feb, so they push to March 1.
+
+But they don't say it has to be exactly March 1; March 1 is the earliest they'd accept, but later first-of-month dates are fine.
+
+ASB says no earlier than 8 months, i.e., March 13.
+
+So April 1 satisfies both.
+
+But wait, Document 4 (ASB) says: "ASB Recommendation 3: Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation."
+
+And in the text: "Our preference would be for the Commission to set an implementation date of no earlier than 8 months from the announcement date and for the Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation."
+
+So ASB wants implementation date >= announcement + 8 months.
+
+Westpac wants implementation date >= March 1, 2027 (for a July 13, 2026 announcement), and first of month.
+
+But March 1, 2027 is fixed in their statement? No, they say "with changes taking effect from 1 March 2027 at the earliest" - but this is in the context of their expected timeline. Since they're submitting on July 21, 2026, and the decision isn't made yet, they're saying whenever the decision is, implementation should not be before March 1, 2027? That doesn't make sense.
+
+Let's read carefully: "Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support orderly delivery..."
+
+This is ambiguous. Is "1 March 2027" a fixed date, or relative to decision?
+
+Given that they say "minimum six-month implementation period", and then "from 1 March 2027 at the earliest", and they're writing on July 21, 2026, it's likely that they expect the decision around now, so 6 months would be Jan 2027, but they don't want Dec-Feb, so March 1 2027.
+
+But in the hypothetical, the decision is on July 13, 2026 (submission deadline).
+
+So for a July 13 decision, 6 months is Jan 13, 2027. Westpac doesn't want implementation in Dec-Feb, so earliest March 1, 2027.
+
+And first of month.
+
+ASB wants 8 months from decision, so March 13, 2027.
+
+Now, March 1 is before March 13, so if implementation is March 1, it's only ~7.5 months, less than ASB's 8 months.
+
+So March 1 does not satisfy ASB.
+
+Next first of month is April 1, 2027.
+
+April 1 is after March 13, so satisfies ASB.
+
+And it's a first of month, after March 1, so satisfies Westpac.
+
+But is there a date between March 13 and April 1 that is first of month? No, first of month are only 1st of each month.
+
+March 1 is before March 13, April 1 is after.
+
+So earliest possible is April 1, 2027.
+
+Days from July 13, 2026 to April 1, 2027.
+
+As calculated: 262 days.
+
+But let's confirm the day count.
+
+July 13, 2026 to April 1, 2027.
+
+Days remaining in July 2026: 31 - 13 = 18 (14th to 31st)
+August: 31
+September: 30
+October: 31
+November: 30
+December: 31
+January 2027: 31
+February: 28
+March: 31
+April 1: 1
+
+Sum: 18+31=49; +30=79; +31=110; +30=140; +31=171; +31=202; +28=230; +31=261; +1=262. Yes.
+
+But wait, the question says: "Had the Commerce Commission's final decision come on its deadline for submissions"
+
+Deadline for submissions is July 13, 2026.
+
+Final decision on that date.
+
+Then "how many days later could the caps first start"
+
+So days after July 13.
+
+April 1 is 262 days after July 13.
+
+But is Westpac's "1 March 2027" fixed or relative?
+
+Let me read Westpac submission again (Document 14):
+
+"3.21 December implementation carries operational risks that may negatively affect customers. Interchange changes require pricing, billing, systems, scheme and customer communication changes, all of which need adequate time for implementation, testing and transition. Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support orderly delivery, reduce customer disruption and maintain the stability of critical payments infrastructure.
+
+3.22 Implementation over the December to February period would introduce additional operational complexity. This period typically coincides with heightened transaction volumes, including holiday spending and tourism activity, as well as industry technology change freezes and reduced resource availability. As a result, the capacity to safely implement, monitor and remediate material pricing, billing and systems changes is more constrained than at other times of the year.
+
+3.23 Additionally, any interchange changes should align with a first-of-month effective date. Merchant service fees are generally billed on a monthly cycle, and mid-month changes would create additional complexity where transactions within the same billing period are subject to different pricing. Aligning implementation to the start of a month would support clearer billing, simpler reconciliation and a more effective customer transition."
+
+They say "from 1 March 2027 at the earliest" - but this is in the context of their current expectation. Since they're writing on July 21, 2026, and the decision hasn't been made, they're probably assuming a decision soon, so 6 months would land in Jan 2027, but they want to avoid Dec-Feb, so March 1 2027.
+
+But in the hypothetical, decision is July 13, 2026.
+
+So for a July 13 decision, 6 months is Jan 13, 2027. Avoid Dec-Feb, so earliest March 1, 2027.
+
+And first of month.
+
+ASB wants 8 months from decision, so March 13, 2027.
+
+So the constraints are:
+- Implementation date >= July 13, 2026 + 8 months = March 13, 2027
+- Implementation date >= March 1, 2027 (but this is redundant since March 13 > March 1)
+- Implementation date is first of month
+
+First of month on or after March 13, 2027 is April 1, 2027.
+
+So caps could first start on April 1, 2027, which is 262 days after July 13, 2026.
+
+But is "8 months" exactly 8 calendar months? July 13 + 8 months = March 13.
+
+Yes.
+
+Perhaps "8 months" means 240 days? But in regulation, it's calendar months.
+
+Let me check if there's any other clue.
+
+In Document 1, the Commission says: "3.80 We propose a two to three-month implementation period from our final decision."
+
+But that's their proposal, not the banks' requests.
+
+ASB and Westpac are requesting longer.
+
+Another thing: Westpac says "minimum six-month implementation period", but then specifies "from 1 March 2027 at the earliest" which for them (writing July 21) is about 7.5 months.
+
+But for a July 13 decision, 6 months is Jan 13, they want to push to March 1 due to Dec-Feb issue.
+
+Attempt 5 · Right
+-----------------
+Docs: Doc 1, Doc 3, Doc 4, Doc 5, Doc 6, Doc 7, Doc 9, Doc 10, Doc 11, Doc 12 · Note: —
+
+Final answer: 262 | Your answer (gold): 262 days
+
+How it got there: It used Doc 1 for the deadline, Doc 4 for ASB's 8-month request, and Doc 14 for Westpac's first-of-month requirement, calculating days to 1 April 2027.
+
+Passages quoted:
+
+- Quoted Doc 1: “We are seeking feedback on our draft decision and draft Amendment Pricing Standard by 12pm on Monday 13 July 2026 and will allow two weeks after publication of submissions for cross-submissions.”
+- Quoted Doc 1: “Indicative dates for our next steps on commercial credit card interchange fees”
+- Quoted Doc 1: “Please submit your views by 12pm on Monday 13 July 2026.”
+- Quoted Doc 4: “ASB Recommendation 3: Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation.”
+
+Named Doc 1, Doc 3, Doc 4, Doc 5, Doc 6, Doc 7, Doc 9, Doc 10, Doc 11, Doc 12
+
+Full answer
+-----------
+
+262
+
+Reasoning
+---------
+
+Let me analyze the question carefully. The question asks: "Had the Commerce Commission's final decision come on its deadline for submissions, how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?"
+
+First, I need to identify:
+1. The deadline for submissions
+2. ASB's timing request
+3. Westpac's timing request
+4. Calculate the minimum number of days after the deadline that would satisfy both requests
+
+Let me search through the documents for this information.
+
+First, the deadline for submissions:
+From Document 1 (the main Commerce Commission document), in section 1.20-1.21:
+"We are seeking feedback on our draft decision and draft Amendment Pricing Standard by 12pm on Monday 13 July 2026 and will allow two weeks after publication of submissions for cross-submissions."
+
+Also in Figure 1.2 "Indicative dates for our next steps on commercial credit card interchange fees" - but the actual figure isn't shown in the text, just referenced.
+
+From Document 3 (ANZ submission): "Please submit your views by 12pm on Monday 13 July 2026."
+
+From Document 4 (ASB submission): No explicit deadline mentioned, but they're responding to the draft decision.
+
+From Document 5 (BNZ submission): No explicit deadline mentioned.
+
+From Document 6 (Citibank submission): Dated "17th July 2026" - which is after July 13, so the deadline was July 13.
+
+From Document 7 (FSF submission): Dated "13 July 2026" - "Please do not hesitate to contact me if you have any queries. Yours sincerely, Katie Rawlinson... 13 July 2026"
+
+From Document 9 (Kiwibank submission): Dated "17 July 2026" but says "Date: 17 July 2026" at the top.
+
+From Document 10 (Mastercard submission): Dated "16 July 2026"
+
+From Document 11 (Retail NZ submission): Dated "20 July 2026"
+
+From Document 12 (Revolut submission): Dated "20 July 2026"
+
+From Document 13 (TSB submission): Dated "20 July 2026"
+
+From Document 14 (Westpac submission): Dated "21 July 2026"
+
+From Document 15 (Paymark submission): Dated "30 June 2026" - wait, this is before July 13? Let me check... "30 June 2026 By email Submission on commercial card interchange fee regulation" - but the consultation document was published "4 June 2026" according to the document. So June 30 would be before the July 13 deadline.
+
+From Document 16 (Restaurant Association submission): Dated "20 July 2026"
+
+So the deadline for submissions was Monday, July 13, 2026 at 12pm.
+
+Now, let's find ASB's timing request.
+
+From Document 4 (ASB submission):
+"ASB Recommendation 3: Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation."
+
+Also: "After the Commission confirms the caps, the card schemes must confirm the applicable rates, criteria and effective date for interchange rate changes being made to comply with the caps. Until these details have been received, which is generally through a scheme bulletin, our ability to understand the extent of the changes or the implementation effort and timeframes is limited. For the domestic rate changes announced in July 2025, the details of the changes being made by the schemes was allowing us 3 months to complete implementation work. As discussed with the Commission at that time, this made implementation challenging and very inefficient, as due to the timing of scheme decisions.
+
+Two to three months is therefore insufficient to make the required system changes, and a compressed timeframe increases the risk of incorrect merchant billing, which could result in merchants being overcharged requiring subsequent remediation."
+
+And: "Any interchange rate changes would require ASB to:
+(a) make material changes to the third-party merchant system, including and implementation of the new rates;
+(b) update pricing models, financial monitoring, reporting and controls, with some activities dependent on;
+(c) redesign controls to monitor compliance with the Retail Payments System Act; and
+(d) communicate the changes to affected customers."
+
+So ASB wants:
+- Commission to direct schemes to confirm rates/criteria within 2 months of announcement
+- Then 6 months for implementation
+- Total: 8 months from announcement date
+
+Now Westpac's timing request.
+
+From Document 14 (Westpac submission):
+"End of year implementation period increases operational risk
+3.21 December implementation carries operational risks that may negatively affect customers. Interchange changes require pricing, billing, systems, scheme and customer communication changes, all of which need adequate time for implementation, testing and transition. Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support orderly delivery, reduce customer disruption and maintain the stability of critical payments infrastructure.
+
+3.22 Implementation over the December to February period would introduce additional operational complexity. This period typically coincides with heightened transaction volumes, including holiday spending and tourism activity, as well as industry technology change freezes and reduced resource availability. As a result, the capacity to safely implement, monitor and remediate material pricing, billing and systems changes is more constrained than at other times of the year.
+
+3.23 Additionally, any interchange changes should align with a first-of-month effective date. Merchant service fees are generally billed on a monthly cycle, and mid-month changes would create additional complexity where transactions within the same billing period are subject to different pricing. Aligning implementation to the start of a month would support clearer billing, simpler reconciliation and a more effective customer transition."
+
+Westpac wants:
+- Minimum 6-month implementation period
+- Changes taking effect from March 1, 2027 at earliest
+- Implementation should align with first of month
+- Avoid December-February period
+
+The question states: "Had the Commerce Commission's final decision come on its deadline for submissions..."
+
+The deadline for submissions was July 13, 2026. But the "final decision" would come after the submission period and cross-submission period. The document says: "We are seeking feedback on our draft decision and draft Amendment Pricing Standard by 12pm on Monday 13 July 2026 and will allow two weeks after publication of submissions for cross-submissions."
+
+So the final decision would come after the cross-submission period, which ends 2 weeks after publication of submissions. But the question says "had the Commerce Commission's final decision come on its deadline for submissions" - this is a hypothetical scenario where the final decision comes on July 13, 2026 (the submission deadline), not after the consultation process.
+
+So we're to assume the final decision date = July 13, 2026.
+
+Now, ASB wants implementation date no earlier than 8 months from announcement date (which would be the final decision date in this hypothetical).
+
+Westpac wants minimum 6-month implementation period, with changes taking effect from March 1, 2027 at earliest, and aligned to first of month.
+
+Let's calculate both:
+
+ASB: 8 months from July 13, 2026
+- July 13 + 8 months = March 13, 2027
+But ASB says "implementation date of no earlier than 8 months from the announcement date", and they want it aligned to... they don't specify first of month, but they do say "Set an implementation date of no earlier than 8 months from the announcement date"
+
+Westpac: minimum 6 months from announcement, but specifically says "with changes taking effect from 1 March 2027 at the earliest" and "aligning implementation to the start of a month"
+
+Since the hypothetical final decision is July 13, 2026:
+- 6 months later would be January 13, 2027
+- But Westpac says "from 1 March 2027 at the earliest" and wants first of month
+- So Westpac's requirement is March 1, 2027 (since Jan 1 and Feb 1 would be less than 6 months? Wait, July 13 to Jan 1 is about 5.5 months, to Feb 1 is 6.5 months, to Mar 1 is 7.5 months)
+
+Let me calculate precisely:
+- July 13, 2026 to January 13, 2027 = 6 months
+- July 13, 2026 to February 13, 2027 = 7 months
+- July 13, 2026 to March 13, 2027 = 8 months
+
+Westpac wants minimum 6 months but specifically says "from 1 March 2027 at the earliest" and wants first of month. March 1, 2027 is about 7.5 months after July 13, 2026.
+
+ASB wants 8 months from announcement, so March 13, 2027, but they don't specify first of month. However, since Westpac requires first of month, and March 13 is not first of month, the earliest first of month after 8 months would be April 1, 2027? But wait, 8 months from July 13 is March 13, so the first of month after that would be April 1. But ASB says "no earlier than 8 months", so March 13 or later. The first of month on or after March 13 would be April 1.
+
+But Westpac specifically says March 1, 2027 at earliest. March 1 is before March 13, so it doesn't satisfy ASB's 8-month requirement.
+
+Let me calculate the exact number of days.
+
+First, final decision date (hypothetical) = July 13, 2026
+
+ASB requirement: implementation date >= July 13, 2026 + 8 months
+Westpac requirement: implementation date >= March 1, 2027 AND implementation date is first of month AND implementation date >= July 13, 2026 + 6 months
+
+Since March 1, 2027 > July 13, 2026 + 6 months (which is ~Jan 13, 2027), Westpac's effective requirement is implementation date >= March 1, 2027 and first of month.
+
+ASB requires implementation date >= July 13, 2026 + 8 months = March 13, 2027 (approximately)
+
+But implementation date must be first of month (per Westpac), so possible dates: March 1, April 1, May 1, etc.
+
+March 1, 2027 is before March 13, 2027, so doesn't satisfy ASB.
+April 1, 2027 is after March 13, 2027, so satisfies both.
+
+But wait - is "8 months" exactly 240 days? Or calendar months?
+
+In regulatory contexts, "months" usually means calendar months.
+
+July 13 + 8 calendar months = March 13, 2027.
+
+First of month on or after March 13, 2027 is April 1, 2027.
+
+But Westpac says "from 1 March 2027 at the earliest" - but March 1 is too early for ASB.
+
+So the earliest date satisfying both is April 1, 2027.
+
+Now, how many days after July 13, 2026 is April 1, 2027?
+
+Let me calculate:
+- July 13 to July 31: 18 days (31-13=18)
+- August: 31
+- September: 30
+- October: 31
+- November: 30
+- December: 31
+- January: 31
+- February: 28 (2027 not leap year)
+- March: 31
+- April 1: 1 day
+
+Wait, no - we want days from July 13 to April 1.
+
+Better to calculate total days:
+July 13, 2026 to April 1, 2027.
+
+Days in each month:
+- July: 31 - 13 = 18 days (14th to 31st)
+- August: 31
+- September: 30
+- October: 31
+- November: 30
+- December: 31
+- January: 31
+- February: 28
+- March: 31
+- April 1: 1 day? No, April 1 is the target date, so up to March 31.
+
+Actually, from July 13 to April 1 is the number of days between them.
+
+Standard way: July 13 to August 13 is 31 days? No, varies by month.
+
+Easier: use known date differences.
+
+July 13, 2026 to January 13, 2027 = 184 days? Let me calculate properly.
+
+Actually, I can calculate cumulative days:
+
+Month | Days | Cumulative from July 13
+July | 18 (14-31) | 18
+August | 31 | 49
+September | 30 | 79
+October | 31 | 110
+November | 30 | 140
+December | 31 | 171
+January | 31 | 202
+February | 28 | 230
+March | 31 | 261
+April 1 | 1 | 262? No.
+
+From July 13 to April 1 next year.
+
+Number of days = (April 1, 2027 - July 13, 2026) in days.
+
+July 13 to July 31: 18 days
+Aug: 31
+Sep: 30
+Oct: 31
+Nov: 30
+Dec: 31
+Jan: 31
+Feb: 28
+Mar: 31
+Apr 1: 1 day? But April 1 is the end date, so if we count from July 13 inclusive or exclusive?
+
+Typically, "days later" means difference in dates.
+
+If final decision July 13, implementation April 1, then days later = (April 1 - July 13).
+
+In Excel terms, DATE(2027,4,1) - DATE(2026,7,13) = ?
+
+Let me compute:
+2026 is not leap, 2027 not leap.
+
+Days from July 13 to Dec 31, 2026:
+July: 18 (14-31)
+Aug: 31
+Sep: 30
+Oct: 31
+Nov: 30
+Dec: 31
+Total 2026: 18+31+30+31+30+31 = 171 days
+
+Days in 2027 to April 1:
+Jan: 31
+Feb: 28
+Mar: 31
+Apr: 1
+Total 2027: 91 days
+
+But April 1 is included? If implementation starts April 1, and decision July 13, then days between = days from July 14 to April 1 inclusive? Or exclusive?
+
+Standard: number of days from date A to date B is B - A.
+
+So July 13 to July 14 is 1 day later.
+
+So July 13 to April 1, 2027 = (April 1, 2027 - July 13, 2026) days.
+
+= days remaining in 2026 after July 13 + days in 2027 up to April 1.
+
+Days after July 13 in 2026: July has 31 days, so 31-13 = 18 days (14th to 31st)
+Plus Aug-Dec: 31+30+31+30+31 = 153
+Total 2026: 18+153=171
+
+Days in 2027 to April 1: Jan 31, Feb 28, Mar 31, Apr 1 = 91 days? But April 1 is the target, so if implementation starts April 1, that's 91 days into 2027.
+
+But the difference: from July 13, 2026 to April 1, 2027 is 171 + 91 = 262 days? Let's verify with a known period.
+
+July 13 to Jan 13 is 6 months. July 13 to Jan 13, 2027.
+July 13 to Aug 13: 31 days
+Aug 13 to Sep 13: 31
+Sep 13 to Oct 13: 30
+Oct 13 to Nov 13: 31
+Nov 13 to Dec 13: 30
+Dec 13 to Jan 13: 31
+Total: 31+31+30+31+30+31 = 184 days for 6 months.
+
+Similarly, 8 months: July 13 to March 13.
+Add Jan 13 to Feb 13: 31, Feb 13 to Mar 13: 28 (2027 not leap), so 184 + 31 + 28 = 243 days.
+
+March 13 to April 1: March has 31 days, so 31 - 13 + 1 = 19 days? From March 13 to April 1 is 19 days (14th to 31st = 18 days, plus April 1 = 19 days).
+
+So July 13 to April 1 = 243 + 19 = 262 days.
+
+But Westpac wants March 1 at earliest, but ASB requires 8 months = ~March 13, so April 1 is first first-of-month after that.
+
+But is there an earlier first-of-month that satisfies both?
+
+Westpac requires >= March 1, 2027 and first of month.
+ASB requires >= 8 months from July 13 = March 13, 2027.
+
+First of month dates: March 1, April 1, May 1, ...
+
+March 1 < March 13, so no.
+April 1 > March 13, yes.
+
+So April 1, 2027.
+
+Days from July 13, 2026 to April 1, 2027 = 262 days as calculated.
+
+But let me confirm with another method.
+
+Total days from July 13, 2026 to April 1, 2027.
+
+July 13, 2026 to July 13, 2027 = 365 days (not leap year)
+But we go only to April 1, 2027.
+
+July 13 to April 13 is 9 months? July to April is 9 months later? July, Aug, Sep, Oct, Nov, Dec, Jan, Feb, Mar, Apr - that's 9 months to April 13.
+
+July 13 to April 13, 2027 = 9 months.
+
+But months have different lengths.
+
+From July 13 to April 13:
+- July 13 to Aug 13: 31
+- Aug 13 to Sep 13: 31
+- Sep 13 to Oct 13: 30
+- Oct 13 to Nov 13: 31
+- Nov 13 to Dec 13: 30
+- Dec 13 to Jan 13: 31
+- Jan 13 to Feb 13: 31
+- Feb 13 to Mar 13: 28
+- Mar 13 to Apr 13: 31
+Sum: 31+31+30+31+30+31+31+28+31 = let's add: 31*6=186, 30*2=60, 28=28, total 186+60=246+28=274 days.
+
+So July 13 to April 13 = 274 days.
+
+Then April 1 is 12 days before April 13, so 274 - 12 = 262 days. Yes.
+
+So 262 days.
+
+But the question is: "how many days later could the caps first start while satisfying both ASB's and Westpac's timing requests?"
+
+"Days later" from the final decision date, which is hypothetical July 13, 2026.
+
+So 262 days later.
+
+But is April 1 the first possible? What about March 1? But March 1 is before 8 months (March 13), so ASB would not be satisfied.
+
+ASB says "no earlier than 8 months from the announcement date". 8 months from July 13 is March 13. So implementation date must be on or after March 13.
+
+Westpac requires first of month, and >= March 1, but since March 1 < March 13, the first first-of-month on or after March 13 is April 1.
+
+Yes.
+
+But let me double-check ASB's exact wording.
+
+From Document 4: "ASB Recommendation 3: Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation."
+
+So implementation date >= announcement date + 8 months.
+
+Announcement date = final decision date = July 13, 2026 (hypothetical).
+
+July 13 + 8 months = March 13, 2027.
+
+Westpac: "Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support orderly delivery... Additionally, any interchange changes should align with a first-of-month effective date."
+
+So Westpac requires:
+- Implementation date >= March 1, 2027
+- Implementation date is first of month
+- (Implicitly >= 6 months from decision, but March 1 is > 6 months)
+
+Since March 1, 2027 < March 13, 2027, the binding constraint for the date is ASB's March 13, but with Westpac's first-of-month requirement, so April 1, 2027.
+
+Days from July 13, 2026 to April 1, 2027 = 262 days.
+
+But let me confirm the day count.
+
+July 13 to July 31: 18 days (14-31)
+August: 31
+September: 30
+October: 31
+November: 30
+December: 31
+January: 31
+February: 28
+March: 31
+April 1: but we stop at April 1, so up to March 31 is 31 days in March? No.
+
+From July 13 to April 1.
+
+The number of days is the difference.
+
+July 13 is day 0? Or day 1?
+
+If final decision July 13, then "days later" means July 14 is 1 day later, etc.
+
+So implementation on April 1 is (April 1 - July 13) days later.
+
+In date arithmetic, (2027-04-01) - (2026-07-13) = 262 days.
+
+Yes, as calculated.
+
+But is there any other constraint?
+
+Westpac says "with changes taking effect from 1 March 2027 at the earliest" - but this might be based on their assumption of when the decision would come. In the hypothetical, decision is July 13, so March 1 is 7.5 months later, which is more than 6 months, but less than ASB's 8 months.
+
+ASB is firm on 8 months.
+
+Also, Westpac says "minimum six-month implementation period", but then specifies "from 1 March 2027 at the earliest", which for a July decision is about 7.5 months, so they're effectively requiring more than 6 months due to the December-February avoidance.
+
+But in this hypothetical, with decision July 13, 6 months is Jan 13, but they don't want Dec-Feb, so March 1 is their floor.
+
+But ASB requires 8 months = March 13.
+
+So April 1 is the answer.
+
+262 days.
+
+But let me make sure about the "deadline for submissions" vs "final decision".
+
+The question says: "Had the Commerce Commission's final decision come on its deadline for submissions..."
+
+Deadline for submissions is July 13, 2026 (12pm Monday).
+
+Final decision normally comes after consultation, but here hypothetical: final decision on July 13.
+
+Yes.
+
+Now, is there any other submitter with timing request? The question specifies "both ASB's and Westpac's timing requests", so only these two.
+
+ASB and Westpac are the only ones mentioned in the question.
+
+In the documents, other banks might have requests, but the question asks specifically for ASB and Westpac.
+
+So only these two.
+
+Thus, 262 days.
+
+But let me check if Westpac's March 1, 2027 is a Wednesday or something, but they want first of month, so March 1 is first of month.
+
+April 1 is first of month.
+
+Now, days calculation: from July 13 to April 1.
+
+I can use the fact that July 13 to January 13 is 184 days (as 6 months avg 30.44, but exactly 184 as calculated).
+
+July 13 to March 13: 8 months.
+
+July to March is 8 months later? July, Aug, Sep, Oct, Nov, Dec, Jan, Feb, Mar — that's 8 months to March 13.
+
+Days: as before, 243 days to March 13.
+
+Then March 13 to April 1: 19 days (since March 14 to 31 is 18 days, April 1 is 19th day after March 13? March 13 to March 14 is 1 day, to March 31 is 18 days, to April 1 is 19 days).
+
+So 243 + 19 = 262.
+
+July 13 to April 1 directly: 262 days.
+
+Yes.
+
+So answer should be 262.
+
+But let me confirm with a date calculator mentally.
+
+Assume July 13, 2026 is a Monday (since deadline is Monday July 13).
+
+But not necessary.
+
+Total days: 262.
+
+But is 2027 a leap year? 2024 leap, 2028 leap, so 2027 not leap, February 28 days, correct.
+
+So I think 262.
+
+But the question says "how many days later could the caps first start"
+
+"Fir

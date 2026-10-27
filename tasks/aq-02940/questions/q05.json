@@ -1,0 +1,65 @@
+{
+  "question": "Had the Commerce Commission's final decision come the day submissions closed, what is the earliest date the caps could start while satisfying both ASB's and Westpac's timing requests?",
+  "number_of_asks": 1,
+  "gold_answer": "1 April 2027",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 1, Executive summary): the Commission asked for submissions on its draft decision by 12pm on Monday 13 July 2026, so submissions closed that day. In the question's case the final decision is announced that day.\n\nStep 2. Source input (Doc 4, Recommendation 3): ASB asks for an implementation date no earlier than 8 months from the announcement date. The 2 months it gives the schemes and the 6 months it gives acquirers are parts of those 8 months, not further requests.\n\nStep 3. Source input (Doc 14, end-of-year implementation section): Westpac asks for a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, and for a first-of-month effective date.\n\nStep 4. Final answer (Doc 1, Doc 4 and Doc 14): 8 months after 13 July 2026 is 13 March 2027. That is more than six months after the decision and later than 1 March 2027, so ASB's request sets the earliest day. It is not the first of a month, so Westpac's last request moves the start to the next one, 1 April 2027.",
+  "answer_components": [
+    "1 April 2027"
+  ],
+  "evidence": [
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Please submit your views by 12pm on Monday 13 July 2026."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "ASB Recommendation 3: Set an implementation date of no earlier than 8 months from the announcement date and Commission to direct the schemes to confirm applicable rates and criteria no later than 2 months from announcement date to allow acquirers 6 months for implementation."
+    },
+    {
+      "document_number": 14,
+      "component_number": 1,
+      "quote": "Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support orderly delivery, reduce customer disruption and maintain the stability of critical payments infrastructure."
+    },
+    {
+      "document_number": 14,
+      "component_number": 1,
+      "quote": "Additionally, any interchange changes should align with a first-of-month effective date."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Used to identify",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        14
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: Doc 14 prints 1 March 2027 as Westpac's earliest date. Linking Doc 4's 8 months from Doc 1's 13 July 2026 deadline gives 13 March 2027, and Westpac's separate first-of-month request then makes the gold 1 April 2027."
+}

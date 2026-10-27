@@ -1,0 +1,62 @@
+{
+  "question": "If merchant service fees fell by the percentage a Spanish study found per 1% interchange cut, what would the Commerce Commission's proposed commercial credit caps save merchants yearly, in $ million to one decimal?",
+  "number_of_asks": 1,
+  "gold_answer": "$26.5 million",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 1, Executive summary): New Zealand merchants pay approximately $125 million a year in interchange fees to accept commercial credit cards, and the Commission estimates that its draft decision would reduce those fees by $50 million.\n\nStep 2. Source input (Doc 1, Introduction): merchants pay approximately $170 million a year in merchant service fees to accept Mastercard and Visa commercial credit card payments.\n\nStep 3. Source input (Doc 8, section on acquirers and pass-through): a Spanish study estimates that a 1% reduction in interchange fees is associated in the long run with a 0.39% reduction in merchant service fees. Both figures are percentages of the fee they describe, so the study's figure applies to the percentage cut in interchange, not to its dollar amount.\n\nStep 4. Calculation (Doc 1): share of commercial credit interchange that the proposed caps remove: 50 / 125 = 0.4\n\nStep 5. Calculation (Doc 1 and Doc 8): share of merchant service fees removed at the study's rate: 0.4 × 0.39 = 0.156\n\nStep 6. Final answer (Doc 1 and Doc 8): yearly saving in $ million: 0.156 × 170 = 26.52. To one decimal place the second decimal drops, giving the gold answer.",
+  "answer_components": [
+    "$26.5 million"
+  ],
+  "evidence": [
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "New Zealand merchants currently pay approximately $125 million per year in interchange fees to accept domestic and foreign-issued commercial credit cards."
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "we estimate the draft decision would reduce commercial credit interchange fees by $50 million."
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Merchants currently pay approximately $170 million in merchant service fees each year to accept Mastercard and Visa commercial credit card payments."
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "one Spanish study estimates that a 1% reduction in interchange fees is associated in the long run with a 0.39% reduction in MSFs, suggesting partial rather than full pass-through."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        8
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Unit normalization"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Unit or basis",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    },
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Unit or basis: Doc 8's Spanish study gives a 0.39% fee fall per 1% interchange cut; multiplying Doc 1's $50 million cut by 0.39 gives $19.5 million. Look-alike measure: 15.6% of Doc 1's $125 million interchange, not its $170 million merchant service fees, gives $19.5 million. Gold $26.5 million."
+}
