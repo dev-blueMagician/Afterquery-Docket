@@ -1,0 +1,73 @@
+{
+  "question": "Using the most recently published figures, by how much did Albemarle's free cash flow (operating cash flow minus capital expenditures) for Q2 2026 exceed that for Q2 2025? Answer to the nearest million dollars.",
+  "number_of_asks": 1,
+  "gold_answer": "767",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 8, reconciliation of free cash flow, three months ended June 30, 2026): net cash provided by operating activities $709,997 less capital expenditures (71,731) gives free cash flow of $638,266, in thousands of dollars, the definition the question states.\nStep 2. Source input (Doc 8, selected consolidated cash flow data, six months ended June 30, 2025 column, the most recent printing of that half-year): net cash provided by operating activities 538,180 and capital expenditures (302,252), in thousands of dollars.\nStep 3. Source input (Doc 7, selected consolidated cash flow data, three months ended March 31, 2025 column, the most recent printing of that quarter): net cash provided by operating activities 547,207 and capital expenditures (182,624), in thousands of dollars.\nStep 4. Calculation (Doc 7 and Doc 8): no release prints the second quarter of 2025 on its own, so it is the six months less the first quarter; operating activities used cash in that quarter: 547,207 - 538,180 = 9,027 (thousands of dollars of outflow).\nStep 5. Calculation (Doc 7 and Doc 8): second-quarter 2025 capital expenditures: 302,252 - 182,624 = 119,628 (thousands of dollars).\nStep 6. Calculation (Doc 7 and Doc 8): second-quarter 2025 free cash flow was an outflow of capital expenditures plus the operating outflow: 119,628 + 9,027 = 128,655 (thousands of dollars).\nStep 7. Calculation (Doc 7 and Doc 8): excess of the second-quarter 2026 inflow over the second-quarter 2025 outflow: 638,266 + 128,655 = 766,921 (thousands of dollars).\nStep 8. Final answer (Doc 7 and Doc 8): 766,921 thousand dollars, given to the nearest million dollars as the question asks.",
+  "answer_components": [
+    "767"
+  ],
+  "evidence": [
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "|Net cash provided by operating activities|$709,997|"
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "|Less: Capital expenditures|(71,731)|"
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "|Free cash flow|$638,266|"
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "|Net cash provided by operating activities|1,056,241|538,180|"
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "|Capital expenditures|(170,407)|(302,252)|"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "|Net cash provided by operating activities|346,244|547,207|"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "|Capital expenditures|(98,676)|(182,624)|"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        8
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        7
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Superseded date or version",
+      "how_a_careless_solver_fails": "Picks the wrong entity or section"
+    }
+  ],
+  "why_these_are_traps": "Doc 3 first printed Q1 2025 operating cash flow as 545,383; Doc 7, the most recent printing, restates it as 547,207. Doc 3's figure makes Q2 2025 free cash flow -126.8 million and gives 765; with Doc 7's it is -128.7 million, so 767."
+}
