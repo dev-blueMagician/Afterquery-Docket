@@ -1,0 +1,34 @@
+{
+  "purpose": "removal probes (author diagnostic; user standing request 2026-10-08 to check the Document check before hand-over; concrete concern: the 2023 (a)(6) ECCN list (Doc 1) and the (iii)(B) ECCN list (Doc 6) may be recalled)",
+  "bound_to": {
+    "question": "q01",
+    "revision": 0,
+    "tested_sha256": "5be5b24ff5fc62444086992e1af042a9112106a14648ef1308c1b07e0fcf4c6f"
+  },
+  "packets": [
+    {
+      "packet": "solver-1",
+      "question": "q01",
+      "removed_local": "D01 (Doc 1)",
+      "renumbered": {
+        "D02": "D01",
+        "D03": "D02",
+        "D04": "D03",
+        "D05": "D04",
+        "D06": "D05"
+      }
+    },
+    {
+      "packet": "solver-2",
+      "question": "q01",
+      "removed_local": "D06 (Doc 6)",
+      "renumbered": {
+        "D01": "D01",
+        "D02": "D02",
+        "D03": "D03",
+        "D04": "D04",
+        "D05": "D05"
+      }
+    }
+  ]
+}
