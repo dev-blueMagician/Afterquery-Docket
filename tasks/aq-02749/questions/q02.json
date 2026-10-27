@@ -1,0 +1,245 @@
+{
+  "question": "Under EPA's five proposed State coal-ash program approvals, how many of the 2024 Legacy Rule's all-unit amendments would lack an approved State version in exactly two States, and how many in all five? Give the two counts in that order.",
+  "number_of_asks": 2,
+  "gold_answer": "10, 12",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 2, Wyoming Partial Program): Wyoming \"is not seeking approval for\" the \"Amendments made in the Legacy CCR Surface Impoundments and CCR Management Units Final Rule\", so no amendment made by that rule would have an approved Wyoming version. Wyoming is one of the States without one for every such amendment.\nStep 2. Source input (Doc 5, Alabama Partial Program): for the terms and provisions that rule changed for all CCR units, \"EPA is approving the State's version of these requirements\", a numbered list that ends at entry 17. The next list, of amendments that \"are not being approved\", has 5 entries, and 3 of the 5 entries are 2024 Legacy Rule all-unit definitions: \"Contains both CCR and liquids\", \"Infiltration\" and \"Liquids\". The other two entries concern alternate liner demonstrations and suspension of groundwater monitoring.\nStep 3. Source input (Doc 6, Wisconsin Partial Program): \"EPA is approving the State's version of these requirements\", a numbered list that ends at entry 11. It includes \"Infiltration\" and \"Liquids\", which Alabama's approved list does not; every other Wisconsin entry is also on Alabama's approved list.\nStep 4. Source input (Doc 3, Doc 4, Doc 5 and Doc 6): Virginia's list (\"EPA is approving the State's version of the following requirements\") and Louisiana's (\"EPA is approving the State's version of these requirements\") carry every entry on Alabama's or Wisconsin's approved list, among them \"Infiltration\", \"Liquids\" and the scope provision on inactive impoundments that Wisconsin's list lacks, and \"Contains both CCR and liquids\" as well. Virginia and Louisiana therefore have an approved version of every one of them, which is why an amendment missing in Wyoming and one other State is missing in exactly two States. The rule's other all-unit amendments are the more prescriptive ones: each of these four proposals says the State \"did not adopt these amendments and did not seek approval of these provisions\", and Wyoming seeks approval of none, so they lack an approved version in all five States.\nStep 5. Calculation (Doc 5 and Doc 6): entries on both Alabama's and Wisconsin's approved lists, which are Wisconsin's entries less \"Infiltration\" and \"Liquids\": 11 - 2 = 9.\nStep 6. Calculation (Doc 5 and Doc 6): entries approved for Alabama but not for Wisconsin: 17 - 9 = 8. They are the scope provision on inactive impoundments, the reserved effective-date section, the definitions of \"CCR surface impoundment\", \"CCR unit\", \"Inactive CCR surface impoundment\", \"Technically feasible\" and \"Technically infeasible\", and the compliance-deadline provision for inactive impoundments. Virginia, Louisiana and Alabama approve them, so each lacks an approved version only in Wyoming and Wisconsin.\nStep 7. First count (Doc 2, Doc 3, Doc 4, Doc 5 and Doc 6): \"Infiltration\" and \"Liquids\" are approved for Virginia, Louisiana and Wisconsin, so each lacks an approved version only in Wyoming and Alabama. Adding them: 8 + 2 = 10. Amendments missing in only one State are excluded: the entries on both Alabama's and Wisconsin's lists lack an approved version in Wyoming alone. The amendment missing in three States is excluded too: \"Contains both CCR and liquids\" lacks an approved version in Wyoming, Alabama and Wisconsin.\nStep 8. Source input (Doc 3, Doc 4, Doc 5 and Doc 6): the more prescriptive amendments are the rule's other all-unit amendments, the ones that \"apply to all CCR units and are more prescriptive than the requirements in the 2015 CCR Rule\". They form a list that ends at entry 12 in Virginia's, Louisiana's and Alabama's proposals and runs from a to l in Wisconsin's, with the same entries in each, and each of these four States \"did not adopt these amendments and did not seek approval of these provisions\".\nStep 9. Second count (Doc 2, Doc 3, Doc 4, Doc 5 and Doc 6): Wyoming seeks approval of no amendment made by the rule, so those 12 lack an approved State version in all five States. No entry of the first list does, because Virginia and Louisiana approve every one of them. The two counts, in the order asked, are 10 and 12.",
+  "answer_components": [
+    "10",
+    "12"
+  ],
+  "evidence": [
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Wyoming is not seeking approval for the following four requirements of the Federal CCR regulations"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Amendments made in the Legacy CCR Surface Impoundments and CCR Management Units Final Rule."
+    },
+    {
+      "document_number": 2,
+      "component_number": 2,
+      "quote": "Amendments made in the Legacy CCR Surface Impoundments and CCR Management Units Final Rule."
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Therefore, EPA is approving the State's version of the following requirements:"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "2. 40 CFR 257.50(c); this amendment revises the scope of applicability to specify that it includes inactive CCR surface impoundments"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "11. ``Infiltration''; this additional definition in 40 CFR 257.53 is consistent with the term's plain meaning and dictionary definitions"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "12. ``Liquids''; this additional definition in 40 CFR 257.53 is consistent with the term's plain meaning and dictionary definitions"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "VADEQ did not adopt these amendments and did not seek approval of these provisions."
+    },
+    {
+      "document_number": 3,
+      "component_number": 2,
+      "quote": "apply to all CCR units and are more prescriptive than the requirements in the 2015 CCR Rule. VADEQ did not adopt these amendments and did not seek approval of these provisions."
+    },
+    {
+      "document_number": 3,
+      "component_number": 2,
+      "quote": "12. 40 CFR 257.107(e); (f)(1) through (4); (f)(6) through (13); (f)(18);"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Therefore, EPA is approving the State's version of these requirements:"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "2. 40 CFR 257.50(c); this amendment revises the scope of applicability to specify that it includes inactive CCR surface impoundments"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "11. ``Infiltration''; this additional definition in 40 CFR 257.53 is consistent with the term's plain meaning and dictionary definitions"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "12. ``Liquids''; this additional definition in 40 CFR 257.53 is consistent with the term's plain meaning and dictionary definitions"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "LDEQ did not adopt these amendments and did not seek approval of these provisions."
+    },
+    {
+      "document_number": 4,
+      "component_number": 2,
+      "quote": "apply to all CCR units and are more prescriptive than the requirements in the 2015 CCR Rule. LDEQ did not adopt these amendments and did not seek approval of these provisions."
+    },
+    {
+      "document_number": 4,
+      "component_number": 2,
+      "quote": "12. 40 CFR 257.107(e); (f)(1) through (4); (f)(6) through (13); (f)(18);"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "In the 2024 Legacy Rule, EPA amended certain terms and provisions that apply to all CCR units."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Therefore, EPA is approving the State's version of these requirements:"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "17. 40 CFR 257.104(a); this amendment clarifies that all owners or operators of CCR units that are subject to Sec. 257.102 are subject to the post-closure care requirements"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "as enumerated below, are not being approved:"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "1. ``Contains both CCR and liquids''; this additional definition in"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "2. ``Infiltration''; this additional definition in 40 CFR 257.53 is consistent with the term's plain meaning and dictionary definitions"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "3. ``Liquids''; this additional definition in 40 CFR 257.53 is consistent with the term's plain meaning and dictionary definitions"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "4. 40 CFR 257.71(d) for alternate liner demonstrations; and"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "5. 40 CFR 257.90(g) for suspension of groundwater monitoring requirements based on a no migration demonstration."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "ADEM did not adopt these amendments and did not seek approval of these provisions."
+    },
+    {
+      "document_number": 5,
+      "component_number": 2,
+      "quote": "apply to all CCR units and are more prescriptive than the requirements in the 2015 CCR Rule. ADEM did not adopt these amendments and did not seek approval of these provisions."
+    },
+    {
+      "document_number": 5,
+      "component_number": 2,
+      "quote": "12. 40 CFR 257.107(e); (f)(1) through (4); (f)(6) through (13); (f)(18);"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "Therefore, EPA is approving the State's version of these requirements:"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "5. ``Infiltration''; this additional definition in 40 CFR 257.53 is consistent with the term's plain meaning and dictionary definitions"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "6. ``Liquids''; this additional definition in 40 CFR 257.53 is consistent with the term's plain meaning and dictionary definitions"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "11. 40 CFR 257.104(a); this amendment clarifies that all owners or operators of CCR units that are subject to Sec. 257.102 are subject to the post-closure care requirements"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "WDNR did not adopt these amendments and did not seek approval of these provisions."
+    },
+    {
+      "document_number": 6,
+      "component_number": 2,
+      "quote": "apply to all CCR units and are more prescriptive than the requirements in the 2015 CCR Rule. WDNR did not adopt these amendments and did not seek approval of these provisions."
+    },
+    {
+      "document_number": 6,
+      "component_number": 2,
+      "quote": "l. 40 CFR 257.107(e); (f)(1) through (4); (f)(6) through (13); (f)(18);"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Exclusion / condition source",
+      "reviewer_note": "Requested by the reviewer. Doc 3's approved list shows Virginia approves every counted amendment, for example 40 CFR 257.50(c), Infiltration and Liquids. That rules out Virginia as a third State lacking a version, so each of the 10 is missing in exactly two States. Its second list shows Virginia did not adopt the 12 more prescriptive amendments, which the all-five count needs."
+    },
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Exclusion / condition source",
+      "reviewer_note": "Requested by the reviewer. Doc 4's approved list shows Louisiana approves every counted amendment, for example 40 CFR 257.50(c), Infiltration and Liquids. That rules out Louisiana as a third State lacking a version, so each of the 10 is missing in exactly two States. Its second list shows Louisiana did not adopt the 12 more prescriptive amendments, which the all-five count needs."
+    },
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    },
+    {
+      "trap": "Wrong jurisdiction or scope",
+      "how_a_careless_solver_fails": "Picks the wrong entity or section"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: Doc 2 groups Wyoming's unapproved 2024 amendments; leaving Wyoming out gives 1 and 0. Wrong jurisdiction or scope: Doc 6 approves \"Infiltration\" and \"Liquids\", which Doc 5 lists as not approved for Alabama; treating Alabama like Wisconsin gives 8 and 12. Gold: 10 and 12."
+}
