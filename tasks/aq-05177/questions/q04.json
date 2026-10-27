@@ -1,0 +1,96 @@
+{
+  "question": "Besides revenue, how many of RadNet's 2024 guidance ranges did the company increase at every one of its updates that year?",
+  "number_of_asks": 1,
+  "gold_answer": "3 guidance ranges",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 7, the CFO's guidance remarks in the third-quarter 2024 call): the 2024 guidance levels were \"released in conjunction with our 2023 year-end results in March of this year and revised in May and August\", and this November call revises them again, so 2024 had three updates: May, August and November.\nStep 2. Source input (Doc 5, the CFO's guidance update in May 2024): the company raised its imaging center Adjusted EBITDA range, its capital expenditures range and its free cash flow range; it decreased cash paid for interest; for Digital Health it raised Adjusted EBITDA and non-capitalized R&D and left the other ranges unchanged.\nStep 3. Source input (Doc 6, the CFO's guidance update in August 2024): the company raised the imaging center Adjusted EBITDA, capital expenditures and free cash flow ranges and lowered cash interest expense; \"For the digital health segment, our guidance ranges all remain the same\".\nStep 4. Source input (Doc 7, the CFO's guidance update in November 2024): the company raised the imaging center Adjusted EBITDA, capital expenditures and free cash flow ranges and decreased cash interest expense; Digital Health guidance stayed \"substantially the same\" apart from a higher non-capitalized R&D range.\nStep 5. Classification (Doc 5, Doc 6 and Doc 7): leaving out revenue, the ranges increased at all three updates are imaging center Adjusted EBITDA, capital expenditures and free cash flow. Cash interest fell each time; Digital Health Adjusted EBITDA rose only in May; non-capitalized R&D rose in May and November but not in August. Decoy: in each call the CEO's summary names only revenue, Adjusted EBITDA and free cash flow as increased, but the CFO's detail raises capital expenditures at every update too.\nStep 6. Final answer (Doc 5, Doc 6 and Doc 7): 3 guidance ranges.",
+  "answer_components": [
+    "3"
+  ],
+  "evidence": [
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Also for the imaging center segment, we’ve increased our EBITDA guidance by $5 million at the low end and the high end of our range."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "For capital expenditures for the imaging center segment, we increased our guidance both at the low end and the high end of the range by $5 million."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "we increased our free cash flow generation guidance level by $3 million to $68 million to $78 million"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "We increased our EBITDA guidance range by $2 million at the low and the high ends"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "We also increased our capital expenditures in the imaging center segment by $5 million to $135 million to $145 million."
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "We increased our free cash flow guidance range by $4 million"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "For the digital health segment, our guidance ranges all remain the same"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "We’ve also increased for the imaging center segment our EBITDA guidance by $5 million"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "For capital expenditures, we have increased our guidance level to $145 million to $155 million"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "Our free cash flow guidance range, we’ve increased our level to $83 million to $93 million"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        7
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Part vs total: in Docs 5, 6 and 7 the CEO's headline names only revenue, Adjusted EBITDA and free cash flow as increased, a part of the full list, so careless solvers count 2 besides revenue. The CFO's detail raises capital expenditures at every update too, giving 3."
+}

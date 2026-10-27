@@ -1,0 +1,76 @@
+{
+  "question": "RadNet's first 2024 revenue guidance for its imaging center segment was a range. Measured against 2023 revenue of the businesses that made up that segment in 2024, what growth did the bottom of the range imply? Give the percentage to one decimal place.",
+  "number_of_asks": 1,
+  "gold_answer": "5.3%",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 6, the CFO's guidance update in the second-quarter 2024 call): imaging center revenue guidance was raised \"by $10 million at the low and high end\", and \"that range is now $1.685,000,000 to $1,735,000,000\".\nStep 2. Source input (Doc 5, the CFO's guidance update in the first-quarter 2024 call): \"For revenue, we increased our guidance level for the imaging center segment by $25 million, both at the low end and the top end of the range.\"\nStep 3. Calculation (Doc 5 and Doc 6): 1685 - 10 - 25 = 1650, the bottom of the first 2024 range in millions of dollars, before the May and August raises.\nStep 4. Source input (Doc 4, the CFO's full-year 2023 remarks): 2023 revenue of the \"Imaging Center reporting segment of $1.604 billion\". From 2024 \"the eRAD software businesses and related health informatics businesses that were reported as part of our Imaging Center segment throughout 2023\" move to the new Digital Health segment, and \"These businesses produced $37.1 million of revenue\".\nStep 5. Calculation (Doc 4): 1604 - 37.1 = 1566.9, the 2023 revenue in millions of dollars of the businesses that made up the segment in 2024.\nStep 6. Calculation (Doc 4, Doc 5 and Doc 6): 1650 - 1566.9 = 83.1, the growth in millions of dollars implied at the bottom of the range.\nStep 7. Final answer (Doc 4, Doc 5 and Doc 6): 83.1 / 1566.9 = 5.3%, to one decimal place.",
+  "answer_components": [
+    "5.3%"
+  ],
+  "evidence": [
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "For revenue, we increased our guidance ranges by $10 million at the low and high end."
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "that range is now $1.685,000,000 to $1,735,000,000"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "For revenue, we increased our guidance level for the imaging center segment by $25 million, both at the low end and the top end of the range."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Imaging Center reporting segment of $1.604 billion"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "the eRAD software businesses and related health informatics businesses that were reported as part of our Imaging Center segment throughout 2023 will now be combined with our artificial intelligence segment to form a new Digital Health financial reportable segment"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "These businesses produced $37.1 million of revenue"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Unit normalization"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Unit or basis",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    }
+  ],
+  "why_these_are_traps": "Unit or basis: Doc 4 prints 2023 imaging center revenue of $1.604 billion, which still includes the $37.1 million eRAD and informatics businesses moved out for 2024; careless solvers divide by it and answer 2.9%. The 2024 segment's 2023 base is $1,566.9 million, giving 5.3%."
+}
