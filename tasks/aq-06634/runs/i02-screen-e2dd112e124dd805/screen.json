@@ -1,0 +1,23 @@
+{
+  "bundle": "aq-06634",
+  "corpus_sha256": {
+    "docs/Paychex-Q1-FY2027-Earnings-Release.txt": "97e638df621b38b0cce411b06624e58b29124a560bb6804b86f213a0cdbb2d43",
+    "docs/Paychex-Q1-FY2027-Quarterly-Report.txt": "279224ceebd0dfd118543486f3830a95b9b985b248b1841c4b1588688f7a47d2",
+    "docs/Paychex-Q2-FY2026-Earnings-Release.txt": "9f5426ed29d8354c7f9aff8a75608010eb4ad1fd6c203329ef90bdfc3ad9d599",
+    "docs/Paychex-Q2-FY2026-Quarterly-Report.txt": "314cfe99f761c80663a25b5458acec17a92ea33620212cef5a0fc13f27247adb",
+    "docs/Paychex-Q3-FY2026-Earnings-Release.txt": "67765ef6c0d8d2502ee3c0da932ddb40eefb41c963db9f8f668728ed93e2e87c",
+    "docs/Paychex-Q3-FY2026-Quarterly-Report.txt": "f11e1e514d2362dd28d21bdacf9aef1942ec91d709bbfcc785ccf153f3b97ad9",
+    "text/D01.txt": "622a68e283b75bcdfc85f6f0b73452335c6bb8abd2839dae3be8c8b15f8f5443",
+    "text/D02.txt": "a0cf49840b00956f3be663b8a1571f6cfcce0813f5f54a21336cd7f6df04e1a7",
+    "text/D03.txt": "9db22a0d105b5ef5c680afe9d9f2469d360038409ddf9c7befdb20a537f08142",
+    "text/D04.txt": "e736a57696c61f73121f51c5940cdb7de0d269637533cd4c5a1701db76676feb",
+    "text/D05.txt": "206015ae900c683cca5f1a5a23e29b66478511290d488a3597d02b73f5dc480d",
+    "text/D06.txt": "59d65a1c17272dede65de30168316e3778907776908c5bba9c1165a0aa247747",
+    "text/manifest.json": "5e72b6c47117e28a85e8fc927dde10929a6a34b937928f5d09569bf6e685e762"
+  },
+  "independence": "One fresh context per solve; the packet holds documents and the sentence only.",
+  "question": "What was the largest dollar value of common stock Paychex repurchased in any single quarter of its fiscal year ended May 31, 2026? Answer in millions of dollars to one decimal place.",
+  "schema": 1,
+  "screen_sha256": "e2dd112e124dd805d9c3f0dfee60e50a91b30209179bdee0746a7ddb21b27210",
+  "source": "notes/sketches/i02.md"
+}

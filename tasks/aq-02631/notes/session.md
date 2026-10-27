@@ -1,0 +1,19 @@
+# Current bundle checkpoint
+
+- Goal and user constraints: AQ-02631, seven SEC crypto index ETF notices/orders (Franklin D01; Hashdex D02 rule proposal + D03 options; Bitwise 10 D04 staff order + D05 Commission order; T. Rowe Price D06 original + D07 Amendment No. 1). User 2026-10-10: "there is no slot for Easy Tier for this bundle, we should target medium and high. do your best."; then "q02, i02, i03 too easy for quick test, q01 too easy in difficulty check ... fix".
+- Verification target / measured platform tier: medium (hard welcome) / Easy only (q03, below target; user: no Easy slot). Difficulty runs used 2 of 10 (q01 Too easy, Low 5/5; q03 In band Easy, Low 2/5). Quick tests: q02 rev 0, i02, i03 too easy.
+- Prepared runs / tested_sha256: q02 rev 1 bb40ae5c86df8a6ce5e6fca216f53309e184a1ed95fb7f8dd741d4c4c5ea4e78; q03 rev 0 0bcf30b364952305fc99ced1dd651a236fe6df7f1e5431c3b29ffd33e2d2d05e. Historical: q01 rev 0 c288004c... (measured); q02 rev 0 a6307097...; untested ec903e1d..., 3ec95e95....
+- Bundle slug / documents / extraction warnings: aq-02631, D01-D07 = Doc 1-7, complete capture, no gaps.
+- Phase: feedback, after round 2. No round 3 sketch proposed.
+- Questions: q01 dropped (Version 45cf69, Low 5/5: every attempt dated the proceedings and chose Doc 6; one used the zero from Doc 7's list as a hint). q02 rev 1 checked, 0 FAIL / 5 WARN: "By how many percentage points would Solana's weight in the Hashdex trust, at its index's December 31, 2024 weights under the strategy as Nasdaq filed it, exceed its June 30, 2025 weight in Bitwise 10 (two decimals)?" Gold 1.10 percentage points (4.78 x 10 / 11.57 = 4.13, minus 3.03); wrong routes 1.75, 0.70. q03 rev 0 checked (platform pass at Easy, Version 45cf7c, Low 2/5: all five attempts had the reasoning, three answered March 17, 2025 from memory instead of Doc 6's March 18), 0 FAIL / 7 WARN: "On what date would a Hashdex trust portfolio held at the index weights of December 31, 2024 first have met proposed Rule 5712's 90% requirement?" Gold March 18, 2025 (CME Solana futures, D06 only; uncovered 11.57 - 4.78 = 6.79); wrong routes May 20, 2025 and September 18, 2025.
+- Dropped sketches: i02, i03 (quick test too easy).
+- Decisions and constraints: q02: tick Doc 2 and Doc 5 with Doc 4 as "or" (Answer component). q03: tick Doc 6 (Answer component) and Doc 2 (Used to identify). Words to keep: q02 "Solana's weight", "December 31, 2024 weights", "under the strategy as Nasdaq filed it", "June 30, 2025", "percentage points", "two decimals", and never name Rule 5712, a cap, eligibility or futures; q03 "held at the index weights of December 31, 2024", "first", "90% requirement", "proposed Rule 5712", and never name Solana, CME, futures or T. Rowe Price.
+- Known risks: q02 rev 1 has no platform result; q03's traces show every low attempt finding the coverage facts and one describing the cap unprompted, so nothing suggests it holds. q03's gold follows Doc 6 (March 18, 2025); the solvers' recalled real-world date is March 17.
+- Candidate families: hooks.md h1-h13. Closed by platform results: h1/h2, h11; h13 measured Easy. Single-source or ambiguous: h4, h5. Untested: h12 as q02 rev 1. Every low attempt that read the deciding passage was right (q01 5 of 5, q03 2 of 2).
+- Revision rounds used / open platform feedback: q02 1; feedback-index P1-P5 (P2 open).
+- Lesson saved: memory docket-local-solver-calibration (2026-10-10 aq-02631 entry), MEMORY.md.
+- Five-candidate trial: not enrolled (workspace slots full). Timing partial.
+- Efficiency ledger / active timer: ../../../notes/efficiency.json / none.
+- Next action (user): decide between releasing the bundle and submitting q03 if an Easy slot opens (the 04:11 capture showed "Easy 0/1"). Optional free check: quick-test q02 rev 1 ("1.10 percentage points"); run its difficulty check only if it survives.
+- Runtime/model/effort: Claude Code, claude-opus-5-5.
+- Optional diagnostic: none run.

@@ -1,0 +1,27 @@
+{
+  "bundle": "aq-06840",
+  "corpus_sha256": {
+    "docs/albemarle-corporation-q1-2025-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2025-04-30.txt": "c072487f6b06181435356c24d1c57eaa831ccb3a3f5bdd079da8aba4c527793e",
+    "docs/albemarle-corporation-q1-2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-05-06.txt": "bdf54b4e953a783b830acb464f5c5ea882c4e0c4067bbc1f72ca018dec949a5d",
+    "docs/albemarle-corporation-q2-2025-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2025-07-30.txt": "800e19535e27d063a8f14d867afd23ab65ae78e13753c58cbe43ba24227603c4",
+    "docs/albemarle-corporation-q2-2026-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-08-05.txt": "7aac1dfd90a2dc7ddab8922ead87d952cd513e7d7bae0663852985baf8cda6ee",
+    "docs/albemarle-corporation-q3-2024-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2024-11-06.txt": "2fbabade50051d98e4c08636efa3bc39f21363b7b0000c7b949c034f33b4865f",
+    "docs/albemarle-corporation-q3-2025-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2025-11-05.txt": "e7febbdec69185efbb2ba13af57c30e413053e8f2e7c4fbd071b6ec309c508ab",
+    "docs/albemarle-corporation-q4-2024-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2025-02-12.txt": "f87e537f47ac912bf233d012b028ec4548937893e60253f4a054e46a81bf3663",
+    "docs/albemarle-corporation-q4-2025-earnings-release-form-8-k-item-2-02-ex-99-1-filed-2026-02-11.txt": "effc2d989c3cefbf5e46e0220f316b1ffbfdfff605d8bf3781b700213f2281b7",
+    "text/D01.txt": "a3928b02bd7fe8b8e1376e2fd7bac762d7015de384bfd73ddc50f391797961a1",
+    "text/D02.txt": "2a4f09766dba737937cb2e481aa156b1d75d7d14866e4bdfeb03c2b8c071d922",
+    "text/D03.txt": "6191df90a0471852434c51ad7540c4e3aa89fc8dcf8248e820c713a68571e69b",
+    "text/D04.txt": "1b5924c88b0967cbf27e74945c8f3f160247d28def4d1397c62b4f9323661ac4",
+    "text/D05.txt": "8ccc147e891d9820e85e1ed88a4a4fa70c41e1f50a93baa061c7426149c2a1d9",
+    "text/D06.txt": "20f25af95f62787dbedbac9cff8382824fe955479c62e1b5042ea657a15ba9ac",
+    "text/D07.txt": "16a6f9e4ce6a945120e1954d629b3c90fac73e21958e855546924251668b5112",
+    "text/D08.txt": "8b94e2ec92ebbbfb6325bd7fc9b604d67e3ffe5d49b431c6b7d833512d7cd789",
+    "text/manifest.json": "db93272219ce7f66ea32ac405259f5d0f5b8d77cc8b82eca8c815561cf2c4f76"
+  },
+  "independence": "One fresh context per solve; the packet holds documents and the sentence only.",
+  "question": "On the basis used in Albemarle's Q2 2026 earnings release, by how much did its free cash flow (operating cash flow minus capital expenditures) for Q2 2026 exceed that for Q2 2025? Answer in millions of dollars to one decimal place.",
+  "schema": 1,
+  "screen_sha256": "4ae2b3a329faf8a6c0c6a128024fd4f874f4fd59ce20cee1542bc41cce4b9fe2",
+  "source": "notes/sketches/i02.md"
+}

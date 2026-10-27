@@ -1,0 +1,78 @@
+{
+  "question": "How much of Valero's 2025 capital investments did not go to sustaining the business?",
+  "number_of_asks": 1,
+  "gold_answer": "$203 million",
+  "step_by_step_reasoning": "Step 1. Source input and calculation (Doc 3, Investing and Financing Activities): capital investments totaled 660 million dollars in the first quarter of 2025, of which 582 million dollars was for sustaining the business, so the rest was 660 - 582 = 78 million dollars (derived).\nStep 2. Source input and calculation (Doc 4, Investing and Financing Activities): second quarter of 2025, 407 million dollars in total and 371 million dollars for sustaining the business: 407 - 371 = 36 million dollars (derived).\nStep 3. Source input and calculation (Doc 5, Investing and Financing Activities): third quarter of 2025, 409 million dollars in total and 364 million dollars for sustaining the business: 409 - 364 = 45 million dollars (derived).\nStep 4. Source input and calculation (Doc 6, Investing and Financing Activities): fourth quarter of 2025, 412 million dollars in total and 368 million dollars for sustaining the business: 412 - 368 = 44 million dollars (derived).\nStep 5. Calculation (Doc 3 and Doc 4): first half of 2025: 78 + 36 = 114 million dollars (derived).\nStep 6. Calculation (Doc 3, Doc 4 and Doc 5): first nine months: 114 + 45 = 159 million dollars (derived).\nStep 7. Calculation (Doc 3, Doc 4, Doc 5 and Doc 6): full year 2025: 159 + 44 = 203 million dollars of capital investments that did not go to sustaining the business (derived). No release states the year's sustaining split; each states it only for its own quarter, as a part of total capital investments (not of the smaller \"attributable to Valero\" figure).\nStep 8. Check (Doc 3, Doc 4, Doc 5 and Doc 6): the four quarterly totals make up the year's capital investments in Doc 6's reconciliation table: 660 + 407 + 409 + 412 = 1,888 million dollars, so the four quarters cover 2025 completely.",
+  "answer_components": [
+    "$203 million"
+  ],
+  "evidence": [
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Capital investments totaled $660 million in the first quarter of 2025, of which $582 million was for sustaining the business"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Capital investments totaled $407 million in the second quarter of 2025, of which $371 million was for sustaining the business"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Capital investments totaled $409 million in the third quarter of 2025, of which $364 million was for sustaining the business"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "Capital investments totaled $412 million in the fourth quarter of 2025, of which $368 million was for sustaining the business"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "Capital investments 412 547 1,888 2,057"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Unit or basis",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Unit or basis: Doc 6's prose gives the year only as capital investments attributable to Valero ($1.8 billion, table 1,797), and 1,797 minus the 1,685 sustaining gives $112 million. Each release states sustaining as part of total capital investments (1,888), so the answer is $203 million."
+}

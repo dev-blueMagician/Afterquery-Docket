@@ -30,7 +30,10 @@ A platform "Revision requested" works the same way as a rejection: the platform 
 back. Log the panel verbatim first (notes/feedback-qNN.md plus a Feedback log line). Then revise in place
 as a new revision with fresh records. Status moves from draft to checked, and back to submitted when the
 user resubmits. Remove `accepted_tier` while the revision is pending (aq-01278 q02 2026-10-06, aq-01333
-q01 2026-10-07). Change only what the reviewer asked for.
+q01 2026-10-07). Change only what the reviewer asked for. On resubmission, take `accepted_tier` from the new
+revision's own difficulty result, not the returned version's. Any change to the question, answer or necessary
+documents needs a new result; aq-01333 q01 rev 5 only unticked a document and still needed one (review,
+2026-10-08).
 
 When the user confirms a submission, set `status: submitted` and add the platform tier the
 question passed at as `accepted_tier: <Easy|Medium|Hard> Tier` in the front matter (user,

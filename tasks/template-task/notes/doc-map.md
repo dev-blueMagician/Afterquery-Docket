@@ -1,6 +1,6 @@
 # TODO-SLUG - document map
 
-Written once by `bundle-mapper` from `text/` (and `docs/` for flattened tables and scans).
+Maintained by the caller or optional `bundle-mapper` from `text/` (and `docs/` for layout issues).
 It is for navigation, like the form's bundle overview: where things are, not what to ask.
 Questions quote the documents, never this map.
 
@@ -11,6 +11,7 @@ Questions quote the documents, never this map.
 - Gaps: TODO scans/chart checks and exact unread/missing ranges; finish available text in chunks before calling coverage full.
 - Extraction spot-checks: TODO page/section count, representative table and footnote/detail checked against originals for each document
 - Provenance: TODO notes/intake.json, capture completeness, current source hashes and recovered-source history
+- Reuse binding: TODO recorded source/extraction hashes per mapped document; reuse unchanged entries and refresh changed inputs/dependent claims
 
 ## D01 - TODO title
 
@@ -28,6 +29,10 @@ Questions quote the documents, never this map.
 - Operative definitions, rules and scope exceptions: TODO with verbatim passages and locations
 - Amendments or contradictions: TODO actual stated change, affected rule and cross-reference locations
 - Coverage: TODO full, partial or missing; what was inspected and what remains unread
+
+<!-- Read actual candidate-relevant passages with context and search the entire bundle for
+duplicates/substitutes. A search is not a full read. Expand coverage when the candidate needs it;
+lists/counts require the complete relevant universe, and needed gaps stay blocking. -->
 
 ## Shared ground (navigation only)
 

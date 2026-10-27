@@ -1,0 +1,98 @@
+{
+  "question": "How many more transmitter-characteristic items did the FCC's final space-launch frequency-coordination request list contain than its December 2024 proposed list?",
+  "number_of_asks": 1,
+  "gold_answer": "5 more items",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 2, proposed data requirements for frequency coordination requests, item \"5. Transmitter characteristics for each transmit station (center frequency)\"): the proposed list runs from \"a. Transmitter make/model\" to \"l. Emission designator\", one lettered item each for make/model, output power, antenna type, number of antennas deployed, antenna gain, beam width, frequency tolerance, orientation, antenna polarization, EIRP per antenna, total EIRP and emission designator.\n\nStep 2. Source fact (Doc 2, proposed fixed and base station registration): \"b. Antenna azimuth\" and \"c. Antenna elevation angle\" were proposed only for initial station registration, not for the transmitter list in Step 1.\n\nStep 3. Source fact (Doc 4, final frequency coordination requests, under the same heading \"5. Transmitter characteristics for each transmit station (center frequency)\"): the final list runs from \"a. Transmitter make/model\" to \"q. Emission designator\". Its items a to i are the proposal's a to i, and its o to q are the proposal's EIRP per antenna, total EIRP and emission designator, so no proposed item was dropped.\n\nStep 4. Source fact (Doc 4, the same final list): the items inserted between them are \"j. Antenna azimuth\", \"k. Antenna elevation angle\", \"l. For fixed and base stations, projected space launch tracking arc path\", \"m. For fixed and base stations, the height AGL to the radiation center\" and \"n. For mobile and itinerant stations, maximum antenna height AGL\". The Bureau's discussion explains only the last three, requested by SBE and AFTRCC; azimuth and elevation angle move in from the proposed registration list without comment, so counting only the discussed additions misses them.\n\nStep 5. Calculation (Doc 2 and Doc 4): items moved in from proposed registration (azimuth, elevation angle) plus newly requested items (arc path, radiation center height, maximum antenna height): 2 + 3 = 5. With nothing dropped, the final list (lettered a to q) holds 5 more items than the proposed list (lettered a to l).",
+  "answer_components": [
+    "5"
+  ],
+  "evidence": [
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "5. Transmitter characteristics for each transmit station (center frequency):"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "l. Emission designator."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "b. Antenna azimuth (if the antenna is tracking, state"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "c. Antenna elevation angle (if the antenna is tracking, state"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "5. Transmitter characteristics for each transmit station (center frequency):"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "j. Antenna azimuth (if the antenna is tracking, state"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "k. Antenna elevation angle (if the antenna is tracking, state"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "l. For fixed and base stations, projected space launch tracking arc path;"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "m. For fixed and base stations, the height AGL to the radiation center when the antenna is pointed along the horizon;"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "n. For mobile and itinerant stations, maximum antenna height AGL;"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "q. Emission designator;"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    },
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Picks the wrong entity or section"
+    }
+  ],
+  "why_these_are_traps": "Look-alike measure: Doc 4's discussion names three commenter-requested additions; taking that count as the list's growth gives 3. Linking: Doc 2 has azimuth and elevation in its registration section; linking Doc 4's items there treats them as proposed: 3. Doc 4's a-q list against Doc 2's a-l gives 5."
+}

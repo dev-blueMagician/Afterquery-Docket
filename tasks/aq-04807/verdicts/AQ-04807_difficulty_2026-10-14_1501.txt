@@ -1,0 +1,370 @@
+AQ-04807 · Ozone Nonattainment Area Determinations — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-04807
+Saved: 2026-10-14 15:01 (local time)
+Bundle: Ozone Nonattainment Area Determinations · Public policy · 7 documents · 94,468 prompt tokens
+Run read: Run 2, the latest of 2
+Attempts read: 4
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 17 runs left · 15 of 60 runs used in the last 24 h (all tasks)
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 3 attempts right
+
+High model: two solvers try up to 3 times each. Ready when both get it wrong at least once and not every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Rephrase to avoid the documents' own headline vocabulary, e.g., "In the actions in these documents, for which areas did EPA reason that contingency measures could never be triggered because the area is shielded from a failure-to-attain finding under section 181(b)(2)?" This forces the solver to work through the contingency-trigger reasoning rather than keyword-match a title. Why: The phrase "international-emissions demonstration" is nearly a verbatim match for the titles and summary language of documents 4 and 7 ("Determination of Attainment ... But for International Emissions"). A solver can jump straight to those two documents and skip the other five entirely. Within each, Section III/"Proposed Action" states in one sentence that contingency-measure requirements "would no longer apply" to the named area, so both Phoenix-Mesa and Northern Wasatch Front are single-lookup answers. From a run (High model · attempt 3): High model's third attempt also relied on the duplicated boilerplate in documents 4 and 7, where the answer to the contingency-measure question is stated verbatim for two areas and implied for Imperial County by the repeated footnote. Doc 4 Doc 7
+
+Gold answer · Your answer
+-------------------------
+
+- 2 Either tighten the question to explicitly include prior EPA interpretations cited in these documents ("including areas EPA references from earlier rulemakings"), or drop Imperial County from the gold answer and instead test the harder distinction between 179B(b) relief and Clean Data Policy suspension of contingency measures. Why: The gold answer lists Imperial County without qualification, but the documents only support it via a footnote describing a prior EPA interpretation for the 2008 ozone NAAQS (proposed 84 FR 58641, finalized 85 FR 11817). The question's phrase "has EPA said" is loose enough that a solver could reasonably limit the answer to the two areas EPA addresses in the present actions. The reliable matching suggests solvers read the footnote, but the item is the only one requiring inference rather than direct statement, and the question does not signal that prior actions count. From a run (High model · attempt 3): High model's third attempt also relied on the duplicated boilerplate in documents 4 and 7, where the answer to the contingency-measure question is stated verbatim for two areas and implied for Imperial County by the repeated footnote. Doc 4 Doc 7
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 2 (Oct 14, 2026, 2:57 PM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+2 runs
+
+Only the latest run, Run 2, is in this file; 1 earlier run is left out.
+
+------------------------------------------------------------------------
+Run 2 · Too easy · Result the gate uses
+Oct 14, 2026, 2:57 PM · Version 2b862e (current) · Low — · Medium — · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: question: removed “nonattainment”, “had tribal lands remain at a lower classification after a state-requested reclassification?”, “the area names”, “state that none qualify.”; added “has EPA said would need no failure-to-attain contingency measures because of an international-emissions demonstration?”, “say none.”. answer: removed “Coachella Valley, Greater Connecticut”; added “Imperial County, Northern Wasatch Front, Phoenix-Mesa”
+
+Solver summary: Run 2 · Too easy · 3 of 3 right
+Every solver attempt got it (3 of 3).
+
+Your answer: Imperial County, Northern Wasatch Front, Phoenix-Mesa
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: Note: where it went wrong
+
+Final answer: None. | Your answer (gold): Imperial County, Northern Wasatch Front, Phoenix-Mesa
+
+Where it went wrong: Without documents, Low model answered "None," showing the answer is not retrievable from general knowledge and depends entirely on the two 179B(b) documents.
+
+Full answer
+-----------
+
+None.
+
+Reasoning
+---------
+
+We need answer question: "Which areas has EPA said would need no failure-to-attain contingency measures because of an international-emissions demonstration? List alphabetically, or say none." Need recall EPA rules regarding international emissions demonstration and failure-to-attain contingency measures for ozone? Need identify areas.
+
+We need answer from own knowledge. Let's recall Clean Air Act ozone attainment and contingency measures. In 2015 ozone NAAQS (0.070 ppm), there were attainment designations in 2018. Some areas classified as Moderate. For Moderate areas that fail to attain by attainment date (Aug 2, 2021?), need bump-up to Serious and implement contingency measures? Actually there is provision for international emissions demonstration: if an area can show that failure to attain is due to emissions from outside US, then area may be bumped up? Or not required contingency measures?
+
+Specifically, under CAA section 179(d), if a state demonstrates that an area would have attained the standard by attainment date but for emissions emanating from outside the US, the area can be granted a 1-year extension? Or can avoid being bumped up? Let's recall details.
+
+In April 2022? Or in 2022 EPA finalized determinations of attainment by the August 2, 2021 attainment date for 2015 ozone standard for Marginal areas (attainment date Aug 2, 2018) and for Moderate? Wait need correct timeline.
+
+2015 ozone standard promulgated Oct 2015. Designations effective 2018: Marginal attainment date Aug 1, 2021? Actually for ozone, attainment dates: Marginal within 3 years after promulgation? Let's check mental: For 2015 standard (0.070 ppm), initial designations in 2018. Marginal areas attainment date was August 2, 2028? No that sounds wrong. Let's not confuse.
+
+But the question mentions "failure-to-attain contingency measures because of an international-emissions demonstration". This sounds like in a specific rulemaking, EPA said certain areas wouldn't need failure-to-attain contingency measures if they made an international emissions demonstration.
+
+Maybe this relates to the 2015 ozone standard implementation rule (the "Implementation of the 2015 National Ambient Air Quality Standards for Ozone: Nonattainment Area Classifications and State Implementation Plan Requirements" finalized in 2020? Or the 2022 determination?
+
+Let's recall: In December 2022, EPA made attainment determinations for the 2015 ozone NAAQS for areas classified Moderate with attainment date Aug 2, 2021? Wait Moderate attainment date is 6 years after designations? Designations in 2018, so Moderate attainment date was August 2, 2021? Yes that sounds right: Marginal had attainment date of Aug 1, 2021? Actually need check consistency: For 1997 and 2008 standards, attainment dates were based on classification year. But for 2015, the CAA sets attainment dates: Marginal - 3 years after promulgation? Promulgated 2015, so by 2018? Hmm but designations delayed until 2018. The attainment date for Marginal was Aug 2, 2028? No that's 10 years? Let's not overanalyze.
+
+But there was a determination in 2022? In October 2022 EPA proposed determination that 31 areas failed to attain 2015 ozone standard by attainment date of Aug 2, 2021 (for Marginal? Or Moderate?). Actually I think the attainment date for Marginal areas was August 2, 2018? No.
+
+Let's search mental database: In April 2022, EPA announced final determinations that 31 areas failed to attain the 2015 ozone standards by the Aug 2, 2021 attainment date and were bumped up to Moderate. Yes! That sounds correct: Many areas were initially designated Marginal in 2018 with attainment date of Aug 2, 2021 (3 years after designations?). They failed, so bumped up to Moderate with attainment date of Aug 2, 2024? Or 2024? Yes, that sounds right: Marginal attainment date was Aug 2, 2021; failure bumped them to Moderate.
+
+Then for Moderate areas, attainment date is Aug 2, 2024? Actually Moderate is 6 years after designations? Wait designations in 2018, plus 6 years = 2024, yes.
+
+But also there was an "international emissions demonstration" available for areas near borders? Under CAA §179(b), a state may petition for a 1-year extension if it demonstrates that the area would have attained but for international emissions. Or maybe it's section 179(b)(1) allowing up to two 1-year extensions if certain conditions met, including international transport?
+
+Specifically, CAA section 179(b)(1) allows the Administrator to grant up to two 1-year extensions of the attainment date for an area if the state has complied with all requirements and implemented all reasonably available measures, and if the area wouldn't have exceeded but for emissions from outside US? Let's recall: The 1-year extension provisions are in section 181(a)(5) for ozone? Actually for ozone, section 181(a)(5) allows a 1-year extension if the area has 3.2? Hmm need correct.
+
+But the question specifically asks "Which areas has EPA said would need no failure-to-attain contingency measures because of an international-emissions demonstration? List alphabetically, or say none."
+
+This sounds like in some rule, EPA listed specific areas that, if they eventually fail to attain and invoke an international emissions demonstration, they wouldn't be required to implement contingency measures. Or maybe they already made the demonstration and therefore don't need contingency measures now.
+
+Let's recall a specific Federal Register notice maybe in 2026? But we need answer now.
+
+Perhaps it's about the 2015 ozone standard and the "failure to attain" contingency measures required for Moderate areas that fail to attain by Aug 2025? No.
+
+Let's parse the wording precisely: "Which areas has EPA said would need no failure-to-attain contingency measures because of an international-emissions demonstration?"
+
+This sounds like EPA said: For these areas, if they fail to attain, they usually must implement contingency measures. However, if they make an international-emissions demonstration, then they need not implement those contingency measures.
+
+We need list the areas alphabetically.
+
+This might relate to the 2025? Or maybe it's in the context of the 2023 proposed rule for implementation of 2015 ozone standards? Let's recall in November 2023 EPA proposed updates? Or in 2024?
+
+Actually, I think there was a determination in October 2023 about attainment for 2015 ozone for Moderate areas? Wait the attainment date for Moderate was Aug 2, 2024? Or maybe Aug 2, 2021 for Marginal, then bumped to Moderate with attainment date Aug 2, 2024? Yes, likely. So in late 2024, EPA might determine which Moderate areas attained by Aug 2, 2024.
+
+But the question mentions "failure-to-attain contingency measures" - these are measures that kick in if an area fails to attain by the attainment date. For Moderate areas, if they fail, they get bumped to Serious and also must implement contingency measures?
+
+But there is also the international emissions demonstration that can excuse failure?
+
+Let's recall specific areas near borders that have international transport issues: Areas near Mexico (e.g., El Paso, TX; parts of Arizona? California?). Or near Canada (e.g., some northern states).
+
+But we need specific list that EPA said need no contingency measures because of international-emissions demonstration.
+
+Let's recall in April 2028? No.
+
+Perhaps it's in the context of the 2015 ozone NAAQS attainment determination for the August 2, 2021 date. In that determination, EPA bumped up 31 areas from Marginal to Moderate. Among them, some were near borders and might have international influence. But the question asks "would need no failure-to-attain contingency measures because of an international-emissions demonstration" - maybe for those bumped-up areas, they have to implement contingency measures unless they make an international demonstration?
+
+Wait, I think I need to recall specific language from a Federal Register document, maybe the "Implementation of the 2015 National Ambient Air Quality Standards for Ozone: Nonattainment Area Classifications Approaches" but not sure.
+
+Let's systematically recall CAA provisions for ozone contingency measures. Under section 172(c)(9), SIPs must provide for implementation of specific measures if an area fails to meet attainment date (contingency measures). For Moderate areas, the contingency measures are required in the SIP.
+
+But there is also section 179(d) maybe?
+
+Actually, there's a specific provision in CAA section 179(b) for international border areas. Let's check mental: Section 179(b) is "International border areas". It says that if a state demonstrates that an area in a state that borders another country would have attained the standard by the attainment date but for emissions emanating outside the US, then the area shall be treated as having attained? Or can get an extension?
+
+Specifically, section 179(b)(1) might allow an area to avoid being bumped up if international emissions caused the failure. Let's recall: In the 2015 ozone implementation rule, EPA discussed section 179(b) demonstrations for areas that share air basins with Canada or Mexico.
+
+The question asks "Which areas has EPA said would need no failure-to-attain contingency measures because of an international-emissions demonstration?"
+
+This sounds like EPA listed specific areas for which, if a section 179(b) demonstration is made, then the failure-to-attain contingency measures are not required.
+
+Maybe in the 2023 implementation rule, EPA said that for certain border areas (like El Paso-Las Cruces, TX-NM; maybe San Diego?), the contingency measures need not apply if there's an international emissions demonstration.
+
+But I need be precise with area names, alphabetically.
+
+Let's recall news in 2022 or 2023 about EPA granting 1-year extensions? Actually in October 2023, EPA proposed to determine that 5 areas failed to attain by Aug 2023? Hmm.
+
+Let's search mental news headlines: In October 2022, EPA bumped up 31 areas. In December 2023, EPA proposed determination for 2015 ozone for 19 counties? Or in April 2024, EPA finalized attainment determinations for 2015 ozone for 21 areas?
+
+Wait there was a news release in April 2024? Let's recall: In April 2024, EPA announced final "Determination of Attainment by the Attainment Date for the 2015 Ozone National Ambient Air Quality Standards" maybe for Moderate areas with attainment date of Aug 2, 2024? Or maybe for Serious?
+
+Actually, I think in April 2024 EPA proposed that several areas failed to attain the 2015 ozone standard by the Aug 2, 2024 attainment date for Moderate areas, bumping them up to Serious. The affected areas might include: Baltimore, MD; Binghamton, NY; Chicago, IL-IN-WI; Dallas-Fort Worth, TX; Denver, CO? Wait no, some of those are already Serious.
+
+But also in that rulemaking, EPA might have discussed international emissions demonstrations for some border areas.
+
+Let's recall specific border areas designated Moderate: Maybe "El Paso-Las Cruces, TX-NM" was designated Moderate? Or Marginal?
+
+Actually, initial 2018 designations for 2015 ozone: Many areas were Marginal, some Moderate, some Serious, some Severe. The Moderate ones included: Chicago-Naperville, IL-IN-WI; Dallas-Fort Worth, TX; Denver-Boulder, CO? Wait Denver was Marginal initially then bumped? Let's check mental: In 2018, designations were: 51 areas Marginal, 19 Moderate, 8 Serious, 1 Severe (Los Angeles), and 1 Extreme? Or maybe not.
+
+Specifically, the 2018 designations included:
+- Marginal: Many, including Atlanta, Boston, etc.
+- Moderate: Baltimore, MD; Chicago, IL-IN-WI; Dallas-Fort Worth, TX; Denver-Aurora, CO; Greater Connecticut; Houston-Galveston-Brazoria, TX; New York-Northern New Jersey-Long Island, NY-NJ-CT; Philadelphia-Wilmington, DE-NJ; Phoenix-Mesa, AZ; Pittsburgh, PA; San Diego, CA; San Francisco Bay, CA; St. Louis, MO-IL; Washington, DC-MD-VA; etc. Actually need correct list.
+
+But then in 2027? No.
+
+However, the question might be simpler: "Which areas has EPA said would need no failure-to-attain contingency measures because of an international-emissions demonstration? List alphabetically, or say none."
+
+This sounds like the answer might be "none". But I need be sure.
+
+Let's recall that in the implementation rule for 2015 ozone, EPA said that an international emissions demonstration can be used to avoid bump-up, but contingency measures still apply? Or maybe they said that for areas that make the demonstration, they don't need contingency measures?
+
+The wording "failure-to-attain contingency measures" are required in SIPs for all nonattainment areas except those with an international emissions demonstration?
+
+Actually, there might be a specific exemption: Under CAA section 172(c)(9), contingency measures are required, but there may be an exception for areas that demonstrate failure due to international emissions?
+
+But the question asks "Which areas has EPA said..." implying there is a specific list of areas named by EPA.
+
+Let's recall in 2015 implementation rule (80 FR 12264? Or 2020?), EPA listed specific areas near international borders for which a section 179(b) demonstration could be made: maybe "El Paso, Texas"; "Imperial County, California"; "Pima County, Arizona"? Or "Whatcom County, Washington"?
+
+Wait, there is a known issue with ozone in the US-Mexico border: El Paso, Texas and Doña Ana County, New Mexico share air with Ciudad Juárez, Mexico. Also in California, Imperial County borders Mexico (Mexicali).
+
+Also on the Canadian border: Some areas in Washington, Idaho, Montana?
+
+But the question asks "which areas... List alphabetically" So likely there are two or more.
+
+Let's recall in December 2026? No.
+
+Actually, I think in 2022 when EPA bumped up 31 areas, they also said that two of them might be able to invoke the international border provision? Let's check mental list of 31 bumped-up areas in April 2022: They included: Baltimore, MD; Binghamton, NY; Chicago-Naperville, IL-IN-WI? No that was already Moderate. Let's list actual ones bumped from Marginal to Moderate in 2022: The 31 areas included parts of many states. Among them, maybe "El Paso County, Texas" was not in the list because it was already Marginal and failed? Or maybe it was in the list.
+
+But wait, the attainment date for those Marginal areas was Aug 2, 2028? No I'm mixing up.
+
+Let's recall the actual news in October 2022? Or April 2022? The headline said "EPA bumps up 31 areas that failed to meet 2015 ozone standards". Those areas were originally designated Marginal in 2018 with an attainment date of August 2, 2021. They failed, so they were bumped up to Moderate, with new attainment date of Aug 2, 2024? Or 2021?
+
+The list of 31 areas included:
+- Allegan County, Michigan?
+- Baltimore, Maryland?
+- Cincinnati, Ohio-Kentucky-Indiana?
+- Cleveland, Ohio?
+- Dallas-Fort Worth, Texas?
+- Denver, Colorado?
+- Detroit, Michigan?
+- Grand Rapids, Michigan?
+- Houston, Texas?
+- Louisville, Kentucky-Indiana?
+- Milwaukee, Wisconsin?
+- New York City?
+- Philadelphia?
+- Pittsburgh?
+- San Antonio, Texas?
+- San Diego?
+- Sheboygan, Wisconsin?
+- St. Louis?
+- Washington, DC?
+- West Michigan?
+
+That doesn't seem right because some were already Moderate.
+
+Actually, I think the 31 areas were mostly in the eastern and central US, and included:
+Baton Rouge, LA?
+Birmingham, AL?
+Boston, MA?
+Charlotte, NC?
+Chicago?
+Cincinnati?
+Cleveland?
+Colorado Springs?
+Columbus, OH?
+Dallas-Fort Worth?
+Denver?
+Detroit?
+Grand Rapids?
+Houston?
+Indianapolis?
+Kansas City?
+Las Vegas?
+Louisville?
+Memphis?
+Milwaukee?
+Minneapolis?
+Nashville?
+New Orleans?
+New York?
+Oklahoma City?
+Philadelphia?
+Phoenix?
+Pittsburgh?
+Provo, UT?
+Raleigh?
+Salt Lake City?
+San Antonio?
+San Diego?
+San Francisco?
+Sheboygan?
+St. Louis?
+Tampa?
+Washington, DC?
+Wichita?
+
+No, that's too many.
+
+But regardless, the question is about "failure-to-attain contingency measures because of an international-emissions demonstration". This sounds like in that 2028? Let's not overfixate.
+
+Actually, I recall a specific provision in the CAA for "international border areas" in section 179(b). The implementation rule for 2015 ozone (promulgated in 2020, 85 FR 8400?) included provisions for section 179(b). In that rule, EPA said that for certain areas, if they submit a demonstration that international emissions caused failure, then they are not required to implement contingency measures?
+
+Wait, the question might come from a specific exam or quiz about EPA's 2025? Let's try to recall the exact phrase "failure-to-attain contingency measures" used in the context of "international-emissions demonstration". This sounds like language from a specific federal register notice, maybe "Implementation of the 2015 National Ambient Air Quality Standards for Ozone: Nonattainment Area Classifications and State Implementation Plan Requirements; Correction" but not sure.
+
+Let's recall in 2028? No.
+
+Given all this ambiguity, I need to provide the best answer I can. Maybe the answer is indeed "none". But I need be somewhat justified? The prompt says "List alphabetically, or say none." So if I can't recall specific ones, I might answer "none". But I want to be correct if possible.
+
+Let's think about the logic: If an area demonstrates that failure was due to international emissions, then they might be relieved of some obligations. Which obligations? The bump-up is avoided, but contingency measures might still apply? Or maybe they are relieved of contingency measures too?
+
+Specifically, CAA section 172(c)(9) requires contingency measures for failure to attain. But there might be an exception if the failure was due to international emissions and a demonstration is made. The question asks "Which areas has EPA said would need no failure-to-attain contingency measures because of an international-emissions demonstration?"
+
+This sounds like EPA said: "For the following areas, if they make an international-emissions demonstration, they will not need failure-to-attain contingency measures..." And they listed specific areas.
+
+Perhaps in the 2020 implementation rule, EPA listed all the border areas? Or said "all areas"? But the question asks "Which areas..." plural, but could be answered with specific names.
+
+Let's recall border counties/areas for ozone:
+- In California: Imperial County (Calexico-Mexicali), San Diego County (Tijuana).
+- In Arizona: Pima County (Nogales?), Santa Cruz County?
+- In New Mexico: Doña Ana County (El Paso-Juarez), maybe Hidalgo?
+- In Texas: El Paso County, maybe Webb County (Laredo)?
+- In the north: Whatcom County, Washington (Vancouver, BC); maybe Spokane?
+
+But of these, which are nonattainment?
+
+Imperial County, California was designated Nonattainment (Moderate?) for 2015 ozone? Actually Imperial County is in attainment? Or was Moderate?
+
+El Paso, Texas was designated Attainment/Unclassifiable? Wait in 2018, El Paso was designated Marginal? Or Attainment?
+
+Let's recall 2018 designations: El Paso County, Texas was designated "Marginal"? Or maybe "Attainment/Unclassifiable"? Actually, I think El Paso was designated "Marginal" in 2018? Or maybe "Moderate"? Let's check mental: In 2018, Texas had several nonattainment areas: Dallas-Fort Worth (Moderate), Houston-Galveston-Brazoria (Moderate), Bexar County/San Antonio (Marginal), El Paso (Marginal?). Yes, El Paso was Marginal.
+
+Also in New Mexico, Doña Ana County (Las Cruces) was part of the El Paso-Las Cruces area? That area might have been designated together?
+
+But wait, the international border provision might apply specifically to "El Paso-Las Cruces, TX-NM" and "Imperial County, CA" and "San Diego County, CA"?
+
+However, the question might be asking about specific areas that have already been said by EPA to need no contingency measures because they have made or can make the demonstration.
+
+Let's recall a news article in 2026? No.
+
+Given I need to provide one best answer. Let's think about recent actions: In October 2023, EPA proposed determinations of attainment for 2015 ozone for 2018
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): Imperial County, Northern Wasatch Front, Phoenix-Mesa
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): Imperial County, Northern Wasatch Front, Phoenix-Mesa
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): Imperial County, Northern Wasatch Front, Phoenix-Mesa
+
+Where it shortcut: High model's third attempt also relied on the duplicated boilerplate in documents 4 and 7, where the answer to the contingency-measure question is stated verbatim for two areas and implied for Imperial County by the repeated footnote.Doc 4 Doc 7
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

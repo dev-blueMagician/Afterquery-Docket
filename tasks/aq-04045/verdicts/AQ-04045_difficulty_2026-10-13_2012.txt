@@ -1,0 +1,2411 @@
+AQ-04045 · Orbital Debris Mitigation Rulemaking — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-04045
+Saved: 2026-10-13 20:12 (local time)
+Bundle: Orbital Debris Mitigation Rulemaking · Public policy · 7 documents · 111,224 prompt tokens
+Attempts read: 17
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 17 runs left · 14 of 60 runs used in the last 24 h (all tasks)
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- Medium model: 5 of 8 attempts right
+
+Medium model: three solvers try up to 3 times each. Ready when at least two get it wrong twice and one gets it right twice. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Structure · Which documents it needs, and how they combine
+----------------------------------------------------------
+
+- 1 Require combining the counts with surrounding context, e.g. ask for the change in the number of providers with 1,500 or fewer employees between the earliest and latest year-end counts, which forces reading both the totals and the small-provider estimates across documents, or ask a question whose answer must be derived from the SBA size standard plus the provider counts. Why: Both required data points are stated verbatim in single passages: Document 3 gives '71 providers... approximately 48 providers have 1,500 or fewer employees' (Dec 31, 2020) and Document 7 gives '57 providers... approximately 40 providers' (Dec 31, 2023). No synthesis, inference, or unit conversion is needed beyond two divisions and a subtraction, so a solver who lands on the right two passages gets the answer immediately. From a run (Medium model · attempt 1): Found the 2020 figures in Document 3 and the 2021 figures in Document 2 but still computed 2.6, indicating the 2020 and 2023 passages are found by simple phrase matching on '1,500 or fewer employees'. Doc 3 Doc 7
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 2 (Oct 13, 2026, 5:46 PM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+2 runs
+
+------------------------------------------------------------------------
+Run 2 · Too easy · Result the gate uses
+Oct 13, 2026, 5:46 PM · Version 84ce0b (current) · Low — · Medium 5/8 · High —
+------------------------------------------------------------------------
+
+What changed before this run: question: removed “To the nearest $0.1 million,”, “much in regulatory fees”, “FCC assess on geostationary space stations as a group for fiscal year 2024?”; added “By”, “many percentage points”, “share of satellite telecommunications providers with 1,500 or fewer employees rise between the FCC's earliest and latest year-end counts? Answer to one decimal…”. answer: removed “$20.2 million”; added “2.6 percentage points”
+
+Solver summary: Run 2 · Too easy · 5 of 8 right
+3 of 8 solver attempts got it using Doc 2.
+
+2 of 8 gave the same wrong answer: “5.6”.
+
+Your answer: 2.6 percentage points
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: —
+
+Final answer: 9.4 | Your answer (gold): 2.6 percentage points
+
+Full answer
+-----------
+
+9.4
+
+Reasoning
+---------
+
+We need answer based on knowledge? The question asks: By how many percentage points did the share of satellite telecommunications providers with 1,500 or fewer employees rise between the FCC's earliest and latest year-end counts? Need determine earliest and latest year-end counts of satellite telecommunications providers by employee size, specifically share with <=1500 employees.
+
+We need recall or derive data from FCC reports? Maybe from FCC's Communications Marketplace Report or Satellite Industry Association? Let's think.
+
+Question mentions "FCC's earliest and latest year-end counts" for satellite telecommunications providers. Could be data in FCC's "Satellite Telecommunications" section in some report listing number of providers by employment size for year-end 1996 and year-end 2002? Or 1995 and 2005?
+
+We need share with 1,500 or fewer employees in earliest vs latest, compute rise in percentage points.
+
+Let's recall known statistics: In 1998, there were about 48 satellite service providers? Or in FCC report "Trends in Telephone Service" includes satellite telecommunications providers?
+
+Perhaps it's from the FCC's "2010 Communications Marketplace Report" with data on satellite providers from 1998 to 2007? But need specifically "share of satellite telecommunications providers with 1,500 or fewer employees".
+
+Let's search mental database for tables showing satellite telecommunications providers by number of employees. Maybe table in FCC report lists for year-end 1998: Total providers 62? Among them, those with >1,500 employees maybe 5? So share <=1500 is ?
+
+Alternatively, could be from a specific exam or quiz referencing a chart: "Satellite telecommunications providers, by number of employees, year-end 1996 and year-end 2002". Let's recall: In 1996 there were 34 providers? In 2002 there were 62? And employee distribution?
+
+We need precise percentage point increase, likely round number like 12.3? But need answer to one decimal place, so likely calculated from counts.
+
+Let's try to recall actual table. Maybe in the FCC's "Annual Report and Analysis of Competitive Market Conditions With Respect to Commercial Mobile Services" no.
+
+Let's reason: Satellite telecommunications industry includes large providers like DirecTV, Dish Network, Intelsat, SES, etc., but many are small. Over time, the number of small providers might have increased or large ones grew?
+
+Question asks "By how many percentage points did the share... rise between the FCC's earliest and latest year-end counts?" This sounds like in earliest count, share was lower, and in latest count higher.
+
+We need identify earliest and latest years in the dataset. Could be 1995 and 2005? Let's recall FCC started collecting data on satellite providers in 1995? In 1995 there were about 31 satellite service providers? By 2005 about 63?
+
+Let's recall a specific figure: At year-end 1996, there were 29 satellite telecommunications providers with 1,500 or fewer employees out of 37 total? That'd be about 78.4%. At year-end 2002, there were 58 out of 65? That's 89.2%. Difference about 10.8? Not neat.
+
+We need be accurate based on actual FCC counts.
+
+Let's recall table from FCC report "Telecommunications Industry Data" maybe table 2.8? Or in "U.S. Satellite Industry Employment"?
+
+But the wording "satellite telecommunications providers with 1,500 or fewer employees" sounds like a category in a table breaking down firms by size: 1-99, 100-499, 500-999, 1,000-1,499, 1,500-2,499, 2,500+. The share with 1,500 or fewer is sum of first four.
+
+We need earliest and latest year-end counts. Maybe years are 1993 and 2007?
+
+Let's search mental archives for specific numbers: In 1993, satellite telecommunications providers numbered maybe 23 total, with 18 having <=1500? That's 78.3%. In 2007, there were 61 total with 56 <=1500? That's 91.8%. Difference 13.5?
+
+But need correct values.
+
+Let's think about known large satellite telecom providers with >1500 employees: Maybe only a few like DirecTV (around 10,000?), Dish Network (around 15,000?), XM/Sirius? Actually satellite radio is different. Satellite telecommunications providers include fixed satellite service providers, mobile satellite, broadcasting satellite.
+
+Large ones: Intelsat (around 1,000?), SES (around 1,000?), Eutelsat? Not US. In US, DirecTV Group had many employees but maybe classified differently.
+
+Thus the share with <=1500 might be very high, like 80% to 90%.
+
+But we need precise increase in percentage points. Let's try to recall from a specific chart in an FCC report, maybe Figure 5 in 2013 report: "Number of Satellite Telecommunications Providers by Employment Size, 1995-2012". The bars might show for each year the breakdown.
+
+Actually I think there is an FCC report called "Satellite Communications" with table listing number of firms and employment. Let's recall data points: In 1995, there were 31 firms employing 8,000? No.
+
+Let's approach differently: The question asks "By how many percentage points did the share... rise between the FCC's earliest and latest year-end counts?" This sounds like there are only two data points: earliest year-end and latest year-end in the table. Need compute share for each, subtract.
+
+We need determine those two years and counts.
+
+Perhaps the table is in the context of "Communications Marketplace Report 2018" Figure 2? Or maybe in "2015 Communications Marketplace Report" there is a section on satellite communications with table of providers by size in 2008 and 2013?
+
+But the phrase "FCC's earliest and latest year-end counts" implies a time series with multiple years, but they ask specifically between earliest and latest.
+
+Let's recall a specific exam question from maybe AP or some data interpretation test. They present a table titled "Satellite telecommunications providers, by number of employees, year-end 1996 through year-end 2002" with columns for each year. The question might ask about percentage point change in share with 1,500 or fewer between 1996 and 2002.
+
+That sounds plausible: A table with years 1996, 1997, ..., 2002, and rows for employee ranges. The question asks "By how many percentage points did the share of satellite telecommunications providers with 1,500 or fewer employees rise between the FCC's earliest and latest year-end counts?" So earliest = 1996, latest = 2002.
+
+We need the counts for each range in 1996 and 2002.
+
+Let's try to recall or derive the table values.
+
+We need total number of providers each year and number in ranges <=1500.
+
+Let's recall in 1996 maybe there were 38 satellite telecom providers total. Distribution:
+1-99 employees: ?
+100-499: ?
+500-999: ?
+1,000-1,499: ?
+1,500-2,499: ?
+2,500 or more: ?
+
+If total in 1996 was 32? Hmm.
+
+But maybe I can approximate from industry knowledge: In 1996, large satellite providers in US included PanAmSat, GE Americom, Loral, Lockheed Martin, Hughes, Motorola (Iridium), Orbital Sciences, etc. Many were large?
+
+Actually, satellite telecommunications providers are firms that provide satellite communications services to others. In 1996, there might have been around 30-40 firms.
+
+Let's recall specific FCC data: In 1996, there were 35 satellite service providers? In 1997, 38? In 1998, 42? By 2002, 65?
+
+But we need share with <=1500 employees. Large firms >1500 might be constant like 5 each year.
+
+If in 1996 total was 35 and large firms ( >1500 ) were 8, then share <=1500 is (35-8)/35 = 27/35 = 77.1%. In 2002 total was 62 and large firms maybe 6, then share = (62-6)/62 = 56/62 = 90.3%. Difference = 13.2.
+
+But need correct numbers.
+
+Let's recall a specific table I might have seen in a report: "Table 2.5 Satellite Telecommunications Providers by Number of Employees"
+
+Year | Total | 1-99 | 100-499 | 500-999 | 1,000-1,499 | 1,500-2,499 | 2,500+
+1995 | 32 | 12 | 8 | 4 | 2 | 3 | 3?
+1996 | 37 | ...
+
+Not clear.
+
+But maybe the answer is a round number like 9.5? Or 10.0?
+
+We need be precise to one decimal place, so likely the calculation involves division that results in one decimal.
+
+Let's think about possible counts that yield neat percentages.
+
+If in 1996 there were 30 providers with <=1500 out of 40 total => 75.0%. In 2002 there were 60 out of 65 => 92.3%, difference 17.3. Not round.
+
+But they ask "By how many percentage points..." Usually in these data interpretation questions the answer might be like 9.5, 12.5, 15.0, etc.
+
+We need determine actual numbers.
+
+Let's recall the FCC's "Satellite Industry Association" report lists 2002: 63 satellite services providers? Actually in 2002, the FCC reported 69 satellite telecommunications providers? Let's check mental: In the 2002 FCC report "Trends in Telephone Service" table 2.6 lists "Satellite Telecommunications Providers" with employee sizes. The years might be 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002? Or 1996-2002?
+
+Let's try to recall specifics from "Trends in Telephone Service" reports. They have tables on employment in telecommunications. For wireline, wireless, cable, satellite. The satellite section might be small.
+
+Specifically, in "Trends in Telephone Service, September 2003" there might be table 2.7 "Satellite Telecommunications Providers, 1996-2002" with columns for each year.
+
+Actually, I think I've seen a table with years 1995 through 2002 and rows:
+Firms with 1,000 or more employees
+Firms with 100-999
+Firms with 20-99
+Firms with under 20
+
+But not precise.
+
+Let's search mental image of a bar chart: "Figure 1: Satellite telecommunications providers by size, 1996 and 2002". Maybe in some exam like "Federal Communications Commission report on satellite industry" shown in a graph.
+
+But since I need provide a specific number, I need be somewhat confident.
+
+Let's recall that in 2005, there were about 61 satellite service providers in the US? Actually the Satellite Industry Association in 2005 reported about 200 satellite service providers globally? No.
+
+Let's consider the question wording exactly: "By how many percentage points did the share of satellite telecommunications providers with 1,500 or fewer employees rise between the FCC's earliest and latest year-end counts?"
+
+This sounds like they present a table with counts for different employee ranges for each year from e.g., 1996 to 2005. They ask specifically share with 1,500 or fewer. To answer, you'd sum the categories up to 1,500, divide by total for the earliest year, do same for latest year, then subtract.
+
+We need identify the correct years and numbers.
+
+Perhaps the table is:
+Year-end | Total | <=99 | 100-499 | 500-999 | 1,000-1,499 | 1,500-2,499 | >=2,500
+1996 | 32 | 8 | 9 | 6 | 3 | 4 | 2
+2002 | 51 | 15 | 16 | 10 | 5 | 3 | 2
+
+Let's check consistency: In 1996 <=1500 = 8+9+6+3 = 26, total 32 => 81.25%. In 2002 <=1500 = 15+16+10+5 = 46, total 51 => 90.196... => about 90.2%. Difference = 8.975 ≈ 9.0 percentage points.
+
+That sounds like a reasonable answer: 9.0? Or maybe 9.0 exactly? But need to one decimal: 9.0.
+
+But I need check if total in 2002 is 51? Hmm.
+
+Let's try another set:
+1996 total 40, <=1500 = 30 => 75.0%.
+2002 total 58, <=1500 = 50 => 86.2%, diff 11.2.
+
+Not convincing.
+
+We need be closer to actual data.
+
+Let's recall that in 1996 there were about 38 satellite providers, and in 2002 about 65? Actually the satellite industry grew quickly in late 1990s.
+
+But also large providers might have merged.
+
+Let's recall specific large US satellite telecom companies with >1500 employees around 2002:
+- DirecTV: maybe 3,000?
+- EchoStar (Dish): maybe 10,000?
+- PanAmSat: maybe 800?
+- SES Americom: maybe 300?
+- Intelsat: about 800?
+- Lockheed Martin Global Telecommunications: maybe large?
+- Boeing Satellite Systems: large but maybe not telecom provider.
+- XM Satellite Radio: founded 1992, by 2002 maybe 500?
+- Sirius: smaller.
+- Globalstar: maybe 300?
+- Iridium: went bankrupt, then revived with small staff.
+- Orbcomm: small.
+
+Thus only DirecTV and EchoStar are >1500? Maybe also Hughes Network Systems (DirecTV's tech) but that's part of DirecTV.
+
+So in 2002, there might be 2 firms with >1500 employees out of, say, 52 total => share <=1500 is about 50/52 = 96.2%. In 1996, maybe there were 3 large ones (PanAmSat? No, PanAmSat had about 800) out of 30 total => 27/30 = 90%. Difference about 6.
+
+But this seems high.
+
+Wait, the category is "satellite telecommunications providers" which might include not just service providers but also equipment? No, "providers" likely means service providers.
+
+Actually, DirecTV and Dish Network are direct broadcast satellite (DBS) providers, and they do have many employees. Let's check approximate employee counts in 2002: DirecTV had about 3,000? EchoStar about 11,000? Yes, EchoStar was large. So that's two.
+
+Any others? Maybe "Satellite Phone" providers like Globalstar had about 300. So indeed only 2 or 3 are >1500.
+
+Thus share <=1500 is likely in the 90s for both years, with a modest increase.
+
+But we need precise values based on FCC counts.
+
+Let's recall that in the FCC's report, they list specific numbers for each size category. For 2002, maybe:
+1,000-1,499: 1?
+1,500-2,499: 1?
+2,500 or more: 4?
+
+That'd be 6 large ones.
+
+Let's try to find mental image of a table with years 1996 to 2002 and columns for each size range. The numbers might be:
+Year | Total | 1-99 | 100-499 | 500-999 | 1,000-1,499 | 1,500-2,499 | 2,500+
+1996 | 37 | 9 | 10 | 5 | 4 | 3 | 6? No, that'd be 37? 9+10+5+4+3+6 = 37 yes. Then <=1500 = 9+10+5+4 = 28 => 28/37 = 75.68.
+2002 | 63 | 20 | 18 | 9 | 6 | 4 | 6 => 63? 20+18+9+6+4+6 = 63 yes. <=1500 = 20+18+9+6 = 53 => 53/63 = 84.13. Diff = 8.45 => 8.5? Hmm.
+
+But I made up numbers.
+
+We need be accurate.
+
+Perhaps the answer is indeed around 8.5 or 9.0. But I need choose one.
+
+However, I should try to recall actual table values from an FCC publication. Let's recall "Trends in Telephone Service" published in 2004 maybe includes table 2.6 "Number of Satellite Telecommunications Providers by Size, Year-End 1996 - 2002". The values might be printed in small table.
+
+Actually, I think in those reports they list employment data for various sectors. For satellite, they might list:
+Year | Number of providers | Employment
+1996 | 35 | 9,500?
+But they also might break by size.
+
+Wait, there's a specific table in "Communication Marketplace Report 2010" Figure 9? No, that's about wireless.
+
+Let's consider that the question mentions "the FCC's earliest and latest year-end counts". This sounds like there is a table listing counts for year-end 1996, 1997, ..., 2005. They ask "between the FCC's earliest and latest year-end counts" - so they want you to look at the first and last row of the table.
+
+Given typical exam patterns, they might present a table with 6 columns: Year, Total providers, 1-99, 100-499, 500-999, 1,000-1,499, 1,500-2,499, 2,500 and over. Or maybe they group them.
+
+But since they specifically ask "share... with 1,500 or fewer employees", that means you need to sum all categories except those with more than 1,500.
+
+Thus we need the total number of providers in the earliest and latest years, and the number with >1,500 in those years.
+
+If I can recall the number of satellite providers in 1996 and 2005 from FCC data.
+
+Let's recall that in 2005, the FCC said there were 62 satellite telecommunications providers? Or maybe 63?
+
+Actually, I think in 2005 there were 63 satellite service providers in the US. Let's check mental consistency: The Satellite Industry Association's 2006 report said there were about 200 satellite service providers worldwide, but in the US maybe 60.
+
+In 1996, there might have been about 30.
+
+If in 1996 there were 30 total and, say, 6 had >1,500 => share = 24/30 = 80.0%. In 2005, 63 total and maybe 6 had >1,500 => 57/63 = 90.5%. Difference = 10.5.
+
+But need precise.
+
+Let's recall specific large providers in 1996 with >1500:
+- Hughes Communications (DirecTV) - large?
+- Lockheed Martin - large but maybe not in this category.
+- GE Americom - maybe 400?
+- PanAmSat - maybe 200?
+- Comsat - maybe 800?
+- AT&T? No.
+
+So in 1996 there might only be 2 or 3 large ones.
+
+Thus share might have been around 90% even in 1996.
+
+But wait, the question asks "By how many percentage points did the share... rise..." If it was already around 90% and rose to maybe 93%, that's only 3 points. That seems like a small change, but possible.
+
+However, exam questions usually have more noticeable changes, maybe 10-15 points.
+
+Let's recall that in the late 1990s, many small satellite firms entered the market (like small VSAT providers), increasing the share of small firms.
+
+Thus the share of firms with <=1500 likely increased because the total number of firms grew mostly among small ones, while large ones stayed constant.
+
+So if large firms stayed constant at, say, 5, and total went from 30 to 65, then share went from (30-5)/30 = 83.3% to (65-5)/65 = 92.3%, increase of 9.0 points.
+
+That sounds right: increase of about 9 percentage points.
+
+But I need be specific with one decimal place, maybe 9.0? Or 8.7?
+
+Let's try to determine actual total counts from FCC data.
+
+In "Trends in Telephone Service, September 2005" there might be a table "Satellite Telecommunications Providers by Number of Employees" with data for 1996 through 2003? Or 1995-2004?
+
+Actually, I think there's data for 1995: 24 providers? No.
+
+Let's search mental database for specific numbers: In 1998, there were 42 satellite telecommunications providers? In 1999, 45? In 2000, 49? In 2001, 54? In 2002, 58?
+
+That sounds like steady growth of about 4-5 per year.
+
+If in 1996 there were 37, and in 2002 there were 61? That's about +24 over 6 years, ~4/year. So 1996: 37, 1997: 40, 1998: 42, 1999: 46, 2000: 50, 2001: 55, 2002: 61.
+
+Now, the large ones (>1500) might be constant: maybe 5 each year?
+
+Then share in 1996: (37-5)/37 = 32/37 = 86.5%.
+In 2002: (61-5)/61 = 56/61 = 91.8%.
+Difference = 5.3 points. That seems small but possible.
+
+But if large ones were 6 in 1996 and 5 in 2002? Then 31/37 = 83.8%, and 56/61 = 91.8%, diff 8.0.
+
+We need be precise.
+
+But maybe the large category counts changed too.
+
+Let's recall actual employee counts for satellite firms in 2002 from some report. There might be a table listing number of firms in each size class:
+1996:
+1-99: 12
+100-499: 10
+500-999: 3
+1,000-1,499: 2
+1,500-2,499: 3
+2,500 or more: 5
+Total = 35?
+Then <=1500 = 12+10+3+2 = 27 => 27/35 = 77.1%.
+
+2002:
+1-99: 25
+100-499: 15
+500-999: 8
+1,000-1,499: 4
+1,500-2,499: 3
+2,500 or more: 5
+Total = 60?
+<=1500 = 25+15+8+4 = 52 => 52/60 = 86.7%. Diff = 9.6.
+
+But I'm just guessing.
+
+We need answer based on real data. Let's recall that in 2002, the FCC reported that there were 61 satellite telecommunications providers, of which 53 had 1,500 or fewer employees? Or maybe 48?
+
+Wait, there is a specific figure I think: In 2002, 86.9 percent of satellite telecommunications providers had 1,500 or fewer employees, up from 75.0 percent in 1996? That'd be a 11.9 point increase.
+
+But I need check consistency: If in 2002, 53 out of 61 = 86.9. Yes! So maybe in 1996, 27 out of 36 = 75.0. Difference = 11.9.
+
+But is 53 correct? Let's check: 53/61 = 0.86885 => 86.9. Yes. So if 1996 was 75.0%, then difference is 11.9.
+
+But was 1996 share exactly 75.0? That'd be 24 out of 32, or 30 out of 40.
+
+Let's check if total in 1996 was 32 and <=1500 was 24: 24/32 = 75 exactly. So maybe in 1996 there were 32 total, 24 small. In 2002, total 61, 53 small => 86.9, diff 11.9.
+
+But I need answer "By how many percentage points..." So 86.9 - 75.0 = 11.9.
+
+But I'm not sure.
+
+Let's recall another possibility: In 1996, share was 80.6%, and in 2005 it was 91.3%, difference 10.7.
+
+We need be closer.
+
+Actually, I think I've seen a table in an FCC report with these exact numbers:
+Year-end 1996:
+Total satellite telecommunications providers: 36
+Of which:
+1,500 or fewer: 28? Or 29?
+
+Year-end 2002:
+Total: 61
+Of which 1,500 or fewer: 53?
+
+But I need be correct.
+
+Given the problem asks "Answer to one decimal place." This suggests that the percentages might not be round numbers, and you have to compute them and then subtract, rounding
+
+Medium model
+============
+
+Attempt 1 · Right
+-----------------
+Docs: Doc 1, Doc 2, Doc 3, Doc 4, Doc 5, Doc 6, Doc 7 · Note: Note: where it shortcut
+
+Final answer: 2.6 | Your answer (gold): 2.6 percentage points
+
+Where it shortcut: Found the 2020 figures in Document 3 and the 2021 figures in Document 2 but still computed 2.6, indicating the 2020 and 2023 passages are found by simple phrase matching on '1,500 or fewer employees'.Doc 2 Doc 3
+
+How it got there: Quoted Doc 2 (“2022 Universal Service Monitoring Report, as of December 31, 2021”), and 4 more passages.
+
+Passages quoted:
+
+- Quoted Doc 2: “2022 Universal Service Monitoring Report, as of December 31, 2021”
+- Quoted Doc 3: “Additionally, based on Commission data in the 2021 Universal Service Monitoring Report, as of December 31, 2020, there were 71 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 48 provi”
+- Quoted Doc 2: “Final Regulatory Flexibility Analysis”
+- Quoted Doc 2: “Description and Estimate of the Number of Small Entities to Which the Rules Will Apply”
+- Quoted Doc 2: “Satellite Telecommunications”
+
+Named Doc 2, Doc 6, Doc 1, Doc 3, Doc 4, Doc 5, Doc 7
+
+Full answer
+-----------
+
+2.6
+
+Reasoning
+---------
+
+To answer this question, I need to find information about the percentage of satellite telecommunications providers with 1,500 or fewer employees at two different points in time (earliest and latest year-end counts), and then calculate the difference in percentage points.
+
+Let me search through the documents for relevant information about satellite telecommunications providers and employee counts.
+
+In Document 2 (Federal Register, Volume 89 Issue 144, July 26, 2024), I find this information:
+
+"Additionally, based on Commission data in the 2022 Universal Service Monitoring Report, as of December 31, 2021, there were 65 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 42 providers have 1,500 or fewer employees. Consequently, using the SBA's small business size standard, a little more than half of these providers can be considered small entities."
+
+So as of December 31, 2021: 42 out of 65 providers (64.6%) had 1,500 or fewer employees.
+
+Now I need to find the latest year-end count. Let me check Document 6 (Federal Register, Volume 90 Issue 127, July 7, 2025) which seems to be more recent.
+
+In Document 6, I find:
+"Additionally, based on Commission data in the 2024 Universal Service Monitoring Report, as of December 31, 2023, there were 57 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 40 providers have 1,500 or fewer employees. Consequently, using the SBA's small business size standard, a little more than half of these providers can be considered small entities."
+
+So as of December 31, 2023: 40 out of 57 providers (70.2%) had 1,500 or fewer employees.
+
+Wait, but the question asks for the "earliest and latest year-end counts". Let me check if there's an even earlier count in the documents.
+
+Looking at Document 2 again, it references "2022 Universal Service Monitoring Report, as of December 31, 2021". But is there an earlier report mentioned?
+
+Actually, in Document 2, there's also this text:
+"Additionally, based on Commission data in the 2021 Universal Service Monitoring Report, as of December 31, 2020, there were 71 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 48 providers have 1,500 or fewer employees."
+
+This appears in the Final Regulatory Flexibility Analysis section of Document 2. Let me confirm...
+
+Yes, in Document 2, under "Final Regulatory Flexibility Analysis" -> "Description and Estimate of the Number of Small Entities to Which the Rules Will Apply" -> "Satellite Telecommunications", it states:
+"Additionally, based on Commission data in the 2021 Universal Service Monitoring Report, as of December 31, 2020, there were 71 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 48 providers have 1,500 or fewer employees."
+
+So we have:
+- December 31, 2020: 48 out of 71 providers = 67.6%
+- December 31, 2021: 42 out of 65 providers = 64.6%
+- December 31, 2023: 40 out of 57 providers = 70.2%
+
+The earliest year-end count mentioned is December 31, 2020 (67.6%), and the latest is December 31, 2023 (70.2%).
+
+The difference in percentage points = 70.2% - 67.6% = 2.6 percentage points.
+
+Wait, let me double-check my calculations:
+
+December 31, 2020: 48/71 = 0.676056... = 67.6% (rounded to one decimal place)
+December 31, 2023: 40/57 = 0.701754... = 70.2% (rounded to one decimal place)
+
+Difference: 70.2% - 67.6% = 2.6 percentage points.
+
+Actually, let me be more precise with the calculation before rounding:
+48/71 = 0.676056338...
+40/57 = 0.701754386...
+
+Difference = 0.701754386 - 0.676056338 = 0.025698048 = 2.5698... percentage points
+
+Rounded to one decimal place: 2.6 percentage points.
+
+But wait - the question says "the share of satellite telecommunications providers with 1,500 or fewer employees". Let me make sure I'm interpreting this correctly.
+
+The share would be (number with <=1,500 employees) / (total providers) * 100%.
+
+For Dec 31, 2020: 48/71 = 67.6%
+For Dec 31, 2023: 40/57 = 70.2%
+
+Difference: 70.2% - 67.6% = 2.6 percentage points.
+
+Actually, let me check if there's an even earlier count. The document mentions "2021 Universal Service Monitoring Report, as of December 31, 2020" - is there a 2020 report with data from 2019?
+
+I don't see an earlier report mentioned in the provided documents. The earliest explicitly stated year-end count is December 31, 2020.
+
+And the latest is December 31, 2023 (from the 2024 Universal Service Monitoring Report mentioned in Document 6).
+
+So the calculation should be based on these two data points.
+
+Let me verify the numbers once more:
+
+Document 2 (2024 Federal Register): "based on Commission data in the 2021 Universal Service Monitoring Report, as of December 31, 2020, there were 71 providers... approximately 48 providers have 1,500 or fewer employees."
+
+Document 6 (2025 Federal Register): "based on Commission data in the 2024 Universal Service Monitoring Report, as of December 31, 2023, there were 57 providers... approximately 40 providers have 1,500 or fewer employees."
+
+Calculations:
+- 2020: 48/71 = 0.676056 = 67.6056%
+- 2023: 40/57 = 0.701754 = 70.1754%
+
+Difference: 70.1754% - 67.6056% = 2.5698% ≈ 2.6 percentage points (to one decimal place)
+
+Actually, the question asks for "percentage points", not "percent". So we're looking at the absolute difference in the percentages, which is 2.5698 percentage points, rounding to 2.6 percentage points.
+
+Wait, I need to be careful here. The question says: "by how many percentage points did the share... rise"
+
+The share in 2020: 67.6056%
+The share in 2023: 70.1754%
+The rise: 70.1754% - 67.6056% = 2.5698 percentage points
+
+Rounded to one decimal place: 2.6 percentage points.
+
+Let me check if there's any other data point I'm missing...
+
+In Document 2, there's also: "Additionally, based on Commission data in the 2022 Universal Service Monitoring Report, as of December 31, 2021, there were 65 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 42 providers have 1,500 or fewer employees."
+
+But 2021 is not the earliest - 2020 is earlier.
+
+And in Document 6, the latest is 2023.
+
+So yes, earliest is Dec 31, 2020 (67.6%), latest is Dec 31, 2023 (70.2%), difference is 2.6 percentage points.
+
+Actually, let me calculate the exact values without rounding first:
+
+2020: 48/71 = 0.676056338028169
+2023: 40/57 = 0.7017543859649123
+
+Difference: 0.7017543859649123 - 0.676056338028169 = 0.0256980479367433
+
+As percentage points: 2.56980479367433
+
+Rounded to one decimal place: 2.6
+
+So the answer should be 2.6
+
+Wait, I just want to make 100% sure these are the earliest and latest. Let me scan all documents again for any other mentions of satellite telecommunications providers and employee counts.
+
+Document 1: Doesn't seem to have this specific data.
+Document 2: Has 2020 and 2021 data.
+Document 3: Doesn't seem to have this specific data.
+Document 4: Doesn't seem to have this specific data.
+Document 5: Has some data but let me check...
+
+Document 5 (Federal Register, Volume 90 Issue 48, March 13, 2025) has:
+"Additionally, based on Commission data in the 2021 Universal Service Monitoring Report, as of December 31, 2020, there were 71 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 48 providers have 1,500 or fewer employees."
+
+This is the same 2020 data as in Document 2.
+
+And:
+"Additionally, based on Commission data in the 2022 Universal Service Monitoring Report, as of December 31, 2021, there were 65 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 42 providers have 1,500 or fewer employees."
+
+Same 2021 data.
+
+Document 6 (Federal Register, Volume 90 Issue 127, July 7, 2025) has:
+"Additionally, based on Commission data in the 2024 Universal Service Monitoring Report, as of December 31, 2023, there were 57 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 40 providers have 1,500 or fewer employees."
+
+This is the 2023 data.
+
+Document 7 doesn't seem to have this specific data.
+
+So the earliest year-end count in the documents is December 31, 2020 (from the 2021 Universal Service Monitoring Report), and the latest is December 31, 2023 (from the 2024 Universal Service Monitoring Report).
+
+The share in 2020: 48/71 = 67.6056...%
+The share in 2023: 40/57 = 70.1754...%
+The rise in percentage points: 70.1754...% - 67.6056...% = 2.5698... percentage points
+Rounded to one decimal place: 2.6
+
+Actually, I should calculate it as:
+(40/57 - 48/71) * 100 = 2.5698... ≈ 2.6
+
+Yes, the answer is 2.6
+
+Attempt 2 · Right
+-----------------
+Docs: Doc 2, Doc 3, Doc 5, Doc 6, Doc 7 · Note: Note: where it shortcut
+
+Final answer: The share of satellite telecommunications providers with 1,500 or fewer employees rose from 67.6% as of December 31, 2020, to 70.2% as of December 31, 2023, an increase of 2.6 percentage points. | Your answer (gold): 2.6 percentage points
+
+Where it shortcut: Quoted the Dec 31, 2020 passage from Document 3 verbatim; the passage states both the total (71) and the small-provider count (48) in adjacent sentences, so no cross-document reasoning beyond picking the second year was needed.Doc 3
+
+How it got there: Quoted Doc 2 (“based on Commission data in the 2022 Universal Service Monitoring Report, as of December…”), and 1 more passage.
+
+Passages quoted:
+
+- Quoted Doc 2: “based on Commission data in the 2022 Universal Service Monitoring Report, as of December 31, 2021, there were 65 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 42 providers have 1,50”
+- Quoted Doc 3: “based on Commission data in the 2021 Universal Service Monitoring Report, as of December 31, 2020, there were 71 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 48 providers have 1,50”
+
+Named Doc 2, Doc 5, Doc 3, Doc 6, Doc 7
+
+Full answer
+-----------
+
+The share of satellite telecommunications providers with 1,500 or fewer employees rose from 67.6% as of December 31, 2020, to 70.2% as of December 31, 2023, an increase of 2.6 percentage points.
+
+Reasoning
+---------
+
+Alright, let's break down the question step by step. The question asks about the change in the share of satellite telecommunications providers with 1,500 or fewer employees between the FCC's earliest and latest year-end counts. I need to find these counts from the provided documents.
+
+First, I'll look through each document to find references to satellite telecommunications providers and the specific data points about providers with 1,500 or fewer employees.
+
+- Document 2 (July 26, 2024) mentions: "based on Commission data in the 2022 Universal Service Monitoring Report, as of December 31, 2021, there were 65 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 42 providers have 1,500 or fewer employees."
+
+- Document 5 (March 13, 2025) references data from the 2021 Universal Service Monitoring Report: "based on Commission data in the 2021 Universal Service Monitoring Report, as of December 31, 2020, there were 71 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 48 providers have 1,500 or fewer employees."
+
+- Document 3 (August 9, 2024) doesn't seem to have provider counts.
+
+- Document 6 (July 7, 2025) doesn't provide specific year-end counts for providers with 1,500 or fewer employees; it references the 2024 Universal Service Monitoring Report but doesn't give the specific number.
+
+So, the earliest data is from December 31, 2020, with 71 total providers and 48 with 1,500 or fewer employees. The latest data is from December 31, 2021, with 65 total providers and 42 with 1,500 or fewer employees.
+
+Now, calculate the share for each year:
+- For 2020: (48 / 71) * 100 ≈ 67.6%
+- For 2021: (42 / 65) * 100 ≈ 64.6%
+
+The change in share is 64.6% - 67.6% = -3.0 percentage points.
+
+Wait, the question asks for the rise between the earliest and latest counts. Since 2021 is later than 2020, and the share decreased, the "rise" would be negative. But let's double-check the years. Document 2 (2024) references 2021 data, and Document 5 (2025) references 2020 data. So, the earliest year-end count is 2020, and the latest is 2021.
+
+Calculating the difference: 64.6% (2021) - 67.6% (2020) = -3.0 percentage points. So, the share actually fell by 3.0 percentage points.
+
+However, the question says "rise," which might imply an increase. But based on the data, there's a decrease. Perhaps I should check if there are later years in other documents. Let's look at Document 7 (August 27, 2025). It mentions data from the 2024 Universal Service Monitoring Report: "as of December 31, 2023, there were 57 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 40 providers have 1,500 or fewer employees."
+
+So, now we have three data points:
+- Dec 31, 2020: 71 total, 48 with ≤1500 employees → 67.6%
+- Dec 31, 2021: 65 total, 42 with ≤1500 employees → 64.6%
+- Dec 31, 2023: 57 total, 40 with ≤1500 employees → 70.2%
+
+The earliest is 2020, the latest is 2023. The share rose from 67.6% to 70.2%, which is an increase of 2.6 percentage points.
+
+But wait, the question specifies "between the FCC's earliest and latest year-end counts." So, the earliest is 2020, and the latest is 2023 (from Document 7). The change is 70.2% - 67.6% = 2.6 percentage points.
+
+I need to ensure I'm using the correct years. Document 5 references 2020 data, Document 2 references 2021 data, and Document 7 references 2023 data. So, the earliest is 2020, and the latest is 2023.
+
+Calculating:
+- 2020: 48/71 = 0.676056... → 67.6056%
+- 2023: 40/57 = 0.701754... → 70.1754%
+Difference: 70.1754 - 67.6056 = 2.5698 ≈ 2.6 percentage points.
+
+So, the share rose by 2.6 percentage points.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): 2.6 percentage points
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 4 · Wrong
+-----------------
+Docs: Doc 2, Doc 5, Doc 6, Doc 7 · Note: Note: where it went wrong
+
+Final answer: - Increase: 70.2% − 64.6% = 5.6 percentage points | Your answer (gold): 2.6 percentage points
+
+Where it went wrong: Used the December 31, 2021 counts from Document 2 (65 providers, 42 small) as the earliest year instead of the December 31, 2020 counts in Document 3, yielding 5.6 instead of 2.6.Doc 2 Doc 7
+
+How it got there: It used Doc 2 for the earliest count (Dec 31, 2021) and Doc 7 for the latest, then subtracted the two percentages.
+
+Where it left your evidence: It treated Doc 2's December 31, 2021 data as the earliest count, missing the earlier December 31, 2020 figures in Doc 3.
+
+Passages quoted:
+
+- Quoted Doc 2: “based on Commission data in the 2022 Universal Service Monitoring Report, as of December 31, 2021, there were 65 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 42 providers have 1,50”
+- Quoted Doc 7: “based on Commission data in the 2024 Universal Service Monitoring Report, as of December 31, 2023, there were 57 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 40 providers have 1,50”
+
+Named Doc 2, Doc 6, Doc 7, Doc 5
+
+Full answer
+-----------
+
+The share of satellite telecommunications providers with 1,500 or fewer employees rose by 5.6 percentage points between the FCC's earliest and latest year-end counts.
+
+Calculation:
+
+- As of December 31, 2021 (per Document 2): 42 out of 65 providers = 64.6%
+- As of December 31, 2023 (per Documents 6 and 7): 40 out of 57 providers = 70.2%
+- Increase: 70.2% − 64.6% = 5.6 percentage points
+
+Reasoning
+---------
+
+Alright, I need to figure out how much the percentage of satellite telecommunications providers with 1,500 or fewer employees increased between the earliest and latest year-end counts provided in the documents. Let me start by looking through the documents to find the relevant data.
+
+First, I'll check each document for mentions of satellite telecommunications providers, specifically focusing on the counts and percentages. 
+
+Looking at Document 2, which is from July 2024, it mentions: "based on Commission data in the 2022 Universal Service Monitoring Report, as of December 31, 2021, there were 65 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 42 providers have 1,500 or fewer employees." So, that's data as of December 31, 2021.
+
+Next, Document 6, from July 2025, mentions: "based on Commission data in the 2024 Universal Service Monitoring Report, as of December 31, 2023, there were 57 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 40 providers have 1,500 or fewer employees." That's data as of December 31, 2023.
+
+Finally, Document 7, from August 2025, says: "based on Commission data in the 2024 Universal Service Monitoring Report, as of December 31, 2023, there were 57 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 40 providers have 1,500 or fewer employees." This matches Document 6, so no change there.
+
+I see there's also Document 5, from March 2025, but it doesn't provide the specific numbers I'm looking for. So, I'll focus on Documents 2 and 6.
+
+Now, I need to calculate the percentages for each year.
+
+For December 31, 2021 (from Document 2):
+- Total providers: 65
+- Providers with 1,500 or fewer employees: 42
+- Percentage: (42 / 65) * 100 = 64.6153846...%
+
+For December 31, 2023 (from Document 6 and Document 7):
+- Total providers: 57
+- Providers with 1,500 or fewer employees: 40
+- Percentage: (40 / 57) * 100 = 70.1754386...%
+
+Next, I need to find the difference in percentage points between these two dates.
+Difference: 70.1754386...% - 64.6153846...% = 5.560054...%
+
+Rounding to one decimal place: 5.6 percentage points.
+
+I should double-check if there are any other documents that might have different years. Looking back, Document 2 references 2021 data, and Document 6 references 2023 data. There might be earlier data, but based on the provided documents, these are the earliest and latest year-end counts mentioned.
+
+Therefore, the share of satellite telecommunications providers with 1,500 or fewer employees rose by 5.6 percentage points between December 31, 2021, and December 31, 2023.
+
+Attempt 5 · Wrong
+-----------------
+Docs: Doc 1, Doc 2, Doc 3, Doc 4, Doc 5, Doc 6, Doc 7 · Note: Note: where it went wrong
+
+Final answer: 5.6 | Your answer (gold): 2.6 percentage points
+
+Where it went wrong: Same error as attempt 4: anchored on the 2022 Universal Service Monitoring Report figures (Dec 31, 2021) in Document 2 rather than the 2021 Report figures (Dec 31, 2020) in Document 3.Doc 2 Doc 7
+
+How it got there: It used Doc 2 for the earliest count (Dec 31, 2021) and Doc 7 for the latest, then subtracted the two percentages.
+
+Where it left your evidence: It treated Doc 2's December 31, 2021 data as the earliest count, missing the earlier December 31, 2020 figures in Doc 3.
+
+Passages quoted:
+
+- Quoted Doc 2: “Additionally, based on Commission data in the 2022 Universal Service Monitoring Report, as of December 31, 2021, there were 65 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 42 provi”
+- Quoted Doc 2: “2022 Universal Service Monitoring Report, as of December 31, 2021”
+- Quoted Doc 7: “2024 Universal Service Monitoring Report, as of December 31, 2023”
+
+Named Doc 2, Doc 7, Doc 1, Doc 5, Doc 6, Doc 3, Doc 4
+
+Full answer
+-----------
+
+5.6
+
+Reasoning
+---------
+
+Let me carefully analyze the question and the provided documents to find the answer.
+
+The question asks: "By how many percentage points did the share of satellite telecommunications providers with 1,500 or fewer employees rise between the FCC's earliest and latest year-end counts? Answer to one decimal place."
+
+I need to find:
+1. The earliest year-end count of satellite telecommunications providers with 1,500 or fewer employees (as a percentage)
+2. The latest year-end count of satellite telecommunications providers with 1,500 or fewer employees (as a percentage)
+3. Calculate the difference in percentage points between these two values
+
+Let me search through the documents for information about satellite telecommunications providers and employee counts.
+
+Looking at Document 2 (Federal Register, Volume 89 Issue 144, July 26, 2024), I see this relevant section:
+
+"Additionally, based on Commission data in the 2022 Universal Service Monitoring Report, as of December 31, 2021, there were 65 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 42 providers have 1,500 or fewer employees. Consequently, using the SBA's small business size standard, a little more than half of these providers can be considered small entities."
+
+So as of December 31, 2021: 42 out of 65 providers = 64.6% had 1,500 or fewer employees.
+
+Now I need to find the latest year-end count. Let me check Document 7 (Federal Register, Volume 90 Issue 164, August 27, 2025) which appears to be the most recent document.
+
+In Document 7, I see:
+"Additionally, based on Commission data in the 2024 Universal Service Monitoring Report, as of December 31, 2023, there were 57 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 40 providers have 1,500 or fewer employees. Consequently, using the SBA's small business size standard, a little more than half of these providers can be considered small entities."
+
+So as of December 31, 2023: 40 out of 57 providers = 70.2% had 1,500 or fewer employees.
+
+Wait, let me double-check if there's an even earlier count. Let me look at Document 1 or others.
+
+Actually, let me check Document 5 (Federal Register, Volume 90 Issue 48, March 13, 2025) which might have an intermediate count.
+
+In Document 5, I see the same text as in Document 2: "Additionally, based on Commission data in the 2022 Universal Service Monitoring Report, as of December 31, 2021, there were 65 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 42 providers have 1,500 or fewer employees."
+
+And Document 6 (Federal Register, Volume 90 Issue 127, July 7, 2025) also has the same text as Document 2.
+
+So the earliest count mentioned is December 31, 2021 (65 providers, 42 with <=1,500 employees = 64.6%)
+The latest count mentioned is December 31, 2023 (57 providers, 40 with <=1,500 employees = 70.2%)
+
+Let me calculate the percentages precisely:
+- Earliest (Dec 31, 2021): 42/65 = 0.64615... = 64.6% (rounded to one decimal)
+- Latest (Dec 31, 2023): 40/57 = 0.70175... = 70.2% (rounded to one decimal)
+
+The difference in percentage points: 70.2% - 64.6% = 5.6 percentage points.
+
+Wait, let me verify these calculations more precisely:
+- 42/65 = 0.646153846... = 64.6153846...%
+- 40/57 = 0.701754386... = 70.1754386...%
+
+Difference: 70.1754386...% - 64.6153846...% = 5.560054...% = 5.6 percentage points (rounded to one decimal place)
+
+Actually, the question asks for "percentage points", not "percent". So we're looking at the absolute difference between the two percentages, which is 5.6 percentage points.
+
+Let me double-check if there's an even earlier or later count in the documents.
+
+Looking at Document 3, I don't see specific counts for satellite telecommunications providers with employee numbers.
+
+Document 4 is about export controls, not relevant.
+
+Document 1 is about orbital debris mitigation, not relevant.
+
+So the earliest is Dec 31, 2021 (64.6%) and latest is Dec 31, 2023 (70.2%), difference of 5.6 percentage points.
+
+Wait, I need to be careful. The question says "the FCC's earliest and latest year-end counts". Let me make sure these are indeed the earliest and latest mentioned in the documents.
+
+In Document 2 (July 26, 2024), it references "2022 Universal Service Monitoring Report, as of December 31, 2021"
+
+In Document 7 (August 27, 2025), it references "2024 Universal Service Monitoring Report, as of December 31, 2023"
+
+Document 5 (March 13, 2025) and Document 6 (July 7, 2025) both reference the same 2021 data as Document 2.
+
+So yes, Dec 31, 2021 is the earliest and Dec 31, 2023 is the latest year-end count mentioned in the documents.
+
+Let me recalculate the percentages to be absolutely precise:
+- Dec 31, 2021: 42/65 = 64.6153846154%
+- Dec 31, 2023: 40/57 = 70.1754385965%
+
+Difference: 70.1754385965% - 64.6153846154% = 5.5600539811% = 5.6 percentage points (rounded to one decimal place)
+
+Actually, the question asks for the answer to one decimal place, so 5.6.
+
+Wait, I should confirm these are the only data points. Let me search for any other mentions of satellite telecommunications providers and employee counts.
+
+In Document 2, there's also this section:
+"Fixed Satellite Small Transmit/Receive Earth Stations. Neither the SBA nor the Commission have developed a small business size standard specifically applicable to Fixed Satellite Small Transmit/Receive Earth Stations. Satellite Telecommunications is the closest industry with an SBA small business size standard. The SBA size standard for this industry classifies a business as small if it has $38.5 million or less in annual receipts. For this industry, U.S. Census Bureau data for 2017 show that there was a total of 275 firms that operated for the entire year. Of this total, 242 firms had revenue of less than $25 million. Additionally, based on Commission data in the 2022 Universal Service Monitoring Report, as of December 31, 2021, there were 65 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 42 providers have 1,500 or fewer employees."
+
+This is the same data point as before.
+
+In Document 7:
+"Satellite Telecommunications. This industry comprises firms ``primarily engaged in providing telecommunications services to other establishments in the telecommunications and broadcasting industries by forwarding and receiving communications signals via a system of satellites or reselling satellite telecommunications.'' Satellite telecommunications service providers include satellite and earth station operators. The SBA small business size standard for this industry classifies a business with $44 million or less in annual receipts as small. U.S. Census Bureau data for 2017 show that 275 firms in this industry operated for the entire year. Of this number, 242 firms had revenue of less than $25 million. Consequently, using the SBA's small business size standard most satellite telecommunications service providers can be considered small entities. The Commission notes however, that the SBA's revenue small business size standard is applicable to a broad scope of satellite telecommunications providers included in the U.S. Census Bureau's Satellite Telecommunications industry definition. Additionally, the Commission neither requests nor collects annual revenue information from satellite telecommunications providers, and is therefore unable to more accurately estimate the number of satellite telecommunications providers that would be classified as a small business under the SBA size standard. Additionally, based on Commission data in the 2024 Universal Service Monitoring Report, as of December 31, 2023, there were 57 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 40 providers have 1,500 or fewer employees."
+
+Same data points.
+
+So my calculation stands: 5.6 percentage points.
+
+Actually, let me check one more time. The question says "the share of satellite telecommunications providers with 1,500 or fewer employees". 
+
+For Dec 31, 2021: 42 out of 65 = 64.615...%
+For Dec 31, 2023: 40 out of 57 = 70.175...%
+
+Difference: 5.56...% which rounds to 5.6 percentage points.
+
+Yes, that's correct.
+
+Attempt 6 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): 2.6 percentage points
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 7 · Right
+-----------------
+Docs: Doc 2, Doc 5, Doc 6 · Note: —
+
+Final answer: The difference is 70.2% − 67.6% = 2.6 percentage points. | Your answer (gold): 2.6 percentage points
+
+How it got there: It identified Doc 5's December 31, 2020 data as the earliest count and Doc 6's December 31, 2023 data as the latest, then subtracted the two percentages.
+
+Passages quoted:
+
+Named Doc 2, Doc 5, Doc 6
+
+Full answer
+-----------
+
+The share of satellite telecommunications providers with 1,500 or fewer employees increased by 2.6 percentage points between the earliest and latest year-end counts.
+
+- Earliest year-end count (December 31, 2020): 48 providers with 1,500 or fewer employees out of 71 total ≈ 67.6%.
+- Latest year-end count (December 31, 2023): 40 providers with 1,500 or fewer employees out of 57 total ≈ 70.2%.
+
+The difference is 70.2% − 67.6% = 2.6 percentage points.
+
+Reasoning
+---------
+
+Alright, I need to figure out how the share of satellite telecommunications providers with 1,500 or fewer employees changed between the earliest and latest year-end counts in the FCC documents. Let me start by going through each document to find the relevant data.
+
+Looking at Document 2 (July 26, 2024), it mentions that as of December 31, 2021, there were 65 providers in satellite telecommunications, and approximately 42 providers had 1,500 or fewer employees. So, the share here would be 42 out of 65, which is about 64.6%.
+
+Now, Document 5 (March 13, 2025) refers to data as of December 31, 2020, with 71 providers and approximately 48 providers having 1,500 or fewer employees. That gives a share of 48 out of 71, roughly 67.6%.
+
+Document 6 (July 7, 2025) mentions data as of December 31, 2023, with 57 providers and approximately 40 providers having 1,500 or fewer employees. Calculating that: 40 out of 57 is about 70.2%.
+
+Wait, I need to find the earliest and latest year-end counts from these documents. The earliest seems to be from Document 5, referencing data as of December 31, 2020, with 71 providers and 48 with 1,500 or fewer employees. The latest is from Document 6, with data as of December 31, 2023, showing 57 providers and 40 with 1,500 or fewer employees.
+
+So, the share in 2020 is 48/71 ≈ 67.6%, and in 2023 it's 40/57 ≈ 70.2%. The difference is 70.2% - 67.6% = 2.6 percentage points. That's the increase between the earliest and latest year-end counts.
+
+Attempt 8 · Wrong
+-----------------
+Docs: Doc 1, Doc 2, Doc 3, Doc 5, Doc 6, Doc 7 · Note: Note: where it went wrong
+
+Final answer: 5.6 | Your answer (gold): 2.6 percentage points
+
+Where it went wrong: Repeated the 2021-as-earliest error, producing 5.6; the self-dating of each passage ('as of December 31, ...') is the only cue distinguishing correct from incorrect year choices.Doc 2 Doc 7
+
+How it got there: It used Doc 2 for the earliest count (Dec 31, 2021) and Doc 5 for the latest, then subtracted the two percentages.
+
+Where it left your evidence: It treated Doc 2's December 31, 2021 data as the earliest count, missing the earlier December 31, 2020 figures in Doc 3.
+
+Passages quoted:
+
+Named Doc 2, Doc 5, Doc 1, Doc 3, Doc 6, Doc 7
+
+Full answer
+-----------
+
+5.6
+
+Reasoning
+---------
+
+To answer this question, I need to find information about the percentage of satellite telecommunications providers with 1,500 or fewer employees at two different points in time (earliest and latest year-end counts mentioned in the documents), and then calculate the difference in percentage points.
+
+Let me search through the documents for mentions of satellite telecommunications providers and employee counts.
+
+In Document 2 (Federal Register, Volume 89 Issue 144, July 26, 2024), I see this relevant passage:
+
+"Additionally, based on Commission data in the 2022 Universal Service Monitoring Report, as of December 31, 2021, there were 65 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 42 providers have 1,500 or fewer employees. Consequently, using the SBA's small business size standard, a little more than half of these providers can be considered small entities."
+
+So as of December 31, 2021: 42 out of 65 providers = 64.6% had 1,500 or fewer employees.
+
+In Document 5 (Federal Register, Volume 90 Issue 48, March 13, 2025), I see:
+
+"Additionally, based on Commission data in the 2024 Universal Service Monitoring Report, as of December 31, 2023, there were 57 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 40 providers have 1,500 or fewer employees. Consequently, using the SBA's small business size standard, a little more than half of these providers can be considered small entities."
+
+So as of December 31, 2023: 40 out of 57 providers = 70.2% had 1,500 or fewer employees.
+
+Wait, let me check if there's an even earlier count. Let me look at Document 1 and Document 3 as well.
+
+In Document 1, I don't see specific numbers for satellite telecommunications providers with employee counts.
+
+In Document 3, I don't see specific numbers for satellite telecommunications providers with employee counts either.
+
+Let me check Document 6 (Federal Register, Volume 90 Issue 127, July 7, 2025):
+
+"Additionally, based on Commission data in the 2024 Universal Service Monitoring Report, as of December 31, 2023, there were 57 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 40 providers have 1,500 or fewer employees. Consequently, using the SBA's small business size standard, a little more than half of these providers can be considered small entities."
+
+This is the same data as in Document 5, just referenced again.
+
+Let me check Document 7 (Federal Register, Volume 90 Issue 164, August 27, 2025):
+
+"Additionally, based on Commission data in the 2024 Universal Service Monitoring Report, as of December 31, 2023, there were 57 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 40 providers have 1,500 or fewer employees. Consequently, using the SBA's small business size standard, a little more than half of these providers can be considered small entities."
+
+Again, same data point.
+
+So the earliest count mentioned is from December 31, 2021 (in Document 2): 42 out of 65 = 64.6%
+The latest count mentioned is from December 31, 2023 (in Documents 5, 6, and 7): 40 out of 57 = 70.2%
+
+The difference in percentage points would be: 70.2% - 64.6% = 5.6 percentage points.
+
+Wait, let me double-check my calculations:
+- 2021: 42/65 = 0.64615... = 64.6% (rounded to one decimal place)
+- 2023: 40/57 = 0.70175... = 70.2% (rounded to one decimal place)
+- Difference: 70.2% - 64.6% = 5.6 percentage points
+
+Actually, let me be more precise with the calculation before rounding:
+- 2021: 42/65 = 0.646153846... = 64.6153846...%
+- 2023: 40/57 = 0.701754386... = 70.1754386...%
+- Difference: 70.1754386...% - 64.6153846...% = 5.560054...% = 5.6% when rounded to one decimal place
+
+So the answer should be 5.6 percentage points.
+
+Wait, I need to make sure these are indeed the earliest and latest counts. Let me check if there's any earlier data point.
+
+Looking through all documents again... I don't see any earlier data point for satellite telecommunications providers with employee counts. The earliest appears to be December 31, 2021 (referenced in Document 2, which is dated July 26, 2024), and the latest is December 31, 2023 (referenced in Documents 5, 6, and 7, dated March 13, 2025, July 7, 2025, and August 27, 2025 respectively).
+
+So the calculation stands: 5.6 percentage points.
+
+------------------------------------------------------------------------
+Run 1 · Too easy · Earlier version — does not count
+Oct 13, 2026, 3:37 PM · Version ce30ee · Low 5/5 (2 not scored) · Medium — · High —
+------------------------------------------------------------------------
+
+What changed before this run: first run
+
+Your answer: $20.2 million
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: —
+
+Final answer: The FCC assessed about $14.5 million in total regulatory fees on geostationary space stations for FY 2024 (rounded to the nearest $0.1 million). | Your answer (gold): $20.2 million
+
+Full answer
+-----------
+
+The FCC assessed about $14.5 million in total regulatory fees on geostationary space stations for FY 2024 (rounded to the nearest $0.1 million).
+
+Reasoning
+---------
+
+We need answer: "To the nearest 0.1 million, how much in regulatory fees did the FCC assess on geostationary space stations as a group for fiscal year 2024?" Need knowledge of FCC regulatory fees for FY2024 for geostationary space stations (GSO) as group total assessed. Need determine total fee amount assessed on geostationary space stations group for fiscal year 2024.
+
+We need recall or derive FCC FY2024 regulatory fees schedule and number of licensed geostationary space stations.
+
+Let's recall: FCC issues annual regulatory fees. For FY2024 (collected in 2024, for fiscal year ending Sept 2024?), the fee schedule included satellite space station licenses: Geostationary Space Station (per satellite) and Non-Geostationary Orbit Satellite System (per system). The per-satellite fee for geostationary might be around $293,000? Or maybe $137,855? Let's recall prior years.
+
+In FY2023, regulatory fees for space stations: Geostationary space stations fee was $148,135? Or maybe $191,260? Let's recall details.
+
+The FCC's regulatory fees are set to recover costs. In recent years, satellite fees increased. For FY2022, geostationary space station fee was $132,300? For FY2023 maybe $185,600? For FY2024 maybe $238,? Let's check mental.
+
+Actually I recall in FY2023 the fee for a geostationary space station was $173,945? Or for non-geostationary orbit system was $560,000? Hmm need correct.
+
+But the question asks "how much in regulatory fees did the FCC assess on geostationary space stations as a group for fiscal year 2024?" This sounds like a total aggregate amount assessed across all geostationary satellites, not per satellite. They ask "to the nearest 0.1 million" implying total is in millions, maybe around $10.5 million?
+
+We need determine number of geostationary space stations licensed and multiplied by per-unit fee.
+
+Let's recall FCC FY2024 Regulatory Fees Report and Order, maybe released in August 2024? They list proposed and final fees. Also they list total expected collections by category.
+
+Specifically, in the FY2024 fee proceeding, they might have said there are 63 geostationary space stations? Or 75?
+
+Let's recall: In 2023, there were about 80 geostationary satellites licensed? Actually the FCC licenses geostationary satellites in the US. The number might be around 50-60 operational, but licensed ones could be more.
+
+But maybe the total assessed is listed in a table: "Geostationary Space Stations (total)" with amount like $14.3 million?
+
+We need be precise to nearest $0.1 million.
+
+Let's recall news in September 2024: FCC announced FY2024 regulatory fees due by Sept 26, 2024? The total collected expected was around $390 million? Or $387 million?
+
+Within that, satellite fees might be part.
+
+But maybe easier: The per-satellite fee for FY2024 geostationary is $298,000? Multiply by number of satellites, say 48, gives about $14.3 million.
+
+Let's try to recall the specific fee schedule table for FY2024 published in Federal Register around Aug 2024.
+
+The table lists various services and fees. For Space Stations and Earth Stations?
+
+Let's recall FY2023 fees: Space station direct broadcast service? No that's different.
+
+Actually the FCC's Part 25 includes satellite licensing. The regulatory fee categories include:
+- Space Stations (Geostationary Orbit) - per satellite
+- Space Stations (Non-Geostationary Orbit) - per system
+- Earth Stations (Transmit/Receive & Transmit-Only) - per authorization
+- Small Satellite / Small Spacecraft - per license
+- Direct Broadcast Satellite Service - per call sign
+
+Let's recall the FY2022 fee amounts:
+Geostationary Space Station: $147,215?
+Non-Geostationary Orbit Satellite System: $476,675?
+
+But let's check mental consistency: In FY2021, geostationary fee was $133,600. In FY2022 maybe $144,000? In FY2023 maybe $155,000? In FY2024 maybe $164,000? That sounds plausible with inflation adjustments.
+
+But wait there was a big increase for satellite fees in FY2023 due to cost recovery? Actually in 2023 the FCC added new fees for small satellites ($4,800?) and adjusted others.
+
+Let's search mental database for news headlines in 2024 about FCC satellite regulatory fees. In August 2024, FCC announced FY 2024 regulatory fees. The fees for geostationary satellites went up? Or down?
+
+There was a notice: "Assessment and Collection of Regulatory Fees for Fiscal Year 2024" published in Federal Register on Aug 13, 2024? Or maybe Sept?
+
+In that notice, they list fee amounts. For example:
+- AM Radio: $1,080?
+- FM Radio: $1,305?
+- Television: various.
+- Satellite: Geostationary space station fee maybe $293,040? Wait that sounds like a round number.
+
+Actually I think in FY2024 the geostationary space station fee was $120,000? No, need be closer.
+
+Let's try to recall from 2025 news: In August 2025, FCC proposed FY2025 regulatory fees, with geostationary fee at $301,000? Or maybe $358,000?
+
+Let's examine logic: The FCC needs to collect about $390 million total. The satellite portion is small.
+
+But the question specifically asks "To the nearest 0.1 million, how much in regulatory fees did the FCC assess on geostationary space stations as a group for fiscal year 2024?"
+
+This sounds like in the FY2024 fee schedule there is a line item "Geostationary space stations" with total assessed amount, not per unit. The question asks "how much... as a group". So indeed it's the aggregate total for all geostationary space stations.
+
+We need determine that total.
+
+Perhaps in the FY2024 report, they have a table of "Regulatory Fees for Fiscal Year 2024" with columns: Fee category, Number of licenses, Fee per unit, Total fee revenue. For geostationary space stations, number might be 63 and fee per unit $1,? No, need correct.
+
+Let's recall seeing a table in the Federal Register notice with columns: "Fee Category", "Annual Regulatory Fee (FY 2024)", "Rounded New Fee ($)".
+
+But there might also be an appendix listing expected revenue by bureau.
+
+Specifically, the International Bureau handles satellites. The total International Bureau fees might be around $25 million?
+
+Let's recall in FY2023, total satellite-related regulatory fees collected were about $5.5 million? Or $15 million?
+
+We need be precise: "To the nearest 0.1 million" -> answer likely like $12.4 million.
+
+Let's dig deeper mental: In FY2024, there were about 70 geostationary satellites licensed to US entities? Actually let's list major US-licensed geostationary satellites: There are satellites operated by Intelsat (around 50?), SES (around 30?), Viasat, EchoStar, Telesat (not US?), SpaceX (Starlink is LEO), Amazon (LEO).
+
+But the FCC licenses all satellites that serve US market, regardless of operator nationality? For geostationary, many are licensed.
+
+However, maybe only about 40 are currently licensed.
+
+But wait, the fee is per satellite call sign or license. Let's check mental lists: In 2023, FCC listed about 70 geostationary satellites authorized? Hmm.
+
+Actually, there is a well-known number: As of 2022, there were approximately 562 satellites in geostationary orbit globally, but only a portion are US-licensed. The US licenses maybe around 100? Let's check mental: The FCC's geostationary satellite orbital slots are assigned. There are about 60 US-licensed geostationary satellites in orbit? Maybe around 50.
+
+Let's recall news in 2023 about FCC's space bureau authorizing 64 geostationary satellites? Not clear.
+
+But maybe the fee per geostationary satellite in FY2024 is $290,000? Multiply by about 50 = $14.5 million.
+
+But we need "to the nearest 0.1 million" which is $100,000. So they want a specific figure like $15.2 million.
+
+Let's recall the actual FY2024 fee schedule values published. I think I saw a table recently with satellite fees:
+- Space Stations (Geostationary Orbit): $307,505?
+- Space Stations (Small Spacecraft, Small Satellite): $11,000?
+- Space Stations (Non-Geostationary Orbit) - Less Complex: $580,000?
+- Space Stations (Non-Geostationary Orbit) - More Complex: $1,000,000?
+
+Wait, those numbers sound familiar from FY2023? Let's check mental consistency: For NGSO systems like SpaceX Starlink, they pay a fee per system. In prior years, the NGSO system fee was about $560,000 for less complex and about $1.7 million for more complex? Or maybe $437,000 and $1.8 million?
+
+Actually, I think in FY2023, the fee for a Non-Geostationary Orbit Satellite System was:
+- Less complex: $374,000?
+- More complex: $898,000?
+
+But then in FY2024 they might have adjusted.
+
+Let's recall in August 2024, the FCC announced FY2024 fees, and there was news that satellite license fees were being adjusted downward? Or upward?
+
+There was also a separate proceeding in 2023 to update satellite fees based on costs. The FCC proposed in 2023 to increase satellite fees significantly: For geostationary satellites, proposed fee was $302,000? Or maybe they proposed reducing?
+
+Let's recall in April 2023, the FCC proposed new regulatory fees for satellite and earth station licenses for FY2023? Actually they do it every year.
+
+But maybe I should try to recall the specific Federal Register document titled "Assessment and Collection of Regulatory Fees for Fiscal Year 2024" published around August 2024. In that document, there's a table "Calculation of Regulatory Fees" with columns for Number of Payment Units, Fee per unit, Total revenue.
+
+Let's try to recall the table layout. They list each service, like:
+AM Radio Class A: 65 units? No.
+
+But for satellites, it's in the International Bureau section.
+
+Actually, I think the fee for geostationary space station in FY2024 was set at $293,040? Let's check mental roundness: $293,040 sounds like a calculated amount based on costs divided by units, not round.
+
+Wait, there was a specific figure mentioned in news: The FCC's FY2024 regulatory fee for geostationary satellites is $293,225? Hmm.
+
+Let's try to recall from a news article in September 2024 listing fee amounts: "Geostationary space station: $290,000"? Or "Geostationary orbit satellite: $123,000"?
+
+We need the group total, not per unit. But we need both unit fee and count.
+
+Perhaps the table lists:
+Fee Category: Space Stations (Geostationary Orbit)
+Number of Licenses: 68
+Fee per License: $X
+Total: $Y
+
+But I need only total Y.
+
+Let's recall that in FY2024, the International Bureau was expected to collect about $41 million? Or the satellite portion was about $8 million?
+
+Actually, the FCC's total regulatory fee collection target for FY2024 was about $390,192,000? Let's check mental: For FY2023, the target was about $384 million? For FY2024 maybe $390.1 million?
+
+Within that, the amount allocated to International Bureau might be calculated based on full-time equivalents (FTEs). The International Bureau might have about 100 FTEs, costing maybe $30 million.
+
+But satellite fees specifically are part of that.
+
+However, the question might come from a specific source like "In FY2024, the FCC assessed $12.3 million in regulatory fees on geostationary space stations as a group". This sounds like a specific fact.
+
+Let's try to recall if in 2024 there was a report listing regulatory fees paid by satellite operators. For example, Intelsat, SES, etc., each pay per satellite. The total might be summed.
+
+But we need answer "To the nearest 0.1 million" which means round to one decimal in millions, e.g., "$X.X million". This framing is often used in quizzes about figures in reports.
+
+Perhaps the figure is $15.6 million? Or $9.8 million?
+
+Let's try to derive number of US-licensed geostationary satellites. As of 2024, there might be about 39? Or 50?
+
+Actually, I recall seeing a list of US-licensed geostationary satellites in 2023: There were about 80? Let's check mental: The FCC's "Space Station Applications" list includes many. But operational ones serving US are maybe around 30.
+
+But for fee assessment, they assess on all licensed space stations, including those not operational? Maybe all authorized.
+
+Let's recall in FY2022, there were 82 geostationary satellites paying fees? Or maybe 66?
+
+We can try to compute total revenue from geostationary fees if we know the total International Bureau revenue from space stations.
+
+But maybe easier: The question might be from a specific article summarizing FCC FY2024 fees, listing amounts for different categories. For example:
+- Geostationary space stations: $X million
+- Non-geostationary orbit systems: $Y million
+- Earth stations: $Z million
+
+If I recall seeing a chart where geostationary space stations paid about $18 million?
+
+Wait, I think in FY2023 the total fees for geostationary satellites were about $12.5 million, and for NGSO about $8 million?
+
+Let's try to recall specific news in Sept 2024 about fee payments due. Many news articles listed the fees for different services. For example, a SpaceNews article might have said: "The FCC is requiring satellite operators to pay regulatory fees totaling about $X for geostationary satellites..." But I don't recall precisely.
+
+Let's recall the FY2024 fee schedule values exactly, maybe they are:
+- Space station geostationary: $154,400? No, that might be for FY2022.
+
+Actually, I think there's a pattern: The fee for geostationary space stations was:
+FY2019: $107,650
+FY2020: $127,470
+FY2021: $129,825
+FY2022: $132,295? Or maybe $147,000?
+FY2023: $148,000? Or $170,000?
+
+But wait, in 2023 there was a big restructuring? Let's check mental: In August 2029? No.
+
+Let's recall that in 2023, the FCC added fees for small satellites ($4,800) and adjusted others. The geostationary fee went up to $161,000? Or maybe stayed around $133,000?
+
+But also in 2023, the FCC started assessing fees on NGSO systems with different tiers.
+
+Actually, I think I remember seeing in 2023 that SpaceX was required to pay about $563,000 for its Starlink system? Or maybe $1.8 million?
+
+Let's try to recall the specific fee for Starlink in FY2023: SpaceX paid $1,725,000? Or was that in FY2024?
+
+There was news that SpaceX paid $1.8 million in FCC regulatory fees for its Starlink constellation in 2024? Or was it $1.72 million?
+
+Let's check mental consistency: If the NGSO fee is per system and there are different complexity tiers. For a large constellation like Starlink (over 4,000 satellites), they might be in the highest tier, maybe paying $1.8 million. Yes, that sounds right. So the NGSO fee for more complex might be around $1.8 million.
+
+If so, then the geostationary fee per satellite might be around $300,000? Or maybe around $200,000?
+
+But actually, SpaceX also has some geostationary? No, Starlink is LEO.
+
+Let's recall in September 2024, there was a list of payments? Not clear.
+
+But we can try to recall the Federal Register table for FY2024 with specific fee amounts. Let's imagine the table rows for International Bureau:
+1. Earth Stations (Transmit/Receive) - $xxx
+2. Earth Stations (Small Earth Station) - $xxx
+3. Space Stations (Geostationary Orbit) - $xxx
+4. Space Stations (Non-Geostationary Orbit - Small Satellite) - $xxx
+5. Space Stations (Non-Geostationary Orbit - Less Complex) - $xxx
+6. Space Stations (Non-Geostationary Orbit - More Complex) - $xxx
+7. Space Stations (Direct Broadcast Satellite) - $xxx
+8. International Telecommunications Service - etc.
+
+We need row 3 fee and number of units.
+
+Actually, I think in FY2024 the fee for geostationary space station was $290,180? Or $293,000?
+
+But also there might be about 50 satellites, giving about $15 million.
+
+However, the question asks "how much... as a group... To the nearest 0.1 million". This sounds like the answer might be $15.0 million if round, but they want specific like $15.2 million.
+
+Let's recall that in the FY2024 budget, the International Bureau's satellite fee revenue was projected at about $40.2 million? No.
+
+We need a more accurate mental retrieval. Let's recall the FCC's FY2024 regulatory fees notice was published in the Federal Register on August 13, 2024 (89 FR 65903?). In that notice, there's a section "Table 2—Calculation of Regulatory Fees" maybe.
+
+Actually, I think I've seen a table with "Fee Category" and "FY24 Fee" and "FY23 Fee". For example:
+- Cable Television Systems: $0.89 per subscriber
+- Direct Broadcast Satellite: $xxx per subscriber?
+- Earth Station: $xxx
+
+But for satellites, maybe they list per unit fees.
+
+Let's recall specific news headlines after the notice was released: Many news outlets reported on the fee amounts. For example, "FCC sets 2024 regulatory fees: Radio stations pay $X, TV stations pay $Y, satellite operators pay $Z."
+
+One headline might have said: "Geostationary satellite operators will pay $298,000 per satellite"? Or "Geostationary satellite fee is $143,000"?
+
+But also there might have been discussion about fee reduction for satellites? Actually in 2024, there was a court case? Or maybe in 2025?
+
+Let's try another approach: The FCC's regulatory fees are calculated based on the number of FTEs in each bureau multiplied by salary costs, divided by the number of licensees.
+
+The International Bureau's satellite division might have a certain number of FTEs dedicated to geostationary satellites.
+
+But this is too vague.
+
+However, maybe the answer is indeed simple: The FCC assessed about $13.7 million?
+
+Wait, I think I remember seeing in the FY2024 fee schedule that there are 60 geostationary satellites, each paying about $230,000, totaling about $13.8 million.
+
+But I need "to the nearest 0.1 million" -> 13.8 million.
+
+But I need be somewhat sure.
+
+Let's recall specific numbers from FY2023: The fee for geostationary space station was $173,945? Actually that sounds right: In FY2023, the geostationary fee was $173,945 per satellite. Let's check mental: If there are about 70 satellites, total is about $12.2 million.
+
+But wait, I think in FY2023 the fee was indeed around $173,000? Or maybe $154,000?
+
+Actually, I recall seeing in 2028? No.
+
+Let's check mental consistency with inflation adjustments. From FY2021 ($129,825) to FY2024, with about 3-4% annual increases, we'd get:
+FY2022: ~135,000
+FY2023: ~140,000
+FY2024: ~146,000
+
+But that seems low compared to my other guesses.
+
+But there was also a one-time adjustment in 2023 because of new costs?
+
+Wait, there was a major revision in satellite fees proposed in 2023 that went into effect in FY2024? The FCC proposed in December 2023? Or was it in 2022?
+
+Actually, in 2023 the FCC updated its satellite licensing rules and also updated fees? Let's recall: In September 2023, the FCC streamlined its satellite licensing rules, including new fees?
+
+But the question asks specifically "how much in regulatory fees did the FCC assess on geostationary space stations as a group for fiscal year 2024". This sounds like it's asking for the aggregate fee revenue from geostationary satellites listed in the FY2024 fee report.
+
+Perhaps in the report, they list "Geostationary Space Stations: 45 licensees, fee per license $290,000, total $13,050,000". Rounded to nearest 0.1 million: 13.1 million? Or maybe 13.0?
+
+But I need be closer.
+
+Let's recall that in August 2024, SpaceNews reported: "FCC issues 2024 regulatory fees; satellite operators owe $..." Let's try to recall that article's content. It might have said:
+- Non-geostationary orbit satellite system fees: $1.02 million for complex, $485,000 for less complex?
+- Geostationary satellite fee: $290,000?
+- Small satellite fee: $11,000?
+
+But also they listed deadlines: Sept 24, 2024?
+
+Actually, I think in 2024 the fees for satellite were:
+- Geostationary space station: $298,160?
+- NGSO (less complex): $583,000?
+- NGSO (more complex): $1,020,000?
+- Small satellite: $13,000?
+
+Wait, those numbers seem somewhat round.
+
+But also there was mention that SpaceX owes about $1.02 million? Or maybe SpaceX owes about $0.5 million?
+
+Let's recall that in Sept 2024, SpaceX paid its regulatory fees. How much? Maybe $2 million?
+
+But actually, SpaceX's Starlink system might be in the "more complex" category, paying about $1,086,000? Or maybe they pay per call sign?
+
+But all this is not precise enough.
+
+However, we only need the geostationary grou
+
+Low model
+=========
+
+Attempt 1 · Right
+-----------------
+Docs: Doc 2, Doc 5, Doc 6 · Note: —
+
+Final answer: $20.2 million (to the nearest $0.1 million). | Your answer (gold): $20.2 million
+
+Passages quoted:
+
+- Quoted Doc 2: “Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024”
+- Quoted Doc 5: “In 2022, the Commission adopted the methodology for calculating the regulatory fee for the small satellite category”
+
+Named Doc 2, Doc 6
+
+Full answer
+-----------
+
+Based on the FY 2024 fee data in the documents:
+
+- NGSO “Other” fee: $964,200 per unit × 11 units = $10,606,200
+- NGSO “Less Complex” fee: $441,925 per unit × 6 units = $2,651,550
+- Small-satellite fee: $12,215 per unit × 16 units = $195,440
+
+Using the 60/40 GSO/NGSO split (after subtracting the small-satellite portion pro rata):
+
+- Total NGSO pool = $13,257,750 + $195,440 = $13,453,190
+- So total space-station pool = $13,453,190 / 0.40 = $33,632,975
+- GSO share (60%) = 0.60 × $33,632,975 ≈ $20,179,785
+
+With 140 GSO units, this equals about $144,141 each, totaling:
+
+$20.2 million (to the nearest $0.1 million).
+
+Reasoning
+---------
+
+We need answer based on input documents. Need determine regulatory fees assessed on geostationary space stations as a group for fiscal year 2024, to nearest $0.1 million.
+
+We need examine documents for FY2024 regulatory fees for space stations, particularly geostationary orbit category.
+
+Let's parse relevant docs.
+
+Document 2 (Federal Register Volume 89 Issue 144, Friday July 26, 2024) discusses Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024; Review... It mentions adopting new methodology for small satellites and including RPO/OOS in small satellites interim. But need actual fee amounts? Maybe in document 6? Wait document 6 is Volume 90 Issue 127 Monday July 7, 2025 about Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024? Actually document 6 title "Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024" but it's dated 2025 and mentions Third Report and Order adopting targeted revisions effective FY2025. Not the fee schedule.
+
+We need the actual fee assessed for geostationary space stations for FY2024. Might be in appendix of FY2024 Regulatory Fees NPRM or in the final rule for FY2024 fees. Let's search mental or via text.
+
+Document 2 mentions "We adopt these proposals to be effective for fiscal year 2024..." but doesn't list fee amounts? Let's inspect document 2 content more precisely. It mentions proposed regulatory fee rates set forth in appendices A, B, and E of FY2024 Regulatory Fees NPRM. But not included in excerpt? Maybe the actual fee rates are in another document not fully shown? Wait input documents include Document 2 summary with synopsis but not the fee table. However maybe Document 6 includes fee amounts? Let's inspect document 6 text for FY2024 fees? It mentions "The Commission adopts targeted revisions... effective for fiscal year 2025 (FY 2025)..." So not FY2024 fees.
+
+But the question asks "how much in regulatory fees did the FCC assess on geostationary space stations as a group for fiscal year 2024?" This sounds like total fees assessed on the group, not per unit. Need determine number of geostationary space stations and fee per unit for FY2024, multiply.
+
+We need find the FY2024 fee schedule for space stations. Let's recall or derive from documents.
+
+In document 6, there is discussion of existing schedule and changes. Let's search mental for figures: For FY2023 maybe GSO fee was around $123,000? Actually need correct.
+
+Let's recall FCC regulatory fees for satellite stations in recent years:
+FY2022: Space Stations (Geostationary Orbit) maybe $123,475? Or $117,000?
+FY2023: The fees went up substantially? Let's recall news in 2023: FCC proposed space station fees for FY2023: Geostationary orbit satellites fee proposed around $381,675? Or maybe $119,000? Let's recall specifics.
+
+We need be precise to $0.1 million (i.e., $100,000?). Actually "nearest $0.1 million" means round to nearest $100,000? Wait 0.1 million = $100,000. So answer likely in millions with one decimal, e.g., $5.3 million.
+
+We need determine total assessed on geostationary space stations as group for FY2024.
+
+Let's find in documents explicit figures.
+
+Document 2 mentions in background? Let's read more carefully.
+
+Document 2 Synposis: "The Commission adopts a methodology change for one category of fee payors and include a type of space station in an existing category on an interim basis... Specifically, the Commission adopts a new methodology for assessing regulatory fees for small satellites and spacecraft... and include space stations... in existing fee category for 'small satellites'..." Not fee amounts.
+
+But maybe in the appendices referenced but not shown. However we might not have them.
+
+Document 6 mentions in background paragraph 4: "Two categories of regulatory fees were initially established... In 2019... In 2020... In 2021... In 2022..." Then paragraph 5? Actually paragraph 5 mentions "In 2022, the Commission adopted the methodology for calculating the regulatory fee for the small satellite category..." Not amounts.
+
+But later in document 6, paragraph 2 mentions "This rulemaking will open new modes..." Not amounts.
+
+We need find actual fee schedule for FY2024 published in Federal Register around August or September 2024? The FY2024 fees were adopted likely in a Report and Order in MD Docket No. 24-85 and 24-86, maybe released in September 2024? Document 6 is Third Report and Order in MD Docket No. 24-85 adopted June 5, 2025, released June 9, 2025, effective Sept 14, 2025. That may include fee rates? Actually document 6 is about methodology changes for FY2025, but might reference prior fees.
+
+Let's search within document 6 for specific dollar figures. I see phrases like "fee assessed for NGSO--Other fee category... $964,200 per unit... NGSO--Less Complex... $441,925..." Wait that's in paragraph 40! Yes! Document 6 paragraph 40 says: "Under the current system, 80% of the share of NGSO space station fees are allocated to the NGSO--Other fee category and 20% to the NGSO--Less Complex fee category... For fiscal year 2024, fee payors in the NGSO--Other fee category were assessed fees of $964,200 per unit... NGSO--Less Complex fee category were assessed per unit fees of $441,925..."
+
+But we need geostationary space station total assessed as group. Need number of units in GSO category for FY2024 and fee per unit.
+
+We need determine the per-unit fee for GSO in FY2024. The allocation was 60/40 GSO/NGSO split adopted in Sept 2024? Wait that was for FY2024? Let's understand chronology.
+
+In Sept 2024 (Document? maybe not present except referenced in doc 6 paragraph 9?), the Commission revised allocation to 60/40 GSO/NGSO split. That was for FY2024? Actually document 6 paragraph 9 says "In September 2024, the Commission adopted a Second Report and Order in this proceeding that revised the allocation... from 80/20... to 60/40..." This change was likely effective for FY2024 fees? Or for FY2025? Let's determine.
+
+The FY2024 fee proceeding was in MD Docket 24-85 and 24-86. The NPRM was in March 2024, then they adopted some changes in June 2024 (document 2) and in September 2024 (the second report and order). Then they likely adopted the actual fee amounts in a separate order? Wait document 6 is Third Report and Order in June 2025 adopting targeted revisions effective for FY2025. So the Sept 2024 order likely changed the allocation methodology used to calculate FY2024 fees, and then the FY2024 fees were calculated and assessed based on that.
+
+But we need specifically "how much in regulatory fees did the FCC assess on geostationary space stations as a group for fiscal year 2024?" So need total fees collected from GSO category in FY2024.
+
+We need determine:
+1. Total space station regulatory fees collected in FY2024? Or the portion allocated to GSO?
+2. Number of GSO units for FY2024?
+3. Fee per unit?
+
+Let's recall or derive from available data.
+
+We know for FY2024, the NGSO--Other fee was $964,200 per unit, and NGSO--Less Complex was $441,925 per unit. Also small satellite fee was set at FY2023 level adjusted? Actually in doc 2 they said set fee for small satellites for FY2024 at level set for FY2023 ($12,215) with annual adjustments thereafter reflecting percentage change in appropriation, unit count, and FTE allocation percentage from previous fiscal year. So small satellite fee for FY2024 might be around $12,215? Or adjusted? Let's check: The FY2023 small satellite fee was maybe $12,215? Yes that sounds right (maybe $12,215 was FY2023). For FY2024 they kept same? Actually they said "set the regulatory fee for 'Space Stations... (Small Satellite)' for FY 2024 at the level set for FY 2023 ($12,215), with annual adjustments thereafter..." Wait "with annual adjustments thereafter" might mean for FY2025 onward. So FY2024 small satellite fee = $12,215.
+
+But we need GSO fees. Let's determine total space station fees for FY2024.
+
+We need the Space Bureau's share of total S&E appropriation for FY2024 multiplied by allocation? Or easier: Use known unit counts and fees for NGSO categories to back-calculate total NGSO fees, then apply 60/40 split to get GSO total?
+
+We need the number of units in NGSO--Other and NGSO--Less Complex for FY2024.
+
+Possibly in the FY2024 fee schedule appendix there is a list of payors and units. But not in documents? Let's search mental or text.
+
+In document 6 paragraph 40 mentions "For fiscal year 2024, fee payors in the NGSO--Other fee category were assessed fees of $964,200 per unit... NGSO--Less Complex... $441,925..." This sounds like the actual fee per license/system.
+
+We need number of payors (units) in each category for FY2024. Maybe in document 6 appendix? Not visible.
+
+But we might be able to compute total NGSO fees if we know total space station fees and allocation.
+
+Let's recall the FY2024 regulatory fee order adopted in maybe August or September 2024? The fees for space stations might be listed in a table. Let's recall news headlines in 2024: FCC sets regulatory fees for FY2024, space station fees increase? Actually in 2024 there was news that satellite operators faced huge fee hikes? Let's recall: In 2023, FCC proposed fees for space stations: Geostationary orbit fee proposed at about $381,000? Or in 2024 the adopted fees might have been: Space Stations (Geostationary Orbit) $398,000? Or maybe $1.2 million?
+
+Wait need be precise.
+
+Let's recall from 2023: The FCC proposed for FY2023 regulatory fees: Space Stations (Geostationary Orbit) fee of $123,475? No that might be older.
+
+Let's search mental database: In 2029? No.
+
+Let's examine logic: The total regulatory fees collected must equal the Commission's S&E appropriation for FY2024, which was about $390 million? Actually FCC's FY2024 appropriation was around $390 million? Wait the FCC's budget for FY2024 was about $387 million? Or $410 million? Let's check mental: The FCC's budget in recent years: FY2022 was about $388 million, FY2023 about $390 million, FY2024 maybe $390 million? The regulatory fees collected are to cover the full S&E appropriation minus other offsets.
+
+But we only need the portion assessed on geostationary space stations as group. That might be calculated as: Number of GSO satellites licensed multiplied by fee per satellite.
+
+How many GSO satellites were licensed and operational? In document 6 paragraph 16? Not clear.
+
+But maybe there's a direct figure in document 6: "For fiscal year 2024, fee payors in the NGSO--Other fee category were assessed fees of $964,200 per unit... NGSO--Less Complex... $441,925..." Then they discuss allocation 60/40.
+
+If we can determine the total space station fee pool, then 60% is GSO.
+
+But we need the total pool. Perhaps it's in the FY2024 fee schedule table that lists fee per unit and maybe total? Actually in regulatory fee proceedings, they list the fee per unit, and then they calculate total expected revenue by multiplying by unit counts. The unit counts are in an appendix listing all licensees.
+
+We might be able to derive unit counts from the lists in document 6? Let's check document 6 for lists? It mentions appendix B? No.
+
+But wait document 2 mentions "The proposed regulatory fee rates are set forth in appendices A, B, and E of the FY 2024 Regulatory Fees NPRM." Those appendices might contain the table with fees. But they are not shown in the excerpt.
+
+However, maybe document 6 includes enough numbers elsewhere. Let's scan document 6 for other figures.
+
+Document 6 paragraph 40 mentions fees for NGSO categories for FY2024. Then it discusses division of total NGSO fees between two subcategories on 50/50 basis? Actually that's for proposed change? Let's read paragraph 40 more fully in context.
+
+Let's extract relevant part from document 6 around paragraph 40:
+
+"Under the current system, 80% of the share of NGSO space station fees are allocated to the NGSO--Other fee category and 20% to the NGSO--Less Complex fee category, after subtracting a pro rata amount of the total fees assessed for NGSO--Small Satellites from each category. These allocated fees are then divided equally among the number of units in each category. For fiscal year 2024, fee payors in the NGSO--Other fee category were assessed fees of $964,200 per unit, regardless of the number of space stations authorized for each fee payor. Payors in the NGSO--Less Complex fee category were assessed per unit fees of $441,925, also regardless of the number of space stations authorized for each fee payor. NGSO space station payors have previously argued..."
+
+Then paragraph 41: "The Space and Earth Station Regulatory Fees FNPRM sought comment on two proposals to address this shortcoming. First, it sought comment on a proposal to create sub-categories within the existing NGSO--Other fee category for small and large constellations... Second, it sought comment on whether to eliminate the existing NGSO--Less Complex fee category and assess fees on all NGSO space stations..."
+
+Then paragraph 42: "We find that the overarching goals... would be met by assessing regulatory fees on all NGSO space stations (other than those eligible for paying regulatory fees under the small satellites category) within new fee categories of NGSO--Small Constellations (fewer than 1000 authorized space stations) and NGSO--Large Constellations (1000 authorized space stations or more) and by eliminating the NGSO--Less Complex category entirely. Furthermore, the Commission will allocate fees between small and large constellations on a 60/40 basis..."
+
+Thus for FY2025 they are changing the allocation among NGSO, but for FY2024 it was 80/20 between Other and Less Complex, with 60/40 overall GSO/NGSO split.
+
+But we still need the total amount assessed on GSO for FY2024.
+
+We need determine the total space station fees for FY2024. Let's call S_total. Then GSO gets 60% of S_total minus adjustments? Actually they subtract small satellite fees pro rata? Let's understand formula precisely.
+
+The current methodology (pre-FY2025 change) for space station fees:
+1. Determine Space Bureau's share of total fees? Or determine total space station fee pool?
+Actually they determine the total regulatory fees to be collected from space and earth station payors based on FTE allocation. Within space stations, they allocate between GSO and NGSO using 60/40 split (after Sept 2024 change). Within NGSO, they allocate 80% to Other and 20% to Less Complex. Then they subtract the small satellite fees (which are calculated separately) pro rata from both NGSO categories? Or from the NGSO pool?
+
+Specifically, paragraph 40 says: "80% of the share of NGSO space station fees are allocated to the NGSO--Other fee category and 20% to the NGSO--Less Complex fee category, after subtracting a pro rata amount of the total fees assessed for NGSO--Small Satellites from each category."
+
+So total NGSO pool = 40% of space station pool. From that pool, subtract pro rata amounts for small satellites? Actually small satellites are part of NGSO but have their own fee calculated separately (not part of the pool?). Let's understand: The small satellite fee is calculated separately (based on FY2023 fee adjusted). Then that total amount is deducted from the NGSO pool? Or deducted pro rata from both NGSO categories?
+
+The wording "after subtracting a pro rata amount of the total fees assessed for NGSO--Small Satellites from each category" suggests they take the total fees that will be collected from small satellites and subtract portions from the NGSO--Other and NGSO--Less Complex allocations, then divide the remaining amounts by the number of units in each category.
+
+But to find GSO total, we just need 60% of the space station pool (before or after small satellite subtraction?). The small satellite fees are part of NGSO, so they come out of the NGSO 40% share. So GSO share is 60% of total space station pool (not affected by small satellite subtraction).
+
+Thus if we can find the total space station pool for FY2024, multiply by 0.6.
+
+But we need "how much in regulatory fees did the FCC assess on geostationary space stations as a group for fiscal year 2024?" That could be calculated as fee per unit multiplied by number of GSO units.
+
+We need number of GSO units for FY2024. How many geostationary orbit space stations were licensed/operational?
+
+We can try to derive from known fee per unit if we can determine total pool.
+
+But maybe easier: The fee per unit for GSO in FY2024 can be calculated if we know total pool and number of units, but we don't have either.
+
+However, maybe the fee per unit for GSO in FY2024 is mentioned elsewhere in document 6? Let's search mental: In paragraph 40 they only mention NGSO fees. Maybe in an appendix? Not present.
+
+But perhaps in Document 2 there is a table with proposed fee rates for FY2024 in appendices not shown? Actually document 2 mentions "The proposed regulatory fee rates are set forth in appendices A, B, and E of the FY 2024 Regulatory Fees NPRM." Those might include space station fees.
+
+But we don't have those appendices in the input.
+
+However, maybe we can compute total pool from known total FCC regulatory fees for FY2024 and the allocations among bureaus?
+
+We need Space Bureau's share of total fees. The document 6 paragraph 9 mentions "In September 2024, the Commission... adopted a re-apportionment of regulatory fees between earth and space station payors based on the percentage of direct FTEs involved in the licensing and regulation of each category."
+
+But we need actual dollar amounts.
+
+Let's recall the actual FY2024 fee schedule published in Federal Register around Sept 2024? The fees might be listed in a table: For example, in FY2023 the fees were:
+Space Stations (Geostationary Orbit): maybe $123,475?
+Space Stations (NGSO) - Less Complex: maybe $72,000?
+Space Stations (NGSO) - Other: maybe $489,000?
+Small Satellites: $12,215?
+
+But in FY2024 they went up significantly due to Space Bureau FTE allocation? Actually in document 6 paragraph 40 they say NGSO--Other fee was $964,200 and NGSO--Less Complex $441,925 for FY2024. That sounds like a huge increase from prior years. So maybe GSO fee was also high, maybe around $1.5 million?
+
+Wait need be accurate. Let's try to derive using allocation ratios and unit counts if we can estimate unit counts.
+
+How many NGSO--Other systems were there in FY2024? The document 6 paragraph 43 mentions "there are substantially more small NGSO constellations than large NGSO constellations—an estimated 24 NGSO small constellations as compared to three NGSO large constellations." This is for the new categorization (small vs large). But for old categorization (Other vs Less Complex), how many units?
+
+We might find in the list of space stations in appendices of FY2024 fee notice. Let's recall that in 2024, the NGSO--Other category included large systems like SpaceX Starlink, Amazon Kuiper, OneWeb, etc. How many units? Each system counts as one unit regardless of number of satellites. So maybe there were about 11 units in NGSO--Other (as mentioned in document 6? Wait paragraph 28 mentions "For FY 2024 there were 16 units of small satellite fee payors, 140 units of GSO space stations, 6 units of 'less complex' NGSO space stations, and 11 units of other NGSO space stations." Yes! That's in document 6 paragraph 28! Let's check.
+
+Looking at document 6 paragraph 28: "Under the current methodology, for FY 2024 there were 16 units of small satellite fee payors, 140 units of GSO space stations, 6 units of 'less complex' NGSO space stations, and 11 units of other NGSO space stations."
+
+Great! So unit counts for FY2024:
+Small satellites: 16
+GSO: 140
+NGSO Less Complex: 6
+NGSO Other: 11
+
+Also they mention fees per unit for NGSO Other ($964,200) and Less Complex ($441,925). We can use these to compute total NGSO fees (excluding small satellites).
+
+Total NGSO Other fees = 11 * 964,200 = 10,606,200.
+Total NGSO Less Complex fees = 6 * 441,925 = 2,651,550.
+Combined NGSO fees (Other + Less Co
+
+Attempt 2 · Not scored — our checker failed; replaced
+-----------------------------------------------------
+Docs: — · Note: —
+
+Final answer: — | Your answer (gold): $20.2 million
+
+Full answer
+-----------
+
+No full answer was recorded.
+
+Reasoning
+---------
+
+This attempt recorded no reasoning.
+
+Attempt 3 · Not scored — our checker failed; replaced
+-----------------------------------------------------
+Docs: — · Note: —
+
+Final answer: — | Your answer (gold): $20.2 million
+
+Full answer
+-----------
+
+No full answer was recorded.
+
+Reasoning
+---------
+
+This attempt recorded no reasoning.
+
+Attempt 4 · Right
+-----------------
+Docs: Doc 2, Doc 3, Doc 5, Doc 6 · Note: —
+
+Final answer: So, rounded to the nearest $0.1 million, the FCC assessed about $20.2 million in regulatory fees on geostationary space stations as a group for FY 2024. | Your answer (gold): $20.2 million
+
+Passages quoted:
+
+- Quoted Doc 2: “Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024; Review”
+- Quoted Doc 2: “Final Regulatory Flexibility Analysis”
+- Quoted Doc 2: “The Commission released the Space and Earth Station Regulatory Fees NPRM on March 13, 2024”
+
+Named Doc 2, Doc 3, Doc 5, Doc 6
+
+Full answer
+-----------
+
+For FY 2024 the FCC used its existing methodology (revised in September 2024 to a 60/40 GSO/NGSO split) with these unit/fee figures shown in the record:
+
+- NGSO – Other: 11 units × $964,200 = $10,606,200
+- NGSO – Less Complex: 6 units × $441,925 = $2,651,550
+- Remainder after small‑satellite deduction: $13,257,750
+- So the NGSO pool (40 %) ≈ $13.45 M, making the total space‑station pool ≈ $33.6 M
+- GSO share (60 %) ≈ $20.18 M
+- GSO units: 140 operational stations
+
+Multiplying out: 140 units × ≈$144,140 ≈ $20.2 million.
+
+So, rounded to the nearest $0.1 million, the FCC assessed about $20.2 million in regulatory fees on geostationary space stations as a group for FY 2024.
+
+Reasoning
+---------
+
+We need answer: To nearest $0.1 million, how much in regulatory fees did FCC assess on geostationary space stations as a group for fiscal year 2024?
+
+Need determine total regulatory fees assessed on geostationary space stations (GSO) group for FY2024 using documents.
+
+We need examine documents for FY2024 regulatory fee assessment for space stations, specifically geostationary orbit category fee and number of units/payers.
+
+Relevant documents: Document 2 (Federal Register July 26, 2024) about FY2024 regulatory fees changes, Document 3 (Aug 9, 2024) announcing effective date and includes summary maybe not fees, Document 5 (March 13, 2025) further notice, Document 6 (July 7, 2025) final rule adopting targeted revisions for FY2025 but mentions prior? But need FY2024 assessed amount.
+
+We need determine fee per unit for Space Stations (Geostationary Orbit) in FY2024 and number of units (authorized/operational?) multiplied.
+
+Let's inspect Document 2 carefully.
+
+Document 2 is "Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024; Review..." adopted June 13, 2024. It mentions adopting new methodology for small satellites and including RPO/OOS in small satellites interim. It defers other proposals. Then there is reference to FY 2024 Regulatory Fees NPRM (89 FR 53276, June 25, 2024) seeking comment on proposed regulatory fee rates for space and earth station payors for FY 2024 based on existing methodology and proposals. But Document 2 may include final fee rates? Let's examine.
+
+Document 2 synopsis says adopts methodology change for one category and include type in existing category on interim basis effective for FY2024. Then "The Commission defers action on other proposals... It anticipates acting on remaining proposals in near term." So Document 2 might not list final fee amounts, but maybe in appendix? Let's read further.
+
+In Document 2 Section III Discussion A and B. Then "Final Regulatory Flexibility Analysis" etc. But maybe the actual fee schedule is in another document (the FY 2024 Regulatory Fees NPRM second notice?). Actually the Commission usually adopts fee amounts in a separate proceeding MD Docket No. 24-86? Wait Document 2 is in MD Docket No. 24-85 and MD Docket No. 24-86, FCC 24-70. This might be the Report and Order that sets the fee rates? Let's inspect content near end? The document includes synopsis, background, discussion, then FRFA, then lists of subjects? Hmm might not include the actual table of fees because it's summarized in Federal Register. But maybe in appendices? Let's search mental for numbers.
+
+We need "how much in regulatory fees did the FCC assess on geostationary space stations as a group for fiscal year 2024?" This sounds like total fees collected/assessed for that category.
+
+We need determine fee per GSO station for FY2024 and number of GSO stations assessed.
+
+Let's recall from prior knowledge? In FY2023, GSO fee was about $123,000? Actually need correct.
+
+Let's inspect Document 6 (July 7, 2025) which mentions "The fee schedule adopted for fiscal year 2024 contained sizable increases in the fees assessed to space and earth station fee payors compared to the previous fiscal year." And in Section II Background paragraph 8 mentions "In September 2024, the Commission adopted a Second Report and Order... revising allocation... from 80/20 to 60/40..." That order might have set FY2024 fees? Wait the FY2024 fee collection usually happens in 2024 for fiscal year ending Sept 2024, with fees due in Sept? Actually FCC assesses fees for fiscal year based on prior year? Let's understand timeline.
+
+The Commission adopts fee rates usually in August/September each year for that fiscal year (ending Sept 30). For FY2024, they likely adopted in August/September 2024? Document 3 is dated Aug 9, 2024 and announces effective date Sept 9, 2024 for rules adopted in Orbital Debris Second Report and Order, not fees. Document 6 is July 7, 2025 adopting changes for FY2025. So FY2024 fees were likely adopted in 2024, maybe in a separate order not fully included? But Document 2 is from July 26, 2024 and mentions FY 2024 regulatory fees NPRM released June 13, 2024? Wait need parse precisely.
+
+Let's read Document 2 more thoroughly, particularly parts mentioning fee rates.
+
+In Document 2, Section II Background mentions "The Commission released the Space and Earth Station Regulatory Fees NPRM on March 13, 2024..." Then "In addition, on June 13, 2024, the Commission released the Second Notice of Proposed Rulemaking in MD Docket No. 24-86... seeking comment on the Commission's proposed methodology and regulatory fee rates for FY 2024..."
+
+Then Section III Discussion A adopts new methodology for small satellites: "The Commission adopts the proposal... to set the regulatory fee for 'Space Stations... Small Satellite' for FY 2024 at the level set for FY 2023 ($12,215), with annual adjustments thereafter..."
+
+Then B: "The Commission adopts the proposal... to assess regulatory fees on spacecraft principally used for RPO... in the existing fee category for 'small satellites' on an interim basis..."
+
+Then "The Commission declines, at this time, to assess regulatory fees on all 'ISAM space stations'..."
+
+Then "Final Regulatory Flexibility Analysis" mentions "The Commission adopts two proposals... These changes will be effective for the fiscal year 2024..."
+
+Thus Document 2 is indeed the order adopting the methodology changes for FY2024, but maybe the actual fee rates are in the other docket (24-86) adopted later? However the question asks "how much in regulatory fees did the FCC assess on geostationary space stations as a group for fiscal year 2024?" This likely can be computed using the fee rate per unit multiplied by number of units in that category for FY2024, which might be mentioned in Document 5 or 6.
+
+Let's check Document 5 (March 13, 2025) which is a Further Notice of Proposed Rulemaking continuing examination. In Section II Background, paragraphs 4-9 discuss existing schedule and recent changes, including allocation splits. Paragraph 9 mentions "Most recently, in September 2024, the Commission revised the allocation... using existing methodology... changing from 80/20 to 60/40..." That sounds like the FY2024 fee adoption? Let's read paragraph 2-4 maybe include fee amounts?
+
+Actually Document 5 might discuss proposed changes for FY2025? Wait it says "This FNPRM continues an examination... These changes will be effective for the fiscal year 2025..." So Document 5 is proposing further changes for FY2025, but also summarizes background including FY2024 allocations.
+
+Specifically paragraph 5: "In 2022, the Commission adopted the methodology for calculating the regulatory fee for the small satellite category... In June 2024... set regulatory fee... at level set for FY2023 ($12,215)... In September 2024... revised allocation... 60/40 split... adopted re-apportionment of regulatory fees between earth and space station payors based on percentage of direct FTEs..."
+
+But still need actual total assessed on GSO group.
+
+Let's check Document 6 (July 7, 2025) Third Report and Order adopting targeted revisions for FY2025. In Section I Introduction paragraph 2 mentions "The fee schedule adopted for fiscal year 2024 contained sizable increases..." Maybe in the background they discuss FY2024 numbers? Let's read carefully.
+
+Document 6 Section II Background paragraphs 5-9 discuss section 9 obligations and recent changes. Paragraph 6 mentions "The Commission released the Space and Earth Station Regulatory Fees NPRM on March 13, 2024..." Paragraph 7 mentions June 2024 order. Paragraph 8 mentions September 2024 Second Report and Order revising allocation 60/40 and re-apportionment based on direct FTEs. Paragraph 9 mentions "Most recently..." Wait that's Document 5? Hmm no.
+
+But we need specifically the total amount assessed on geostationary space stations as a group for FY2024. Let's find fee rate and number of units.
+
+We need locate the FY2024 fee schedule table for space stations. This might be in Document 2 appendix? Or in Document 5? Or in Document 6? Let's search mental for figures: In FY2023, fees were: Space Stations (Geostationary Orbit) maybe $123,800? Actually I think in FY2023 the fee for GSO was around $123,800? Or maybe $135,350? Let's recall news in 2023: FCC proposed regulatory fees for FY2023 with satellite fees: Small satellites $12,215? Wait yes small satellite fee was around $8,000? Let's check mental: In 2029? No.
+
+Let's derive from allocations. The total space station regulatory fees for FY2024 depend on total Space Bureau share multiplied by allocations.
+
+But maybe easier: Document 6 in Section III maybe lists prior fees? Let's inspect Document 6 content near paragraph 40? Actually Document 6 discusses adopting changes for FY2025 and mentions "Under the current system, 80%... no wait they changed to 60/40 in Sept 2024 for FY2024? Let's parse precisely.
+
+Document 6 paragraph 40: "Under the current system, 80% of the share of NGSO space station fees are allocated to the NGSO--Other fee category and 20% to the NGSO--Less Complex fee category..." Wait that sounds like within NGSO, not GSO/NGSO. But earlier in paragraph 8 they mentioned revising allocation of space station regulatory fees using existing methodology from 80/20 GSO/NGSO split to 60/40 GSO/NGSO split in Sept 2024. So for FY2024 the split was 60/40? Or was that adopted for FY2024? Yes likely the Sept 2024 order set the fee rates for FY2024 using 60/40 split.
+
+Thus to find total GSO fees, we need total space station fees multiplied by 60%, but need total space station fee pool for FY2024.
+
+Let's find total regulatory fees for space stations in FY2024 from the fee schedule adopted in Sept 2024. Maybe in Document 5 there is mention of proposed rates? Let's inspect Document 5 more.
+
+Document 5 is "Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024" proposed rule? Wait it's dated March 13, 2025 and says "In this document, the Federal Communications Commission adopted a Further Notice of Proposed Rulemaking (FNPRM) that seeks additional comments on revising the regulatory fees..." So it's not the final fee rates.
+
+But in Document 5 Section II Background paragraph 4 lists current categories and maybe mentions fee amounts? Let's read mental excerpts: "There are four current categories of space station payors: (1) Space Stations (Geostationary Orbit); (2) Space Stations (Non-Geostationary Orbit)--Less Complex; (3) Space Stations (Non-Geostationary Orbit)--Other; and (4) Space Station (Small Satellites)." No amounts.
+
+We need find the actual FY2024 fee amounts adopted. Maybe in Document 2 there are appendices with proposed fee rates? The document mentions "The proposed regulatory fee rates are set forth in appendices A, B, and E of the FY 2024 Regulatory Fees NPRM." So Document 2 references them but may not reproduce.
+
+However, we just need total assessed on geostationary space stations as a group, which is fee per unit times number of units.
+
+We need determine number of GSO units for FY2024. The unit is per license/call sign? For GSO, it's per operational station? Or per authorized now? For FY2024 they used operational? Actually they hadn't adopted authorized-based yet (that is in Document 6 for FY2025). So for FY2024, they assessed on operational GSO stations.
+
+How many operational GSO stations were there for FY2024? Maybe listed in appendix to the fee notice. Let's recall that in FY2024 there might have been 140? Wait Document 6 paragraph 28 mentions "For fiscal year 2024, fee payors in the NGSO--Other fee category..." But not GSO.
+
+Let's search mental for FCC FY2024 regulatory fee schedule table published in Federal Register around Sept 2024? The fee schedule lists each category with fee. For example, in FY2023 the fees were:
+- Space Stations (Geostationary Orbit): maybe $123,800? Actually I think in FY2022 GSO was $107,000? Let's try to recall news headlines in 2023 about satellite fee increases. In 2023 the FCC proposed increasing satellite regulatory fees: for geostationary satellites, fee was proposed to increase from about $100,000? Hmm not clear.
+
+But we need be precise using documents.
+
+Let's examine Document 6 paragraph 40 mentions "Under the current system... 80% of the share of NGSO space station fees are allocated to the NGSO--Other fee category and 20% to the NGSO--Less Complex fee category..." Then "These allocated fees are then divided equally among the number of units in each category. For fiscal year 2024, fee payors in the NGSO--Other fee category were assessed fees of $964,200 per unit..." Aha! This gives the per-unit fee for NGSO-Other in FY2024: $964,200. Similarly, "Payors in the NGSO--Less Complex fee category were assessed per unit fees of $441,925..." So Document 6 lists those.
+
+Thus we can possibly derive total NGSO fees and then GSO using 60/40 split? Wait the 60/40 split is between GSO and NGSO overall, then within NGSO 80/20 split between Other and Less Complex. So if we know per-unit fees for NGSO-Other and NGSO-Less Complex and the number of units in each, we can compute total NGSO fees, then total space station fees, then GSO share = 60% of total space station fees (minus small satellites? Actually small satellites are subtracted pro rata).
+
+But we need only the total assessed on geostationary space stations as a group. That equals number of GSO units times GSO per-unit fee. Or 60% of total space station pool after subtracting small satellite fees.
+
+We need determine number of units in each NGSO category for FY2024. Document 6 might mention? Let's read paragraph 41? Actually paragraph 40 mentions "For fiscal year 2024, fee payors..." but doesn't list unit counts. However we might find unit counts elsewhere, maybe in Document 5 background paragraph 28? Let's check mental: Document 5 paragraph 28 might say "For fiscal year 2024 there were 16 units of small satellite fee payors, 140 units of GSO space stations, 6 units of 'less complex' NGSO space stations, and 11 units of other NGSO space stations." Yes! That sounds right and was in Document 5? Let's verify mental: In Document 5 Section III Discussion paragraph 28? Actually I recall seeing in Document 5: "Under the current methodology, for FY 2024 there were 16 units of small satellite fee payors, 140 units of GSO space stations, 6 units of 'less complex' NGSO space stations, and 11 units of other NGSO space stations." Yes, that sounds familiar. So unit counts are:
+- GSO: 140 units
+- NGSO Less Complex: 6 units
+- NGSO Other: 11 units
+- Small Satellite: 16 units? Wait small satellites are per license/call sign, but unit count might be number of licenses? Actually yes 16 units.
+
+But wait these counts might be for FY2024? Let's check consistency with fees.
+
+If NGSO-Other fee per unit = $964,200 and there are 11 units, then total NGSO-Other fees = 11 * 964,200 = $10,606,200.
+
+NGSO-Less Complex fee per unit = $441,925 and 6 units => total = $2,651,550.
+
+Small satellite fee per unit = $12,215 (for FY2024? Actually Document 2 said set at FY2023 level $12,215 with adjustments for unit count and FTE allocation. Let's determine small satellite fee for FY2024. In Document 2 they said set at level set for FY 2023 ($12,215), with annual adjustments thereafter to reflect percentage change in FCC appropriation, unit count, and FTE allocation percentage from previous fiscal year. So for FY2024 there might be an adjustment. But maybe it's still around $12,215? Or maybe adjusted to something like $12,360? But not necessary if we use split.
+
+Total NGSO fees (excluding small satellites) = 10,606,200 + 2,651,550 = $13,257,750.
+
+But wait the 60/40 split applies to space station fees excluding small satellites? Actually the methodology: first determine share for space stations, then subtract small satellite fees? Let's understand precisely.
+
+In Document 6 paragraph 40: "Under the current system... 80% of the share of NGSO space station fees are allocated to the NGSO--Other fee category and 20% to the NGSO--Less Complex fee category, after subtracting a pro rata amount of the total fees assessed for NGSO--Small Satellites from each category."
+
+So the process is:
+1. Determine total space station regulatory fee pool (GSO + NGSO + small satellites? Or GSO + NGSO including small?)
+Actually earlier in Document 6 paragraph 39? Let's understand the full methodology.
+
+The Commission first determines Space Bureau's share of total S&E. Then allocates between earth and space station payors based on direct FTEs. Then within space stations, they allocate 60% to GSO and 40% to NGSO (this was changed in Sept 2024). Then within NGSO, they subtract pro rata small satellite fees? Or small satellites are part of NGSO?
+
+Looking at Document 2 Section III.A: "The Commission adopts the proposal... to set the regulatory fee for 'Space Stations (per license/call sign in non-geostationary orbit) (47 CFR part 25) (Small Satellite)' for FY 2024 at the level set for FY 2023 ($12,215), with annual adjustments thereafter... The Commission will continue to multiply the per unit regulatory fee for small satellites by the number of small satellite units for the fiscal year and deduct this amount from the NGSO share of space station regulatory fees, divided between NGSO-Other and NGSO-Less Complex based on an 80/20 split and reduced from the target goals of NGSO-Other and NGSO-Less Complex respectively."
+
+Thus the small satellite fees are deducted from the NGSO share (the 40%). So total space station pool = GSO pool + NGSO pool (which includes small satellites deducted).
+
+But actually they determine the total space station fee amount needed (say S_total). Then 60% goes to GSO => GSO_pool = 0.6 S_total. 40% goes to NGSO => NGSO_pool = 0.4 S_total. Then from NGSO_pool, they subtract the total small satellite fees (unit fee * number of small satellite units). The remainder is split 80/20 between NGSO-Other and NGSO-Less Complex.
+
+Thus if we can determine S_total or directly compute GSO_pool = number of GSO units * fee per GSO unit.
+
+But we have NGSO-Other and NGSO-Less Complex per-unit fees and unit counts, which allow us to compute the remainder after subtracting small satellite fees.
+
+Specifically:
+NGSO_pool - SmallSat_fees = Remainder = NGSO_Other_total + NGSO_Less_total.
+We have NGSO_Other_total = 11 * 964,200 = 10,606,200.
+NGSO_Less_total = 6 * 441,925 = 2,651,550.
+Remainder = 13,257,750.
+
+Thus NGSO_pool = Remainder + SmallSat_fees.
+
+We need SmallSat_fees = unit_fee * 16 (units). What's unit fee? Let's determine from adjustments mentioned.
+
+In Document 2 they said set at FY 2023 level ($12,215), with adjustments thereafter reflecting percentage change in FCC appropriation, unit count, and FTE allocation percentage from previous fiscal year.
+
+We need the FY2024 small satellite fee amount actually used. Maybe in the FY2024 fee schedule it's listed. Let's try to recall or derive.
+
+But actually we don't need S_total if we can find GSO per-unit fee. How is GSO per-unit fee calculated? GSO_pool = 0.6 S_total, and divided by 140 units.
+
+But we have NGSO_pool = 0.4 S_total => S_total = NGSO_pool / 0.4 = (Remainder + SmallSat_fees)/0.4.
+
+Then GSO_pool = 0.6 S_total = 0.6/0.4 * (Remainder + SmallSat_fees) = 1.5 (Remainder + SmallSat_fees).
+
+Then GSO per unit = GSO_pool / 140.
+
+But we need SmallSat_fees.
+
+Alternatively, perhaps the small satellite fee for FY2024 was indeed $12,215 (no adjustment?) Or maybe adjusted.
+
+Let's check consistency: If SmallSat_fees = 16 * 12,215 = 195,440. Then NGSO_pool = 13,257,750 + 195,440 = 13,453,190. Then S_total = 13,453,190 / 0.4 = 33,632,975. Then GSO_pool = 0.6 * 33,632,975 = 20,179,785. Divide by 140 => $144,141.32 per GSO unit.
+
+But is that correct? Let's check if round numbers? 20,179,785 / 140 = 144,141.32 indeed.
+
+But need "how much in regulatory fees did the FCC assess on geostationary space stations as a group" => total GSO_pool = about $20.2
+
+Attempt 5 · Right
+-----------------
+Docs: Doc 1, Doc 2, Doc 3, Doc 5, Doc 6, Doc 7 · Note: —
+
+Final answer: $20.2 million | Your answer (gold): $20.2 million
+
+Passages quoted:
+
+- Quoted Doc 5: “The existing schedule of regulatory fees for space and earth station payors is contained in 47 CFR 1.1156.”
+- Quoted Doc 2: “Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024”
+
+Named Doc 6, Doc 2, Doc 3, Doc 1, Doc 5, Doc 7
+
+Full answer
+-----------
+
+The FCC assessed geostationary space station fees on a per-license basis, and for FY 2024 there were 140 geostationary space station license units (Document 6, ¶28). Applying the FY 2024 per-unit fee of about $144,000 for the Space Stations (Geostationary Orbit) category gives:
+
+140 × ~$144,000 ≈ $20,160,000
+
+Rounded to the nearest $0.1 million:
+
+$20.2 million
+
+Reasoning
+---------
+
+We need answer: "To the nearest $0.1 million, how much in regulatory fees did the FCC assess on geostationary space stations as a group for fiscal year 2024?" Need use input documents.
+
+We need locate fiscal year 2024 regulatory fees for space stations, specifically geostationary space stations as a group.
+
+We have multiple docs. Need identify correct fee amounts and number of units for GSO in FY2024, then multiply.
+
+Let's recall or find in docs. Document 2 is about FY2024 space and earth station regulatory fees, adopted June 13, 2024. It mentions proposed fee rates in appendices A, B, E of FY2024 Regulatory Fees NPRM, but document might not list actual adopted fees? Actually Document 2 is Report and Order in MD Docket No. 24-85 and MD Docket No. 24-86, FCC 24-70, adopted June 13, 2024. It adopts new methodology for small satellites and includes RPO/OOS in small satellites. It defers action on other proposals. It might not set the actual fee rates for FY2024? Wait there is also Document 6 (Federal Register Volume 90 Issue 127, July 7, 2025) which mentions "revising the Commission's existing methodology... will be effective for fiscal year 2025." But need FY2024.
+
+There might be a separate FY2024 regulatory fees order mentioned in Document 3? Let's examine documents.
+
+Document 1: Orbital Debris Reconsideration Order, Feb 2024.
+
+Document 2: Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024; Review... (Federal Register Volume 89 Issue 144, Friday July 26, 2024). This is the Report and Order for FY2024. It discusses methodology changes for small satellites and RPO/OOS. But does it list the fee amounts? Let's inspect content: Under "II. Background" mentions FY 2024 Regulatory Fees NPRM (89 FR 53276, June 25, 2024) seeks comment on proposed regulatory fee rates... The proposed regulatory fee rates are set forth in appendices A, B, and E of the FY 2024 Regulatory Fees NPRM. Then in "III. Discussion" adopts two proposals. At the end maybe mentions implementation as part of order adopting FCC-wide regulatory fees for FY 2024.
+
+We need actual assessed fees for geostationary space stations as a group for FY2024. That likely is in the FY2024 fee schedule adopted in a different order (maybe FCC 24-?? in MD Docket No. 24-86?). But Document 2 might contain the fee rates? Let's search mental text: Document 2 mentions "set the regulatory fee for 'Space Stations (per license/call sign in non-geostationary orbit) (47 CFR part 25) (Small Satellite)' for FY 2024 at the level set for FY 2023 ($12,215)..." So small satellite fee is $12,215 per license. But we need geostationary group total.
+
+Perhaps Document 6 mentions FY2024 fees? Let's check Document 6: It's Third Report and Order in MD Docket No. 24-85, FCC 25-31, adopted June 5, 2025, effective Sept 14, 2025. In background paragraph 4 lists current categories and mentions "The existing schedule of regulatory fees for space and earth station payors is contained in 47 CFR 1.1156." Maybe the fee schedule in 47 CFR 1.1156 lists specific fees? But the document might include amendments? Actually Document 6 amends parts 1 and 25, not part 1.1156? Wait it might amend fee schedule? Let's check: In Document 6, there is no explicit fee amount listed except references.
+
+But Document 3 (Federal Register Volume 89 Issue 154, Friday Aug 9, 2024) is about Space Innovation; Mitigation of Orbital Debris... Not about fees.
+
+Document 5 (Federal Register Volume 90 Issue 48, Thursday Mar 13, 2025) is FNPRM seeking additional comments on revising regulatory fees. Might include proposed fees? Let's inspect mental content: Document 5 is "Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024" but it's a proposed rule (FNPRM) in March 2025? Wait title says "Assessment and Collection... for Fiscal Year 2024" but it's a proposed rule with comments due March 27, 2025. That sounds like they are proposing revisions for FY2024? Actually no, it's continuing examination and seeking additional comments on proposals initially made earlier but not adopted in FY2024. So not the actual fees.
+
+Document 7 (Federal Register Volume 90 Issue 164, Wednesday Aug 27, 2025) is about expediting initial processing, not fees.
+
+Thus the actual FY2024 fee schedule might be in Document 2's appendices? But the text provided might not include the appendices. However, maybe the answer can be derived from information in the documents about allocations and unit counts.
+
+We need "how much in regulatory fees did the FCC assess on geostationary space stations as a group for fiscal year 2024?" That is total fees collected/assessed for all GSO stations in FY2024.
+
+We need determine the per-unit fee for Space Stations (Geostationary Orbit) in FY2024 and multiply by number of units (authorized/operational stations).
+
+Let's find per-unit fee. In Document 2, there might be mention in the context of small satellites being calculated as 1/20th of average of NGSO categories, but not GSO. However, there may be references in other docs.
+
+Document 6 mentions in paragraph 8: "In September 2024, the Commission revised the allocation ... from 80/20 GSO/NGSO split to 60/40 GSO/NGSO split." And paragraph 6 mentions existing schedule in 47 CFR 1.1156. But not fees.
+
+We need locate the actual FY2024 regulatory fee amounts for space stations. Maybe in Document 5? Let's check mental content of Document 5: It mentions "The Commission released the Space and Earth Station Regulatory Fees NPRM on March 13, 2024... The Commission received 16 comments..." Then "In June 2024, the Commission amended..." Then "In September 2024, the Commission adopted a Second Report and Order... revised the allocation..." Then "The Commission now amends..." Actually Document 6 is the Order adopting changes for FY2025. Document 5 is the FNPRM that preceded it (Feb 2025?). Wait Document 5 date is March 13, 2025, and it's proposed rule. So Document 6 is the final rule responding to Document 5.
+
+But we need FY2024 fees, which were likely adopted in a separate proceeding (MD Docket No. 24-86) in maybe August or September 2024. Document 2 is part of that? Let's check Document 2 title: "Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024; Review of the Commission's Assessment and Collection of Regulatory Fees for Fiscal Year 2024". That sounds like the order adopting fees for FY2024, but only addresses space and earth station parts? Actually there is a Commission-wide FY2024 regulatory fees order (maybe FCC 24-? in MD Docket No. 24-86). The space and earth station parts might be in Document 2, but the document only discusses two proposals adopted, deferring others. The actual fee rates might be in appendices not shown in the text excerpt.
+
+However, we might not need the explicit fee schedule if we can compute total GSO fees from allocation percentages and total space station fees.
+
+We need the total regulatory fees assessed on geostationary space stations as a group. That equals number of GSO units times per-unit fee. Or if total space station fee pool is known and split 60/40? Wait that split was for FY2024? Actually Document 6 paragraph 8 says in September 2024 the Commission revised allocation... to 60/40 for FY2024? Let's understand chronology.
+
+The Space Bureau was created in 2023. For FY2023 fees, they used old International Bureau allocations? For FY2024, they initially proposed fees in March 2024 NPRM (Document 2's background mentions Space and Earth Station Regulatory Fees NPRM on March 13, 2024). Then in June 2024 they adopted some methodology changes (small satellites fixed at $12,215; RPO/OOS included). Then in September 2024 they adopted a Second Report and Order revising allocation to 60/40. That September 2024 order likely also adopted the actual fee rates for FY2024? Wait Document 6 mentions "In September 2024, the Commission revised the allocation of space station regulatory fees using the existing methodology... This is in addition to adopting a re-apportionment..." That sounds like part of the FY2024 fee adoption.
+
+But we need the actual dollar amount assessed on GSO as a group for FY2024. Let's see if Document 6 includes numbers in its analysis? Maybe in the FRFA or procedural sections? Or Document 5?
+
+Let's thoroughly examine mental content of Document 5 (the FNPRM from March 2025). It lists background paragraphs 4-10 describing history. Paragraph 6 mentions in 2022 the Commission adopted methodology for small satellites. Paragraph 7 mentions in June 2024 Commission amended methodology for small satellites... Paragraph 8 mentions September 2024 revised allocation... Paragraph 9 mentions most recently in September 2024 Commission revised allocation... Wait paragraph 4 lists current categories. Paragraph 5 mentions in 2019 created small satellites, in 2020 included non-US licensed, in 2021 separated NGSO less complex/other, in 2022 adopted small satellite methodology, in June 2024 amended small satellite methodology and included RPO/OOS, in Sept 2024 revised allocation to 60/40 and re-apportioned between earth and space.
+
+But still no specific fee amounts.
+
+However, maybe the answer is in Document 2's appendices? The document mentions "The proposed regulatory fee rates are set forth in appendices A, B, and E of the FY 2024 Regulatory Fees NPRM." But those appendices are not in the excerpt. But maybe in the text of Document 2 there are numbers mentioned elsewhere? Let's scan mental text of Document 2 for dollar figures. I see "$12,215" mentioned for small satellites in FY2023 and FY2024. Also there may be mention of fee rates in the synopsis? No.
+
+Let's check Document 3? Not fees.
+
+Document 6 might include fee amounts in its FRFA? The FRFA mentions "The Order adopts targeted amendments... These changes will be effective for fiscal year 2025..." Not FY2024.
+
+But maybe the question expects using information in the documents to compute. Let's gather data.
+
+We need total fees assessed on geostationary space stations as a group for FY2024. That requires knowing:
+1. Total space station regulatory fees collected in FY2024.
+2. The allocation split between GSO and NGSO (60/40).
+3. Subtract small satellite fees? Wait the split applies after subtracting small satellite fees? Let's understand methodology.
+
+Current methodology (as of FY2024 after Sept 2024 changes):
+- Determine Space Bureau share of total S&E.
+- Allocate between earth stations and space stations based on direct FTE percentages.
+- For space stations, subtract the total fees for small satellites (per license fee times number of licenses) from the space station pool.
+- The remaining pool is split between GSO and NGSO: 60% GSO, 40% NGSO.
+- Within NGSO, split between Less Complex and Other? Wait that was the old split (20/80 within NGSO). But in Sept 2024 they revised allocation of space station regulatory fees using existing methodology from 80/20 GSO/NGSO split to 60/40. Did they also change the internal NGSO split? The document says "revised the allocation of space station regulatory fees using the existing methodology for calculating their proportional share of regulatory fees from 80% ... being allocated to GSO ... and 20% ... to NGSO ... to 60% ... GSO ... and 40% ... NGSO ..." So they kept the internal NGSO split of 20/80? Or maybe they kept the existing methodology which included the internal split. So NGSO's 40% is further split: 20% of that 40%? Wait need understand precisely.
+
+Let's recall from Document 6 paragraph 5: "There are four current categories of space station payors: (1) Space Stations (Geostationary Orbit); (2) Space Stations (Non-Geostationary Orbit)--Less Complex; (3) Space Stations (Non-Geostationary Orbit)--Other; and (4) Space Station (Small Satellites)." So yes, four categories.
+
+The allocation methodology prior to Sept 2024: Space station pool split 80% GSO, 20% NGSO. Within NGSO, split 20% Less Complex, 80% Other? Actually Document 6 paragraph 6 mentions "In 2021, the Commission again revisited... to separate the NGSO space stations fee category into two separate categories—'less complex' NGSO space stations and 'other' NGSO space stations. The Commission adopted a 20/80 allocation between the 'less complex' and 'other' NGSO space station fee categories within the NGSO fee category." So yes, within the NGSO portion (20% of total space station pool originally), 20% goes to Less Complex and 80% to Other.
+
+Then in Sept 2024, they changed the GSO/NGSO split to 60/40, but likely kept the internal 20/80 split within NGSO. So now:
+- Small satellites: separate fee per license ($12,215 each in FY2024? Actually for FY2024 they kept FY2023 level with adjustments? Let's check.)
+- Remaining pool split: 60% GSO, 40% NGSO.
+- NGSO portion (40%) split: 20% Less Complex, 80% Other.
+
+But to find total GSO fees, we need the total space station pool after subtracting small satellites.
+
+We need the actual total regulatory fees for space stations in FY2024. That might be in the FY2024 fee schedule table in 47 CFR 1.1156? Or in the order adopting FY2024 fees (maybe in Document 2's appendices). But we can also compute if we know the per-unit fees for each category and the number of units.
+
+Do we have per-unit fees for FY2024? Possibly in Document 5? Let's check mental content of Document 5 for specific numbers. The synopsis mentions "This FNPRM continues an examination... seeks to develop further the record on proposals..." Not specific.
+
+But Document 6 mentions in paragraph 8: "In September 2024, the Commission revised the allocation... This is in addition to adopting a re-apportionment of regulatory fees between earth and space station payors based on the percentage of direct FTEs involved in the licensing and regulation of each category." The re-apportionment might have specific percentages? Maybe earth stations got some percentage and space stations got another.
+
+But we need actual dollar amount, not just allocation.
+
+Let's search mental database for FY2024 regulatory fee amounts for space stations. I recall in 2024 the FCC regulatory fees for space stations were:
+- Space Stations (Geostationary Orbit): maybe $90,000? Or $135,000?
+Wait need be accurate.
+
+Let's recall news in 2024 about FCC regulatory fees for satellites. In 2023, fees were:
+- Space Stations (Geostationary Orbit): maybe $59,000? No, that seems low.
+Actually in 2023 the FCC adopted regulatory fees for FY2023. The fees for space stations might have been:
+Geostationary Orbit: $158,000?
+Non-Geostationary Orbit - Less Complex: maybe $60,000?
+Other: maybe $300,000?
+Small satellites: $4,000? No, in 2022 they set small satellite fee at $4,000? Wait need check mental.
+
+Let's recall from Document 2: "The Commission adopts the proposal in the Space and Earth Station Regulatory Fees NPRM to set the regulatory fee for 'Space Stations (per license/call sign in non-geostationary orbit) (47 CFR part 25) (Small Satellite)' for FY 2024 at the level set for FY 2023 ($12,215), with annual adjustments thereafter..." So in FY2023 small satellite fee was $12,215. That sounds right (around $12k).
+
+If small satellite fee is about $12k, then the other fees are likely in hundreds of thousands? Let's check consistency.
+
+In Document 6 paragraph 2 mentions "The fee schedule adopted for fiscal year 2024 contained sizable increases in the fees assessed to space and earth station fee payors compared to the previous fiscal year." So FY2024 fees went up a lot.
+
+We need specifically geostationary space stations as a group. That is per-unit fee times number of GSO licenses.
+
+How many GSO space stations were there in FY2024? The number of units might be listed in an appendix of the fee order. For FY2024, maybe there were 16 GSO? Or 140? Wait Document 6 paragraph 28 mentions "Under the current methodology, for FY 2024 there were 16 units of small satellite fee payors, 140 units of GSO space stations, 6 units of 'less complex' NGSO space stations, and 11 units of other NGSO space stations." Yes! This is in Document 6, paragraph 28 (mental). So number of GSO units in FY2024 is 140.
+
+Thus if we can find the per-unit fee for GSO in FY2024, multiply by 140.
+
+What was the per-unit fee? Let's check consistency with allocations.
+
+We need total space station pool for FY2024. The Commission's S&E appropriation for FY2024 might be known, but we only have space bureau share. However, we can derive per-unit fees if we know the total fees collected for other categories.
+
+Specifically:
+Small satellites: 16 units × $12,215 = $195,440? Actually 16 * 12,215 = 195,440.
+
+NGSO Less Complex: 6 units × fee_LC.
+NGSO Other: 11 units × fee_O.
+GSO: 140 units × fee_GSO.
+
+The split is 60/40 for GSO/NGSO after subtracting small satellite fees.
+
+But we need two equations? Actually we need total pool S (after subtracting small satellites). Then:
+Fee_GSO_total = 0.60 * S
+Fee_NGSO_total = 0.40 * S, split 20/80:
+Fee_LC_total = 0.20 * 0.40 * S = 0.08 S
+Fee_O_total = 0.80 * 0.40 * S = 0.32 S
+
+But also Fee_GSO_total = 140 * fee_GSO_per_unit.
+
+We have four unknowns (S, fee_GSO, fee_LC, fee_O) and only three equations (the splits). So need one actual fee value.
+
+But maybe the fee values are listed in the FY2024 fee schedule (47 CFR 1.1156?). Let's recall or derive from known news.
+
+In September 2024, the FCC adopted FY2024 regulatory fees. The fees for space and earth stations might have been published in the Federal Register around Sept 2024? Actually the FY2024 Regulatory Fees NPRM was in June 2024 (89 FR 53276, June 25, 2024). Then the final order might have been in August or September 2024.
+
+Let's recall news headlines in Aug/Sep 2024: The FCC announced regulatory fees for FY2024, with payments due in Sept 2024? Or maybe the fee order was adopted in Aug 2024 and published in Federal Register around Sept 2024.
+
+Specifically, I think in August 2024 the FCC adopted its FY2024 regulatory fee schedule, with fees due by Sept 26, 2024. The space station fees might have been:
+Geostationary Orbit: $144,000? Or $120,000?
+Let's try to recall from news about SpaceX complaining? Or maybe from Document 2's mention of "sizable increases... compared to previous fiscal year."
+
+In FY2023, the fees might have been:
+GSO: maybe $120,000?
+NGSO Other: maybe $240,000?
+NGSO Less Complex: maybe $60,000?
+Small satellite: $12,215.
+
+But in FY2024, they went up significantly because the Space Bureau's FTE allocation increased.
+
+Let's try to find explicit numbers in Document 6? Maybe in the FRFA there are estimates? Actually Document 6's synopsis mentions "The Commission finds that these changes better serve the requirements... and there is unopposed support in the record for adoption of these two proposals in time for the changes to be effective for FY 2024." Not numbers.
+
+But Document 6 paragraph 28 gives unit counts for FY2024: 16 small sat, 140 GSO, 6 less complex, 11 other. This is used to illustrate complexity of calculating fees. Maybe the paragraph also mentions the fee amounts? Let's recall the context: "As observed in the Space and Earth Station Regulatory Fees NPRM, the small satellite fee rate is currently calculated by taking the average of the calculated fee rate for space stations in the Space Stations (Non-Geostationary Orbit)--Other ("NGSO-Other") and Space Stations (Non-Geostationary Orbit)--Less Complex ("NGSO-Less Complex") categories, multiplying this average by 5% (1/20) and rounding it to the nearest $5..." Then "The small satellite fee rate is then multiplied by the number of small satellite units and deducted..." This is describing methodology, not specific fees.
+
+But later in Document 6, paragraph 29? Actually not necessary.
+
+Let's check Document 5 for unit counts or fee amounts. Document 5 paragraph 4 lists current categories. Paragraph 9 mentions "Most recently, in September 2024..." Not specific.
+
+But wait, the question asks "To the nearest $0.1 million, how much in regulatory fees did the FCC assess on geostationary
+
+Attempt 6 · Right
+-----------------
+Docs: Doc 2, Doc 3, Doc 5, Doc 6 · Note: —
+
+Final answer: So the FCC assessed about $20.2 million in regulatory fees on geostationary space stations as a group for FY 2024. | Your answer (gold): $20.2 million
+
+Passages quoted:
+
+- Quoted Doc 6: “fee schedule adopted for fiscal year 2024 contained sizable increases in the fees assessed to space and earth station fee payors compared to the previous fiscal year.”
+- Quoted Doc 6: “For fiscal year 2024, fee payors in the NGSO--Other fee category were assessed fees of $964,200 per unit, regardless of the number of space stations authorized for each fee payor. Payors in the NGSO--Less Complex fee category were assessed per unit fees of $441,925”
+- Quoted Doc 5: “The Commission seeks further comment on whether to implement an alternative methodology”
+
+Named Doc 2, Doc 6, Doc 5, Doc 3
+
+Full answer
+-----------
+
+For fiscal year 2024, the FCC used a 60/40 split of space‑station regulatory fees between geostationary orbit (GSO) and non‑geostationary orbit (NGSO) systems.
+
+From the FY 2024 fee schedule shown in the orders:
+
+- NGSO “Other” fee: $964,200 per unit × 11 units = $10,606,200
+- NGSO “Less Complex” fee: $441,925 per unit × 6 units = $2,651,550
+- Small‑satellite fee: $12,215 per unit × 16 units = $195,440
+
+These NGSO amounts (including the small‑satellite deduction from the NGSO share) total about $13.45 million, which represents the 40% NGSO share. Solving for the full space‑station pool and taking the 60% GSO portion gives:
+
+\[ \text{GSO total} \approx 0.60 \times \left(\frac{13.45\ \text{million}}{0.40}\right) \approx \$20.2\ \text{million} \]
+
+So the FCC assessed about $20.2 million in regulatory fees on geostationary space stations as a group for FY 2024.
+
+Reasoning
+---------
+
+We need answer: To nearest $0.1 million, how much in regulatory fees did FCC assess on geostationary space stations as a group for fiscal year 2024?
+
+Need use input documents. Let's search mental or reasoning based on docs.
+
+We have docs about FCC regulatory fees for space and earth stations for FY 2024 and adjustments. Need total regulatory fees assessed on geostationary space stations as group for FY 2024.
+
+We need find fee schedule for FY 2024 with per-unit fee and number of units (authorized/operational?). Let's recall from docs.
+
+Document 2 is about Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024; Review... It mentions proposed fee rates but maybe not final? Actually Document 2 is final rule adopted June 13, 2024 (Report and Order) that adopted new methodology for small satellites and included RPO/OOS in small satellites interim. But it deferred other proposals. Then there might be FY 2024 Regulatory Fees NPRM in MD Docket No. 24-86 with proposed rates in appendices. But Document 2 references FY 2024 Regulatory Fees NPRM (89 FR 53276, June 25, 2024) seeking comment on proposed fees based on existing methodology and proposals. But Document 6 is Third Report and Order in MD Docket No. 24-85, FCC 25-31, adopted June 5, 2025, effective Sept 14, 2025, adopting targeted revisions for FY 2025. Not FY 2024 final fees.
+
+We need specifically FY 2024 assessed fees for geostationary space stations as group.
+
+Let's search mental content in docs for fee amounts.
+
+Document 2 mentions small satellite fee for FY 2023 was $12,215, kept for FY 2024 with adjustments. But need geostationary.
+
+Document 5 is FNPRM (March 2025) continuing examination. Might contain prior fee amounts?
+
+Document 6 (Order FCC 25-31) mentions fee schedule adopted for fiscal year 2024 contained sizable increases... maybe lists prior fees?
+
+But likely the answer is in Document 2 or in other docs referencing FY 2024 fee rates for space stations. Let's recall actual FCC regulatory fees for FY 2024 adopted in September 2024? Actually the Commission adopts regulatory fees each year around August/September. For FY 2024, the Commission adopted fees in a Report and Order maybe in August 2024? Document 3 mentions amendments effective Sept 9, 2024 for orbital debris, not fees.
+
+We need precisely "how much in regulatory fees did the FCC assess on geostationary space stations as a group for fiscal year 2024?" This sounds like total revenue collected or assessed for that category. Might be calculable: per-unit fee multiplied by number of units.
+
+We need determine per-unit fee for geostationary space stations in FY 2024 and number of geostationary space stations assessed.
+
+Let's recall from public knowledge: In FY 2023, space station fees were: Geostationary orbit $131,000? Or maybe $550,000? Let's think.
+
+The FCC regulatory fees for satellite services have changed recently. For FY 2023, the fees were:
+- Space Stations (Geostationary Orbit): maybe $135,000? No, that sounds low.
+Let's recall news in 2023: FCC proposed big increases for satellite fees. For FY 2023, the proposed fees for NGSO other was around $560,000? Actually I think in FY 2023 the fee for Space Stations (Geostationary Orbit) was $102,000? Or $298,000?
+
+Let's derive from docs. Document 6 mentions "fee schedule adopted for fiscal year 2024 contained sizable increases in the fees assessed to space and earth station fee payors compared to the previous fiscal year." And in discussion of NGSO Other fees for fiscal year 2024, fee payors in NGSO Other were assessed fees of $964,200 per unit, and NGSO Less Complex $441,925 per unit. These are FY 2024? Let's check consistency.
+
+If NGSO Other per unit was $964,200 and there were 11 units? Or maybe 10? Then total NGSO other fees = around $10.6 million? Meanwhile geostationary might have per unit fee of maybe $1.5 million? No, that sounds high.
+
+But wait Document 6 says: "For fiscal year 2024, fee payors in the NGSO--Other fee category were assessed fees of $964,200 per unit, regardless of the number of space stations authorized for each fee payor. Payors in the NGSO--Less Complex fee category were assessed per unit fees of $441,925..." Yes, that sounds right. So we need geostationary per unit fee for FY 2024.
+
+We can perhaps compute total space station fees collected in FY 2024 and subtract NGSO parts and small satellite part, but we need only geostationary group total.
+
+Let's recall the FY 2024 regulatory fee schedule published in Federal Register around Sept 2024? The proposed rates were in June 2024 NPRM (Document 2 mentions FY 2024 Regulatory Fees NPRM, 89 FR 53276, June 25, 2024). The proposed rates might be in appendices A, B, E. But Document 2 doesn't list them in the excerpt. However Document 6 might reference them.
+
+But actually we just need "how much in regulatory fees did the FCC assess on geostationary space stations as a group for fiscal year 2024?" This sounds like there is a specific figure mentioned in one of the documents, maybe in Document 5?
+
+Let's scan mental text of Document 5 (FNPRM March 2025). It mentions in background paragraph 5? Actually Document 5 lists background with fee categories and mentions in 2022 Commission adopted methodology for small satellites etc. But maybe in paragraph discussing current fees?
+
+Let's search mental for "$" figures in docs.
+
+Document 2 mentions small satellite fee rate for FY 2024 at level set for FY 2023 ($12,215). That's small.
+
+Document 6 mentions NGSO Other $964,200 and Less Complex $441,925 for FY 2024. Also mentions "The Commission is mindful... fee schedule adopted for fiscal year 2024 contained sizable increases..."
+
+But we need geostationary group total. Let's recall actual FY 2024 fee schedule numbers from news. In August 2024 FCC released FY 2024 regulatory fees. The fees for satellite space stations were:
+- Space Stations (Geostationary Orbit): $1,033,000? Or $1,315,000?
+Wait I think in FY 2024, the fee for geostationary satellites went up to about $1.3 million? Let's check mental consistency: The total space bureau appropriation share maybe around $40 million? Number of GSO satellites maybe around 30? 30 * $1.3M = $39M, that sounds plausible. Meanwhile NGSO other with 11 units at $964k = ~10.6M, less complex 6 units at $442k = ~2.65M, small satellites 16 units at ~$14k? = ~0.2M. Sum ~52M? Maybe too high.
+
+But we need "to the nearest $0.1 million" so likely round number like $39.8 million?
+
+We need be precise based on document data. Let's find the number of geostationary units assessed in FY 2024 and the per-unit fee.
+
+In Document 6, paragraph 28? Actually Document 6 discusses allocation between GSO and NGSO being 60/40. Let's parse mental: The Commission in September 2024 revised allocation of space station regulatory fees using existing methodology... from 80/20 to 60/40. That decision was based on direct FTE allocation? Maybe they calculated that 60% of space station FTE resources went to GSO.
+
+If total space station fees for FY 2024 can be determined, then 60% is geostationary.
+
+But we need "how much in regulatory fees did the FCC assess on geostationary space stations as a group" = total fees for that category = unit fee times number of units, or 60% of total space station fees.
+
+Let's try to find total space station fees assessed for FY 2024. Maybe in Document 5 there is mention?
+
+Document 5 paragraph 9 mentions: "In 2022, the Commission adopted the methodology for calculating the regulatory fee for the small satellite category... set at 1/20th of the average of the NGSO 'less complex' and 'other' space station regulatory fees." That doesn't help.
+
+But Document 6 mentions specific per-unit fees for NGSO categories for FY 2024. Maybe also mentions GSO per-unit fee? Let's check mental: In Document 6, paragraph 40? Actually paragraph 40 starts "The Commission seeks further comment on whether to implement an alternative methodology..." No.
+
+Wait, Document 6 includes "Synopsis" with sections. Let's recall the content of Document 6 more precisely.
+
+Document 6 is "Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024" - Third Report and Order, FCC 25-31, adopted June 5, 2025.
+
+In the synopsis:
+I. Introduction
+II. Background
+III. Discussion
+A. Assessment of Fees on Authorized...
+B. Alternative Methodology...
+C. Amendment of Existing Methodology...
+D. Adoption for Fiscal Year 2025
+...
+Then there is FRFA etc.
+
+But in the background, paragraph 8 might discuss the fee schedule for FY 2024? Let's recall: Paragraph 8 mentions "In June 2024, the Commission amended the methodology used to calculate regulatory fees for small satellites..." Paragraph 9 mentions "In September 2024, the Commission adopted a Second Report and Order... revised allocation... 60/40..." So Document 6 references prior orders but might not list fee amounts except for the NGSO ones I noted in paragraph 42? Actually those were in section III.C? Let's check mental paragraph numbering.
+
+In Document 6, section III.C is "Amendment of Existing Methodology To Establish NGSO--Small Constellations and NGSO--Large Constellations..." In that section, paragraph 40? Let's see: "Under the current system, 80% of the share of NGSO space station fees are allocated to the NGSO--Other fee category and 20% to the NGSO--Less Complex fee category... For fiscal year 2024, fee payors in the NGSO--Other fee category were assessed fees of $964,200 per unit... Payors in the NGSO--Less Complex fee category were assessed per unit fees of $441,925..."
+
+Thus Document 6 gives NGSO fees but not GSO.
+
+However, maybe we can derive GSO total from the 60/40 split and the NGSO totals if we know total space station fees. But do we know total?
+
+We need number of units in each category for FY 2024. Document 6 mentions in paragraph 28? Actually paragraph 28 might discuss number of units: "Using the current methodology, for FY 2024 there were 16 units of small satellite fee payors, 140 units of GSO space stations, 6 units of 'less complex' NGSO space stations, and 11 units of other NGSO space stations." Yes! That sounds right. So units:
+GSO: 140 units
+NGSO Less Complex: 6 units
+NGSO Other: 11 units
+Small Satellites: 16 units
+
+If per-unit fees:
+Small satellite: maybe $12,215? Or adjusted? Actually for FY 2024, the small satellite fee was set at FY 2023 level ($12,215) with adjustments for appropriation, unit count, FTE allocation? Wait they said "with annual adjustments thereafter to reflect the percentage change in the FCC appropriation, unit count, and FTE allocation percentage from the previous fiscal year." So for FY 2024, it might be slightly different, maybe around $13,000? But we can approximate? However we need precise total for geostationary, not small.
+
+But we have NGSO Less Complex per unit $441,925 times 6 = $2,651,550.
+NGSO Other per unit $964,200 times 11 = $10,606,200.
+Small satellites per unit maybe around $13,xxx times 16 = ~210,000?
+So total NGSO + small = about $13.5M? That seems low compared to GSO maybe 140 units times maybe $200,000 = $28M? Or maybe GSO fee per unit is about $170,000? Let's check consistency with 60/40 split.
+
+The split is of space station regulatory fees allocated between GSO and NGSO (including small?). Actually they said "reapportioned regulatory fees between earth and space station payors based on percentage of direct FTEs..." Wait need correct context.
+
+Let's recall the September 2024 order changed allocation of space station regulatory fees using existing methodology from 80/20 GSO/NGSO split to 60/40 GSO/NGSO split. This split applies to the space station portion of fees, probably excluding small satellites? Or including?
+
+If total space station fees (excluding earth) are divided 60% GSO, 40% NGSO (including less complex, other, and maybe small satellites?). But we need geostationary group total = 60% of total space station fees.
+
+But we need total space station fees for FY 2024. Can we compute from unit fees and counts?
+
+We need GSO per-unit fee. Let's call it F_gso.
+Then total GSO fees = 140 * F_gso.
+Total NGSO fees (excluding small) = 6*441,925 + 11*964,200 = 2,651,550 + 10,606,200 = 13,257,750.
+Small satellite fees = 16 * F_small.
+
+The split 60/40 might be calculated after subtracting small satellites? Actually in the existing methodology, the small satellite fee is calculated by taking average of NGSO Other and Less Complex fees multiplied by 1/20, then multiplied by number of small satellites, and that amount is deducted from NGSO share (split 80/20 originally?). Let's understand the methodology precisely.
+
+The existing methodology (pre-2024 change) for calculating space station fees:
+1. Determine total amount of regulatory fees to be collected from space stations (maybe based on FTE allocation between space and earth? Actually they allocate between earth and space based on direct FTEs? Let's not overanalyze.)
+2. Allocate 80% to GSO and 20% to NGSO.
+3. Within NGSO, split 80% to "other" and 20% to "less complex"? Wait earlier in 2021 they adopted 20/80 allocation between less complex and other within NGSO category. Yes.
+4. Then subtract small satellite fees, calculated as average of NGSO other and less complex fees times 1/20 times number of small satellites, from the NGSO share, divided between other and less complex? Hmm need correct formula.
+
+But in Document 6 paragraph 41? Actually they said: "The small satellite fee rate is currently calculated by taking the average of the calculated fee rate for space stations in the Space Stations (Non-Geostationary Orbit)--Other (``NGSO-Other'') and Space Stations (Non-Geostationary Orbit)--Less Complex (``NGSO-Less Complex'') categories, multiplying this average by 5% (1/20) and rounding it to the nearest $5. The small satellite fee rate is then multiplied by the number of small satellite units and deducted from the share of space station regulatory fees allocated to non-geostationary orbit (NGSO) space stations. This remaining amount is then divided between NGSO-Other and NGSO-Less Complex based on an 80/20 split and reduced from the target goals of NGSO-Other and NGSO-Less Complex respectively."
+
+Thus the split 80/20 was within NGSO after subtracting small satellites. But in September 2024 they changed the overall GSO/NGSO split from 80/20 to 60/40? Wait need understand: Previously, space station fees were split 80% GSO, 20% NGSO? Or was that within space station fees? Yes, in 2020 they reapportioned regulatory fees between GSO and NGSO space stations, allocating 80% of space station regulatory fees to GSO and 20% to NGSO.
+
+Then in 2021 they created NGSO Less Complex and Other with a 20/80 split within NGSO.
+
+Then in June 2024 they changed the small satellite calculation method.
+
+Then in September 2024 they revised allocation of space station regulatory fees using existing methodology from an 80/20 GSO/NGSO split to a 60/40 GSO/NGSO split. So yes, the overall split is now 60% GSO, 40% NGSO (within which 20/80 less complex/other).
+
+But also there is allocation between earth and space stations based on direct FTE percentages? That was adopted in September 2024? Actually Document 6 says "It also adopted a re-apportionment of regulatory fees between earth and space station payors based on the percentage of direct FTEs involved in the licensing and regulation of each category." So first they split total space bureau fees between earth and space based on direct FTEs, then within space they apply 60/40 GSO/NGSO.
+
+But we just need geostationary group total for FY 2024. That should be 60% of the space station portion.
+
+But we need the actual dollar amount assessed. To compute, we need the space station portion total.
+
+We can compute space station portion total from the unit fees and counts using the methodology formulas.
+
+Let's do that precisely.
+
+Let total space station fees to be collected = S (this is the amount allocated to space stations after earth/space split).
+
+Within S, allocate 60% to GSO -> GSO target T_g = 0.60 S.
+Allocate 40% to NGSO -> T_n = 0.40 S.
+
+Then within NGSO, first calculate small satellite fee rate R_s = average(R_o, R_l) * (1/20), rounded.
+Then total small satellite fees F_s = R_s * N_s, where N_s = 16.
+This F_s is deducted from T_n, leaving T_n' = T_n - F_s.
+Then T_n' is split between NGSO-Other and NGSO-Less Complex based on 80/20.
+So T_o = 0.80 T_n', T_l = 0.20 T_n'.
+Then per-unit fees R_o = T_o / N_o, R_l = T_l / N_l, where N_o=11, N_l=6.
+
+We are given R_o = 964,200 and R_l = 441,925.
+
+We can solve for T_n', then F_s, then T_n, then S, then T_g.
+
+Let's compute T_o = 964,200 * 11 = 10,606,200.
+T_l = 441,925 * 6 = 2,651,550.
+So T_n' = T_o + T_l = 13,257,750.
+
+Then T_n = T_n' + F_s.
+We need F_s = R_s * 16.
+R_s = (R_o + R_l)/2 * (1/20) rounded.
+Average of R_o and R_l = (964,200 + 441,925)/2 = 703,062.5.
+Times 1/20 = 35,153.125. Round to nearest $5 -> $35,155? Wait rounding rules maybe to nearest $5, so 35,155? Actually 35,153.125 rounds to 35,155? Let's do standard rounding: 35,153.125 round up to 35,155 if rounding to nearest 5? Yes, if rounding up on 2.5? But we'll approximate F_s = 35,155 * 16 = 562,480. Or if rounded differently maybe 35,150? Let's check: 703,062.5 /20 = 35,153.125. Rounding to nearest 5: the digit in ones place is 3, but we round to nearest 5. The nearest multiples of 5 are 35,150 and 35,155. Since .125 is closer to 35,150? Actually 35,153.125 - 35,150 = 3.125; 35,155 - 35,153.125 = 1.875. So closer to 35,155. Yes R_s ≈ $35,155.
+
+Thus F_s ≈ 562,480.
+Then T_n = 13,257,750 + 562,480 = 13,820,230.
+This is 40% of S => S = T_n / 0.40 = 34,550,575.
+Then T_g = 0.60 * S = 20,730,345.
+
+But wait this is about $20.7 million, and per unit GSO fee = T_g / 140 ≈ $148,074. That sounds plausible.
+
+However, need check consistency: Is S the total space station fees? Then earth station fees are separate based on direct FTE split. But we only care about geostationary group total = $20.73 million, round to $20.7 million.
+
+But need verify if small satellite fees are deducted from NGSO split before or after 60/40? Actually the 60/40 split is applied to total space station fees. Then within NGSO portion (40%), small satellite fees are deducted. Yes, that's correct per methodology: "The small satellite fee rate is then multiplied by the number of small satellite units and deducted from the share of space station regulatory fees allocated to non-geostationary orbit (NGSO) space stations." So yes, F_s deducted from the 40% portion.
+
+But wait there might also be adjustments for FCC appropriation and unit count and FTE allocation percentage for small satellites for FY 2024. The fee rate for small satellites for FY 2024 might not be exactly calculated from R_o and R_l of FY 2024 because they said "set the regulatory fee for Small Satellites for FY 2024 at the level set for FY 2023 ($12,215), with annual adjustments thereafter..." So for FY 2024, they applied adjustments based on change in appropriation, unit count, and FTE allocation from FY 2023. That means R_s for FY 2024 is not calculated via average of NGSO fees, but via adjustment formula. So our computation using R_s derived from R_o and R_l might be wrong for FY 2024! Indeed, in June 2024 they changed the methodology: no longer calculated as percentage of NGSO fees, but set at FY 2023 level with adjustments. So for FY 2024, R_s is approximately $12,215 adjusted by some percentage.
+
+We need correct R_s for FY 2024. Let's determine the adjustment factor.
+
+The adjustment formula: "annual adjustments thereafter to reflect the percentage change in the FCC appropriation, unit count, and FTE allocation percentage from the previous fiscal year."
+
+We need FCC appropriation for FY 2023 and FY 2024, unit count for small satellites in FY 2023 and FY 2024, and FTE allocation percentage for Space Bureau? This sounds complex, but maybe the adjusted fee is listed somewhere in the docs.
+
+Document 6 might mention the small satellite fee for FY 2024? Or Docum
+
+Attempt 7 · Right
+-----------------
+Docs: Doc 2, Doc 3, Doc 4, Doc 5, Doc 6 · Note: —
+
+Final answer: $20.2 million (to the nearest $0.1 million). | Your answer (gold): $20.2 million
+
+Passages quoted:
+
+- Quoted Doc 2: “Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024”
+- Quoted Doc 6: “In this document, the Federal Communications Commission (Commission or FCC) adopts targeted revisions to its existing methodology of assessing regulatory fees for space and earth stations that will be effective for fiscal year 2025.”
+- Quoted Doc 2: “Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024; Review”
+
+Named Doc 2, Doc 6, Doc 5, Doc 3, Doc 4
+
+Full answer
+-----------
+
+The FY 2024 fee schedule (set out in the Commission’s 2024 space/earth-station fee proceedings) lists:
+
+- NGSO “Other” fee: $964,200 per unit (11 units)
+- NGSO “Less Complex” fee: $441,925 per unit (6 units)
+- Small-satellite fee: $12,215 per unit (16 units)
+
+Using the Commission’s 60/40 GSO/NGSO split (adopted in September 2024) and the 80/20 split within NGSO (after deducting the small-satellite total):
+
+1. NGSO “Other” total = 11 × $964,200 = $10,606,200
+2. NGSO “Less Complex” total = 6 × $441,925 = $2,651,550
+3. Small-satellite total = 16 × $12,215 = $195,440
+
+NGSO pool (before small-sat deduction) = $10,606,200 + $2,651,550 + $195,440 = $13,453,190 That equals 40% of the total space-station pool, so:
+
+Total space-station pool = $13,453,190 ÷ 0.40 = $33,632,975 GSO portion (60%) = 0.60 × $33,632,975 = $20,179,785
+
+With 140 GSO units, the per-unit GSO fee is about $144,141, and the group total is:
+
+$20.2 million (to the nearest $0.1 million).
+
+Reasoning
+---------
+
+We need answer: To nearest $0.1 million, how much in regulatory fees did FCC assess on geostationary space stations as a group for fiscal year 2024?
+
+Need parse documents for FY2024 regulatory fees for space stations, specifically geostationary orbit category. Need determine total assessed on group (all geostationary space stations) for FY2024.
+
+Let's examine documents.
+
+Document 2 is about Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024; adopted new methodology for small satellites and included RPO/OOS in small satellites interim. But need actual fee amounts? Maybe in Document 6? Let's inspect.
+
+Document 6 is "Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024" proposed rule? Wait Document 5 is proposed rule (FNPRM) seeking additional comments. Document 6 is Final rule "Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024" maybe adopting fees? Let's check content.
+
+Document 6 summary: "In this document, the Federal Communications Commission (Commission or FCC) adopts targeted revisions to its existing methodology of assessing regulatory fees for space and earth stations that will be effective for fiscal year 2025." So Document 6 is for FY2025? Wait says effective for fiscal year 2025. But title mentions FY2024? Let's read carefully.
+
+Actually Document 6 might be the order adopting fees for FY2024? Let's search mental for fee amounts.
+
+We need specifically geostationary space stations group total assessed for FY2024. This likely comes from the fee schedule in the FY2024 regulatory fees order, maybe in Document 6 appendix? Or Document 2 mentions FY2024 fee rates? Let's parse Document 2.
+
+Document 2 (Federal Register Volume 89 Issue 144, Friday July 26, 2024) is "Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024; Review..." Action: Final rule. It discusses adopting new methodology for small satellites and including RPO/OOS in small satellites on interim basis effective for FY2024. Then in Background mentions proposed fee rates in FY2024 Regulatory Fees NPRM set forth in appendices A, B, and E. But Document 2 might not list actual fees? Let's examine the synopsis: "The Commission adopted a methodology change for one category of fee payors and include a type of space station in an existing category on an interim basis. These changes will be effective for FY2024..." Then in Section III.A it discusses adoption of new methodology for assessing fees for small satellites: set regulatory fee for Small Satellite for FY2024 at level set for FY2023 ($12,215), with annual adjustments thereafter... So small satellite fee for FY2024 is $12,215? Wait that seems per license?
+
+Then Section III.B includes RPO/OOS/OTV in small satellites category on interim basis.
+
+But we need geostationary space stations total assessed as a group for FY2024. That might be in another document, maybe Document 6 includes appendix with fee schedule? Let's inspect Document 6 content.
+
+Document 6 is Volume 90 Issue 127, Monday July 7, 2025, "Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024" Action Final rule. Wait effective September 14, 2025, but maybe this is the actual fee adoption for FY2024 that was delayed? Actually the Commission often adopts fee rules in one year for prior fiscal year? No, usually they propose in spring and adopt in summer for that fiscal year (fees due in September). For FY2024, they proposed in March 2024 (Document 2 maybe NPRM?), and then adopted in June/July 2024? But Document 6 is dated 2025 and mentions effective for fiscal year 2025. Let's read Document 6 introduction.
+
+Document 6 says: "In the Third Report and Order (Order), the Commission adopts targeted revisions to its existing methodology... These changes will be effective for the fiscal year 2025 (FY 2025) assessment and collection..." So Document 6 is for FY2025 methodology changes, not fee amounts.
+
+But the question asks "how much in regulatory fees did the FCC assess on geostationary space stations as a group for fiscal year 2024?" This sounds like total revenue collected/assessed from geostationary stations in FY2024. Need find the fee per unit and number of units.
+
+Let's recall from Document 6? Actually Document 6 mentions in paragraph 2? Not clear.
+
+Let's search mental for FY2024 space station fee schedule. In Document 2, in Section II Background paragraph mentions proposed regulatory fee rates for FY2024 set forth in appendices A, B, and E of FY2024 Regulatory Fees NPRM. But Document 2 is a final rule on methodology changes only, not adopting rates? Wait Document 2's action is "Final rule" but only addresses the two proposals (small satellite methodology and RPO/OOS inclusion). The actual fee rates for FY2024 might have been adopted in a separate order, maybe in September 2024? Let's check Document 3? Document 3 is "Space Innovation; Mitigation of Orbital Debris..." Not fee-related. Document 4 is proposed rule for export controls. Document 5 is proposed rule (FNPRM) for FY2024? Wait Document 5 is "Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024" Action: Proposed rule, dated March 13, 2025? Actually Document 5 is Volume 90 Issue 48, March 13, 2025, proposing revisions for FY2024? That seems late. But maybe it's a further notice on remaining proposals.
+
+Let's examine Document 5 for fee numbers? Probably not.
+
+We need specifically total assessed on geostationary space stations as group for FY2024. This might be in Document 6 appendix? Or in Document 2? Let's parse Document 6 for mention of FY2024 fees.
+
+In Document 6, paragraph 4 mentions "The fee schedule adopted for fiscal year 2024 contained sizable increases in the fees assessed to space and earth station fee payors compared to the previous fiscal year." So Document 6 discusses FY2024 schedule but doesn't list numbers? Maybe in appendix of Document 6 there is a table? The text provided might include appendix? Let's scroll mental through Document 6 text.
+
+Document 6 includes sections I. Introduction, II. Background with paragraphs 5-10 describing history of fee categories. Then III. Discussion with A. Objectives, B. Continued Use of Existing Methodology, C. Assessment of Fees on Authorized Space and Earth Stations, D. Amendment of Existing Methodology To Establish NGSO--Small Constellations and NGSO--Large Constellations, E. Adoption for Fiscal Year 2025, F. Earth Station Regulatory Fees, etc. Then IV. Final Regulatory Flexibility Analysis, V. Ordering Clauses.
+
+But there might be an appendix in the full document not shown in the excerpt? The prompt includes only parts of documents? Actually the input documents are excerpts from Federal Register entries, possibly including all text? For Document 6, the text ends at Ordering Clauses and then "List of Subjects... Final Rules... PART 1... PART 25..." So it's the full rule text, not including fee schedule tables.
+
+Thus we need derive total assessed for geostationary stations in FY2024 from available data in documents.
+
+Let's recall from Document 6 paragraph 40? No.
+
+But maybe Document 2 includes the fee rates in appendices? The synopsis mentions proposed regulatory fee rates are set forth in appendices A, B, and E of the FY 2024 Regulatory Fees NPRM, but Document 2 might include them? Actually Document 2 is the final rule adopting methodology changes, but the fee rates might be in a separate document (the FY 2024 Regulatory Fees Order adopted in September 2024?). However, we only have these seven documents. One of them must contain the specific numbers.
+
+Let's examine Document 5 (the FNPRM from March 2025). In paragraph 3, it lists current categories: (1) Space Stations (Geostationary Orbit); (2) Space Stations (Non-Geostationary Orbit)--Less Complex; (3) Space Stations (Non-Geostationary Orbit)--Other; and (4) Space Station (Small Satellites). For earth stations: Earth Stations: Transmit/Receive & Transmit only.
+
+Then paragraph 5 mentions in 2022 Commission adopted methodology for small satellite fee rate. Paragraph 6 mentions in 2022? No.
+
+But Document 5 is proposing revisions for FY2024? Wait it's dated March 2025, but title says "Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024". That sounds like they are still working on FY2024 fees in 2025? Actually maybe the Commission delayed adopting FY2024 fees for space/earth stations until later? Let's check Document 5 introduction paragraph 1: "This FNPRM continues an examination of how the Federal Communications Commission (Commission) assesses regulatory fees for space and earth station fee payors consistent with section 9... This examination seeks to develop further the record on proposals that were initially made earlier in the Space and Earth Station Regulatory Fees NPRM, 89 FR 20582 (Mar. 25, 2024), but which were not adopted in fiscal year (FY) 2024."
+
+Thus Document 5 is continuing the examination that started with the March 2024 NPRM (Document 2?). The proposals not adopted in FY2024 are now being reconsidered for FY2025? Wait it says "not adopted in fiscal year (FY) 2024" and now they seek comment for future? But Document 6 adopted some for FY2025.
+
+Thus the actual FY2024 fee schedule might be in Document 2? Let's check Document 2 Section III.B? No, that's about RPO/OOS.
+
+Wait maybe the fee amounts are in Document 6 paragraph 46? No.
+
+Let's search within all documents for specific numbers like "$964,200" which I recall was the NGSO-Other fee for FY2024. Let's check mental: In Document 6 paragraph 40 mentions "For fiscal year 2024, fee payors in the NGSO--Other fee category were assessed fees of $964,200 per unit..." Yes! That is in Document 6. So Document 6 contains the FY2024 fee per unit for NGSO-Other. Similarly, it might mention the fee for geostationary.
+
+Let's parse Document 6 around paragraph 40 precisely.
+
+Document 6 paragraph 40: "Under the current system, 80% of the share of NGSO space station fees are allocated to the NGSO--Other fee category and 20% to the NGSO--Less Complex fee category, after subtracting a pro rata amount of the total fees assessed for NGSO--Small Satellites from each category. These allocated fees are then divided equally among the number of units in each category. For fiscal year 2024, fee payors in the NGSO--Other fee category were assessed fees of $964,200 per unit, regardless of the number of space stations authorized for each fee payor. Payors in the NGSO--Less Complex fee category were assessed per unit fees of $441,925, also regardless of the number of space stations authorized for each fee payor. ..."
+
+Thus we have FY2024 per-unit fees:
+- NGSO-Other: $964,200
+- NGSO-Less Complex: $441,925
+- Small Satellites: maybe $12,215? But that's per license? Actually in Document 2 they said small satellite fee for FY2024 set at FY2023 level $12,215, with adjustments thereafter reflecting percentage change in appropriation, unit count, and FTE allocation. Wait that sounds like the fee for small satellites for FY2024 was calculated using that formula, but maybe the actual fee was different? Let's check.
+
+But we only need geostationary space stations as a group.
+
+We need the total fees assessed on geostationary space stations as a group for FY2024. That equals per-unit fee for geostationary multiplied by number of units (licensed geostationary space stations).
+
+We need find both per-unit fee and number of units.
+
+From the allocation: 60% of space station fees go to GSO? Wait that's for FY2025? Actually the allocation was changed in September 2024 (Document 2? Or another order) from 80/20 to 60/40 for FY2024? Let's check.
+
+Document 6 paragraph 9 mentions "In September 2024, the Commission adopted a Second Report and Order in this proceeding that revised the allocation of space station regulatory fees using the existing methodology for calculating their proportional share of regulatory fees from 80%... to 60%... (that is, changing from an "80/20 GSO/NGSO split" to a "60/40 GSO/NGSO split")." So for FY2024? Actually that order was adopted in September 2024, likely for FY2024? Or for FY2025? The text says "The fee schedule adopted for fiscal year 2024 contained sizable increases..." But then they discuss the 60/40 split being in September 2024 order. Let's determine the allocation used for FY2024.
+
+We need to understand the total space station regulatory fee pool for FY2024 and then apply the split.
+
+But maybe easier: The per-unit fee for geostationary stations for FY2024 might be mentioned elsewhere in Document 6 or Document 2.
+
+Let's search mental for "geostationary" and fee numbers in Document 6.
+
+In Document 6 paragraph 42? Not clear.
+
+But we can calculate if we know total space station fees for FY2024 and the split and number of units in each category.
+
+We need total space station fees assessed for FY2024. That might be in Document 6 paragraph 4? No.
+
+Let's recall the actual FY2024 fee schedule published in Federal Register around September 2024? The fees for space stations were:
+- Space Stations (Geostationary Orbit): maybe $110,000? Or $1,000,000? Wait need correct.
+
+Let's derive from known numbers.
+
+We have NGSO-Other fee per unit = $964,200 for FY2024. There were 11 units of NGSO-Other (Document 5 paragraph 28? Actually Document 5 paragraph 28 mentions "for FY 2024 there were... 11 units of other NGSO space stations"). Yes! Document 5 paragraph 28: "Under the current methodology, for FY 2024 there were 16 units of small satellite fee payors, 140 units of GSO space stations, 6 units of "less complex" NGSO space stations, and 11 units of other NGSO space stations."
+
+Thus:
+- GSO units: 140
+- NGSO Less Complex units: 6
+- NGSO Other units: 11
+- Small Satellite units: 16
+
+Also we have per-unit fees for NGSO-Other ($964,200) and NGSO-Less Complex ($441,925). Let's verify consistency with allocation.
+
+The allocation for FY2024 was 60/40 GSO/NGSO? Or 80/20? The September 2024 order changed to 60/40, but was that applied to FY2024? Let's check timeline: The Space and Earth Station Regulatory Fees NPRM was released March 2024 (Document 2?). Then in June 2024 they adopted some changes (small satellite method and RPO/OOS). Then in September 2024 they adopted the Second Report and Order changing allocation to 60/40 and re-apportioning between earth and space. That was likely for FY2024? Actually the FY2024 fees were proposed in March 2024, then maybe adopted in summer 2024? Wait Document 2 was published July 26, 2024 (Federal Register) with effective date for denial? No, that's a different order (Orbital Debris Reconsideration). Document 6 is dated July 7, 2025. So the September 2024 order might be separate, not in these documents except referenced.
+
+But Document 5 is dated March 13, 2025, and mentions "The Commission received 16 comments and 17 reply comments in response to the Space and Earth Station Regulatory Fees NPRM. In addition..." Then "In addition, on June 13, 2024, the Commission released the Second Notice of Proposed Rulemaking..." So the NPRM was March 2024. Then in June 2024 they released a report and order? Wait Document 2 (July 26, 2024) is actually about space fees? Let's check Document 2 title: "Assessment and Collection of Space and Earth Station Regulatory Fees for Fiscal Year 2024; Review..." Yes! So Document 2 is the June 2024 final rule? Actually adopted and released June 13, 2024, published July 26, 2024. That document adopted the two proposals (small satellite methodology and RPO/OOS). So that was part of the FY2024 fee proceeding.
+
+Then in September 2024, they released the Second Report and Order? Wait Document 6 references "In September 2024, the Commission adopted a Second Report and Order in this proceeding..." But Document 6 itself is dated 2025. So there might have been a September 2024 order (not included in these documents) that changed the allocation to 60/40 and re-apportioned earth/space.
+
+Thus for FY2024, the allocation was likely 60/40 GSO/NGSO? Or was it 80/20? Let's determine.
+
+The Document 6 paragraph 40 says "Under the current system, 80% of the share of NGSO space station fees are allocated to the NGSO--Other fee category and 20% to the NGSO--Less Complex fee category..." That describes the split within NGSO, not GSO/NGSO. So the 80/20 within NGSO was still current as of the writing of Document 6 (2025). But the GSO/NGSO split was changed to 60/40 in September 2024.
+
+Thus for FY2024, the GSO/NGSO split might have been 60/40 if that change was applied to FY2024. But we need verify.
+
+Actually in Document 5 paragraph 9: "In 2024, the Commission revised the allocation of space station regulatory fees using the existing methodology... from 80/20 to 60/40..." Wait Document 5 is about FY2024? Let's check Document 5 paragraph 9: "Most recently, in September 2024, the Commission revised the allocation..." So yes, that change happened in September 2024, likely applying to FY2024 fees (since fees are assessed in that fiscal year, and the order was in September 2024, near the end of FY2024? Wait FY2024 runs Oct 1, 2023 to Sept 30, 2024. So a September 2024 order could apply to FY2024 fees (due in September 2024?). Yes, regulatory fees for FY2024 were likely due in September 2024. So the 60/40 split was applied for FY2024.
+
+But wait Document 6 paragraph 4 says "The fee schedule adopted for fiscal year 2024 contained sizable increases..." So yes, FY2024 schedule was adopted, probably in September 2024, with the 60/40 split.
+
+Thus to compute total fees for geostationary group, we need the total space station fee pool for FY2024 multiplied by 60%, then divided by 140 units? Or maybe the per-unit fee is calculated after subtracting small satellite fees?
+
+Let's understand the methodology precisely.
+
+The Commission determines the Space Bureau's share of total S&E appropriation. Then it allocates between earth station and space station payors based on direct FTE percentages. Then within space stations, they allocate between GSO and NGSO based on 60/40. Then within NGSO, they allocate between Less Complex and Other based on 20/80, after subtracting small satellite fees pro rata.
+
+But actually the small satellite fees are calculated separately: fee per unit = $12,215 (for FY2024? Or adjusted?). Then total small satellite fees = 16 * $12,215 = $195,440. This total is then deducted from the NGSO share? Wait they said "with the addition of small satellite fees deducted from the share of space station regulatory fees allocated to NGSO space stations, divided between NGSO-Other and NGSO-Less Complex based on an 80/20 split and reduced from the target goals of NGSO-Other and NGSO-Less Complex respectively." So yes, the NGSO pool is reduced by the total small satellite fees, then split 80/20 between Other and Less Complex.
+
+But for GSO, they just get 60% of the space station pool (without deduction? Or maybe also adjusted?). Actually the small satellite deduction is only from NGSO share.
+
+But we can compute the per-unit GSO fee if we know the total space station pool.
+
+However, we only need the total assessed on geostationary stations as a group, which is per-unit fee times 140.
+
+We have per-unit fees for NGSO-Other ($964,200) and NGSO-Less Complex ($441,925). From these we can derive the NGSO pool (after small satellite deduction) and then the total space station pool and then GSO pool.
+
+Specifically:
+Let N_OC = 11 units, fee_OC = $964,200 => total Other fees = 11 * 964,200 = $10,606,200.
+Let N_LC = 6 units, fee_LC = $441,925 => total Less Complex fees = 6 * 441,925 = $2,651,550.
+Total NGSO fees (excluding small satellites) = 10,606,200 + 2,651,550 = $13,257,750.
+
+But this total is after subtracting the small satellite fees from the NGSO pool and then splitting 80/20.
+
+Specifically, let S_total be total space station pool (before small satellite deduction?). Actually the methodology: First determine spa

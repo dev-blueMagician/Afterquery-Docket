@@ -1,0 +1,73 @@
+{
+  "question": "Divide South Africa's existing nuclear generating capacity by the combined capacity of the nuclear reactors South Korea had in operation in late September 2025. What is the result in percent, rounded to two decimal places?",
+  "number_of_asks": 1,
+  "gold_answer": "7.79%",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 4, Energy, Nuclear): \"Korea has 26 nuclear reactors, 23 of which are currently in operation, with total installed nuclear generating capacity of approximately 26 gigawatts electric (GW(e))\".\n\nStep 2. Source input (Doc 4, Table 2 \"List of nuclear power plants in Korea\", data as of September 25, 2025): the 23 rows whose status reads \"in operation\", with their capacities in MWe: Shin-Kori-1 and Shin-Kori-2, 1,000 each; Saeul-1 and Saeul-2, 1,400 each; Wolsong-2, Wolsong-3 and Wolsong-4, 700 each; Shin-Wolsong-1 and Shin-Wolsong-2, 1,000 each; Hanbit-1 and Hanbit-2, 950 each; Hanbit-3, Hanbit-4, Hanbit-5 and Hanbit-6, 1,000 each; Hanul-1 and Hanul-2, 950 each; Hanul-3, Hanul-4, Hanul-5 and Hanul-6, 1,000 each; Shin-Hanul-1 and Shin-Hanul-2, 1,400 each.\n\nStep 3. Source input (Doc 4, Table 2): the other rows were not in operation on that date. Kori-2 (650) has the status \"Taken offline on 3/8/23, 9/28/24, and 8/6/25 and waits for a decision on its operation license renewal\", and Kori-3 and Kori-4 (950 each) have no status of their own; with these three set aside, the rows marked \"in operation\" number 23, the prose's count. Saeul-3 and Saeul-4 (1,400 each) are \"Expected to be in operation\" in the first half of 2026 and in 2027, Shin-Hanul-3 and Shin-Hanul-4 (1,400 each) by Oct. 2033, and Kori-1 (587) and Wolsong-1 (679) are \"Permanently shut down\".\n\nStep 4. Calculation (Doc 4, the twelve 1,000 MWe rows in operation: Shin-Kori-1, Shin-Kori-2, Shin-Wolsong-1, Shin-Wolsong-2, Hanbit-3 to Hanbit-6 and Hanul-3 to Hanul-6): 12 * 1,000 = 12,000 MWe.\n\nStep 5. Calculation (Doc 4, the four 1,400 MWe rows in operation: Saeul-1, Saeul-2, Shin-Hanul-1 and Shin-Hanul-2): 4 * 1,400 = 5,600 MWe.\n\nStep 6. Calculation (Doc 4, the four 950 MWe rows in operation: Hanbit-1, Hanbit-2, Hanul-1 and Hanul-2): 4 * 950 = 3,800 MWe.\n\nStep 7. Calculation (Doc 4, the three 700 MWe rows in operation: Wolsong-2, Wolsong-3 and Wolsong-4): 3 * 700 = 2,100 MWe.\n\nStep 8. Calculation (Doc 4, running total): 12,000 + 5,600 = 17,600 MWe.\n\nStep 9. Calculation (Doc 4, running total): 17,600 + 3,800 = 21,400 MWe.\n\nStep 10. Calculation (Doc 4, combined capacity of the 23 reactors in operation): 21,400 + 2,100 = 23,500 MWe.\n\nStep 11. Source input (Doc 12, Energy): at Koeberg, the country's only nuclear plant, \"two reactors completed in the 1980s have a combined generating capacity of 1,830 MW\".\n\nStep 12. Calculation (Doc 12 and Doc 4, South Africa's capacity divided by Korea's capacity in operation, as a percentage): 1,830 / 23,500 = 7.7872%.\n\nStep 13. Final answer (Doc 12 and Doc 4, the same division rounded once to the two decimal places the question asks): 1,830 / 23,500 = 7.79%.",
+  "answer_components": [
+    "7.79%"
+  ],
+  "evidence": [
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Korea has 26 nuclear reactors, 23 of which are currently in operation"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Table 2: List of nuclear power plants in Korea"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "(Data as of September 25, 2025)"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Taken offline on 3/8/23, 9/28/24, and 8/6/25 and waits for a decision on its operation license renewal"
+    },
+    {
+      "document_number": 12,
+      "component_number": 1,
+      "quote": "two reactors completed in the 1980s have a combined generating capacity of 1,830 MW"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        12
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Conditional filter",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    },
+    {
+      "trap": "Out-of-range period",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    },
+    {
+      "trap": "Document convention",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Doc 4: the prose's 26 GW(e) covers all 26 installed reactors (7.04%); Table 2's four \"Expected to be in operation\" units (6.29%) and blank-status Kori-3/4, offline with Kori-2 (7.20%), were not running. Only the 23 \"in operation\" rows count: Doc 12's 1,830 / 23,500 = 7.79%."
+}

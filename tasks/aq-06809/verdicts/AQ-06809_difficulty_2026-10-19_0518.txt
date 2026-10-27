@@ -1,0 +1,532 @@
+AQ-06809 · Corporate filingsHard only — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-06809
+Saved: 2026-10-19 05:18 (local time)
+Bundle: Corporate filingsHard only · PEER · 5 documents · 106,776 prompt tokens
+Run read: Run 1, the latest
+Attempts read: 4
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 16 runs left · 3 of 60 runs used in the last 24 h (all tasks)
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 3 attempts right
+
+Solver A 3/3 · Solver B not needed · Not Hard: Solver A solved 3/3
+
+High model: two solvers (Solver A, Solver B) try up to 3 times each. Hard = each of the two Hard solvers gets it wrong at least once in its three runs, even if every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+No specific changes were suggested for this version. The verdict and the run history show where the solvers landed.
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 1 (Oct 18, 2026, 11:35 PM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+1 run
+
+------------------------------------------------------------------------
+Run 1 · Too easy · Result the gate uses
+Oct 18, 2026, 11:35 PM · Version a02029 (current) · Low — · Medium — · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: first run
+
+Solver summary: Run 1 · Too easy · 3 of 3 right
+Every solver attempt got it (3 of 3).
+
+Your answer: 1.5
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: —
+
+Final answer: The smallest quarterly spread occurred in Q4 2025, when Fifth Third’s ratio was about 52.5% and Huntington’s was about 54.8%, giving a gap of 2.3 percentage points. | Your answer (gold): 1.5
+
+Full answer
+-----------
+
+The smallest quarterly spread occurred in Q4 2025, when Fifth Third’s ratio was about 52.5% and Huntington’s was about 54.8%, giving a gap of 2.3 percentage points.
+
+Reasoning
+---------
+
+We need answer: "What was the narrowest gap, in any quarter of 2025, between Fifth Third's and Huntington's efficiency ratios, each taken as noninterest expense over fully taxable-equivalent revenue? Answer in percentage points to one decimal place."
+
+Need determine efficiency ratios for Fifth Third and Huntington for each quarter of 2025 (Q1,Q2,Q3,Q4?) from knowledge. Need narrowest gap.
+
+We need recall or know financial results for Fifth Third Bancorp and Huntington Bancshares in 2025 quarters. Efficiency ratio = noninterest expense / (net interest income + noninterest income) on FTE basis, usually expressed as percent.
+
+Need values each quarter 2025.
+
+Let's recall reported efficiency ratios:
+
+Fifth Third Bank:
+2024 full year efficiency ratio maybe 54.5? For quarters in 2025:
+Q1 2025? Fifth Third reported efficiency ratio of 52.8? Or 53.2? Let's recall earnings reports.
+
+Huntington Bancshares:
+2025 Q1 efficiency ratio maybe 58.6? Or 59? Let's recall precisely.
+
+We need gap in any quarter, narrowest.
+
+Let's recall Fifth Third Q1 2025 earnings (reported around Jan? Actually Q4 2024 in Jan 2025, Q1 2025 in April 2025?). Let's recall figures:
+Fifth Third Q1 2025 net income available to common shareholders $591 million? Efficiency ratio maybe 52.9 percent? Or adjusted efficiency ratio 53.7?
+
+Let's recall Huntington Q1 2025 earnings reported in April 2025? Net income about $530 million? Efficiency ratio was around 58.4? Or 58.7?
+
+But need each quarter of 2025: Q1, Q2, Q3, maybe Q4 (reported Jan 2026).
+
+We need compute gap = |Fifth Third - Huntington| for each quarter, then smallest.
+
+Let's recall reported numbers exactly.
+
+Fifth Third Bancorp earnings reports 2025:
+- Q4 2024 (reported Jan 2025): efficiency ratio 57.5? No that might be for Q4.
+- Q1 2025 (reported April 2025?): net income $591M, efficiency ratio 52.6? Or 52.3?
+- Q2 2025 (reported July 2025?): net income $591? Actually Q2 net income was $591M? Wait need correct.
+- Q3 2025 (reported Oct 2025?): net income maybe $591? Hmm maybe not.
+
+Let's recall Huntington reports:
+- Q1 2025 (reported April 2025): net income $566M? Efficiency ratio 58.4? Tax-equivalent adjustment?
+- Q2 2025 (reported July 2025): net income $643M? Efficiency ratio around 57.1?
+- Q3 2025 (reported Oct 2025): net income $666M? Efficiency ratio 57.2? Or 54?
+- Q4 2025 (reported Jan 2026): net income maybe $664M? Efficiency ratio 56.8?
+
+But need narrowest gap, likely around Q2 or Q3 where Fifth Third maybe around 52 and Huntington around 57 => gap ~5. But maybe in Q4 Fifth Third around 54 and Huntington around 55 => gap ~1? Need be precise.
+
+We need "each taken as noninterest expense over fully taxable-equivalent revenue" - this is standard efficiency ratio formula. They ask "What was the narrowest gap... Answer in percentage points to one decimal place." So likely the gaps are like 5.2, 4.8, 3.1, 1.5, etc., with narrowest maybe 1.5? Or 2.4?
+
+We need be accurate based on actual reported numbers.
+
+Let's recall specific figures from earnings tables.
+
+Fifth Third 2025 quarterly results (from memory of press releases):
+
+Q1 2025 (three months ended March 31, 2025):
+- Net interest income (FTE) maybe $1,416M? Noninterest income maybe $740M? Noninterest expense maybe $1,229M?
+- Efficiency ratio calculated: noninterest expense / (net interest income + noninterest income) = ?
+If net interest income FTE was $1,416M and noninterest income $740M => total revenue $2,156M. Noninterest expense maybe $1,139M? Then ratio = 1,139/2,156 = 52.8%. Yes that sounds right: efficiency ratio 52.8 percent? Or 53.2?
+
+Let's check consistency: Fifth Third in Q4 2024 had efficiency ratio around 54.8? Actually in Q4 2024 they reported efficiency ratio of 54.2? Hmm.
+
+But we need all quarters.
+
+Q2 2025 (ended June 30, 2025):
+Maybe net interest income $1,449M, noninterest income $785M, total revenue $2,234M. Noninterest expense maybe $1,190M? Ratio = 53.2? Or 52.3?
+
+Q3 2025 (ended Sept 30, 2025):
+Maybe net interest income $1,502M, noninterest income maybe $800M, revenue $2,302M, expense $1,220M => ~53.0?
+
+But wait Huntington's ratios might be in 56-59 range, so gap around 4-6 points.
+
+However, there might be a quarter where Fifth Third's ratio spiked and Huntington's dropped, narrowing gap.
+
+Let's recall Huntington's Q4 2025 report (released Jan 2026): efficiency ratio was 55.6? Or 56.1?
+
+Actually Huntington acquired some banks? In 2025 they acquired Veritex? That was in 2025? The acquisition of Veritex Holdings closed on Oct 1? Or in 2025? That might affect Q4.
+
+But we just need gap in each quarter using reported efficiency ratios.
+
+Let's try to recall exact reported efficiency ratios for both banks in each quarter of 2025 from press releases.
+
+Fifth Third reports "efficiency ratio" in earnings summary:
+For Q1 2024 maybe 58.7? Let's recall trends: Fifth Third's efficiency ratio improved over 2024, reaching around 54 in Q4 2024. For 2025 they targeted low 50s.
+
+Specifically, in April 2025 (Q1 2025) they might have said efficiency ratio was 53.9 percent compared to 55.1 in Q1 2024? Or 52.8?
+
+Let's search mental database for Fifth Third Q1 2025 earnings call transcript: They mentioned efficiency ratio of 52.7 percent? Or "efficiency ratio was 52.6 percent, compared with 53.6 percent in the prior quarter"?
+
+Actually I think Fifth Third Q2 2025 efficiency ratio was 52.5 percent, and they said best in over a decade? Or maybe 52.3?
+
+Let's recall Huntington's efficiency ratio reports:
+In April 2025 Q1 report: efficiency ratio was 58.5 percent? Or 58.3?
+In July 2025 Q2 report: efficiency ratio was 57.3 percent?
+In October 2025 Q3 report: efficiency ratio was 56.8 percent?
+In Jan 2026 Q4 report: efficiency ratio was 55.9 percent?
+
+If Fifth Third was around 53 each quarter, gap is about 5.5, 4.8, 3.8, 2.9. Narrowest in Q4 around 2.9? But need correct values.
+
+But wait, Fifth Third Q4 2025 might have been around 54.8? Or 53.5?
+
+We need "the narrowest gap, in any quarter of 2025" - this sounds like there is one quarter where they are closest, maybe Q3 with gap 2.1?
+
+But I need be more precise with actual numbers.
+
+Let's recall the exact line items for each quarter to compute ourselves if possible.
+
+We need noninterest expense divided by (net interest income + noninterest income) on fully taxable equivalent basis.
+
+If I can recall revenue and expense figures for each quarter.
+
+Fifth Third Q1 2025:
+Net interest income (tax equivalent) maybe $1,422 million?
+Noninterest income maybe $740 million?
+Noninterest expense maybe $1,155 million?
+Then revenue = 2,162; expense/revenue = 53.4.
+
+But need correct.
+
+Let's recall Fifth Third's total revenue in Q1 2025 was around $2.2B? Net income was $591M, tax and provisions? Actually net income available to common was $591 million, up 25 percent? Let's check consistency: If revenue was $2.2B, expenses maybe $1.2B, provision maybe $50M, taxes maybe $280M => net income ~670? Not matching 591. So need correct figures.
+
+Let's recall Fifth Third Bankcorp Q1 2025 income statement highlights (from press release around April 22, 2025?):
+- Net income available to common shareholders: $591 million, up $112 million?
+- Earnings per share: $0.87? Or $0.85?
+- Net interest income (NII): $1,424 million? Or $1,409?
+- Noninterest income: $749 million?
+- Noninterest expense: $1,235 million?
+- Provision for credit losses: $60 million?
+If NII + noninterest income = about $2,173M. Noninterest expense $1,235M => ratio 56.8? That seems high. So maybe revenue was higher.
+
+Wait, efficiency ratio for regional banks is often in 50s. So if expense is $1,235 and revenue is $2,173 => 56.8. But they said efficiency ratio was around 52? So revenue must be about $2,375M (1,235/0.52).
+
+Thus NII + noninterest income likely around $2,375M.
+
+Let's check: NII might be $1,424M, noninterest income might be $830M => total ~2,254M, still ratio ~54.8.
+
+But maybe noninterest expense was lower, around $1,160M.
+
+Let's recall Fifth Third Q2 2025 report (around July 2025):
+Net income was around $591M? Actually in Q2 they reported net income of $591 million? Or was it $613 million?
+
+We need not overanalyze. But need correct gap values.
+
+Let's recall Huntington's Q1 2025 figures:
+Net income was about $566 million?
+NII was maybe $1,422M?
+Noninterest income maybe $525M?
+Noninterest expense maybe $1,155M?
+Revenue = ~1,947M, expense 1,155 -> 59.3. So efficiency ratio near 59.
+
+But in reports they said 58.4? Or 58.8?
+
+Let's recall Huntington's acquisition of Veritex in 2025 added assets. But Q3 and Q4 include integration costs?
+
+Actually, we need "each taken as noninterest expense over fully taxable-equivalent revenue". This sounds like they want us to compute using figures in the reports, not just use reported efficiency ratio (which might be adjusted). But they ask "What was the narrowest gap... between Fifth Third's and Huntington's efficiency ratios..." So they want compare the ratios calculated the same way.
+
+We need identify quarters of 2025 (probably Q1, Q2, Q3, Q4). For each bank, compute ratio = noninterest expense / (net interest income FTE + noninterest income).
+
+We need do this for each quarter and find smallest difference.
+
+Thus we need accurate figures for each quarter.
+
+Let's recall from 10-Q filings or earnings summaries.
+
+Fifth Third 2024 and 2025 quarterly income statement (approximate):
+
+Fifth Third Bancorp (FITB) income statement items:
+Net interest income (FTE) and noninterest income, noninterest expense.
+
+From 2023: NII around $5.6B, noninterest income around $3.2B, noninterest expense around $4.5B.
+
+But we need 2025 quarterly.
+
+Let's recall in 2025, Fifth Third's net interest margin was around 3.1%, average earning assets around $180B? So NII per quarter around $1.4B indeed.
+
+Specifically, for the three months ended:
+March 31, 2025 vs March 31, 2024.
+
+Let's recall from the 2025 10-Q filed with SEC (around May 2025?). The income statement for three months ended March 31, 2025 and 2024.
+
+We need figures:
+Interest income?
+Interest expense?
+Net interest income?
+Noninterest income?
+Noninterest expense?
+
+Let's try to recall from the 10-K for 2024 and then 2025 quarters? Might be too specific.
+
+But maybe easier: The efficiency ratios are often listed in the earnings summary table. Let's recall the table for Fifth Third Q1-Q4 2025.
+
+In earnings reports, they include a summary with:
+Net interest income
+Noninterest income
+Noninterest expense
+Efficiency ratio
+
+For Fifth Third in 2024 quarterly:
+Q1 2024: efficiency ratio 57.2? Or 55.8?
+Q2 2024: 54.4?
+Q3 2024: 53.8?
+Q4 2024: 54.5?
+
+But in 2025 they improved.
+
+Actually, I recall seeing in a 2025 report that Fifth Third's efficiency ratio was 53.2 percent in Q1, 52.0 in Q2, 51.8 in Q3, and 52.5 in Q4? Or something like that.
+
+But need compare to Huntington.
+
+Let's recall Huntington's 2025 efficiency ratios reported:
+Q1: 58.6?
+Q2: 57.5?
+Q3: 57.0?
+Q4: 56.1?
+
+If Fifth Third was 53, 52, 52, 53, then gaps are ~5.6, 5.5, 5.0, 3.1? Not clear.
+
+But maybe Fifth Third's Q4 was 54.5 and Huntington Q4 was 55.2, gap 0.7? That'd be the narrowest. Let's check plausibility.
+
+Wait, Huntington in Q4 2025 might have had efficiency ratio of 54.8? Actually after integrating Veritex, costs might be high, but revenue also up.
+
+We need be precise to one decimal place, so the answer might be something like 2.3 percentage points.
+
+But I need be as accurate as possible.
+
+Let's recall specific press release wording.
+
+Fifth Third Q3 2025 earnings (released Oct 2025?):
+They might have said:
+"Efficiency ratio was 52.8 percent for the three months ended September 30, 2025, compared with 53.5 percent for the three months ended September 30, 2024." Or maybe "52.4 percent"?
+
+Actually, I think Fifth Third's efficiency ratio in Q3 2025 was 51.9 percent, an improvement.
+
+But let's try to recall from news headlines: In October 2025, many banks reported. Fifth Third reported net income of $591 million? Wait that was Q2? Let's check mental news headlines in Oct 2025:
+- Fifth Third Bank reported Q3 net income of $591 million? Or was it $591M up?
+- Huntington reported Q3 net income of $666 million?
+- Another bank: PNC reported $1.8B, etc.
+
+Actually in October 2025 earnings reports:
+On Oct 16, 2025? Many banks reported Q3:
+- Fifth Third: net income available to common shareholders was $591 million, up 9 percent? Or maybe net income was $591M, EPS was $0.87?
+- Huntington: net income was $666 million, EPS was $0.42? Wait Huntington's shares are more.
+
+Let's recall Huntington's Q3 2024 net income was about $539M? Or $710M?
+
+But we need efficiency ratio.
+
+Let's recall in Huntington's Q3 2025 press release, they listed:
+- Net interest margin 3.41%
+- Efficiency ratio: 57.2 percent?
+- Noninterest expense was $1,235M?
+- Total revenue (FTE) was around $? Let's see.
+
+Actually, Huntington in Q3 2025 had revenue around $3.4B? No, Huntington is larger, assets around $200B? Wait Huntington's assets are around $200B? Actually after acquisitions, maybe $225B. So quarterly revenue might be around $2.3B.
+
+Let's try to recall Huntington Q3 2025 income statement figures (from 10-Q filed around Nov 2025):
+Net interest income: maybe $1,467M?
+Noninterest income: maybe $564M?
+Total revenue (FTE): $2,031M?
+Noninterest expense: maybe $1,159M?
+Then efficiency ratio = 1,159 / 2,031 = 57.0. Yes that sounds right.
+
+Meanwhile Fifth Third Q3 2025:
+Net interest income: maybe $1,502M?
+Noninterest income: maybe $795M?
+Total revenue: $2,297M?
+Noninterest expense: maybe $1,200M?
+Ratio = 52.2.
+
+Gap = 4.8.
+
+But need narrowest across quarters.
+
+Perhaps in Q4 2025, Huntington's revenue went up and expenses relatively lower, ratio dropped to 54.5, while Fifth Third was around 52.5 => gap 2.0.
+
+But we need the narrowest gap exactly.
+
+Let's recall that in Jan 2026, Huntington reported Q4 2025 net income of $649M? Or $664M? And they said efficiency ratio was 56.1? Or maybe 54.9?
+
+Actually, I think Huntington's full-year 2025 efficiency ratio was around 57.3, and Q4 was around 56.
+
+But wait there is also the acquisition of Veritex, which closed on October 1, 2025? So Q4 2025 includes Veritex for one quarter, adding revenue and costs.
+
+Let's recall: Huntington announced acquisition of Veritex Holdings, Inc. in July 2025? The deal closed on October 1, 2025? Yes, I think the deal closed on October 1, 2025. So Q4 2025 includes Veritex.
+
+That might have affected Q4 figures significantly.
+
+Meanwhile, Fifth Third in Q4 2025 might have had its own acquisition? No, Fifth Third acquired Comerica in October 2025? Wait yes! Fifth Third acquired Comerica! That deal was announced in October 2025 and closed maybe in 2026? Actually Fifth Third and Comerica announced a merger in October 2025, expected to close in 2026. So Q4 2025 for Fifth Third might include merger-related costs but not revenue.
+
+Thus Q4 ratios might be affected.
+
+But we need "in any quarter of 2025" - likely Q1 through Q4.
+
+We need compute precisely using reported figures. Let's try to recall from 10-Q filings the exact numbers for each quarter.
+
+We need for each bank, for each quarter:
+Noninterest expense (NIE)
+Net interest income (NII) on FTE basis
+Noninterest income (NII? no, call it NIinc)
+
+Then compute ratio = NIE / (NII_FTE + NIinc).
+
+We need do this for Q1, Q2, Q3, Q4 2025.
+
+Let's recall Fifth Third's quarterly financial highlights from 2025 reports. They often list:
+Net interest income (FTE): Q1 $1,403M? Q2 $1,445M? Q3 $1,513M? Q4 $1,530M?
+Noninterest income: Q1 $740M, Q2 $775M, Q3 $800M, Q4 $820M?
+Noninterest expense: Q1 $1,150M, Q2 $1,180M, Q3 $1,210M, Q4 $1,280M?
+
+But need correct.
+
+Actually, Fifth Third's noninterest expense in 2024 was about $4.8B for the year, so quarterly average about $1.2B. Yes.
+
+Let's recall Fifth Third Q4 2024 figures:
+NII (FTE) was about $1,456M?
+Noninterest income about $775M?
+Noninterest expense about $1,289M?
+Then revenue = 2,231M, expense = 1,289 => 57.8? That can't be right if they said 54.
+
+Wait maybe NII was $1,458M and noninterest income was $863M, revenue $2,321M, expense $1,260M => 54.2. Yes.
+
+Thus for 2025, revenue likely grew.
+
+But we need precise values.
+
+Let's recall from Fifth Third's 2025 10-K (filed Feb 2026?) the quarterly financial data table. They often have a table with quarterly results for 2025 and 2024. Let's recall that table might show:
+
+For the three months ended:
+March 2025:
+Net interest income: $1,395M?
+Noninterest income: $736M?
+Noninterest expense: $1,145M?
+
+But we need FTE revenue.
+
+Actually, in bank financial reports, they present net interest income on a tax-equivalent basis, and they present noninterest income, then they present noninterest expense and efficiency ratio.
+
+Let's recall Fifth Third's Q1 2025 earnings report line:
+"Net interest income of $1,397 million" maybe?
+"Noninterest income of $711 million"?
+"Noninterest expense of $1,145 million"?
+Then efficiency ratio might be calculated on FTE revenue of $2,108M? 1,145/2,108 = 54.3. Still not 52.
+
+But maybe there are adjustments.
+
+Wait, the efficiency ratio formula often excludes certain items like securities gains/losses, amortization of intangibles, etc. So the reported efficiency ratio is adjusted, but they ask "each taken as noninterest expense over fully taxable-equivalent revenue" - this sounds like the unadjusted version using total revenue including all items. So we need compute using the raw revenue and expense figures in the income statement, not the adjusted reported efficiency ratio.
+
+Thus we need the actual income statement figures.
+
+Let's recall Fifth Third's 2025 income statement for three months ended March 31, 2025 (from 10-Q filed with SEC around May 2025):
+
+Interest income: maybe $2,070M?
+Interest expense: maybe $650M?
+Net interest income: $1,420M?
+Noninterest income:
+Service charges on deposits: ?
+Other income?
+Total noninterest income: maybe $775M?
+Noninterest expense:
+Salaries, wages, etc.: $650M?
+Other: ?
+Total noninterest expense: maybe $1,180M?
+
+But I need more precise.
+
+Actually, I might be able to approximate but need correct gap to one decimal. That requires knowing both ratios precisely.
+
+Perhaps the answer is easier if we recall that in every quarter of 2025, Fifth Third's efficiency ratio was about 52-54 and Huntington's was about 57-59, with the narrowest in Q4 being about 3.0 points. But I need be specific.
+
+Let's recall specific reported efficiency ratios for Huntington in 2025 quarterly reports:
+In the Q1 2025 earnings summary, they might have said:
+"Efficiency ratio for the 2025 first quarter was 58.5 percent, compared to 60.2 percent in the 2024 first quarter."
+In Q2: "Efficiency ratio was 57.8 percent, compared with 59.5 percent in 2024 second quarter."
+In Q3: "Efficiency ratio was 56.9 percent, compared to 58.1 percent in 2024 third quarter."
+In Q4: "Efficiency ratio was 55.3 percent, compared to 58.9 percent in 2024 fourth quarter"?
+
+If Fifth Third's reported ratios were:
+Q1: 53.2
+Q2: 52.5
+Q3: 52.1
+Q4: 53.8?
+
+Then gaps:
+Q1: 5.3
+Q2: 5.3
+Q3: 4.8
+Q4: 1.5
+
+That'd be narrowest 1.5. But I need correct values.
+
+But wait, the question asks "What was the narrowest gap... Answer in percentage points to one decimal place." If the narrowest is 1.5, that'd be a specific number.
+
+However, I need be somewhat confident.
+
+Let's recall that in Jan 2026, Huntington reported full-year 2025 efficiency ratio of 57.1? Or maybe 56.6? Actually in the 2025 annual report, they might list quarterly efficiency ratios in a table.
+
+But also Fifth Third in Jan 2026? No, Fifth Third reported Q4 2025 in Jan 2026? Yes, on Jan 2026? Actually they reported on Jan 2026? Let's recall in Jan 2026, many banks reported Q4: on Jan 15, 2026? Fifth Third might have reported on Jan 2026? Or was it in Jan? Let's check mental news in Jan 2026: Around Jan 15-20, 2026, banks like Goldman, Morgan Stanley, etc. For regionals, maybe on Jan 2026:
+- Fifth Third reported Q4 2025 on Jan 2026? Actually I think Fifth Third reported on Jan 16? Or Jan 20?
+- Huntington reported on Jan 2026? Maybe Jan 2026? Or was it earlier?
+
+Let's reca
+
+High model
+==========
+The Hard solvers keep only right or wrong, not their reasoning. To see how a solver worked, use View reasoning on an attempt from another step, such as the document check.
+
+Attempt 1 · Right
+-----------------
+Docs: Not kept · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): 1.5
+
+Where it shortcut: Reached the gold answer using the directly tabulated quarterly noninterest expense and FTE revenue rows for both banks, with no need to consult documents 2–4 or any definitional footnotes.Doc 1 Doc 5
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: Not kept · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): 1.5
+
+Where it shortcut: Again matched the gold via the single-table quarterly figures; the computation path requires only per-quarter division and a minimum, not cross-document synthesis.Doc 1 Doc 5
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: Not kept · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): 1.5
+
+Where it shortcut: Third match from the same two tables; the reliability of the shortcut indicates the question never forces reading beyond documents 1 and 5.Doc 1 Doc 5
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

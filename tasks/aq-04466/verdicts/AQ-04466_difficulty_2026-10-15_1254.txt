@@ -1,0 +1,435 @@
+AQ-04466 · Public policyEasy or Hard only — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-04466
+Saved: 2026-10-15 12:54 (local time)
+Bundle: Public policyEasy or Hard only · 15 documents · 89,241 prompt tokens
+Run read: Run 7, the latest of 7
+Attempts read: 4
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+14 of 20 runs left · 9 of 60 runs used in the last 24 h (all tasks)
+
+Your last 3 runs all came back Too easy. Ask the Coach before running again.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 3 attempts right
+
+High model: two solvers try up to 3 times each. Ready when both get it wrong at least once and not every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Rephrase to describe the proposal indirectly, e.g. 'Which submitters suggest that where an investor is subject to a wholesale/sophistication regime overseas, that regime's tests should be recognised for Australian wholesale classification purposes?' This requires the solver to interpret the passages rather than pattern-match phrasing. Why: The phrase 'their own country's definition' points almost word-for-word at document 9's 'non-residents of Australia ought to be considered wholesale clients if they meet their local definitions', and document 1's 'qualifying in their home jurisdiction'. The question is effectively a paraphrase of the answer passages, so retrieval is trivial once either document is opened. From a run (High model · attempt 1): Reached gold via the near-verbatim match: document 9's 'non-residents... meet their local definitions' and document 1's 'qualifying in their home jurisdiction' directly answer the question's phrasing. Doc 1 Doc 9
+
+Gold answer · Your answer
+-------------------------
+
+- 2 Either accept 'CP Ventures and Saltwater Fund (joint submission)' as equivalent, or restructure the question so the answer is a single unambiguous list, e.g. ask for the submitting organisations/entities and specify how joint submissions should be counted. Why: The gold answer lists 'CP Ventures, Saltwater Fund' as two submitters, but document 1 is a single joint submission signed by Emlyn Scott as Managing Partner of 'CP Ventures Saltwater Fund'. A solver could reasonably answer 'CP Ventures and Saltwater Fund (joint submission)' or just 'CP Ventures/Saltwater Fund', and the alphabetical-list format makes the split into two names an arbitrary formatting convention rather than a reading task. From a run (High model · attempt 1): Reached gold via the near-verbatim match: document 9's 'non-residents... meet their local definitions' and document 1's 'qualifying in their home jurisdiction' directly answer the question's phrasing. Doc 1
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 7 (Oct 15, 2026, 12:44 PM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+7 runs
+
+Only the latest run, Run 7, is in this file; 6 earlier runs are left out.
+
+------------------------------------------------------------------------
+Run 7 · Too easy · Result the gate uses
+Oct 15, 2026, 12:44 PM · Version 508f7c (current) · Low — · Medium — · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: no change to the question or answer
+
+Solver summary: Run 7 · Too easy · 3 of 3 right
+Every solver attempt got it (3 of 3).
+
+Your answer: Aussie Angels, CP Ventures, Saltwater Fund
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: Note: where it went wrong
+
+Final answer: So: Ashurst; Australian Investment Council; and Herbert Smith Freehills. | Your answer (gold): Aussie Angels, CP Ventures, Saltwater Fund
+
+Where it went wrong: Without documents, Low model guessed unrelated firms (Ashurst, Australian Investment Council, Herbert Smith Freehills), none of which appear in the provided document set.
+
+Full answer
+-----------
+
+Likely submitters include law firms and industry bodies advocating cross-border recognition. Alphabetically:
+
+- Ashurst
+- Australian Investment Council
+- Herbert Smith Freehills
+
+So: Ashurst; Australian Investment Council; and Herbert Smith Freehills.
+
+Reasoning
+---------
+
+We need answer: "Which submitters propose that investors who live outside Australia be able to qualify as wholesale clients by meeting their own country's definition? List them alphabetically."
+
+Need identify submitters in some consultation/submission context, likely Australian Treasury or ASIC consultation on wholesale client test? Need recall or know submissions proposing foreign investors qualify as wholesale clients by meeting own country's definition.
+
+We need list alphabetically. Let's think about known submissions to the Australian government consultation on "Wholesale Client Test" maybe in 2023? Or to "Review of the wholesale client and retail client definitions"? Actually there was a Treasury consultation paper in 2024? Let's recall.
+
+In Australia, there is a wholesale client threshold of $2.5 million net assets or $250k income. There have been proposals to update. In 2023/2024 Treasury consulted on changing the wholesale client test for financial products? Or maybe ASIC? Let's recall specific submissions.
+
+Question asks "Which submitters propose that investors who live outside Australia be able to qualify as wholesale clients by meeting their own country's definition?" This sounds like a specific proposal in submissions: allow overseas investors to be treated as wholesale if they meet the equivalent test in their home jurisdiction.
+
+We need list the submitters who made that proposal, alphabetically.
+
+We need answer from knowledge. Let's recall submissions to the "Qualifying as a wholesale client" consultation maybe by Department of Treasury in 2023? Actually in August 2024 Treasury released a consultation paper "Review of the regulatory framework for managed investment schemes" no that's different.
+
+Another possibility: This is from submissions to the Parliamentary Joint Committee on Corporations and Financial Services inquiry into the wholesale investor test? In 2023 there was an inquiry? Or maybe from submissions to ASIC's consultation on relief?
+
+Let's search mental database for phrases like "investors who live outside Australia be able to qualify as wholesale clients by meeting their own country's definition". Might come from specific industry bodies like Australian Investment Council, Financial Services Council, etc.
+
+We need be precise with names alphabetically.
+
+Perhaps the submitters are:
+- Australian Investment Council?
+- Chartered Accountants Australia and New Zealand?
+- Financial Services Council?
+- Institute of Public Accountants?
+- SMSF Association?
+
+But need only those proposing the overseas country definition idea.
+
+Let's think about the wholesale client test consultation that ran maybe in 2021? The Treasury consulted on "Modernising the individual sophisticated investor test for Australians" in 2021? Actually in 2021 there was a consultation on extending the sophisticated investor sunset clause? No.
+
+Let's recall in 2023 the government proposed increasing the wholesale client thresholds indexed? Or not.
+
+But the question sounds like it's drawn from a specific document summarizing submissions, maybe a report listing submitter views. The question asks "Which submitters propose..." implying there are a few named in that summary.
+
+We need answer alphabetically, likely something like:
+- Australian Financial Markets Association (AFMA)
+- Financial Services Council (FSC)
+- Investment Company Institute? No that's US.
+
+Let's try to recall actual submission texts. For example, in response to Treasury's 2024 consultation on "Improving the regulation of financial advice" maybe not.
+
+Actually there is a known issue: foreign investors in Australian managed investment schemes can be classified as wholesale clients if they meet Australian tests, but some want them to qualify under their home country rules (e.g., US accredited investor, UK high net worth). This was proposed in submissions to the "Review of the managed investment scheme regulatory framework" in 2023? Or to "Australia as a financial centre" consultation?
+
+Let's recall the "Australia as a Financial Centre" consultations in 2008-2010 proposed offshore funds and foreign investors. But not this.
+
+Another context: In 2024, ASIC released Consultation Paper 360? No.
+
+We need provide the best answer based on knowledge. Let's recall specific submission authors who talked about foreign wholesale client equivalence.
+
+Maybe it's from submissions to the "Treasury Laws Amendment (Measures for Consultation) Bill 2021"? No.
+
+Let's parse the question wording precisely: "Which submitters propose that investors who live outside Australia be able to qualify as wholesale clients by meeting their own country's definition? List them alphabetically."
+
+This sounds like a question from a quiz or exam based on a specific reading material that lists submitters and their proposals. Since no documents are provided, but they ask "Answer the following question from your own knowledge." So they expect me to know.
+
+We need list alphabetically. Let's try to recall all submissions that mentioned overseas investors and local definitions.
+
+Possibly the submitters are:
+1. Australian Investment Council (AIC)
+2. Financial Services Council (FSC)
+3. Property Council of Australia?
+
+But I need be somewhat accurate.
+
+Let's recall in 2021 Treasury consulted on "Making permanent reforms in respect of virtual meetings and electronic execution of documents" no.
+
+Let's search mental patterns: phrase "meet their own country's definition" sounds like "meet the definition of wholesale client in their own country". Submissions might say "investors residing outside Australia should be able to qualify as wholesale clients if they meet the wholesale client definition in their country of residence."
+
+This sounds like a proposal in the context of "wholesale client test for financial advice" where advisers can provide advice to wholesale clients without some obligations.
+
+There was a 2024 Treasury consultation paper titled "Delivering Better Financial Outcomes" which included proposals about the wholesale client test? Actually the Delivering Better Financial Outcomes package in 2023/2024 included changes to financial advice laws, but also there was discussion about the wholesale client test being used to avoid consumer protections.
+
+Wait, there was an inquiry by the Parliamentary Joint Committee on Corporations and Financial Services into the wholesale investor and client tests in 2029? No.
+
+Let's think differently: The question might come from a specific report summarizing submissions to ASIC's Consultation Paper 332 "Promoting better disclosure for listed entities"? Unlikely.
+
+We need just list names alphabetically. Let's guess the answer might be "Chartered Accountants Australia and New Zealand, Financial Services Council, and Property Council of Australia". Or "AFMA, FSC, and SMSF Association".
+
+But I need be as correct as possible.
+
+Actually, I recall in submissions to the 2024 Treasury consultation on "Wholesale Client Test" maybe there were about 50 submissions. Some proposed lowering or removing the test, others proposed indexing, others proposed allowing foreign equivalents.
+
+Let's recall news headlines in 2024: Treasury was consulting on whether to change the $2.5m threshold. Many submissions from industry groups said don't change it, or index it. Some said allow product-based tests.
+
+One specific proposal was that "foreign investors should be able to qualify based on their home jurisdiction's rules". Which groups proposed that? Maybe "Australian Private Equity and Venture Capital Association" (AVCAL) proposed that for venture capital?
+
+Let's recall AVCAL's submission might have said that international investors should be able to invest in Australian venture capital funds if they are accredited in their own country.
+
+But the question says "investors who live outside Australia be able to qualify as wholesale clients by meeting their own country's definition". That sounds like a general proposal for all financial products, not just VC.
+
+Perhaps the submitters are:
+- Ashurst?
+- Herbert Smith Freehills?
+- Law firms might propose this for cross-border consistency.
+
+Let's list law firms that made submissions: Allens, Ashurst, Herbert Smith Freehills, King & Wood Mallesons, MinterEllison. Among them, maybe some proposed foreign equivalence.
+
+But need alphabetically.
+
+Actually, maybe the answer is just two submitters: "Financial Services Council and Property Council of Australia"? Or "Investment Trends and Financial Services Council"?
+
+We need be honest about uncertainty? The prompt says "Answer the following question from your own knowledge... Give your single best answer." So I should provide the list I think is correct.
+
+Let's recall a specific document: "Summary of submissions received on the wholesale client test consultation" might list proposals under headings. For example:
+- Some submitters proposed that the test be indexed (e.g., CPA Australia, CA ANZ, etc.)
+- Some proposed that the product value be included (e.g., FSC, AIC)
+- Some proposed that overseas residents be able to use their local test (e.g., ???).
+
+If I recall, there was a proposal by "Chartered Accountants Australia and New Zealand" and "CPA Australia" about accountants certifying? No that's about accountant certificates.
+
+Let's search mental database for "own country's definition wholesale client Australia submission". Maybe it's in the context of "foreign financial service providers" exemption?
+
+Wait, there's an exemption for foreign financial service providers (FFSP) in Australia. To provide services to Australian clients, they need to be licensed or rely on exemptions. One exemption is for services provided to wholesale clients. So foreign providers want their overseas clients who are wholesale in their home country to be treated as wholesale in Australia so they can serve them without an Australian licence.
+
+Yes! That sounds right. Under the foreign financial services provider exemption (in Corporations Act 2001, s911A), a foreign provider can provide financial services to Australian clients if they are wholesale clients. There might be submissions proposing that if an overseas person is a wholesale/professional client under their own country's laws, they should be deemed wholesale in Australia for the purpose of this exemption.
+
+This was part of the 2025? Actually in 2024 the government passed legislation extending and modifying the FFSP exemptions. There was a consultation in 2023? Let's recall: In March 2023, Treasury released a consultation paper on "Relief for foreign financial service providers". The proposals included extending exemptions and introducing a new "professional investor" exemption? Or was it in 2022?
+
+Let's recall: In June 2023, Treasury consulted on "Regulatory Framework for Foreign Financial Service Providers in Australia". Yes! That sounds correct. The consultation discussed exemptions for FFSPs. One issue was the definition of "professional investor" and whether overseas investors could qualify based on foreign law.
+
+Specifically, there was a proposal for a "professional investor exemption" that allows foreign providers to deal with Australian professional investors. The consultation might have asked whether there should be an equivalence for overseas clients.
+
+But the question mentions "qualify as wholesale clients by meeting their own country's definition". That sounds like submissions to that consultation proposed that investors living outside Australia should be able to qualify as wholesale clients (for the purpose of FFSP exemptions?) if they meet their own country's definition.
+
+Let's recall the submissions to that 2023 consultation. Many law firms and industry bodies made submissions. For example:
+- Allen Allen? No.
+- Australian Financial Markets Association (AFMA)
+- Australian Investment Council
+- Chartered Accountants Australia and New Zealand
+- Financial Services Council
+- Herbert Smith Freehills
+- Institute of Public Accountants
+- Investment Trends?
+- Law Council of Australia
+- MinterEllison
+- SMSF Association?
+
+We need specifically those proposing the overseas-country-definition idea.
+
+Perhaps in that consultation, some submitters argued that the "professional investor" definition should include persons who are professional investors under the laws of specified foreign jurisdictions (like US accredited investor, EU professional client, UK high net worth).
+
+Let's recall the outcome: The government introduced the "foreign financial service provider" exemptions in the Treasury Laws Amendment (2024 Measures No. 1) Act? Or maybe in 2025?
+
+Actually, in December 2024, the government passed legislation extending the FFSP relief for another year? Or made it permanent?
+
+But regardless, we need the submitters who proposed that overseas residents can qualify by meeting their own country's definition.
+
+Given it's law firms and industry bodies, let's list alphabetically those likely:
+- Allen & Overy? Maybe not.
+- Ashurst
+- Australian Financial Markets Association
+- Australian Investment Council
+- Financial Services Council
+- Herbert Smith Freehills
+- Law Council of Australia
+- MinterEllison
+
+But I need be specific and correct.
+
+Let's recall actual news in 2024 about FFSP consultation responses being released? Maybe in late 2023 submissions were published.
+
+The question wording "Which submitters propose..." sounds like it's asking to identify specific ones from a list in a summary document. The answer might be just two or three.
+
+Let's try to recall from the summary document: "Some submitters proposed that investors residing outside Australia be able to qualify as wholesale clients by meeting the definition in their country of residence. These included [X], [Y], and [Z]."
+
+If it's in the FFSP context, maybe submitters like "Ashurst", "Herbert Smith Freehills" and "MinterEllison" proposed that?
+
+But I need alphabetically.
+
+Given my uncertainty, I should provide a concise list of the likely ones, alphabetically ordered. Let's choose:
+- Australian Financial Markets Association
+- Financial Services Council
+- Herbert Smith Freehills
+
+That sounds plausible but I'm not sure.
+
+Wait, there's also "Property Council of Australia" but they care about property investment.
+
+Actually, I think the correct answer might involve "Chartered Accountants Australia and New Zealand" and "CPA Australia" but those are about accountant certificates.
+
+Let's systematically reason about the FFSP consultation paper released in March 2023 titled "Treasury Laws Amendment (Measures for Consultation) Bill 2023: Foreign financial service providers"? No, that was a different one.
+
+Let's recall in March 2023, Treasury released for consultation draft legislation for the "foreign financial service providers" exemptions. The draft included conditions. Submissions closed in April 2023.
+
+Then in August 2023, Treasury released a summary? Or maybe not.
+
+Then in 2024, they introduced bills.
+
+In the draft legislation, there was a "professional investor" definition that included individuals with net assets of AUD 2.5m or income of AUD 250k, same as wholesale client. But some wanted foreign equivalents.
+
+Specifically, I think one proposal was to allow foreign financial service providers to rely on an exemption when providing services to "professional investors" in Australia, and also to clients outside Australia who are professional under local law?
+
+But the question specifically says "investors who live outside Australia be able to qualify as wholesale clients by meeting their own country's definition". This sounds like they want overseas people investing in Australia to be classified as wholesale based on home country rules.
+
+This might be proposed by funds industry bodies that want to attract foreign capital without requiring those investors to meet the Australian net asset test.
+
+So likely proponents are investment/fund bodies:
+- Australian Investment Council (representing private equity and VC)
+- Financial Services Council (representing retail and wholesale funds?)
+
+But also law firms advising them.
+
+Let's recall specific submissions that were public. For the FFSP consultation, submissions were made by:
+1. Allens
+2. Ashurst
+3. Australian Banking Association?
+4. Australian Financial Markets Association
+5. Australian Investment Council
+6. Chartered Accountants Australia and New Zealand
+7. CPA Australia
+8. Financial Services Council
+9. Herbert Smith Freehills
+10. Institute of Public Accountants
+11. Law Council of Australia
+12. MinterEllison
+13. Property Council of Australia
+14. SMSF Association
+
+Of these, which ones talked about overseas definitions?
+
+Perhaps Allens, Ashurst, Herbert Smith Freehills, and MinterEllison (the big law firms) all made similar points about recognizing foreign professional investor categories.
+
+But the question asks "Which submitters propose..." plural, but could be all of them? No, likely a specific subset.
+
+Since I can't be sure, I'll provide a list that includes the major ones likely: Ashurst, Australian Investment Council, Financial Services Council, and Herbert Smith Freehills. Alphabetically:
+- Ashurst
+- Australian Investment Council
+- Financial Services Council
+- Herbert Smith Freehills
+
+But I want to be somewhat accurate. Actually, maybe it's just "Australian Investment Council and Financial Services Council".
+
+Let's check mental consistency: The Australian Investment Council often advocates for international investors in private capital. They might propose that overseas limited partners be recognized based on being "accredited investors" in the US or equivalent.
+
+The Financial Services Council also represents fund managers who want foreign investors.
+
+Thus it's plausible.
+
+However, there's also "Property Council of Australia" proposing for property investment trusts?
+
+Given all this, I'll answer with the ones I'm somewhat confident about, arranged alphabetically. But I should present them clearly.
+
+Wait, the question might be from a specific exam about a particular consultation summary that lists proposals by submitter name. For example:
+"Proposal: Investors outside Australia should qualify if they meet their own country's definition.
+Submitters: Australian Private Equity and Venture Capital Association; Financial Services Council"
+
+But I don't know.
+
+Let's provide: "Ashurst; Australian Investment Council; and Financial Services Council" alphabetically:
+- Ashurst
+- Australian Investment Council
+- Financial Services Council
+
+That sounds reasonable.
+
+But I want to include Herbert Smith Freehills? Not necessary if not correct.
+
+Actually, I think I recall seeing in a summary table:
+"Overseas investors should be able to qualify using their local jurisdiction's test
+- Submitters: AFMA, FSC"
+
+Let's go with:
+- Australian Financial Markets Association (AFMA)
+- Financial Services Council (FSC)
+
+Alphabetically: Australian Financial Markets Association, Financial Services Council.
+
+But I'm not convinced AFMA proposed this.
+
+Another possibility: The submitters are "CPA Australia and Chartered Accountants Australia and New Zealand" but that sounds wrong for overseas investors.
+
+Let's reconsider the wording "meet their own country's definition". This sounds like they literally said "meet the wholesale client definition in their own country". In submissions, they might list countries like US, UK, etc., and say if they are accredited/high net worth there, they should qualify here.
+
+This is a specific legal point about "foreign law equivalence". Law firms are most likely to propose specific legal mechanisms like this.
+
+Thus I think law firms are the ones. Among law firms that submitted, alphabetically:
+- Allens
+- Ashurst
+- Herbert Smith Freehills
+- King & Wood Mallesons
+- MinterEllison
+
+But which ones actually proposed it? Maybe all of them? No, likely a few.
+
+Actually, I recall in the FFSP submissions, Herbert Smith Freehills proposed recognizing foreign professional investor regimes. Let's check mental image: HSF submission migh
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): Aussie Angels, CP Ventures, Saltwater Fund
+
+Where it shortcut: Reached gold via the near-verbatim match: document 9's 'non-residents... meet their local definitions' and document 1's 'qualifying in their home jurisdiction' directly answer the question's phrasing.Doc 1 Doc 9
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): Aussie Angels, CP Ventures, Saltwater Fund
+
+Where it shortcut: Same shortcut: the question wording mirrors the two passages, so a single keyword lookup on 'non-resident'/'foreign' in documents 1 and 9 yields the full answer list.Doc 1 Doc 9
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): Aussie Angels, CP Ventures, Saltwater Fund
+
+Where it shortcut: Again found via the matching passages; no need to consider document 3 (AIMA), whose consent-criteria-only proposal for non-residents is the only real distractor in the set.Doc 1 Doc 3 Doc 9
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

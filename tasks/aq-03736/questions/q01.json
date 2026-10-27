@@ -1,0 +1,74 @@
+{
+  "question": "An EU company that must publish its due diligence statement always has 6,000 employees, EUR 1.2 billion worldwide turnover and accounts closed each 30 June. Had the Commission's proposal entered into force when the adopted directive did, how many months after its first statement deadline under the proposal does the first accounting year its directive statement must cover end?",
+  "number_of_asks": 1,
+  "gold_answer": "38 months",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 3, Official Journal header and the article headed \"Entry into force\"): the directive was published on 5.7.2024 and enters into force on the twentieth day following its publication. Counting on from the fifth of July: 5 + 20 = 25. It therefore entered into force on that day of July 2024, the date its review article also prints. On the question's supposition the proposal enters into force on the same day.\nStep 2. Source input (Doc 1, scope article, point (a)): a company formed under the law of a Member State with more than 500 employees on average and a net worldwide turnover above the amount set in the same point is a point (a) company. The posed company is above both.\nStep 3. Source input (Doc 1, transposition article): the rules apply to point (a) companies from 2 years from the entry into force.\nStep 4. Source input (Doc 1, article headed \"Communicating\"): the annual statement \"shall be published by 30 April each year, covering the previous calendar year\".\nStep 5. Calculation (Doc 1 and Doc 3): 2024 + 2 = 2026, so the proposal's rules reach the company in late July of that year.\nStep 6. Calculation (Doc 1 and Doc 3): the first 30 April after that falls in the next year: 2026 + 1 = 2027. That 30 April is the first statement deadline under the proposal.\nStep 7. Source input (Doc 3, transposition article, first group): the first group must exceed both a head-count and a turnover amount. The posed company exceeds the head-count but not the turnover, so it is not in the first group.\nStep 8. Source input (Doc 3, transposition article, second group): the posed company exceeds both amounts set for the second group, and for that group the statement duty applies \"for financial years starting on or after 1 January 2029\". Calculation: 2029 - 1 = 2028. With accounts closed at the end of June, the company's accounting year (its financial year) runs from July to June. The year that began in July of that earlier year started before the date, so it does not count. The first year starting on or after the date begins in July 2029 and ends at the close of June 2030.\nStep 9. Final answer (Doc 1 and Doc 3): from 30 April 2027 to 30 April 2030 is three years of 12 months, and the close of June 2030 is 2 months later: 12 + 12 + 12 + 2 = 38 months.",
+  "answer_components": [
+    "38 months"
+  ],
+  "evidence": [
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "This Directive shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union."
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "It shall be published at the earliest possible opportunity after 25 July 2024, but no later than 26 July 2026."
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "the company had more than 500 employees on average and had a net worldwide turnover of more than EUR 150 million in the last financial year for which annual financial statements have been prepared;"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "2 years from the entry into force of this Directive] as regards companies referred to in Article 2(1), point (a), and Article 2(2), point (a);"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "The statement shall be published by 30 April each year, covering the previous calendar year."
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "that had more than 5 000 employees on average and generated a net worldwide turnover of more than EUR 1 500 000 000 in the last financial year preceding 26 July 2027"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "from 26 July 2028 as regards companies referred to in Article 2(1), points (a) and (b), which are formed in accordance with the legislation of the Member State and that had more than 3 000 employees on average and generated a net worldwide turnover of more than EUR 900 000 000 in the last financial year preceding 26 July 2028 for which annual financial statements have been or should have been adopted, with the exception of the measures necessary to comply with Article 16, which Member States shall apply to those companies for financial years starting on or after 1 January 2029"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Conditional filter"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Out-of-range period",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Out-of-range period: Doc 3's phase-in sentence ends by applying the statement duty only to financial years starting on or after 1 January 2029. The July-June year in which the rules start, ending 30 June 2029, is outside it, giving 26 months. The first year inside ends 30 June 2030: 38."
+}

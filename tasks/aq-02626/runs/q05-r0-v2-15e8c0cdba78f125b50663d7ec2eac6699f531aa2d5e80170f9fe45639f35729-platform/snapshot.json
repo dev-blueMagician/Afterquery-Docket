@@ -1,0 +1,52 @@
+{
+  "bundle": "aq-02626",
+  "corpus_sha256": {
+    "docs/fr_2025_11907.txt": "a49ee191e051c260908f6aa55c0c02c0bb3a12e2530b88fb6afec5627502e77d",
+    "docs/fr_2025_16801.txt": "63e2b2c3c7a0aee826a9e544a4f38f0a05379896a150e134559e5472fa665290",
+    "docs/fr_2026_08662.txt": "9125ec900694a12c3b1c75f1f69f1b4fa87340b24447a6c1ef73efb37e8a17c8",
+    "docs/fr_2026_11312.txt": "a4d2788dd5bd38c23e1836ef07118a0108dd3210ec67f033925badb96373a091",
+    "docs/fr_2026_14118.txt": "c7e9f17ac48dda5d7d73a356304135396ad663fb612810e8ea0c260cc94ca2ee",
+    "docs/fr_2026_18552.txt": "56e32345ff72728e20ca85bf4f9691458d0aa8ae97c60dbf3bc6a9a212529dc8",
+    "text/D01.txt": "6fb99f063f1e3261c129606e47ae931207738f7d345f7d735d89625a24a1d4e9",
+    "text/D02.txt": "f268a3b20c14dcb28f54a47f647202eed1788b3a156bed8ea96791f5d0efdf05",
+    "text/D03.txt": "3cc5f13a77684dcb26bae20a976e6037733157e985334fd48fed6b85e3402954",
+    "text/D04.txt": "f307f1ef8cac1f6b0ad416b80064833c5e46b776c96cd3ed9a265576da6ae2b4",
+    "text/D05.txt": "c1f09108f8b49995cfbf37e2a62d9c0ba5882239e0cd9ec96f97407d3075875d",
+    "text/D06.txt": "9014006d625c454efded975e3d26a810f993e75699a15a397e66bff7544622ac",
+    "text/manifest.json": "84e55f321b55d281717751243362c37a2967e31176732c895bed64723ea5d03c"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "7aaccf7c60ca9910d39cc9562c08ad0d0e9849de5803e4b7781068ff90612796",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D02, D03, D04, D05, D06",
+    "id": "q05",
+    "levers": "Exact table vs rounded prose; Calculate across documents",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i07",
+    "status": "draft",
+    "tags": "Cross-document join; Aggregation"
+  },
+  "question_id": "q05",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "307 days",
+    "components": "- c1: 307",
+    "evidence": "- D02 (header, L3) [c1]: \"Federal Register, Volume 90 Issue 167 (Tuesday, September 2, 2025)\"\n- D02 (DATES, L27) [c1]: \"Comments must be received on or before November 3, 2025.\"\n- D03 (header, L3) [c1]: \"Federal Register, Volume 91 Issue 85 (Monday, May 4, 2026)\"\n- D03 (DATES, L32) [c1]: \"Comments must be received on or before July 6, 2026.\"\n- D04 (header, L3) [c1]: \"Federal Register, Volume 91 Issue 108 (Friday, June 5, 2026)\"\n- D04 (DATES, L27) [c1]: \"Comments must be received on or before August 4, 2026.\"\n- D05 (header, L3) [c1]: \"Federal Register, Volume 91 Issue 133 (Tuesday, July 14, 2026)\"\n- D05 (DATES, L27) [c1]: \"Comments must be received on or before September 14, 2026.\"\n- D06 (header, L3) [c1]: \"Federal Register, Volume 91 Issue 175 (Friday, September 11, 2026)\"\n- D06 (DATES, L27) [c1]: \"Comments must be received on or before November 10, 2026.\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: exact dates against a rounded label (hook h23, sketch i07). Every proposal says EPA seeks comment \"during a 60-day public comment period\", and the page overview repeats that figure for Docs 2-6, but three of the five deadlines fall later than day 60. Target medium (user 2026-10-10: no Easy slot, \"target medium and high\"). Not yet quick-tested; written up ahead of the test after q04's run showed the low model working from memory of these long documents. Measured platform result pending.\n- Dependency plan: publication date (L3) and deadline (DATES) from each of Docs 2-6; elapsed days 62, 63, 60, 62, 60; sum 307.\n- Universe: the five EPA proposals on State coal ash permit programs (Docs 2-6). Doc 1 is an OSMRE final rule on Pennsylvania's mining program, not a coal ash proposal, and has no open comment deadline (its comment period \"ended January 19, 2021\").\n- Necessity: each document is the only source of its own publication date and deadline (grep of each date string: one document each). Dropping any one removes a term the others cannot supply; no document states another's dates or any total.\n- Selected-lever checks: Exact table vs rounded prose: with the printed \"60-day\" label for each proposal the sum is 300; with the printed dates it is 307. The lever changes the answer. Calculate across documents: five day counts and one sum.\n- Targeted failure modes: mode 1 (Look-alike measure / Takes the wrong line item): 5 x 60 = 300. Recomputed 2026-10-10. Considered and not declared: counting both end days of each window (63 + 64 + 61 + 63 + 61 = 312), which \"days after publication\" rules out; counting to each hearing date instead of the deadline (58 + 51 + 46 + 51 + 59 = 265), a different printed date.\n- Calculation verification: python 2026-10-10 (caller): deadline minus publication = 62, 63, 60, 62, 60 days; sum 307; publication + 60 days = 2025-11-01, 2026-07-03, 2026-08-04, 2026-09-12, 2026-11-10, matching Steps 2, 4, 6, 8, 10.\n- Semantic/ID/overview probes: no document prints 62, 63 or 307 as a window, and none compares proposals. The page overview lists each publication date and deadline among \"Dates\" and \"60-day public comment period\" among \"Figures\". Shortest route: ten printed dates, five subtractions, one sum.\n- Precision/readings: \"how many days after ... publication did the comment deadlines fall\" is elapsed days from the Federal Register date to the \"on or before\" date; \"summed across\" asks for one total; \"five State coal-ash proposals\" are Docs 2-6. Whole days, no rounding.\n- Completeness: full corpus, no gaps (intake: incomplete false, gap 0 for all six documents).\n- Style/set review: 19 words, one ask. No fact shared with q03 (chapter 18 date, amendment list) or q04 (approved lists, unit counts).\n- Warnings answered: filled after the floor run.",
+    "necessary documents": "- D02: Answer component\n- D03: Answer component\n- D04: Answer component\n- D05: Answer component\n- D06: Answer component",
+    "platform validation": "",
+    "question": "Summed across EPA's five State coal-ash proposals, how many days after Federal Register publication did the comment deadlines fall?",
+    "reasoning": "Step 1. Source input (Doc 2, header and DATES): the Wyoming proposal was published in the Federal Register on September 2, 2025, and \"Comments must be received on or before November 3, 2025.\"\nStep 2. Calculation (Doc 2): 60 days after September 2 is November 1, and November 3 is 2 days later, so the deadline fell this many days after publication: 60 + 2 = 62.\nStep 3. Source input (Doc 3, header and DATES): the Virginia proposal was published on May 4, 2026, and \"Comments must be received on or before July 6, 2026.\"\nStep 4. Calculation (Doc 3): 60 days after May 4 is July 3, and July 6 is 3 days later: 60 + 3 = 63.\nStep 5. Source input (Doc 4, header and DATES): the Louisiana proposal was published on June 5, 2026, and \"Comments must be received on or before August 4, 2026.\"\nStep 6. Derived (Doc 4): counting 60 days on from June 5 reaches August 4, the deadline itself, so this window is 60 days.\nStep 7. Source input (Doc 5, header and DATES): the Alabama proposal was published on July 14, 2026, and \"Comments must be received on or before September 14, 2026.\"\nStep 8. Calculation (Doc 5): 60 days after July 14 is September 12, and September 14 is 2 days later: 60 + 2 = 62.\nStep 9. Source input (Doc 6, header and DATES): the Wisconsin proposal was published on September 11, 2026, and \"Comments must be received on or before November 10, 2026.\"\nStep 10. Derived (Doc 6): counting 60 days on from September 11 reaches November 10, the deadline itself, so this window is 60 days.\nStep 11. Final answer (Doc 2, Doc 3, Doc 4, Doc 5 and Doc 6): 62 + 63 + 60 + 62 + 60 = 307.",
+    "targeted failure modes": "### Failure mode 1\nTrap: Look-alike measure\nHow a careless solver fails: Takes the wrong line item\n\nWhy these are traps: Look-alike measure: every proposal's SUMMARY calls its comment window a \"60-day public comment period\"; taking that label five times gives 300 days. The printed publication dates and deadlines give 62, 63, 60, 62 and 60 days (Docs 2 to 6), 307 in all."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "15e8c0cdba78f125b50663d7ec2eac6699f531aa2d5e80170f9fe45639f35729"
+}

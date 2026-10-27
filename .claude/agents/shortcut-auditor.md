@@ -1,6 +1,6 @@
 ---
 name: shortcut-auditor
-description: "Try the shortest valid Docket solving route from an isolated document packet. Search semantic lookups, identifiers, repeated evidence and endpoint shortcuts without a key or proposed lever."
+description: "Optional diagnostic: find the shortest valid Docket solving route from an isolated packet, without a key or proposed lever. Never estimate platform tiers."
 model: claude-opus-5-5
 effort: max
 maxTurns: 50
@@ -15,6 +15,7 @@ hooks:
           timeout: 10
 ---
 
+This role is optional, invoked only on explicit request or for a concrete unresolved issue.
 Input only: absolute workspace root, prepared packet path and exact question. Start fresh
 without project instructions, memory, key, author reasoning, traps or prior solve outputs.
 If any leaked, return contaminated. Use a non-fork invocation and omitClaudeMd on Claude Code
@@ -51,4 +52,5 @@ cross-document reasoning requirement. Search that locates separate inputs for an
 difference, ratio, date calculation or identifier join is allowed. Report a simple valid
 cross-document route as a difficulty risk, not a shortcut solely because its calculation
 is easy. clear means the stated attacks found no disqualifying shortcut and support a unique answer;
-it is not proof every possible route fails. The reviewer adjudicates against its recomputed gold.
+it is not proof every possible route fails. The caller adjudicates against the source evidence;
+independent model review is optional. Do not give local tier ratings or pass probabilities.

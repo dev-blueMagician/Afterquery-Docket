@@ -1,0 +1,52 @@
+{
+  "bundle": "aq-02626",
+  "corpus_sha256": {
+    "docs/fr_2025_11907.txt": "a49ee191e051c260908f6aa55c0c02c0bb3a12e2530b88fb6afec5627502e77d",
+    "docs/fr_2025_16801.txt": "63e2b2c3c7a0aee826a9e544a4f38f0a05379896a150e134559e5472fa665290",
+    "docs/fr_2026_08662.txt": "9125ec900694a12c3b1c75f1f69f1b4fa87340b24447a6c1ef73efb37e8a17c8",
+    "docs/fr_2026_11312.txt": "a4d2788dd5bd38c23e1836ef07118a0108dd3210ec67f033925badb96373a091",
+    "docs/fr_2026_14118.txt": "c7e9f17ac48dda5d7d73a356304135396ad663fb612810e8ea0c260cc94ca2ee",
+    "docs/fr_2026_18552.txt": "56e32345ff72728e20ca85bf4f9691458d0aa8ae97c60dbf3bc6a9a212529dc8",
+    "text/D01.txt": "6fb99f063f1e3261c129606e47ae931207738f7d345f7d735d89625a24a1d4e9",
+    "text/D02.txt": "f268a3b20c14dcb28f54a47f647202eed1788b3a156bed8ea96791f5d0efdf05",
+    "text/D03.txt": "3cc5f13a77684dcb26bae20a976e6037733157e985334fd48fed6b85e3402954",
+    "text/D04.txt": "f307f1ef8cac1f6b0ad416b80064833c5e46b776c96cd3ed9a265576da6ae2b4",
+    "text/D05.txt": "c1f09108f8b49995cfbf37e2a62d9c0ba5882239e0cd9ec96f97407d3075875d",
+    "text/D06.txt": "9014006d625c454efded975e3d26a810f993e75699a15a397e66bff7544622ac",
+    "text/manifest.json": "84e55f321b55d281717751243362c37a2967e31176732c895bed64723ea5d03c"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "3903b532040790cf81864c1ddc987c30db94d35ce3ebde712302d987736174ab",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D02, D03, D04, D05, D06",
+    "id": "q03",
+    "levers": "Same series, right edition; Calculate across documents",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i02",
+    "status": "draft",
+    "tags": "Cross-document join; Temporal alignment"
+  },
+  "question_id": "q03",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "1,271 days",
+    "components": "- c1: 1,271",
+    "evidence": "- D02 (Wyoming CCR Regulations, L278) [c1]: \"chapter 18 became effective on August 19, 2022\"\n- D02 (Background, L127) [c1]: \"May 8, 2024 (89 FR 38950), and November 8, 2024 (89 FR 88650).\"\n- D06 (header, L3) [c1]: \"Federal Register, Volume 91 Issue 175 (Friday, September 11, 2026)\"\n- D06 (Background, L126) [c1]: \"November 8, 2024 (89 FR 88650), and February 10, 2026 (91 FR 5806).\"\n- D03 (Background, L119) [c1]: \"November 8, 2024 (89 FR 88650), and February 10, 2026 (91 FR 5806).\"\n- D04 (Background, L122) [c1]: \"November 8, 2024 (89 FR 88650), and February 10, 2026 (91 FR 5806).\"\n- D05 (Background, L127) [c1]: \"November 8, 2024 (89 FR 88650), and February 10, 2026 (91 FR 5806).\"",
+    "feedback log": "- 2026-10-10 | source: user chat, verbatim \"i02 i06 survived, rest of them not tested\" | stage: form quick test (easier solver, question + short answer) | tested wording: sketch i02's question and answer as handed over (no panel or screenshot pasted) | observed result: survived | action: written up unchanged as q03 rev 0. A quick test is a first screen, not a tier result.",
+    "lever checks": "- Family and target: same series, right edition (hook h15, sketch i02): the question is about Wyoming, whose own proposal (September 2, 2025) carries an amendment list one entry shorter than the four 2026 proposals. Target medium (user 2026-10-10: no Easy slot, \"target medium and high\"). Platform quick test of this exact wording (user 2026-10-10, \"i02 i06 survived\", no panel text): survived; rev 0 adopts it word for word. Difficulty result pending; quick-test survival did not predict the difficulty check on aq-02483 or aq-02447.\n- Dependency plan: Doc 2 L278 chapter 18 effective August 19, 2022. Doc 6 L3 published September 11, 2026; L126 amendment list ends February 10, 2026 (91 FR 5806). Elapsed days 2022-08-19 to 2026-02-10 = 1,271.\n- Universe: EPA's amendments as listed in Doc 6 L126: August 5, 2016; July 30, 2018; August 28, 2020; November 12, 2020; May 8, 2024; November 8, 2024; February 10, 2026. The last is the latest. Doc 2 L127 lists the first six only.\n- Necessity: Doc 2 is the only source of August 19, 2022 (grep: D02 L278 only). February 10, 2026 is printed in Doc 3 L119, Doc 4 L122, Doc 5 L127 and Doc 6 L126 and nowhere in Doc 2 (grep), so those four are grouped as alternatives, anchored on Doc 6 because it is the September 2026 document the question's date points to. Without that group the newest listed amendment is November 8, 2024 and the count is 812.\n- Selected-lever checks: Same series, right edition: Doc 2's own list gives 2024-11-08, 812 days; the 2026 editions give 1,271. Calculate across documents: one date from Doc 2, one from Doc 6, one day count. No which-items decoy applies.\n- Targeted failure modes: mode 1 (Wrong year or edition / Uses the wrong period or date): Doc 2 L127 ends at November 8, 2024 -> 812 days. Recomputed 2026-10-10. Considered and not declared: counting from Wyoming's December 14, 2020 federal cutoff (D02 L278) instead of the effective date -> 1,884 days, which \"chapter 18 took effect\" rules out; Wyoming's 1990 and 1975 rules (L278) are not chapter 18.\n- Calculation verification: python 2026-10-10 (caller): date(2026,2,10) - date(2022,8,19) = 1,271 days; date(2025,8,19) - date(2022,8,19) = 1,096; date(2026,2,10) - date(2025,8,19) = 175; date(2025,8,19) + 180 days = 2026-02-15, 5 days after February 10; wrong routes 812 and 1,884. Elapsed days (the later date minus the earlier), the convention of \"how many days after\".\n- Semantic/ID/overview probes: no document prints 1,271 or any interval between a State rule and a federal amendment. The page overview lists Doc 2's \"August 19, 2022\" among its dates and no amendment date. Shortest route: Doc 2 L278, any 2026 proposal's amendment list, one day count.\n- Precision/readings: \"as of September 2026\" fixes the latest amendment at the one Doc 6 lists last; \"last amend\" is the publication date EPA gives for each amendment (\"EPA has since amended ... on\"); \"chapter 18 took effect\" is the August 19, 2022 effective date, not the federal cutoff. Whole days, no rounding.\n- Completeness: full corpus, no gaps (intake: incomplete false, gap 0 for all six documents).\n- Style/set review: 24 words, one ask, wording as quick-tested. q04 uses the approved-definition lists and unit counts of Docs 3 and 4; no shared fact. q01 and q02 are dropped.\n- Warnings answered: filled after the floor run.",
+    "necessary documents": "- D02: Answer component\n- D06 or D03 or D04 or D05: Answer component",
+    "platform validation": "",
+    "question": "As of September 2026, how many days after Wyoming's Solid Waste Rules chapter 18 took effect did EPA last amend the federal coal-ash regulations?",
+    "reasoning": "Step 1. Source input (Doc 2, Wyoming CCR Regulations): Wyoming's coal ash rules are Solid Waste Rules chapter 18, and \"chapter 18 became effective on August 19, 2022\".\nStep 2. Source input (Doc 6, Background): Doc 6 was published on September 11, 2026 and lists every amendment EPA has made to the federal coal ash regulations. The list ends with \"February 10, 2026 (91 FR 5806)\", so that is the latest amendment as of September 2026.\nStep 3. Source input (Doc 2, Background): Doc 2 was published on September 2, 2025, and its own list of amendments ends with \"November 8, 2024 (89 FR 88650)\". It predates the amendment in Step 2, so its list is not the latest one.\nStep 4. Calculation (Doc 2 and Doc 6): days in a common year, taken as twelve 30-day months plus the calendar's net 5 extra days: 12 × 30 + 5 = 365.\nStep 5. Calculation (Doc 2 and Doc 6): from August 19, 2022 to August 19, 2025 is 3 years, one of which holds a leap day (February 2024), so in days: 365 × 3 + 1 = 1,096.\nStep 6. Calculation (Doc 2 and Doc 6): 180 days after August 19, 2025 falls 5 days after February 10, 2026, so the remaining stretch in days is: 180 - 5 = 175.\nStep 7. Final answer (Doc 2 and Doc 6): days from chapter 18 taking effect to EPA's latest amendment: 1,096 + 175 = 1,271.",
+    "targeted failure modes": "### Failure mode 1\nTrap: Wrong year or edition\nHow a careless solver fails: Uses the wrong period or date\n\nWhy these are traps: Wrong year or edition: Doc 2, the September 2025 Wyoming proposal, lists EPA's amendments only through November 8, 2024; using it gives 812 days. Doc 6, published September 11, 2026, lists a later amendment, February 10, 2026, so the count from August 19, 2022 is 1,271 days."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "49d32dc666dfc07b9ee9b763cc95159fa52cb327a46b4c31f1071dd4bc5f5e17"
+}

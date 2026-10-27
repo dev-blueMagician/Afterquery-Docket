@@ -1,0 +1,771 @@
+AQ-04045 · Orbital Debris Mitigation Rulemaking — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-04045
+Saved: 2026-10-14 08:16 (local time)
+Bundle: Orbital Debris Mitigation Rulemaking · Public policy · 7 documents · 111,224 prompt tokens
+Run read: Run 3, the latest of 3
+Attempts read: 9
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 18 runs left · 12 of 60 runs used in the last 24 h (all tasks)
+
+Your last 3 runs were answered from Doc 1 each time. Ask the Coach before running again.
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- Medium model: 4 of 8 attempts right
+
+Medium model: three solvers try up to 3 times each. Ready when at least two get it wrong twice and one gets it right twice. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Rephrase so the target passages are not flagged by the question's own vocabulary, e.g. 'Using the FCC's year-end counts of satellite telecommunications providers reported in its Universal Service Monitoring Report data, how did the proportion of providers meeting the SBA employee-based small-entity threshold change between the first and most recent year-end figures in these documents?' Why: The question reuses the exact phrase '1,500 or fewer employees' and 'satellite telecommunications providers' that appears verbatim in the Regulatory Flexibility boilerplate of documents 2, 3, and 7. A solver can keyword-search that phrase and land directly on sentences giving both the total provider count and the small-provider count for each year. No interpretation, combination, or computation beyond one subtraction is needed once the two passages are found. From a run (Medium model · attempt 2): Medium model located the December 31, 2020 paragraph in document 3 (71 providers, 48 small) and the December 31, 2023 paragraph in document 7 (57, 40), then did a single subtraction to reach +2.6. Doc 2 Doc 3 Doc 7
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 3 (Oct 13, 2026, 7:59 PM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+3 runs
+
+Only the latest run, Run 3, is in this file; 2 earlier runs are left out.
+
+------------------------------------------------------------------------
+Run 3 · Too easy · Result the gate uses
+Oct 13, 2026, 7:59 PM · Version 790376 (current) · Low — · Medium 4/8 · High —
+------------------------------------------------------------------------
+
+What changed before this run: question: removed “rise”, “Answer”; added “change”, “Give the sign,”. answer: removed “2.6”; added “+2.6”
+
+Solver summary: Run 3 · Too easy · 4 of 8 right
+3 of 8 solver attempts got it by quoting the same passage: Doc 7 (“Additionally, based on Commission data in the 2024 Universal Service Monitoring Report, a…”).
+
+2 wrong attempts quoted the same passage: Doc 7 (“as of December 31, 2023,”).
+
+Your answer: +2.6 percentage points
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: —
+
+Final answer: +4.0 | Your answer (gold): +2.6 percentage points
+
+Full answer
+-----------
+
++4.0
+
+Reasoning
+---------
+
+We need answer: By how many percentage points did the share of satellite telecommunications providers with 1,500 or fewer employees change between the FCC's earliest and latest year-end counts? Give the sign, to one decimal place.
+
+Need recall or know data about FCC year-end counts of satellite telecommunications providers by employee size? Specifically share with 1,500 or fewer employees, earliest vs latest year-end counts.
+
+We need determine from knowledge. Might relate to FCC reports on telecommunications employment? Or satellite industry employment?
+
+Let's parse: "satellite telecommunications providers" "FCC's earliest and latest year-end counts" "share ... with 1,500 or fewer employees". This sounds like a chart or table in some report listing number of providers by employee size range for years ending maybe 1995 and 2005? Need change in percentage points.
+
+We need answer with sign and one decimal.
+
+Let's recall FCC's "Telecommunications Industry Employment" reports? Or maybe "Satellite Telecommunications Providers" in the Communications Marketplace Report?
+
+Alternatively could be from a specific dataset: FCC counts of satellite telecommunications providers at year-end from 1996 to 2005? Table might show total providers and those with >1,500 employees.
+
+We need share with 1,500 or fewer employees = (total - large)/total *100.
+
+Earliest year-end count maybe 1995? Latest maybe 2005?
+
+Let's recall: In 1995 there were 38 satellite telecommunications providers? Or 31?
+
+Let's think about satellite telecom providers in US: large ones like DirecTV, EchoStar, Intelsat, SES, etc. But employee counts?
+
+Wait the question mentions "1,500 or fewer employees". That threshold is used in FCC's definition of small entities? For wireless maybe 1,500 employees. For satellite telecommunications, the SBA size standard is $15 million? No, that's revenue. But FCC might classify providers with more than 1,500 employees as large.
+
+Perhaps there's a table in FCC's 2006 report: "Trends in Telephone Service" no.
+
+Let's search mental database for phrases: "satellite telecommunications providers with 1,500 or fewer employees" "FCC year-end counts". Might come from a figure in the FCC's "Communications Marketplace Report 2010" showing number of satellite telecommunications providers by size?
+
+Actually I recall in some FCC reports they list "Satellite Telecommunications Providers" with employment data. For example in 2005 there were 1,523 providers? No, that sounds like wireless.
+
+Let's reason differently: The question asks "By how many percentage points did the share... change between the FCC's earliest and latest year-end counts?" This sounds like there are only two data points: earliest and latest. They ask share in each, subtract, sign indicates increase or decrease.
+
+We need be precise to one decimal place, so likely shares are like 60.0% vs 73.3%, change +13.3? Or maybe 100% vs 85.7%, change -14.3?
+
+We need determine correct figures.
+
+Consider satellite telecommunications industry consolidation: earlier years had many small providers? Or few large?
+
+Let's recall FCC's "Annual Report and Analysis of Competitive Market Conditions with Respect to Commercial Mobile Services" but that's wireless.
+
+But satellite telecommunications providers are listed in FCC Form 499? Maybe the FCC tracks providers filing Form 499 (Telecommunications Reporting Worksheet). The number of satellite service providers filing might be in hundreds.
+
+Wait there is a known statistic: At the end of 1995 there were 32 satellite telecommunications providers, of which 5 had more than 1,500 employees, so 27 had <=1,500 => 84.4%. At the end of 2005 there were 65 providers, of which 4 had more than 1,500 => 61/65 = 93.8%. Change +9.4? Not round.
+
+But need precise one decimal.
+
+Let's recall specific table: Maybe in FCC's "Trends in Telephone Service" appendix? Or "Industry Analysis Division"?
+
+Another possibility: The question comes from a specific exam or quiz referencing a chart with years 1996, 1997,...,2005 and employee categories. The earliest year-end count might be for 1996 with 38 providers, 8 with >1500? Let's try to recall actual numbers.
+
+Large satellite telecom providers with >1500 employees: Maybe Intelsat (~600?), SES (~?...), EchoStar (~20,000 actually), DirecTV (~10,000), Globalstar? No those are large. But in 1990s maybe only a few.
+
+But wait the question is about "share of satellite telecommunications providers with 1,500 or fewer employees". If large ones are always few, the share might be high and changing little.
+
+However, they ask "By how many percentage points..." which could be negative if share decreased.
+
+Let's think about the context: This might be part of a set of questions about different telecommunications sectors (wireline, wireless, cable, satellite) asking about change in share of small providers (≤1,500 employees) between earliest and latest FCC counts. For each sector, compute change. So we need the satellite one specifically.
+
+This sounds like a table with four sectors: wireline long-distance, wireless, cable, satellite. For each sector, there are year-end counts for maybe 1993 and 2005, with columns for number of providers with >1,500 employees and ≤1,500.
+
+Let's recall a specific report: "Telecommunications Industry Employment and Payroll" but not that.
+
+Actually there is an FCC report titled "Telephone Subscribership in the United States" but no.
+
+Could be from the "Communications Marketplace Report 2005" section on satellite services: They discuss number of satellite service providers. Let's recall: In 2000 there were about 50 satellite service providers? By 2005 about 70?
+
+But we need share with ≤1500 employees. The FCC might have used Census data? Or Bureau of Labor Statistics?
+
+Wait, there is a dataset from the Census Bureau's County Business Patterns for NAICS 517410 (Satellite Telecommunications). The number of establishments and employees. But the FCC might cite that.
+
+Specifically, NAICS 517410 Satellite Telecommunications: In 1996 there might be 377 firms? In 2005 maybe 486 firms? And those with >1,500 employees might be a constant small number.
+
+But the question says "FCC's earliest and latest year-end counts" - this sounds like the FCC itself publishes year-end counts of providers in each sector. For wireline, they have data from 1993 onward. For satellite, maybe they started counting in 1995?
+
+Let's search mental archives for "FCC year-end counts satellite telecommunications providers 1995 2006". Maybe in the FCC's "Statistical Reports on Common Carriers" there is a table "Number of carriers by type of service and size". For satellite carriers, they report numbers.
+
+But I need be precise. Let's try to recall figures from a specific chart I might have seen: It lists years 1996 to 2005 with bars for providers with 1,500 or fewer and more than 1,500. For satellite, the bars are mostly one color except a small portion.
+
+Actually, I think I've seen a figure in an FCC report showing "Telecommunications Service Providers by Size Class, 1995-2005" with four panels. In the satellite panel, there are only a few large firms. The numbers might be:
+
+Year 1995: Total 58? Large (>1500): 4? Small: 54? Share small = 93.1?
+Year 2005: Total 75? Large: 4? Small: 71? Share = 94.7? Change +1.6?
+
+That doesn't seem like a notable answer.
+
+But the problem asks "Give the sign, to one decimal place." That sounds like the answer might be -0.0? No, they want sign, like +2.5 or -3.2.
+
+We need derive correct values.
+
+Let's recall that in 2001 there were about 31 satellite telecommunications providers? Hmm.
+
+Let's systematically recall satellite telecom companies in the US with large employees:
+- DirecTV (satellite TV) had thousands of employees (maybe 8,000 in US? Actually DirecTV US had ~10,000? But they are broadcasting, maybe classified differently.)
+- Dish Network (EchoStar) had about 22,000 employees worldwide.
+- Intelsat had about 1,100? Or maybe 500.
+- SES had maybe 400?
+- Globalstar had maybe 300?
+- Iridium had about 200?
+- Inmarsat not US.
+- ViaSat maybe 1,000?
+- HughesNet?
+
+But the classification "satellite telecommunications providers" might include satellite radio? XM and Sirius each had over 1,000? Sirius had about 1,000? XM had about 800?
+
+So large ones might be DirecTV, Dish, maybe XM/Sirius.
+
+But this is about providers, not all satellite services.
+
+Let's try to recall a specific table from FCC's "Industry Analysis and Technology Division" report in 2007: "Trends in Telephone Service" contains section on employment. Table 13 maybe "Number of telecommunications providers by employee size"? Actually in Trends in Telephone Service there is data on employment by sector: wireline, wireless, cable, satellite, other.
+
+Specifically, Table 13.1? Let's recall: The report lists employment for wireline carriers (around 1 million in 1990 declining), wireless carriers (increasing), cable TV (around 100k), satellite (small).
+
+But also there might be a table listing number of firms.
+
+Wait the question mentions "FCC's earliest and latest year-end counts". This sounds like they have a table with years: 1993, 1994,...,2005. For each year, they list number of providers with ≤1,500 and >1,500. The earliest is 1993? But satellite might not have data for 1993.
+
+Let's recall that in "Trends in Telephone Service" (published annually), there is a table "Telecommunications Service Providers by Size" with data for year-end 1993 through 2005. The categories are wireline, wireless, cable, satellite, and other. For each category, they list number of providers with more than 1,500 full-time employees and those with 1,500 or fewer.
+
+Yes! This sounds right. The FCC tracks the number of telecommunications service providers reporting on Form 499, categorizing them by employee count.
+
+So we need the satellite row for 1993 (earliest) and 2005 (latest).
+
+Let's try to recall or derive the numbers.
+
+In the report, they might have table like:
+
+Year | Wireline >1500 | Wireline ≤1500 | Wireless >1500 | Wireless ≤1500 | Cable >1500 | Cable ≤1500 | Satellite >1500 | Satellite ≤1500 | Other ...
+
+But we only need satellite share.
+
+Let's recall specific figures for satellite providers over the years. I think in 1993 there were maybe 15 satellite providers? By 2005 maybe 50?
+
+But actually, Form 499 filers include all carriers contributing to USF. Satellite providers filing might be those offering satellite services to end users.
+
+Let's recall in 2005 there were about 480 wireless providers? No, that was for wireless? Actually in 2005 there were about 180 wireless providers? Hmm.
+
+Let's search mental image of a table in "Trends in Telephone Service, September 2005" maybe table 1.2? Not clear.
+
+But perhaps the figures are:
+1995: Satellite providers total 29, with 2 large, 27 small => 93.1%
+2005: Total 69, with 3 large, 66 small => 95.7% => change +2.6?
+
+That seems plausible. But need correct values.
+
+Let's think about actual large satellite telecom firms in 1993: Maybe PanAmSat (founded 1984, maybe had >1,500? Unlikely, maybe 200 employees.) Comsat? Intelsat was intergovernmental then privatized in 2001. So in 1993 there might have been zero large satellite providers? But the table lists some.
+
+Wait, the employee threshold is 1,500 full-time equivalent employees. In 1993, only huge telecom firms like AT&T, MCI, Sprint exceeded that. Among satellite-specific firms, none might have exceeded 1,500. So in 1993, share with ≤1,500 might be 100%. By 2005, DirecTV and EchoStar are large, but are they classified as satellite telecommunications providers? DirecTV was direct broadcast satellite, but they might be classified in "broadcasting" not "satellite telecommunications". EchoStar (Dish) also.
+
+But Sirius and XM are satellite radio, classified in broadcasting? Or in satellite telecommunications?
+
+Thus maybe in both years, all satellite telecom providers are small, except maybe one.
+
+But the question asks "By how many percentage points did the share... change..." If it's 100% to 100%, change 0.0, but they wouldn't ask that.
+
+So likely there are large ones included.
+
+Let's recall in 2005, there were 5 satellite providers with >1,500 employees? Or 1?
+
+We need be more precise. Let's recall that in 2005, there were about 1,000 cable TV providers? No.
+
+Actually, maybe this table lists all telecommunications providers regardless of primary service, but they are categorized by type of service they provide? No, they are classified into one sector based on primary line of business.
+
+For satellite, primary NAICS 517410. How many firms in that NAICS have >1,500 employees? Let's check mental data: In 2005, NAICS 517410 had about 486 firms total, but only a few large ones. The Census Bureau's County Business Patterns might list number of establishments by employment size.
+
+Specifically for NAICS 517410 in 2005:
+Total firms: maybe 486
+With 1-4 employees: 180
+With 5-9: 80
+With 10-19: 60
+With 20-99: 90
+With 100-499: 40
+With 500-999: 10
+With 1,000-1,499: maybe 2
+With 1,500-2,499: maybe 1
+With 2,500+: maybe 4?
+
+But I need share with 1,500 or fewer, which might be (486 - 5)/486 = 99%? That can't be right because then change is near 0.
+
+But wait the FCC counts might be only for firms that provide telecommunications service and file Form 499, not all census firms.
+
+Let's recall that in 2005 there were about 1,300 wireline carriers? Or 1,300 long-distance carriers?
+
+Actually, there's a well-known figure: In 2005, there were about 1,300 local exchange carriers, but that's not this.
+
+Let's try to recall the specific table in "Trends in Telephone Service" about "Number of Telecommunications Service Providers Reporting on Form 499". This form is filed by all carriers contributing to USF.
+
+The table might show for each year 1997-2005:
+Number of filers with >1,500 employees and ≤1,500.
+
+Specifically, I think in 2005 there were about 5,000 filers? No, maybe 5,000? Let's check mental consistency: The Universal Service Administrative Company received filings from about 5,000 companies? Actually I think in 2004 there were about 1,200 interstate long-distance providers? Not sure.
+
+But let's not overanalyze.
+
+We need "satellite telecommunications providers with 1,500 or fewer employees change between the FCC's earliest and latest year-end counts"
+
+This sounds like a specific answer like "-5.3" or "+4.2". Let's try to recall if there was a figure where in 1995 there were 40 providers, 5 large (12.5% large, so 87.5% small), and in 2005 there were 80 providers, 4 large (5% large, 95% small), change +7.5.
+
+But need one decimal place, so maybe values are like 92.3% and 88.5%, change -3.8.
+
+We need be as accurate as possible based on knowledge.
+
+Let's recall specific report: FCC's "Communications Marketplace Report 2010" includes a section "Satellite Industry" with employment? Or "Number of Satellite Service Providers"?
+
+Actually, I think there is a figure in the 2008 report: Figure 5.1 "Satellite Telecommunications Providers Reporting on Form 499" with bars for each year 1996-2005 divided into two categories.
+
+But I still lack precise numbers.
+
+Let's consider that the question asks "By how many percentage points did the share... change... Give the sign, to one decimal place." This formatting sounds like it's an answer for an automated system that expects something like "+2.3". The fact that they ask "Give the sign" suggests the answer could be negative, and they want explicit plus or minus.
+
+Thus we need compute share_earliest and share_latest, subtract latest - earliest.
+
+We need identify earliest and latest years in the FCC counts. The FCC started counting satellite providers maybe in 1996? Or 1994?
+
+If we can recall the total number of satellite providers in 1996 and 2005.
+
+Let's try to recall data from Form 499-A (Annual Worksheet) for satellite providers. But I don't have those numbers.
+
+However, maybe the table is in "Trends in Telephone Service" Table 8.1: "Number of providers of telecommunications services, by size of company, year-end 1993-2005"
+
+Let's imagine the table columns: Year | Total | ≤1,500 | >1,500 | % ≤1,500?
+
+But actually they list counts for each sector.
+
+Let's recall seeing a chart in a report with four subplots: (a) Wireline, (b) Wireless, (c) Cable, (d) Satellite. The y-axis is number of providers, x-axis years 1996-2005, with stacked bars for small and large.
+
+In the satellite subplot, the bars are very small compared to others. For wireline, bars go up to 5,000. For wireless, up to 200. For cable, up to 1,200. For satellite, up to maybe 50.
+
+Specifically, I think in 1996 there were about 20 satellite providers, and by 2005 about 60. Among them, large ones (stacked on top) might be constant at about 4.
+
+Thus share small in 1996 = (20-2)/20 = 90%. In 2005 = (60-4)/60 ≈ 93.3%. Change = +3.3? Or if large count was 3 in 1996 and 5 in 2005, then 17/20=85%, 55/60=91.7%, change +6.7.
+
+But we need one decimal, maybe +6.7.
+
+But I need be closer.
+
+Let's recall actual large satellite telecommunications firms with >1,500 employees in 2005: Maybe DirecTV (around 9,000), EchoStar (around 22,000), XM Satellite Radio (around 800? No), Sirius (around 1,000?), Intelsat (around 1,000?), PanAmSat (around 200?), Lockheed Martin Commercial Launch? No.
+
+But if only DirecTV and EchoStar are >1,500, that's 2.
+
+In 1996, large ones might be none, or maybe PanAmSat had 500. So large count might be 0 in 1996. Then share in 1996 is 100%, and in 2005 maybe 58/60 = 96.7%, change -3.3.
+
+That sounds plausible: share went from 100% down to 96.7%, change -3.3.
+
+But wait, they ask "By how many percentage points did the share... change" If it went from 100 to 96.7, that's -3.3.
+
+But need correct total numbers.
+
+Actually, in 1996 there might have been 40 providers, none large => 100%. In 2005 there were 52 providers, 2 large => 50/52 = 96.15%, change -3.85 => -3.8? Or 3 large => 49/52 = 94.2%, change -5.8.
+
+We need determine correct totals.
+
+Let's recall that in 2005, the FCC reported 486 firms in NAICS 517410? But that includes all sizes and might not be FCC counts.
+
+But wait, the FCC counts providers that file Form 499. In 2005, about 5,200 entities filed? Among them, maybe 50 were satellite.
+
+Let's recall specific numbers from "Trends in Telephone Service, September 2008" Table 2.1 maybe lists number of providers by technology: In 2005, there were 1,270 wireline carriers, 156 wireless carriers, 1,196 cable operators, 46 satellite carriers, and 587 other? Or something like that.
+
+Actually, I think in 2005 there were about 1,300 wireline carriers (including CLECs), about 180 wireless carriers, about 1,200 cable systems, and about 50 satellite providers.
+
+Specifically, I recall seeing a table with "Number of reporting entities" for 2005:
+Interstate local exchange carriers: 1,321
+Interexchange carriers: 593?
+Wireless: 171?
+Satellites: 48?
+Other: ?
+
+But I'm not sure.
+
+However, the question mentions "1,500 or fewer employees". This categorization applies across all sectors. So they might have data for each sector breaking into large and small.
+
+Let's recall in 2005, there were about 171 wireless carriers, of which about 10 had more than 1,500 employees? Actually large wireless carriers: Verizon Wireless, AT&T Mobility, Sprint Nextel, T-Mobile USA, Alltel, US Cellular? Many of these have >1,500. So wireless large count might be about 10.
+
+For cable, large ones are Comcast, Time Warner, Charter, Cox, Cablevision, etc., maybe 10 with >1,500 employees, out of 1,200 cable operators, so share small is about 99%.
+
+For satellite, large ones might be DirecTV, Dish, maybe XM/Sirius if included. So about 3-5 out of ~50, share small about 90-94%.
+
+Thus the change might be small.
+
+But actually the question might be asking specifically about satellite, and the answer might be -10.0 or something.
+
+Let's try to recall the exact table values from a specific report. Maybe "Trends in Telephone Service, September 2007" has Table 8.13? No.
+
+Let's search mental image: I
+
+Medium model
+============
+
+Attempt 1 · Wrong
+-----------------
+Docs: Doc 1, Doc 2, Doc 3, Doc 4, Doc 5, Doc 6, Doc 7 · Note: Note: where it went wrong
+
+Final answer: +5.6 | Your answer (gold): +2.6 percentage points
+
+Where it went wrong: Medium model treated document 2's December 31, 2021 count (65 providers, 42 small) as the earliest year-end, ignoring document 3's December 31, 2020 data, and computed +5.6.Doc 2 Doc 3
+
+How it got there: Quoted Doc 7 (“Additionally, based on Commission data in the 2024 Universal Service Monitoring Report, a…”), and 4 more passages.
+
+Where it left your evidence: It treated Doc 2's December 31, 2021 data as the earliest year-end count, missing the earlier December 31, 2020 data in Doc 3.
+
+Passages quoted:
+
+- Quoted Doc 7: “Additionally, based on Commission data in the 2024 Universal Service Monitoring Report, as of December 31, 2023, there were 57 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 40 provi”
+- Quoted Doc 2: “Additionally, based on Commission data as of February 1, 2024, there were 16 Mobile Satellite Earth Stations licensees.”
+- Quoted Doc 2: “as of December 31, 2021”
+- Quoted Doc 2: “2022 Universal Service Monitoring Report”
+- Quoted Doc 7: “as of December 31, 2023”
+
+Named Doc 2, Doc 6, Doc 7, Doc 1, Doc 3, Doc 4, Doc 5
+
+Full answer
+-----------
+
++5.6
+
+Reasoning
+---------
+
+To answer this question, I need to find information about the FCC's year-end counts of satellite telecommunications providers with 1,500 or fewer employees, specifically comparing the earliest and latest counts mentioned in the documents.
+
+Let me search through the documents for mentions of satellite telecommunications providers and employee counts.
+
+In Document 2 (Federal Register, Volume 89 Issue 144, July 26, 2024), I find this relevant passage:
+
+"Additionally, based on Commission data in the 2022 Universal Service Monitoring Report, as of December 31, 2021, there were 65 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 42 providers have 1,500 or fewer employees. Consequently, using the SBA's small business size standard, a little more than half of these providers can be considered small entities."
+
+So as of December 31, 2021: 42 out of 65 providers (64.6%) had 1,500 or fewer employees.
+
+In Document 6 (Federal Register, Volume 90 Issue 127, July 7, 2025), I find this relevant passage:
+
+"Additionally, based on Commission data in the 2024 Universal Service Monitoring Report, as of December 31, 2023, there were 57 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 40 providers have 1,500 or fewer employees. Consequently, using the SBA's small business size standard, a little more than half of these providers can be considered small entities."
+
+So as of December 31, 2023: 40 out of 57 providers (70.2%) had 1,500 or fewer employees.
+
+Let me calculate the percentage point change:
+- 2021: 42/65 = 64.6%
+- 2023: 40/57 = 70.2%
+- Change: 70.2% - 64.6% = 5.6 percentage points
+
+The question asks for "the sign, to one decimal place." Since it increased, the sign is positive, so +5.6 percentage points.
+
+Wait, let me double-check if there are any other mentions of satellite telecommunications providers with employee counts in the documents.
+
+In Document 7 (Federal Register, Volume 90 Issue 164, August 27, 2025), I see:
+"Additionally, based on Commission data in the 2024 Universal Service Monitoring Report, as of December 31, 2023, there were 57 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 40 providers have 1,500 or fewer employees."
+
+This is the same data as in Document 6, just referenced again.
+
+Let me check Document 1 and Document 3 and Document 4 and Document 5 to see if there are earlier or later counts.
+
+Document 1 (February 22, 2024) doesn't seem to have this specific data point.
+
+Document 3 (August 9, 2024) doesn't seem to have this specific data point.
+
+Document 4 (October 23, 2024) doesn't seem to have this specific data point.
+
+Document 5 (March 13, 2025) has this passage:
+"Additionally, based on Commission data as of February 1, 2024, there were 16 Mobile Satellite Earth Stations licensees."
+
+But this is about Mobile Satellite Earth Stations, not general satellite telecommunications providers.
+
+So the earliest count I found is from December 31, 2021 (65 providers, 42 with <=1,500 employees) and the latest is from December 31, 2023 (57 providers, 40 with <=1,500 employees).
+
+Let me calculate the percentages more precisely:
+- 2021: 42/65 = 0.64615... = 64.615...%
+- 2023: 40/57 = 0.70175... = 70.175...%
+- Difference: 70.175...% - 64.615...% = 5.559...% ≈ 5.6 percentage points
+
+The question asks for "by how many percentage points did the share... change" and "give the sign, to one decimal place."
+
+Since it increased, the change is +5.6 percentage points.
+
+Actually, let me check one more time to make sure I didn't miss an earlier or later data point.
+
+In Document 2, it says "as of December 31, 2021" and references the "2022 Universal Service Monitoring Report".
+
+In Document 6 and 7, it says "as of December 31, 2023" and references the "2024 Universal Service Monitoring Report".
+
+I don't see any other data points for satellite telecommunications providers with the 1,500 employee threshold.
+
+So the change is from 64.6% to 70.2%, which is an increase of 5.6 percentage points.
+
+The answer should be +5.6
+
+Wait, the question says "Give the sign, to one decimal place." So it wants the signed value, which would be +5.6.
+
+Actually, let me check the exact wording: "By how many percentage points did the share of satellite telecommunications providers with 1,500 or fewer employees change between the FCC's earliest and latest year-end counts? Give the sign, to one decimal place."
+
+So it's asking for the change (latest - earliest), with sign, to one decimal place.
+
+Earliest: Dec 31, 2021: 42/65 = 64.615...%
+Latest: Dec 31, 2023: 40/57 = 70.175...%
+Change: +5.559...% = +5.6% (to one decimal place)
+
+So the answer is +5.6
+
+Actually, I should confirm these are indeed the earliest and latest. Let me check Document 5 again since it's dated March 13, 2025.
+
+Document 5 says: "Additionally, based on Commission data as of February 1, 2024, there were 16 Mobile Satellite Earth Stations licensees."
+
+But this is specifically for "Mobile Satellite Earth Stations", not the broader "satellite telecommunications services" category. The question asks about "satellite telecommunications providers", which matches the category in Documents 2, 6, and 7.
+
+So yes, Dec 31, 2021 and Dec 31, 2023 are the earliest and latest year-end counts for the relevant category.
+
+Final calculation:
+- 2021: 42/65 = 64.6153846154%
+- 2023: 40/57 = 70.1754385965%
+- Difference: 5.5600539811% = 5.6% (rounded to one decimal place)
+- With sign: +5.6
+
+The answer is +5.6
+
+Attempt 2 · Right
+-----------------
+Docs: Doc 2, Doc 3, Doc 5, Doc 6, Doc 7 · Note: Note: where it shortcut
+
+Final answer: Answer: +2.6 percentage points | Your answer (gold): +2.6 percentage points
+
+Where it shortcut: Medium model located the December 31, 2020 paragraph in document 3 (71 providers, 48 small) and the December 31, 2023 paragraph in document 7 (57, 40), then did a single subtraction to reach +2.6.Doc 3 Doc 7
+
+How it got there: Quoted Doc 3 (“Satellite Telecommunications. This industry comprises firms”), and 4 more passages.
+
+Passages quoted:
+
+- Quoted Doc 3: “Satellite Telecommunications. This industry comprises firms”
+- Quoted Doc 7: “Additionally, based on Commission data in the 2024 Universal Service Monitoring Report, as of December 31, 2023, there were 57 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 40 provi”
+- Quoted Doc 3: “as of December 31, 2020, there were 71 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 48 providers have 1,500 or fewer employees.”
+- Quoted Doc 2: “as of December 31, 2021, there were 65 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 42 providers have 1,500 or fewer employees.”
+- Quoted Doc 7: “based on Commission data in the 2024 Universal Service Monitoring Report, as of December 31, 2023, there were 57 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 40 providers have 1,50”
+
+Named Doc 3, Doc 7, Doc 2, Doc 5, Doc 6
+
+Full answer
+-----------
+
+Looking at the FCC's satellite telecommunications provider data across the documents:
+
+Earliest year-end count (December 31, 2020, from Document 3, citing the 2021 Universal Service Monitoring Report):
+
+- 71 total providers
+- ~48 providers with 1,500 or fewer employees
+- Share: 48/71 ≈ 67.6056%
+
+Latest year-end count (December 31, 2023, from Document 7, citing the 2024 Universal Service Monitoring Report):
+
+- 57 total providers
+- ~40 providers with 1,500 or fewer employees
+- Share: 40/57 ≈ 70.1754%
+
+Change: 70.1754% − 67.6056% = +2.5698 percentage points
+
+Answer: +2.6 percentage points
+
+Reasoning
+---------
+
+The user is asking about the change in the share of satellite telecommunications providers with 1,500 or fewer employees between the FCC's earliest and latest year-end counts.
+
+Let me search through the documents for this information.
+
+From Document 2 (Federal Register, Volume 89 Issue 144, July 26, 2024):
+"Satellite Telecommunications. This industry comprises firms "primarily engaged in providing telecommunications services to other establishments in the telecommunications and broadcasting industries by forwarding and receiving communications signals via a system of satellites or reselling satellite telecommunications." Satellite telecommunications service providers include satellite and earth station operators. The SBA small business size standard for this industry classifies a business with $38.5 million or less in annual receipts as small. U.S. Census Bureau data for 2017 show that 275 firms in this industry operated for the entire year. Of this number, 242 firms had revenue of less than $25 million. Additionally, based on Commission data in the 2022 Universal Service Monitoring Report, as of December 31, 2021, there were 65 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 42 providers have 1,500 or fewer employees."
+
+From Document 5 (Federal Register, Volume 90 Issue 48, March 13, 2025):
+"Satellite Telecommunications. This industry comprises firms "primarily engaged in providing telecommunications services to other establishments in the telecommunications and broadcasting industries by forwarding and receiving communications signals via a system of satellites or reselling satellite telecommunications." Satellite telecommunications service providers include satellite and earth station operators. The SBA small business size standard for this industry classifies a business with $44 million or less in annual receipts as small. U.S. Census Bureau data for 2017 show that 275 firms in this industry operated for the entire year. Of this number, 242 firms had revenue of less than $25 million. Consequently, using the SBA's small business size standard most satellite telecommunications service providers can be considered small entities. The Commission notes however, that the SBA's revenue small business size standard is applicable to a broad scope of satellite telecommunications providers included in the U.S. Census Bureau's Satellite Telecommunications industry definition. Additionally, the Commission neither requests nor collects annual revenue information from satellite telecommunications providers, and is therefore unable to more accurately estimate the number of satellite telecommunications providers that would be classified as a small business under the SBA size standard."
+
+Hmm, Document 5 doesn't seem to have the specific count of providers with 1,500 or fewer employees. Let me check Document 6.
+
+From Document 6 (Federal Register, Volume 90 Issue 127, July 7, 2025):
+"Satellite Telecommunications. This industry comprises firms "primarily engaged in providing telecommunications services to other establishments in the telecommunications and broadcasting industries by forwarding and receiving communications signals via a system of satellites or reselling satellite telecommunications." Satellite telecommunications service providers include satellite and earth station operators. The SBA small business size standard for this industry classifies a business with $44 million or less in annual receipts as small. U.S. Census Bureau data for 2017 show that 275 firms in this industry operated for the entire year. Of this number, 242 firms had revenue of less than $25 million. Consequently, using the SBA's small business size standard most satellite telecommunications service providers can be considered small entities. The Commission notes however, that the SBA's revenue small business size standard is applicable to a broad scope of satellite telecommunications providers included in the U.S. Census Bureau's Satellite Telecommunications industry definition. Additionally, the Commission neither requests nor collects annual revenue information from satellite telecommunications providers, and is therefore unable to more accurately estimate the number of satellite telecommunications providers that would be classified as a small business under the SBA size standard."
+
+Document 6 also doesn't have the specific count. Let me check Document 3.
+
+From Document 3 (Federal Register, Volume 89 Issue 154, August 9, 2024):
+"Satellite Telecommunications. This industry comprises firms "primarily engaged in providing telecommunications services to other establishments in the telecommunications and broadcasting industries by forwarding and receiving communications signals via a system of satellites or reselling satellite telecommunications." Satellite telecommunications service providers include satellite and earth station operators. The SBA small business size standard for this industry classifies a business with $38 million or less in annual receipts as small. U.S. Census Bureau data for 2017 show that 275 firms in this industry operated for the entire year. Of this number, 242 firms had revenue of less than $25 million. Additionally, based on Commission data in the 2021 Universal Service Monitoring Report, as of December 31, 2020, there were 71 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 48 providers have 1,500 or fewer employees. Consequently, using the SBA's small business size standard, a little more than half of these providers can be considered small entities."
+
+So now I have:
+- Document 2 (July 2024): Based on Commission data in the 2022 Universal Service Monitoring Report, as of December 31, 2021, there were 65 providers. Approximately 42 have 1,500 or fewer employees.
+- Document 3 (August 2024): Based on Commission data in the 2021 Universal Service Monitoring Report, as of December 31, 2020, there were 71 providers. Approximately 48 have 1,500 or fewer employees.
+- Document 7 (August 2025): "Additionally, based on Commission data in the 2024 Universal Service Monitoring Report, as of December 31, 2023, there were 57 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 40 providers have 1,500 or fewer employees."
+
+So the earliest year-end count is December 31, 2020: 48 out of 71 providers have 1,500 or fewer employees.
+The latest year-end count is December 31, 2023: 40 out of 57 providers have 1,500 or fewer employees.
+
+Earliest (Dec 31, 2020): 48/71 = 0.676056... = 67.6056...%
+Latest (Dec 31, 2023): 40/57 = 0.701754... = 70.1754...%
+
+Change: 70.1754% - 67.6056% = 2.5698... percentage points
+
+Rounded to one decimal place: +2.6 percentage points.
+
+Wait, let me double-check by reading carefully again.
+
+Document 3: "as of December 31, 2020, there were 71 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 48 providers have 1,500 or fewer employees."
+
+Document 2: "as of December 31, 2021, there were 65 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 42 providers have 1,500 or fewer employees."
+
+Document 7: "based on Commission data in the 2024 Universal Service Monitoring Report, as of December 31, 2023, there were 57 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 40 providers have 1,500 or fewer employees."
+
+So the data points are:
+- Dec 31, 2020: 48/71
+- Dec 31, 2021: 42/65
+- Dec 31, 2023: 40/57
+
+Earliest year-end count: December 31, 2020: 48/71 = 67.6056%
+Latest year-end count: December 31, 2023: 40/57 = 70.1754%
+
+Change: 70.1754 - 67.6056 = 2.5698 ≈ 2.6 percentage points
+
+Sign is positive (+2.6).
+
+Wait, I need to confirm the question carefully. The question is "By how many percentage points did the share of satellite telecommunications providers with 1,500 or fewer employees change between the FCC's earliest and latest year-end counts?"
+
+So the share = providers with 1,500 or fewer employees / total providers.
+
+Earliest: December 31, 2020 → 48/71 = 67.6056...%
+Latest: December 31, 2023 → 40/57 = 70.1754...%
+
+Change: 70.1754 - 67.6056 = +2.5698 ≈ +2.6 percentage points
+
+The sign is positive (+), and the value is 2.6 percentage points.
+
+Let me verify by recomputing:
+48/71 = 0.676056338028169
+40/57 = 0.701754385964912
+
+Difference: 0.701754385964912 - 0.676056338028169 = 0.025698047936743
+
+As percentage: 2.5698047936743%
+
+Rounded to one decimal place: 2.6 percentage points
+
+Sign: + (positive)
+
+So the answer is +2.6percentage points.
+
+Attempt 3 · Wrong
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): +2.6 percentage points
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 4 · Wrong
+-----------------
+Docs: Doc 2, Doc 3, Doc 5, Doc 6, Doc 7 · Note: —
+
+Final answer: - Change: 70.2% − 64.6% = +5.6 percentage points | Your answer (gold): +2.6 percentage points
+
+How it got there: Quoted Doc 7 (“as of December 31, 2023,”).
+
+Where it left your evidence: It treated Doc 2's December 31, 2021 data as the earliest year-end count, missing the earlier December 31, 2020 data in Doc 3.
+
+Passages quoted:
+
+- Quoted Doc 7: “as of December 31, 2023,”
+
+Named Doc 2, Doc 6, Doc 5, Doc 3
+
+Full answer
+-----------
+
+The share of satellite telecommunications providers with 1,500 or fewer employees increased by 5.6 percentage points between December 31, 2021, and December 31, 2023.
+
+Calculation:
+
+- December 31, 2021: 42 out of 65 providers (≈64.6%)
+- December 31, 2023: 40 out of 57 providers (≈70.2%)
+- Change: 70.2% − 64.6% = +5.6 percentage points
+
+Reasoning
+---------
+
+Could not load the reasoning — try again.
+
+Attempt 5 · Right
+-----------------
+Docs: Doc 2, Doc 3, Doc 5, Doc 6, Doc 7 · Note: Note: where it shortcut
+
+Final answer: +2.6 | Your answer (gold): +2.6 percentage points
+
+Where it shortcut: Medium model quoted the three boilerplate sentences from documents 2, 3, and 7 directly; the verbatim '1,500 or fewer employees' phrasing made the lookup trivial.Doc 2 Doc 3 Doc 7
+
+How it got there: Quoted Doc 5 (“satellite telecommunications providers”), and 4 more passages.
+
+Passages quoted:
+
+- Quoted Doc 5: “satellite telecommunications providers”
+- Quoted Doc 2: “1,500 or fewer employees”
+- Quoted Doc 2: “Additionally, based on Commission data in the 2022 Universal Service Monitoring Report, as of December 31, 2021, there were 65 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 42 provi”
+- Quoted Doc 3: “Additionally, based on Commission data in the 2021 Universal Service Monitoring Report, as of December 31, 2020, there were 71 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 48 provi”
+- Quoted Doc 7: “Additionally, based on Commission data in the 2024 Universal Service Monitoring Report, as of December 31, 2023, there were 57 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 40 provi”
+
+Named Doc 2, Doc 5, Doc 6, Doc 7
+
+Full answer
+-----------
+
++2.6
+
+Reasoning
+---------
+
+Could not load the reasoning — try again.
+
+Attempt 6 · Wrong
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): +2.6 percentage points
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 7 · Right
+-----------------
+Docs: Doc 1, Doc 2, Doc 3, Doc 4, Doc 5, Doc 6, Doc 7 · Note: —
+
+Final answer: +2.6 | Your answer (gold): +2.6 percentage points
+
+How it got there: Quoted Doc 3 (“as of December 31, 2020”), and 2 more passages.
+
+Passages quoted:
+
+- Quoted Doc 3: “as of December 31, 2020”
+- Quoted Doc 2: “as of December 31, 2021”
+- Quoted Doc 7: “as of December 31, 2023”
+
+Named Doc 2, Doc 6, Doc 5, Doc 3, Doc 1, Doc 4, Doc 7
+
+Full answer
+-----------
+
++2.6
+
+Reasoning
+---------
+
+Could not load the reasoning — try again.
+
+Attempt 8 · Right
+-----------------
+Docs: Doc 1, Doc 2, Doc 3, Doc 4, Doc 5, Doc 6, Doc 7 · Note: —
+
+Final answer: Answer: +2.6 | Your answer (gold): +2.6 percentage points
+
+How it got there: Quoted Doc 2 (“satellite telecommunications”), and 4 more passages.
+
+Passages quoted:
+
+- Quoted Doc 2: “satellite telecommunications”
+- Quoted Doc 2: “1,500 or fewer employees”
+- Quoted Doc 2: “Additionally, based on Commission data in the 2022 Universal Service Monitoring Report, as of December 31, 2021, there were 65 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 42 provi”
+- Quoted Doc 7: “Additionally, based on Commission data in the 2024 Universal Service Monitoring Report, as of December 31, 2023, there were 57 providers that reported they were engaged in the provision of satellite telecommunications services. Of these providers, the Commission estimates that approximately 40 provi”
+- Quoted Doc 2: “approximately 42 providers”
+
+Named Doc 2, Doc 6, Doc 5, Doc 1, Doc 3, Doc 4, Doc 7
+
+Full answer
+-----------
+
+The share of providers with 1,500 or fewer employees increased from approximately 67.6% as of December 31, 2020, to approximately 70.2% as of December 31, 2023. This represents a change of +2.6 percentage points.
+
+Answer: +2.6
+
+Reasoning
+---------
+
+Could not load the reasoning — try again.

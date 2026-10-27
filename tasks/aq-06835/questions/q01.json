@@ -1,0 +1,79 @@
+{
+  "question": "For Zimmer Biomet's 2025 quarter with the highest adjusted gross margin, what was its reported operating profit margin? Give the percentage to two decimal places.",
+  "number_of_asks": 1,
+  "gold_answer": "17.55%",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 4, reconciliation of gross profit and margin, three months and year ended December 31, 2025): net sales 2,243.8 (fourth quarter) and 8,231.5 (full year); adjusted gross profit 1,623.6 (fourth quarter) and 5,944.1 (full year), in $ millions; the fourth-quarter adjusted gross margin is printed as 72.4%.\nStep 2. Source input (Doc 6, reconciliation of gross profit and margin, six months ended June 30, 2025): net sales 3,986.4 and adjusted gross profit 2,867.6 ($ millions); the second-quarter 2025 adjusted gross margin is printed as 72.3%.\nStep 3. Calculation (Doc 4 and Doc 6): third-quarter 2025 adjusted gross profit, full year less fourth quarter less first half = 5,944.1 - 1,623.6 - 2,867.6 = 1,452.9 ($ millions).\nStep 4. Calculation (Doc 4 and Doc 6): third-quarter 2025 net sales = 8,231.5 - 2,243.8 - 3,986.4 = 2,001.3 ($ millions).\nStep 5. Calculation (Doc 4 and Doc 6): third-quarter 2025 adjusted gross margin = 1,452.9 / 2,001.3 = 72.60%.\nStep 6. Comparison (Doc 4 and Doc 6): first-half 2025 adjusted gross margin = 2,867.6 / 3,986.4 = 71.93%. The second quarter's printed 72.3% is above that first-half average, so the first quarter's margin is below it. The third quarter's 72.60% is above that average and above the second quarter's 72.3% and the fourth quarter's 72.4%, so the third quarter of 2025 has the highest adjusted gross margin.\nStep 7. Source input (Doc 4, reconciliation of operating profit and margin, three months and year ended December 31, 2025): operating profit 154.5 (fourth quarter) and 1,098.1 (full year), in $ millions.\nStep 8. Source input (Doc 6, reconciliation of operating profit and margin, six months ended June 30, 2025): operating profit 592.3 ($ millions).\nStep 9. Calculation (Doc 4 and Doc 6): third-quarter 2025 operating profit as reported = 1,098.1 - 154.5 - 592.3 = 351.3 ($ millions).\nStep 10. Calculation (Doc 4 and Doc 6): third-quarter 2025 reported operating profit margin = 351.3 / 2,001.3 = 17.55%, rounded as the question asks.",
+  "answer_components": [
+    "17.55%"
+  ],
+  "evidence": [
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "|Net Sales|$2,243.8|$2,023.2|$8,231.5|$7,678.6|"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "|Adjusted gross profit|$1,623.6|$1,442.5|$5,944.1|$5,506.7|"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "|Adjusted gross margin|72.4%|71.3%|72.2%|71.7%|"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "|Operating profit|$154.5|$389.0|$1,098.1|$1,285.7|"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "|Net Sales|$2,177.0|$2,077.3|$4,263.7|$3,986.4|"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "|Adjusted gross profit|$1,547.5|$1,502.1|$3,071.4|$2,867.6|"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "|Adjusted gross margin|71.1%|72.3%|72.0%|71.9%|"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "|Operating profit|$326.1|$300.0|$699.2|$592.3|"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Figure that must be computed",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Doc 4 prints a 72.4% fourth-quarter 2025 adjusted gross margin, the highest any release prints, so a careless solver picks the fourth quarter and answers 6.89%. The third quarter, printed nowhere, is full year less first half (Doc 6) less fourth quarter: 72.60%, higher, so 17.55%."
+}

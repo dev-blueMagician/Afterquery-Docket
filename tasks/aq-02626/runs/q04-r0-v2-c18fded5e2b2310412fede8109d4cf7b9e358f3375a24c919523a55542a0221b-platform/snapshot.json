@@ -1,0 +1,52 @@
+{
+  "bundle": "aq-02626",
+  "corpus_sha256": {
+    "docs/fr_2025_11907.txt": "a49ee191e051c260908f6aa55c0c02c0bb3a12e2530b88fb6afec5627502e77d",
+    "docs/fr_2025_16801.txt": "63e2b2c3c7a0aee826a9e544a4f38f0a05379896a150e134559e5472fa665290",
+    "docs/fr_2026_08662.txt": "9125ec900694a12c3b1c75f1f69f1b4fa87340b24447a6c1ef73efb37e8a17c8",
+    "docs/fr_2026_11312.txt": "a4d2788dd5bd38c23e1836ef07118a0108dd3210ec67f033925badb96373a091",
+    "docs/fr_2026_14118.txt": "c7e9f17ac48dda5d7d73a356304135396ad663fb612810e8ea0c260cc94ca2ee",
+    "docs/fr_2026_18552.txt": "56e32345ff72728e20ca85bf4f9691458d0aa8ae97c60dbf3bc6a9a212529dc8",
+    "text/D01.txt": "6fb99f063f1e3261c129606e47ae931207738f7d345f7d735d89625a24a1d4e9",
+    "text/D02.txt": "f268a3b20c14dcb28f54a47f647202eed1788b3a156bed8ea96791f5d0efdf05",
+    "text/D03.txt": "3cc5f13a77684dcb26bae20a976e6037733157e985334fd48fed6b85e3402954",
+    "text/D04.txt": "f307f1ef8cac1f6b0ad416b80064833c5e46b776c96cd3ed9a265576da6ae2b4",
+    "text/D05.txt": "c1f09108f8b49995cfbf37e2a62d9c0ba5882239e0cd9ec96f97407d3075875d",
+    "text/D06.txt": "9014006d625c454efded975e3d26a810f993e75699a15a397e66bff7544622ac",
+    "text/manifest.json": "84e55f321b55d281717751243362c37a2967e31176732c895bed64723ea5d03c"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "5e4d851c0d53ef30cb22b583b65d96656b284e6008a8443ac57483558537378d",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D03, D04",
+    "id": "q04",
+    "levers": "Mentions it vs does it; Match, then exclude",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i06",
+    "status": "draft",
+    "tags": "Cross-document join; Conditional filter; Aggregation"
+  },
+  "question_id": "q04",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "24 surface impoundments",
+    "components": "- c1: 24",
+    "evidence": "- D03 (Virginia Partial Program, L246) [c1]: \"Therefore, EPA is approving the State's version of the following requirements:\"\n- D03 (Virginia Partial Program, L255) [c1]: \"Contains both CCR and liquids\"\n- D03 (Virginia CCR Units and Resources, L226) [c1]: \"VADEQ has identified 25 disposal units that are currently or have been used for disposal of CCR wastes (7 landfills and 18 surface impoundments) at 8 facilities in Virginia.\"\n- D04 (Louisiana Partial Program, L316) [c1]: \"Therefore, EPA is approving the State's version of these requirements:\"\n- D04 (Louisiana Partial Program, L325) [c1]: \"Contains both CCR and liquids\"\n- D04 (Louisiana CCR Units and Resources, L290) [c1]: \"LDEQ has identified 9 disposal units that are currently or have been used for disposal of CCR wastes (3 landfills and 6 surface impoundments) at 4 facilities in Louisiana.\"",
+    "feedback log": "- 2026-10-10 | source: user chat, verbatim \"i02 i06 survived, rest of them not tested\" | stage: form quick test (easier solver, question + short answer) | tested wording: sketch i06's question and answer as handed over (no panel or screenshot pasted) | observed result: survived | action: written up unchanged as q04 rev 0. A quick test is a first screen, not a tier result.",
+    "lever checks": "- Family and target: mentions it vs does it across five templated lists (hook h22, sketch i06). Target medium (user 2026-10-10: no Easy slot, \"target medium and high\"). Platform quick test of this exact wording (user 2026-10-10, \"i02 i06 survived\", no panel text): survived; rev 0 adopts it word for word. Difficulty result pending; quick-test survival did not predict the difficulty check on aq-02483 or aq-02447.\n- Dependency plan: Doc 3 L246 + L255 (approved list, item 9) and L226 (18 impoundments); Doc 4 L316 + L325 (approved list, item 9) and L290 (6 impoundments); 18 + 6 = 24.\n- Universe: the five States with proposals. Virginia: approved (D03 L255). Louisiana: approved (D04 L325). Alabama: the entry is item 1 of the list introduced by \"as enumerated below, are not being approved:\" (D05 L337-L339), and absent from Alabama's approved list (L309-L329, 17 items); 13 impoundments (L276). Wisconsin: approved list L310-L320 has 11 items, among them \"Infiltration\" and \"Liquids\", not this one; 3 impoundments (L290), which stay under EPA in any case. Wyoming: \"not seeking approval\" of amendments made in the Legacy Rule (D02 L280-L282); the phrase does not occur in Doc 2; 16 impoundments (L267). Pennsylvania's document is not a coal ash permit program.\n- Necessity: Doc 3 is the only source of Virginia's status and its 18 impoundments; Doc 4 of Louisiana's status and its 6 (grep \"Contains both CCR and liquids\": D03 L255, D04 L325, D05 L338 only). Dropping either changes the sum to 6 or 18. Docs 5, 6 and 2 hold only excluded States: removing one removes its State from the candidates and leaves 24, so they are not ticked.\n- Selected-lever checks: Mentions it vs does it: Alabama's document mentions the definition in the same words but does not approve it; counting it gives 37. Match, then exclude: every State whose proposal lists the definition (Virginia, Louisiana, Alabama) gives 37; excluding the unapproved one gives 24. Counting every State's impoundments gives 56.\n- Targeted failure modes: mode 1 (Wrong jurisdiction or scope / Wrong members in a list): 18 + 6 + 13 = 37. Recomputed 2026-10-10. Considered and not declared: adding Wisconsin's 3 for its approved sibling definitions (27, or 40 with Alabama); every State (56).\n- Calculation verification: python 2026-10-10 (caller): 18 + 6 = 24; with Alabama 37; with Wisconsin 27; all five 56.\n- Semantic/ID/overview probes: no document prints 24 or compares the lists. The page overview mentions no definition. Shortest route: find the three entries, read each list's heading, add two unit counts.\n- Precision/readings: \"in States where\" counts impoundments located in the qualifying States as each proposal reports them, so Louisiana's unapproved exclusion of drained impoundments (D04 L394) does not change the count; \"proposes approving the State's own version\" is the list heading's test. The phrase in the question is the definition's own name, an identifier.\n- Completeness: full corpus, no gaps (intake: incomplete false, gap 0 for all six documents).\n- Style/set review: 24 words, one ask, wording as quick-tested. q03 uses Doc 2's effective date and the amendment lists; no shared fact.\n- Warnings answered: filled after the floor run.",
+    "necessary documents": "- D03: Answer component\n- D04: Answer component",
+    "platform validation": "",
+    "question": "How many coal-ash surface impoundments are in States where EPA proposes approving the State's own version of the definition \"contains both CCR and liquids\"?",
+    "reasoning": "Step 1. Source input (Doc 3, Virginia Partial Program): for the terms the 2024 Legacy Rule changed for all units, \"EPA is approving the State's version of the following requirements\", and that list includes \"Contains both CCR and liquids\". Virginia qualifies.\nStep 2. Source input (Doc 3, Virginia CCR Units and Resources): Virginia's disposal units include \"18 surface impoundments\".\nStep 3. Source input (Doc 4, Louisiana Partial Program): \"EPA is approving the State's version of these requirements\", and that list also includes \"Contains both CCR and liquids\". Louisiana qualifies.\nStep 4. Source input (Doc 4, Louisiana CCR Units and Resources): Louisiana's disposal units include \"6 surface impoundments\".\nStep 5. Decoy check: Alabama's proposal (Doc 5) prints the same definition entry, but in its list of amendments that \"are not being approved\"; Wisconsin's approved list (Doc 6) carries the related definitions of infiltration and liquids but not this one; Wyoming (Doc 2) seeks approval of no Legacy Rule amendment. The impoundments in those three States are not counted.\nStep 6. Final answer (Doc 3 and Doc 4): impoundments in the two qualifying States: 18 + 6 = 24.",
+    "targeted failure modes": "### Failure mode 1\nTrap: Wrong jurisdiction or scope\nHow a careless solver fails: Wrong members in a list\n\nWhy these are traps: Wrong jurisdiction or scope: Doc 5 prints the same definition entry for Alabama, but in its list of amendments \"not being approved\"; a solver matching the phrase adds Alabama's 13 impoundments and answers 37. Only Virginia's and Louisiana's lists approve the State's version: 18 + 6 = 24."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "c18fded5e2b2310412fede8109d4cf7b9e358f3375a24c919523a55542a0221b"
+}

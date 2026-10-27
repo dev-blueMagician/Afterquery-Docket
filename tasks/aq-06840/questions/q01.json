@@ -1,0 +1,95 @@
+{
+  "question": "On the basis used in Albemarle's Q3 2025 earnings release, by how much did its free cash flow (operating cash flow minus capital expenditures) improve from Q4 2024 to Q1 2025? Answer in millions of dollars to one decimal place.",
+  "number_of_asks": 1,
+  "gold_answer": "711.8",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 5, highlights, footnote (a) to free cash flow): free cash flow is \"defined as operating cash flow minus capital expenditures\", the definition the question states.\nStep 2. Source input (Doc 5, selected consolidated cash flow data, nine months ended September 30, 2024 column): net cash provided by operating activities 692,255 and capital expenditures (1,337,719), in thousands of dollars. This column shows settlements of foreign currency forward contracts as an investing line, the revised presentation on which the Q3 2025 release reports 2024.\nStep 3. Source input (Doc 6, selected consolidated cash flow data, year ended December 31, 2024 column, with the same investing line): net cash provided by operating activities 687,876 and capital expenditures (1,680,529), in thousands of dollars.\nStep 4. Calculation (Doc 5 and Doc 6): no release prints the fourth quarter of 2024 on its own, so it is the year less the nine months; operating activities used cash in that quarter: 692,255 - 687,876 = 4,379 (thousands of dollars of outflow).\nStep 5. Calculation (Doc 5 and Doc 6): fourth-quarter 2024 capital expenditures: 1,680,529 - 1,337,719 = 342,810 (thousands of dollars).\nStep 6. Calculation (Doc 5 and Doc 6): fourth-quarter 2024 free cash flow was an outflow of capital expenditures plus the operating outflow: 342,810 + 4,379 = 347,189 (thousands of dollars).\nStep 7. Source input (Doc 7, selected consolidated cash flow data, three months ended March 31, 2025 column, with the same investing line): net cash provided by operating activities 547,207 and capital expenditures (182,624), in thousands of dollars.\nStep 8. Calculation (Doc 7): first-quarter 2025 free cash flow: 547,207 - 182,624 = 364,583 (thousands of dollars).\nStep 9. Calculation (Doc 5, Doc 6 and Doc 7): improvement from the fourth-quarter 2024 outflow to the first-quarter 2025 inflow: 364,583 + 347,189 = 711,772 (thousands of dollars).\nStep 10. Final answer (Doc 5, Doc 6 and Doc 7): 711,772 thousand dollars, given in millions of dollars to one decimal place as the question asks.",
+  "answer_components": [
+    "711.8"
+  ],
+  "evidence": [
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "A non-GAAP measure defined as operating cash flow minus capital expenditures"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "|Net cash provided by operating activities|893,782|692,255|"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "|Capital expenditures|(434,416)|(1,337,719)|"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "|Proceeds (payments) from settlement of foreign currency forward contracts, net|144,540|(1,956)|"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "|Net cash provided by operating activities|1,282,267|687,876|"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "|Capital expenditures|(589,801)|(1,680,529)|"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "|Proceeds (payments) from settlement of foreign currency forward contracts, net|114,236|(15,595)|"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "|Net cash provided by operating activities|346,244|547,207|"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "|Capital expenditures|(98,676)|(182,624)|"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "|(Payments) proceeds from settlement of foreign currency forward contracts, net|(10,514)|50,245|"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        7
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Superseded date or version",
+      "how_a_careless_solver_fails": "Picks the wrong entity or section"
+    }
+  ],
+  "why_these_are_traps": "Doc 2 (full-year 2024) and Doc 3 (Q1 2025) first printed cash flows that Doc 6 and Doc 7 restate on Doc 5's revised basis. Each period from its own release gives 717.8; on Doc 5's basis free cash flow was -347.2 in Q4 2024, 364.6 in Q1 2025."
+}

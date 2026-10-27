@@ -1,0 +1,25 @@
+{
+  "purpose": "removal probes (author diagnostic, concrete necessity concern: q01 recall of Doc 4 benchmark; q02 inference of Doc 1 model C roles)",
+  "packets": [
+    {
+      "packet": "solver-1",
+      "question": "q01",
+      "removed_local": "D01 (Doc 4)",
+      "renumbered": {
+        "D03": "D01",
+        "D02": "D02",
+        "D04": "D03"
+      }
+    },
+    {
+      "packet": "solver-2",
+      "question": "q02",
+      "removed_local": "D03 (Doc 1)",
+      "renumbered": {
+        "D02": "D01",
+        "D04": "D02",
+        "D01": "D03"
+      }
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "question": "Which signers of the April 2022 joint trade-association letter about short comment periods, if any, do these letters show commenting on the SEC's fund ESG disclosure proposal? List them alphabetically.",
+  "number_of_asks": 1,
+  "gold_answer": "Investment Company Institute, Managed Funds Association, SIFMA AMG, U.S. Chamber of Commerce",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 5, date line, subject line and footnote 4): the Investment Company Institute's letter of July 26, 2023 is itself a comment letter on the fund ESG disclosure proposal, File No. S7-17-22. Its footnote 4 lists the trade organizations that signed a joint letter to SEC Chair Gensler dated April 5, 2022 about exceedingly short comment periods. The signers include the Investment Company Institute, the Managed Funds Association, the Securities Industry and Financial Markets Association (SIFMA), its Asset Management Group (SIFMA AMG) as a separate signer, and the U.S. Chamber of Commerce through its Center for Capital Markets, which the list calls \"the Chamber\".\n\nStep 2. Source input (Doc 8, date line, subject line and footnote 15): the Managed Funds Association's letter of October 30, 2023 is a comment letter on the same proposal. Its footnote 15 cites the U.S. Chamber of Commerce's comment letter on File No. S7-17-22 dated August 12, 2022, so the Chamber commented on this proposal.\n\nStep 3. Source input (Doc 12, date line, subject line and the paragraph on a safe harbor): the coalition letter of April 16, 2024 on the same proposal says that many commenters from the regulated community argued for a safe harbor, including SIFMA AMG. So SIFMA AMG commented on this proposal. Decoy: SIFMA itself, a different signer on the same list, which no letter names as a commenter.\n\nStep 4. Final answer (Doc 5, Doc 8 and Doc 12): no letter shows any other signer commenting on this proposal. Four signers did: the Investment Company Institute and the Managed Funds Association by their own letters, the U.S. Chamber of Commerce by the letter the Managed Funds Association cites, and SIFMA AMG by the coalition letter. In alphabetical order: Investment Company Institute, Managed Funds Association, SIFMA AMG, U.S. Chamber of Commerce.",
+  "answer_components": [
+    "Investment Company Institute",
+    "Managed Funds Association",
+    "SIFMA AMG",
+    "U.S. Chamber of Commerce"
+  ],
+  "evidence": [
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "July 26, 2023"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Enhanced Disclosures by Certain Investment Advisers and Investment Companies about Environmental, Social, and Governance Investment Practices (File No. S7-17-22)"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "See Letter to SEC Chair Gensler from Alternative Credit Council (ACC)"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Investment Company Institute (ICI)"
+    },
+    {
+      "document_number": 5,
+      "component_number": 2,
+      "quote": "Managed Funds Association (MFA)"
+    },
+    {
+      "document_number": 5,
+      "component_number": 3,
+      "quote": "Securities Industry and Financial Markets Association (SIFMA); Securities Industry and Financial Markets Association Asset Management Group (SIFMA AMG)"
+    },
+    {
+      "document_number": 5,
+      "component_number": 4,
+      "quote": "U.S. Chamber of Commerce (the Chamber) Center for Capital Markets (CCMC) (April 5, 2022)"
+    },
+    {
+      "document_number": 8,
+      "component_number": 2,
+      "quote": "October 30, 2023"
+    },
+    {
+      "document_number": 8,
+      "component_number": 2,
+      "quote": "wishes to take the opportunity to further comment on the proposal from the Securities and Exchange Commission"
+    },
+    {
+      "document_number": 8,
+      "component_number": 4,
+      "quote": "U.S. Chamber of Commerce Comment Letter re: Enhanced Disclosures by Certain Investment Advisers and Investment Companies about Environmental, Social, and Governance Investment Practices [File No. S7-17-22] (August 12, 2022)"
+    },
+    {
+      "document_number": 12,
+      "component_number": 3,
+      "quote": "April 16, 2024"
+    },
+    {
+      "document_number": 12,
+      "component_number": 3,
+      "quote": "many commenters from the regulated community argued for a safe harbor from liability for GHG emissions disclosures, including SIFMA AMG, Fidelity, and JP Morgan Asset Management"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        8
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        12
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: two signers commented only as cited by others, the U.S. Chamber of Commerce in a footnote of Doc 8 and SIFMA AMG in Doc 12's text. Matching the signer list in Doc 5 to the letters' authors alone gives Investment Company Institute and Managed Funds Association."
+}

@@ -1,0 +1,76 @@
+{
+  "question": "Which submitters, if any, back a proposal from CAMAC's 2014 discussion paper while naming CAMAC as its source? List them alphabetically.",
+  "number_of_asks": 1,
+  "gold_answer": "Allens, Joint Associations (CA ANZ, CPA Australia, IPA, SMSF Association)",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 2, Allens' answer on compliance plans): Allens sets out the three reform options in CAMAC's 2014 discussion paper and says \"We would support adopting Option 3 proposed in the 2014 CAMAC Discussion Paper\", the option that subsumes compliance into risk management with no compliance plan. Allens backs a proposal from that paper and names CAMAC as its source (component c1).\n\nStep 2. Source input (Doc 2, Allens' answer on the definition of liquid assets): Allens says the consultation paper \"also refers to the 2014 CAMAC Discussion Paper\", in which \"CAMAC suggested\" a more objective test of liquidity: an asset that can reasonably be expected to be realised for its book value within seven business days. Allens argues against that test.\n\nStep 3. Source input (Doc 15, the Joint Associations' answer on the definition of liquid assets): the Joint Associations recommend that \"the objective test of liquidity as suggested by the Corporations and Markets Authority Committee (CAMAC) should be adopted\": liquid assets are money, bank accepted bills and assets that can reasonably be expected to be realised for their book value within seven business days. They name CAMAC as the source and give no year.\n\nStep 4. Combination (Doc 2 and Doc 15): the test the Joint Associations back is the one Allens places in CAMAC's 2014 discussion paper (the same objective test, realisation at book value within seven business days). So the Joint Associations also back a proposal from that paper and name CAMAC as its source (component c2).\n\nStep 5. Exclusions, from the other submissions that cite CAMAC: AIMA and AIOFP back recommendations of a different CAMAC publication, its earlier report on managed investment schemes. AIMA's own proposal to reconsider compliance plans resembles Option 3 but names no CAMAC source. Allens' agreement with a recommendation of that earlier report on limited liability does not count; its endorsement from the discussion paper is Option 3.\n\nDecoy: ASCF quotes the same seven-business-day test as \"the CAMAC suggestion\" but opposes it, so it names CAMAC without backing the proposal.\n\nFinal answer, in alphabetical order (Doc 2 and Doc 15): Allens, Joint Associations (CA ANZ, CPA Australia, IPA, SMSF Association).",
+  "answer_components": [
+    "Allens",
+    "Joint Associations (CA ANZ, CPA Australia, IPA, SMSF Association)"
+  ],
+  "evidence": [
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "We would support adopting Option 3 proposed in the 2014 CAMAC Discussion Paper"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "subsume compliance into risk management (no requirement for a compliance plan"
+    },
+    {
+      "document_number": 2,
+      "component_number": 2,
+      "quote": "The Consultation Paper also refers to the 2014 CAMAC Discussion Paper"
+    },
+    {
+      "document_number": 2,
+      "component_number": 2,
+      "quote": "CAMAC suggested it may be useful to introduce a clearer or more objective test for liquidity (such as an asset that can reasonably be expected to be realised for its book value within 7 business days)"
+    },
+    {
+      "document_number": 15,
+      "component_number": 2,
+      "quote": "The Joint Associations recommend that the objective test of liquidity as suggested by the Corporations and Markets Authority Committee (CAMAC) should be adopted"
+    },
+    {
+      "document_number": 15,
+      "component_number": 2,
+      "quote": "liquid assets as money, bank accepted bills and assets that can reasonably be expected to be realised for their book value within 7 business days"
+    },
+    {
+      "document_number": 15,
+      "component_number": 2,
+      "quote": "Chartered Accountants Australia & New Zealand (CA ANZ), CPA Australia, the Institute of Public Accountants and the SMSF Association (the Joint Associations)"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        15
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Conditional filter",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: Doc 15 adopts CAMAC's seven-business-day liquidity test without saying which CAMAC paper proposed it; only Doc 2's liquid-assets answer places it in the 2014 discussion paper. Counting only explicit 2014 citations gives Allens alone and misses the Joint Associations."
+}

@@ -1,0 +1,73 @@
+{
+  "question": "Using the impact assessment's heat-network efficiencies, what percentage of the zone emissions benchmark's electricity and gas input is gas, to one decimal place?",
+  "number_of_asks": 1,
+  "gold_answer": "40.0%",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 4, Emissions in Heat Network Zones): from 2030 zone heat networks must meet a carbon emissions limit based on a benchmark scenario in which 85% of heat is delivered by low-carbon air source heat pumps using electricity and 15% is supplied by gas boilers.\n\nStep 2. Source fact (Doc 2, Annex 1 Tables 21 and 24): Table 21 lists the heat-network generation technologies, including the Back-up Gas Boiler. Table 24 prints thermal efficiencies in the same order as its technology list, so the Air Source Heat Pump has 321% and the Back-up Gas Boiler, which follows Gas CHP, has 85%.\n\nStep 3. Calculation (from Steps 1 and 2; Doc 4 and Doc 2): each source's energy input is its share of the heat divided by its efficiency. Multiplying both inputs by the two efficiencies keeps their proportions, so the gas term becomes the gas share of heat times the heat pump efficiency: 15% * 321% = 0.4815.\n\nStep 4. Calculation (from Steps 1 and 2; Doc 4 and Doc 2): the electricity term becomes the heat pump share of heat times the boiler efficiency: 85% * 85% = 0.7225.\n\nStep 5. Calculation (from Steps 3 and 4; Doc 4 and Doc 2): both terms together: 0.4815 + 0.7225 = 1.204.\n\nStep 6. Calculation (from Steps 3 and 5; Doc 4 and Doc 2): gas share of the electricity and gas input: 0.4815 / 1.204 = 40.0% (to one decimal place).",
+  "answer_components": [
+    "40.0%"
+  ],
+  "evidence": [
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "This will be based on a benchmark scenario assuming 85% of heat is delivered by low-carbon air source heat pumps using electricity and 15% is supplied by gas boilers"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Table 21 – Capital and operating cost per generation technology (heat networks)"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Table 24 - Thermal Efficiency (factual and counterfactual)"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Air Source Heat Pump Ground Source Heat Pump Water Source Heat Pump (WSHP)"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Back-up Gas Boiler Commercial Gas Boiler Domestic Gas Boiler Electric Heater"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Thermal Efficiency (%) 321 284 330 541 690 500 N/A 40 85"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Unit normalization",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Unit or basis",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    },
+    {
+      "trap": "Figure that must be computed",
+      "how_a_careless_solver_fails": "Rounding, scale or sign"
+    }
+  ],
+  "why_these_are_traps": "Doc 4's benchmark splits heat: its 15% gas share is not an input share (15.0%). Doc 2's Table 24 efficiencies, air source heat pump 321% and back-up gas boiler 85%, give inputs of 26.480% and 17.647% of heat; rounding those to 26.5 and 17.6 first gives 39.9%. Gold 40.0%."
+}

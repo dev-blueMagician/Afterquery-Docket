@@ -1,0 +1,73 @@
+{
+  "question": "What percentage of the 2025 North Atlantic swordfish total allowable catch was U.S. underharvest not carried into 2026, to one decimal place?",
+  "number_of_asks": 1,
+  "gold_answer": "18.7%",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 6, North Atlantic swordfish section): in 2025, U.S. landings of North Atlantic swordfish were 637.7 mt dw, which is 2,514.9 mt dw less than the 2025 adjusted quota. That shortfall is the 2025 underharvest. Table 1 prints it in the 2026 column as \"Underharvest from Previous Year\"; the 2,558.3 in the 2025 column is the shortfall of the year before.\n\nStep 2. Source input (Doc 6, same paragraph): the carryover is capped at 15 percent of the baseline quota, so only 440.6 mt dw of the underharvest may be carried forward.\n\nStep 3. Calculation (Doc 6): underharvest not carried into 2026: 2,514.9 - 440.6 = 2,074.3 mt dw.\n\nStep 4. Source input (Doc 3, North Atlantic swordfish section): the North Atlantic-wide TACs are stated in whole weight, ranging from 4,764 mt ww to 17,628 mt ww, and the TAC set for 2025-2027 is 14,769 mt, out of which the United States is allocated 3,907 mt, its baseline quota in whole weight.\n\nStep 5. Source input (Doc 3 and Doc 6, supplementary information): swordfish weight converts from dressed to whole weight with the factor 1.33.\n\nStep 6. Calculation (Doc 6 and Doc 3): the uncarried underharvest in whole weight: 2,074.3 × 1.33 = 2,758.819 mt ww.\n\nStep 7. Calculation (Doc 3 and Doc 6): its share of the 2025 TAC: 2,758.819 / 14,769 = 18.7%.",
+  "answer_components": [
+    "18.7%"
+  ],
+  "evidence": [
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "In 2025, U.S. landings of North Atlantic swordfish, which include landings and dead discards, were 637.7 mt dw (2,514.9 mt dw less than the 2025 adjusted quota)."
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "This underharvest exceeds the 440.6-mt dw underharvest carryover limit allowed; therefore, only 440.6 mt dw may be carried forward"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "The conversion factor between dw and ww for swordfish is 1.33"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Recommendation 24-10 previously set the TAC for 2025-2027 at 14,769 mt."
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "11 possible North Atlantic-wide total allowable catches (TACs) that range from 4,764 mt ww to 17,628 mt ww"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "resulting in a 3,907 mt allocation out of a 14,769 mt TAC"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Unit normalization"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Unit or basis",
+      "how_a_careless_solver_fails": "Rounding, scale or sign"
+    },
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Unit or basis: Doc 6 gives the underharvest in dressed weight, Doc 3's TAC is whole weight; dividing without the 1.33 conversion gives 14.0%. Part vs total: Doc 6's 2,514.9 mt total underharvest includes the 440.6 mt carried forward; using the total gives 22.6%. The gold subtracts, then converts."
+}

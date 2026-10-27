@@ -1,0 +1,98 @@
+{
+  "question": "Once EPA's 2026 significant-new-use proposal is final, a large recycler reclaims both covered oxides, one at 90% dust-control efficiency, one at 99%. It refuses FEOC buyers. Orders: both oxides from two Japanese buyers and one Chilean; one oxide from a Thai buyer 10% owned by a Chinese city holding notes convertible into another 20%. What would notifying EPA cost altogether?",
+  "number_of_asks": 1,
+  "gold_answer": "$45,920",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 7, proposed significant new uses): for each of the two covered oxides it is a significant new use to process the substance, where processing includes recycling or reclaiming it from batteries, except with dust controls of a minimum capture and control efficiency of 99%, and a SNUN is required prior to any significant new use. The oxide reclaimed at 90% efficiency is below that minimum and needs a SNUN. The oxide reclaimed at 99% meets the minimum and needs none.\n\nStep 2. Source input (Doc 7, estimated costs for SNUN submissions): a SNUN submission costs an estimated $45,496 for large business submitters. The estimate already includes preparing and submitting the SNUN and the user fee.\n\nStep 3. Source input (Doc 7, estimated costs for export notifications): a person exporting a substance that is the subject of a SNUR gives EPA a one-time notice for the first export to a particular country. The number of notices is counted by chemical, as the number of countries to which that chemical is exported, and each costs approximately $106.\n\nStep 4. Source input (Doc 4, final interpretation, control test and equity interests): an entity is controlled when 25% or more of its equity interest is held by a government of a covered nation, which includes a subnational government. Equity interests include contingent equity interests, and the amount that can be reasonably determined is counted. The Chinese city's stake in the Thai buyer together with the stake its convertible notes carry is three tenths, above 25%, so the Thai buyer is an FEOC, the recycler refuses its order and no export goes to Thailand. Nothing ties the Japanese or Chilean buyers to a covered nation.\n\nStep 5. Calculation (Doc 7): each oxide is exported to Japan and to Chile, however many buyers it has there, so each oxide needs two notices, in dollars: 106 + 106 = 212.\n\nStep 6. Calculation (Doc 7 and Doc 4): notices for both oxides, in dollars: 212 + 212 = 424.\n\nStep 7. Final answer (Doc 7 and Doc 4): the one SNUN plus the four export notices, in dollars: 45,496 + 424 = 45,920.",
+  "answer_components": [
+    "$45,920"
+  ],
+  "evidence": [
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "If a SNUN is submitted, costs are an estimated $45,496 per SNUN submission for large business submitters"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "These estimates include the cost to prepare and submit the SNUN (including registration for EPA's Central Data Exchange (CDX)), and the payment of a user fee."
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "For persons exporting a substance that is the subject of a SNUR, a one-time notice to EPA must be provided for the first export or intended export to a particular country."
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "The total costs of export notification will vary by chemical, depending on the number of required notifications (i.e., the number of countries to which the chemical is exported)."
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "the estimated cost of the export notification requirement on a per unit basis is approximately $106"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "The substances subject to the proposed SNURs in this document are identified below with the proposed CFR citation."
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "It is a significant new use to manufacture, process (all processing includes recycling or reclaiming substances from batteries or other items containing the PMN substance), or use the substance, except with the use of dust controls with an overall minimum capture and control efficiency of 99%."
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "A SNUN is required prior to any significant new use."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "(i) A national or subnational government of a foreign country;"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "(i) 25% or more of the entity's board seats, voting rights, or equity interest, with each metric evaluated independently, are cumulatively held by that other entity"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "DOE intends to refer to percent value of the ownership interest, to include capital or profit interests and contingent equity interests, in the company held by an individual or entity, with the amount of contingent interest that can be reasonably determined included for the purpose of determining FEOC compliance."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        7
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Unit or basis",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    },
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Unit or basis: Doc 7 counts export notices by chemical and by country, so two oxides to Japan and Chile need four; counting countries gives $45,708, counting buyers $46,132. Part vs total: the city's 10% stake omits the notes' 20%, which Doc 4 counts; keeping the Thai buyer gives $46,026."
+}

@@ -1,0 +1,91 @@
+{
+  "question": "Relative to nominal capacity, which lithium-ion cells besides NASA cell B0005 end their constant-voltage charge at a current no higher than B0005's? List them alphabetically.",
+  "number_of_asks": 1,
+  "gold_answer": "B0006, B0007, PANASONIC NCA cells",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 1, the NASA dataset description in the research methodology): B0005, B0006 and B0007 have a nominal capacity of 2 Ah and B0018 one of 1.35 Ah, and all four are charged at constant current and then at constant voltage until the current falls to a cutoff current of 20 mA.\n\nStep 2. Calculation (Doc 1): B0005 ends its constant-voltage charge at 20 / 2 = 10 milliamps per ampere-hour of nominal capacity. B0006 and B0007 have the same capacity and the same cutoff current, so their ratio equals B0005's and is no higher: both qualify (components c1 and c2).\n\nStep 3. Exclusion (Doc 1): B0018 ends at the same 20 mA on only 1.35 Ah, a higher current per ampere-hour than B0005's, so it does not qualify.\n\nStep 4. Source input (Doc 7, Table 1 and the methods paragraph on the authors' own cycling tests): the PANASONIC cells, with an NCA cathode and a graphite anode, have a nominal capacity of 3.03 Ah and are held at 4.2 V until the charging current drops below 0.03 A.\n\nStep 5. Calculation (Doc 1 and Doc 7): a 3.03 Ah cell at B0005's ratio would end at 3.03 × 10 = 30.3 milliamps. The PANASONIC cells' end current from Step 4 is below that, so they qualify (component c3).\n\nStep 6. Exclusion (Doc 1 and Doc 7): a 27 Ah GOTION LFP cell, the authors' other tested cell type, would end at 27 × 10 = 270 milliamps at B0005's ratio, but Doc 7's methods paragraph has the GOTION cells end their hold at a far higher current, so they do not qualify. No other cell in Doc 1 or Doc 7 has both a stated end current and a stated nominal capacity.\n\nDecoy: B0018 shares the NASA cells' 20 mA cutoff but has a smaller capacity, so its end current per ampere-hour is higher than B0005's (Step 3).\n\nFinal answer, in alphabetical order (Doc 1 and Doc 7): B0006, B0007, PANASONIC NCA cells.",
+  "answer_components": [
+    "B0006",
+    "B0007",
+    "PANASONIC NCA cells"
+  ],
+  "evidence": [
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "batteries B0005, B0006, and B0007 utilize lithium nickel cobalt aluminum oxide (NCA) as the positive electrode and graphite as the negative electrode, with a nominal capacity of 2 Ah"
+    },
+    {
+      "document_number": 1,
+      "component_number": 2,
+      "quote": "batteries B0005, B0006, and B0007 utilize lithium nickel cobalt aluminum oxide (NCA) as the positive electrode and graphite as the negative electrode, with a nominal capacity of 2 Ah"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "All batteries underwent charging using a constant current-constant voltage (CC-CV) protocol at 1.5 A, with a cutoff voltage of 4.2 V and a cutoff current of 20 mA"
+    },
+    {
+      "document_number": 1,
+      "component_number": 2,
+      "quote": "All batteries underwent charging using a constant current-constant voltage (CC-CV) protocol at 1.5 A, with a cutoff voltage of 4.2 V and a cutoff current of 20 mA"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "battery B0018 utilizes lithium nickel manganese cobalt oxide (NMC) for the positive electrode and graphite for the negative electrode, with a nominal capacity of 1.35 Ah"
+    },
+    {
+      "document_number": 1,
+      "component_number": 2,
+      "quote": "battery B0018 utilizes lithium nickel manganese cobalt oxide (NMC) for the positive electrode and graphite for the negative electrode, with a nominal capacity of 1.35 Ah"
+    },
+    {
+      "document_number": 7,
+      "component_number": 3,
+      "quote": "|#3|PANASONIC|NCA/ Graphite|3.03|2.5-4.2|2770|1801|"
+    },
+    {
+      "document_number": 7,
+      "component_number": 3,
+      "quote": "In each cycle of the battery from Dataset #3, the charge strategy is to charge at a constant-current rate of 0.3 C until the voltage reaches 4.2 V and then hold at 4.2 V until the charging current drops below 0.03 A"
+    },
+    {
+      "document_number": 7,
+      "component_number": 3,
+      "quote": "|#5|GOTION HIGH-TECH|LFP/ Graphite|27|2.0-3.65|4262|2238|"
+    },
+    {
+      "document_number": 7,
+      "component_number": 3,
+      "quote": "In each cycle of the battery from Dataset #5, the charge strategy is to charge at a constant-current rate of 1 C until the voltage reaches 3.65 V and then hold at 3.65 V until the charging current drops below 1.35 A"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        7
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Unit normalization",
+    "Conditional filter"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: the PANASONIC NCA cells end their constant-voltage hold below 0.03 A on 3.03 Ah, a statement found only in Doc 7's methods paragraph on its own tests. A solver that stays with Doc 1's NASA cells answers B0006, B0007; the gold adds the PANASONIC cells."
+}

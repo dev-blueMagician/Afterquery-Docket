@@ -1,0 +1,133 @@
+AQ-05177 · Corporate filingsEasy or Hard only — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-05177
+Saved: 2026-10-15 12:02 (local time)
+Bundle: Corporate filingsEasy or Hard only · TRANSCRIPTS · 8 documents · 106,685 prompt tokens
+Run read: Run 1, the latest
+Attempts read: 4
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 16 runs left · 9 of 60 runs used in the last 24 h (all tasks)
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 3 attempts right
+
+High model: two solvers try up to 3 times each. Ready when both get it wrong at least once and not every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Broaden the surface so the filter does less work: e.g., ask about changes to guidance for the segment that houses the AI/EBCD business across 2024, which requires the solver to first establish from Document 4 that the AI segment was re-segmented into Digital Health, then track guidance across both the 2023 AI-segment updates and the 2024 Digital Health updates. Why: The phrase 'Digital Health segment' is a strong filter: the segment only exists from January 1, 2024 (Document 4 announces its formation), so the question implicitly tells solvers to ignore Documents 1-3 and jump straight to the 2024 transcripts. Within those, the guidance update is always delivered in Mark Stolper's prepared remarks in a predictable location, so the search space collapses to three short paragraphs. From a run (High model · attempt 2): Same shortcut path: the digital health guidance sentence in each 2024 transcript states whether a range moved, so no comparison against the March baseline in Document 4 was needed. Doc 4 Doc 5 Doc 6 Doc 7
+
+Gold answer · Your answer
+-------------------------
+
+- 2 Remove the ambiguity by specifying in the question which metrics count (e.g., 'revenue, Adjusted EBITDA, or non-capitalized R&D guidance ranges'), and require the answer to name the metric and the revised range at each date, so a bare month-only answer cannot match. Why: The gold answer 'May, November' is itself contestable and that contestability made it easy to hit by pattern matching. In November (Document 7) management says digital health 'guidance remains substantially the same' while increasing non-capitalized R&D spend by $1 million — whether an R&D spend range counts as a 'guidance range' change is a judgment call, yet the gold counts it. A solver scanning for any sentence mentioning a digital health number change in a 2024 update lands on May and November without needing to reason about that distinction. From a run (High model · attempt 2): Same shortcut path: the digital health guidance sentence in each 2024 transcript states whether a range moved, so no comparison against the March baseline in Document 4 was needed. Doc 5 Doc 6 Doc 7
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 1 (Oct 15, 2026, 10:33 AM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+1 run
+
+------------------------------------------------------------------------
+Run 1 · Too easy · Result the gate uses
+Oct 15, 2026, 10:33 AM · Version 5bc90a (current) · Low — · Medium — · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: first run
+
+Solver summary: Run 1 · Too easy · 3 of 3 right
+Every solver attempt got it (3 of 3).
+
+Your answer: May, November
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: Note: where it went wrong
+
+Final answer: RadNet did not change any Digital Health segment guidance range during 2024. It set the range in its initial 2024 guidance (February/March) and left it unchanged across all subsequent 2024 updates—approximately May, August, and November—so there are no update dates to list for a Digital Health range revision. | Your answer (gold): May, November
+
+Where it went wrong: Without documents, Low model assumed no Digital Health range was ever changed in 2024 and answered 'none', missing both the May EBITDA/R&D increases and the November R&D increase documented in the transcripts.Doc 5 Doc 7
+
+Full answer
+-----------
+
+RadNet did not change any Digital Health segment guidance range during 2024. It set the range in its initial 2024 guidance (February/March) and left it unchanged across all subsequent 2024 updates—approximately May, August, and November—so there are no update dates to list for a Digital Health range revision.
+
+Reasoning
+---------
+
+Loading the reasoning…
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): May, November
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): May, November
+
+Where it shortcut: Same shortcut path: the digital health guidance sentence in each 2024 transcript states whether a range moved, so no comparison against the March baseline in Document 4 was needed.Doc 4 Doc 5 Doc 6 Doc 7
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): May, November
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

@@ -1,0 +1,72 @@
+{
+  "question": "At which of its 2024 guidance updates, if any, did RadNet change any guidance range for its Digital Health segment? List them in date order.",
+  "number_of_asks": 1,
+  "gold_answer": "May, November",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 7, the CFO's guidance remarks in the third-quarter 2024 call): the 2024 guidance levels were \"released in conjunction with our 2023 year-end results in March of this year and revised in May and August\", and this November call revises them again. The updates are therefore May, August and November 2024; March set the ranges and changed nothing.\nStep 2. Source input (Doc 5, the CFO's guidance update in May 2024): for the Digital Health segment the company raised its Adjusted EBITDA range and its non-capitalized R&D range, each by one million dollars, \"and all other guidance ranges remain the same for the digital health platform\". So non-capitalized R&D is one of the segment's guidance ranges, and the May update changed two of them.\nStep 3. Source input (Doc 6, the CFO's guidance update in August 2024): \"For the digital health segment, our guidance ranges all remain the same\". Decoy: August was a guidance update, but it changed no Digital Health range.\nStep 4. Source input (Doc 7, the CFO's guidance update in November 2024): \"For the digital health segment, our guidance remains substantially the same. We did increase our spend by $1 million on non-capitalized R&D\". The non-capitalized R&D range named in Step 2 was raised again, so the November update changed a Digital Health range; \"substantially the same\" describes the rest.\nStep 5. Final answer (Doc 5, Doc 6 and Doc 7): Digital Health ranges changed at the May and November updates but not at the August one; in date order, May, November.",
+  "answer_components": [
+    "May",
+    "November"
+  ],
+  "evidence": [
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "released in conjunction with our 2023 year-end results in March of this year and revised in May and August"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "EBITDA guidance by $1 million both at the low end and the high end of the range to $13 million to $15 million"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "We increased our non-capitalized R&D expenditures by $1 million to $12 million to $14 million, and all other guidance ranges remain the same for the digital health platform."
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "which we amended after reporting our first quarter 2024 financial results in May"
+    },
+    {
+      "document_number": 7,
+      "component_number": 2,
+      "quote": "For the digital health segment, our guidance remains substantially the same. We did increase our spend by $1 million on non-capitalized R&D"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        7
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Exclusion / condition source",
+      "reviewer_note": "rules out the August update, which Doc 7 shows took place (\"revised in May and August\") but which changed no Digital Health range"
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Conditional filter"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: Doc 7's November update says Digital Health guidance \"remains substantially the same\", so careless solvers answer May alone. Its next sentence raises non-capitalized R&D, which Doc 5 lists among the segment's guidance ranges, so November also changed one."
+}

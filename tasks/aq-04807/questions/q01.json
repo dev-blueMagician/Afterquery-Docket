@@ -1,0 +1,70 @@
+{
+  "question": "Which nonattainment areas had tribal lands remain at a lower classification after a state-requested reclassification? List the area names alphabetically, or state that none qualify.",
+  "number_of_asks": 1,
+  "gold_answer": "Coachella Valley, Greater Connecticut",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 5, Overview of Proposal and summary): at the request of the Connecticut Department of Energy and Environmental Protection, the Greater Connecticut area was voluntarily reclassified from Moderate to Serious for the 2015 ozone standard, but \"the tribal portions of the Greater Connecticut area remained classified as Moderate\". The summary says the State's request did not include the areas governed by the Mashantucket Pequot Tribal Nation and the Mohegan Indian Tribe. Greater Connecticut qualifies (component c2).\nStep 2. Source input (Doc 3, background on the area's classifications under the 1997 standard): the State requested that the Coachella Valley be reclassified from Severe-15 to Extreme, and EPA granted it. That reclassification applies only to the portions of the Coachella Valley under the State's jurisdiction, and EPA \"did not reclassify any areas of Indian country within the boundaries of the nonattainment area\".\nStep 3. Entity resolution (Doc 3): Indian country is tribal land, so the tribal lands inside the Coachella Valley stayed Severe-15, below Extreme. Coachella Valley qualifies (component c1).\nStep 4. Exclusions and decoy (Doc 3 and Doc 5, with the other proposals' accounts): Maryland's own request moved the whole Baltimore area from Moderate to Serious, and no part of that area is said to have been left behind, so Baltimore is the decoy and is out. The Washington, Phoenix-Mesa and Northern Wasatch Front reclassifications, and the Connecticut tribes' own reclassification that Doc 5 proposes, follow a failure to attain and happen by operation of law, not at a state's request. The Coachella Valley's earlier reclassification from Serious to Severe-15 is not said to have left any land out.\nStep 5. Final answer, in alphabetical order (Doc 3 and Doc 5): Coachella Valley, Greater Connecticut.",
+  "answer_components": [
+    "Coachella Valley",
+    "Greater Connecticut"
+  ],
+  "evidence": [
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "the State requested a reclassification of Coachella Valley from"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "which the EPA granted with an attainment date of not later than June 15, 2024"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "the EPA's reclassification to Extreme nonattainment applies only to the portions of the Coachella Valley subject to the State's jurisdiction, and the EPA did not reclassify any areas of Indian country within the boundaries of the nonattainment area"
+    },
+    {
+      "document_number": 5,
+      "component_number": 2,
+      "quote": "At the request of CT DEEP, the Greater Connecticut area was voluntarily reclassified from Moderate to Serious for the 2015 ozone NAAQS before the August 3, 2024, nonattainment date"
+    },
+    {
+      "document_number": 5,
+      "component_number": 2,
+      "quote": "However, the tribal portions of the Greater Connecticut area remained classified as Moderate."
+    },
+    {
+      "document_number": 5,
+      "component_number": 2,
+      "quote": "That request, however, did not include areas governed by the Mashantucket Pequot Tribal Nation and the Mohegan Indian Tribe that are located within this nonattainment area."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: Doc 5 calls Connecticut's left-out lands \"tribal portions\"; Doc 3 says the Coachella Valley's state-requested Extreme reclassification left \"Indian country\" unreclassified. A solver who does not link the two terms answers Greater Connecticut alone; the gold adds Coachella Valley."
+}

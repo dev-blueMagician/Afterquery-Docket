@@ -1,0 +1,53 @@
+{
+  "bundle": "aq-05049",
+  "corpus_sha256": {
+    "docs/Docusign-Q1-FY2026-Earnings-Release.txt": "820d47fe61e093793aee6a76343202cc0f4ba91e2c0a9bd85217ca1880618039",
+    "docs/Docusign-Q3-FY2025-Earnings-Release.txt": "9eb7f3b9fd3181540ac92a2236e5e99f4fdef4d08f9d0d5b77acb9264007b524",
+    "docs/Docusign-Q3-FY2025-Quarterly-Report.txt": "d790ceeca6d6e2657e833e6f7fa3cf25f8dcb3dbd7961d7d86acb05f2c26d1da",
+    "docs/Docusign-Q4-FY2025-Earnings-Release.txt": "ef50493a8c711f6d374cb52b586d14334c9e2b803558fb21debc65b237c4251e",
+    "docs/Paylocity-Holding-Q1-FY2025-Earnings-Release.txt": "91b2a2efd923cfc0ef28a7e9e70c9b631a488007262d058babdfa729e94252bb",
+    "docs/Paylocity-Holding-Q2-FY2025-Earnings-Release.txt": "2af4f60ed8913095ebfa6462eee474cb58d7f31de78056569161cddad1f15547",
+    "docs/Paylocity-Holding-Q3-FY2025-Earnings-Release.txt": "64007a34ecc8f691668561f0ec09cc0b364c60d8d065325e5f6e63bc8cae9bf1",
+    "text/D01.txt": "b3a9b9d96d2dcf856e972109d0894bb3473dd14cd3fc86f2878439f4242b4660",
+    "text/D02.txt": "93e230246a32d26c99c72cd3dd037fca7664a260cb30e5cee2fc7a172cecf5b6",
+    "text/D03.txt": "405053788991f314a448943003f5a98101f3a72b09875f87b3cdeb75e2a38b2f",
+    "text/D04.txt": "dff88f97ce4539eb83cdf2f5c16c9f30b6822f162bb71d57f7e610f2c4836d9f",
+    "text/D05.txt": "afdeee23f2173a74ea68846ecc8c16f57ed5eba5dad44653e9b370531e69e1c2",
+    "text/D06.txt": "c32b02e8225b772562bab12ac9ac513d400418628b34fd28e87f3c8526669bc0",
+    "text/D07.txt": "ce0877b1fc9280c87fd09005145244497b101986b61178dc6a720faf2f2dd1ca",
+    "text/manifest.json": "5d95e0e92ee47ef185d980ee6bef2b2648dc9947d58836758b3f5b8e48277e26"
+  },
+  "difficulty_target": "hard",
+  "form_sha256": "6d92ecd9be6f3efbd44e649c2e1712525cf928568ee7b909edbabd9fa8654476",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "hard",
+    "documents": "D01, D02, D03",
+    "id": "q01",
+    "levers": "Calculate across documents; Scatter the pieces",
+    "origin": "claude",
+    "revision": "0",
+    "status": "draft",
+    "tags": "Cross-document join; Temporal alignment"
+  },
+  "question_id": "q01",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "$816.3 million",
+    "components": "- c1: $816.3 million",
+    "evidence": "- D02 (statement of operations, column header) [c1]: \"||Three Months Ended October 31,||Nine Months Ended October 31,||\"\n- D02 (statement of operations, units and years) [c1]: \"|(in thousands, except per share data)|2024|2023|2024|2023|\"\n- D02 (statement of operations) [c1]: \"|Provision for (benefit from) income taxes|9,151|(2,971)|(804,340)|17,198|\"\n- D01 (statement of operations, column header) [c1]: \"||Three Months Ended April 30,||\"\n- D01 (statement of operations, units and years) [c1]: \"|(in thousands, except per share data)|2025|2024|\"\n- D01 (statement of operations) [c1]: \"|Provision for income taxes|1,703|2,833|\"\n- D03 (statement of operations) [c1]: \"|Provision for (benefit from) income taxes|9,151|(2,971)|(804,340)|17,198||\"\n- D03 (Note 13, Income Taxes) [c1]: \"Included in the tax benefit for the nine months ended October 31, 2024 was a release of a net valuation allowance\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: hook h2, a printed number over a derived one; target hard. Sentence and answer carried word for word from sketch i10 (origin claude, independent question-author agent, 2026-10-14). Local strong-solver screen on this exact sentence: 3/3 right (record in notes/sketches/i10.md; each solver found the $837.7M release and set it aside because the question says \"total\"). User quick test 2026-10-14: survived (\"1 2 failed, 3 4 survived\"; this was item 3). Platform difficulty result pending.\n- Dependency plan: Q2 FY2025 tax line = nine-month line (D02/D03) less the Q3 provision (D02/D03) less the Q1 FY2025 provision (D01's prior-year column): -804,340 - 9,151 - 2,833 = -816,324K, a benefit of $816.3M.\n- Universe: not applicable (single derived amount).\n- Necessity: D01 is the sole source of the Q1 FY2025 provision (2,833); D02/D03 print only Q3 and nine months, D04 only Q4 and the year. D02 and D03 print the same statement row (ticked as one \"or\" group, which the Document check removes together); D04 can rebuild nine months (FY - Q4) but not Q3. Delete-and-guess: without D01, a solver reaches 813.5 (six months) or the 837.7/831.4 lure; without D02 and D03, D01 + D04 give only Q2 + Q3 (807.2). Closed-book: the reported Q2 FY2025 story is the $837.7M release (the lure); exact recall of 816.3 is a stated risk.\n- Selected-lever checks: lure counterfactuals 837.7 (D03 Note 13) and 831.4 (D03 MD&A) differ from the gold; six-month route 813.5, nine months 804.3, Q2 + Q3 807.2, wrong D01 column (1,703 taken as Q1) 815.2 all differ at one decimal. Rounded-prose route (804.3 + 9.2 + 2.833) still gives 816.3.\n- Targeted failure modes: declared Part vs total -> $837.7M (the printed release, recomputed: it is the printed figure). Not declared: Figure that must be computed (813.5, forgetting Q1), not observed in the screen.\n- Calculation verification: script (scratchpad calc_aq05049.py) route A 804,340 + 9,151 + 2,833 = 816,324; route B Q2 pre-tax 180,054 - 71,574 - 36,593 = 71,887 and Q2 net income 984,394 - 62,423 - 33,760 = 888,211, 888,211 - 71,887 = 816,324. Units: $ thousands; benefit reported positive as the question asks.\n- Semantic/ID/overview probes: \"income tax\", \"tax benefit\", \"benefit from income taxes\", \"valuation allowance\", \"discrete\", \"July 31, 2024\", \"three months ended July\", \"second quarter\" across all seven texts; only D03 speaks of Q2 tax, and only of the release. The bundle overview does not state Q2 tax.\n- Precision/readings: \"total income tax benefit\" read as the discrete release -> 837.7 (or 831.4), rejected by \"total\" and by Note 13's \"Included in the tax benefit for the nine months\"; D03 L891 uses \"income tax benefit\" for the period's net line. \"Total\" read as gross benefit items before the ordinary provision -> only the 837.7 release is identifiable; same words reject it. The form's \"One defensible answer\" check could still see form solvers take 837.7.\n- Completeness: capture complete, no gaps; every relevant passage read.\n- Style/set review: one ask, 23 words; with q02 (Docusign buybacks) no shared inputs or answer path.\n- Warnings answered: strong-screen WARN expected (local 3/3 right; the user chose to test it after the quick test).",
+    "necessary documents": "- D01: Answer component\n- D02 or D03: Answer component",
+    "platform validation": "",
+    "question": "What was Docusign's total income tax benefit for its fiscal quarter ended July 31, 2024, in millions of dollars to one decimal place?",
+    "reasoning": "Step 1. Source input (Doc 3, Condensed Consolidated Statements of Operations, \"Nine Months Ended October 31,\" 2024 column, row \"Provision for (benefit from) income taxes\"): (804,340) in thousands of dollars; the parentheses mark a net benefit of 804,340 for the nine months ended October 31, 2024, the first three quarters of fiscal 2025.\nStep 2. Source input (Doc 3, same row, \"Three Months Ended October 31,\" 2024 column): 9,151 in thousands of dollars, a provision (tax expense) for the third quarter of fiscal 2025.\nStep 3. Source input (Doc 1, Condensed Consolidated Statements of Operations, \"Three Months Ended April 30,\" 2024 column, row \"Provision for income taxes\"): 2,833 in thousands of dollars, a provision for the first quarter of fiscal 2025. The 2025 column (1,703) is the first quarter of fiscal 2026, a different period.\nStep 4. Calculation (Doc 1 and Doc 3): the three quarters' tax lines add up to the nine-month line, so the second quarter (May 1 to July 31, 2024) carries the nine-month benefit plus the two provisions recorded in the other quarters: 804,340 + 9,151 + 2,833 = 816,324 thousand dollars of benefit (derived; no document prints this quarter on its own).\nStep 5. Final answer (Doc 1 and Doc 3): 816,324 / 1,000 = 816.324 million dollars of total income tax benefit for the quarter ended July 31, 2024; the question asks for one decimal place, so the last two decimals drop, giving the gold answer.\nStep 6. Check (Doc 4): the income-tax note says the valuation-allowance release recorded in this quarter was included in the period's tax benefit as a discrete item, beside the tax on the year's ordinary income, so that release is one part of the quarter's line and the total in Step 5 answers the question.",
+    "targeted failure modes": "### Failure mode 1\nTrap: Part vs total\nHow a careless solver fails: Takes the wrong line item\n\nWhy these are traps: Part vs total: Doc 4's Note 13 records a $837.7 million discrete valuation-allowance benefit in the quarter ended July 31, 2024; careless solvers answer $837.7 million. It is one part: nine months less Doc 3's third and Doc 1's first quarters gives the total, $816.3 million."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "020c90c4c47e5bc69ede187837da3afc20e0fb7b13ae7dbb8f3fa5d6f7bb0ce2"
+}

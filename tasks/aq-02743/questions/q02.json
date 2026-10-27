@@ -1,0 +1,68 @@
+{
+  "question": "An HHS-funded county has 50,000 or more people and 15 or more employees. How many days after HHS's interim rule took effect does any federal rule first require it to meet WCAG 2.1?",
+  "number_of_asks": 1,
+  "gold_answer": "354 days",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 4, DATES): HHS's interim rule is effective May 7, 2026.\n\nStep 2. Source input (Doc 4, SUMMARY): for recipients of HHS assistance with fifteen (15) or more employees, the date for meeting the web accessibility requirements, which adopt WCAG 2.1, is extended from May 11, 2026, to May 11, 2027.\n\nStep 3. Source input (Doc 3, SUMMARY): for State and local government entities with a total population of 50,000 or more, the Justice Department's compliance date for the same WCAG 2.1 requirements is extended from April 24, 2026, to April 26, 2027.\n\nStep 4. Source input (Doc 3 and Doc 4, coverage): Doc 4 says the Justice Department's rule applies to State and local government entities whether or not they receive Federal financial assistance, and that some recipients of HHS assistance are also public entities under that rule. The county is one of them, so two federal rules require it to meet WCAG 2.1, and April 26, 2027 comes before May 11, 2027: the first date on which any federal rule requires it is the Justice Department's.\n\nStep 5. Calculation (Doc 3 and Doc 4): 12 months of 30 days each, in days: 12 × 30 = 360.\n\nStep 6. Calculation (Doc 3 and Doc 4): a common year is 5 days longer than that, and no leap day falls between May 7, 2026 and May 7, 2027, so that year has, in days: 360 + 5 = 365.\n\nStep 7. Final answer (Doc 3 and Doc 4): April 26, 2027 falls 11 days before May 7, 2027, so the days from May 7, 2026 to April 26, 2027 are: 365 - 11 = 354.",
+  "answer_components": [
+    "354 days"
+  ],
+  "evidence": [
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Effective date: This IFR is effective May 7, 2026."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "The compliance date for recipients with fifteen (15) or more employees is extended from May 11, 2026, to May 11, 2027."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "DOJ's rule applied to State and local government entities covered by title II of the ADA, regardless of whether those entities also receive Federal financial assistance."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "There is significant overlap between covered entities under both rules since some recipients of financial assistance from HHS are also public entities governed by title II of the ADA."
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "The compliance date for State and local government entities with a total population of 50,000 or more is extended from April 24, 2026, to April 26, 2027."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Conditional filter"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Picks the wrong entity or section"
+    },
+    {
+      "trap": "Document convention",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: Doc 4's SUMMARY sets May 11, 2027 for such recipients, but the county is also a Doc 3 public entity due April 26, 2027; HHS's date gives 369 days. Document convention: Doc 4 is dated May 11, 2026 but effective May 7; its date gives 350."
+}

@@ -1,0 +1,48 @@
+{
+  "question": "What was RadNet's cash interest expense for the fourth quarter of 2023, after interest-rate swap settlements and interest earned on its cash? Give millions of dollars to the nearest million.",
+  "number_of_asks": 1,
+  "gold_answer": "-$3 million",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 4, the CFO's full-year 2023 remarks): after adjusting for payments to and from swap counterparties and \"net of interest earned on our cash balance, net cash interest expense was $38.3 million in 2023\".\nStep 2. Source input (Doc 3, the CFO's third-quarter 2023 remarks): \"Cash paid for interest net of interest earned on our cash balance and interest rate swap payments received from our swap counterparties was $11.7 million for the three-month period ended September 30, 2023, and $41.7 million for the first nine months of 2023.\"\nStep 3. Calculation (Doc 3 and Doc 4): 38.3 - 41.7 = -3.4, the fourth-quarter 2023 figure in millions of dollars on the same basis (full year less the first nine months).\nStep 4. Final answer (Doc 3 and Doc 4): -3.4 million dollars to the nearest million is -3 million dollars, a net inflow: in that quarter swap receipts and interest earned on cash exceeded cash interest paid. Decoy (Doc 4): the fourth-quarter \"Cash paid for interest\" of $5.6 million excludes payments to and from swap counterparties and is not net of interest earned, so it is a different measure.",
+  "answer_components": [
+    "-$3 million"
+  ],
+  "evidence": [
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "net of interest earned on our cash balance, net cash interest expense was $38.3 million in 2023"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Cash paid for interest net of interest earned on our cash balance and interest rate swap payments received from our swap counterparties was $11.7 million for the three-month period ended September 30, 2023, and $41.7 million for the first nine months of 2023."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Look-alike measure: Doc 4's fourth-quarter \"Cash paid for interest\" of $5.6 million excludes swap payments and is not net of interest earned; careless solvers answer $6 million. The asked measure is the full-year $38.3 million (Doc 4) less nine months' $41.7 million (Doc 3): -$3 million."
+}

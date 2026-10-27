@@ -1,0 +1,76 @@
+{
+  "question": "How many coal-ash landfills are in States whose CCR-program permits carry no set expiry?",
+  "number_of_asks": 1,
+  "gold_answer": "16 landfills",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 3, Permit Requirements and Permitting Process): in Virginia \"The permit is issued for the life of the facility (through termination of postclosure care)\", so it has no set expiry. Virginia qualifies.\nStep 2. Source input (Doc 3, Virginia CCR Units and Resources): Virginia's disposal units include \"7 landfills\".\nStep 3. Source input (Doc 2, Permit Requirements and Permitting Process): in Wyoming the duration of \"CCR landfills renewal permits will be for the operating life of the facility through post-closure\", so the permit under the State's coal ash rules has no set expiry. Wyoming qualifies.\nStep 4. Source input (Doc 2, Wyoming CCR Units and Resources): Wyoming's disposal units include \"3 landfills\".\nStep 5. Source input (Doc 6, Guidelines for Permitting): in Wisconsin \"There is no expiration for an operating license or plan of operation approval\". The same passage has the plan of operation \"updated every 10 years\", which is a plan update, not a permit term. Wisconsin qualifies.\nStep 6. Source input (Doc 6, Wisconsin CCR Units and Resources): Wisconsin's units include \"6 landfills\".\nStep 7. Decoy check: Alabama's permit (Doc 5) is tied to the facility's design life but capped at a fixed number of years, and Louisiana's (Doc 4) is issued for a fixed maximum term although the facility must hold a permit for its active life. Both carry a set expiry, so their landfills are not counted.\nStep 8. Calculation (Doc 2 and Doc 3): landfills in Virginia and Wyoming: 7 + 3 = 10.\nStep 9. Final answer (Doc 2, Doc 3 and Doc 6): adding Wisconsin's landfills: 10 + 6 = 16.",
+  "answer_components": [
+    "16"
+  ],
+  "evidence": [
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "The permit is issued for the life of the facility (through termination of postclosure care)"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "VADEQ has identified 25 disposal units that are currently or have been used for disposal of CCR wastes (7 landfills and 18 surface impoundments) at 8 facilities in Virginia."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "The permit duration for new or existing CCR surface impoundments and CCR landfills renewal permits will be for the operating life of the facility through post-closure"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "WDEQ has identified 19 disposal units that are currently or have been used for disposal of CCR wastes (3 landfills and 16 surface impoundments) at 4 facilities in Wyoming."
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "There is no expiration for an operating license or plan of operation approval"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "WDNR has identified 9 CCR units (6 landfills and 3 surface impoundments) at 6 facilities in Wisconsin."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Look-alike measure: Doc 6 prints a ten-year figure for Wisconsin, but it is the interval for updating a landfill's plan of operation; the licence has \"no expiration\". Reading it as a permit term drops Wisconsin's 6 landfills and gives 10. The gold counts Virginia 7, Wyoming 3, Wisconsin 6: 16."
+}

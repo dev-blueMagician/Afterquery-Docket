@@ -1,0 +1,43 @@
+# aq-02743 - cross-document hooks
+
+Source facts that combine into a world answer, found before wording. Quotes come from `text/Dnn.txt`; the map is
+navigation. Three reads fed this file on 2026-10-10: the caller (D03 and D04 in full, keyword passages elsewhere) and
+two independent question-author runs (A numeric, B rule/scope), each reading all seven texts without the caller's ideas.
+
+## Structure of the bundle
+
+- Only D03 (DOJ title II extension) and D04 (HHS section 504 extension) join. D04 discusses D03; D03 never mentions
+  HHS. No pair among D01, D02, D05, D06, D07 supports a fair cross-document question (all three reads agree).
+- Each rule prints only its own compliance dates, in its SUMMARY, in digits near the start. Every cost and benefit
+  figure in both rules sits past character 57,000, where the form's reasoning number check does not read.
+- Necessity constraint found at sketch time: the 2024 rules' original dates are public, and three of the four new
+  dates equal the original plus exactly one year. D04 says DOJ delayed "by one year", so DOJ's small-tier date
+  (April 26, 2028) can be rebuilt without D03. Only DOJ's larger-tier date (April 26, 2027, 367 days after April 24,
+  2026) needs D03. D03 never mentions HHS, so any HHS date or HHS effective date needs D04.
+- Lazy-route constraint: gaps between the four new dates are 14, 15, 351, 366 and 380 days, and most equal a plain
+  pairing (headline dates 15; small with small 14; DOJ's two dates 366; earliest with latest 380).
+- Neither rule reprints the 2024 definitions ("total population", "special district government" are in 28 CFR 35.104,
+  cited at D03 L63), so only entities whose tier the question states are safe. The one definition the bundle does
+  print is D04's "Federal financial assistance" (L260).
+
+## Hooks
+
+| Hook | Source inputs and locations | World fact/possible ask | Selected lever(s) | Applicable decoy/counterfactual | Source risks | Decision |
+| --- | --- | --- | --- | --- | --- | --- |
+| h1 | D03 L25 tiers by population (April 26, 2027 / April 26, 2028); D04 L26-27 tiers by employees (May 11, 2027 / May 10, 2028) | A body in DOJ's earlier tier and HHS's later tier has deadlines 380 days apart; neither rule says so | Calculate across documents; Who belongs where | Same-size pairings give 15 and 14 | "At most" is answered by earliest-with-latest without the insight | i01, held, not offered |
+| h2 | D03 L28 effective April 20, 2026; D04 L30 effective May 7, 2026; old and new dates in both SUMMARYs | Between the two effective dates a dual-covered body's DOJ date was extended and its HHS date was not: 350 days apart in the larger tiers | Same series, right edition | Both original 17; both extended 15 | One judgment; D04 itself says DOJ acted first; D04's operand is the public 2024 date | i06, not tested; alternate to q02 only (i02 dropped: its DOJ date was rebuildable) |
+| h3 | D03 L312 and fn 82 L318 (longer-dates benefits $4,509.5 million, costs $3,249 million; body "$1.3 billion"); D04 Tables 1 and 3 annualized rows L354, L368 (IFR column 820.3, 1,061.0), L328 (Baseline = initial timeline), L340 (prose pair 934.7, 1,265.6), L374 ($90.2 million) | Each rule's annualized benefits minus costs on the delayed schedule; DOJ's is 524% of HHS's | Calculate across documents; Exact table vs rounded prose | HHS prose pair 381%; DOJ rounded 540%; $90.2 million 1,397% | All operands deep (four number-check lines); D03 states no dollar year, D04 2022 dollars; D04's prose offers a second route to the HHS figure | i03 -> q01; quick test too easy 2026-10-10; closed |
+| h4 | D04 L30 (May 7, 2026); D03 L25 (April 26, 2027); D04 L143 (dual coverage) | A large HHS-funded county's first binding deadline is DOJ's, 354 days after HHS's rule took effect | Scatter the pieces; Calculate across documents | HHS's own date 369; publication date 350; "one year" 352 | Both documents clearly needed, but every tier fact is in the question | i04 survived the quick test 2026-10-10 -> q02; rev 0 blocked by the form ("One defensible answer"); rev 1 states the condition, checked |
+| h5 | D04 L49 (rule binds recipients of Federal financial assistance), L260 (definition excludes "a direct Federal procurement contract"); D04 L26; D03 L25 (special district April 26, 2028) | Of two special districts, the grant holder is bound first by HHS (May 11, 2027), the procurement-only one by DOJ alone (April 26, 2028): 351 days apart | Who belongs where; Calculate across documents | Any HHS money = recipient gives 0; DOJ only gives 0 | D03's date rebuildable from public date plus "one year"; the exclusion is also general legal knowledge and the question's contrast points at it | i05; quick test too easy 2026-10-10; closed |
+| h6 | D04 L162-166 (NACo: 18 responses, 3 / 12 / 3 by population; asks July 1, 2027 for all); D03 L25 | DOJ's larger-tier date is 66 days before NACo's requested date; 15 of 18 respondents got less time than asked | Mentions it vs does it | HHS's May 11, 2027 (51 days) | Two lookups and a gap; the count is a small integer and D03 is not strictly needed for it | not sketched |
+| h7 | D03 SUMMARY ("one year"), exact dates; D04 likewise | Extensions are 367, 366, 365 and 366 days; the larger-tier gap narrowed from 17 to 15 days | Exact table vs rounded prose | "Both one year" gives 0 | Exact dates sit beside the "one year" prose; small integers | not sketched |
+| h8 | D06 L196 ("at least 48,724 out of 90,835 local government jurisdictions have a population of less than 50,000"); D03 tiers, 53% small-entity share | Count of jurisdictions in DOJ's later tier; savings per small jurisdiction | Calculate across documents | not applicable | The documents never connect the count to the web rule; "at least"; special and school districts counted differently; FCC boilerplate is widely repeated | rejected |
+| h9 | D03 $2.775 billion / $395 million (fn 88: 3% $2,355 million / $276 million); D04 $803.1 million / $114.3 million (3%: $796.0 million / $93.3 million) | Sum or ratio of the two rules' savings | Calculate across documents | not applicable | Sum double counts (D04 L143, fn 75: overlapping entities); ratio is two lookups and one operation | rejected |
+| h10 | D03 and D04 comment deadlines and effective dates | 63 / 56 / 60 days against the "60-day" label | Exact table vs rounded prose | printed label | Label-against-count shape, quick-test too easy on aq-02626 | rejected |
+| h11 | Letters both rules describe (higher-education associations, SBA Advocacy; others in one rule only) | Which submissions both departments cite | Who belongs where | DOJ-only and HHS-only letters | List intersection; "how many asked for delay" is not countable (unnumbered K-12 associations) | rejected |
+| h12 | D01 and D02 (grant notices: cost share, award caps, periods) | Combined cost for an invented joint applicant | Calculate across documents | not applicable | The documents never connect the programs | rejected |
+| h13 | Single-entity "first deadline" asked as a date; special district with a stated large population; State agencies and universities | Which rule binds first | Who belongs where | not applicable | Answer comes from one document; "any special district government" against "50,000 or more" has an arguable second reading without the 2024 text; classification definitions not in the bundle | rejected |
+| h14 | D03 L25 (under 50,000: April 26, 2028); D04 L26-27 (May 11, 2027; May 10, 2028); D04 L143 | Two HHS-funded towns under 50,000 people that differ only in staff size first have to conform 351 days apart: HHS's date binds the larger-staffed one, DOJ's the smaller-staffed one (14 days before its HHS date) | Scatter the pieces; Calculate across documents | HHS only 365; DOJ only 0; later date each 14 | D03's date rebuildable from the public 2024 date plus "one year" | i07, held as q02's focused repair; quick test only |
+| h15 | D03 L25, L28 (April 26, 2027; effective April 20, 2026); D04 L26, L30 (May 11, 2026 -> May 11, 2027; effective May 7, 2026); D04 L143 | HHS's rule moved the county's first federal requirement from HHS's May 11, 2026 to DOJ's April 26, 2027: 350 more days, not the 365 of HHS's own extension | Same series, right edition; Calculate across documents | HHS's own extension 365; DOJ's superseded date as the start 367 | The start date is the public 2024 HHS date | i08 -> q03: rev 0 measured Easy (Low 3/5, Run 1, Version 90fd80); rev 1 = the four tier combinations as one total (350 + 0 + 365 + 352 = 1,067), quick test too easy 2026-10-11; closed for Medium. File restored to rev 0 |
+
+A short valid calculation or ID join is eligible. Prior failures suggest tests and priority, not a universal veto.

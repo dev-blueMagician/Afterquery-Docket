@@ -1,0 +1,68 @@
+{
+  "question": "At 26 percent of the lowest total allowable catch under ICCAT's North Atlantic swordfish management procedure, what percentage of 2025 U.S. landings would the U.S. quota be, to the nearest percent?",
+  "number_of_asks": 1,
+  "gold_answer": "146%",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 3, North Atlantic swordfish section): the management procedure provides for 11 possible North Atlantic-wide TACs, ranging from 4,764 mt ww to 17,628 mt ww. The lowest is 4,764 mt ww.\n\nStep 2. Source input (Doc 3, same passage): the United States is allocated approximately 26 percent of the TAC, and the document applies that share as a multiplier of 0.26 to a whole-weight TAC; for its highest case it multiplies 17,628 mt ww by 0.26 to give 4,583.3 mt ww.\n\nStep 3. Calculation (Doc 3): U.S. quota at the lowest TAC: 4,764 × 0.26 = 1,238.64 mt ww.\n\nStep 4. Source input (Doc 6, North Atlantic swordfish section): in 2025, U.S. landings of North Atlantic swordfish were 637.7 mt dw. Doc 6 reports no South Atlantic swordfish landings in 2025.\n\nStep 5. Source input (Doc 6 and Doc 3, supplementary information): swordfish weight converts from dressed to whole weight with the factor 1.33.\n\nStep 6. Calculation (Doc 6 and Doc 3): 2025 landings in whole weight: 637.7 × 1.33 = 848.141 mt ww.\n\nStep 7. Calculation (Doc 3 and Doc 6): the quota as a percentage of those landings: 1,238.64 / 848.141 = 146%.",
+  "answer_components": [
+    "146%"
+  ],
+  "evidence": [
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "11 possible North Atlantic-wide total allowable catches (TACs) that range from 4,764 mt ww to 17,628 mt ww"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "the United States continues to be allocated approximately 26 percent of the TAC"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "17,628 mt ww * 0.26 = 4,583.3 mt ww"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "The conversion factor between dw and ww for swordfish is 1.33"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "In 2025, U.S. landings of North Atlantic swordfish, which include landings and dead discards, were 637.7 mt dw (2,514.9 mt dw less than the 2025 adjusted quota)."
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "In 2025, there were no landings of South Atlantic swordfish by U.S. fishermen"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Unit normalization"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Unit or basis",
+      "how_a_careless_solver_fails": "Rounding, scale or sign"
+    }
+  ],
+  "why_these_are_traps": "Unit or basis: Doc 3 states TACs in whole weight, so 26 percent of 4,764 mt ww is 1,238.64 mt ww, while Doc 6 gives 2025 landings as 637.7 mt dw. Dividing them unconverted gives 194%. The gold first converts the landings by 1.33 to 848.141 mt ww."
+}

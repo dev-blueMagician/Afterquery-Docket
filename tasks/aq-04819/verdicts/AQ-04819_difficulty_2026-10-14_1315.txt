@@ -1,0 +1,376 @@
+AQ-04819 · Academic papers — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-04819
+Saved: 2026-10-14 13:15 (local time)
+Bundle: Academic papers · 10 documents · 94,363 prompt tokens
+Run read: Run 1, the latest
+Attempts read: 4
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 16 runs left · 13 of 60 runs used in the last 24 h (all tasks)
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 3 attempts right
+
+High model: two solvers try up to 3 times each. Ready when both get it wrong at least once and not every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Drop the parent qualifier and instead ask something that requires scanning all 21 rows, e.g. 'How many minors (under 18) participated across all studies in the review that collected data from under-18s?', which requires identifying the Pitt, Pitt and Thomas rows and summing 152 + 61 + 111 rather than being pointed at two studies. Why: The qualifier 'in which their parents were also participants' acts as a strong pointer: within Document 5's table of 21 studies, exactly two rows mention parents ('152 parent/child dyads' and '59 family groups (at least 1 parent and 1 adolescent)'), so the phrase effectively names the two studies. The phrase 'children and teenagers' further mirrors the two age ranges (8–16 and 14–18), telegraphing that one number comes from each study. From a run (High model · attempt 1): Reached 213 via the direct route: Document 5's table gives 152 children in the Pitt dyad study, and Document 9 states 61 adolescents in the 59 family groups; 152 + 61 requires no synthesis beyond addition. Doc 5
+
+Structure · Which documents it needs, and how they combine
+----------------------------------------------------------
+
+- 2 Remove the explicit child count from the reachable surface, or make the required quantity one that is not printed anywhere, e.g. ask for the total number of participants (children plus adults) across both parent-involving studies, which forces the solver to work out 304 + 120 from dyad/family-group structure rather than read off 152. Why: The child count for the first study is a verbatim single lookup: Document 5's results table states 'Mixed method study of 152 parent/child dyads (children 8 to 16-years old)', so 152 children is handed to the solver directly. The only cross-document step is adding the adolescents from the second Pitt study, and Document 9 states 'A total of 59 parents and 61 adolescents were interviewed' in plain text. The intended combination (152 + 61 = 213) therefore reduces to two direct lookups plus trivial addition. From a run (High model · attempt 1): Reached 213 via the direct route: Document 5's table gives 152 children in the Pitt dyad study, and Document 9 states 61 adolescents in the 59 family groups; 152 + 61 requires no synthesis beyond addition. Doc 5 Doc 9
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 1 (Oct 14, 2026, 12:02 PM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+1 run
+
+------------------------------------------------------------------------
+Run 1 · Too easy · Result the gate uses
+Oct 14, 2026, 12:02 PM · Version 833345 (current) · Low — · Medium — · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: first run
+
+Solver summary: Run 1 · Too easy · 3 of 3 right
+Every solver attempt got it (3 of 3).
+
+Your answer: 213
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: Note: where it went wrong
+
+Final answer: About 660 children and teenagers took part—specifically, roughly 612 in one study and 48 in another, for a combined total of about 660 across the studies that also included parents. | Your answer (gold): 213
+
+Where it went wrong: Without documents, Low model guessed ~660 from general knowledge, showing the answer is not retrievable without the corpus but also that the in-corpus path is short once the two Pitt studies are located.
+
+Full answer
+-----------
+
+About 660 children and teenagers took part—specifically, roughly 612 in one study and 48 in another, for a combined total of about 660 across the studies that also included parents.
+
+Reasoning
+---------
+
+We need answer: "How many children and teenagers took part in the studies included in the systematic review of Internet gambling marketing in which their parents were also participants?" Need identify specific systematic review of Internet gambling marketing including studies where parents also participants, and number of children/teenagers took part in those studies.
+
+Need recall knowledge about systematic review on Internet gambling marketing, maybe by Parke et al.? Or a specific review that included studies with parents and children. Let's parse question carefully.
+
+Question asks: How many children and teenagers took part in the studies included in the systematic review of Internet gambling marketing in which their parents were also participants?
+
+This sounds like a systematic review that included several studies, some involving only youth, some involving parents too. They ask specifically the total number of children and teenagers who took part in the studies included in the review in which their parents were also participants.
+
+We need identify the review and then sum participants in those particular studies.
+
+Let's recall systematic reviews on internet gambling marketing and youth. One prominent review: "Marketing of gambling products to young people: a systematic review" maybe by Pitt et al. 2016? Or "The impact of gambling advertising on children and young people: a systematic review" by Ste-Marie? Or "Internet gambling marketing and its impact on children and adolescents" maybe a 2022 review?
+
+Actually there is a well-known systematic review: "Gambling marketing and advertising on the Internet: a systematic review" maybe not.
+
+Let's think: The question mentions "the studies included in the systematic review of Internet gambling marketing in which their parents were also participants". This sounds like there were two studies within the review that included parents alongside children/teenagers. Need total children/teenagers in those studies.
+
+Perhaps the review is by King, Delfabbro, and others? Let's recall specific study numbers.
+
+There's a 2016 study by Pitt, Thomas, Bestman, Daube, and Derevensky: "Factors that influence children to begin and continue playing: an exploratory study of parents' perceptions of children's gambling" no that's qualitative with parents.
+
+But the question references "systematic review of Internet gambling marketing" that included studies where parents were also participants. Let's recall a 2029? No need be recent.
+
+Let's search mental database for systematic review tables listing included studies with sample sizes and populations. Maybe the review is "A systematic review of the impact of internet gambling marketing on youth" published in 2021? In that review, they might have included studies like:
+- Derevensky et al. 2010? No.
+- King et al. 2010?
+- Pitt et al. 2017?
+- Hayer & Meyer?
+
+But need be precise number.
+
+Let's recall a specific review article: "Exposure to gambling advertising and promotion in social media, and the effects on gambling behaviour and attitudes: a systematic review" maybe not including parents.
+
+Another possibility: The question comes from a specific exam or quiz referencing a figure/text: "The systematic review included 12 studies... In five studies, only children/teenagers participated (total n=...?). In two studies, parents were also participants, with a total of X children and teenagers..." The question asks "How many children and teenagers took part in the studies included in the systematic review... in which their parents were also participants?" So likely there's a clear number like 5,447? Or 2,000?
+
+We need derive likely answer.
+
+Let's recall the 2016 systematic review by Parke, Wardle, Rigbye, and Parke? Actually Parke A, Parke J. "Transforming sports betting into a mainstream leisure activity: Changing perceptions of sports betting..." Not that.
+
+Let's systematically think about known qualitative and quantitative studies involving parents and children in gambling marketing research.
+
+Studies that include both parents and children:
+1. Pitt, H., Thomas, S. L., Bestman, A., Daube, M., & Derevensky, J. (2016?). "Factors that influence children to begin, continue, and cease playing on electronic gambling machines..." Wait that's about electronic gaming machines and parents? Actually there is a study: "What do children observe and learn from televised gambling advertisements? A qualitative study among Australian children" by Pitt, Thomas, Bestman, Daube, Derevensky, 2016? That study included 48 children aged 8-16 and maybe parents? Let's check mental: The study interviewed children about gambling ads. Maybe parents were present? Not clear.
+
+Another study: "Parental attitudes and behaviors regarding youth gambling" by Campbell, Derevensky, Meerkamper, etc. But that's not about marketing specifically.
+
+But the review is about "Internet gambling marketing". So studies might examine exposure to online gambling ads among youth and parents.
+
+There is a study by King, Delfabbro, Zwaans, and Kaptsis? Or "Adolescent exposure to gambling promotions during televised sport" maybe includes parents?
+
+Let's recall a specific systematic review published in 2029? No.
+
+Actually, I think the answer might be "3,933" but I need be closer.
+
+Let's parse the wording exactly: "How many children and teenagers took part in the studies included in the systematic review of Internet gambling marketing in which their parents were also participants?"
+
+This sounds like in the review, they listed studies and summed participants. For studies with only youth, maybe total was 9,000. For studies with parents also, maybe total youth was 2,000. But we need precise.
+
+Perhaps the review is "Internet gambling advertising and marketing: a systematic review of its effects on youth and adults" published in Current Addiction Reports? Let's imagine its table of included studies.
+
+We need answer with one number. Let's recall from literature: A 2027 systematic review? Hmm.
+
+Given I don't have direct access, but I can try to recall specific numbers from known study sample sizes involving parents and youth together in internet gambling context.
+
+Study 1: "Parent and adolescent perceptions of gambling advertising" maybe sample of 600 adolescents and 600 parents?
+
+Study 2: "Family influences on youth gambling" maybe sample 1,000?
+
+But need "the studies included in the systematic review... in which their parents were also participants" plural, so more than one study.
+
+Let's recall a 2011 study by Lee, Ho, and Loo? No.
+
+Let's think differently: Maybe the systematic review is from a specific report like "Gambling and young people: a review of the literature" but they mention internet marketing.
+
+Actually there is a well-cited systematic review: "The impact of gambling advertising on children and adolescents: a review of the empirical studies" by Monaghan, Derevensky, and Sklar (2008?). That review included studies up to 2008, listing sample sizes. But that was not specifically internet.
+
+Another one: "Marketing communications and problem gambling" maybe not.
+
+The phrase "Internet gambling marketing" sounds like a specific subsection. There might be a 2024 systematic review titled "Internet gambling marketing and its impact on children, adolescents, and young adults: a systematic review". In that review, they might have included 15 studies, divided into qualitative and quantitative. Among quantitative, some surveyed only youth, others surveyed youth and parents.
+
+If I recall seeing a table with study characteristics: Author, year, country, design, sample size, age range, etc. For example:
+- Abarbanel et al., 2016? No.
+- King et al., 2010: sample 1,000?
+- Derevensky and Gilbeau, 2015?
+- Pitt et al., 2016: 48 children.
+- Thomas et al., 2018: maybe 612 children?
+- Hing et al., 2015: maybe 1,000 adults?
+- Gainsbury et al., 2015?
+
+But need those where parents were also participants.
+
+Let's recall study by Pitt, Thomas, Bestman, Daube, Derevensky (2016) titled "Factors that influence children to begin, continue, and cease playing on electronic gambling machines for prizes." In that study, they interviewed parents? Actually they interviewed children and parents? The sample might have been 48 children and 48 parents? Or 60?
+
+There's also a study: "Children's perceptions of gambling advertisements on television and social media" maybe sample 48 children aged 8-16, with parents providing consent but not participating.
+
+But the question says "their parents were also participants" meaning parents took part in the study, not just consent.
+
+One well-known study is "Parental and peer influences on adolescent gambling: a qualitative study" but not marketing.
+
+However, maybe the review included surveys where both parents and adolescents filled out questionnaires about exposure to gambling ads. For instance, a study in Australia surveyed 1,000 parents and 1,000 adolescents?
+
+Let's try to recall specific numbers from a table I might have seen in a review article. The table might list:
+Study | Country | Participants | Age | Design | Key findings
+- Derevensky et al., 2007 | Canada | 1,200 adolescents | 12-19 | Survey
+- ...
+- King et al., 2010 | Australia | 1,000 adults? No.
+
+But we only care about those with parents.
+
+Perhaps there are exactly two such studies, with child/teenager sample sizes of 1,000 and 2,000? Or 612 and 1,000?
+
+Actually, I think I've seen a figure: "In total, 19,711 children and teenagers participated in the included studies; of these, 14,000 were in studies without parents..." No, that sounds too round.
+
+Wait, the question asks "How many children and teenagers took part in the studies included..." This sounds like they want a specific total summed across those particular studies. The wording "How many... took part in the studies... in which their parents were also participants?" If there are, say, three studies with 500, 600, and 400 children respectively, the answer might be 1,500.
+
+But I need be as accurate as possible.
+
+Let's recall a specific systematic review published in 2023 in the International Journal of Mental Health and Addiction? Or maybe in "Journal of Gambling Studies"?
+
+The phrase "Internet gambling marketing" might be in the title: "A systematic review of Internet gambling marketing and advertising" by Edson et al.? No.
+
+Let's search mental keywords: "systematic review internet gambling marketing youth parents participants". Maybe it's part of a larger report for a government, like the UK Gambling Commission's "Children and young people's exposure to gambling marketing" but that's not a systematic review with parents.
+
+Actually, there's a 2027 report? Not necessary.
+
+Given I need provide a single best answer. Let's try to recall if there's a specific number mentioned in a well-known review's results section: "In total, 11 studies were included, with a combined sample of 15,000 children and adolescents. Of these, seven studies included only children/adolescents (n = 9,000), and four studies included parents as well (n = 6,000)." But I need correct.
+
+Let's recall study sizes involving both parents and youth in gambling:
+- A study by Campbell, Derevensky, Meerkamper, and Cutajar (2011) surveyed 1,618 Canadian adolescents and 533 parents? Actually that study was about family influences on youth gambling: they surveyed adolescents and parents separately? Let's check mental: Campbell et al. 2011 in Journal of Gambling Studies? The sample was maybe 4,000 adolescents? Hmm no.
+
+Another study: "Gambling and problem gambling among adolescents in Belgium" maybe not.
+
+But specifically about "Internet gambling marketing" - maybe studies asked both parents and adolescents about their exposure to online gambling ads.
+
+Let's recall a study by King, Delfabbro, and Griffiths (2010) "The convergence of gambling and digital media: implications for gambling in young people". That study surveyed 1,277 young people? Or 1,000?
+
+Actually, King et al. (2010) conducted a study with 1,277 adolescents? Let's check mental: They surveyed adolescents about internet gambling and social media. The sample might have been 598? No, I think they had a sample of about 1,000 Australian adolescents aged 12-18?
+
+But parents?
+
+There's also a study by Derevensky (2012) "Teen gambling: understanding a growing epidemic" but not specific.
+
+Given all this ambiguity, I need provide the answer that sounds correct based on typical review totals.
+
+Wait, maybe the answer is indeed "612". How could I derive? Let's think of studies with parents:
+1. Pitt et al., 2016 qualitative study: 48 children (ages 8-16) and maybe 48 parents? Actually they might have interviewed 48 children and 24 parents?
+2. Another study: "The role of family in youth gambling" with sample of 1,000 adolescents and 1,000 parents?
+But not clear.
+
+Perhaps the review is specifically about "marketing of Internet gambling" and included only a few studies. Let's recall a 2015 review by Gainsbury, King, Delfabbro, Hing, Russell, Blaszczynski, and Derevensky: "Convergence of virtual and gambling activities: a review of the literature". Not that.
+
+Actually, there's a 2011 article: "Risk factors for adolescent problem gambling: a multivariate approach" but no.
+
+Let's approach systematically: The question mentions "the systematic review of Internet gambling marketing in which their parents were also participants". This sounds like in that review, they discuss studies, categorizing them by whether parents participated. They might have said: "Of the included studies, in five studies only children and adolescents took part (N = X), and in two studies parents also participated, totaling Y children and teenagers and Z parents."
+
+Thus the question asks specifically for the number of children and teenagers in those latter studies.
+
+If I can recall or logically deduce the total number in all studies and subtract those in youth-only studies, but I don't have those either.
+
+However, maybe the answer is visible in my training data: There's a specific table in a review article listing included studies with sample sizes:
+Study 1: n=4,000 adolescents
+Study 2: n=1,000 adolescents and parents
+Study 3: n=48 children
+Study 4: n=612 children and parents?
+Study 5: n=1,000 adolescents
+
+But I need be precise.
+
+Let's recall a study that surveyed both adolescents and parents about online gambling advertising: Maybe "Parent and child reports of exposure to gambling marketing" conducted in UK? In 2019, a study by Ipsos MORI for GambleAware surveyed 1,000 children aged 11-16 and also parents? Actually GambleAware commissioned surveys of young people (11-24) but parents?
+
+There's the "Young People and Gambling 2019" report in Great Britain, which surveyed 2,943 children aged 11-16. Parents were not surveyed.
+
+Another report: "Children and young people's exposure to online gambling marketing" maybe surveyed parents?
+
+Let's not overfixate.
+
+Given that I must answer with a specific number, I will guess that the total is 1,000? No, that's too round.
+
+But wait, the question asks "How many children and teenagers took part..." If it's plural studies, the answer might be summed like "3,415". But I need best guess.
+
+Actually, I think I've seen a systematic review table with these entries:
+- K. Thomas et al., 2018: sample 612 children aged 8-16 (maybe parents too?)
+- H. Pitt et al., 2016: sample 48 children
+- J. Derevensky et al., 2007: sample 1,200 adolescents
+- D. King et al., 2010: sample 1,277 adolescents?
+
+But not matching.
+
+Let's recall that in some reviews, they state: "The studies included a total of 15,000 participants, of which 9,000 were children and adolescents..." But not specific.
+
+Given all this, I think the answer might be "612 and 48, totaling 660"? Or "2,000"?
+
+Wait, there's a specific study: "What influences children's knowledge and understanding of gambling? A study of parents and children" maybe sample was 57 children and 57 parents?
+
+Let's recall a qualitative study by Pitt, Thomas, Bestman, and Daube (2017) "What do children observe and learn from gambling venues?" No.
+
+But actually, there is a study: "Children's understanding of gambling: a study of 8-16 year-olds" maybe sample 48.
+
+However, the question mentions "studies... in which their parents were also participants" plural, maybe two qualitative studies: one with 48 children and parents, another with 60?
+
+But I think I need to provide an answer with some explanation? The prompt says "Give your single best answer." So just the number, likely.
+
+Let's try to recall the specific review: "Internet gambling marketing and advertising: A systematic review of its impact on children and young people" maybe published in 2028? In the results they might say: "A total of 12 studies met the inclusion criteria. Seven were quantitative (N=... ) and five qualitative. Among the quantitative studies, three included only young people (N=4,500), while two included both young people and their parents (N=2,000 young people and 1,500 parents)." If so, answer might be 2,000.
+
+But I need be closer.
+
+Actually, I think there is a specific figure: In the review, 10,000 children and teenagers were included across all studies, with 7,500 in youth-only studies and 2,500 in studies with parents.
+
+Given I have low confidence, but I must provide one answer. Let's go with "approximately 2,500". But they ask "How many..." expecting precise.
+
+Let's recall study by King and Delfabbro 2016 "Early exposure to digital simulated gambling..." sample maybe 1,287? No, that study was about social casino games and included 1,287 adolescents? Actually there is a study: "Adolescent simulated gambling via social media and video games: an emerging problem" by King, Delfabbro, Kaptsis, and Zwaans? The sample might have been 1,287? Or 561?
+
+Wait, I think King et al. (2014) surveyed 1,287 adolescents aged 12-17 about social casino games. Did parents participate? Maybe they surveyed parents too? Not sure.
+
+There's also a study: "Predictors of social casino game migration to online gambling in young adults" but that's adults.
+
+Let's consider the context of "Internet gambling marketing". One study examined marketing exposure via social media among adolescents and parents? For example, "Exposure to gambling promotions and advertising on social media websites" by Gainsbury et al., 2015? That study surveyed 1,000 adults?
+
+This is too ambiguous.
+
+But maybe the answer is indeed "612". Let's check consistency: In one study, 612 children aged 6 to 13? Or 612 adolescents?
+
+Actually, there was a study in the UK: "The effect of gambling advertising on children and young people" maybe surveyed 612? No, that sounds like a specific sample size.
+
+Let's recall the study "Parent and child perceptions of gambling advertising on television" maybe had sample of 612?
+
+Wait, there's a study by Pitt, Thomas, Bestman, Daube, Derevensky (2016) "What do children observe and learn from televised gambling advertisements? A qualitative study among Australian children" with 48 children. Another study by the same authors in 2016: "Factors influencing children's knowledge of and attitudes toward electronic gambling machines" with maybe 48?
+
+But then there's a study: "Children's awareness and knowledge of gambling advertising: a study of Australian children" maybe 48?
+
+Thus qualitative studies have small samples.
+
+But the question asks "How many children and teenagers took part in the studies included in the systematic review... in which their parents were also participants?" If there are two qualitative studies with 48 each, that's 96, but parents also participated. That sounds like a specific total.
+
+However, there's also a quantitative study with larger sample.
+
+Actually, I recall seeing in a review table:
+- Study: Pitt et al. (2016) | Design: Qualitative | Sample: 48 children aged 8-16 | Parents? No, just children.
+- Study: Thomas et al. (2018) | Design: Mixed? | Sample: 612 children and parents?
+
+Let's check mental for Thomas et
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): 213
+
+Where it shortcut: Reached 213 via the direct route: Document 5's table gives 152 children in the Pitt dyad study, and Document 9 states 61 adolescents in the 59 family groups; 152 + 61 requires no synthesis beyond addition.Doc 5 Doc 9
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): 213
+
+Where it shortcut: Same shortcut: the 'parents were also participants' wording points straight at the two Pitt rows in Document 5, and Document 9 hands over the 61 figure explicitly.Doc 5 Doc 9
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): 213
+
+Where it shortcut: Again the two-lookup path: 152 from Document 5's table and 61 from Document 9's sample-characteristics sentence; no other documents or passages needed.Doc 5 Doc 9
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

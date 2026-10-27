@@ -1,0 +1,16 @@
+# aq-04776 - lean candidate sketches
+
+Current target: medium (user, 2026-10-14: "there is no slot for Easy Tier for this bundle, we should target medium and high"). Page at capture: Hard 0/5 · Medium 0/1 · Easy 2/0, so a run may start at the Medium or (if the one Medium slot closes) the High level. Measured platform success pending. Origin of every sketch: claude.
+
+Round 1, 2026-10-14. Sketch only: no question file, prepare or form until the user reports a quick-test survivor; a survivor's sentence and short answer go into the question file word for word.
+
+Search behind this round: the caller read all seven texts in full; two independent question-author agents searched the whole bundle (one from the SSVF pair, one from the other five texts). All three found no design with a step that no word in the question points at (hooks.md, h1-h12 and both authors' lists). The two sketches below are the only fair ones; both count zero unpointed steps.
+
+| ID | Sketch/source notes link | Hook | Ambiguity / necessity findings | Decision / next action |
+| --- | --- | --- | --- | --- |
+| i01 | [sketches/i01.md](sketches/i01.md) | h2: FY2026 top-of-range award ($22,942,240, D01) and its dated spending milestones (D01 II.C.5), placed at the publication of the next year's notice (Jan 6, 2026, D03): 15% due, $3,441,336 | Readings still possible: $9,176,896 (40%, the milestone of the quarter Jan 6 falls in; dated Mar 31, 2026); $0 (next notice assumed published in late December like D01's); $8,029,784 (35% payment cap); $3,473,076.90 (FY2027 top award). Delete-and-guess: without D03 the analogue date gives $0; without D01 unanswerable. Screen clean, 31 words. | QUICK-TEST FAILED (user, 2026-10-14: "both too easy for quick test", no panel): taken as answered by the easier solver; route unread (no capture) |
+| i02 | [sketches/i02.md](sketches/i02.md) | h6: hourly value of time applied by DEA's VA telemedicine estimate ($33.58, D02 Table 2) minus the rate in VA's apportionment PRA estimate ($32.66, D04): $0.92 | Readings still possible: VA higher by $9.55 (DEA's unloaded $23.11, which D02 calls a "proxy" for the opportunity cost); per-visit or per-claim figures. Delete-and-guess: neither rate recoverable from the other texts. Reviewer may call the comparison contrived. Screen clean after "To the nearest cent", 31 words. | QUICK-TEST FAILED (user, 2026-10-14: "both too easy for quick test", no panel): taken as answered by the easier solver; route unread (no capture) |
+
+Not offered (reasons in hooks.md): h1 (two lookups plus arithmetic), h3 (the lazy subtraction of the two floors equals the gold, so the rule step is untested), h4 (no single answer), h5 (public CFR, rulebook), h7 (date counts, ordering guessable), h8 (signer recallable), h9 (one of three, guessable), h10 (one document once the round is fixed), h11, h12; Author A's M1-M5; Author B's 14 candidates.
+
+Round 1 result (user, 2026-10-14, no panel): "both too easy for quick test". Taken as: the easier solver answered both. Both families (a date placed into a dated schedule; two lookups plus one operation, look-alike included) are closed here, and every hook not offered is either one of those families, a date count, guessable, or fails necessity or one-answer (hooks.md). No fair untested sketch remains; release recommended to the user 2026-10-14.

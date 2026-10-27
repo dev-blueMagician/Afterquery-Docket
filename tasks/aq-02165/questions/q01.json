@@ -1,0 +1,62 @@
+{
+  "question": "Under the 2017 compensation proposals, how many years before their MOD-funded pension age could MDP officers get employer pension top-ups?",
+  "number_of_asks": 1,
+  "gold_answer": "7 years",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 5, section 4.3 and paragraph 5.6): the 2017 proposals allow an employer-funded top-up to pension only from age 55, with that minimum age \"tracked 10 years behind state pension age\". So the earliest age for an employer-funded top-up is the member's State Pension age minus 10 years.\n\nStep 2. Source fact (Doc 2, paragraph 4.9, Defence Police Federation extract): the MOD funds MDP officers \"an effective pension age equal to three years below State pension age\". So the MOD-funded pension age of an MDP officer is the State Pension age minus 3 years.\n\nStep 3. Calculation (from Steps 1 and 2; Doc 2 and Doc 5): both ages are set from the same State Pension age, which cancels out of the gap: (State Pension age minus 3) minus (State Pension age minus 10) equals 10 minus 3. So the gap is 10 - 3 = 7 years.",
+  "answer_components": [
+    "7 years"
+  ],
+  "evidence": [
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "only to allow employer funded top up to pension from age 55 and for this to track 10"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "which the proposals increase to age 55, and this is tracked 10 years behind the State Pension Age"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "increasing the minimum age at which an employer can receive an employer funded pension top up to 55, tracked 10 years behind state pension age"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "The MOD has agreed to fund a lower NPA for MDP officers by paying for an effective pension age equal to three years below State pension age"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    },
+    {
+      "trap": "Figure that must be computed",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    }
+  ],
+  "why_these_are_traps": "Doc 2's DPF extract puts Home Office police NPA 60 beside the MDP rule: 60-55 = 5. Holding Doc 5's top-up age at 55 against State Pension age 67 gives 64-55 = 9. Both ages track State Pension age: gap 7."
+}

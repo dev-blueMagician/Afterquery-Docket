@@ -1,0 +1,60 @@
+{
+  "question": "Which submitters, if any, say that firms shy away from classing investors as wholesale clients on the strength of the investors' experience because of the risk to themselves? List them alphabetically.",
+  "number_of_asks": 1,
+  "gold_answer": "AIMA, Angel Loop",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 3, AIMA's answer on consent requirements): AIMA describes the sophisticated investor test as requiring engagement between the licensee and the client \"in relation to that client's financial products/services experience\", so it is the route that classes investors on their experience. AIMA then observes that \"some product issuers are reluctant to rely on the sophisticated investor test because of the compliance risk associated with the subjectivity of the assessment criteria\": issuers shy away from it because of a risk to themselves. AIMA qualifies (component c1).\n\nStep 2. Source input (Doc 5, Angel Loop's answer on the thresholds): Angel Loop says the test's subjective nature \"creates less certainty for AFS Licensees to know whether to accept retail investors based on experience\", and that \"from experience many AFS Licensees 'would not risk their license' or showed concerns with their ability to obtain insurance\". Licensees shy away because of the risk to their own licence and insurance. Angel Loop qualifies (component c2).\n\nDecoy: the Joint Associations describe the risk to accountants who sign certificates of an investor's wealth, not firms avoiding classification on experience, and they report growing use of the wholesale and sophisticated investor regimes. Archangel says there is no clear option for experienced investors but gives no risk to firms as the reason; Arnold Bloch Leibler and Euphemia call the test a reasonable basis; Aussie Angels ask for an education pathway that licensees would accept, without saying why they hold back now; Bell Potter describes its own experience certificate in use. None qualifies.\n\nFinal answer, alphabetically (Doc 3 and Doc 5): AIMA, Angel Loop.",
+  "answer_components": [
+    "AIMA",
+    "Angel Loop"
+  ],
+  "evidence": [
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "in relation to that client’s financial products/services experience"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Anecdotally, AIMA observes that some product issuers are reluctant to rely on the sophisticated investor test because of the compliance risk associated with the subjectivity of the assessment criteria."
+    },
+    {
+      "document_number": 5,
+      "component_number": 2,
+      "quote": "creates less certainty for AFS Licensees to know whether to accept retail investors based on experience"
+    },
+    {
+      "document_number": 5,
+      "component_number": 2,
+      "quote": "from experience many AFS Licensees “would not risk their license” or showed concerns with their ability to obtain insurance"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Document convention",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Document convention: Doc 3 calls the experience-based route \"the sophisticated investor test\" and ties it to the client's \"financial products/services experience\" in the same answer. Matching only the word \"experience\" gives Angel Loop alone; the gold adds AIMA, whose issuers avoid that test for \"compliance risk\"."
+}

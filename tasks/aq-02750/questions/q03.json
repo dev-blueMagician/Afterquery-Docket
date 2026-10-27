@@ -1,0 +1,81 @@
+{
+  "question": "Commenters on a CDC Ebola entry-suspension order asked it to let lawful permanent residents return. How many days before that order's comment deadline did comments close on the rule ending their exemption?",
+  "number_of_asks": 1,
+  "gold_answer": "14 days",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 6, SUPPLEMENTARY INFORMATION and responses to comments on previous orders): the order signed on June 21, 2026 came with a 15-day comment period, and the comments received in it are answered in Doc 6. In them, commenters asked CDC to reconsider allowing lawful permanent residents to return, as the original May 18, 2026 order had allowed. So the order they commented on is the June 21, 2026 order, not the July 13, 2026 order that Doc 6 prints.\n\nStep 2. Source input (Doc 6, response to that comment): CDC answered that the removal of the exemption for lawful permanent residents resulted from amendments to 42 CFR 71.40(f). The rule ending the exemption is the interim final rule that amended that paragraph.\n\nStep 3. Source input (Doc 4, DATES and amendatory text): Doc 4 is that interim final rule. It revises paragraph (f) of 71.40, and comments on it had to be received by June 26, 2026.\n\nStep 4. Source input (Doc 5, DATES): Doc 5 prints the order that took effect on June 21, 2026. Written comments on it had to be received on or before July 10, 2026, which is that order's comment deadline.\n\nStep 5. Calculation (Doc 4 and Doc 5): June has 30 days, so the days left in June after June 26 are 30 - 26 = 4.\n\nStep 6. Calculation (Doc 4 and Doc 5): adding the days of July up to July 10 gives the days between the two deadlines: 4 + 10 = 14.",
+  "answer_components": [
+    "14 days"
+  ],
+  "evidence": [
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "On June 21, 2026, the ASH signed a new 30-day Order continuing the previous Order, without change, and provided a 15-day comment period. During this time CDC received five comments, which are addressed below."
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "Three of the commenters requested that CDC reconsider allowing lawful permanent residents (LPRs) to return under the same screening and monitoring protocols that apply to U.S. citizens as was allowed in the original May 18, 2026, Order."
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "The removal of the exemption for LPRs resulted from amendments to 42 CFR 71.40(f) and is outside the scope of this Order."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Comment date: Comments must be received by June 26, 2026."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "The interim final rule will apply to lawful permanent residents."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "This action took effect June 21, 2026, at 5:00 p.m. EDT. Written comments must be received on or before July 10, 2026."
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "The ASH continued the Order without change on June 21, 2026, for 30 days with a 15-day comment period; CDC received five comments in response."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6,
+        7
+      ],
+      "role": "Used to identify",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Wrong year or edition",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Wrong year or edition: Doc 6 answers the permanent-resident comments under its own comment deadline, July 31, 2026, but they were made on the June 21 order. Using July 31 gives 35 days. That order's deadline is Doc 5's July 10, 14 days after Doc 4's June 26."
+}

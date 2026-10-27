@@ -1,0 +1,22 @@
+{
+  "solver-1": {
+    "left_out": "D01",
+    "documents": 4,
+    "mapping": {
+      "D02": "D01",
+      "D03": "D02",
+      "D04": "D03",
+      "D05": "D04"
+    }
+  },
+  "solver-2": {
+    "left_out": "D03",
+    "documents": 4,
+    "mapping": {
+      "D01": "D01",
+      "D02": "D02",
+      "D04": "D03",
+      "D05": "D04"
+    }
+  }
+}

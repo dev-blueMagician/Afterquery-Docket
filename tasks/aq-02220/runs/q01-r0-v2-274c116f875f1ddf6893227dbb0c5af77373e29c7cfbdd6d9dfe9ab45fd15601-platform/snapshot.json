@@ -1,0 +1,46 @@
+{
+  "bundle": "aq-02220",
+  "corpus_sha256": {
+    "docs/Heat-network-zoning-consultation-2023-summary-of-government.txt": "7f1b34a7b3500a10f10d51a6e043dd26e528db52949dd83b841a549ad4fcad94",
+    "docs/Heat-network-zoning-consultation-stage-impact-assessment.txt": "d1e154c119a97a445f0ac0847a2aad7e77e80882bf9dbe5076e0da5a44bcbeb4",
+    "docs/Proposals-for-heat-network-zoning-consultation-2021.txt": "21af35ab542593a740719458ef9a8cc4c235bd12a0bd14c487a96113c0447948",
+    "docs/Proposals-for-heat-network-zoning-government-response.txt": "273adfdabcc146bb1a8106c5872519fa0cd0f92e210e38e80a4b0820853330d2",
+    "text/D01.txt": "d265a6c3e093c9e54b7b4fe82c16ec00d2c8c8b87df003f0c2e799545b7d5e08",
+    "text/D02.txt": "cf1fb98cc451f4b7571a284accc3c080cf7268351e8c9091027dd3320773d5d9",
+    "text/D03.txt": "33298fe1db963954a55d47bc924393fc7049f4b5069f61212c8b73ae70310f34",
+    "text/D04.txt": "a843dc37b4bc2870bf54643ff2606f16c02853edb07e039f0225a03d6e694a2c",
+    "text/manifest.json": "84a4fa93c34c6f1a64af17b3f79a6a2735eb339711368ef5e65f5120c46fbe48"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "0fd990f3d236e71ac5f85e77335b3c078f622098032983afd0e1db3751c3d5d0",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D01, D02",
+    "id": "q01",
+    "levers": "Calculate across documents",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i01",
+    "status": "draft",
+    "tags": "Cross-document join; Unit normalization; Aggregation"
+  },
+  "question_id": "q01",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "40%",
+    "components": "- c1: 40%",
+    "evidence": "- D01 (L116, Emissions in Heat Network Zones) [c1]: \"This will be based on a benchmark scenario assuming 85% of heat is delivered by low-carbon air source heat pumps using electricity and 15% is supplied by gas boilers\"\n- D02 (L2074, Annex 1) [c1]: \"Table 21 – Capital and operating cost per generation technology (heat networks)\"\n- D02 (L2230, Annex 1) [c1]: \"Table 24 - Thermal Efficiency (factual and counterfactual)\"\n- D02 (L2236, Table 24 technology list) [c1]: \"Air Source Heat Pump Ground Source Heat Pump Water Source Heat Pump (WSHP)\"\n- D02 (L2237, Table 24 technology list) [c1]: \"Back-up Gas Boiler Commercial Gas Boiler Domestic Gas Boiler Electric Heater\"\n- D02 (L2243-2254, Table 24 values) [c1]: \"Thermal Efficiency (%) 321 284 330 541 690 500 N/A 40 85\"",
+    "lever checks": "- Family and target: h1, the zone emissions benchmark (Doc 4) converted from heat shares to energy input with the\n  impact assessment's heat-network efficiencies (Doc 2). Medium target (user 2026-10-08, no Easy slot); measured\n  platform result pending; quick test first.\n- Dependency plan: Doc 4 L116: 85% of heat from air source heat pumps using electricity, 15% from gas boilers.\n  Doc 2 Table 21 (L2074) heading \"(heat networks)\" lists Air Source Heat Pump ... Back-up Gas Boiler; Table 24\n  (L2230-2255) lists 12 technologies then 12 values in the same order: ASHP 321, GSHP 284, WSHP 330, WSHP low 541,\n  WSHP medium 690, EfW 500, heat exchanger N/A, gas CHP 40, back-up gas boiler 85, commercial gas boiler 84,\n  domestic gas boiler 86, electric heater 100. Electricity 85/321 = 0.264798; gas 15/85 = 0.176471; share 39.99%.\n- Universe: not applicable (single value).\n- Necessity: Doc 4 is the only source of the 85% / 15% benchmark (searched \"benchmark\", \"85%\", \"15%\", \"gas boilers\",\n  \"emissions limit\" in all four texts: Doc 1 has cost \"benchmarks\" and price \"benchmarking\", Doc 2 none, Doc 3 Q36\n  gives respondents' 182 and 5-10 gCO2/kWh, no mix). Doc 2 is the only source of any efficiency (searched\n  \"efficien\", \"COP\", \"coefficient\", \"321\", \"per cent efficient\"; Doc 2 para 101 is qualitative; Docs 1, 3, 4 none).\n  Without Doc 2 a typical COP of 3 with an 85% or 90% boiler gives 38% or 37%; without Doc 4 no benchmark exists.\n  Recall risk stated: if the December 2023 consultation printed the 85/15 benchmark, a model may recall it.\n- Selected-lever checks: Calculate across documents: the shares come only from Doc 4, the efficiencies only from\n  Doc 2. Unit normalization: heat shares become input shares only after dividing by efficiency.\n- Targeted failure modes: mode 1 (Unit or basis): the benchmark's printed 15% is a share of heat; answering it\n  ignores the efficiencies: 15%. Considered and not declared: Table 24's individual commercial (84%) or domestic\n  (86%) gas boilers give 40.3% and 39.7%, both 40% at the asked precision and excluded by \"heat-network\"\n  efficiencies anyway; GSHP (284%) or WSHP (330%) for the heat pumps gives 37.1% or 40.7% (37% or 41%), but the\n  benchmark names air source heat pumps, so not a trap the documents set.\n- Calculation verification: Python Decimal 2026-10-08 (scratchpad calc_aq02220.py): 0.15/0.85 = 0.17647059;\n  0.85/3.21 = 0.26479751; sum 0.44126810; share 0.39991694 -> 40%. Integer check: 15 x 321 = 4,815,\n  85 x 85 = 7,225, 4,815 / 12,040 = 39.9917%. Steps 3-6 with three-decimal percentages give 39.9913%.\n- Semantic/ID/overview probes: the page overview lists for Doc 4 \"85% low-carbon air source heat pump benchmark ·\n  15% gas boiler benchmark\" (inputs only); no document states an energy-input share. Shortest route: find the\n  benchmark, find Table 24, map ASHP and back-up gas boiler, divide each share by its efficiency, take the gas share.\n- Precision/readings: whole percent asked implicitly by the gold (no precision stated; equivalent forms accepted).\n  Every look-alike boiler efficiency gives 40%; only the heat share (15%), the wrong heat pump (37% or 41%) or\n  intermediate rounding to whole percents (18 / 44 = 41%) change it. \"Electricity and gas input\" excludes ambient\n  heat captured by the heat pumps.\n- Completeness: full corpus, no gaps (intake: 4 of 4 complete).\n- Style/set review: 19 words, no em dashes. q02 uses Docs 1 and 2 (delivery-model stage costs); no shared facts.\n- Warnings answered: pending first preflight.",
+    "necessary documents": "- D01: Answer component\n- D02: Answer component",
+    "question": "Using the impact assessment's heat-network efficiencies, what percentage of the zone emissions benchmark's electricity and gas input is gas?",
+    "reasoning": "Step 1. Source fact (Doc 4, Emissions in Heat Network Zones): from 2030 zone heat networks must meet a carbon emissions limit based on a benchmark scenario in which 85% of heat is delivered by low-carbon air source heat pumps using electricity and 15% is supplied by gas boilers.\n\nStep 2. Source fact (Doc 2, Annex 1 Tables 21 and 24): Table 21 lists the heat-network generation technologies, including the Back-up Gas Boiler. Table 24 prints thermal efficiencies in the same order as its technology list, so the Air Source Heat Pump has 321% and the Back-up Gas Boiler, which follows Gas CHP, has 85%.\n\nStep 3. Calculation (from Steps 1 and 2; Doc 4 and Doc 2): each source's energy input is its share of the heat divided by its efficiency. Multiplying both inputs by the two efficiencies keeps their proportions, so the gas term becomes the gas share of heat times the heat pump efficiency: 15% * 321% = 0.4815.\n\nStep 4. Calculation (from Steps 1 and 2; Doc 4 and Doc 2): the electricity term becomes the heat pump share of heat times the boiler efficiency: 85% * 85% = 0.7225.\n\nStep 5. Calculation (from Steps 3 and 4; Doc 4 and Doc 2): both terms together: 0.4815 + 0.7225 = 1.204.\n\nStep 6. Calculation (from Steps 3 and 5; Doc 4 and Doc 2): gas share of the electricity and gas input: 0.4815 / 1.204 = 40% (to the nearest whole percent).",
+    "targeted failure modes": "### Failure mode 1\nTrap: Unit or basis\nHow a careless solver fails: Misapplies a rule or premise\n\nWhy these are traps: Doc 4's benchmark splits heat, not energy input: taking its 15% gas share answers 15%. Doc 2's Table 24 efficiencies (air source heat pump 321%, back-up gas boiler 85%) convert heat to electricity and gas input: 26.480% plus 17.647% of heat, so gas is 40%."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "274c116f875f1ddf6893227dbb0c5af77373e29c7cfbdd6d9dfe9ab45fd15601"
+}

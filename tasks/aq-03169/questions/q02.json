@@ -1,0 +1,107 @@
+{
+  "question": "Of the CMA's potential measures that Deloitte rates High for costs and Low for benefits, which, if any, does Grant Thornton's response say could leave the audit market less concentrated, and which does it warn could reduce or destabilise audit quality? List each group alphabetically.",
+  "number_of_asks": 2,
+  "gold_answer": "Big Four break-up (lower concentration), joint audits (lower concentration), non-audit services ban for all large companies (lower concentration), audit-only split (quality risk), NAO-style national auditor (quality risk)",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 2, summary table of measures in the appendix): Deloitte gives each measure a rating for costs, then benefits, then implementation challenges. The measures rated High for costs and Low for benefits are: reform of mandatory tendering and auditor rotation, prohibiting non-audit services to all large clients and PIEs, splitting UK firms into audit-only and non-audit practices, joint audits, break-up of the largest firms into smaller audit firms, an insurance-based system, and an NAO-style national auditor.\nStep 2. Source input (Doc 4, annex of costs and benefits, one numbered row per measure): the row for prohibiting non-audit services to any other large company or PIE lists as a benefit that other firms can grow, \"potentially leading to less audit market concentration and more competition\". The row for breaking up the largest firms lists \"Immediate impact on market concentration\".\nStep 3. Source input (Doc 4, reply on the market share cap and joint audits): joint audit is common in France, and \"This does appear to have created a more dynamic and less concentrated market\". The annex row for joint and shared audits says nothing about concentration, so this member comes from the reply and not from the annex.\nStep 4. Check (Doc 2 and Doc 4): no other measure in Step 1 is said to cut concentration. The audit-only split leaves \"no impact to market concentration\"; the rows for the insurance-based system and the NAO-style auditor do not mention concentration. Decoy: of more regular tendering Doc 4 says \"Alone, it may not reduce market concentration\", so tendering reform is out. Decoy: Doc 4 does say a market share cap would reduce concentration, but Doc 2 rates that measure High for benefits, so it is not in Step 1.\nStep 5. Source input (Doc 4, same annex): the costs of the audit-only split continue after a page break and include \"Loss of access of some technical specialisms and restricting talent pool, potentially reducing audit quality.\" The costs of the NAO-style auditor also continue after a page break and include the loss of partners and staff and \"likely destabilisation of audit quality, particularly in very large companies\".\nStep 6. Check (Doc 4): no other measure in Step 1 carries such a warning. Joint audits are credited with better quality, the all-clients prohibition with more investment in audit quality, and the rows for the break-up, tendering reform and the insurance-based system do not mention audit quality. Decoy: Doc 4 notes a fall in audit quality \"In spite of an increase in tendering and auditor rotation\", which does not blame tendering.\nFinal answer (Doc 2 and Doc 4): Big Four break-up (lower concentration), joint audits (lower concentration), non-audit services ban for all large companies (lower concentration), audit-only split (quality risk), NAO-style national auditor (quality risk).",
+  "answer_components": [
+    "non-audit services ban for all large companies",
+    "Big Four break-up",
+    "joint audits",
+    "audit-only split",
+    "NAO-style national auditor"
+  ],
+  "evidence": [
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Prohibit audit firms from providing non-audit services to all large clients and PIEs"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "4.8(b) High Low High 14.5.11 Exec sum and"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "potentially leading to less audit market concentration and more competition"
+    },
+    {
+      "document_number": 2,
+      "component_number": 2,
+      "quote": "4.27 High Low High !4.5.13 None"
+    },
+    {
+      "document_number": 4,
+      "component_number": 2,
+      "quote": "Immediate impact on market concentration"
+    },
+    {
+      "document_number": 2,
+      "component_number": 3,
+      "quote": "Joint audits 4.18(a) High Low Medium 14.5.12 Q23"
+    },
+    {
+      "document_number": 4,
+      "component_number": 3,
+      "quote": "This does appear to have created a more dynamic and less concentrated market"
+    },
+    {
+      "document_number": 2,
+      "component_number": 4,
+      "quote": "Split UK firms into audit only and non-audit services practices"
+    },
+    {
+      "document_number": 2,
+      "component_number": 4,
+      "quote": "4.8(c) High Low High 14.5.11 Exec sum and"
+    },
+    {
+      "document_number": 4,
+      "component_number": 4,
+      "quote": "Loss of access of some technical specialisms and restricting talent pool, potentially reducing audit quality."
+    },
+    {
+      "document_number": 2,
+      "component_number": 5,
+      "quote": "style national auditor 4.50 High Low High 14.5.16 None"
+    },
+    {
+      "document_number": 4,
+      "component_number": 5,
+      "quote": "likely destabilisation of audit quality, particularly in very large companies"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Picks the wrong entity or section"
+    },
+    {
+      "trap": "Document convention",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: Doc 4's annex credits the all-clients ban and break-up with less concentration, its reply credits joint audits; either alone gives a partial list. Document convention: the NAO-style auditor's quality cost continues after a page break in the annex; reading only the row's first lines drops that member."
+}

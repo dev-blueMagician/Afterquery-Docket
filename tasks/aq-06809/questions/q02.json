@@ -1,0 +1,114 @@
+{
+  "question": "What was the narrowest gap, in any quarter of 2025, between Fifth Third's and Huntington's efficiency ratios, each taken as noninterest expense over fully taxable-equivalent revenue? Answer in percentage points to one decimal place.",
+  "number_of_asks": 1,
+  "gold_answer": "1.5",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 1, Financial Highlights, year-to-date columns and five-quarter table): Fifth Third's noninterest expense was $2,568 million for the six months ended June 30, 2025, and $1,264 million, $1,267 million and $1,309 million for the second, third and fourth quarters of 2025; its total revenue (FTE) was $4,386 million for the six months and $2,250 million, $2,306 million and $2,344 million for those quarters. Doc 1 prints no first-quarter 2025 column. Its efficiency ratio (FTE) is noninterest expense over FTE net interest income plus noninterest income, the question's measure.\nStep 2. Calculation (Doc 1): Fifth Third's first-quarter 2025 noninterest expense, the six months less the second quarter: 2,568 - 1,264 = 1,304.\nStep 3. Calculation (Doc 1): its first-quarter 2025 FTE revenue, the same way: 4,386 - 2,250 = 2,136.\nStep 4. Source input (Doc 5, Selected Year-To-Date and Selected Quarterly Income Statement Data): Huntington's total noninterest expense was $2,349 million for the six months ended June 30, 2025, and $1,197 million, $1,246 million and $1,420 million for the second, third and fourth quarters of 2025; its FTE total revenue was $3,889 million for the six months and $1,954 million, $2,151 million and $2,191 million for those quarters. Doc 5 prints no first-quarter 2025 column either, and its own efficiency ratio leaves out intangible amortization and securities gains, so it is not the question's measure.\nStep 5. Calculation (Doc 5): Huntington's first-quarter 2025 noninterest expense: 2,349 - 1,197 = 1,152.\nStep 6. Calculation (Doc 5): its first-quarter 2025 FTE revenue: 3,889 - 1,954 = 1,935.\nStep 7. Calculation (Doc 1 and Doc 5): first-quarter 2025 gap, Fifth Third's ratio less Huntington's: 1,304 / 2,136 - 1,152 / 1,935 = 1.514%.\nStep 8. Calculation (Doc 1 and Doc 5): second-quarter gap, Huntington's ratio less Fifth Third's: 1,197 / 1,954 - 1,264 / 2,250 = 5.081%.\nStep 9. Calculation (Doc 1 and Doc 5): third-quarter gap, Huntington's ratio less Fifth Third's: 1,246 / 2,151 - 1,267 / 2,306 = 2.983%.\nStep 10. Calculation (Doc 1 and Doc 5): fourth-quarter gap, Huntington's ratio less Fifth Third's: 1,420 / 2,191 - 1,309 / 2,344 = 8.966%.\nStep 11. Final answer (Doc 1 and Doc 5): the narrowest of the four gaps is the first quarter's; in percentage points, 1.514% × 100 = 1.514, which rounds to 1.5.",
+  "answer_components": [
+    "1.5"
+  ],
+  "evidence": [
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "$ in millions, except per share data|Change|Year to Date|Change"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Total revenue (FTE)(a) 3,279|2,834|2,250|16%|46%|6,113|4,386|39%"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Noninterest expense|2,109|2,395|1,264|(12%)|67%|4,504|2,568|75%"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "(unaudited)|June|March|December|September|June"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Total revenue (FTE)(a) 3,279|2,834|2,344|2,306|2,250"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Noninterest expense|2,109|2,395|1,309|1,267|1,264"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Efficiency ratio (FTE) (w) / [(a) + (u)]"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Six Months Ended June 30, Change"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Total noninterest expense|3,583 2,349 1,234 53"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Revenue - fully taxable equivalent (FTE)"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Total revenue (1)|$|5,449 $|3,889 $|1,560 40 %"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "June 30, March 31, December 31, September 30, June 30,"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Total noninterest expense|1,809 1,774 1,420 1,246 1,197"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Total revenue FTE (1)|$|2,857 $|2,592 $|2,191 $|2,151 $|1,954"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "(2)Noninterest expense less amortization of intangibles divided by the sum of FTE net interest income and noninterest income excluding gains (losses) on sales of securities, which represents a non-GAAP measure."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Figure that must be computed",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Doc 1 and Doc 5 print 2025's second to fourth quarters but no first quarter, which sits inside their six-month totals. Comparing only printed quarters gives the third quarter's gap, 3.0. Six months less the second quarter gives first-quarter ratios of 61.05% and 59.53%, a 1.5 gap."
+}

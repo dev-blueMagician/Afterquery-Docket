@@ -1,0 +1,66 @@
+{
+  "question": "Which submitters propose that investors who live outside Australia be able to qualify as wholesale clients by meeting their own country's definition? List them alphabetically.",
+  "number_of_asks": 1,
+  "gold_answer": "Aussie Angels, CP Ventures, Saltwater Fund",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 9, Aussie Angels' \"Other things to consider\"): Aussie Angels propose that \"non-residents of Australia ought to be considered wholesale clients if they meet their local definitions and certain consent criteria\". An investor living abroad would qualify by meeting the definition of their own country, together with consent. Aussie Angels qualify (component c1).\n\nStep 2. Source input (Doc 1, the joint submission of CP Ventures and Saltwater Fund, its list of recommendations): the two funds recommend \"Clarification on how to apply foreign investors as sophisticated, ideally as qualifying in their home jurisdiction\". In this submission sophisticated investors are the ones wholesale funds are meant for (\"restricting MIS funds to sophisticated investors\"), so foreign investors would qualify by meeting their home country's test. Both submitters qualify (components c2 and c3).\n\nDecoy: AIMA's general observations contain the passage that Aussie Angels re-quote, but AIMA's condition for non-residents is consent alone (\"if they meet certain consent criteria\"), with no reference to their own country's definition, so AIMA does not qualify. Aussie Angels' remark that foreign investors are \"subject to meeting the thresholds set in Australia\" describes the present rules, not a proposal.\n\nFinal answer, alphabetically (Doc 9 and Doc 1): Aussie Angels, CP Ventures, Saltwater Fund.",
+  "answer_components": [
+    "Aussie Angels",
+    "CP Ventures",
+    "Saltwater Fund"
+  ],
+  "evidence": [
+    {
+      "document_number": 9,
+      "component_number": 1,
+      "quote": "non-residents of Australia ought to be considered wholesale clients if they meet their local definitions and certain consent criteria"
+    },
+    {
+      "document_number": 1,
+      "component_number": 2,
+      "quote": "Clarification on how to apply foreign investors as sophisticated, ideally as qualifying in their home jurisdiction"
+    },
+    {
+      "document_number": 1,
+      "component_number": 3,
+      "quote": "Clarification on how to apply foreign investors as sophisticated, ideally as qualifying in their home jurisdiction"
+    },
+    {
+      "document_number": 1,
+      "component_number": 3,
+      "quote": "Both CP Ventures and the Saltwater Fund are wholesale MIS funds"
+    },
+    {
+      "document_number": 1,
+      "component_number": 2,
+      "quote": "achieve the desired outcome of restricting MIS funds to sophisticated investors"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        9
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: Doc 9 re-quotes AIMA's bullet on non-residents but adds \"their local definitions\"; AIMA's own condition is consent alone. Treating the two copies as one proposal gives AIMA, Aussie Angels, CP Ventures, Saltwater Fund; the gold keeps only submitters tying status to the home country."
+}

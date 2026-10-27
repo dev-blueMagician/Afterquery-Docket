@@ -1,0 +1,97 @@
+{
+  "question": "If each UK nation's adult smoking rate repeated its 2021-to-2022 percentage-point change yearly, how many points, to one decimal place, would separate the highest and lowest in 2030?",
+  "number_of_asks": 1,
+  "gold_answer": "8.9 percentage points",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 3, ONS report Adult smoking habits in the UK): in 2021 the adult smoking rate was 13 per cent in England, 14.8 per cent in Scotland, 14.1 per cent in Wales and 13.8 per cent in Northern Ireland.\n\nStep 2. Source fact (Doc 1, ONS report Adult smoking habits in the UK): in 2022 the rate was 12.7 per cent in England, 14.1 per cent in Wales, 14.0 per cent in Northern Ireland and 13.9 per cent in Scotland. This list gives the nations in a different order, so each nation is matched by name.\n\nStep 3. Calculation (from Steps 1 and 2; Doc 3 and Doc 1): Northern Ireland's yearly change: 14.0 - 13.8 = 0.2 percentage points, a rise.\n\nStep 4. Calculation (from Steps 1 and 2; Doc 3 and Doc 1): Scotland's yearly fall: 14.8 - 13.9 = 0.9 percentage points.\n\nStep 5. Calculation (from Steps 1 and 2; Doc 3 and Doc 1): England's yearly fall: 13 - 12.7 = 0.3 percentage points.\n\nStep 6. Calculation (from Steps 1 and 2; Doc 3 and Doc 1): Wales's change: 14.1 - 14.1 = 0 percentage points, so Wales stays at 14.1 per cent.\n\nStep 7. Calculation (from Step 3; Doc 3 and Doc 1): Northern Ireland's rise over the eight years from 2022 to 2030: 0.2 * 8 = 1.6 percentage points.\n\nStep 8. Calculation (from Steps 2 and 7; Doc 3 and Doc 1): Northern Ireland's rate in 2030, in per cent: 14.0 + 1.6 = 15.6 (the highest of the four).\n\nStep 9. Calculation (from Step 4; Doc 3 and Doc 1): Scotland's fall over the same eight years: 0.9 * 8 = 7.2 percentage points.\n\nStep 10. Calculation (from Steps 2 and 9; Doc 3 and Doc 1): Scotland's rate in 2030, in per cent: 13.9 - 7.2 = 6.7 (the lowest of the four).\n\nStep 11. Calculation (from Step 5; Doc 3 and Doc 1): England's fall over the same eight years: 0.3 * 8 = 2.4 percentage points.\n\nStep 12. Calculation (from Steps 2 and 11; Doc 3 and Doc 1): England's rate in 2030, in per cent: 12.7 - 2.4 = 10.3 (between Scotland and Wales).\n\nStep 13. Calculation (from Step 2; Doc 1): gap between Northern Ireland and Scotland in 2022: 14.0 - 13.9 = 0.1 percentage points.\n\nStep 14. Calculation (from Steps 7 and 9; Doc 3 and Doc 1): how much that gap widens by 2030 (Northern Ireland's rise plus Scotland's fall): 1.6 + 7.2 = 8.8 percentage points.\n\nStep 15. Calculation (from Steps 13 and 14; Doc 3 and Doc 1): gap between the highest (Northern Ireland) and lowest (Scotland) in 2030: 0.1 + 8.8 = 8.9 percentage points.",
+  "answer_components": [
+    "8.9 percentage points"
+  ],
+  "evidence": [
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Adult smoking habits in the UK: 2021 shows that the adult smoking rate in the UK is the lowest on record"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "13% in England"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "14.8% in Scotland"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "14.1% in Wales"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "13.8% in Northern Ireland"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Adult smoking habits in the UK 2022 reported that 6.4 million people in the UK were current smokers"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "12.7% in England"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "14.1% in Wales"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "14.0% in Northern Ireland"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "13.9% in Scotland"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Picks the wrong entity or section"
+    },
+    {
+      "trap": "Figure that must be computed",
+      "how_a_careless_solver_fails": "Rounding, scale or sign"
+    },
+    {
+      "trap": "Wrong year or edition",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Doc 3 lists 2021 rates England, Scotland, Wales, Northern Ireland; Doc 1 lists 2022 England, Wales, Northern Ireland, Scotland, so positional pairing gives 6.2. Northern Ireland rose 0.2; treating it as a fall gives 7.4. Keeping 2022's extremes, Wales and England, gives 3.8. By 2030: 15.6 minus 6.7."
+}

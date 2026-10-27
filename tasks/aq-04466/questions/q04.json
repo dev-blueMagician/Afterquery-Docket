@@ -1,0 +1,88 @@
+{
+  "question": "Which submitters, if any, rely on Treasury's earlier options paper on wholesale and retail clients? List them alphabetically.",
+  "number_of_asks": 1,
+  "gold_answer": "AIOFP, Angel Loop, Joint Associations (CA ANZ, CPA Australia, IPA, SMSF Association)",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 15, the Joint Associations' answer on the product value test, with its footnote 3): the Joint Associations cite the \"Wholesale and Retail Clients Future of Financial Advice Options Paper, January 2011, p.5\" for the finding that \"the level of $500,000 was considered a low level\", in support of raising the test. They rely on the paper (component c3).\n\nStep 2. Source input (Doc 5, Angel Loop's answer on the thresholds, with its footnote 13): Angel Loop \"agrees with Treasury's conclusion on the use of s761GA\", quotes it, and cites \"Wholesale and Retail Clients Future of Financial Advise 2011\", the same paper by title and year. Angel Loop relies on the paper (component c2), and its words show the paper is Treasury's.\n\nStep 3. Source input (Doc 8, the AIOFP's answer on the product value test, read with Doc 15): the AIOFP argues that the threshold should rise from $500,000 to $1,000,000 because \"A consultation in 2011 asking this exact question identified that $500,000 was too low\". It names no paper, but the year, the question and the finding all match the options paper as the Joint Associations describe it (January 2011; $500,000 \"a low level\"), and no submission mentions any other 2011 consultation on the threshold. The AIOFP relies on the same paper (component c1).\n\nDecoy: Allens refers to a different Treasury options paper, on product rationalisation, and to the Future of Financial Advice reforms; neither is this paper, so Allens does not count.\n\nFinal answer, alphabetically by the names the submissions go by (Doc 8, Doc 5 and Doc 15): AIOFP, Angel Loop, Joint Associations (CA ANZ, CPA Australia, IPA, SMSF Association).",
+  "answer_components": [
+    "AIOFP",
+    "Angel Loop",
+    "Joint Associations (CA ANZ, CPA Australia, IPA, SMSF Association)"
+  ],
+  "evidence": [
+    {
+      "document_number": 15,
+      "component_number": 1,
+      "quote": "As stated in the Wholesale and Retail Clients Future of Financial Advice Options Paper in 20103 the level of $500,000 was considered a low level"
+    },
+    {
+      "document_number": 15,
+      "component_number": 3,
+      "quote": "As stated in the Wholesale and Retail Clients Future of Financial Advice Options Paper in 20103 the level of $500,000 was considered a low level"
+    },
+    {
+      "document_number": 15,
+      "component_number": 1,
+      "quote": "Wholesale and Retail Clients Future of Financial Advice Options Paper, January 2011, p.5"
+    },
+    {
+      "document_number": 15,
+      "component_number": 3,
+      "quote": "Wholesale and Retail Clients Future of Financial Advice Options Paper, January 2011, p.5"
+    },
+    {
+      "document_number": 5,
+      "component_number": 2,
+      "quote": "Angel Loop agrees with Treasury’s conclusion on the use of s761GA:"
+    },
+    {
+      "document_number": 5,
+      "component_number": 2,
+      "quote": "Wholesale and Retail Clients Future of Financial Advise 2011"
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "The financial product threshold should be increased from $500,000 to $1,000,000"
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "A consultation in 2011 asking this exact question identified that $500,000 was too low"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        8
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        15
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: Doc 8 never names the paper; its \"consultation in 2011\" that found $500,000 too low matches Doc 15's January 2011 options paper. Counting only submitters that name it gives Angel Loop, Joint Associations; the gold adds AIOFP."
+}

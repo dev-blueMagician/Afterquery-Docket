@@ -9,7 +9,8 @@ All drafts origin: claude. Local odds come from independent reviews (prediction 
    A: 5, 6, 7, 11, 17, 22, 23
    Review odds: Too easy ~55%, Easy ~37%, Medium ~4%. Doc 9 document-check risk ~30-45% (recalled
    numbering). Never submit with item 3.
-   Platform result: pending
+   Platform result: difficulty check Run 2 (version 6c76af, Oct 7, 2026, 8:32 PM) "Too easy", Low 5/5.
+   Dropped 2026-10-08.
 
 2. q02 rev 1 (two matches, audit clear, closed-book miss, review ready, local difficulty easy)
    Q: UK fake-review guidance gives examples of traders commissioning reviews by offering customers or other consumers something. As FTC staff read the US consumer reviews rule, which of those examples, if any, would breach its ban on incentives tied to a review's sentiment? List them in any order.
@@ -21,7 +22,7 @@ All drafts origin: claude. Local odds come from independent reviews (prediction 
    Q: The UK's brief business guide on unfair trading lists some banned practices under after-sales care. In which paragraphs of Schedule 20 to the Digital Markets, Competition and Consumers Act 2024 are those practices set out? Answer in ascending order.
    A: 8, 9 and 29
    Author odds: Too easy ~50%, Easy ~40%. Never submit with item 1.
-   Platform result: pending
+   Platform result: none. Retired 2026-10-08: it uses the same join as item 1, which was measured Too easy.
 
 4. j02 (sketch; closed-book not run)
    Q: The US consumer reviews rule names several kinds of value a business might give in exchange for a consumer review. How many of those kinds would the UK's full fake-review guidance regard as commissioning that review?

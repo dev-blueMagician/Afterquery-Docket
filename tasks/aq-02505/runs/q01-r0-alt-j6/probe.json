@@ -1,0 +1,23 @@
+{
+  "purpose": "removal probe (optional author diagnostic for a concrete issue: the November 2024 update size was public in 2024, so a solver without Doc 2 might recall it)",
+  "bound_to": {
+    "question": "q01",
+    "revision": 0,
+    "tested_sha256": "2917dbde8780e36d2476ca0e496fad2b8ccaef86b18688a2aa2477fd87fc096d"
+  },
+  "packets": [
+    {
+      "packet": "solver-1",
+      "question": "q01",
+      "removed_local": "D02",
+      "renumbered": {
+        "D01": "D01",
+        "D03": "D02",
+        "D04": "D03",
+        "D05": "D04",
+        "D06": "D05",
+        "D07": "D06"
+      }
+    }
+  ]
+}

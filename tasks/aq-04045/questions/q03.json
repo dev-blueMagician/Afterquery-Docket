@@ -1,0 +1,58 @@
+{
+  "question": "By how many percentage points did the share of satellite telecommunications providers with 1,500 or fewer employees change between the FCC's earliest and latest year-end counts? Give the sign, to one decimal place.",
+  "number_of_asks": 1,
+  "gold_answer": "+2.6 percentage points",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 3, the satellite telecommunications paragraph of its regulatory flexibility analysis): as of December 31, 2020, 71 providers reported providing satellite telecommunications services, and the FCC estimates that about 48 of them were at or below the employee limit the question names.\n\nStep 2. Source input (Doc 7, the same paragraph of its regulatory flexibility analysis): at the end of 2023 there were 57 such providers, and about 40 of them were at or below that limit.\n\nStep 3. Period check (Doc 3 and Doc 7): the end of 2020 is the earliest year-end, and the end of 2023 the latest, for which the documents give this count, so the change runs from the figures in Doc 3 to the figures in Doc 7.\n\nStep 4. Calculation (Doc 3 and Doc 7): the change is the later share, 40 of 57, less the earlier share, 48 of 71. To round only once, both shares are put over one denominator. Numerator of the later share: 40 × 71 = 2,840\n\nStep 5. Calculation (Doc 3 and Doc 7): numerator of the earlier share over the same denominator: 48 × 57 = 2,736\n\nStep 6. Calculation (Doc 3 and Doc 7): difference of the numerators: 2,840 − 2,736 = 104\n\nStep 7. Calculation (Doc 3 and Doc 7): the shared denominator: 57 × 71 = 4,047\n\nStep 8. Final answer (Doc 3 and Doc 7): the change in the share, as a percentage of all providers and to one decimal place: 104 / 4,047 = 2.6%. The later share is the larger, so the sign is plus, and because both shares are percentages of all providers the change is in percentage points.",
+  "answer_components": [
+    "+2.6 percentage points"
+  ],
+  "evidence": [
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "based on Commission data in the 2021 Universal Service Monitoring Report, as of December 31, 2020, there were 71 providers that reported they were engaged in the provision of satellite telecommunications services"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "the Commission estimates that approximately 48 providers have 1,500 or fewer employees"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "based on Commission data in the 2024 Universal Service Monitoring Report, as of December 31, 2023, there were 57 providers that reported they were engaged in the provision of satellite telecommunications services"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "the Commission estimates that approximately 40 providers have 1,500 or fewer employees"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        7
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Wrong year or edition",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Wrong year or edition: Doc 2 prints the year-end 2021 count three times; the earliest count, year-end 2020, appears once, in Doc 3. Starting from Doc 2's 42 of 65 gives a 5.6-point rise to Doc 7's 40 of 57. Doc 3's 48 of 71 gives +2.6."
+}

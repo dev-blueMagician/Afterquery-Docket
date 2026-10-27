@@ -1,0 +1,63 @@
+{
+  "question": "Under ICAEW's individual cap on each Big Four firm, how many FTSE 350 audits could the four hold in total, and how many years of tender wins, at the yearly rate Deloitte's five-year market-share target assumes, would bring them within that total, to the nearest whole year?",
+  "number_of_asks": 2,
+  "gold_answer": "260 audits and 7 years",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 6, reply on how a cap should be measured): besides a collective cap, ICAEW describes an individual one, under which each Big Four firm could be restricted to auditing 65 of the FTSE 350 companies.\nStep 2. Calculation (Doc 6): with every Big Four firm at that cap, the four together could audit 4 × 65 = 260 companies, which is the first answer.\nStep 3. Source input (Doc 2, appendix reply on whether a cap's benefits could be realised): firms outside the four largest currently perform 11 audits of the FTSE 350. To hold a 20% share in the next five years they would need to win about 60 tenders.\nStep 4. Calculation (Doc 2 and Doc 6): the Big Four audit the rest of the index today: 350 − 11 = 339 companies.\nStep 5. Calculation (Doc 2 and Doc 6): to come within the cap they would have to give up 339 − 260 = 79 audits, each one a tender won by another firm.\nStep 6. Calculation (Doc 2): the target's wins spread over its five years give a yearly rate of 60 / 5 = 12 wins.\nStep 7. Calculation (Doc 2 and Doc 6): six years at that rate bring 12 × 6 = 72 wins.\nStep 8. Final answer (Doc 2 and Doc 6): 79 − 72 = 7 wins are still missing after six years, more than half of one year's 12, so the time needed is closer to seven years than to six: 7 years to the nearest whole year. With the cap total from Step 2, the answer is 260 audits and 7 years.",
+  "answer_components": [
+    "260 audits",
+    "7 years"
+  ],
+  "evidence": [
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "each Big Four firm could be restricted to auditing 65 of the FTSE 350 companies"
+    },
+    {
+      "document_number": 6,
+      "component_number": 2,
+      "quote": "each Big Four firm could be restricted to auditing 65 of the FTSE 350 companies"
+    },
+    {
+      "document_number": 2,
+      "component_number": 2,
+      "quote": "Firms outside the four largest currently perform 11 audits of the FTSE 350 today"
+    },
+    {
+      "document_number": 2,
+      "component_number": 2,
+      "quote": "in order to hold a 20% share of the FTSE 350 audit market in the next five years, firms other than the four largest would need to win about 60 tenders"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Unit normalization"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    },
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Part vs total: Doc 2 says other firms already perform 11 FTSE 350 audits; treating the whole index as the Big Four's gives 90 audits to shed and 8 years. Look-alike measure: Doc 6's summary gives a collective cap of around 60%: 210 audits, 11 years. The gold sheds 79."
+}

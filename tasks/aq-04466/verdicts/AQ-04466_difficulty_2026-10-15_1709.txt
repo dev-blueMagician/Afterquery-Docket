@@ -1,0 +1,342 @@
+AQ-04466 · Public policyEasy or Hard only — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-04466
+Saved: 2026-10-15 17:09 (local time)
+Bundle: Public policyEasy or Hard only · 15 documents · 89,241 prompt tokens
+Run read: Run 8, the latest of 8
+Attempts read: 4
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+13 of 20 runs left · 6 of 60 runs used in the last 24 h (all tasks)
+
+Your last 3 runs all came back Too easy. Ask the Coach before running again.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 3 attempts right
+
+High model: two solvers try up to 3 times each. Ready when both get it wrong at least once and not every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Rephrase the question in terms not used in the passages, e.g. 'Which submitters report that licensees or product issuers decline to treat investors as wholesale solely on the basis of the investor's demonstrated experience, out of concern for their own exposure?' This forces the solver to interpret each submission rather than keyword-match. Why: The question's wording ('shy away from classing investors as wholesale clients on the strength of the investors' experience because of the risk to themselves') closely paraphrases the two source passages. Document 3 says product issuers are 'reluctant to rely on the sophisticated investor test because of the compliance risk', and document 5 says many AFS Licensees '"would not risk their license"'. A solver can match on 'risk' plus 'experience' and land on both sentences without reading anything else, so the phrasing itself points straight at the answer. From a run (High model · attempt 2): Reached the gold answer via the same two one-sentence passages; no other document needed to be read in depth. Doc 3 Doc 5
+
+Gold answer · Your answer
+-------------------------
+
+- 2 If more difficulty is wanted, tighten the target concept (e.g. only submitters who attribute the reluctance to the subjectivity of the experience assessment itself, which is AIMA's framing) and adjust the gold answer accordingly, so that Angel Loop's insurance/licence concern must be weighed rather than automatically included. Why: The gold answer 'AIMA, Angel Loop' is supported, but the underlying concept is stated in two different forms: AIMA speaks of 'compliance risk' from the 'subjectivity of the assessment criteria', while Angel Loop quotes licensees who 'would not risk their license' or feared losing insurance. Because both are near-synonymous with the question's phrasing, almost any reasonable reading of either sentence yields the gold pair, leaving little room for a solver to go wrong once either document is opened. From a run (High model · attempt 2): Reached the gold answer via the same two one-sentence passages; no other document needed to be read in depth. Doc 3 Doc 5
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 8 (Oct 15, 2026, 5:02 PM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+8 runs
+
+Only the latest run, Run 8, is in this file; 7 earlier runs are left out.
+
+------------------------------------------------------------------------
+Run 8 · Too easy · Result the gate uses
+Oct 15, 2026, 5:02 PM · Version c6cbe7 (current) · Low — · Medium — · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: question: removed “submitters propose”, “who live outside Australia be able to qualify”, “by meeting their own country's definition?”; added “submitters, if any, say”, “firms shy away from classing”, “on the strength of the investors' experience because of the risk to themselves?”. answer: removed “Aussie Angels, CP Ventures, Saltwater Fund”; added “AIMA, Angel Loop”
+
+Solver summary: Run 8 · Too easy · 3 of 3 right
+Every solver attempt got it (3 of 3).
+
+Your answer: AIMA, Angel Loop
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: Note: where it went wrong
+
+Final answer: Financial Services Council and Stockbrokers and Investment Advisers Association. | Your answer (gold): AIMA, Angel Loop
+
+Where it went wrong: Without documents, guessed 'Financial Services Council' and 'Stockbrokers and Investment Advisers Association', neither of which appears in the corpus; the correct submitters are AIMA (document 3) and Angel Loop (document 5).Doc 3 Doc 5
+
+Full answer
+-----------
+
+Financial Services Council and Stockbrokers and Investment Advisers Association.
+
+Reasoning
+---------
+
+We need answer: "Which submitters, if any, say that firms shy away from classing investors as wholesale clients on the strength of the investors' experience because of the risk to themselves? List them alphabetically."
+
+Need identify submitters to some consultation/paper about wholesale client classification in Australia? Likely submissions to ASIC consultation on wholesale client test? The question asks which submitters say firms shy away from classing investors as wholesale clients on strength of investors' experience because of risk to themselves (the firms).
+
+We need answer from own knowledge. Let's recall context: In Australia, there is a wholesale client definition under Corporations Act s761G. There was a parliamentary inquiry or ASIC consultation? Maybe "Review of the wholesale investor test" submissions in 2014? Or recent 2021/2023? Let's think.
+
+Question sounds like from a summary of submissions to Treasury consultation on "Wholesale Investor Test" in 2024? Actually in 2023 Treasury released a consultation paper on changes to the wholesale investor tests? Or ASIC's 2022 report?
+
+But specifically phrase "classing investors as wholesale clients on the strength of the investors' experience because of the risk to themselves" sounds like firms are reluctant to rely solely on investor's experience/knowledge to classify them as wholesale because if they get it wrong, the firm bears risk (regulatory/action).
+
+We need list submitters who said that, alphabetically.
+
+Let's recall specific submissions mentioning risk to firms. Might be from consultation on "Proposed amendments to the Corporations Act 2001 (Cth) to reform the wholesale client tests"? Hmm.
+
+Alternatively could be from New Zealand? "Wholesale clients" also in NZ Financial Markets Conduct Act 2013. There was a consultation on eligibility criteria for wholesale investors in NZ? Submitters might include firms like Chapman Tripp, etc. But phrase "classing investors as wholesale clients on the strength of the investors' experience because of the risk to themselves" sounds like a specific summary point in a consultation summary document listing submitter views.
+
+We need identify exactly which ones said that. Let's recall a document summarizing submissions to the "Wholesale investor and wholesale client thresholds" maybe in Australia 2021. The summary might have sections: "Experience-based test" and comments.
+
+But since I need answer from own knowledge, I should try to recall or reason.
+
+Let's parse the question precisely: "Which submitters, if any, say that firms shy away from classing investors as wholesale clients on the strength of the investors' experience because of the risk to themselves?"
+
+This sounds like there is a list of submitters and their positions. The question asks "Which submitters, if any..." implying maybe none said that? Or maybe some did.
+
+We need list them alphabetically.
+
+Given it's a specific fact, I need to be accurate. Let's recall Australian Treasury consultation in 2023 on "Review of the regulatory framework for managed investment schemes" no that's different.
+
+Another possibility: It's from submissions to the "Financial Services Legislation Amendment Act" but no.
+
+Let's think about the wholesale client experience test: Under s761GA, a person can be classified as wholesale if they have experience in using financial services and investing, and the licensee is satisfied they can assess the merits and understand risks. Many submissions might discuss that firms rarely use this test because it's subjective and risky for the firm.
+
+Yes! In Australia, the "sophisticated investor" test under s708(8) and s761GA allows classification based on experience. Industry bodies have noted that financial service providers are reluctant to rely on this because they face risk if the assessment is wrong.
+
+So the question likely comes from a summary table of submissions responding to a specific question like "Should the experience-based test be retained/modified?"
+
+We need the names of submitters who specifically said firms shy away because of risk to themselves.
+
+Possibly submitters include: "Australian Banking Association", "Financial Services Council", "CPA Australia", "Chartered Accountants ANZ", "Law Council of Australia", "Maurice Blackburn"? But need correct ones.
+
+Let's recall a specific consultation paper: In 2024, Treasury consulted on "Treasury Laws Amendment (Delivering Better Financial Outcomes) Bill 2024"? No, that's about financial advice.
+
+Wait there is also ASIC's 2023 consultation on "Remaking ASIC class orders on wholesale clients" maybe CP 360? Let's check mental: In October 2022 ASIC released Consultation Paper 360 "Proposed updates to the ASIC Corporations (Wholesale Client) Instrument"? Not sure.
+
+But the phrase "classing investors as wholesale clients on the strength of the investors' experience because of the risk to themselves" might be in a report summarizing feedback on the wholesale client tests, maybe from 2014 when the thresholds were being reviewed. Actually in 2011 there were changes? Let's recall history: The wholesale client definition was introduced in 2001, with product value test ($500k) and income/net assets tests ($250k income or $2.5m net assets). There is also the professional investor and experienced investor tests. In 2014, the Financial System Inquiry (Murray Inquiry) recommended changing the thresholds? No, it recommended retaining but indexing? Actually the Murray Inquiry 2014 recommended that the $2.5m net assets and $250k income thresholds be indexed, but government didn't do it.
+
+Then in 2026? No.
+
+More recently, in 2021-2023 there was discussion about whether the thresholds should be raised. The Parliamentary Joint Committee on Corporations and Financial Services conducted an inquiry into the wholesale investor tests? Yes! In 2020-2021 there was an inquiry "Inquiry into the wholesale investor and wholesale client tests" maybe? Let's recall: In June 2020, the Parliamentary Joint Committee on Corporations and Financial Services (PJC) was asked to inquire into the wholesale investor and wholesale client tests. They released a report? Actually I think in March 2021 the committee started an inquiry. They received submissions. The report might have summarized submitter views.
+
+Yes! That sounds right. The PJC inquiry into wholesale investor/wholesale client tests received submissions from various stakeholders. The committee eventually reported? Let's recall: In February 2022? Or maybe they haven't reported yet?
+
+But the question sounds like it's taken directly from a summary document listing submissions and what they said about specific issues, perhaps in the committee's report or in a briefing paper.
+
+Specifically, the question asks "Which submitters, if any, say that firms shy away from classing investors as wholesale clients on the strength of the investors' experience because of the risk to themselves?"
+
+This could be in a section discussing the "experienced investor" test (s761GA). Some submitters might say firms avoid using it because it's risky.
+
+We need list them alphabetically. Maybe there are two: "Australian Financial Complaints Authority"? No.
+
+Let's recall specific submissions to that inquiry. Submissions came from: ASIC, Treasury, Australian Banking Association (ABA), Financial Services Council (FSC), CPA Australia, Chartered Accountants Australia and New Zealand (CA ANZ), Law Council of Australia, Consumer Action Law Centre, Maurice Blackburn Lawyers, Stockbrokers and Investment Advisers Association (SIAA), etc.
+
+In those submissions, some discussed the experienced investor test. For example, FSC might have said it's rarely used because of risk. Or maybe "Stockbrokers and Financial Advisers Association" said firms are reluctant.
+
+But I need be precise: "Which submitters... say that firms shy away..." Let's think about wording "shy away from classing investors as wholesale clients on the strength of the investors' experience because of the risk to themselves". This sounds like a direct paraphrase of a submission.
+
+Perhaps the answer is "None" if no submitter said that. But the phrase "if any" suggests there might be none. However the question asks "Which submitters, if any..." and "List them alphabetically" - if none, then answer "None" or "No submitters said this".
+
+But I need be correct.
+
+Let's recall the specific summary document maybe titled "Wholesale client and wholesale investor tests - Summary of submissions" with bullet points. For each point, they list submitters who raised it.
+
+For example:
+- Many submitters said the thresholds should be indexed: ABA, FSC, etc.
+- Some said the accountant's certificate should be retained: CPA Australia, CA ANZ.
+- Some said firms rarely use the experienced investor test because of liability risk: maybe "Financial Services Council" and "Stockbrokers and Investment Advisers Association"?
+
+But I need the ones specifically about risk to themselves (the firms).
+
+Let's try to recall from the report "Wholesale Investor and Wholesale Client Tests" released in ??? Actually there was a report by the Parliamentary Joint Committee on Corporations and Financial Services in October 2023? Let's check mental news: In late 2023, the committee recommended retaining the tests but with changes? Or maybe they recommended raising thresholds?
+
+Wait, in November 2023, the government announced changes? Let's recall news from late 2023/early 2024: The government proposed changes to the wholesale investor test? Actually in December 2023, Treasury released exposure draft legislation? Or was it about the "Delivering Better Financial Outcomes" package?
+
+Let's search mental news: In December 2023, the Albanese government announced reforms to financial advice, including a change to the wholesale client test? No, the "Delivering Better Financial Outcomes" bill was introduced in March 2024 and included provisions about qualified advisers, etc. Not this.
+
+Another news: In October 2024, ASIC released a report on wholesale clients? Hmm.
+
+But regardless, I need answer the specific submitter list.
+
+Given I cannot browse, I need to provide best answer based on knowledge. Let's think about the experienced investor provision: Corporations Act s761GA allows a financial services licensee to treat a client as wholesale if satisfied that the client has previous experience in using financial services and investing in financial products that allows them to assess the merits and risks. The licensee must provide a written statement explaining why they are satisfied, and the client must sign.
+
+Industry feedback is that this is rarely used because the licensee bears the risk of being wrong, and there is little guidance.
+
+In submissions, who mentioned this?
+
+Possibly "Maurice Blackburn" said firms avoid it? Or "Consumer Action Law Centre"?
+
+But the question says "firms shy away... because of the risk to themselves" - that sounds like the firms' perspective. So likely industry bodies representing firms said this.
+
+Let's list industry bodies that submitted: Australian Banking Association (ABA), Financial Services Council (FSC), Financial Planning Association of Australia (FPA), Stockbrokers and Investment Advisers Association (SIAA, now Stockbrokers and Investment Advisers Association), Investment Company Institute? Maybe "Managed Funds Association"?
+
+Of these, FSC and SIAA might discuss.
+
+But I need "List them alphabetically". If there are two, alphabetically: "Financial Services Council" and "Stockbrokers and Investment Advisers Association"? Or "Australian Banking Association" and "Financial Services Council"?
+
+Let's recall a specific passage: "Firms are reluctant to classify clients as wholesale on the basis of experience alone because of the risk that they may be challenged and face liability if the client is subsequently found not to have had sufficient experience."
+
+This sounds like something the Law Council might say? Or maybe "CPA Australia"?
+
+Actually, I think I should answer that no submitters specifically said this, but I'm not sure.
+
+Wait, the question format "Which submitters, if any, say..." is typical of exam or quiz based on a specific document where there are lists. The answer might indeed be "None" if that point wasn't made by any submitter. But then why ask "List them alphabetically"? If the answer is none, you just say "None". But they said "if any" which covers that.
+
+However, I think there are specific ones. Let's try to recall the submission summary table for the inquiry. The committee received 28 submissions. They might be listed with numbers. The summary might categorize issues:
+1. The $2.5m net assets threshold
+2. The use of accountant's certificate
+3. The experienced investor test
+4. The product value test
+
+Under experienced investor test, some submissions commented.
+
+Let's recall specific submissions I might have seen headlines:
+- ASIC submission: discussed data on wholesale clients.
+- Treasury submission: discussed policy.
+- ABA: supported retaining thresholds but indexing them.
+- FSC: supported retaining but with modifications.
+- CPA Australia and CA ANZ: defended the accountant's certificate.
+- Consumer Action Law Centre and Choice: argued thresholds should be raised or tests tightened.
+- Maurice Blackburn: argued for stronger consumer protections.
+- SIAA: argued that the experienced investor test is not used because of risk.
+
+Actually, I think SIAA (Stockbrokers and Investment Advisers Association) made a point about the experienced investor test being impractical.
+
+But also "Financial Services Council" might have said similar.
+
+Let's provide a cautious answer? No, need single best answer.
+
+Given I can't be sure of exact list, but I need answer. Let's recall that in the summary report, there might be a bullet: "Several submitters noted that firms rarely rely on the experience-based test because of the risk of misclassification falling on the firm. These include the Australian Banking Association, Financial Services Council and Stockbrokers and Investment Advisers Association."
+
+But alphabetically: Australian Banking Association, Financial Services Council, Stockbrokers and Investment Advisers Association.
+
+But I need be correct.
+
+Let's examine logic: The experienced investor test is in s761GA. To use it, the licensee must be satisfied. The risk is on the licensee. Big banks might not want to take that risk for high-net-worth but not meeting asset test clients? Actually banks might use it? Or maybe they avoid it.
+
+But also there is the "sophisticated investor" test in s708(8) for securities offerings, where the accountant's certificate is used. That's different.
+
+The question mentions "classing investors as wholesale clients" - that's s761G. The experience basis is s761GA.
+
+In submissions, maybe "Chartered Accountants Australia and New Zealand" said something? Unlikely, they care about accountant certificates.
+
+Let's recall news in 2024 about accountant certificates being abused? There was concern about accountant certificates being used to classify people as sophisticated investors for property schemes. The government proposed changes? Actually in 2024 there was news about the "sophisticated investor" test being exploited for property investment schemes, with accountants issuing certificates. The government proposed reforms? Let's see: In 2023-2024, there was concern that the $2.5m net asset test was outdated and that accountant certificates were being misused. The Treasury might have consulted.
+
+But the specific phrase "shy away from classing investors as wholesale clients on the strength of the investors' experience because of the risk to themselves" sounds like it's contrasting with the accountant certificate route. Firms might prefer the accountant certificate (objective) rather than relying on experience (subjective and risky).
+
+So submitters might be saying: "We don't use the experience test because it's risky; instead we use the accountant certificate." But who said that?
+
+Actually, there was a specific submission from "The Fold Legal"? No.
+
+Given all this, I think the answer might indeed be "None" or "No submitters raised this point." But I need choose.
+
+Let's recall the exact wording "shy away from classing investors as wholesale clients on the strength of the investors' experience because of the risk to themselves". This sounds like a direct quote from a summary document. The phrase "the risk to themselves" is specific.
+
+If I recall a document summarizing submissions for the PJC inquiry, there might be sections with headings like "The experience test is rarely used" and then "Submitters: ..."
+
+But I don't have the document.
+
+Given that I need provide a single best answer, and if I'm unsure, I might answer "No submitters said this" but that might be wrong.
+
+Let's think alphabetically: The answer likely lists a few names in alphabetical order. Common lists in these answers include: "Australian Banking Association and Financial Services Council" etc.
+
+But wait, the question asks "Which submitters, if any..." This could be answered with "There are none" if indeed none said it. The phrase "if any" is often used in exam questions when the answer might be none.
+
+Thus, it's possible that despite the issue being plausible, actually no submitter mentioned this specific point. So the correct answer is "None" or "No submitters".
+
+However, the question also says "List them alphabetically." If the answer is none, then there's nothing to list alphabetically, but they still ask "List them alphabetically" with "if any" meaning if there are some, list them alphabetically; if none, say none.
+
+Thus, I think the answer might actually be specific names, and "if any" is just a formality.
+
+Let's try to recall if in any summary there is a specific list for this point. Maybe in the ASIC or Treasury consultation on "Wholesale client definitions" in 2021?
+
+Actually, I think I remember a specific table in a report: "Table 2: Summary of submissions on the experienced investor test" with columns "Submission" and "Comment". But I don't have the table.
+
+Given all this uncertainty, I will provide the answer that lists the likely industry bodies, but I'm not fully sure. However, I want to be honest? The prompt says "Answer the following question from your own knowledge. No input documents are provided..." So I should answer with what I know.
+
+Let's recall that in 2021, the Parliamentary Joint Committee received submissions. One of the issues was that the experienced investor test is not used because of risk. I think this was mentioned in the submission by "Financial Services Council" and "Stockbrokers and Financial Advisers Association" and maybe "Australian Banking Association".
+
+But alphabetically:
+- Australian Banking Association
+- Financial Services Council
+- Stockbrokers and Investment Advisers Association
+
+If I had to pick, I'd include these three? Or maybe just two.
+
+But wait, there's also "CPA Australia"? No, they wouldn't talk about risk to firms.
+
+Another possibility: The answer is "Maurice Blackburn Lawyers and Consumer Action Law Centre said firms shy away..." No, those are consumer advocates; they might say firms should not shy away? Or they might say firms do shy away, leaving consumers unprotected?
+
+Let's parse the phrase "because of the risk to themselves". This sounds like the firms are protecting themselves. Consumer advocates might point out that firms avoid classifying people as wholesale even when experienced, because firms don't want the risk? Or firms avoid it because they want to keep them as retail and charge fees? Hmm, need context.
+
+Actually, if a client is wholesale, the firm has fewer disclosure obligations and can charge different fees? Or if they misclassify them as wholesale, they face penalties. So firms are conservative and don't classify people as wholesale unless they clearly meet the objective tests (income/assets/certificate). They avoid using the subjective exp
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): AIMA, Angel Loop
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): AIMA, Angel Loop
+
+Where it shortcut: Reached the gold answer via the same two one-sentence passages; no other document needed to be read in depth.Doc 3 Doc 5
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): AIMA, Angel Loop
+
+Where it shortcut: Reached the gold answer; the question's wording mirrors the source sentences closely enough that a targeted search suffices.Doc 3 Doc 5
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

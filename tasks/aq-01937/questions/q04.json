@@ -1,0 +1,92 @@
+{
+  "question": "By what percentage were State Street's total expenses in the first half of 2026 higher than in the first half of 2023? Answer to one decimal place.",
+  "number_of_asks": 1,
+  "gold_answer": "19.4%",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 10, expense table, columns 2Q26, 1Q26, 2Q25): total expenses were 2,659 ($ millions) in 2Q26 and 2,811 in 1Q26.\n\nStep 2. Calculation (Doc 10, first half of 2026): 2,811 + 2,659 = 5,470 ($ millions).\n\nStep 3. Source input (Doc 1, FY2024 expense outlook slide, footnote): FY2023 GAAP expenses were $9,583M. The $8,963M that the slide carries for FY2023 is the non-GAAP figure, which excludes $(620)M of notable items, so it is not total expenses.\n\nStep 4. Source input (Doc 2, expense table, columns 3Q24, 2Q24, 3Q23): total expenses were 2,180 in 3Q23.\n\nStep 5. Source input (Doc 3, expense table, columns 4Q24, 3Q24, 4Q23): total expenses were 2,822 in 4Q23.\n\nStep 6. Calculation (Doc 1 and Doc 2): no document reports the first half of 2023, so take the FY2023 GAAP total less the third quarter: 9,583 - 2,180 = 7,403 ($ millions).\n\nStep 7. Calculation (Doc 3): less the fourth quarter as well, which leaves the first half of that year: 7,403 - 2,822 = 4,581 ($ millions).\n\nStep 8. Calculation (later half-year less earlier half-year): 5,470 - 4,581 = 889 ($ millions).\n\nStep 9. Calculation (increase as a share of the earlier half-year): 889 / 4,581 = 19.4% (one decimal place).",
+  "answer_components": [
+    "19.4%"
+  ],
+  "evidence": [
+    {
+      "document_number": 10,
+      "component_number": 1,
+      "quote": "(Dollars in millions) 2Q26 1Q26 2Q25 % QoQ % YoY"
+    },
+    {
+      "document_number": 10,
+      "component_number": 1,
+      "quote": "Total Expenses $ 2,659 $ 2,811 $ 2,529"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "FY2023 non-GAAP expenses of $8,963M is FY2023 GAAP expenses of $9,583M excluding notable items of $(620)M"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "(Dollars in millions) 3Q24 2Q24 3Q23 % QoQ % YoY"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Total Expenses $ 2,308 $ 2,269 $ 2,180"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "(Dollars in millions) 4Q24 3Q24 4Q23 % QoQ % YoY"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Total Expenses $ 2,440 $ 2,308 $ 2,822"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        10
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    },
+    {
+      "trap": "Figure that must be computed",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Doc 1's slide shows FY2023 expenses as $8,963M, but that is non-GAAP; its footnote gives GAAP $9,583M. First-half 2023 is printed nowhere: 9,583 less 3Q23 (Doc 2, 2,180) and 4Q23 (Doc 3, 2,822) is 4,581, giving 19.4%. Using $8,963M gives 38.1%; halving FY2023 gives 14.2%."
+}

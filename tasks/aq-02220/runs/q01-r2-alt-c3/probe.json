@@ -1,0 +1,15 @@
+{
+  "purpose": "removal probe (author diagnostic, concrete necessity concern: q01 rev 2 efficiencies guessable without Doc 2)",
+  "packets": [
+    {
+      "packet": "solver-1",
+      "question": "q01 rev 2",
+      "removed_local": "D02 (Doc 2)",
+      "renumbered": {
+        "D03": "D01",
+        "D04": "D02",
+        "D01": "D03"
+      }
+    }
+  ]
+}

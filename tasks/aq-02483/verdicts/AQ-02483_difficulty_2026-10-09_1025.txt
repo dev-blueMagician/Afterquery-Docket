@@ -1,0 +1,789 @@
+AQ-02483 · Coal Combustion Residuals Permit Program Filings — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-02483
+Saved: 2026-10-09 10:25 (local time)
+Bundle: Coal Combustion Residuals Permit Program Filings · Public policy · 6 documents · 104,925 prompt tokens
+Attempts read: 6
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+9 of 10 runs left · 11 of 50 runs used in the last 24 h (all tasks)
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- Low model: 5 of 5 attempts right
+
+Ready when 1–3 attempts at a level are right, out of up to 5. A level can settle early, for example at 1 right out of 3.
+
+What to change: Make it harder
+------------------------------
+
+Reading the runs and writing suggestions…
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 1 (Oct 9, 2026, 10:21 AM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+1 run
+
+------------------------------------------------------------------------
+Run 1 · Too easy · Result the gate uses
+Oct 9, 2026, 10:21 AM · Version 7ed75f (current) · Low 5/5 · Medium — · High —
+------------------------------------------------------------------------
+
+What changed before this run: first run
+
+Solver summary: Run 1 · Too easy · 5 of 5 right
+5 of 5 solver attempts got it by quoting the same passage: Doc 6 (“To demonstrate compliance with Wisconsin's revised regulations for CCR landfills, effecti…”).
+
+Your answer: 28 weeks
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: —
+
+Final answer: About 26 weeks (roughly half a year). | Your answer (gold): 28 weeks
+
+Full answer
+-----------
+
+About 26 weeks (roughly half a year).
+
+Reasoning
+---------
+
+We need answer: "To the nearest week, how far apart were Wisconsin's deadline for CCR landfills' initial-permitting submittals and Wyoming's for existing CCR impoundments' permit applications?"
+
+Need knowledge about state CCR (coal combustion residuals) programs and deadlines for initial permitting submittals.
+
+Need identify Wisconsin deadline for CCR landfills initial-permitting submittals, and Wyoming deadline for existing CCR impoundments' permit applications. Compute difference in weeks, nearest week.
+
+We need recall or know state program approval timelines? Maybe related to EPA CCR rule state program approvals? Let's think.
+
+The federal CCR rule (2015) allows states to submit programs for EPA approval. Several states got approval: Wyoming, North Dakota, etc. But the question mentions deadlines for initial-permitting submittals for landfills and impoundments within state programs.
+
+Perhaps Wisconsin's state CCR program was approved, with specific compliance deadlines for facilities to submit permit applications. Similarly Wyoming's program had deadlines.
+
+We need "Wisconsin's deadline for CCR landfills' initial-permitting submittals" and "Wyoming's for existing CCR impoundments' permit applications". Let's recall details.
+
+Wyoming Department of Environmental Quality (DEQ) Coal Combustion Residuals (CCR) program was approved by EPA in 2018? Actually Wyoming was first state to get approval in 2018? Let's check mental: In October 2020? No, North Dakota was first in 2018? Let's recall news: In October 2020, EPA approved Wyoming's coal ash program? Or was it Oklahoma?
+
+Let's recall chronology: EPA finalized federal CCR rule in 2015. In 2016 Water Infrastructure Improvements for the Nation (WIIN) Act allowed state programs. States could submit for approval.
+
+- In August 2018? Actually in 2018, EPA proposed approval of North Dakota's program? Let's check mental news headlines: "EPA approves North Dakota coal ash program, first state approval" that was in 2018? Yes, I think in October 2018 EPA approved North Dakota's CCR state permit program, making it the first state-approved program.
+
+Then in 2019? Maybe Georgia, Texas?
+
+Wait another: In June 2021, EPA proposed approval for Wyoming? Or in 2020?
+
+Actually there was news in October 2020 that EPA finalized approval of Wyoming's CCR program? Let's check mental: On October 2, 2020, EPA announced approval of Wyoming's state coal ash permit program, becoming the second state after North Dakota? Or maybe third?
+
+Then in January 2021, Arizona? Hmm.
+
+But the question asks about deadlines within those programs, not EPA approval dates. Specifically "Wisconsin's deadline for CCR landfills' initial-permitting submittals" might be in Wisconsin's state regulations (NR 661? Or ch. NR 514?). Let's recall Wisconsin Department of Natural Resources (DNR) rules for CCR landfills and surface impoundments. Wisconsin enacted state CCR rules maybe in 2016? Actually Wisconsin passed Act 105 in 2015? Or 2018?
+
+We need precise deadlines: for CCR landfills initial-permitting submittals maybe by October 2018? Or by a specific date?
+
+Another angle: The question might come from a specific comparison table in some document listing state CCR program implementation deadlines. But since no document is given, need answer from knowledge.
+
+Let's parse precisely: "To the nearest week, how far apart were Wisconsin's deadline for CCR landfills' initial-permitting submittals and Wyoming's for existing CCR impoundments' permit applications?"
+
+Thus there are two deadlines:
+A = Wisconsin deadline for CCR landfills' initial-permitting submittals.
+B = Wyoming deadline for existing CCR impoundments' permit applications.
+
+We need |A - B| in weeks rounded.
+
+We need determine actual calendar dates.
+
+Let's recall Wyoming's CCR regulations: Wyoming Department of Environmental Quality (WDEQ) Solid Waste Division? They have rules in Chapter 7? Maybe permit application deadlines for existing impoundments were within a certain time after rule effective date.
+
+If Wyoming program was approved around 2020, maybe existing impoundments had to submit permit applications by a certain date, maybe October 2029? No that sounds far.
+
+But maybe the deadlines are tied to federal CCR rule compliance dates: For existing CCR surface impoundments, the federal rule required closure or retrofit by certain dates depending on groundwater monitoring. But state programs could set permit application deadlines.
+
+Wait, "initial-permitting submittals" sounds like the first round of permit applications that facilities must submit under the new state program. For landfills and impoundments separately.
+
+Let's recall Wisconsin's CCR rule promulgated in 2015? Actually Wisconsin's coal combustion residuals rules were added to ch. NR 500 et seq. Let's think: In Wisconsin, CCR landfills and surface impoundments are regulated under ch. NR 507? Or NR 514?
+
+There's a specific Wisconsin Administrative Code chapter NR 661? No, that's hazardous waste.
+
+Maybe the Wisconsin DNR adopted federal CCR rules into state law with some modifications, and required existing facilities to submit initial permit applications by certain deadlines: landfills by one date, impoundments by another.
+
+Specifically, I think in Wisconsin, existing CCR landfills had to submit an initial permit application by October 2018? Or maybe by January 2019?
+
+Let's try to recall news articles around 2016: Wisconsin passed law requiring coal ash landfills to get permits? Actually in 2016 Wisconsin enacted 2015 Wisconsin Act 168? Let's check mental: In 2015, Wisconsin Act 105 modified coal ash recycling? Hmm not clear.
+
+Alternatively, maybe the answer is something like "about 13 weeks" or "about 26 weeks (half a year)". Need be more precise.
+
+Let's systematically recall state CCR program approval documents list state-specific requirements and deadlines.
+
+For Wyoming: The state program was submitted to EPA and included provisions for permitting. In the approval document, EPA might list that Wyoming requires permit applications for existing CCR units within 180 days or by a specific date.
+
+But the question mentions "Wyoming's for existing CCR impoundments' permit applications" - maybe in Wyoming regulations, existing impoundments must submit permit applications by October 19, 2018? Or by April 2021?
+
+Let's search mental database for phrases "initial-permitting submittals" "CCR landfills" "Wisconsin". This sounds like language from a specific comparison chart, maybe in an environmental law article comparing state CCR programs.
+
+Could be from "State Coal Combustion Residuals Programs: A Comparison" listing deadlines:
+- Alabama: ?
+- Wisconsin: CCR landfills initial-permitting submittals due by [date]
+- Wyoming: existing CCR impoundments permit applications due by [date]
+
+We need the difference to nearest week.
+
+Let's recall that in Wisconsin, the CCR rule was finalized in 2019? Actually Wisconsin DNR proposed rules in 2018, finalized in 2019 effective maybe 2019? The initial permitting submittals for landfills might be due within some months after effective date.
+
+But maybe it's simpler: Wisconsin's deadline was October 30, 2015? No.
+
+Let's think about federal CCR rule publication date: April 17, 2015. The rule became effective October 19, 2015. Many state rules reference this.
+
+The WIIN Act was passed in December 2016.
+
+But state programs need to be "no less stringent" than federal.
+
+If Wisconsin incorporated federal rules into state regulations, they might have set compliance deadlines matching federal ones: For existing CCR landfills, initial notification? Actually federal rule required existing CCR landfills and impoundments to post certain information to websites by October 2015, etc. But permitting is state-specific.
+
+Wait, the phrase "initial-permitting submittals" sounds like in the state program, facilities that were previously unpermitted now need to submit initial permit applications. For landfills in Wisconsin, the deadline might have been within 180 days after the state program was approved by EPA? Or after state rule effective?
+
+Let's recall that Wisconsin received EPA approval? Did Wisconsin ever get EPA approval for its CCR program? Yes, maybe in 2022? Actually in January 2022, Wisconsin submitted its program? Or in 2023?
+
+Check mental news in 2023: In January 2023, EPA proposed approval of Wisconsin's CCR program? Or was it in 2024?
+
+There was news in 2023 about several states: Alabama, Illinois? Let's recall in early 2023, EPA proposed approval for programs in Alabama, Illinois, and maybe others? Actually in January 2023, EPA proposed approval of Alabama's program? Or was that in 2023?
+
+Let's list known state approvals:
+1. North Dakota - October 2018 (final? proposed?)
+2. Wyoming - maybe 2020?
+3. Georgia - maybe 2021?
+4. Texas - maybe 2021?
+5. Alabama - maybe 2021? Wait Alabama's program was submitted and in 2021 EPA proposed? Or in 2022?
+6. Oklahoma - maybe 2018? Actually Oklahoma got approval in 2018? Let's check mental: In January 2018, Oklahoma received approval? Yes, maybe Oklahoma was second.
+7. Illinois? Maybe not yet.
+
+But Wisconsin might have submitted later, maybe in 2021, and EPA proposed approval in 2023?
+
+However, the question is not about EPA approval but about internal state deadlines for facilities.
+
+Let's recall Wyoming's specific regulations: Wyoming Solid Waste Management Rules, Chapter 7? Or Chapter 16?
+
+Actually Wyoming's coal combustion residuals are regulated under Wyoming Water Quality Rules and Regulations? Or Solid Waste?
+
+Let's search mental for "Wyoming CCR impoundment permit application deadline". Maybe in Wyoming rules, existing CCR surface impoundments were required to submit a permit application by October 31, 2027? No, that sounds like closure date.
+
+But wait, federal CCR rule has closure deadlines: Unlined impoundments that don't meet aquifer location criteria must stop receiving waste by April 11, 2021, and then close. But states can extend? Actually the federal rule was amended in 2020 (Part B) extending deadlines.
+
+But the question mentions "existing CCR impoundments' permit applications" - this sounds like under the state program, all existing impoundments need to apply for a permit by a specific date.
+
+Let's try to recall specifics from Wyoming's state program document submitted to EPA. The document likely lists the state statutes and regulations. In that document, there might be a table with compliance schedules: For CCR landfills, submit permit application within X months; for CCR impoundments, within Y months.
+
+But I need be precise to the nearest week, which suggests the two dates are specific calendar dates that are somewhat close, maybe within months.
+
+Let's try to determine Wisconsin's date. Maybe Wisconsin required CCR landfills to submit initial permit applications by October 19, 2015? No, that's the federal effective date.
+
+Wait, there's a specific Wisconsin statute: § 289.53? Or maybe § 289.63?
+
+Actually, Wisconsin regulates coal combustion byproducts in ch. NR 538? Let's recall: NR 538 is for beneficial use of industrial byproducts. For landfills, ch. NR 514 covers landfill design, etc. In 2015, Wisconsin added provisions for CCR in landfills?
+
+Let's not overanalyze regulations. Instead, try to recall news headlines about Wisconsin coal ash landfill permitting deadlines. There might have been a deadline of January 2016? Or maybe October 2015?
+
+But the question asks "how far apart were Wisconsin's deadline... and Wyoming's..." This sounds like they are asking for the difference between two specific dates mentioned in a comparison table. The answer might be "about 4 weeks" or "about 12 weeks".
+
+We need be as accurate as possible using knowledge.
+
+Let's recall that in Wyoming, the CCR program rules were effective maybe on October 1, 2019? Or July 1, 2020?
+
+If rules became effective on, say, July 1, 2020, then existing impoundments might have 180 days (about 26 weeks) to apply? Or 90 days?
+
+But we need compare to Wisconsin's deadline for landfills.
+
+Perhaps Wisconsin's rule was effective in 2016, with landfills required to submit by, say, February 2016, and Wyoming's impoundment deadline was in 2020, which is years apart, but they ask "to the nearest week" - that could still be years (e.g., 208 weeks). But "how far apart" with "nearest week" is used regardless of magnitude. But likely it's within the same general timeframe, maybe both around 2020.
+
+Wait, maybe both deadlines were in the same year, like Wisconsin landfills by March 2028 and Wyoming impoundments by June 2028? No, that'd be about 13 weeks.
+
+But I need be honest about uncertainty? The prompt asks "Answer the following question from your own knowledge... Give your single best answer." So I should provide a specific number of weeks.
+
+Let's dig deeper into mental archives about state CCR program details.
+
+Wyoming's program was approved in October 2029? No.
+
+Actually, I recall in October 2020, EPA announced that Wyoming was applying? Let's recall news in October 2020: The Trump administration was working to approve state coal ash programs. In October 2020, EPA proposed approval of Georgia and maybe Wyoming?
+
+Wait, there was a news article in October 2020: EPA proposed approval of Alabama's CCR program? Or was it in January 2021?
+
+Let's check mental timeline of state CCR program approvals:
+- North Dakota: proposed in 2018, finalized?
+- Wyoming: proposed in 2019? Final in 2020?
+- Georgia: proposed in 2019? Final in 2021?
+- Texas: proposed in 2020? Or 2021?
+- Oklahoma: proposed in 2017? Final in 2018?
+- Arizona: proposed?
+- Illinois? Not yet?
+
+But also in 2023, the Biden administration proposed approval of several state programs: Alabama, Illinois, etc.
+
+Specifically, in January 2023, EPA proposed approval of programs for Alabama, Illinois, and Kansas? No, Kansas doesn't have coal plants?
+
+Wait, there was news in August 2023: EPA proposed denial of Alabama's program? Or proposed approval?
+
+Let's recall in August 2023, EPA proposed to deny Alabama's coal ash program? Yes! In August 2023, EPA proposed to deny Alabama's CCR program application because it was not as protective. That was big news. So Alabama was not approved yet.
+
+Then in May 2024? Or in 2024, there was news about Illinois?
+
+But Wyoming was already approved.
+
+Actually, I think Wyoming received final approval in 2023? Let's check mental: In September 2029? No.
+
+But regardless, we need deadlines within the programs.
+
+Let's recall the specific language "initial-permitting submittals" might appear in a table comparing state CCR programs on dimensions like:
+- Landfill initial permitting submittals due: [date]
+- Impoundment initial permitting submittals due: [date]
+
+For Wisconsin, maybe landfills had to submit by October 2015? No, "initial-permitting submittals" sounds like the first permit applications under the state program had to be submitted by a specific date.
+
+Perhaps in Wisconsin, existing CCR landfills had to submit initial permit applications by October 19, 2016? Or within one year?
+
+Let's try to recall Wisconsin Act 168 of 2015? Actually in 2015 Wisconsin passed Act 168 relating to coal combustion products? Or Act 105?
+
+Wait, in 2015 Wisconsin Act 105 was about coal ash? Let's check mental: Wisconsin Act 105 of 2015 was about "coal combustion residuals" maybe? Or about "high-capacity wells"?
+
+Actually, Wisconsin Act 100 was about high-capacity wells in 2016.
+
+But in 2016, Wisconsin passed legislation (2015 Wisconsin Act 168?) that modified regulations for coal ash.
+
+Let's recall that in Wisconsin, coal ash is largely used for beneficial reuse in concrete, etc., but also landfilled.
+
+However, maybe I should approach differently: Use reasoning about typical regulatory timelines. Often regulations become effective and then existing facilities have 180 days or one year to apply for permits.
+
+If Wisconsin's rule became effective, say, on January 1, 2016, then 180 days later is June 29, 2016. Or if effective October 1, 2015, then 180 days is March 29, 2016.
+
+But Wyoming's rule might have become effective later, with impoundment applications due within 180 days of a different date.
+
+But the question asks "how far apart were Wisconsin's deadline... and Wyoming's..." If both are 180 days after respective effective dates, they depend on effective dates.
+
+But maybe the deadlines are fixed calendar dates specified in the regulations, not relative.
+
+Let's recall that in the federal CCR rule, there are specific dates: By October 19, 2015, facilities had to post records. By October 17, 2016, groundwater monitoring started, etc. But state programs can have different ones.
+
+Actually, I think the answer might be "0 weeks" if they are the same date? But that'd be trivial and not "how far apart"?
+
+Let's consider the possibility that Wisconsin's deadline was October 17, 2016, and Wyoming's was April 17, 2017, which is about 26 weeks (half year). Or maybe Wisconsin was January 2016 and Wyoming was July 2016, about 26 weeks.
+
+But I need be somewhat specific.
+
+Let's recall specific Wyoming regulations: In Wyoming Water Quality Rules, Chapter 20? Or in Solid Waste Management Rules Chapter 3?
+
+Actually, I think Wyoming regulates CCR in landfills and surface impoundments under Chapter 7 of the Solid Waste Management Rules (W.S. 35-11-509?). The rules might have been amended in 2016?
+
+But wait, in 2019 Wyoming passed legislation allowing state CCR program? Let's check mental: In 2019, Wyoming Legislature passed House Bill 50? Or Senate File?
+
+There was news in March 2019: Wyoming Legislature passed bill allowing state to regulate coal ash?
+
+Actually, in March 2016, Wyoming passed legislation? Hmm.
+
+Let's recall that in 2016, several states passed legislation to create CCR programs: Georgia, Alabama, etc. But Wyoming might have done so in 2019.
+
+But regardless, let's try to recall actual permit application deadlines mentioned in news reports about specific plants.
+
+For example, in Wyoming, there are several coal plants: Jim Bridger, Naughton, Dave Johnston, etc. They have coal ash ponds. Maybe they had to submit permit applications by a certain date, like by December 2029?
+
+No, that sounds like closure.
+
+Wait, maybe the question is about "initial permitting submittals" required within the state program approval package? For example, in the state program submission to EPA, the state lists all existing CCR units and their permit status.
+
+But "Wyoming's for existing CCR impoundments' permit applications" - maybe in Wyoming's program, existing impoundments must apply for permits within 3 years of program approval?
+
+This is too ambiguous. But I need provide the best answer I can. Let's try to recall specific numbers from comparison tables.
+
+There is a well-known comparison chart in the report "State Coal Combustion Residuals Programs" by the Environmental Integrity Project? Or by Utility Solid Waste Activities Group?
+
+That report might list for each state:
+- CCR landfills: initial permit submittal date
+- CCR surface impoundments: initial permit submittal date
+
+For Wisconsin, maybe landfills: October 19, 2018?
+For Wyoming, maybe impoundments: October 19, 2020?
+
+But the difference might be 104 weeks (2 years).
+
+But they ask "To the nearest week" - if it's exactly 2 years, that's about 104 weeks (since 52 weeks/year). Or maybe 104.14 weeks, rounded to 104.
+
+Let's examine consistency: If Wisconsin landfills had to submit by, say, October 2018, and Wyoming impoundments by October 2020, that's 104 weeks.
+
+But I need be closer if possible.
+
+Let's recall that in Wisconsin, there was a compliance date of October 19, 2016? Or maybe 2018?
+
+Actually, I think Wisconsin's CCR rules were adopted in 2016 and required existing landfills to apply for permits within two years? Or within 180 days?
+
+Let's check mental news in Wisconsin around 2015-2016: The Wisconsin DNR proposed rules for coal ash in landfills in 2015? The rules might have become effective in 2016. Existi
+
+Low model
+=========
+
+Attempt 1 · Right
+-----------------
+Docs: Doc 2, Doc 3, Doc 4, Doc 6 · Note: —
+
+Final answer: Answer: about 28 weeks (Wyoming’s deadline was roughly 28 weeks after Wisconsin’s). | Your answer (gold): 28 weeks
+
+How it got there: It used Doc 6 for Wisconsin's February 1, 2023 deadline and Doc 2 for Wyoming's 12-month rule from the August 19, 2022 effective date, then computed the difference in weeks.
+
+Passages quoted:
+
+- Quoted Doc 6: “To demonstrate compliance with Wisconsin's revised regulations for CCR landfills, effective August 1, 2022, the six CCR landfills were required to submit a plan of operation modification for initial permitting by February 1, 2023.”
+- Quoted Doc 2: “Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule.”
+- Quoted Doc 4: “On October 20, 2024, LDEQ adopted”
+- Quoted Doc 2: “On February 6, 2023, WDEQ submitted”
+- Quoted Doc 2: “2. Wyoming CCR Regulations”
+
+Named Doc 6, Doc 2, Doc 3, Doc 4
+
+Full answer
+-----------
+
+Wisconsin’s CCR landfills had to submit initial-permitting plan modifications by February 1, 2023 (within about 6 months of the August 1, 2022 effective date).
+
+Wyoming’s rules (chapter 18) became effective August 19, 2022, and existing CCR surface impoundments had to submit new permit applications within 12 months, giving a deadline of August 19, 2023.
+
+The difference between February 1, 2023 and August 19, 2023 is 199 days, or about 28.4 weeks.
+
+Answer: about 28 weeks (Wyoming’s deadline was roughly 28 weeks after Wisconsin’s).
+
+Reasoning
+---------
+
+We need parse input docs for Wisconsin and Wyoming deadlines.
+
+Need identify Wisconsin's deadline for CCR landfills' initial-permitting submittals and Wyoming's for existing CCR impoundments' permit applications. Compute difference in weeks, nearest week.
+
+From Document 6 (Wisconsin): "To demonstrate compliance with Wisconsin's revised regulations for CCR landfills, effective August 1, 2022, the six CCR landfills were required to submit a plan of operation modification for initial permitting by February 1, 2023."
+
+Thus Wisconsin deadline: Feb 1, 2023.
+
+Need Wyoming's for existing CCR impoundments' permit applications. From Document 2 (Wyoming): "Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule." Need effective date of State rule. Let's find in Document 2. The Wyoming rules maybe effective August 19, 2022? Wait that's in Document 3 Virginia? Let's search Document 2 for effective date.
+
+Document 2 mentions "On October 20, 2024, LDEQ adopted..." No that's Louisiana Document 4. Let's read Document 2 Wyoming part.
+
+In Document 2, section III: "On February 6, 2023, WDEQ submitted..." Then later "WDEQ incorporated by reference the Federal CCR regulations... and chapter 18 became effective on August 19, 2022." Wait that sounds like Wyoming? Let's check context. Actually in Document 2, under "2. Wyoming CCR Regulations": "WDEQ incorporated by reference the Federal CCR regulations, promulgated through December 14, 2020, with the addition..." Wait no, need correct doc.
+
+Let's parse Document 2 precisely.
+
+Document 2 is about Wyoming? Yes title "Wyoming: Approval of State Coal Combustion Residuals Permit Program". Let's locate the effective date and permit application deadline for existing surface impoundments.
+
+Looking through Document 2 text: In section "c. Permit Requirements and Permitting Process" maybe mentions existing CCR landfills and surface impoundments must submit... Let's search mental.
+
+In Document 2, I see: "Existing CCR landfills must submit a permit renewal application no later than 12 months prior to the expiration date of the facility's existing solid waste permit. SWR chapter 18, section 4(d). Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule. Owners and operators of existing CCR landfills and surface impoundments that intend to cease disposal..."
+
+So need effective date of the State rule (SWR chapter 18). In Document 2 earlier: "WDEQ incorporated... chapter 18 became effective on August 19, 2022"? Wait I think that's in Document 3 Virginia? Let's check Document 3 Virginia: "In 2016, 2017, and 2025... incorporated by reference ..." No.
+
+Let's search Document 2 for "effective date". I recall seeing "SWR chapter 18... effective on August 19, 2022" maybe in Document 2? Let's examine mental excerpt from Document 2 near bottom: "WDEQ incorporated by reference the Federal CCR regulations, promulgated through December 14, 2020, with the addition... This includes additional definitions... WDEQ amended the regulations to adopt EPA amendments through December 14, 2020, and chapter 18 became effective on August 19, 2022." Yes that sounds right for Wyoming? Wait actually Document 4 Louisiana mentions "On October 20, 2024, LDEQ adopted rules... to adopt requirements..." So not that.
+
+But we just need the deadline date, not the rule date? The question asks "Wyoming's for existing CCR impoundments' permit applications". The text says "within 12 months of the effective date of the State rule". So we need effective date + 12 months = deadline. If effective date August 19, 2022, then deadline is August 19, 2023.
+
+But wait check consistency: Document 2 was published Sept 2, 2025 proposing approval. The application was submitted Feb 6, 2023. If rule effective Aug 2022, then 12 months is Aug 2023, which is before application submission in Feb 2023? That'd be past, but they might have already submitted? Hmm maybe effective date is later, like after application? Let's verify.
+
+Actually in Document 2, maybe the state rule effective date was after submission? Let's think: Wyoming submitted application Feb 6, 2023. The state regulations might have become effective later, maybe in 2023? But the document mentions "WDEQ incorporated... chapter 18 became effective on August 19, 2022" - that'd be before application. Then existing impoundments must submit within 12 months => by Aug 19, 2023. That is after Feb 2023 submission but before Sept 2025 publication. So plausible.
+
+But wait Document 6 Wisconsin mentions "revised regulations for CCR landfills, effective August 1, 2022... required to submit ... by February 1, 2023" (6 months?). So Wisconsin's deadline Feb 1, 2023.
+
+Thus need difference between Feb 1, 2023 and Wyoming's deadline (probably Aug 19, 2023?). That's about 28 weeks? Let's compute precisely: Feb 1, 2023 to Aug 19, 2023 = 199 days? Let's calculate: Feb (28 days in 2023? 2023 not leap year) so Feb 1 to Mar 1 = 28, Mar 31, Apr 30, May 31, Jun 30, Jul 31, Aug 19. Sum: 28+31+30+31+30+31+19 = 200 days? Let's do day counting precisely: From Feb 1 to Aug 19 exclusive? Actually "how far apart were Wisconsin's deadline ... and Wyoming's..." Usually difference in time between the two dates. Let's compute days between Feb 1, 2023 and Aug 19, 2023.
+
+Feb remaining after Feb 1 (not including Feb 1): 28-1 = 27 days? Wait if we count full days apart, maybe use date difference. Let's do standard: Aug 19, 2023 minus Feb 1, 2023.
+
+Months:
+Feb: 28 days total, so from Feb 1 to Feb 28 = 27 days (to reach Mar 1)
+Mar: 31 -> Apr 1 (31)
+Apr: 30 -> May 1 (30)
+May: 31 -> Jun 1 (31)
+Jun: 30 -> Jul 1 (30)
+Jul: 31 -> Aug 1 (31)
+Then Aug 1 to Aug 19 = 18 days? Wait if we include Aug 19 but not Feb 1? Let's do total days = 27 +31+30+31+30+31 +19? Hmm need correct.
+
+Better: Use ordinal day of year.
+2023 is not leap.
+Day of year for Feb 1: Jan 31 +1 = 32.
+Day of year for Aug 19: Jan31, Feb28 (59), Mar31 (90), Apr30 (120), May31 (151), Jun30 (181), Jul31 (212), Aug19 = 231.
+Difference: 231 - 32 = 199 days.
+
+199 days /7 = 28.428 weeks => nearest week 28 weeks.
+
+But need verify Wyoming effective date. Let's check Document 2 for "August 19, 2022" presence. Actually I think that was in Document 3? Let's check mental: In Document 3 (Virginia), there is mention "effective January 15, 2025". So not that.
+
+In Document 4 (Louisiana), maybe "effective on August 19, 2022"? No, Document 4 mentions October 2024 adoption.
+
+Thus likely Document 2 indeed has Aug 19, 2022. Let's verify consistency with application submission Feb 2023: The state might have adopted rules in 2022, then submitted application in 2023. Yes.
+
+But wait the question asks "Wyoming's for existing CCR impoundments' permit applications" - if rule effective Aug 19, 2022, then within 12 months is Aug 19, 2023. So date is Aug 19, 2023.
+
+But need "To the nearest week" - 199 days is 28 weeks and 3 days, so 28 weeks.
+
+However, check if Wisconsin deadline is Feb 1, 2023 and Wyoming is Aug 19, 2023 => 28 weeks apart (Wyoming later).
+
+But need be precise "how far apart were..." Could be 28 weeks.
+
+But I should verify if there's any other date for Wyoming. Let's search Document 2 text precisely for "within 12 months of the effective date of the State rule" and maybe also mentions "effective date of chapter 18 is August 19, 2022". Yes.
+
+Thus answer 28 weeks.
+
+But wait check if Wisconsin's submittal deadline was Feb 1, 2023, and Wyoming's permit application deadline for existing impoundments might be within 12 months of effective date which might be different if rule effective date was not Aug 2022 but maybe Feb 2023? Let's check Document 2 for other effective dates. The document mentions "WDEQ submitted its CCR permit program application on February 6, 2023..." But not rule effective date elsewhere? Let's read part near "Wyoming CCR Regulations": "WDEQ incorporated by reference the Federal CCR regulations, promulgated through December 14, 2020... WDEQ amended the regulations to adopt EPA amendments through December 14, 2020, and chapter 18 became effective on August 19, 2022." Yes that sounds correct.
+
+Thus answer about 28 weeks.
+
+But need "To the nearest week" - maybe they want 28 weeks.
+
+Let's present reasoning concisely.
+
+Attempt 2 · Right
+-----------------
+Docs: Doc 2, Doc 4, Doc 6 · Note: Note: where it shortcut
+
+Final answer: That span is 199 days, or about 28.4 weeks—rounded to the nearest week, 28 weeks. | Your answer (gold): 28 weeks
+
+Where it shortcut: Found both deadline provisions under the same heading ('Permit Requirements and Permitting Process') and computed 199 days without engaging any other document.Doc 2 Doc 6
+
+How it got there: It used Doc 6 for Wisconsin's February 1, 2023 deadline and Doc 2 for Wyoming's 12-month rule from the August 19, 2022 effective date, then computed the difference in weeks.
+
+Passages quoted:
+
+- Quoted Doc 6: “To demonstrate compliance with Wisconsin's revised regulations for CCR landfills, effective August 1, 2022, the six CCR landfills were required to submit a plan of operation modification for initial permitting by February 1, 2023.”
+- Quoted Doc 2: “c. Permit Requirements and Permitting Process”
+- Quoted Doc 2: “Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule.”
+
+Named Doc 6, Doc 2, Doc 4
+
+Full answer
+-----------
+
+The two deadlines are about 28 weeks apart.
+
+- Wisconsin required CCR landfills to submit their initial-permitting plan-of-operation modifications by February 1, 2023 (Document 6).
+- Wyoming required existing CCR surface impoundments to submit a new permit application within 12 months of the effective date of the State rule (August 19, 2022), giving a deadline of August 19, 2023 (Document 2).
+
+That span is 199 days, or about 28.4 weeks—rounded to the nearest week, 28 weeks.
+
+Reasoning
+---------
+
+We need answer based on input documents: find Wisconsin's deadline for CCR landfills' initial-permitting submittals, and Wyoming's for existing CCR impoundments' permit applications. Then compute difference in weeks, nearest week.
+
+Need locate in documents.
+
+Document 6 (Wisconsin) mentions: "To demonstrate compliance with Wisconsin's revised regulations for CCR landfills, effective August 1, 2022, the six CCR landfills were required to submit a plan of operation modification for initial permitting by February 1, 2023." So Wisconsin deadline: February 1, 2023.
+
+Document 2 (Wyoming) mentions existing CCR surface impoundments must submit a new permit application within 12 months of effective date of State rule? Let's check precisely. Need Wyoming's for existing CCR impoundments' permit applications. In Document 2, section "c. Permit Requirements and Permitting Process": "Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule." Need effective date of State rule. The rules adopted? Let's find effective date mentioned. In Document 2: "WDEQ incorporated by reference the Federal CCR regulations... with the addition... that became effective on August 19, 2022"? Wait that's in Document 2? Actually Document 2 mentions "WDEQ incorporated by reference the Federal CCR regulations, promulgated through December 14, 2020, with the addition... and chapter 18 became effective on August 19, 2022." Yes in section 2. Wyoming CCR Regulations: "WDEQ incorporated... effective January 15, 2025"? No that's Virginia. Let's search mental: Document 2 is Wyoming proposed approval dated Sept 2, 2025. In section 2. Wyoming CCR Regulations: "WDEQ incorporated by reference the Federal CCR regulations, promulgated through December 14, 2020... and chapter 18 became effective on August 19, 2022." Yes I think that's correct: effective date of State rule is August 19, 2022. Then existing CCR surface impoundments must submit within 12 months => August 19, 2023? But the question asks "Wyoming's for existing CCR impoundments' permit applications" maybe they refer to the deadline specified in the regulations for submitting application: within 12 months of effective date of State rule (Aug 19, 2022) => Aug 19, 2023. But need "to the nearest week, how far apart were Wisconsin's deadline... and Wyoming's..." So need compare Feb 1, 2023 vs Aug 19, 2023? That's about 29 weeks? Let's compute precisely: Feb 1, 2023 to Aug 19, 2023. Let's calculate days: Feb 1 to Aug 19. Feb has 28 days in 2023 (not leap year). So Feb 1 to Mar 1 = 28 days. Mar 31 => Mar 1 to Apr 1 31 => Apr 1 to May 1 30 => May 1 to Jun 1 31 => Jun 1 to Jul 1 30 => Jul 1 to Aug 1 31 => Aug 1 to Aug 19 18. Sum: 28+31+30+31+30+31+18 = 199 days. 199/7 = 28.43 weeks => about 28 weeks.
+
+But wait maybe Wyoming's existing impoundments deadline is within 12 months of effective date of the state rule which might be different if effective date is not Aug 19, 2022? Let's verify in Document 2 text precisely: "On October 20, 2024, LDEQ adopted rules..." No that's Louisiana Document 4. For Wyoming Document 2, in section 2: "WDEQ incorporated by reference the Federal CCR regulations, promulgated through December 14, 2020, with the addition... and chapter 18 became effective on August 19, 2022." Yes.
+
+But also in Document 2 section "c. Permit Requirements..." says "Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule." So indeed deadline is Aug 19, 2023.
+
+However, wait Wisconsin's deadline was Feb 1, 2023, which is about 6.5 months earlier than Aug 19, 2023, about 28 weeks.
+
+But need "how far apart were Wisconsin's deadline ... and Wyoming's..." Could be absolute difference in weeks rounded nearest: 28 weeks.
+
+But I should verify if there's a specific date mentioned directly for Wyoming existing impoundments in document rather than computing from effective date. Let's check Document 2 more: "Existing CCR landfills must submit a permit renewal application no later than 12 months prior to the expiration date of the facility's existing solid waste permit. ... Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule." No explicit date given other than effective date. So yes compute.
+
+But wait the question might be comparing Wisconsin's Feb 1, 2023 with Wyoming's existing CCR landfills? No, specifically "existing CCR impoundments' permit applications". So correct.
+
+Let's double-check Wisconsin date: Document 6 says "the six CCR landfills were required to submit a plan of operation modification for initial permitting by February 1, 2023." Yes.
+
+Thus difference between Feb 1, 2023 and Aug 19, 2023 is 199 days = 28.43 weeks => nearest week 28 weeks.
+
+Need present answer with reasoning and cite documents.
+
+Attempt 3 · Right
+-----------------
+Docs: Doc 2, Doc 3, Doc 4, Doc 6 · Note: Note: where it shortcut
+
+Final answer: That is 199 days, or 28 weeks and 3 days—rounded to the nearest week, 28 weeks. | Your answer (gold): 28 weeks
+
+Where it shortcut: Chained Wyoming's 12-month window to 'chapter 18 became effective on August 19, 2022' in the same document — the only inference required, and it sits a few paragraphs from the deadline sentence.Doc 2
+
+How it got there: It used Doc 6 for Wisconsin's February 1, 2023 deadline and Doc 2 for Wyoming's 12-month rule from the August 19, 2022 effective date, then computed the difference in weeks.
+
+Passages quoted:
+
+- Quoted Doc 6: “To demonstrate compliance with Wisconsin's revised regulations for CCR landfills, effective August 1, 2022, the six CCR landfills were required to submit a plan of operation modification for initial permitting by February 1, 2023.”
+- Quoted Doc 2: “chapter 18 became effective on August 19, 2022”
+- Quoted Doc 2: “c. Permit Requirements and Permitting Process”
+- Quoted Doc 2: “2. Wyoming CCR Regulations”
+
+Named Doc 6, Doc 2, Doc 3, Doc 4
+
+Full answer
+-----------
+
+The two deadlines are about 28 weeks apart.
+
+- Wisconsin: Existing CCR landfills had to submit their initial plan-of-operation modifications by February 1, 2023 (Document 6).
+- Wyoming: Existing CCR surface impoundments had to submit new permit applications within 12 months of the State rule’s effective date of August 19, 2022, giving a deadline of August 19, 2023 (Document 2).
+
+That is 199 days, or 28 weeks and 3 days—rounded to the nearest week, 28 weeks.
+
+Reasoning
+---------
+
+We need answer: To nearest week, how far apart were Wisconsin's deadline for CCR landfills' initial-permitting submittals and Wyoming's for existing CCR impoundments' permit applications?
+
+Need identify deadlines in documents.
+
+From Document 6 (Wisconsin): "To demonstrate compliance with Wisconsin's revised regulations for CCR landfills, effective August 1, 2022, the six CCR landfills were required to submit a plan of operation modification for initial permitting by February 1, 2023." So Wisconsin deadline Feb 1, 2023.
+
+From Document 2 (Wyoming): Need existing CCR impoundments permit applications deadline. In Document 2, section III? Let's search mental/text: "Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule. ... SWR chapter 18, section 4(b)." Need effective date of State rule? The Wyoming rules became effective? In Document 2 maybe effective date of rule is August 19, 2022? Wait that's in Document 2? Actually Document 2 mentions "chapter 18 became effective on August 19, 2022" in section about Virginia? No need check precisely.
+
+But we need Wyoming's deadline for existing CCR impoundments' permit applications. Let's locate in Document 2. Under "c. Permit Requirements and Permitting Process": "Existing CCR landfills must submit a permit renewal application no later than 12 months prior to the expiration date... Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule. Owners and operators of existing CCR landfills and surface impoundments that intend to cease disposal... shall submit a closure permit application within 12 months prior to the expiration date... An alternate schedule... SWR chapter 18, section 4(b)."
+
+Need effective date of State rule. In Document 2, under "2. Wyoming CCR Regulations": "WDEQ incorporated by reference the Federal CCR regulations... and chapter 18 became effective on August 19, 2022." Yes, in Document 2 near bottom: "WDEQ incorporated... effective January 15, 2025"? Wait that's Virginia. Let's be precise.
+
+Actually Document 2 is about Wyoming. Let's scan mental: In Document 2, section "2. Wyoming CCR Regulations" says "WDEQ previously regulated CCR in landfills under the SWR starting in 1990... Wyoming incorporated 40 CFR part 257, subpart D by reference (9VAC20-81-800)..." No that's Virginia in Document 3.
+
+We need Document 2 specifically Wyoming. Let's recall Document 2 content: It mentions WDEQ submitted application Feb 6, 2023. Then in section "III. The Wyoming Application" mentions working since Sept 2019. In section "IV. EPA Analysis..." under "1. Guidelines for Permitting" there's "Existing CCR landfills must submit... Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule... SWR chapter 18, section 4(b)." Need effective date of Wyoming's state rule. Might be mentioned elsewhere in Document 2: "On October 20, 2024, LDEQ adopted rules..." No that's Louisiana Document 4.
+
+Let's search within Document 2 text for "effective". There may be "chapter 18 became effective on August 19, 2022"? Actually that sounds like Virginia's VSWMR? No, Virginia's incorporation effective Jan 27, 2016, amended May 3, 2017, and Jan 15, 2025.
+
+Wait maybe Wyoming's rule effective date is not in Document 2 but in Document 6? No.
+
+But actually the question asks "Wyoming's for existing CCR impoundments' permit applications". The deadline is within 12 months of effective date of state rule. If effective date is, say, when chapter 18 became effective? Let's find in Document 2: Maybe near end "WDEQ incorporated by reference the Federal CCR regulations, promulgated through December 14, 2020, with the addition... WDEQ amended the regulations to adopt EPA amendments through December 14, 2020, and chapter 18 became effective on August 19, 2022." Yes, I think that is in Document 2. Let's check consistency: If chapter 18 effective Aug 19, 2022, then 12 months later is Aug 19, 2023.
+
+But wait Wisconsin's deadline is Feb 1, 2023. Difference between Feb 1, 2023 and Aug 19, 2023 is about 6.5 months, about 28 weeks? Or if Wyoming effective date different?
+
+Let's verify Wyoming rule effective date precisely. In Document 2, section "2. Wyoming CCR Regulations" paragraph: "WDEQ incorporated by reference the Federal CCR regulations, promulgated through December 14, 2020... WDEQ amended the regulations to adopt EPA amendments through December 14, 2020, and chapter 18 became effective on August 19, 2022." Yes that sounds right. So existing surface impoundments must submit within 12 months => Aug 19, 2023? Or within 12 months of effective date of the rule, but maybe they mean within 12 months after the state's CCR permit program is approved? No, text says "within 12 months of the effective date of the State rule." So Aug 19, 2023.
+
+But wait Document 2 also mentions "WDEQ 2023 Application... Feb 6, 2023" and "EPA sent questions Dec 5, 2023... WDEQ responded Jan 29, 2024... May 16, 2025..." Not needed.
+
+Thus Wisconsin deadline Feb 1, 2023 and Wyoming deadline Aug 19, 2023. Difference: about 6 months 18 days, which is about 29 weeks? Let's compute exactly: Feb 1, 2023 to Aug 19, 2023. Feb has 28 days in 2023 (not leap year? 2023 not leap year, Feb 28). So Feb 1 to Mar 1 = 28 days. Mar 1 to Apr 1 = 31. Apr 1 to May 1 = 30. May 1 to Jun 1 = 31. Jun 1 to Jul 1 = 30. Jul 1 to Aug 1 = 31. Aug 1 to Aug 19 = 18. Total days = 28+31+30+31+30+31+18 = 199 days. 199/7 = 28 weeks and 3 days. To nearest week => 28 weeks.
+
+But need check if Wyoming deadline might be different if effective date is not Aug 19, 2022. Let's verify in Document 2 if there's another date. Actually the Wyoming rules are in Solid Waste Rules chapter 18. The document might mention "chapter 18 became effective on August 19, 2022" indeed.
+
+But wait there's also mention in Document 2: "Existing CCR landfills must submit a permit renewal application no later than 12 months prior to the expiration date of the facility's existing solid waste permit. ... Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule. ... SWR chapter 18, section 4(b)." So yes, tied to state rule effective date.
+
+Thus answer approximately 28 weeks apart. But need "To the nearest week" maybe they want 28 weeks. Let's provide with explanation of dates.
+
+However, check Wisconsin document says "by February 1, 2023". Yes.
+
+Thus difference about 28 weeks (Wyoming later).
+
+But wait could Wyoming effective date be Feb 6, 2023? No that's application submission date.
+
+Thus answer 28 weeks.
+
+Attempt 4 · Right
+-----------------
+Docs: Doc 2, Doc 3, Doc 4, Doc 5, Doc 6 · Note: Note: where it shortcut
+
+Final answer: To the nearest week: 28 weeks. | Your answer (gold): 28 weeks
+
+Where it shortcut: Same two-sentence retrieval plus the August 19, 2022 effective date; no distractor document was consulted.Doc 2 Doc 6
+
+How it got there: It used Doc 6 for Wisconsin's February 1, 2023 deadline and Doc 2 for Wyoming's 12-month rule from the August 19, 2022 effective date, then computed the difference in weeks.
+
+Passages quoted:
+
+- Quoted Doc 6: “To demonstrate compliance with Wisconsin's revised regulations for CCR landfills, effective August 1, 2022, the six CCR landfills were required to submit a plan of operation modification for initial permitting by February 1, 2023.”
+- Quoted Doc 2: “c. Permit Requirements and Permitting Process”
+- Quoted Doc 2: “chapter 18 became effective on August 19, 2022”
+
+Named Doc 6, Doc 2, Doc 3, Doc 4, Doc 5
+
+Full answer
+-----------
+
+From the documents:
+
+- Wisconsin required CCR landfills to submit their initial-permitting plan modifications by February 1, 2023 (Doc 6).
+- Wyoming required existing CCR surface impoundments to submit new permit applications within 12 months of the State rule’s effective date of August 19, 2022, so the deadline was August 19, 2023 (Doc 2).
+
+The interval between February 1, 2023 and August 19, 2023 is 199 days, which is about 28.4 weeks.
+
+To the nearest week: 28 weeks.
+
+Reasoning
+---------
+
+We need parse question: "To the nearest week, how far apart were Wisconsin's deadline for CCR landfills' initial-permitting submittals and Wyoming's for existing CCR impoundments' permit applications?"
+
+Need identify both deadlines from docs.
+
+Doc 6 (Wisconsin): "To demonstrate compliance with Wisconsin's revised regulations for CCR landfills, effective August 1, 2022, the six CCR landfills were required to submit a plan of operation modification for initial permitting by February 1, 2023." So Wisconsin deadline Feb 1, 2023.
+
+Need Wyoming's deadline for existing CCR impoundments' permit applications. Doc 2 (Wyoming): Need find specific deadline. Let's search mental/text: In Wyoming application section maybe "Within 12 months of the effective date..." Wait need existing CCR surface impoundments permit applications. In doc 2, under "c. Permit Requirements and Permitting Process": "Existing CCR landfills must submit a permit renewal application no later than 12 months prior to the expiration date... Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule." Need effective date of State rule? The Wyoming rules effective August 19, 2022? Let's verify. In doc 2, maybe "chapter 18 became effective on August 19, 2022" mentioned in Virginia? No that's Virginia. For Wyoming, need determine effective date of State CCR regulations. Let's search doc 2 text: It mentions "In 2022..."? Actually doc 2 mentions WDEQ submitted application Feb 6, 2023 and rules? Let's scan mental for "effective date" near Wyoming surface impoundments. In section "c. Permit Requirements..." says "Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule." Need identify that effective date. Maybe in Wyoming narrative it said rules effective on some date. Let's examine doc 2 more precisely.
+
+Doc 2 is Federal Register proposed rule for Wyoming approval, Sept 2, 2025. In section "III. The Wyoming Application" maybe mentions effective date? Actually in section about Wyoming CCR Regulations: "WDEQ incorporated by reference the Federal CCR regulations, promulgated through December 14, 2020... chapter 18 became effective on August 19, 2022"? Wait that was in Virginia doc? Let's check mental: In doc 3 (Virginia) it said "Virginia incorporated ... effective January 15, 2025" and earlier "effective January 27, 2016" etc. In doc 4 (Louisiana) maybe "adopted rules in the Louisiana Register Volume 50, Number 10, to adopt the requirements... effective October 20, 2024"? Yes that's Louisiana. For Wyoming, need find effective date of Wyoming's CCR rules. Let's search doc 2 for "August" or "effective". I recall in doc 2 section "2. Wyoming CCR Regulations": Maybe says "WDEQ incorporated by reference the Federal CCR regulations... and chapter 18 became effective on August 19, 2022"? Actually I think that might be Wyoming? Let's examine consistency: Many states adopted rules around 2022. Let's check mental of doc 2 text: Near end of section 2 maybe "WDEQ incorporated by reference the Federal CCR regulations, promulgated through December 14, 2020, with the addition of those portions..." Wait that sounds like Virginia? No Virginia incorporated with addition of certain portions. Let's not confuse.
+
+But question asks "Wyoming's for existing CCR impoundments' permit applications" Specifically they ask "how far apart were Wisconsin's deadline... and Wyoming's for existing CCR impoundments' permit applications?" So need both specific dates, then compute difference in weeks rounded.
+
+We need exact Wyoming deadline date, not just "within 12 months of effective date". Perhaps the effective date is in the document. Let's search doc 2 mental for "effective date of the State rule" context. In section c: "Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule. Owners and operators of existing CCR landfills and surface impoundments that intend to cease disposal... shall submit a closure permit application within 12 months prior to the expiration date..." Then maybe elsewhere states the rule effective date. Let's search doc 2 for "2022" occurrences. I recall in doc 2 there is mention "On February 6, 2023, WDEQ submitted..." and "WDEQ previously regulated CCR in landfills under the SWR starting in 1990..." Hmm not clear.
+
+But maybe the question expects using the date mentioned in doc 2 for existing surface impoundments: "within 12 months of the effective date of the State rule" and the effective date might be mentioned in doc 2's section on Wyoming CCR Regulations: "WDEQ incorporated by reference... chapter 18 became effective on August 19, 2022"? If so, then deadline would be August 19, 2023? Wait within 12 months of effective date => by August 19, 2023. But Wisconsin is Feb 1, 2023. Difference about 6 months? But need nearest week.
+
+Let's verify Wyoming rule effective date. In doc 4 (Louisiana) rules effective maybe after adoption. But for Wyoming, I think the state regulations were adopted in 2022 and effective maybe September 2022? Let's check mental consistency: In doc 2, under "Wyoming CCR Regulations" paragraph: "WDEQ incorporated by reference the Federal CCR regulations, promulgated through December 14, 2020, with the addition of those portions of the Act..." Wait that sounds like Wyoming? Actually no, that sounds like Virginia? Let's distinguish.
+
+Let's recall doc 3 (Virginia) said: "In 2016, 2017, and 2025, the Commonwealth incorporated by reference 40 CFR part 257... See Virginia Register Volume 32... Volume 33... Volume 41..." So Virginia had incorporations in 2016, 2017, 2025.
+
+Doc 4 (Louisiana) said: "On October 20, 2024, LDEQ adopted rules in the Louisiana Register Volume 50, Number 10, to adopt the requirements..."
+
+Doc 5 (Alabama) said regulations promulgated in 2018 and revised.
+
+Doc 6 (Wisconsin) said regulations updated on August 1, 2022.
+
+Thus for Wyoming (doc 2), likely they incorporated regulations and they became effective maybe in 2022 as well? Let's search mental text of doc 2 near bottom: "WDEQ incorporated by reference the Federal CCR regulations, promulgated through December 14, 2020, except for..." Hmm I think that is indeed Wyoming? Actually in doc 2, section 2 is "Wyoming CCR Regulations". Let's recall the text: "WDEQ previously regulated CCR in landfills under the SWR starting in 1990. Under the Wyoming Water Quality Rules promulgated in 1975, Wyoming began regulating CCR surface impoundments. WDEQ incorporated by reference the Federal CCR regulations, promulgated through December 14, 2020, with the addition of those portions..." Yes that sounds like Wyoming describing its prior regulations and then incorporation. Then maybe "This includes additional definitions..." and then "WDEQ amended the regulations to adopt EPA amendments through December 14, 2020, and chapter 18 became effective on August 19, 2022." Yes! So Wyoming's CCR rule (chapter 18) effective date is August 19, 2022. Therefore existing surface impoundments must submit new permit application within 12 months => by August 19, 2023.
+
+But wait Wisconsin deadline is Feb 1, 2023. Difference to Aug 19, 2023 is about 28 weeks? Let's compute precisely.
+
+From Feb 1, 2023 to Aug 19, 2023.
+Feb 1 to Aug 1 = 181 days? Let's do exact: Feb (28 days in 2023? 2023 not leap year, Feb has 28 days) so Feb 1 to Mar 1 = 28 days. Mar 1 to Apr 1 = 31 => 59. Apr 1 to May 1 = 30 => 89. May 1 to Jun 1 = 31 => 120. Jun 1 to Jul 1 = 30 => 150. Jul 1 to Aug 1 = 31 => 181. Then Aug 1 to Aug 19 = 18 => total 199 days. 199/7 = 28.4 weeks. To nearest week = 28 weeks.
+
+But need "how far apart were Wisconsin's deadline... and Wyoming's..." If Wyoming is Aug 19, 2023 and Wisconsin Feb 1, 2023, then 199 days ~28 weeks.
+
+However, need verify if Wyoming's existing impoundments deadline might actually be specified elsewhere as a specific date, not calculated. Let's check doc 2 text: "Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule. Owners and operators of existing CCR landfills and surface impoundments that intend to cease disposal..." There's also "In accordance with the SWR, chapter 18, section 4(b), existing CCR landfills and surface impoundments must submit an operating or closure permit application under chapter 18 under certain timeframes unless an alternate schedule is approved..." Maybe in Wyoming's rules the specific date is "within 365 days of the approval of the State's CCR permitting program"? No that's Louisiana.
+
+But question specifically asks "Wyoming's for existing CCR impoundments' permit applications" This sounds like they want the deadline mentioned in the Wyoming document. Let's check doc 2 precisely: Maybe there is explicit date like "within 12 months of August 19, 2022" but not translated to calendar date in doc. But they ask "To the nearest week, how far apart..." So they want compute difference between two specific dates mentioned in docs. Wisconsin's is Feb 1, 2023. Wyoming's might be "within 12 months of the effective date of the State rule" but they might expect you to know effective date is Aug 19, 2022, hence Aug 19, 2023. Or maybe effective date is different, like Sept 2022? Let's confirm with more precision.
+
+Let's search mental for "August 19, 2022" in doc 2. I think I saw "chapter 18 became effective on August 19, 2022" in doc 2 near the end of section 2. Yes.
+
+But wait, there's also mention in doc 6? No.
+
+Thus answer likely 28 weeks. Let's present reasoning with both dates.
+
+But need check if Wisconsin's deadline might be different? In doc 6: "the six CCR landfills were required to submit a plan of operation modification for initial permitting by February 1, 2023." Yes.
+
+Therefore difference: Feb 1, 2023 to Aug 19, 2023 = 199 days ≈ 28.43 weeks => nearest week 28 weeks.
+
+Need answer "To the nearest week..." So 28 weeks.
+
+Let's double-check day count including ends? The question "how far apart were Wisconsin's deadline... and Wyoming's..." Typically difference between dates, not counting endpoint? Let's compute using date difference: Aug 19, 2023 minus Feb 1, 2023 = 199 days indeed. 199/7 = 28 weeks and 3 days, so nearest week 28 weeks.
+
+But if they round 28.4 to nearest week => 28 weeks (since .4 < .5). Yes.
+
+Thus answer: about 28 weeks (Wyoming's was about August 19, 2023; Wisconsin's was February 1, 2023). Need concise.
+
+Attempt 5 · Right
+-----------------
+Docs: Doc 2, Doc 3, Doc 4, Doc 5, Doc 6 · Note: Note: where it shortcut
+
+Final answer: To the nearest week: about 28 weeks apart. | Your answer (gold): 28 weeks
+
+Where it shortcut: Reached the answer from the Wisconsin sentence alone plus the Wyoming 12-month provision; the state names in the question made retrieval immediate.Doc 2 Doc 6
+
+How it got there: It used Doc 6 for Wisconsin's February 1, 2023 deadline and Doc 2 for Wyoming's 12-month rule from the August 19, 2022 effective date, then computed the difference in weeks.
+
+Passages quoted:
+
+- Quoted Doc 6: “To demonstrate compliance with Wisconsin's revised regulations for CCR landfills, effective August 1, 2022, the six CCR landfills were required to submit a plan of operation modification for initial permitting by February 1, 2023.”
+
+Named Doc 6, Doc 2, Doc 4, Doc 3, Doc 5
+
+Full answer
+-----------
+
+From the documents:
+
+- Wisconsin required CCR landfills to submit plan-of-operation modifications for initial permitting by February 1, 2023 (Document 6).
+- Wyoming required existing CCR surface impoundments to submit a new permit application within 12 months of the effective date of the State rule (SWR Chapter 18), which became effective August 19, 2022 — so the deadline was August 19, 2023 (Document 2).
+
+The interval between February 1, 2023 and August 19, 2023 is 199 days, which is:
+
+199 ÷ 7 ≈ 28.4 weeks
+
+To the nearest week: about 28 weeks apart.
+
+Reasoning
+---------
+
+We need parse question: "To the nearest week, how far apart were Wisconsin's deadline for CCR landfills' initial-permitting submittals and Wyoming's for existing CCR impoundments' permit applications?"
+
+We need identify deadlines from documents.
+
+We need find Wisconsin's deadline for CCR landfills' initial-permitting submittals. In Document 6 (Wisconsin): "To demonstrate compliance with Wisconsin's revised regulations for CCR landfills, effective August 1, 2022, the six CCR landfills were required to submit a plan of operation modification for initial permitting by February 1, 2023." So Wisconsin deadline is Feb 1, 2023.
+
+Wyoming's deadline for existing CCR impoundments' permit applications. Need find in Document 2 (Wyoming). Let's search mental: In Wyoming application section? Document 2 mentions "Existing CCR landfills and surface impoundments must submit an operating or closure permit application under chapter 18 under certain timeframes... Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule." Need specific date? Maybe effective date of State rule and then 12 months? Or there may be a specific date mentioned elsewhere. Let's inspect Document 2 details.
+
+Document 2 is Federal Register proposed approval of Wyoming CCR program, Sept 2, 2025. In section "Wyoming CCR Permits" or "Wyoming Application" maybe mentions deadlines. Let's recall text: Under "c. Permit Requirements and Permitting Process" it said "Existing CCR landfills must submit a permit renewal application no later than 12 months prior to the expiration date... Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule. Owners and operators of existing CCR landfills and surface impoundments that intend to cease disposal... shall submit a closure permit application within 12 months prior..." But need actual calendar deadline? The question asks "Wyoming's for existing CCR impoundments' permit applications" maybe refers to specific date mentioned in document? Let's search mental for "February" or specific months in Document 2.
+
+Actually maybe in Document 2 there is mention of application submission date? Wait the question compares deadlines "Wisconsin's deadline for CCR landfills' initial-permitting submittals and Wyoming's for existing CCR impoundments' permit applications". This sounds like both are specific calendar dates mentioned in the documents. Wisconsin is Feb 1, 2023. For Wyoming, maybe the effective date of state rule was August 19, 2022? Then within 12 months => by August 19, 2023? But need "deadline for ... permit applications" might be "within 12 months of the effective date of the State rule" but not a specific calendar date unless effective date given.
+
+Let's check Document 2 precisely: In section III? Actually in Document 2, under "3. Wyoming Partial Program" maybe mentions "Wyoming incorporated by reference... effective August 19, 2022"? No that was Virginia? Wait need correct.
+
+Let's parse Document 2 sections: It mentions WDEQ submitted application on Feb 6, 2023. In "2. Wyoming CCR Regulations" maybe "Wyoming incorporated 40 CFR part 257... effective August 19, 2022"? No, that sounds like Louisiana? Let's check mental: Document 4 (Louisiana) mentioned rules adopted October 20, 2024? Hmm.
+
+But we just need difference to nearest week. If Wyoming is Aug 19, 2023, difference from Feb 1, 2023 is about 29 weeks? Actually Feb 1 to Aug 19 is about 199 days = ~28.4 weeks => 28 weeks. But need be precise "to the nearest week" maybe 28 weeks. But need verify correct Wyoming date.
+
+Let's search within Document 2 for "surface impoundments must submit" phrase. In Document 2, section "c. Permit Requirements and Permitting Process" under "Adequacy of the Wyoming Permit Program" maybe lists: "Existing CCR landfills must submit a permit renewal application no later than 12 months prior to the expiration date... Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule..." The effective date might be mentioned elsewhere: "Wyoming incorporated ... into the SWR by reference effective..." Actually in Document 2 section "2. Wyoming CCR Regulations" might say "WDEQ incorporated by reference the Federal CCR regulations... with the addition... The SWR chapter 18 incorporated amendments... effective on August 19, 2022"? Wait that was Virginia? Let's check mental consistency: Document 3 (Virginia) said incorporated amendments effective January 15, 2025. Document 4 (Louisiana) said adopted rules in Louisiana Register Volume 50 Number 10, effective? Not clear. Document 5 (Alabama) said regulations effective? Not in mental. Document 6 (Wisconsin) said revised regulations effective August 1, 2022.
+
+Perhaps Document 2 mentions effective date of Wyoming rules: Maybe "SWR chapter 18... became effective on August 19, 2022"? Actually I think in Document 2 there is line: "WDEQ incorporated by reference the Federal CCR regulations, promulgated through December 14, 2020... and chapter 18 became effective on August 19, 2022." Yes that sounds right. So existing surface impoundments must submit new permit application within 12 months => by August 19, 2023.
+
+But wait the question asks "Wyoming's for existing CCR impoundments' permit applications" not "within 12 months of effective date". But they ask "how far apart were Wisconsin's deadline... and Wyoming's..." This implies both are specific deadlines. If Wyoming's is within 12 months of Aug 19, 2022 => Aug 19, 2023. Difference between Feb 1, 2023 and Aug 19, 2023 is 199 days /7 = 28.43 weeks => 28 weeks.
+
+But need check if Wisconsin's is Feb 1, 2023 exactly, and Wyoming's might be different if effective date different. Let's verify Wyoming effective date precisely from document.
+
+Search mental text in Document 2: Under "2. Wyoming CCR Regulations" I recall seeing "WDEQ incorporated by reference 40 CFR part 257, subpart D as amended through December 14, 2020... and chapter 18 became effective on [some date]." Actually I think it said "effective on August 19, 2022" indeed. Let's check consistency: Document 6 Wisconsin said effective August 1, 2022. Document 2 might say "effective on August 19, 2022" because that's a Tuesday? Hmm maybe.
+
+But there's also mention in Document 2: "On February 6, 2023, WDEQ submitted its CCR permit program application..." That was about 6 months after Aug 2022.
+
+Thus likely Wyoming deadline is August 19, 2023. Let's compute precisely: Feb 1, 2023 to Aug 19, 2023.
+Feb has 28 days (2023 not leap year). So Feb 1 to Aug 19:
+Feb remaining: 27 days (after Feb 1? Depending inclusive/exclusive). But we care about distance apart, likely just subtract dates.
+Let's compute days between Feb 1, 2023 and Aug 19, 2023:
+Feb: 28 -1 = 27 days (to end of Feb)
+Mar 31
+Apr 30
+May 31
+Jun 30
+Jul 31
+Aug 19
+Total = 27+31+30+31+30+31+19 = 199 days. 199/7 = 28.428 weeks => 28 weeks to nearest week.
+
+But wait could Wyoming's deadline be within 12 months of effective date of State rule which might be March 2023? No, need be accurate.
+
+Let's check Document 2 for "within 12 months of the effective date of the State rule" and also find "effective date" mentioned near that? Maybe in same paragraph: "Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule. Owners and operators... submit closure permit application within 12 months prior..." The effective date might not be in same sentence but elsewhere in document: "WDEQ amended the regulations... chapter 18 became effective on August 19, 2022." Yes.
+
+But is there a specific calendar deadline mentioned elsewhere, like "by August 19, 2023"? Not explicit, but implied.
+
+However, the question might be comparing Wisconsin's Feb 1, 2023 with Wyoming's "within 12 months" but they ask "to the nearest week, how far apart..." That sounds like compute difference in weeks between two specific dates. So yes, 28 weeks.
+
+But need be careful: Maybe Wisconsin's deadline was Feb 1, 2023 and Wyoming's was Feb 6, 2024? No, that'd be 52 weeks, but not matching "existing CCR impoundments' permit applications."
+
+Let's search Document 2 for "12 months" near impoundments. The phrase "Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule." If the state rule effective date is not Aug 19, 2022 but maybe "August 19, 2022" indeed.
+
+But wait Document 4 mentioned "LAC 33:VII.1004.A... all CCR units must be permitted... LDEQ has not issued any... In accordance with LAC 33:VII.1004.A the owner... must submit an application... within 365 days of the approval..." That's Louisiana, not relevant.
+
+Thus answer likely 28 weeks. Let's provide reasoning with the two dates.
+
+Need cite documents? The prompt asks answer using input documents. So mention Wisconsin deadline Feb 1, 2023 (Document 6) and Wyoming's within 12 months of Aug 19, 2022 => Aug 19, 2023 (Document 2). Difference about 199 days, ~28 weeks.
+
+But need "To the nearest week" => 28 weeks.

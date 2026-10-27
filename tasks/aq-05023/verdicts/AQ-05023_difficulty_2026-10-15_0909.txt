@@ -1,0 +1,409 @@
+AQ-05023 · Corporate filingsEasy or Hard only — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-05023
+Saved: 2026-10-15 09:09 (local time)
+Bundle: Corporate filingsEasy or Hard only · Cars.com Inc. · 8 documents · 91,392 prompt tokens
+Run read: Run 2, the latest of 2
+Attempts read: 4
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 17 runs left · 12 of 60 runs used in the last 24 h (all tasks)
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 3 attempts right
+
+High model: two solvers try up to 3 times each. Ready when both get it wrong at least once and not every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Rephrase so the answer term does not match a disclosed row label, e.g. 'How much cash in total did Cars.com spend retiring its own common stock from January 1, 2025 through June 30, 2026?' or ask for a derived quantity such as the weighted-average price per share repurchased over that window, which appears nowhere verbatim. Why: The question's key phrase 'aggregate purchase price' is the verbatim row label in Note 7 (Stockholders' Equity) of the Q2-2026, Q1-2026 and Q3-2025 10-Qs. A solver who searches that phrase lands directly on tables giving $57,253K (six months ended June 30, 2026) and $63,944K (nine months ended September 30, 2025). The only missing piece, Q4 2025, is sitting in the adjacent 'Maximum Dollar Value of Shares that May Yet Be Purchased' columns ($195,869K at Sep 30, 2025 in doc 5 vs $173,831K at Jan 31, 2026 in doc 3, with no January 2026 purchases). The wording therefore points straight at the passages rather than requiring the solver to figure out where repurchase data lives. Doc 1 Doc 3 Doc 5
+- 2 Tighten the required precision (nearest hundred thousand) or ask a question where the rounding does not absorb the discrepancies, such as reconciling the Note 7 aggregate purchase price to the cash paid for repurchases in the same period, which forces the solver to notice and explain the excise-tax/fee difference. Why: The 'to the nearest million dollars' tolerance plus the earnings releases' pre-rounded figures ($44.6M, $63.9M, $57M, $19.3M) mean a solver can reach $143M with coarse arithmetic ($63.9M + ~$22M + $57.3M) without ever reconciling the thousands-level figures or noticing the small discrepancies between the Note 7 aggregate ($63,944K) and the cash-flow/equity-statement amounts ($64,339K/$64,453K) for the same nine months. The rounding instruction collapses what could be a precision check into simple addition. Doc 1 Doc 5 Doc 6
+
+Structure · Which documents it needs, and how they combine
+----------------------------------------------------------
+
+- 3 Remove one of the redundant routes: ask for a figure that requires combining the monthly tables (e.g., total dollars repurchased in months when the average price paid per share was below $11), or ask for the Q4 2025 spend itself, which forces the authorization-balance derivation across docs 5 and 3 without the Note 7 totals doing the work. Why: The intended hard step — recovering Q4 2025 spend, which no document states directly — is undercut by two easy redundancies. First, the monthly issuer-purchase tables in docs 5 and 3 expose the remaining-authorization balances, so Q4 2025 falls out of one subtraction. Second, the same repurchase totals are repeated in at least four places per period (Note 7 tables, cash flow statements 'Repurchases of common stock', stockholders' equity statements, and earnings-release bullets like '$57 million year-to-date' and '$63.9 million in the first nine months of 2025'), so almost any document a solver opens confirms the numbers. Doc 1 Doc 2 Doc 3 Doc 5
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 2 (Oct 15, 2026, 9:05 AM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+2 runs
+
+Only the latest run, Run 2, is in this file; 1 earlier run is left out.
+
+------------------------------------------------------------------------
+Run 2 · Too easy · Result the gate uses
+Oct 15, 2026, 9:05 AM · Version 0aa132 (current) · Low — · Medium — · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: question: removed “ratio”, “amount”, “spent buying back its own common stock during calendar year”, “its net income for 2025? Round to one decimal place.”; added “aggregate purchase price”, “shares”, “repurchased from January 1,”, “through June 30, 2026,”, “the nearest million dollars?”. answer: removed “4.3”; added “$143 million”
+
+Solver summary: Run 2 · Too easy · 3 of 3 right
+Every solver attempt got it (3 of 3).
+
+Your answer: $143 million
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: —
+
+Final answer: The aggregate purchase price was about $100,000,000 (approximately $100 million). | Your answer (gold): $143 million
+
+Full answer
+-----------
+
+The aggregate purchase price was about $100,000,000 (approximately $100 million).
+
+Reasoning
+---------
+
+We need answer: "What was the aggregate purchase price of the shares Cars.com repurchased from January 1, 2025 through June 30, 2026, to the nearest million dollars?" Need knowledge about Cars.com share repurchases in that period. Need determine aggregate purchase price of shares repurchased from Jan 1 2025 through Jun 30 2026.
+
+We need recall or know financial disclosure of Cars.com, Inc. Maybe in their 2025 annual report or 2026 quarterly reports they disclose share repurchase program. The period Jan 1, 2025 through June 30, 2026 includes 2025 full year and first half 2026.
+
+Question likely comes from a specific document like a proxy statement or 10-Q describing share repurchases. Need aggregate purchase price to nearest million.
+
+Let's recall Cars.com stock repurchase program. In 2023? Actually Cars.com had a $200 million share repurchase program authorized? Or in February 2025 they authorized a $150 million repurchase? Let's recall.
+
+Cars.com, Inc. (NYSE: CARS) in January 2025? Let's recall news: In February 2023 Cars.com announced a $200 million share repurchase program. Then in February 2025 they authorized an additional $150 million? Or announced they entered into accelerated share repurchase?
+
+Let's search mental knowledge: Around February 2025, Cars.com announced that its board authorized a $150 million share repurchase program. Or maybe in March 2025 they announced a $100 million ASR?
+
+Another possibility: In 2025, Cars.com repurchased about $50 million? But need aggregate from Jan 1, 2025 to Jun 30, 2026, likely around $75 million? Hmm need be precise to nearest million, so likely round number like $88 million? Or $120 million?
+
+Let's think about financial statements. In 2024 annual report, they might have repurchased some shares. But the window starts Jan 2025.
+
+We need "aggregate purchase price of the shares Cars.com repurchased from January 1, 2025 through June 30, 2026". This sounds like a disclosure in a proxy statement asking for shareholder approval of something? Or in a 10-K/10-Q table showing repurchases by period?
+
+Perhaps in Cars.com 2026 proxy statement filed around April 2026, there is a section about equity compensation plan information or share repurchases, listing aggregate purchase price for shares repurchased within a specific period for cancellation? Or maybe in the context of a stockholder rights plan?
+
+But since I need answer from my own knowledge, I should recall specific figure.
+
+Let's recall Cars.com share count: Around 65 million shares outstanding in 2025? Stock price around $15-20? If they repurchased maybe 3 million shares, that'd be around $50-60 million.
+
+But we need "aggregate purchase price ... to the nearest million dollars". This sounds like the answer might be $71,000,000? Or $0? No, likely not zero.
+
+Let's recall in 2025 Cars.com earnings reports mentioned share repurchases. For Q1 2025 maybe they repurchased $10M? For full year 2025 maybe $40M? For H1 2026 maybe another $30M? Total maybe $70M.
+
+But I need be more accurate.
+
+Let's recall news in early 2025: On January? Actually on January 2025 maybe Cars.com announced a share repurchase of $20 million?
+
+Let's systematically recall Cars.com press releases in 2025:
+- Feb 2025: Earnings for Q4 2024 and full year 2024. Might mention share repurchase program of $200M with $X remaining?
+- Around March 2025? Maybe announced accelerated share repurchase of $30 million?
+- In August 2025? Earnings Q2 2025.
+- In November 2025? Q3 2025.
+- In Feb 2026? Q4 2025 earnings.
+- In May 2026? Q1 2026 earnings.
+
+But I don't have precise recall.
+
+However, the question asks "What was the aggregate purchase price of the shares Cars.com repurchased from January 1, 2025 through June 30, 2026..." This framing sounds like it's asking about repurchases made during that period that are being reported in a specific filing, maybe in connection with a shareholder vote on equity plan? Actually in proxy statements, there's often a table showing "Issuer Purchases of Equity Securities" for the prior fiscal year, but here the period is 18 months.
+
+Could be from Cars.com 2026 Annual Meeting proxy filed in April 2026, which includes information about share repurchases since Jan 1, 2025? Or maybe it's in the 2026 10-Q for the six months ended June 30, 2026.
+
+Wait, "from January 1, 2025 through June 30, 2026" - that's exactly 18 months, matching possibly a disclosure period in a registration statement? Or in a "Management's Discussion" about share repurchase program utilization?
+
+Let's recall that in 2022 Cars.com had a $200 million share repurchase program authorized in November 2028? Hmm no.
+
+Actually, I think in November 2021 Cars.com authorized a $200 million share repurchase program. Then in February 2023 they authorized an additional $200 million? Let's check mental: In Feb 2023, Cars.com announced a new $200 million share repurchase program replacing prior? Or extending?
+
+Then in Feb 2025, Cars.com announced board authorized a new $200 million share repurchase program? Let's check mental consistency: By 2025 they might have completed prior program and authorized a new one.
+
+But the question is about actual repurchases made, not authorization.
+
+Perhaps in the 2025 10-K filed in Feb 2026, they disclosed share repurchases for the year ended Dec 2025 totaling some amount. And in 2026 Q2 10-Q they disclosed for first half 2026. Summing gives the 18-month total.
+
+We need the aggregate purchase price, likely mentioned in one place, maybe in a table in the 2026 proxy: "The following table sets forth information with respect to purchases made by or on behalf of the Company... Period: Jan 1, 2025 to Jun 30, 2026... Aggregate purchase price: $XXX,XXX,XXX"
+
+But I don't have the document.
+
+However, maybe I can approximate using share counts and average prices? Let's try.
+
+We need shares repurchased between Jan 2028? No.
+
+Let's recall Cars.com shares outstanding:
+End of 2024: about 65.5 million?
+End of 2025: maybe 62 million?
+End of Q2 2026: maybe around 60 million?
+
+If share count dropped by about 5 million over 18 months, and average stock price was maybe $18, then purchase price is about $90 million. But need closer.
+
+Let's recall stock prices for CARS:
+Jan 2025: around $17?
+Mid-2025: around $18?
+Late 2025: maybe $22?
+2026 first half: maybe around $20-$24?
+
+Average price maybe $19. Times 5 million = $95 million.
+
+But need "to the nearest million dollars". So answer might be $92 million? Or $100 million?
+
+Let's recall specific earnings call mentions: In Feb 2025 earnings call, they might have said they repurchased $40 million in 2024? Or in 2025?
+
+Actually, in 2024, Cars.com repurchased about $100 million? Let's check mental: In 2023 they repurchased about $50M. In 2024 maybe $60M? Not sure.
+
+But the question specifically asks for Jan 1, 2025 through Jun 30, 2026. That includes all of 2025 and H1 2026.
+
+Let's recall in Cars.com 2025 10-K (filed Feb 2026?), in the equity section they might show treasury stock. The change in treasury stock from end 2024 to end 2025 could indicate 2025 repurchases.
+
+At Dec 31, 2024, treasury stock was maybe $505 million? At Dec 31, 2025 maybe $580 million? Difference about $75 million.
+
+Then in H1 2026, maybe another $25 million? Total around $100 million.
+
+But I need be specific.
+
+Let's recall that in June 2025? No.
+
+Another mental path: In May 2026, Cars.com filed its 10-Q for three and six months ended June 30, 2026? Or maybe they filed Q1 and Q2 together? In that filing, they might have a section "Share Repurchases" stating that during the six months ended June 30, 2025 and 2026 they repurchased X shares for $Y.
+
+Specifically, in 10-Qs they often have a table:
+Period | Total Number of Shares Purchased | Average Price Paid per Share | Total Number of Shares Purchased as Part of Publicly Announced Programs | Approximate Dollar Value of Shares that May Yet Be Purchased
+For the three months ended Mar 31, 2026 and Jun 30, 2026 etc. But this is usually quarterly.
+
+But the question asks aggregate purchase price from Jan 1, 2025 through Jun 30, 2026. That sounds like they summed up all quarters in that range.
+
+Perhaps this is from a proxy statement disclosure required by SEC rules about share repurchases for the purpose of calculating something like "the aggregate market value of shares repurchased..." No, purchase price is actual cost.
+
+Let's recall that in April 2026, Cars.com filed a proxy statement (DEF 14A) for the 2026 annual meeting. In that proxy, there might be Proposal 4 or something about amending the equity plan, and they need to disclose the number of shares available and shares repurchased?
+
+Actually, there's a specific SEC disclosure in proxy statements for equity compensation plans: They list the number of securities to be issued upon exercise of outstanding options, the weighted-average exercise price, and the number of securities remaining available for future issuance. That's plan information, not repurchases.
+
+But there is also disclosure about "purchases of equity securities by the issuer and affiliated purchasers" in the 10-K and 10-Q. In 10-K for 2025 (filed Feb 2026), they might have a table for the fourth quarter of 2025, but not for the whole 18-month period.
+
+However, the question might be extracted from a specific document that lists share repurchases over that period in one table. For example, in a registration statement on Form S-8 filed in July 2026, they might include a table of share repurchase activity?
+
+But regardless, I need provide a specific number rounded to nearest million. Given uncertainty, I need make best guess based on available data.
+
+Let's recall Cars.com treasury shares at end of 2023, 2024, 2025.
+
+In 2022, shares outstanding were about 70 million. By 2023 about 67 million. By 2024 about 65 million. By end 2025 maybe 62 million. By mid-2026 maybe 60 million.
+
+The reduction of about 5.5 million shares over 18 months. At average price of maybe $19, that's about $104.5 million. Rounded to nearest million: $105 million? Or $104 million?
+
+But wait, share count reduction includes retirements? Yes, repurchased shares are often retired, reducing outstanding shares.
+
+Let's check mental stock prices precisely:
+Jan 2025: CARS was around $17.50?
+Feb 2025: maybe $16?
+Mar 2025: maybe $17?
+Apr 2025: maybe $18?
+May 2025: maybe $19?
+Jun 2025: maybe $20?
+Jul-Aug 2025: maybe $21?
+Sep-Oct 2025: maybe $23?
+Nov-Dec 2025: maybe $24?
+Jan 2026: maybe $23?
+Feb-Mar 2026: maybe $20?
+Apr-May-Jun 2026: maybe $21?
+
+So average price for 2025 might be around $20, for H1 2026 around $21. If they bought about 2.5 million each year? Actually share count went from 65.5M at end 2024 to maybe 60.5M at end Jun 2026, a drop of 5M. But some shares may have been issued for equity compensation, so net reduction might be less than gross repurchases. If they issued maybe 1M shares for compensation, then gross repurchases might be around 6M shares. At average price $20, that's $120M.
+
+But I need be closer.
+
+Let's recall specific news in March 2025: Cars.com announced it entered into a $100 million accelerated share repurchase? Or was it $50 million?
+
+Actually, I think in March 2022 they entered into a $100M ASR. Not relevant.
+
+Let's recall in Feb 2026 earnings call for Q4 2025, they might have said: "We repurchased $35 million of stock in 2025"? Or "We repurchased 1.8 million shares for $40 million"?
+
+Let's try to recall the 2025 annual earnings report details: Revenue was about $720M? Net income around $50M? Free cash flow maybe $100M? They might have used free cash flow for repurchases and dividends.
+
+The dividend: Cars.com pays a dividend of about $0.70 per share annually? Actually in 2024 they paid a special dividend? Wait, in 2023 they initiated a dividend of $0.35 per share quarterly? No, that'd be high. Let's check mental: CARS dividend yield is around 1.5%? At stock price $20, that's $0.30 per share annually, maybe quarterly $0.075? Not large.
+
+But share repurchase might be the main capital return.
+
+Actually, I recall in 2025 Cars.com announced a $0.70 per share special dividend? No, that was in 2024? Wait, in December 2024, Cars.com announced a special dividend of $2.00 per share? Or was that another company?
+
+Let's check mental: In Dec 2023, Cars.com declared a special dividend of $1.00? Or in Dec 2024? I think in Dec 2024 they declared a special cash dividend of $1.00 per share? Or maybe $2.00? That sounds right: They had excess cash and distributed a special dividend of $2.00 per share in Jan 2025? Actually yes! I think in December 2024, Cars.com announced a special dividend of $2.00 per share, payable in January 2025. Let's check consistency: If there were about 65 million shares, that's about $130 million payout. That sounds large but possible. Yes, this sounds familiar. So in Jan 2025 they paid a special dividend of maybe $2.00 per share totaling about $130 million. This used up cash, but they still might have done repurchases.
+
+Wait, if they paid a special dividend of $2 per share on ~65M shares = $130M. That'd be a big cash outflow.
+
+But then in Feb 2025 they might have authorized a new repurchase program.
+
+Actually, I think in Dec 2024 they announced a special dividend of $0.70? No, need not overfixate.
+
+But knowing this, maybe they didn't do huge repurchases in 2025 because they paid special dividend.
+
+However, they also generated free cash flow.
+
+But back to the question: "What was the aggregate purchase price of the shares Cars.com repurchased from January 1, 2025 through June 30, 2026, to the nearest million dollars?"
+
+This sounds like it's asking for a specific figure that can be calculated from the financial statements: maybe treasury stock increased by a specific amount.
+
+If I recall the balance sheet:
+At Dec 31, 2024, treasury stock at cost was maybe $412,345,000?
+At Dec 31, 2025, treasury stock was maybe $475,000,000?
+At Jun 30, 2026, maybe $500,000,000?
+
+But I don't have these numbers.
+
+Let's recall in 2026 10-Q filed around Aug 2026? Actually they might file Q2 in August 2026. In the balance sheet, treasury stock is listed.
+
+But I can't recall precisely.
+
+Given all this, I will provide an answer of approximately $75 million? Or $100 million?
+
+Let's examine share count more concretely from mental knowledge of 10-K filings:
+At Dec 31, 2023, shares outstanding: approximately 67.3 million?
+At Dec 31, 2024: approximately 65.4 million?
+At Dec 31, 2025: approximately 61.5 million?
+At Jun 30, 2026: maybe 59.5 million?
+
+That'd be a reduction of about 5.9 million shares over 18 months, but also they issued shares for stock-based compensation.
+
+Let's check stock-based compensation shares issued: Maybe 0.5M per year, so 0.75M over 18 months. So gross repurchases might be about 6.65M shares.
+
+Average price over the period: Let's compute weighted average price.
+2025 quarterly averages approximately:
+Q1 2025: stock ranged $16-$19, avg ~17.5
+Q2 2025: $19-$21, avg ~20
+Q3 2025: $21-$23, avg ~22
+Q4 2025: $23-$26, avg ~24.5
+So 2025 average price maybe around $21.
+
+H1 2026:
+Q1 2026: maybe $20-$23, avg ~21.5
+Q2 2026: maybe $20-$22, avg ~21
+So H1 2026 average about $21.
+
+Overall average price ≈ $21. Times 6.65M shares ≈ $139.65M. That seems high, but possible.
+
+But wait, share count reduction was 65.4M to 59.5M = 5.9M net. Add 0.75M issued = 6.65M repurchased. At $21 = $140M.
+
+But is that realistic given cash flow? Free cash flow in 2025 might be $100M, in H1 2026 maybe $50M, total $150M. So yes, they could have used $140M for repurchases, plus paid special dividend?
+
+But they also have debt.
+
+However, I think my share count estimates might be off. Let's check mental stock price in late 2025: Did CARS reach $26? Maybe it hit $30? Actually in late 2025, Cars.com stock might have been around $23. Let's check mental chart: CARS in 2023 was around $18. In 2024 went up to $20. In 2025 maybe went up to $25. In 2026 maybe around $22. So average $21 sounds okay.
+
+But wait, there might also be share repurchases in 2024 that contributed to the 2024 to 2025 reduction.
+
+Specifically, shares outstanding at Dec 2028? No.
+
+Actually, I think shares outstanding at Dec 31, 2022 was about 73M. By Dec 2023 about 68M (down ~5M). By Dec 2024 about 64M (down ~4M). So they have been aggressively repurchasing about 4-5M shares per year! At price $18-22, that's about $80-110M per year. So over 18 months, maybe 6-7.5M shares, costing about $130-150M.
+
+But wait, if they repurchase 4-5M per year, then in 18 months about 6-7.5M shares. Yes.
+
+But was there that much? Let's check consistency with treasury stock. If they retire shares, treasury stock account (which records cost) should be in the hundreds of millions.
+
+At Dec 2021, treasury stock might have been near zero. By 2024, maybe over $400M? Yes, that sounds right: they accumulated treasury shares costing several hundred million.
+
+Specifically, in 2022 they bought back maybe $100M. In 2023 maybe $100M. In 2024 maybe $100M. So by end 2024, treasury stock could be $300M+.
+
+Thus, in 2025 and H1 2026, they might have added another $100M+.
+
+But I need the precise figure for that specific window.
+
+Let's recall in Feb 2025, they announced a $100 million accelerated share repurchase? Actually, in Feb 2025 they might have entered into a $75 million ASR.
+
+Wait, there's a specific news item: On February 20, 2025? Or in March?
+
+Actually, I recall in early 2025, Cars.com announced that it entered into accelerated share repurchase agreements totaling $60 million? Let's try to recall news headlines in Feb/March 2025: Many companies announced ASRs: e.g., Meta, Apple, etc. For Cars.com, maybe they announced a $50 million ASR on March 10, 2025?
+
+If so, then in 2025 they might have done one or two ASRs totaling maybe $100M, plus open market purchases.
+
+But for the answer, they ask "aggregate purchase price of the shares Cars.com repurchased... to the nearest million dollars". This sounds like it's summed in a disclosure table. The figure might be round like $50,000,000, $75,000,000, or $100,000,000.
+
+Given that they ask "to the nearest million dollars" rather than "approximately", it suggests the number is not round, like $73,456,000, and they want rounding.
+
+Thus, I should provide a specific round number.
+
+Let's recall in the 2026 proxy statement filed in April 2026, there might be a disclosure:
+"From January 1, 2025 through June 30, 2026, the Company repurchased 3,456,789 shares for an aggregate purchase price of approximately $75,000,000."
+
+But I need be closer.
+
+Actually, maybe this is in the context of a "Rule 10b5-1 trading plan"? No.
+
+Another possibility: The question comes from a financial exam based on a specific 10-Q filing. The student is expected to read the filing and find the table. Since I don't have the document, I need to recall or derive.
+
+But the prompt says "Answer the following question from your own knowledge. No input documents are provided..." So it's testing my internal knowledge of this specific fact. Maybe it's a well-known figure? Unlikely unless it's prominent.
+
+Wait, maybe this is from a specific news article summarizing share repurchases. For example, an article might say "Cars.com repurchased $47 million of shares from Jan 1, 2025 to June 30, 2026". But I haven't seen that.
+
+Let's recall that in the 2025 10-K, they might have a section "Market for Registrant's Common Equity... Purchases of Equity Securities by the Issuer". In that section, they list monthly repurchases for the fourth quarter. But not for 18 months.
+
+However, in the 2026 10-Q for the six months ended June 30, 2026, they might have a comparable table for the second quarter of 2026 and also for the same period in prior year? No, usually only for the current quarter and maybe prior year quarter.
+
+But there's also a disclosure in Part II, Item 2 "Unregistered Sales of Equity Securities and Use of Proceeds" for share repurchases in the quarter.
+
+Thus, it's unlikely they'd list 18 months in one filing except in a proxy for equity pla
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): $143 million
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): $143 million
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): $143 million
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

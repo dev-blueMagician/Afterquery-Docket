@@ -1,0 +1,48 @@
+{
+  "question": "By how many percentage points does commercial credit merchant service fees' share of everything New Zealand businesses pay to accept Visa and Mastercard exceed commercial credit's share of total transaction value?",
+  "number_of_asks": 1,
+  "gold_answer": "9 percentage points",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 16, the Association's position): the Commission estimates that businesses pay approximately $1 billion per year overall to accept Visa and Mastercard payments, and $170 million a year in merchant service fees on Mastercard and Visa commercial credit card payments.\n\nStep 2. Source input (Doc 1, Executive summary): commercial credit transactions account for 8% of the total value of transactions. The 19% printed beside it is commercial credit's share of interchange fees, which are one component of merchant service fees, so it is not the share asked for.\n\nStep 3. Calculation (Doc 16 and Doc 1): both documents print the $170 million. Since 1% of $1 billion is $10 million, its share of the overall amount in percent is: 170 / 10 = 17\n\nStep 4. Final answer (Doc 16 and Doc 1): fee share less value share, in percentage points: 17 - 8 = 9",
+  "answer_components": [
+    "9 percentage points"
+  ],
+  "evidence": [
+    {
+      "document_number": 16,
+      "component_number": 1,
+      "quote": "The Commission estimates that businesses pay approximately $1 billion per year overall to accept Visa and Mastercard payments and pay $170 million annually in merchant service fees for Mastercard and Visa commercial credit card payments"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "This represents around 19% of total interchange fees paid, despite commercial credit transactions accounting for only 8% of the total value of transactions."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        16
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Unit normalization"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Look-alike measure: Doc 1's summary prints commercial credit's 19% share of interchange fees beside its 8% share of transaction value, giving 11 points. The question asks about merchant service fees: $170 million of Doc 16's $1 billion is 17%, so the gold is 9 points."
+}

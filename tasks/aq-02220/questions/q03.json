@@ -1,0 +1,58 @@
+{
+  "question": "How many TWh of England's projected 2050 heat demand would heat networks supply at their most recently stated 2050 share, to one decimal place?",
+  "number_of_asks": 1,
+  "gold_answer": "87.8 TWh",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 4, Introduction): Doc 4 is the latest document, the government's response to the zoning consultation held between 18 December 2023 and 26 February 2024. It says the Warm Homes Plan targets heat networks meeting 7% (27TWh) of England's heat demand by 2035, with heat networks expected to provide a fifth of all heat by 2050. This is the most recently stated 2050 share; the earlier documents cite only the older Climate Change Committee estimate of what heat networks could provide across the UK.\n\nStep 2. Source fact (Doc 2, Results of the deployment analysis): the impact assessment gives the total heat demand for England, taken from the Opportunity Areas for District Heating Networks study, as 439 TWh in 2050. No other document projects England's heat demand for 2050.\n\nStep 3. Calculation (from Steps 1 and 2; Doc 4 and Doc 2): a fifth of England's projected 2050 heat demand: 439 / 5 = 87.8 TWh.",
+  "answer_components": [
+    "87.8 TWh"
+  ],
+  "evidence": [
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "In the Warm Homes Plan we are setting a target to more than double the amount of heat demand met via heat networks in England to 7% (27TWh) by 2035 with them expected to provide a fifth of all heat by 2050"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "A public consultation was held between 18 December 2023 and 26 February 2024 on further proposals for heat network zoning"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "The total heat demand for England, presented in Opportunity Areas for District Heating Networks in the UK3, is estimated to be 439 TWh in 2050"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Unit normalization"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Superseded date or version",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    },
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Doc 4, the latest, expects heat networks to provide a fifth of all heat by 2050: a fifth of Doc 2's 439 TWh is 87.8. The Climate Change Committee's older 18% UK estimate (Docs 1-3) gives 79.0; Doc 2's 31.2 TWh is only zoning's additional part, not the total."
+}

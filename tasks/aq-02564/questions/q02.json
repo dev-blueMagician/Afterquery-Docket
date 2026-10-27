@@ -1,0 +1,99 @@
+{
+  "question": "A hosting broker has 5,000 users of its own on each of EDGX Top and BYX Top, and two hosted subscribers: one takes only EDGX Top, with 4,000 users; the other has 4,000 EDGX Top and 10,500 BYX Top users. All users are non-professional. What is the host's monthly bill for the two feeds?",
+  "number_of_asks": 1,
+  "gold_answer": "$2,375",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 5, EDGX's hosted program): EDGX's program covers the EDGX Top Data Feed, and its cap is 10,000 users of that feed. Both hosted subscribers take EDGX Top and are within the 10,000 maximum, so the host, which provides the data to at least one External Hosted Subscriber, keeps the credit of its EDGX Distribution Fee. The host is responsible for payment of all data fees of its hosted subscribers, and each one's EDGX Top fee is a set monthly fee of $750 in lieu of Non-Professional User fees.\n\nStep 2. Source input (Doc 5, footnote 12): the standard EDGX Top Non-Professional User fee, which the host pays for its own users, is 0.10 dollars per user a month; footnote 12 prices 10,000 users at $1,000.\n\nStep 3. Calculation (Doc 5): the host's EDGX Top bill is its own 5,000 users' fees plus the two set fees: 5,000 × 0.10 + 750 + 750 = 2,000 dollars a month.\n\nStep 4. Source input (Doc 6, BYX's hosted program): BYX's program is a separate program for the BYX Top Data Feed, with its own cap of 10,000 users of that feed. The first subscriber receives no BYX data, so it is not a hosted subscriber of a BYX product. The second has more than the 10,000 maximum on BYX Top, so it is no longer eligible and must license BYX Top directly with the Exchange. The host stays eligible only so long as it has at least one External Hosted Subscriber, and here it has none under BYX's program, so it gets no BYX credit and pays the Distribution Fee it is normally responsible for under the existing Small Retail Broker Program, $250/month for the BYX Top Data Feed, with no BYX set fee on its bill.\n\nStep 5. Source input (Doc 6, footnote 12): the standard BYX Top Non-Professional User fee is 0.025 dollars per user a month; footnote 12 prices 10,000 users at $250.\n\nStep 6. Calculation (Doc 6): the host's BYX Top bill is the Distribution Fee plus its own 5,000 users' fees: 250 + 5,000 × 0.025 = 375 dollars a month.\n\nStep 7. Calculation (Doc 5 and Doc 6): the host's combined monthly bill for the two feeds: 2,000 + 375 = 2,375 dollars, exact.",
+  "answer_components": [
+    "$2,375"
+  ],
+  "evidence": [
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "a Hosting Small Retail Broker Distributor providing the data to at least one External Hosted Subscriber would be eligible for a credit of its Distribution Fee (a credit of $750/month for EDGX Top Data Feed and a credit of $3,500/month for Cboe One Summary Feed) that it is normally responsible for under the existing Small Retail Broker Program"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "it shall be a set monthly fee of $750 for EDGX Top"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "ultimately the Hosting Small Retail Broker Distributor is responsible for payment of all data fees"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "capped at 10,000 users for Cboe One Summary Feed and 10,000 for EDGX Top Data Feed"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "10,000 Users x 0.10/Non-Professional User = $1,000"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "An External Hosted Subscriber of an Exchange Market Data product is a Distributor that receives the Exchange Market Data product from an External Distributor through a hosted display solution"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "capped at 10,000 users for Cboe One Summary Feed and 10,000 for BYX Top Data Feed"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "shall no longer be eligible for the program and will be required to directly license with the Exchange for the Applicable Feed"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "the Hosting Small Retail Broker Distributor shall continue to remain eligible for this Program so long as it has at least one External Hosted Subscriber"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "a Hosting Small Retail Broker providing the data to at least one External Hosted Subscriber would be eligible for a credit of its Distribution Fee (a credit of $250/month for BYX Top Data Feed and a credit of $3,500/month for Cboe One Summary Feed) that it is normally responsible for under the existing Small Retail Broker Program"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "10,000 Users x 0.025/Non-Professional User = $250"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Entity resolution",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Picks the wrong entity or section"
+    },
+    {
+      "trap": "Wrong jurisdiction or scope",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    }
+  ],
+  "why_these_are_traps": "Linking: Doc 6's BYX credit needs a BYX hosted subscriber; counting Doc 5's EDGX subscribers keeps it, giving $2,125. Scope: Doc 6's 10,000 cap removes the second subscriber from BYX's program only; dropping it from EDGX's too gives $1,625. The gold does neither."
+}

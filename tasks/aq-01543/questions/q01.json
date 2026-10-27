@@ -1,0 +1,68 @@
+{
+  "question": "In calendar year 2024, what was coal's share of Poland's electricity generation minus coal's share of Bulgaria's, in percentage points to one decimal place?",
+  "number_of_asks": 1,
+  "gold_answer": "22.8 percentage points",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 2, Energy Sector, Power Generation): Poland's coal share of its electricity generation for the calendar year, \"In 2024, the share of coal in electricity generation was 56.2%\".\n\nStep 2. Source input (Doc 1, Energy): Bulgaria's electricity production for the calendar year, which fell \"to some 37,963 GWh in 2024\".\n\nStep 3. Source input (Doc 1, Energy): Bulgaria's output from coal and nuclear plants together for the calendar year, \"Baseload power plants (coal, nuclear) generated a total of 28,46TWh of electricity in 2024\", where the comma is a decimal comma.\n\nStep 4. Calculation (Doc 1, unit conversion of the baseload total): 28,46 TWh = 28,460 GWh.\n\nStep 5. Source input (Doc 1, Energy): Bulgaria's nuclear share for the calendar year, \"In 2024, nuclear power accounted for approximately 41.6% of Bulgaria’s total electricity generation\".\n\nStep 6. Calculation (Doc 1, nuclear output from the nuclear share and the production total): 41.6% of 37,963 GWh = 15,792.6 GWh.\n\nStep 7. Calculation (Doc 1, coal output, because the baseload total covers only coal and nuclear plants): 28,460 - 15,792.6 = 12,667.4 GWh.\n\nStep 8. Calculation (Doc 1, Bulgaria's coal share of its production): 12,667.4 / 37,963 = 33.37%.\n\nStep 9. Calculation (Doc 1 and Doc 2, Poland's coal share applied to Bulgaria's production, the coal output Bulgaria would need to match Poland's share): 56.2% * 37,963 = 21,335.206 GWh.\n\nStep 10. Calculation (Doc 1 and Doc 2, how far Bulgaria's actual coal output falls short of that level): 21,335.206 - 12,667.4 = 8,667.806 GWh.\n\nStep 11. Calculation (Doc 1 and Doc 2, the shortfall as a share of Bulgaria's production, which equals Poland's coal share minus Bulgaria's in percentage points): 8,667.806 / 37,963 = 22.83%.\n\nStep 12. Final answer: the question asks for one decimal place, so 22.83% is rounded once, at this last step, to the gold answer in percentage points.",
+  "answer_components": [
+    "22.8 percentage points"
+  ],
+  "evidence": [
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "In 2024, the share of coal in electricity generation was 56.2%"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "to some 37,963 GWh in 2024"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Baseload power plants (coal, nuclear) generated a total of 28,46TWh of electricity in 2024"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "In 2024, nuclear power accounted for approximately 41.6% of Bulgaria’s total electricity generation"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Unit normalization"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Out-of-range period",
+      "how_a_careless_solver_fails": "Uses the wrong period or date",
+      "where_the_trap_sits": "Doc 1, Bulgaria's Energy chapter, the paragraph that opens \"From September 2024 to August 2025, electricity consumption in Bulgaria relied primarily on low-carbon sources\" and closes \"Fossil fuels account for about 32.73% of the energy mix, with coal being dominant at 27.6% and natural gas providing a minimal 5.13%.\" It is the tenth paragraph of the Energy chapter, eight paragraphs after the one with the 2024 production figure, and it is the most detailed coal percentage in Doc 1, so a search that pairs \"coal\" with a percentage finds it. Its twelve-month window starts in September 2024 and runs eight months into 2025, and it is framed as the consumption mix rather than one calendar year's generation.",
+      "the_wrong_answer_a_careless_solver_gives": "28.6 percentage points. The solver takes 27.6% as Bulgaria's coal share for 2024 and subtracts it from Poland's printed 56.2%: 56.2% - 27.6% = 28.6%. The answer overstates the gap by almost six points because it borrows a figure from a different twelve-month window.",
+      "why_the_correct_answer_avoids_it": "The question asks about calendar year 2024. The paragraph's own opening words date the 27.6% to September 2024 through August 2025, a twelve-month window that is not a calendar year, so it is not a calendar-2024 figure. Doc 1 holds the calendar-2024 inputs in its opening paragraphs: production of 37,963 GWh, baseload output \"(coal, nuclear)\" of 28,46 TWh, and nuclear at about 41.6% of 2024 generation. Coal is baseload minus nuclear, 28,460 - 15,792.6 = 12,667.4 GWh, which is 33.37% of production, and 56.2% - 33.37% = 22.83%, which rounds to 22.8 percentage points."
+    },
+    {
+      "trap": "Figure that must be computed",
+      "how_a_careless_solver_fails": "Uses the wrong period or date",
+      "where_the_trap_sits": "Doc 1, Bulgaria's Energy chapter. No sentence states coal's share of Bulgaria's 2024 generation, so it has to be computed from the 2024 baseload total, \"Baseload power plants (coal, nuclear) generated a total of 28,46TWh of electricity in 2024\", minus nuclear output. Doc 1 gives nuclear two numeric shares: \"approximately 41.6%\" of 2024 generation, credited to the IAEA in the Energy chapter's fifth paragraph (the one that opens \"To support its energy needs\"), and \"about 40.38%\" of electricity supply for September 2024 to August 2025, in the same paragraph as the 27.6% coal figure.",
+      "the_wrong_answer_a_careless_solver_gives": "21.6 percentage points. The solver sets up the right subtraction but takes the September to August nuclear share: coal plus nuclear is 28,460 / 37,963 = 74.97% of 2024 production, so coal comes out at 74.97% - 40.38% = 34.59%, and 56.2% - 34.59% = 21.61%, which rounds to 21.6. The result mixes a calendar-2024 total with a share from a different window.",
+      "why_the_correct_answer_avoids_it": "Both terms of the subtraction must come from calendar year 2024. The Energy chapter's fifth paragraph states the 2024 nuclear share directly: \"In 2024, nuclear power accounted for approximately 41.6% of Bulgaria’s total electricity generation\". With it, nuclear output is 15,792.6 GWh, coal output is 12,667.4 GWh, coal's share is 33.37%, and the gap from Poland's 56.2% is 22.8 percentage points."
+    }
+  ]
+}

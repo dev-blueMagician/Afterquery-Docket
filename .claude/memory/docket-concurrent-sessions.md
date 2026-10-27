@@ -21,6 +21,19 @@ metadata:
 - Before changing a shared tool, check the binding and the newest `tasks/*/runs/` timestamps
   for in-flight work; keep changes backward compatible, write the new file beside the old one
   and swap it with an atomic replace, then run both test suites.
+- The workspace efficiency ledger (`notes/efficiency.json`) is shared too: other sessions enroll
+  their candidates in it (aq-02028 took trial slot 3 while aq-01960 held 1-2, 2026-10-08). Its
+  writer takes `efficiency.json.lock`, so a concurrent session gets "Efficiency ledger is locked"
+  rather than a clash. Separately, two aq-01960 writes that day failed with WinError 32 naming the
+  fresh `efficiency.json.*.tmp` (most likely an external scanner holding the new file; cause not
+  established), left that temp file behind, and did not apply the change. Re-read the ledger,
+  delete only the temp file your own failed command named, and retry; never hand-edit the ledger.
+  Tool gap: `_write` in tools/docket_efficiency.py has no retry around `os.replace`, and its
+  cleanup `os.unlink` fails under the same Windows lock.
+- The ledger allows one active timer across the whole workspace, not one per session: while a peer's
+  timer runs, `efficiency start` fails with "A timer is already active; stop it before starting
+  another" (aq-02198 blocked by aq-02208's timer, 2026-10-08). Never stop a peer's timer; leave your
+  interval unmeasured and record timing coverage as partial in the session checkpoint.
 
 **Why:** on 2026-10-05 (aq-00998) prepare failed with WinError 5 on the staging rename while
 another session's aq-00745 q02 solvers were mid-run under the single binding. Re-running the old
@@ -62,6 +75,12 @@ in a blind return, check the binding before treating the run as a solver error. 
   template and the user's complete capture. It copied the old intake record, which it had read
   verbatim, into `intake.json` history (D07's unchanged hash confirmed the copy) and checked all
   new questions from scratch. The cause was never found.
+- 2026-10-08: `tasks/aq-docket-trial-06` was already deleted from the working tree (still in git HEAD)
+  when a new session started on that bundle; the user's request did not mention it. The session rebuilt
+  it from the template and the same capture. The splitter reproduced `intake.json` and `manifest.json`
+  byte for byte, so an old question's fields, re-created byte-identically, reproduced its old
+  fingerprint (41de64e9...) and its 2026-10-06 records bound again without new runs. Copy the old raw
+  returns from git beside the new snapshot and say so in the question's provenance.
 - A probe run can hold up to three probe packets: the guard allows solver-1, solver-2 and shortcut inside
   one bound run (tools/agent_scope.py). Put a question's removal probes in one run (one folder per
   left-out document) instead of one run per probe; aq-01432 (2026-10-06) bound four probes with two binds

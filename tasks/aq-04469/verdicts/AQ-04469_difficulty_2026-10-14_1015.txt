@@ -1,0 +1,149 @@
+AQ-04469 · Public policy — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-04469
+Saved: 2026-10-14 10:15 (local time)
+Bundle: Public policy · 15 documents · 101,802 prompt tokens
+Run read: Run 4, the latest of 4
+Attempts read: 4
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 17 runs left · 13 of 60 runs used in the last 24 h (all tasks)
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 3 attempts right
+
+High model: two solvers try up to 3 times each. Ready when both get it wrong at least once and not every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Gold answer · Your answer
+-------------------------
+
+- 1 If keeping the ACCC in the answer, add distractor passages that mention ACCC reports, inquiries and media releases (as docs 1, 4, 9 already do) and make the question explicitly require that the referenced item be a submission by that submitter, so solvers must eliminate those near-misses. Why: The gold answer includes ACCC, but the ACCC is discussed in almost every document without its submission being mentioned. Because the only qualifying ACCC reference (doc 10, 'their 2021 submission to the review of the dairy code') is easy to find, solvers never have to rule out the many non-qualifying ACCC mentions; the question's difficulty does not come from that discrimination, which is where the genuine reading work would be. From a run (High model · attempt 1): Reached the gold answer via a keyword scan: the three qualifying references all use the word 'submission' and appear in only two documents (doc 10 for ACCC and Australian Dairy Farmers, doc 12 for Fresh Markets Australia). Doc 1 Doc 4 Doc 9 Doc 10
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 4 (Oct 14, 2026, 10:11 AM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+4 runs
+
+Only the latest run, Run 4, is in this file; 3 earlier runs are left out.
+
+------------------------------------------------------------------------
+Run 4 · Too easy · Result the gate uses
+Oct 14, 2026, 10:11 AM · Version c6e762 (current) · Low — · Medium — · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: question: removed “cite figures published by Hort Innovation?”; added “have one of their own submissions mentioned in another submitter's document?”. answer: removed “Produce Alliance, AUSVEG, Fruit Producers SA”; added “ACCC,”, “Dairy Farmers,”, “Markets Australia”
+
+Solver summary: Run 4 · Too easy · 3 of 3 right
+Every solver attempt got it (3 of 3).
+
+Your answer: ACCC, Australian Dairy Farmers, Fresh Markets Australia
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: Note: where it went wrong
+
+Final answer: None. | Your answer (gold): ACCC, Australian Dairy Farmers, Fresh Markets Australia
+
+Where it went wrong: With no documents, answered 'None', confirming the answer is entirely document-dependent rather than inferable from the question alone.
+
+Full answer
+-----------
+
+None.
+
+Reasoning
+---------
+
+We need answer: "Which of these submitters, if any, have one of their own submissions mentioned in another submitter's document? List them alphabetically." But there is no context, no list of submitters, no documents. The prompt says "Answer the following question from your own knowledge. No input documents are provided; do not ask for them or refer to them. Give your single best answer."
+
+We need determine what this refers to. Might be a specific known dataset or exam about submissions? The wording "submitters" and "their own submissions mentioned in another submitter's document" sounds like a question about some public consultation submissions, e.g., in New Zealand or Australia? Or maybe about a specific set of documents in a benchmark? But no input docs provided, so need answer based on knowledge? Hmm unlikely.
+
+Perhaps this is a meta-question from a reading comprehension benchmark where usually documents are provided, but here they are omitted. The instruction says "No input documents are provided; do not ask for them or refer to them. Give your single best answer." So we need answer "None" or "There are no submitters mentioned"? But need be precise.
+
+Let's parse: "Which of these submitters, if any, have one of their own submissions mentioned in another submitter's document? List them alphabetically." This sounds like there was a list of submitters (A, B, C, etc.) in the original context. Without that list, we can't know. But maybe the answer is indeed "none". Let's answer that none do, but need list alphabetically => empty? Or "None"?
+
+However, maybe it's from a specific well-known question about submissions to a parliamentary committee, e.g., "Education and Workforce Committee" with submitters like "Auckland Council", "Business NZ", etc., and asking which submitters reference another submission. But without docs, can't answer specifically.
+
+Given the constraint "Give your single best answer" and "No input documents are provided; do not ask for them or refer to them", the best answer might be: "None." Let's provide that. But they ask "Which of these submitters... List them alphabetically." If none, then answer "None." We'll go with "None".
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): ACCC, Australian Dairy Farmers, Fresh Markets Australia
+
+Where it shortcut: Reached the gold answer via a keyword scan: the three qualifying references all use the word 'submission' and appear in only two documents (doc 10 for ACCC and Australian Dairy Farmers, doc 12 for Fresh Markets Australia).Doc 10 Doc 12
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): ACCC, Australian Dairy Farmers, Fresh Markets Australia
+
+Where it shortcut: Again matched the gold by locating the explicit 'submission' mentions in docs 10 and 12; no elimination of the many non-qualifying ACCC or ADF mentions elsewhere was needed.Doc 10 Doc 12
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): ACCC, Australian Dairy Farmers, Fresh Markets Australia
+
+Where it shortcut: Same shortcut: the question's wording points straight at the word 'submission', and all three gold entities are named in single sentences in docs 10 and 12.Doc 10 Doc 12
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

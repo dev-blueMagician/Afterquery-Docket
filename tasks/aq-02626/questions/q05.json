@@ -1,0 +1,109 @@
+{
+  "question": "Summed across EPA's five State coal-ash proposals, how many days after Federal Register publication did the comment deadlines fall?",
+  "number_of_asks": 1,
+  "gold_answer": "307 days",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 2, header and DATES): the Wyoming proposal was published in the Federal Register on September 2, 2025, and \"Comments must be received on or before November 3, 2025.\"\nStep 2. Calculation (Doc 2): 60 days after September 2 is November 1, and November 3 is 2 days later, so the deadline fell this many days after publication: 60 + 2 = 62.\nStep 3. Source input (Doc 3, header and DATES): the Virginia proposal was published on May 4, 2026, and \"Comments must be received on or before July 6, 2026.\"\nStep 4. Calculation (Doc 3): 60 days after May 4 is July 3, and July 6 is 3 days later: 60 + 3 = 63.\nStep 5. Source input (Doc 4, header and DATES): the Louisiana proposal was published on June 5, 2026, and \"Comments must be received on or before August 4, 2026.\"\nStep 6. Derived (Doc 4): counting 60 days on from June 5 reaches August 4, the deadline itself, so this window is 60 days.\nStep 7. Source input (Doc 5, header and DATES): the Alabama proposal was published on July 14, 2026, and \"Comments must be received on or before September 14, 2026.\"\nStep 8. Calculation (Doc 5): 60 days after July 14 is September 12, and September 14 is 2 days later: 60 + 2 = 62.\nStep 9. Source input (Doc 6, header and DATES): the Wisconsin proposal was published on September 11, 2026, and \"Comments must be received on or before November 10, 2026.\"\nStep 10. Derived (Doc 6): counting 60 days on from September 11 reaches November 10, the deadline itself, so this window is 60 days.\nStep 11. Final answer (Doc 2, Doc 3, Doc 4, Doc 5 and Doc 6): 62 + 63 + 60 + 62 + 60 = 307.",
+  "answer_components": [
+    "307"
+  ],
+  "evidence": [
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Federal Register, Volume 90 Issue 167 (Tuesday, September 2, 2025)"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Comments must be received on or before November 3, 2025."
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Federal Register, Volume 91 Issue 85 (Monday, May 4, 2026)"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Comments must be received on or before July 6, 2026."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Federal Register, Volume 91 Issue 108 (Friday, June 5, 2026)"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Comments must be received on or before August 4, 2026."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Federal Register, Volume 91 Issue 133 (Tuesday, July 14, 2026)"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Comments must be received on or before September 14, 2026."
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "Federal Register, Volume 91 Issue 175 (Friday, September 11, 2026)"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "Comments must be received on or before November 10, 2026."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Look-alike measure: every proposal's SUMMARY calls its comment window a \"60-day public comment period\"; taking that label five times gives 300 days. The printed publication dates and deadlines give 62, 63, 60, 62 and 60 days (Docs 2 to 6), 307 in all."
+}

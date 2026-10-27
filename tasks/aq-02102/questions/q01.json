@@ -1,0 +1,81 @@
+{
+  "question": "How many percentage points did individuals' share of responses, including those addressing no question, fall between the 2021-22 and 2023 Civil Service McCloud consultations (two decimal places)?",
+  "number_of_asks": 1,
+  "gold_answer": "3.81 percentage points",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 2, paragraph 3.7, 2021-22 consultation): 1,268 responses directly addressed the consultation questions, 1,263 of them from individuals and five from trade unions. A response from Audit Wales was also received, and another 32 responses came from individuals that did not address the questions.\n\nStep 2. Calculation (Doc 2), individual responses received in 2021-22: 1,263 + 32 = 1,295, the Individuals figure in Doc 2's Table 2 and Annex A, which therefore already includes the 32.\n\nStep 3. Calculation (Doc 2), responses other than Audit Wales's: 1,268 + 32 = 1,300.\n\nStep 4. Calculation (Doc 2), all responses received in 2021-22: 1,300 + 1 = 1,301, the Total Received in Doc 2's Table 2.\n\nStep 5. Source fact (Doc 4, paragraph 3.9, 2023 consultation): 107 responses in some way addressed the consultation questions, 102 of them from individuals and five from organisations. In addition, another ten responses were received from individuals that did not address the questions.\n\nStep 6. Source fact (Doc 4, Table 2): its Individuals row (102) and Total (107) leave out those ten responses, unlike Doc 2's table, which counts its 32. Doc 4's \"Of which: Queried the effect of the remedy\" row (68), responses that did not answer the questions in all respects, is part of the 102, not the ten.\n\nStep 7. Calculation (Doc 4), all responses received in 2023: 107 + 10 = 117.\n\nStep 8. Calculation (Doc 4), individual responses received in 2023: 102 + 10 = 112.\n\nStep 9. Calculation (Doc 2 and Doc 4), first product for subtracting the unrounded shares of individuals over a common base: 1,295 * 117 = 151,515.\n\nStep 10. Calculation (Doc 2 and Doc 4), second product: 112 * 1,301 = 145,712.\n\nStep 11. Calculation (Doc 2 and Doc 4), difference of the products: 151,515 - 145,712 = 5,803.\n\nStep 12. Calculation (Doc 2 and Doc 4), common base: 1,301 * 117 = 152,217.\n\nStep 13. Calculation (Doc 2 and Doc 4), decrease in people's shares: 5,803 / 152,217 = 3.81%. The decrease was of those percentage points.",
+  "answer_components": [
+    "3.81"
+  ],
+  "evidence": [
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "The Cabinet Office received 1,268 responses in total from scheme members and trade unions which directly addressed the questions in the consultation."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "These consisted of 1,263 responses from individuals, and five responses from trade unions"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "In addition, a response from Audit Wales was also received."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Another 32 responses were received from individuals that did not address the questions posed by the consultation"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "The Cabinet Office received 107 responses in total from scheme members, trade unions and other organisations which in some way addressed the consultation questions."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "These consisted of 102 responses from individuals and five responses from organisations."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "In addition another ten responses were received from individuals that did not address the questions posed by the consultation"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Document convention",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    },
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Picks the wrong entity or section"
+    },
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Doc 2's Table 2 (1,295 of 1,301) already holds its 32 non-answering responses: adding them again gives 3.82, skipping Doc 4's ten gives 4.21. Doc 4's 68 \"didn't answer\" are inside its 107: 2.40. Doc 2's 1,268 \"in total\" omits Audit Wales: 3.89. Gold: 1,295/1,301 minus 112/117."
+}

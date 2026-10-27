@@ -1,0 +1,88 @@
+{
+  "question": "Altogether, how much cash had Docusign paid for share buybacks under its stock repurchase program by January 31, 2025, to the nearest million dollars?",
+  "number_of_asks": 1,
+  "gold_answer": "$892 million",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 4, Note 10 \"Stock Repurchase Program\" and Part II Item 2 footnote 1): the board authorized a repurchase program of up to $200.0 million in March 2022, an increase of up to $300.0 million in September 2023 and an increase of up to $1.0 billion in May 2024; the MD&A adds that the program \"commenced in March 2022\", before the two fiscal years the earnings releases cover.\nStep 2. Calculation (Doc 4): the three authorizations in thousands of dollars: 200,000 + 300,000 + 1,000,000 = 1,500,000 thousand dollars authorized by January 31, 2025 (derived).\nStep 3. Source input (Doc 4, Part II Item 2 table, \"October 1 - October 31\" row, column \"Approximate Dollar Value of Shares that May Yet Be Purchased Under the Plans or Programs (in thousands)\"): 769,641 thousand dollars of authorization still unused at October 31, 2024; footnote 3 says these amounts exclude the 1% excise tax, as cash repurchase payments do.\nStep 4. Source input (Doc 2, Condensed Consolidated Statements of Cash Flows, \"Three Months Ended January 31,\" 2025 column, row \"Repurchases of common stock\"): (161,725) thousand dollars paid in the quarter from November 1, 2024 to January 31, 2025.\nStep 5. Calculation (Doc 4 and Doc 2): 769,641 - 161,725 = 607,916 thousand dollars of authorization still unused at January 31, 2025 (derived).\nStep 6. Calculation (Doc 4 and Doc 2): 1,500,000 - 607,916 = 892,084 thousand dollars of cash paid for buybacks under the program from its start through January 31, 2025 (derived).\nStep 7. Final answer (Doc 4 and Doc 2): 892,084 / 1,000 = 892.084 million dollars, which is the gold answer to the nearest million.\nStep 8. Check (Doc 4 and Doc 2): the fiscal 2025 and fiscal 2024 repurchases Doc 2 prints add to 683,528 + 145,515 = 829,043 thousand dollars, less than the program total in Step 6 because purchases in the program's first year from March 2022 appear in no document's cash flow statement.",
+  "answer_components": [
+    "$892 million"
+  ],
+  "evidence": [
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "In March 2022, our board of directors authorized a stock repurchase program of up to $200.0 million of our outstanding common stock"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Subsequently, in September 2023, our board of directors authorized an increase to our existing stock repurchase program for an additional amount of up to $300.0 million"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "In May 2024, our board of directors authorized an increase to our existing stock repurchase program for an additional amount of up to $1.0 billion"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "which commenced in March 2022 and does not have an expiration date"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Approximate Dollar Value of Shares that May Yet Be Purchased Under the Plans or Programs (in thousands) (3)"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "October 1 - October 31|1,014,980|$64.16|1,014,980|$769,641"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Amounts presented exclude the 1% excise tax as a result of the IRA"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "||Three Months Ended January 31,||Year Ended January 31,||"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "|(in thousands)|2025|2024|2025|2024|"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "|Repurchases of common stock|(161,725)|—|(683,528)|(145,515)|"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Part vs total: Doc 2's cash flow statement shows only fiscal 2025 (683,528) and fiscal 2024 (145,515) repurchases; adding them gives $829 million. Doc 4 shows the program began in March 2022; its remaining-authorization table recovers the earlier purchases, giving $892 million."
+}

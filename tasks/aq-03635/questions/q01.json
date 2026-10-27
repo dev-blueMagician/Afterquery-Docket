@@ -1,0 +1,68 @@
+{
+  "question": "On the Commission's assessment of Z Energy's average earnings and capital employed for 2016 to 2018, what percentage of those earnings exceeded a return on that capital at the top of the Commission's reasonable-return range? Give one decimal place.",
+  "number_of_asks": 1,
+  "gold_answer": "61.9%",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 9, the chart of 2016 to 2018 average earnings): the Commission's assessment of Z Energy's earnings is 283, in $ million a year. Z's own assessment in the same chart is 231, which is not the figure asked for.\n\nStep 2. Source input (Doc 9, the chart of 2016 to 2018 average capital employed): the Commission's assessment of Z's capital employed is 1,254, in $ million. Z's own assessment in the same chart is 2,085, which is not the figure asked for.\n\nStep 3. Check (Doc 9): the two Commission figures belong together, because their ratio is the return Doc 9 reports for the Commission's approach, approximately 22%: 283 / 1,254 = 22.6%\n\nStep 4. Source input (Doc 1, paragraph X45.2): the Commission's estimate of a reasonable return is the range 6.9 - 8.6%, so the top of the range is 8.6%.\n\nStep 5. Calculation (Doc 1 and Doc 9): the yearly earnings, in $ million, that a return at the top of the range gives on the Commission's figure for capital employed: 1,254 × 8.6% = 107.844\n\nStep 6. Calculation (Doc 1 and Doc 9): the part of the Commission's earnings figure above that return, in $ million a year: 283 − 107.844 = 175.156\n\nStep 7. Final answer (Doc 1 and Doc 9): that part as a share of the Commission's earnings figure, to one decimal place: 175.156 / 283 = 61.9%",
+  "answer_components": [
+    "61.9%"
+  ],
+  "evidence": [
+    {
+      "document_number": 9,
+      "component_number": 1,
+      "quote": "23 231 14 45 16 283 0 50 100 150 200 250 300 350"
+    },
+    {
+      "document_number": 9,
+      "component_number": 1,
+      "quote": "2016 to 2018 average earnings: Z's assessment and The Commission's assessment"
+    },
+    {
+      "document_number": 9,
+      "component_number": 1,
+      "quote": "141 134 41 254 79 200 2,085 17 1,254 0 500 1,000 1,500 2,000 2,500 Z's assessment of capital employed"
+    },
+    {
+      "document_number": 9,
+      "component_number": 1,
+      "quote": "The Commission's assessment of capital employed $m 2016 to 2018 average capital employed"
+    },
+    {
+      "document_number": 9,
+      "component_number": 1,
+      "quote": "the approach used in the draft report shows an average ROACE for Z of approximately 22% for the period 2016 – 2018"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "well above our estimate of a reasonable return (6.9 - 8.6%)"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        9
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Unit normalization"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Look-alike measure: Doc 9's two charts print Z's own assessment (earnings 231, capital employed 2,085) beside the Commission's (283 and 1,254). Taking Z's bars gives 22.4%. The question asks for the Commission's assessment, so the answer uses 283 and 1,254 and reaches 61.9%."
+}

@@ -2,7 +2,8 @@
 
 Hooked from blind-solver and shortcut-auditor as
     python "$CLAUDE_PROJECT_DIR/tools/agent_scope.py" blind-solver
-Run tools/docket_agent.py prepare first: it adds its bundle/run to .claude/solver-scope.json.
+Run tools/docket_agent.py prepare with --local-checks for an optional diagnostic: it adds its
+bundle/run to .claude/solver-scope.json. Default platform preparation does not bind a scope.
 The binding may hold several active runs (schema 2) so that concurrent sessions do not evict
 each other's solvers; the legacy single-run form (schema 1) is still honoured.
 Allows only prepared packet documents. Closed-book agents cannot use tools.
@@ -56,7 +57,7 @@ def check(role: str, data: dict, root: Path = ROOT) -> str | None:
     try:
         active = bindings(json.loads((root / ".claude" / "solver-scope.json").read_bytes()))
     except (OSError, ValueError, KeyError, TypeError, AttributeError) as error:
-        return f"No valid solver scope: run docket_agent.py prepare first ({error})."
+        return f"No valid solver scope: run docket_agent.py prepare with --local-checks first ({error})."
     args = data["tool_input"]
     pattern = args.get("pattern", "") if tool == "Glob" else args.get("glob", "")
     if not isinstance(pattern, str):

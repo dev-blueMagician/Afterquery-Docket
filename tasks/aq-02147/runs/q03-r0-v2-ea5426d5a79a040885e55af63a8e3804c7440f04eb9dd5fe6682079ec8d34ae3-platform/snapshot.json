@@ -1,0 +1,50 @@
+{
+  "bundle": "aq-02147",
+  "corpus_sha256": {
+    "docs/Equality-Analysis-for-Statutory-Sick-Pay-Reform-Measures-in.txt": "9013a369099a897cb39e77998923bde617c5f444022cedbbd5443bc40cfd872b",
+    "docs/Government-response-Health-is-everyones-business.txt": "aa81f35a008874836870d25ac16f40ae07e11c1e93d70ca09441bf9868006812",
+    "docs/Government-response-Making-Work-Pay-Strengthening-Statutory.txt": "99994b4b3c6786d2485e5ce423dde0c58957aaf69bf9b4b538a8d58d0b164273",
+    "docs/Health-is-everyones-business-proposals-to-reduce-ill.txt": "f205d38d847e6ff83c3dd404c3224844ff5a95991edf76117afb624ca39ad538",
+    "docs/Making-Work-Pay-Strengthening-Statutory-Sick-Pay.txt": "2871925cdbcd5b544e45d55a88f009cf8c7f596d69e88dc011d6c521c407d5f8",
+    "text/D01.txt": "46a44fee087231ecdc8788296829309a0a6bf8a8407c79b2c44c987db7cd59fa",
+    "text/D02.txt": "7073049cfbdf5bebd75d6fc4d1e0e7f17f7f1184006cf961eb6dfba898f0ca93",
+    "text/D03.txt": "5e251238c9a2c2f154c01af6075970e28f3bc20a3b4f06dfbbe6b9b69079c59f",
+    "text/D04.txt": "27cc66cc891d0564653804bd4d3f8b5f571e685d5e872516626988040a261ee6",
+    "text/D05.txt": "d80a956be570c73e08c16b88c887cfd9852b337904782c597f65e485bf3e7086",
+    "text/manifest.json": "eb938525d4060d20a025ec3551170b8f87290ded929d81525755ce8a10e54461"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "a2c11b889dd6ca7b8b5fa184abfddd11a096a1c20c651a305f132c31f58fa912",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D02, D05",
+    "id": "q03",
+    "levers": "Scatter the pieces; Calculate across documents",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i03",
+    "status": "draft",
+    "tags": "Cross-document join; Unit normalization"
+  },
+  "question_id": "q03",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "52,500 employees",
+    "components": "- c1: 52,500",
+    "evidence": "- D02 (L808, Annex A, benefits to employers) [c1]: \"could save employers between £5,000 and £11,000, on average, for each employee they prevent from falling out of work\"\n- D02 (L853, Annex A) [c1]: \"Table 3: Societal benefits of retaining an individual in work (£)\"\n- D02 (L855, Table 3 header) [c1]: \"|Employer benefits|Lower|Median|Upper|\"\n- D02 (L859, Table 3 total) [c1]: \"|Total|£4,700|£8,000|£11,000|\"\n- D05 (L167, Table 2 title) [c1]: \"Table 2 – Comparison of Illustrations on Impact on Business\"\n- D05 (L169, Table 2 header) [c1]: \"||Current system|60% earnings|70% earnings|80% earnings|\"\n- D05 (L171, Table 2 totals) [c1]: \"|Total costs|£0.65 billion|£1.04 billion|£1.06 billion|£1.07 billion|\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: h9 (new hook after h1 was retired on q01's Run 1, necessity). A cost printed only in the 2024 consultation (current £0.65bn, 80% £1.07bn) set against the only median estimate of employers' saving per retained employee, in the 2021 response's annex. Picking the right measure: median total saving versus Doc 3's average loss and the annex's component medians; rise versus total cost. Medium target; measured platform result pending.\n- Dependency plan: Doc 2 L853-L859 Table 3 total median £8,000 (L808 prose: \"could save employers between £5,000 and £11,000 ... for each employee\"); Doc 3 L167-L171 Table 2 totals £0.65bn (current) and £1.07bn (80%). 1.07 - 0.65 = 0.42 billion pounds; 0.42 billion / 8,000 pounds = 52,500 retained employees a year.\n- Universe: not applicable (single value).\n- Necessity: Doc 2 is the only document with a median estimate of what employers save per retained employee (\"median\" elsewhere: Doc 5's 50% and 90% respondent medians, Doc 2's own productivity £3,100, replacement £5,000 and individual health £4,100 medians). Without Doc 2 the nearest substitute is Doc 3's average £30,614 (13,719). Doc 3 is the only source of the current-system SSP cost (£0.65bn): Doc 5 L194 prints £1.04bn and £1.07bn and L121 the £30 million 60-versus-80 gap, but no current cost; Doc 1 L606's £1.5bn is a 2019 estimate (it would give a fall, not a rise); Doc 3's 0.06% to 0.09% of wage spending (L174) has no pound value. The question gives 80% but none of £0.65bn, £1.07bn or £8,000.\n- Selected-lever checks: Scatter the pieces: the saving in Doc 2, the costs in Doc 3. Calculate across documents: no document prints a retention count or 52,500, 0.0525 or 0.42 in any cost context. Wrong routes (Python Decimal, 2026-10-08): Doc 3's £30,614 gives 13,719.21; the replacement-cost median £5,000 (also the prose lower bound) gives 84,000; the productivity median £3,100 gives 135,483.87; the individual health median £4,100 gives 102,439.02; the Table 3 lower £4,700 gives 89,361.70; the upper £11,000 gives 38,181.82; the 80% total £1.07bn gives 133,750; Doc 5's £30 million gives 3,750; reading Doc 3's waiting-period £1.02bn as the increase gives 127,500; summing the rounded component medians (£8,100) gives 51,851.85; the per-employee route (£38 - £23 = £15 times Doc 4's 28,485,000 employees) gives 53,409.38.\n- Targeted failure modes: mode 1 (Look-alike measure) is Doc 3 L117's Oxford Economics average, £30,614 per lost employee, in the same document as the cost table: 13,719. Mode 2 (Part vs total) divides the 80% rate's total annual cost (£1.07bn) instead of its rise over the current £0.65bn: 133,750. Both recomputed. Considered and not declared: the component medians (the question says saving per retained employee, which the annex totals) and Doc 5's £30 million (the question says over current costs).\n- Calculation verification: Python Decimal 2026-10-08: (1.07 - 0.65) x 10^9 / 8,000 = 52,500 exactly. Float check of the reasoning's expressions: 1.07 - 0.65 = 0.42000000000000004 (within the form's tolerance); 0.42 / 8 = 0.0525.\n- Form number check: tasks/aq-02102/notes/helpers/form_check_v6.py (Doc2=D02, Doc3=D05) reports no flag; a control \"0.42 / 8,000 = 52,500\" is flagged, so the emulator is live. The reasoning ends at 0.0525 million because neither document prints 1,000,000 for a conversion step.\n- Semantic/ID/overview probes: the page overview lists Doc 2's \"£5bn for Restart Grants\" and \"£160 billion support package\" and Doc 3's \"£1.02 billion estimated cost of removing waiting period\" and \"£30,614 average financial impact of employee loss\"; no retention count, median saving or current SSP cost. Shortest complete route: Doc 3 Table 2's two totals and Doc 2 Table 3's median total, one subtraction and one division.\n- Precision/readings: exact integer, no rounding requested. Table 3 is \"rounded\" (its components sum to £8,100 at the median); the printed Total median is the direct figure and the prose range's midpoint is also £8,000. \"Rise over current SSP costs\" excludes the 60-versus-80 gap. The saving is one-off per retained employee and the cost is annual, so the answer is retentions per year.\n- Completeness: full corpus, no gaps (notes/intake.json; all five documents read in full).\n- Style/set review: 22 words; no em dashes. Different family, documents and tags from q02 (Docs 4 and 5, SSP week mechanics). q01 (dropped) shared Doc 3 but not this table or any fact used here.\n- Warnings answered: pending preflight.",
+    "necessary documents": "- D02: Answer component\n- D05: Answer component",
+    "platform validation": "",
+    "question": "At the median saving per retained employee, how many retentions a year would offset an 80% rate's rise over current SSP costs?",
+    "reasoning": "Step 1. Source fact (Doc 2, Annex A, Table 3): the 2021 response estimates what employers gain for each individual retained in work, as productivity plus replacement costs avoided. The total is £4,700 (lower), £8,000 (median) and £11,000 (upper) per employee.\n\nStep 2. Source fact (Doc 3, paragraph 32 and Table 2): employers' total annual SSP costs are £0.65 billion under the current system and £1.07 billion under the 80% earnings illustration.\n\nStep 3. Calculation (from Step 2; Doc 2 and Doc 3): rise over current SSP costs at an 80% rate, in billions of pounds: 1.07 - 0.65 = 0.42.\n\nStep 4. Calculation (from Steps 1 and 3; Doc 2 and Doc 3): retentions a year needed to offset that rise, dividing billions of pounds by the median saving in thousands of pounds, so the result is in millions of employees: 0.42 / 8 = 0.0525 million retained employees a year.",
+    "targeted failure modes": "### Failure mode 1\nTrap: Look-alike measure\nHow a careless solver fails: Takes the wrong line item\n\n### Failure mode 2\nTrap: Part vs total\nHow a careless solver fails: Takes the wrong line item\n\nWhy these are traps: Doc 3's own retention figure, an average £30,614 per lost employee, gives 13,719; Doc 2's Table 3 median is £8,000. Dividing the 80% rate's full £1.07 billion instead of its £0.42 billion rise over the current £0.65 billion gives 133,750."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "ea5426d5a79a040885e55af63a8e3804c7440f04eb9dd5fe6682079ec8d34ae3"
+}

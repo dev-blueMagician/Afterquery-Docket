@@ -35,3 +35,19 @@ metadata:
 - 2026-10-05 (aq-00745): two Bash heredoc appends of raw solver returns failed with "unexpected
   EOF while looking for matching" because the returns contained backticks; nothing was written,
   and the same content went in through Write/Edit. Heredocs without backticks worked.
+
+- 2026-10-09: `python` is a uv-managed CPython 3.12 (AppData/Roaming/uv/python/...), marked externally managed, so a plain
+  `pip install` is refused. At the user's request ("install them") pymupdf 1.28.2, python-docx 1.2.0 and
+  beautifulsoup4 4.15.0 (with lxml, soupsieve, typing_extensions) were installed with
+  `python -m pip install --break-system-packages ...`; tools/test_docket_tools.py needs all three for its fixture.
+  Undo with `python -m pip uninstall <name>`. Install further packages only when the user asks.
+- 2026-10-10 (aq-02673 q04): a patch script cut the question file at `t.index("## Platform validation")` to
+  rewrite its tail. The same words had just been written into a Lever-checks sentence, so the cut landed there and
+  the rest of Lever checks was lost; a snapshot was then prepared from the truncated file before the fault was
+  seen. The file was rebuilt with Write from the last full Read. Change question files with the Edit tool; if a
+  script must splice, anchor on a heading at the start of a line (`"\n## Platform validation\n"`) and check the
+  section list (`grep -n "^## "`) before running prepare.
+
+- 2026-10-13 (aq-03570): a long Python heredoc with no backticks failed in the Bash tool with "unexpected EOF while
+  looking for matching" a single quote; the cause was not found (the text held typographic quotes, a check mark and
+  many apostrophes). Writing the script to the scratchpad with the Write tool and running it by path worked.

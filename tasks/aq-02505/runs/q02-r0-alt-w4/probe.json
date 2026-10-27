@@ -1,0 +1,36 @@
+{
+  "purpose": "removal probes (optional author diagnostic for a concrete issue: Zijin Mining copper business and the November 2024 additions are public, so Doc 4 or Doc 2 might be bypassed by recall)",
+  "bound_to": {
+    "question": "q02",
+    "revision": 0,
+    "tested_sha256": "ae90f7cdee09b08167203be4d96834662985ce527bc84455df35d04ed476f02b"
+  },
+  "packets": [
+    {
+      "packet": "solver-1",
+      "question": "q02",
+      "removed_local": "D02",
+      "renumbered": {
+        "D01": "D01",
+        "D03": "D02",
+        "D04": "D03",
+        "D05": "D04",
+        "D06": "D05",
+        "D07": "D06"
+      }
+    },
+    {
+      "packet": "solver-2",
+      "question": "q02",
+      "removed_local": "D04",
+      "renumbered": {
+        "D01": "D01",
+        "D02": "D02",
+        "D03": "D03",
+        "D05": "D04",
+        "D06": "D05",
+        "D07": "D06"
+      }
+    }
+  ]
+}

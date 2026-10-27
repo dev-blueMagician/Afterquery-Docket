@@ -1,0 +1,28 @@
+{
+  "purpose": "removal probes (author diagnostic; user standing instruction 2026-10-08 to check the Document gate)",
+  "tested_sha256": "d21d65331df3f34739c848fe0d64bade4dd5a635b93b98bb9d6249bd87c1c6b5",
+  "packets": [
+    {
+      "packet": "solver-1",
+      "removed_local": "D02 (Doc 2)",
+      "renumbered": {
+        "D01": "D01",
+        "D03": "D02",
+        "D04": "D03",
+        "D05": "D04",
+        "D06": "D05"
+      }
+    },
+    {
+      "packet": "solver-2",
+      "removed_local": "D04 (Doc 4)",
+      "renumbered": {
+        "D01": "D01",
+        "D02": "D02",
+        "D03": "D03",
+        "D05": "D04",
+        "D06": "D05"
+      }
+    }
+  ]
+}

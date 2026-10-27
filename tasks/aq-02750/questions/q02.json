@@ -1,0 +1,58 @@
+{
+  "question": "When Uganda declared its Ebola outbreak over, how many days remained to comment on CDC's entry-suspension order?",
+  "number_of_asks": 1,
+  "gold_answer": "3 days",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 7, factual basis, section III.B): the Republic of Uganda Ministry of Health declared the outbreak over on July 28, 2026.\n\nStep 2. Source input (Doc 7, DATES and SUPPLEMENTARY INFORMATION): the order printed in Doc 7 took effect on August 12, 2026, after the declaration. The order in force on July 28, and the only one then open for comment, was the one continued on July 13, 2026 for 30 days. Doc 7 says only that it had a 15-day comment period and prints no closing date for it.\n\nStep 3. Source input (Doc 6, SUMMARY and DATES): Doc 6 prints that order. It was issued and took effect on July 13, 2026, and written comments on it had to be received on or before July 31, 2026, so July 31 was its comment deadline.\n\nStep 4. Calculation (Doc 6 and Doc 7): both dates fall in July, so the days that remained for comment after the declaration are 31 - 28 = 3.",
+  "answer_components": [
+    "3 days"
+  ],
+  "evidence": [
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "On July 28, 2026, the Republic of Uganda Ministry of Health declared the outbreak over."
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "This action took effect August 12, 2026, at 5:00 p.m. EDT."
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "The ASH again continued the Order without change on July 13, 2026, for 30 days with a 15-day comment period, and no comments were received."
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "This action took effect July 13, 2026, at 5:00 p.m. EDT. Written comments must be received on or before July 31, 2026."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        7
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Wrong year or edition",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Wrong year or edition: Doc 7 reports Uganda's July 28 declaration beside its own comment deadline, September 1, 2026, but that order took effect August 12. Using it gives 35 days. The order in force on July 28 is Doc 6's, with comments due July 31, so 3 days."
+}

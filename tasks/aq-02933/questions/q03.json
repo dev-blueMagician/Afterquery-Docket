@@ -1,0 +1,64 @@
+{
+  "question": "From 2019 to 2025, across States with CMS-reported enrolled totals for both years, by how many did the home health agencies lost exceed the hospices gained?",
+  "number_of_asks": 1,
+  "gold_answer": "315 providers",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 6, footnote to section II.C): between 2019 and 2025 the number of enrolled HHAs in Michigan dropped from 485 to 361, and in Texas from 2,269 to 1,893. Doc 6 gives no other State's HHA totals for both years.\n\nStep 2. Source input (Doc 5, section II.C): enrolled hospices in Georgia rose from 221 in CY 2019 to 273 in CY 2025. Enrolled Nevada hospices stood at 188 in CY 2025. The figure printed beside it, 138, is Nevada's total for CY 2023, not CY 2019.\n\nStep 3. Source input (Doc 5, Table 1): Nevada's enrolled hospices in CY 2019 numbered 55. Arizona, California and Texas have totals for CY 2019 and CY 2023 only, and Table 2's CY 2025 column counts newly enrolling hospices, so no other State has hospice totals for both years.\n\nStep 4. Calculation (Doc 5 and Doc 6): HHAs lost in Michigan: 485 - 361 = 124.\n\nStep 5. Calculation (Doc 5 and Doc 6): HHAs lost in Texas: 2,269 - 1,893 = 376.\n\nStep 6. Calculation (Doc 5 and Doc 6): HHAs lost in all: 124 + 376 = 500.\n\nStep 7. Calculation (Doc 5 and Doc 6): hospices gained in Georgia: 273 - 221 = 52.\n\nStep 8. Calculation (Doc 5 and Doc 6): hospices gained in Nevada: 188 - 55 = 133.\n\nStep 9. Calculation (Doc 5 and Doc 6): hospices gained in all: 52 + 133 = 185.\n\nStep 10. Final answer (Doc 5 and Doc 6): HHAs lost beyond hospices gained: 500 - 185 = 315.",
+  "answer_components": [
+    "315 providers"
+  ],
+  "evidence": [
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "Between 2019 and 2025, the number of enrolled HHAs in Michigan dropped from 485 to 361 (over 25 percent) and from 2,269 to 1,893 in Texas (roughly 17 percent)."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "In Georgia, there have been sharp increases in the number of hospices there--from 221 in CY 2019 to 273 in CY 2025, or a 24 percent rise"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "The total number of enrolled Nevada hospices continues to rise at a rate well beyond that of the beneficiary population--from 138 in CY 2023 to 188 in CY 2025, or 36 percent."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Table 1--Number of Enrolled Hospices in CY 2019 and CY 2023"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Nevada.......................................................... 55 138 151"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Wrong year or edition",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Wrong year: Doc 5 prints Nevada's hospices as 138 in CY 2023 to 188 in CY 2025, beside Georgia's 2019-to-2025 pair; that pair gives gains of 102 and an answer of 398. The gold takes Nevada's CY 2019 total, 55, from Table 1: gains 185, answer 315."
+}

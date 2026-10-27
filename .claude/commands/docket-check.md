@@ -1,111 +1,92 @@
 ---
-description: Falsify Docket candidates with fresh isolated blind solves, closed-book checking, shortcut attack and independent gold review
+description: Run one Docket mechanical preflight and full handover for platform validation; optional diagnostics only for a stated issue
 argument-hint: <slug> [iNN | qNN ...]
 model: claude-opus-5-5
 effort: max
 ---
 
-Check $ARGUMENTS within one active bundle. No ids means draft/checked questions. Read the
-gate, newer-guide note and applicable memory. Honor difficulty_target easy|medium|hard;
-new work defaults to easy, missing legacy targets retain hard. Never revise submitted/accepted
-content. The caller records results and owns fixes; author, solver, auditor and reviewer are
-separate fresh roles. Local work predicts suitability; the actual Docket verdict measures a pass.
+Check $ARGUMENTS within one active bundle. No ids means draft/checked questions. Read the guide
+and gate; honor difficulty_target easy|medium|hard (new default hard since 2026-10-14, legacy
+default hard). For a Hard target read .claude/memory/reference/hard-playbook.md first.
+Never edit submitted/accepted content. The caller owns fixes and accurate authorship.
 
-An editable legacy question needs an explicit hard target before prepare can run. Add that
-metadata through docket-add, incrementing revision and invalidating prior records; do not
-silently lower its target to easy. Submitted/accepted legacy questions get read-only reports.
+Default path:
 
-Sketches: inspect minimal exact facts/quotes, question, gold, tags, target, selected levers,
-necessity, completeness and independent arithmetic/date checks before spending full solves.
-Try direct whole-answer lookup, sufficient single documents, alternate readings and attacks
-applicable to selected levers. Require decoys for "which items" questions; remove ineffective
-lever claims or revise the hook. Ordinary cross-document arithmetic/date/identifier joins
-are allowed; a simple valid route is a difficulty risk to measure, not automatic rejection.
-File a viable sketch as draft through /docket-add for full reasoning/components/evidence and
-complete isolation/checks;
-do not pretend a partial sketch test validates a final question. Stop after three unproductive
-sketch rounds, reporting concrete bundle limitations.
-If an actual platform draft screen is available in the current form and already authorized,
-preserve its exact input/feedback as an early screen. It does not transfer automatically to
-full-field fingerprint readiness or replace the independent final checks below.
-Optionally save a minimal notes/sketches/iNN.md (id, difficulty_target and documents metadata;
-Question, Answer and exact Evidence sections) and run python tools/docket_agent.py screen
-tasks/<slug> --idea iNN. This mechanical screen does not require components/full reasoning;
-it is neither a model solve nor evidence of uniqueness, difficulty or a platform tier pass.
+1. For a sketch, verify essential source inputs, the author calculation, necessary dependencies,
+   obvious alternate readings and the selected levers before full write-up. Decoys are required
+   for which-items questions; ordinary cross-document arithmetic/date/ID joins are eligible.
+   Check the sketch's competing answer -> wording condition and per-source unique input ->
+   substitute search. Recheck necessity after clarification; do not promote a cosmetic second
+   document. Reuse source-bound passages and calculations; these are author checks, not extra jobs.
+   `python tools/docket_agent.py screen tasks/<slug> --idea iNN` is an optional mechanical screen.
+   It warns when a period word in the question is also printed as a reporting label ("half-year
+   results"); act on that warning before any platform test, and make the same search by hand for
+   every phrase naming the asked period or population (WORKFLOW section 4).
+   For a Hard target `screen` also checks the sketch's `## Lever stack` (two or more levers with
+   found quotes and different wrong answers, three steps, a decoy, no rare question word in a settling
+   passage; playbook section 4): settle its warnings before the strong-solver screen.
+   For a Hard target, run the strong-solver screen before anything is offered (WORKFLOW section 4:
+   `docket_agent.py packet`, three fresh blind solves, `record-screen`); the floor FAILs a live Hard
+   question with no screen record and WARNs when the screen was right three times. The screen ranks;
+   the user decides what runs.
+   File viable sketches through /docket-add; launch no other local validators to screen them.
+2. For a final question, verify arithmetic/date results with a script or calculator, including
+   input choice, units, signs, rounding and counting convention. Complete every form field,
+   necessary-document role and Targeted failure mode. Assess actual source gaps for this candidate.
+3. Run `python tools/docket_agent.py prepare tasks/<slug> --q qNN` to freeze fields and one corpus
+   copy. Save the revision, tested_sha256 and run path. Default preparation creates no solver
+   packets, binds no diagnostic scope and runs no models. An editable legacy question needs its
+   existing hard target made explicit through /docket-add before preparation; never lower it silently.
+4. Known gaps need a substantive author assessment or supplied platform evidence covering every
+   exact gap's effect on premises, gold, exclusions, uniqueness, necessity and shortcut coverage.
+   Record it in Source assessment using the snapshot/gap hashes and the schema in WORKFLOW.md.
+   Necessary/cited missing material and unknown provenance cannot be waived. An irrelevant-gap
+   assessment preserves the incomplete-corpus warning; no independent model review is mandatory.
+5. Run `python tools/check_questions.py tasks/<slug> --handover --q qNN` once at the phase boundary.
+   Fix FAILs and fix/explain WARNs; repeat only after a relevant change or unresolved failure.
+   Set checked when mechanical preflight is done and platform validation is pending. Hand over
+   notes/handover-qNN.md whole, every form field and failure mode included, with platform Doc N
+   numbers. State the target and pending platform result. No local difficulty guesses, odds or
+   "likelier" tiers. For a gold that has to be derived, ask the user to look at the form's
+   "One defensible answer" check before spending a difficulty run.
+   Also provide questions/qNN.json containing only the form input values when generated. For a
+   JSON-only request, use `check_questions.py tasks/<slug> --json --q qNN` without repeating validation.
+6. Record genuine platform output supplied by the user or from an already authorized test under
+   `## Platform validation` (legacy platform records in `## Blind solve` remain readable):
 
-The scope binding is shared across sessions: prepare adds its run without evicting other
-active runs (12-hour expiry), so runs for several questions or bundles may be active at once.
-Independent workers for the same run may execute concurrently.
+   - DATE | rev: N | platform difficulty check | tested_sha256: HASH | platform_verdict: pass|fail|unknown | passed_tier: easy|medium|hard | tiers: EXACT PLATFORM LINE | feedback: EXACT PLATFORM WORDS
 
-1. Run python tools/check_questions.py tasks/<slug> --q qNN. Fix content FAILs before tests.
-   A missing readiness record while status checked is not evidence of a content error.
-2. Run python tools/docket_agent.py prepare tasks/<slug> --q qNN. Save its exact fingerprint,
-   revision, run id and solver-1, solver-2 and shortcut packet paths. It snapshots submitted
-   fields and copies only immutable docs/text into packets. Never place the key, notes,
-   answers, reasoning, audit findings or earlier results in a blind packet.
-   Record source_gaps and source_gaps_sha256 verbatim. Needed/cited missing originals/text,
-   unsupported formats or unknown provenance block readiness and cannot be waived. A known
-   gap may be assessed as irrelevant only with the independent review below, concrete
-   evidence across all six impact dimensions and matching snapshot/gap fingerprints.
-   Never turn an irrelevant-gap assessment into a claim of complete corpus coverage.
-3. Read each applicable role prompt explicitly, then dispatch fresh blind-solver A and B
-   and fresh shortcut-auditor, optionally in parallel.
-   Their task messages contain exactly root, their own prepared packet path and Question
-   text verbatim. No target, source ids, proposed decoy, gold, fingerprint metadata, notes,
-   hints or author conversation. Each role searches only its packet docs/text. Dispatch fresh
-   closed-book-solver with Question text only and no usable tools.
-   Use non-fork instances, never resume prior workers; Codex uses fork_turns: none.
-   omitClaudeMd requires Claude Code
-   2.1.271+. If unavailable, use isolated question-only sessions with equivalent read limits;
-   if clean context cannot be established, mark contaminated and withhold validation.
-4. Capture unabridged answers, paths, quotes, search coverage, gaps and tool/runtime errors.
-   Missing/cut-off/contaminated execution is an invalid test, never a miss. If any submitted
-   field changes or report shows fingerprint drift, invalidate the run and prepare fresh.
-5. Dispatch fresh question-review with frozen fields, source corpus, revision, fingerprint,
-   target and raw returns, without the writer's conversation. Reviewer independently
-   recomputes the gold and falsifies necessity over
-   the entire bundle. Two uncontaminated matches are required; wrong-lever is design evidence
-   only. Replace one ordinary solver-error with a fresh run, but preserve the failure and
-   never discard defensible alternative interpretations.
-6. Append records below, using this run's exact revision and fingerprint, and preserve full
-   returns under the run's results/ directory, outside all sealed solver packets. Escape literal
-   pipe characters/newlines within record
-   values or use indented following lines so they cannot impersonate fields.
-   Blind solve section:
-   - <date> | rev: N | solver: A | tested_sha256: <hash> | outcome: <match|wrong-lever|ambiguous|not-answerable|solver-error|contaminated> | confidence: <...> | docs: <...> | answer: <verbatim> | readings: <...>
-   - <date> | rev: N | solver: B | tested_sha256: <hash> | outcome: <...> | confidence: <...> | docs: <...> | answer: <verbatim> | readings: <...>
-   - <date> | rev: N | closed-book solve | tested_sha256: <hash> | result: <misses|reaches|contaminated> | answer: <verbatim>
-   Shortcut audit section:
-   - <date> | rev: N | tested_sha256: <hash> | verdict: <clear|shortcut|ambiguous> | findings: <verified route and coverage>
-   Review section:
-   - <date> | rev: N | tested_sha256: <hash> | verdict: <ready|revise|drop> | difficulty: <easy|medium|hard> | findings: <evidence>
-   If the reviewer supports all current known gaps as irrelevant, Source assessment section:
-   - <date> | rev: N | reviewer: <id> | tested_sha256: <hash> | source_gaps_sha256: <gap hash> | verdict: unaffected | findings: <JSON object mapping each exact gap to substantive premises, gold, exclusions, uniqueness, necessity and shortcut explanations>
-   Preserve the reviewer return; missing assessments or unresolved dimensions block readiness.
-   Contaminated auditors have no clear record; retain their full report as invalid evidence.
-7. Set checked for local ready or revise; dropped for drop. Run floor and report again.
-   Report target, fingerprint, gold validation, shortest verified route and unresolved findings.
-   A local ready review is described as locally checked, awaiting platform verification.
-   For a checked question, run python tools/check_questions.py tasks/<slug> --handover --q qNN
-   and hand over notes/handover-qNN.md whole. It carries every form field in the form's order,
-   failure modes included, with Doc N numbers. Say which form fields it replaces. Say whether the
-   platform needs a new difficulty result: question, answer and necessary-document edits do.
-   Revise editable content through /docket-add, increment revision and repeat the entire
-   process with fresh contexts. After two ineffective revisions drop or develop a different
-   dependency rather than retrying until a preferred result appears.
-8. Record actual platform output only after the user supplies it or has authorized running
-   that external test. Preparing a run gives no external authorization. Link evidence to the
-   exact tested snapshot; a platform result on different wording is stale.
-   Blind solve section:
-   - <date> | rev: N | platform difficulty check | tested_sha256: <hash> | platform_verdict: <pass|fail|unknown> | passed_tier: <easy|medium|hard, pass only> | tiers: <verbatim observed tier line> | feedback: <verbatim platform verdict>
-   Preserve the raw output/source in Feedback log or a linked saved artifact, including
-   actual attempt counts. Use Low/High aliases only when quoting observed labels. Do not
-   derive pass from counts, a reached tier, absent tiers, a local miss or an invented threshold.
-   Mark unknown unless the platform explicitly establishes the tier passed.
-9. Set ready only after this exact revision/fingerprint meets local requirements and observed
-   passed_tier equals/exceeds the requested target. Run floor/report to confirm. Export is a
-   separate provenance check; medium/hard are later targets, not preconditions for an Easy pass.
+   Use passed_tier only for an explicit pass. Preserve the raw output and exact tested identity;
+   counts/reached tiers alone never prove a pass. Set ready only with a clean floor and an
+   exact-content recorded platform pass at/above target. Preparation is not external authorization.
+   Revise editable content as a new revision/snapshot; leave old records historical.
+7. Track all 39 platform Checks separately. After verifying that a supplied capture tested the
+   prepared content, record it with `python tools/docket_agent.py record-checks tasks/<slug> --q qNN
+   --capture <capture.txt> --revision N --tested-sha256 HASH`. This appends raw outcomes without
+   running models. Never infer binding from title/time; unbound captures leave Checks pending.
+   Report/handover separates Checks clearance from difficulty `ready`. Missing/stale blocking
+   results or an explicit footer blocker prevent clearance; advisory warning/retry stays advisory.
+   Own-words checks belong to the admin, including explicit nonblocking reasoning review; preserve
+   actual origin. A recorded clearance is not acceptance.
 
-A scope denial means prepare/binding or explicit packet paths need repair. Never widen scope,
-paste excerpts/key into prompts or grant shell/write tools to make a blind test succeed.
-Keep notes/session.md under 4,000 characters with target, run, status, findings and next action.
+Optional diagnostics:
+
+- The strong-solver screen above is not one of these. Run the others only on explicit user
+  request or for a concrete unresolved issue, choosing the smallest
+  useful check. Missing/stale local records are not a reason to launch new solves. No mandatory
+  pair of solves, audit, closed-book check, removal probes, independent reviewer or tier prediction.
+- If needed, run `python tools/docket_agent.py prepare tasks/<slug> --q qNN --local-checks` to
+  prepare sealed packets and scope binding. Read the applicable role prompt explicitly. Use fresh
+  workers without inherited chat (`fork_turns: none` on Codex; supported omitClaudeMd on Claude).
+- A blind solver/auditor gets only the exact question and its own prepared document packet,
+  never gold, notes, selected evidence/tags or writer history. A closed-book worker gets only the
+  question and no usable tools/files. An optional removal probe gets a renumbered packet without
+  the tested document in a neutral folder. An independent reviewer gets frozen fields and raw returns.
+- Preserve authentic returns outside packets with their revision/fingerprint. Contaminated,
+  cut-off or failed executions are not misses. Resolve demonstrated defects without treating
+  optional diagnostic completion as a readiness gate or simulating platform difficulty.
+- Repair denied scope through preparation/explicit packet paths; never widen access or leak the
+  answer to make a check work. Keep scope security hooks in place.
+
+Keep notes/session.md under 4,000 characters with target, run, mechanical/platform status,
+concrete open findings and next action. Do not create extra prose reports for routine checks.

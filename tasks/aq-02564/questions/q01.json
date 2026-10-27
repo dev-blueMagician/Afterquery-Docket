@@ -1,0 +1,92 @@
+{
+  "question": "How much lower are a hosted subscriber's total monthly EDGX Top and BYX Top fees under the hosted programs than under the existing small-retail-broker programs, at 10,000 non-professional users?",
+  "number_of_asks": 1,
+  "gold_answer": "$1,400",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 5, existing small retail broker program): EDGX charges a discounted Distribution Fee of $750/month for the EDGX Top Data Feed. Under the existing structure a hosted subscriber is assessed that fee, and it is in addition to the standard Professional and Non-Professional User fees.\n\nStep 2. Source input (Doc 5, hosted program): the hosted subscriber's Distribution Fee is waived (a credit of $750/month for the EDGX Top Data Feed), and in lieu of the Non-Professional User fees it pays a set monthly fee of $750 for EDGX Top. Professional User fees remain the same under both programs, so they cancel. Both programs allow no more than 10,000 Non-Professional Data Users: the hosted program's cap, and the existing program's maximum raised from 5,000 to 10,000 by the same filing.\n\nStep 3. Source input (Doc 5, footnote 12): the standard EDGX Top Non-Professional User fee is 0.10 dollars per user a month; footnote 12 prices 10,000 users at $1,000.\n\nStep 4. Calculation (Doc 5): EDGX Top fees for 10,000 non-professional users fall by the waived Distribution Fee plus the replaced user fees, minus the set fee: 750 + 1,000 - 750 = 1,000 dollars a month.\n\nStep 5. Source input (Doc 6, existing small retail broker program): BYX charges a discounted Distribution Fee of $250/month for the BYX Top Data Feed, in addition to the standard Professional and Non-Professional User fees.\n\nStep 6. Source input (Doc 6, hosted program): the hosted subscriber's BYX Top Distribution Fee is waived (a credit of $250/month), and in lieu of the Non-Professional User fees it pays a set monthly fee of $100 for BYX Top. Professional User fees remain the same, and the same 10,000-user limits apply.\n\nStep 7. Source input (Doc 6, footnote 12): the standard BYX Top Non-Professional User fee is 0.025 dollars per user a month; footnote 12 prices 10,000 users at $250.\n\nStep 8. Calculation (Doc 6): BYX Top fees for 10,000 non-professional users fall by 250 + 250 - 100 = 400 dollars a month.\n\nStep 9. Calculation (Doc 5 and Doc 6): combined monthly reduction for the EDGX Top and BYX Top feeds: 1,000 + 400 = 1,400 dollars, exact.",
+  "answer_components": [
+    "$1,400"
+  ],
+  "evidence": [
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "This program provides a discounted Distribution Fee of $750/month for EDGX Top Data Feed"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "both the External Hosted Subscriber and the Hosting Small Retail Broker Distributor are assessed the standard discounted Distribution Fee (and for Cboe One Summary, the discounted Data Consolidation Fee) under the existing Small Retail Broker Program. These fees are in addition to the standard Professional and Non-Professional User fees."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "the External Hosted Subscriber shall also receive a waiver of the Distribution Fee (a credit of $750/month for EDGX Top Data Feed"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "it shall be a set monthly fee of $750 for EDGX Top"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "10,000 Users x 0.10/Non-Professional User = $1,000"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "increase the number of Non- Professional Data User maximum from 5,000 to 10,000"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "This program provides a discounted Distribution Fee of $250/month for BYX Top Data Feed"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "the External Hosted Subscriber shall also receive a waiver of the Distribution Fee (a credit of $250/month for BYX Top Data Feed"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "it shall be a set monthly fee of $100 for BYX Top"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "10,000 Users x 0.025/Non-Professional User = $250"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    },
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Picks the wrong entity or section"
+    }
+  ],
+  "why_these_are_traps": "Look-alike: Doc 5 and Doc 6 footnote 12 print \"maximum, savings\" of $250 and $150, user fees only, giving $400; the gold adds the waived Distribution Fees. Linking: using Doc 5's EDGX figures for BYX gives $2,000; each feed takes its own notice's figures."
+}

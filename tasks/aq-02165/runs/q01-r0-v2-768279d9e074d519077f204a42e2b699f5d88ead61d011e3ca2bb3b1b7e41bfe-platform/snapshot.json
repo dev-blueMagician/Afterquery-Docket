@@ -1,0 +1,50 @@
+{
+  "bundle": "aq-02165",
+  "corpus_sha256": {
+    "docs/Civil-Service-Pension-Scheme-2015-remedy-and-civil-service-2.txt": "77077ea6f8ea88f449c0b0cc29c25ed9be40e75e37fc5bc12c5ad011cbfd7653",
+    "docs/Civil-Service-Pension-Scheme-2015-remedy-and-civil-service.txt": "5d065d3a55fb28bc30ed24ba73f3d29886a46685d3990fe500b82f5cbabfc94c",
+    "docs/Civil-Service-Pensions-2015-Remedy-McCloud-consultation.txt": "a29c7636e381d669d1b806244270af39596192eb53ff97b0414e8abe0919a325",
+    "docs/Civil-Service-Pensions-2015-Remedy-consultation-response.txt": "7784dcaeed591256458468493c5b74ce2341ef09e18d9f54a55d0f1c5282aa72",
+    "docs/Consultation-on-reform-of-the-Civil-Service-Compensation.txt": "19937e7bfaea3ab81b3408d2d572636b2604ac29a603b1ce543f6dacbf1b4e58",
+    "text/D01.txt": "6be1416fd849264289e92b5dedee7f43d2945f7883eb6c855b7b07c637f2ebe0",
+    "text/D02.txt": "cb73b0912bee590e31eeba791e1fc0d97cff00d764b0bb73acab52ab3b23a954",
+    "text/D03.txt": "4830a14da3ddb9bb3b2e65fac5c53bddceb8f05571c4b2817040d4fc5c6ad5a1",
+    "text/D04.txt": "3a72e0037df6ec80a4943f8ac6857fa1bf5c3fab706ac8499b6fdab218a7383d",
+    "text/D05.txt": "d1917ebc5f489ecb2803c593f24d694390169e45ed890d61d464d859e8141df9",
+    "text/manifest.json": "312e2de1658e76874f7ae10986d7f67f9815bd61c3f8f67b1ff686b2828e1c6e"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "50eb27ae9cd4596c45df7447174c4f8bdb16ea3445d12cb81d6dfc6943ada7d2",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D01, D05",
+    "id": "q01",
+    "levers": "Scatter the pieces; Calculate across documents",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i01",
+    "status": "draft",
+    "tags": "Cross-document join; Entity resolution"
+  },
+  "question_id": "q01",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "7 years",
+    "components": "- c1: 7 years",
+    "evidence": "- D05 (L301, section 4.3) [c1]: \"only to allow employer funded top up to pension from age 55 and for this to track 10\"\n- D05 (L328, paragraph 5.2) [c1]: \"which the proposals increase to age 55, and this is tracked 10 years behind the State Pension Age\"\n- D05 (L344, paragraph 5.6) [c1]: \"increasing the minimum age at which an employer can receive an employer funded pension top up to 55, tracked 10 years behind state pension age\"\n- D01 (L359, paragraph 4.9) [c1]: \"The MOD has agreed to fund a lower NPA for MDP officers by paying for an effective pension age equal to three years below State pension age\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: n1, two age rules each stated relative to State Pension age (SPA) in different documents; target medium (hard where possible); measured platform result pending.\n- Dependency plan: Doc 5 gives the earliest employer-funded top-up age, 55 \"tracked 10 years behind\" SPA, i.e. SPA - 10 (L301-305, L328, L344). Doc 2 gives the MOD-funded MDP effective pension age, SPA - 3 (L359). Gap (SPA - 3) - (SPA - 10) = 7 years for every SPA of 65 or more. No document prints 7 or links the two rules.\n- Universe: not applicable (single numeric answer).\n- Necessity: Doc 5 (D05) is the only source of the top-up rule; greps for \"top up\", \"age 55\", \"behind State\" and \"10 years behind\" find it nowhere else. Doc 2 (D01) is the only source of the MDP arrangement; greps for \"MDP\", \"Defence Police\", \"three years below\" find only Doc 4's staff-association gloss (L561, no age) and lists of union names. Without Doc 5 the top-up age is unknown (recall of later scheme terms is the substitute risk); without Doc 2 the MDP pension age is unknown (police NPA 60 is the nearest stand-in, giving 5). No local removal probe run (optional diagnostic; none requested).\n- Selected-lever checks: not a which-items question. Wrong routes recomputed: Home Office police NPA 60 (Doc 2 L357, same extract) minus 55 = 5; age 55 held fixed against SPA - 3 = 7, 8, 9, 10 for SPA 65, 66, 67, 68 (only SPA 65 coincides with the gold); alpha NPA = SPA (Doc 2 L510) minus SPA - 10 = 10.\n- Targeted failure modes: mode 1 (Look-alike measure): Doc 2 L357 \"the NPA [Normal Pension Age] for Home Office Police officers is age 60\" sits one bullet above the MDP sentence, and L359 adds \"officers who are over age 60\"; 60 - 55 = 5. Mode 2 (Figure that must be computed): a solver who ignores Doc 5's tracking clause must supply an SPA; Doc 2 L496's \"age 67 (the new NPA under Alpha rules)\" gives 64 - 55 = 9. Considered, not declared: alpha NPA route (10), which the question's \"MOD-funded\" already rules out.\n- Calculation verification: script recomputation 2026-10-08 (SPA 65-68): top-up 55/56/57/58, EPA 62/63/64/65, gap 7 in every case; fixed-55 gaps 7/8/9/10; police route 5; alpha route 10. Units: years of age; no rounding.\n- Semantic/ID/overview probes: the bundle overview lists Doc 5's \"age 55 minimum for employer funded pension top up\" and no MDP or effective-pension-age fact; no passage pairs the two rules. Shortest complete route: Doc 5 4.3 or 5.2/5.6, Doc 2 4.9, one subtraction.\n- Precision/readings: Doc 5's \"State Pension Age\" is read as the member's own SPA, the same SPA Doc 2's rule uses; no passage defines a calendar SPA instead (recorded risk). Integer answer; no stated precision needed.\n- Completeness: full corpus, no gaps (notes/intake.json; all five texts read in full).\n- Style/set review: 20 words; \"MDP officers\" is Doc 2's own term (Doc 4 L561 spells out Ministry of Defence Police); no document names, pages or answer parts. First question on this bundle; no sibling yet. No overlap with aq-02102's questions (response shares, union lists).\n- Warnings answered: pending preflight.",
+    "necessary documents": "- D01: Answer component\n- D05: Answer component",
+    "platform validation": "",
+    "question": "Under the 2017 compensation proposals, how many years before their MOD-funded pension age could MDP officers get employer pension top-ups?",
+    "reasoning": "Step 1. Source fact (Doc 5, section 4.3 and paragraph 5.6): the 2017 proposals allow an employer-funded top-up to pension only from age 55, with that minimum age \"tracked 10 years behind state pension age\". So the earliest age for an employer-funded top-up is the member's State Pension age minus 10 years.\n\nStep 2. Source fact (Doc 2, paragraph 4.9, Defence Police Federation extract): the MOD funds MDP officers \"an effective pension age equal to three years below State pension age\". So the MOD-funded pension age of an MDP officer is the State Pension age minus 3 years.\n\nStep 3. Calculation (from Steps 1 and 2; Doc 2 and Doc 5): both ages are set from the same State Pension age, which cancels out of the gap: (State Pension age minus 3) minus (State Pension age minus 10) equals 10 minus 3. So the gap is 10 - 3 = 7 years.",
+    "targeted failure modes": "### Failure mode 1\nTrap: Look-alike measure\nHow a careless solver fails: Takes the wrong line item\n\n### Failure mode 2\nTrap: Figure that must be computed\nHow a careless solver fails: Misapplies a rule or premise\n\nWhy these are traps: Doc 2's DPF extract puts Home Office police NPA 60 beside the MDP rule: 60-55 = 5. Holding Doc 5's top-up age at 55 against State Pension age 67 gives 64-55 = 9. Both ages track State Pension age: gap 7."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "768279d9e074d519077f204a42e2b699f5d88ead61d011e3ca2bb3b1b7e41bfe"
+}

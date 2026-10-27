@@ -1,0 +1,76 @@
+AQ-01650 · Academic papers — checks
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-01650
+Saved: 2026-10-08 16:57 (local time)
+Bundle: Academic papers · 7 documents · 97,241 prompt tokens
+Checks: 37 passed · 2 need attention (of 39)
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." Its checks may not have run on the newest version: reload the page and capture again.
+
+
+========================================================================
+NEEDS ATTENTION
+========================================================================
+
+- Answer matches a stated figure: Couldn't check · 1 hr ago · advisory — Could not run this check — retry.
+- Each description fits one thing: Warning · 1 hr ago · advisory — "Central Council for Financial Services Information's Financial Literacy Survey 2016 in Japan" — 2 matches: The Financial Literacy Survey 2016 (Doc 5, prose), Financial Literacy Survey 2016 (Doc 5, prose). Narrow the description. "households in the China Household Finance Survey's 2015 wave" — 2 matches: China Household Finance Survey (CHFS) of 2015 (Doc 2, prose), 1.414 (Doc 2, table). Narrow the description.
+
+
+========================================================================
+CHECKS
+========================================================================
+
+Checks
+------
+
+Documents + question: 97,306 tokens (70,000–115,000)
+
+- Question, answer & components: Passed · 1 hr ago — The question (8+ words, no more than 80) and answer are filled in, the answer has no semicolon, there are 1–10 distinct components, and the documents plus question fit the token window.
+- Reasoning tags: Passed · 1 hr ago — At least two reasoning tags from the list.
+- Solution explanation: Passed · 1 hr ago — The explanation of how the answer follows from the documents is filled in.
+- Necessary documents: Passed · 1 hr ago — At least two documents are marked necessary and each exists.
+- Verbatim evidence: Passed · 1 hr ago — Every quote appears word for word in the document it cites (12+ characters).
+- Necessary documents cited: Passed · 1 hr ago — Every necessary document is cited by at least one verbatim quote.
+- Component coverage: Passed · 1 hr ago — Every component has evidence (one bare count may go uncited).
+- Question length: Passed · 1 hr ago · advisory — Aim as short as it can be and stay exact; warns above 60, blocks above 80. Shorter is never a fault.
+- Answer length: Passed · 1 hr ago · advisory — Keep the answer to 10 words, or a list of up to 12 items of up to 10 words each.
+- Answer not given away: Passed · 1 hr ago — Neither the answer nor any of its parts appears in the question.
+- Short answer: Passed · 1 hr ago — The answer is a short value (up to 10 words, or a list of up to 12 items and 250 characters, no semicolon), not a sentence or an explanation.
+- Components match the answer: Passed · 1 hr ago — Every component is a piece of the answer (a value or a name from it, not a note or a sentence), and every number in the answer is in a component.
+- Answer parts can be told apart: Passed · 1 hr ago — A multi-part answer keeps a separator between its parts, so a grader can tell where one part ends and the next begins.
+- Restricted names: Passed · 1 hr ago — The question, answer, reasoning, components, evidence quotes and the documents’ names, links and text contain no restricted name, model or vendor name, or internal link — the same rules the delivery scrub applies.
+- Original question: Passed · 1 hr ago — The question is not a near copy of another task's question.
+- Sibling question: Passed · 1 hr ago · advisory — The question does not ask for the same fact as another question on this bundle, give its answer away, or reuse its wording. A warning, never a block.
+- Writing style: Passed · 1 hr ago · advisory — The question and reasoning avoid em-dashes and stock phrasing. A warning, never a block.
+- Label for items in only one document: Passed · 1 hr ago · advisory — A question that compares documents and asks for labels offers a label for an item present in one document and absent from the other. A warning, never a block.
+- Answer format stated: Passed · 1 hr ago · advisory — The question says how to give the answer: an order for a list, one question rather than two, and what to answer when nothing qualifies. A warning, never a block.
+- Partial answers: Passed · 1 hr ago · advisory — A question that asks for "at least" some number of items does not have an answer listing more, which would mark a correct partial answer wrong. A warning, never a block.
+- Asks about the world, not the set: Passed · 1 hr ago · advisory — The question asks about what the documents describe rather than about the documents themselves, and the answer is a fact rather than a document (ground rule 10). A warning, never a block.
+- Question length spread: Passed · 1 hr ago · advisory — Your questions are not all coming out the same length. A warning on your own pattern, never a block, and never about this question being wrong.
+- Question in your own words: Passed · 1 hr ago — The question reads as written by you. Only an admin can clear this check.
+- Reasoning in your own words: Passed · 1 hr ago — Your reasoning reads as written by you. Only an admin can clear this check. Short reasoning is flagged for review instead of blocking Submit.
+- One defensible answer: Passed · 1 hr ago — Given the documents, the question has exactly one defensible short answer, and your answer is that answer.
+- Needs two or more documents: Passed · 1 hr ago — Answering the question needs information from at least two of the documents.
+- Reasoning reaches the answer: Passed · 1 hr ago — Followed step by step, your reasoning arrives at the answer you gave.
+- Evidence supports its component: Passed · 1 hr ago · advisory — Each quote gives the value of the component it is attached to, or a figure or fact used to work it out. A warning, never a block.
+- Question does not hint the answer: Passed · 1 hr ago · advisory — The question does not point to or name any part of the answer in other words. A warning, never a block.
+- No single passage gives the answer: Passed · 1 hr ago · advisory — No one passage or document in the bundle states the complete answer by itself. A warning, never a block.
+- Left-out items do not qualify: Passed · 1 hr ago · advisory — For a list or count answer, no item of the same kind that the answer leaves out meets the question’s condition. A warning, never a block.
+- Answer matches a stated figure: Couldn't check · 1 hr ago · advisory — Could not run this check — retry.
+- Each description fits one thing: Warning · 1 hr ago · advisory — "Central Council for Financial Services Information's Financial Literacy Survey 2016 in Japan" — 2 matches: The Financial Literacy Survey 2016 (Doc 5, prose), Financial Literacy Survey 2016 (Doc 5, prose). Narrow the description. "households in the China Household Finance Survey's 2015 wave" — 2 matches: China Household Finance Survey (CHFS) of 2015 (Doc 2, prose), 1.414 (Doc 2, table). Narrow the description.
+- Answer covers every ask: Passed · 1 hr ago — The answer has at least as many parts as the question asks for (your number of asks, or what the question asks, whichever is more).
+- Needs the documents: Passed · 1 hr ago — The question cannot be answered correctly without the documents.
+- Question mix: Passed · 1 hr ago · advisory — Your questions are not mostly lists of items that meet several conditions. A warning on your own pattern, never a block, and never about this question being wrong.
+- List contract: Passed · 1 hr ago · advisory — A list answer of more than three items says how many items to expect, or the question asks for one value instead. A warning, never a block.
+- Which period: Passed · 1 hr ago · advisory — When the documents cover several periods, the question says which period the answer is for. A warning, never a block.
+- Not a duplicate: Passed — Your saved question, compared with existing questions. Runs after you edit the question, and with Re-run all.
+
+1. Step 1, done: Run the full checks
+2. Step 2, current: Check difficulty Unlocks when blocking checks pass
+3. Step 3: Submit for review
+
+Submit unlocks once every blocking check passes and your changes are saved.
+
+Still needed before you can submit:
+- The difficulty check could not reach your answer even with every document. Check that the documents support it, then run the check again before you submit.

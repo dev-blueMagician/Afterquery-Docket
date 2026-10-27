@@ -9,6 +9,10 @@ metadata:
   modified: 2026-10-05T10:40:46.141Z
 ---
 
+> **Frozen history (2026-10-14).** Measured mostly against the Low and Medium solvers. The current
+> design rules are in [hard-playbook.md](reference/hard-playbook.md); where this note differs, the
+> playbook wins. Open this note only for a specific case it records.
+
 ## Superseded policy
 
 The latest user instruction (2026-10-05) makes Easy the minimum target. Read

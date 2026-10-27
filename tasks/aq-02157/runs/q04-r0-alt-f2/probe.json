@@ -1,0 +1,25 @@
+{
+  "purpose": "removal probes (author diagnostic, concrete recall concern)",
+  "packets": [
+    {
+      "packet": "solver-1",
+      "removed_local": "D03 (Doc 4)",
+      "renumbered": {
+        "D01": "D01",
+        "D02": "D02",
+        "D03": "D04",
+        "D04": "D05"
+      }
+    },
+    {
+      "packet": "solver-2",
+      "removed_local": "D01 (Doc 2)",
+      "renumbered": {
+        "D01": "D02",
+        "D02": "D03",
+        "D03": "D04",
+        "D04": "D05"
+      }
+    }
+  ]
+}

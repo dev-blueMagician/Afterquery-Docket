@@ -1,0 +1,409 @@
+AQ-04830 · Industry researchEasy or Hard only — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-04830
+Saved: 2026-10-14 15:08 (local time)
+Bundle: Industry researchEasy or Hard only · 10 documents · 111,216 prompt tokens
+Run read: Run 1, the latest
+Attempts read: 4
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 16 runs left · 15 of 60 runs used in the last 24 h (all tasks)
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 3 attempts right
+
+High model: two solvers try up to 3 times each. Ready when both get it wrong at least once and not every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+No specific changes were suggested for this version. The verdict and the run history show where the solvers landed.
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 1 (Oct 14, 2026, 2:57 PM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+1 run
+
+------------------------------------------------------------------------
+Run 1 · Too easy · Result the gate uses
+Oct 14, 2026, 2:57 PM · Version ad23aa (current) · Low — · Medium — · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: first run
+
+Solver summary: Run 1 · Too easy · 3 of 3 right
+Every solver attempt got it (3 of 3).
+
+Your answer: 5.7%
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: —
+
+Final answer: The 2024-25 Final Budget Outcome showed tax receipts about 1.3% above the Budget forecast, while non-tax receipts came in about 9.6% higher. The larger is 9.6%. | Your answer (gold): 5.7%
+
+Full answer
+-----------
+
+The 2024-25 Final Budget Outcome showed tax receipts about 1.3% above the Budget forecast, while non-tax receipts came in about 9.6% higher. The larger is 9.6%.
+
+Reasoning
+---------
+
+We need answer: For 2024-25 financial year, Australian Government tax receipts and non-tax receipts both exceeded amounts 2024-25 Budget had forecast. Need larger of two percentages by which they exceeded forecasts, to one decimal place.
+
+Need recall or know figures from Australian 2024-25 budget outcome? Likely from Final Budget Outcome 2024-25 released in September 2025? Need tax receipts and non-tax receipts compared to 2024-25 Budget forecast.
+
+We need determine forecast amounts and actual amounts, compute percentage exceedance for tax and non-tax, then larger one.
+
+Let's recall Australian Government Final Budget Outcome 2024-25 figures. The underlying cash balance was deficit of $10 billion? Or $28 billion? Wait need correct.
+
+The 2024-25 Budget (delivered in May 2024) forecast deficit of $28.3 billion? Actually 2023-24 final outcome was deficit of $28.2 billion? Let's recall: In 2023-24 final budget outcome was deficit of $28.2 billion, better than forecast $1.0? No that was 2022-23? Let's understand chronology.
+
+Budget 2023-24 (May 2023) forecast deficit for 2023-24 of $13.9 bn, but actual was surplus? Wait no, in 2022-23 there was surplus of $22.1 bn. For 2023-24 Budget forecast deficit of $13.9 bn but actual deficit was $28.2 bn? Or was actual deficit smaller? Let's check mental: In Sept 2024, Final Budget Outcome 2023-24 was released showing underlying cash deficit of $28.3 bn, which was $8.6 bn lower? Hmm need be precise.
+
+But the question is about 2024-25 financial year, comparing actual tax and non-tax receipts to 2024-25 Budget forecast (the budget delivered in March 2025? Wait 2024-25 Budget was delivered in May 2024? Actually Australian federal budget for 2024-25 was delivered on 14 May 2024. Then there was 2025-26 Budget delivered in March 2025. The final budget outcome for 2024-25 will be released in September 2025.
+
+We need tax receipts and non-tax receipts both exceeded forecast. Let's recall figures from the 2024-25 Final Budget Outcome released around September 2025. The headline might be that the deficit was $18 billion? Or $10 billion? Let's recall news in September 2025: Australian government announced final budget outcome for 2024-25 with deficit of $10 bn? Or was it $18 bn? Actually in September 2025, Treasurer Jim Chalmers and Finance Minister Katy Gallagher released the 2024-25 Final Budget Outcome. The deficit was $10.0 billion? Or $17.9? Let's recall news headlines around late September 2025: They said the budget deficit for 2024-25 was $18 bn? Or $10 bn, the smallest in years? Let's recall precisely.
+
+In March 2025, the 2025-26 Budget forecast a deficit of $42.1 bn for 2025-26 and for 2024-25 estimated deficit of $27.9 bn? Wait check mental: The 2025-26 Budget (March 25, 2025) projected underlying cash balance for 2024-25 of -$27.9 bn? Or -$26.9 bn? And for 2025-26 of -$42.1 bn. Yes that sounds right: The 2025 Budget said 2024-25 deficit expected to be $27.9 bn, then 2025-26 $42.1 bn, then 2026-27 $35.7 bn, etc. But then in September 2025 they released actual for 2024-25 being deficit of only $10.0 bn? Or $17.9? Let's recall news headlines said deficit came in at $18 bn? Or $10 bn? Let's think.
+
+There was news that the 2024-25 deficit was $17.9 bn? Or maybe $10 bn was for 2023-24? Wait no, 2023-24 outcome released in Sept 2024 was deficit of $28.3 bn, which was about $1 bn? Hmm.
+
+Let's recall from news in September 2025: The government said the budget deficit for 2024-25 was $10 billion, about $18 bn better than forecast? Or was it $18 bn better? Let's parse: If budget forecast for 2024-25 in March 2025 was deficit of $27.9 bn, and actual turned out to be $10 bn, then improvement is about $17.9 bn (around $18 bn). Yes! So actual deficit was about $10 bn, which is $17.9 bn (or about $18 bn) better than the forecast deficit of $27.9 bn. So that sounds correct: The actual deficit was $10.0 bn, forecast was $27.9 bn, improvement of $17.9 bn? Wait 27.9 - 10.0 = 17.9 indeed. So headlines said deficit was $10 bn, nearly $18 bn lower than forecast. Yes, that sounds right. So actual deficit was $10 bn.
+
+But the question asks specifically about tax receipts and non-tax receipts both exceeded forecast amounts. Need the larger of the two percentages by which they exceeded those forecasts.
+
+We need actual tax receipts and forecast tax receipts for 2024-25, and same for non-tax.
+
+We need derive from the budget outcome figures. Let's recall the 2024-25 Final Budget Outcome report might list receipts.
+
+We need tax receipts actual and budget forecast. Non-tax receipts actual and forecast.
+
+Let's recall figures mentioned in news reports around Sept 2025: Tax receipts were about $644 bn? Or total receipts were maybe $613 bn? Let's recall.
+
+In 2023-24, tax receipts were around $637 bn? Actually in 2023-24 total receipts were about $688 bn? Let's check mental consistency.
+
+We need be precise for 2024-25.
+
+The 2025-26 Budget papers included 2024-25 estimates. For 2024-25, estimated total receipts might be around $715 bn? Wait no, that's high. Let's recall Australian government revenue in recent years is around $600-$700 bn. For 2022-23 revenue was about $613 bn? Actually in 2022-23, total receipts were $613.5 bn? Or $584 bn?
+
+Let's recall 2027? No.
+
+But we just need percentages. Let's recall news reports highlighting that tax receipts were $8.1 bn higher? Or non-tax were $2.1 bn? Or maybe tax exceeded forecast by 1.5% and non-tax by 13.1%?
+
+We need determine correct figures.
+
+Let's recall the 2024-25 Final Budget Outcome statement might have said:
+
+- Tax receipts: Actual was about $606.8 bn? Or $648 bn? Compared to budget forecast of maybe $601 bn? Or maybe tax was $5 bn higher?
+
+Actually the improvement in deficit of $17.9 bn came mainly from higher receipts and lower payments? The news said the improvement was due to higher tax receipts ($? bn) and lower spending? Let's recall specifics: The 2024-25 outcome showed receipts were $13.6 bn higher than expected? Or spending was $4 bn lower? Let's try to recall news article details.
+
+Around Sept 2025, headlines: "Budget deficit shrinks to $10bn, lowest since 2008"? Wait no, that might be for 2023-24? Let's check mental news: In September 2024, they said 2023-24 deficit was $28.3 bn, smaller than forecast? Actually in 2023-24 budget forecast deficit was $13.9 bn? No that doesn't align.
+
+Let's systematically recall Australian budget figures for recent years.
+
+Budget 2028? Not needed.
+
+But we need specifically tax and non-tax receipts exceeding forecast by some percentages. The question asks "What is the larger of the two percentages by which they exceeded those forecasts, to one decimal place?" This sounds like one exceeded by, say, 1.2%, the other by 5.6%, and the larger is maybe 5.6? Or maybe 2.1% vs 11.3%, larger 11.3?
+
+We need be accurate based on actual report figures.
+
+Let's recall the Final Budget Outcome 2024-25 report tables. Maybe there is a table comparing 2024-25 Budget estimates with actual results.
+
+The 2024-25 Budget (May 2024) forecast for 2024-25:
+- Tax receipts: maybe $592.4 bn?
+- Non-tax receipts: maybe $64.5 bn?
+- Total receipts: maybe $656.9 bn?
+
+But actual might be:
+- Tax receipts: $609.1 bn?
+- Non-tax receipts: maybe $70 bn?
+
+We need compute percentage differences.
+
+Let's recall in March 2025 budget, they updated 2024-25 estimates. The 2025-26 Budget (March 2025) included estimated outcomes for 2024-25:
+- Tax receipts 2024-25 est: maybe $644.1 bn?
+- Non-tax receipts: maybe $58.6 bn?
+- Total receipts: maybe $699 bn?
+
+But then the final actual might be tax receipts of $648 bn? Hmm.
+
+Actually, in recent years tax revenue has been around $600 bn. For 2026-27 forecast tax might be over $700 bn. So for 2024-25, tax receipts likely around $620 bn? Let's check mental: In 2022-23 tax was $549 bn? In 2023-24 maybe $602 bn? Yes tax revenue has been growing.
+
+Specifically, in 2023-24 final outcome, tax receipts were about $615 bn? Or $636 bn? Let's recall news in 2024 said tax revenue hit record $636 bn? Actually I think in 2022-23 tax receipts were $577.5 bn? Or was that 2021-22?
+
+Let's recall from 2023-24 outcome: Total receipts were $688.1 bn? Tax receipts were $636.2 bn? Non-tax receipts were $51.9 bn? Or something like that.
+
+Wait I think in Sept 2024 they said 2023-24 receipts were about $688 bn, up $31 bn from forecast. Tax receipts were about $636 bn? Let's try to recall headlines: In Sept 2024, they announced 2023-24 deficit was $28.3 bn, $19 bn? No. They said receipts were $688.1 bn, $50 bn? Hmm.
+
+Actually I recall seeing a figure: In 2023-24, tax receipts reached a record $613.5 bn? Or was that 2022-23?
+
+Let's try to recall from 2022-23 final outcome (released Sept 2023): Tax receipts were $584.7 bn? Non-tax were $29 bn? Total receipts were about $613 bn? Yes that sounds right: In 2022-23 there was a surplus of $22.1 bn, with receipts of $613.5 bn? Or maybe $613.5 bn was tax? Let's check mental consistency: Government spending in 2022-23 was about $627 bn? Actually surplus was $22.1 bn, so receipts - payments = +22.1. If payments were about $627 bn, then receipts were about $649 bn? Hmm not matching.
+
+Let's recall precisely: In Sept 2021? No.
+
+But maybe we don't need exact mental consistency across years, just need the two percentages for 2024-25.
+
+Let's recall the news article in Sept 2025 listing figures: Tax receipts were $644.2 bn? Or maybe $650 bn?
+
+Actually in March 2025 budget, they forecast tax receipts for 2024-25 at around $630 bn? Let's check mental: The 2025-26 budget forecast tax receipts for 2025-26 at about $683 bn? Or $640 bn?
+
+We need to be precise: The question asks "For the 2024-25 financial year, the Australian Government's tax receipts and its non-tax receipts both exceeded the amounts the 2024-25 Budget had forecast. What is the larger of the two percentages by which they exceeded those forecasts, to one decimal place?"
+
+This sounds like in the final outcome report they listed:
+Tax receipts: Actual $xxx bn, Budget forecast $xxx bn, difference $x bn, which is y.y% higher.
+Non-tax receipts: Actual $xxx bn, Budget forecast $xxx bn, difference $x bn, which is z.z% higher.
+
+We need the larger percentage.
+
+Thus we need retrieve those four figures or at least the two percentages.
+
+Perhaps the report said tax receipts were $8.5 bn (1.3%) higher? And non-tax receipts were $4.3 bn (8.2%) higher? Or maybe tax was 2.3% and non-tax was 15.4%?
+
+We need determine correct ones.
+
+Let's recall the 2024-25 Final Budget Outcome report released on 29 Sept 2025? The news coverage might have mentioned specific figures for receipts and payments.
+
+The deficit was $10.0 bn compared to forecast of $27.9 bn in the 2025-26 Budget? Wait but the comparison should be to the 2024-25 Budget forecast, not the updated 2025-26 Budget estimate? The question says "the amounts the 2024-25 Budget had forecast." The 2024-25 Budget was in May 2024. In that budget, they forecast for 2024-25 a deficit of maybe $28.3 bn? Actually in May 2024 they forecast deficit for 2024-25 of $28.3 bn? Let's check: The 2024-25 Budget (delivered May 2024) forecast an underlying cash deficit for 2024-25 of $28.3 bn. Yes, I think so. Then in March 2025 they updated the 2024-25 estimate to maybe $27.9 bn? Or maybe they kept it at $28.3? Actually in March 2025 they might have updated the 2024-25 expected deficit to $27.9 bn (close). But the final actual was $10 bn, which is about $18 bn better than the original budget? Or $17.9 bn better than the March 2025 update?
+
+But the question compares receipts to "the 2024-25 Budget had forecast" - that means comparing to the original May 2024 budget figures.
+
+Thus we need the original forecast for tax and non-tax receipts in the 2024-25 Budget, and the actual figures for 2024-25.
+
+Let's recall the 2024-25 Budget figures for 2024-25:
+Total receipts forecast might have been $698.4 bn? Or $648 bn?
+
+We need tax receipts forecast and non-tax forecast.
+
+Actually in the 2024-25 Budget, the revenue estimates for 2024-25 were:
+- Tax receipts: maybe $642.1 bn?
+- Non-tax receipts: maybe $48.5 bn?
+- Total: about $690.6 bn?
+
+But I need more accurate.
+
+Let's recall that in the 2025-26 Budget (March 2025), they presented estimates for 2024-25 and forecasts for 2025-26 onward. In those tables, there might be columns: 2023-24 actual, 2024-25 est, 2025-26 est, etc.
+
+Specifically, in Budget Paper No. 1, there is a table "Reconciliation of underlying cash balance estimates". But also there are revenue tables.
+
+But perhaps easier: The final outcome report lists actual receipts for 2024-25 and compares them to the 2024-25 Budget estimates.
+
+We need the percentages by which tax and non-tax exceeded forecasts.
+
+Let's recall news reports in Sept 2025 highlighting reasons for the smaller deficit: "Tax receipts were $8.1 bn higher than forecast" and "non-tax receipts were $2.3 bn higher"? Or "payments were $4 bn lower"?
+
+Actually the improvement of about $18 bn might be broken into:
+- Receipts were $X bn higher.
+- Payments were $Y bn lower.
+X + Y ≈ 18 bn.
+
+If tax was maybe $8 bn higher and non-tax maybe $4 bn higher, that's about $12 bn on the revenue side, and payments about $6 bn lower, totaling $18 bn.
+
+But we need the percentages for tax and non-tax separately.
+
+Let's try to recall specific figures mentioned in news articles. I think I saw a figure that tax revenue was up by about $13 bn? Or maybe tax was $5.1 bn higher?
+
+Let's recall that in 2024-25, personal income tax and company tax were strong.
+
+But also there might be large non-tax receipts like dividends from Reserve Bank? Or superannuation?
+
+Wait, non-tax receipts include dividends from government entities, interest, etc. In 2024-25, maybe there was a large dividend?
+
+Actually, I think in the 2024-25 outcome, non-tax receipts were $75 bn? Or maybe $45 bn?
+
+Let's try to recall the actual 2024-25 revenue figures from the final outcome report table. The report might have said:
+- Taxation revenue: $648.1 bn?
+- Non-taxation revenue: $62.3 bn?
+- Total revenue: $710.4 bn?
+
+But need forecast comparison.
+
+Let's recall that in March 2025 budget, total revenue for 2024-25 was estimated at about $712 bn? Or $698 bn?
+
+Wait, I think in 2025-26 budget, they said 2024-25 revenue was expected to be about $715 bn, and spending about $743 bn, deficit about $28 bn? Or maybe revenue was $698 bn, spending $727 bn.
+
+Let's try to recall specific numbers from the 2025-26 Budget summary:
+- 2024-25 underlying cash deficit: $27.9 bn
+- 2025-26 deficit: $42.1 bn
+- 2026-27 deficit: $35.7 bn
+- 2027-28 deficit: $37.2 bn
+- 2028-29 deficit: $41.8 bn
+
+The revenue and payments figures might be:
+For 2024-25:
+Receipts: maybe $698.4 bn?
+Payments: maybe $726.3 bn?
+Deficit: 27.9 bn.
+
+For 2025-26:
+Receipts: maybe $699.4 bn? Or $718 bn?
+Payments: about $760 bn?
+
+But I think payments in 2025-26 were forecast at about $777 bn, receipts about $735 bn, deficit $42.1 bn. Yes, that sounds right: Receipts around $735 bn, payments $777 bn.
+
+Thus for 2024-25, payments might be around $727 bn and receipts around $699 bn.
+
+But actual for 2024-25 turned out deficit $10 bn. So either receipts were higher or payments lower.
+
+Specifically, in Sept 2025 they said actual payments were about $1 bn? Or spending was $4 bn lower?
+
+Let's recall news headlines said: "The government spent about $4 bn less than forecast"? Or "receipts were about $14 bn higher"?
+
+Actually I think they said receipts were about $13.8 bn higher than forecast, and payments were about $4 bn lower, totaling about $17.9 bn improvement.
+
+If receipts were about $13.8 bn higher, that might be split between tax and non-tax.
+
+But the question says both tax and non-tax exceeded forecasts, and asks for the larger percentage. This sounds like tax exceeded by maybe 1.8% and non-tax by maybe 20%? Or tax by 2.1%, non-tax by 5.7?
+
+We need be precise to one decimal place.
+
+Thus we need the actual forecast values.
+
+Let's recall the specific table in the Final Budget Outcome 2024-25 report comparing to 2024-25 Budget.
+
+The report likely has a section "Receipts" with two subsections "Taxation receipts" and "Non-taxation receipts".
+
+The 2024-25 Budget forecast for tax receipts might be in Budget Paper No. 1, Statement 5.
+
+But we can try to compute using known actual figures.
+
+Perhaps actual tax receipts in 2024-25 were about $606 bn, but that sounds low compared to payments.
+
+Wait, no, government revenue is indeed in the range of $600-700 bn.
+
+Let's recall that in 2023-24, tax receipts were about $636 bn? Actually I think in 2023-24 tax receipts were around $636.8 bn. Yes, that sounds familiar: Tax revenue in 2023-24 was about $636 bn, up about $50 bn from prior year? Or maybe up $30 bn.
+
+If tax in 2023-24 was about $636 bn, then for 2024-25 it might be around $670 bn? Or maybe $648 bn?
+
+But wait, in 2025-26 budget they forecast tax receipts for 2025-26 at about $740 bn? Or maybe $688 bn?
+
+Let's check mental consistency: The Australian federal government tax revenue includes income tax (personal and company), GST (all goes to states actually, but included?), excise, etc. The total tax collected by the federal government in recent years:
+2020-21: about $426 bn?
+2021-22: about $502 bn?
+2022-23: about $577 bn?
+2023-24: about $636 bn?
+That is rapid growth due to income tax bracket creep and company profits.
+
+Thus for 2024-25, tax might be around $671 bn? Or maybe $682 bn?
+
+But in the 2025-26 budget, they forecast tax for 2025-26 might be around $705 bn? Actually I think in March 2025 they forecast tax revenue for 2025-26 at about $687 bn? Let's try to recall news headlines: They said tax revenue was expected to reach $740 bn by 2027? Or maybe they said tax take will reach 25.5% of GDP?
+
+Let's recall that in the 2025-26 Budget, they said tax receipts as a share of GDP would be 23.4% in 2024-25, then 23.3%, etc. Or maybe they said tax receipts in 2025-26 will be $703 bn?
+
+But we don't need to be perfect; we just need the percentage by which actual exceeded the forecast for 2024-25.
+
+Let's recall that in Sept 2020? No.
+
+Perhaps it's easier: The question might come from a specific quiz or exam about interpreting the 2024-25 Final Budget Outcome figures. The figures might be listed in a table with columns for "2024-25 Budget" and "2024-25 Actual" and "Change" and "Change %".
+
+We need the larger of the two percentages. This sounds like they are asking you to compute both and then pick the larger. The answer likely is a round number to one decimal, maybe 10.1% or 2.4%.
+
+But I need be correct.
+
+Let's recall the actual news article from Sept 2025 that might list specific receipt categories.
+
+The news article might have said:
+- Tax receipts came in at $648.1 bn, which was $8 bn (1.2%) above the budget forecast of $640 bn?
+- Non-tax receipts came in at $62.3 bn, which was $5 bn (8.9%) above the forecast of $57.3 bn?
+
+But we need larger.
+
+However, I want to be somewhat data-driven based on mental knowledge of Australian budget figures.
+
+Let's recall that in the 2024-25 Budget (May 2024), the revenue estimates for 2024-25 were:
+Tax receipts: $548 bn? No that sounds like older.
+
+Wait, maybe I should recall specific figures from Budget Paper No. 1 in May 2024. The budget included revenue estimates for 2023-24 (revised) and 2024-25 (forecast).
+
+In the 2024-25 Budget, the revenue figures might have been:
+2023-24 est: $637.6 bn?
+2024-25 forecast: $662.1 bn?
+
+But I need tax and non-tax separately.
+
+Let's recall that in Budget 2024, the total receipts for 2024-25 were forecast at $698.4 bn? Actually I think total receipts for 2024-25 were forecast at $698.4 bn, comprising tax receipts of $643.4 bn and non-tax receipts of $55.0 bn? Or maybe tax was $634 bn and non-tax was $64 bn?
+
+Actually, in recent budgets, tax receipts are about 90% of total receipts, with non-tax being about 10%. So if total receipts are around $700 bn, tax might be around $630 bn and non-tax around $70 bn? Or tax $650 bn, non-tax $50 bn?
+
+But wait, non-tax includes
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): 5.7%
+
+Where it shortcut: High model found the answer directly in Document 3's forecasting-performance section, which states both the tax and non-tax receipt variances against the 2024-25 Budget in adjacent paragraphs, requiring no other document.Doc 3
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): 5.7%
+
+Where it shortcut: High model again relied on Document 3's single section giving both variances; the question's wording maps one-to-one onto that passage, so no cross-document reading was needed.Doc 3
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): 5.7%
+
+Where it shortcut: High model reached the gold answer from the same Document 3 passage, confirming the question is answerable by locating one section rather than combining documents.Doc 3
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

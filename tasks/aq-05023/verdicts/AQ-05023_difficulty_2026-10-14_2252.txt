@@ -1,0 +1,138 @@
+AQ-05023 · Corporate filingsEasy or Hard only — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-05023
+Saved: 2026-10-14 22:52 (local time)
+Bundle: Corporate filingsEasy or Hard only · Cars.com Inc. · 8 documents · 91,392 prompt tokens
+Run read: Run 1, the latest
+Attempts read: 4
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 16 runs left · 11 of 60 runs used in the last 24 h (all tasks)
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 3 attempts right
+
+High model: two solvers try up to 3 times each. Ready when both get it wrong at least once and not every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Rephrase so the target line items are not named, e.g., 'how many times larger was the cash Cars.com returned to shareholders by retiring its own shares in 2025 than the profit it reported for that year,' forcing the solver to identify which line items and which filings are relevant. Why: The question's phrasing 'amount Cars.com spent buying back its own common stock' maps word-for-word onto the line item 'Repurchases of common stock' and Note 7's 'Aggregate purchase price,' and 'net income for 2025' maps onto the accumulated-deficit rollforward. The wording therefore functions as a keyword search over the filings rather than a reasoning task. From a run (High model · attempt 2): Same shortcut path: net income for 2025 comes from the side-by-side accumulated-deficit balances and the buyback total from the stated nine-month figure plus a Q4 estimate, so no single document had to be read end-to-end. Doc 5 Doc 7
+
+Gold answer · Your answer
+-------------------------
+
+- 2 Pin the intended measurement basis in the question (e.g., 'based on the aggregate purchase price of shares repurchased and retired') or choose a formulation with only one supportable derivation, so the answer is both harder to shortcut and unambiguous. Why: The gold 4.3 rests on one specific derivation (nine-month aggregate purchase price plus a Q4 share-count-times-price estimate of roughly $21.6 million, divided by the accumulated-deficit-derived net income of about $20.1 million). Other defensible readings of the same documents give different ratios: the remaining repurchase authorization implies 2025 buybacks of about $76.2 million ($250.0M less $173.8M remaining at January 31, 2026, document 3), yielding roughly 3.8. The question is simultaneously easy for solvers who hit the intended path and ambiguous for those who take an equally supported one. From a run (High model · attempt 2): Same shortcut path: net income for 2025 comes from the side-by-side accumulated-deficit balances and the buyback total from the stated nine-month figure plus a Q4 estimate, so no single document had to be read end-to-end. Doc 3 Doc 5
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 1 (Oct 14, 2026, 10:18 PM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+1 run
+
+------------------------------------------------------------------------
+Run 1 · Too easy · Result the gate uses
+Oct 14, 2026, 10:18 PM · Version c9917a (current) · Low — · Medium — · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: first run
+
+Solver summary: Run 1 · Too easy · 3 of 3 right
+Every solver attempt got it (3 of 3).
+
+Your answer: 4.3
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: Note: where it went wrong
+
+Final answer: 2.0 | Your answer (gold): 4.3
+
+Where it went wrong: With no documents, Low model guessed 2.0, confirming the answer is not retrievable from prior knowledge and that the documents alone — but too easily — carry it.
+
+Full answer
+-----------
+
+2.0
+
+Reasoning
+---------
+
+Could not load the reasoning — try again.
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): 4.3
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): 4.3
+
+Where it shortcut: Same shortcut path: net income for 2025 comes from the side-by-side accumulated-deficit balances and the buyback total from the stated nine-month figure plus a Q4 estimate, so no single document had to be read end-to-end.Doc 1 Doc 3 Doc 5
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): 4.3
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

@@ -1,0 +1,413 @@
+AQ-04112 · Public policy — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-04112
+Saved: 2026-10-14 09:37 (local time)
+Bundle: Public policy · 3 documents · 82,696 prompt tokens
+Run read: Run 4, the latest of 4
+Attempts read: 4
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 19 runs left · 14 of 60 runs used in the last 24 h (all tasks)
+
+Your last 3 runs all came back Too easy. Ask the Coach before running again.
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 3 attempts right
+
+High model: two solvers try up to 3 times each. Ready when both get it wrong at least once and not every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Drop the signposting: e.g. 'Using the three-year recruitment costs given to the Committee for a 50-worker intake, what would it cost to fill the vacancies of the meat plant Allen describes?' This keeps the same arithmetic but removes the direct pointers to Table 3 and Q70. Why: The wording 'At the Association of Labour Providers' unit costs' points straight at Table 3, and 'Nick Allen's example plant' points straight at his Q70 anecdote. Both phrases are near-unique strings that a search hits immediately, so the question advertises its own two source passages. From a run (High model · attempt 1): Reached gold by taking the 150 shortfall from Allen's Q70 plant example (doc 2) and scaling Table 3's unit costs (doc 1), including the one-off sponsor fee. Doc 1 Doc 2
+
+Gold answer · Your answer
+-------------------------
+
+- 2 If the intent is to test careful reading of one-off vs per-worker costs, make that distinction carry more weight: ask separately for the sponsor licence component and the per-worker component, or use a worker count where forgetting the £1,000 produces a visibly different answer that cannot be cross-checked against the printed 50-worker total. Why: The gold answer requires the solver to remember the one-off £1,000 sponsor application (a large company pays it once, not per worker) on top of 150 × £8,481. This is the only non-obvious step, yet it is a small number and the table's own 50-worker total (£425,050) lets solvers verify by scaling (3 × £425,050 − 2 × £1,000 = £1,273,150), giving a second easy route to the exact figure. From a run (High model · attempt 1): Reached gold by taking the 150 shortfall from Allen's Q70 plant example (doc 2) and scaling Table 3's unit costs (doc 1), including the one-off sponsor fee. Doc 1
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 4 (Oct 14, 2026, 9:32 AM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+4 runs
+
+Only the latest run, Run 4, is in this file; 3 earlier runs are left out.
+
+------------------------------------------------------------------------
+Run 4 · Too easy · Result the gate uses
+Oct 14, 2026, 9:32 AM · Version cfc84c (current) · Low — · Medium — · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: question: removed “Which organisations, if any, sent written evidence but no witness”, “Commons inquiry into food and farming labour shortages, yet were named at its hearings of 26 October and 9 November 2021? List them alphabetically.”; added “At the Association of Labour Providers' unit costs, what would it cost”, “recruit, for three years,”, “staff Nick Allen's example plant lacked?”. answer: removed “Association of Labour Providers, Kernock Park Plants, Royal College of Veterinary Surgeons”; added “£1,273,150”
+
+Solver summary: Run 4 · Too easy · 3 of 3 right
+Every solver attempt got it (3 of 3).
+
+Your answer: £1,273,150
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: Note: where it went wrong
+
+Final answer: £97,500 (about £32,500 per year for the 65 missing staff at roughly £500 each, over three years). | Your answer (gold): £1,273,150
+
+Where it went wrong: Without documents, guessed a per-person visa fee (~£500) and a 65-worker shortfall, producing £97,500 — no basis in either source.Doc 1 Doc 2
+
+Full answer
+-----------
+
+£97,500 (about £32,500 per year for the 65 missing staff at roughly £500 each, over three years).
+
+Reasoning
+---------
+
+We need answer: "At the Association of Labour Providers' unit costs, what would it cost to recruit, for three years, the staff Nick Allen's example plant lacked?" Need from own knowledge? There's a specific figure mentioned in some document about Association of Labour Providers unit costs and Nick Allen example plant lacking staff, cost to recruit for three years. Need determine correct value.
+
+We need recall or reason context. Likely related to UK labor providers, gangmasters, recruitment costs. Nick Allen example plant lacked staff? Maybe plant needed 100 workers? Need unit cost per recruit multiplied by number lacking over three years.
+
+But I don't have direct knowledge. Let's think: Association of Labour Providers (ALP) unit costs for recruitment might be around £500? Or £1,000? Nick Allen's example plant lacked maybe 50 staff? For three years cost maybe £150,000? Or £450,000?
+
+We need "At the Association of Labour Providers' unit costs, what would it cost to recruit, for three years, the staff Nick Allen's example plant lacked?" This sounds like a specific exam or quiz based on a passage that mentions Nick Allen's plant lacked X staff, and ALP unit cost is Y per recruit per year? Need compute total for three years.
+
+Let's recall known figures: The Gangmasters Licensing Authority? Nick Allen was a director? Maybe example plant is a food processing plant lacking 200 workers? ALP estimates recruitment cost per worker is £800? For three years maybe £600,000?
+
+But we need be precise.
+
+Let's parse the wording: "the staff Nick Allen's example plant lacked" - singular "staff" but plural "lacked"? Maybe the plant lacked 100 staff members. The question asks "what would it cost to recruit, for three years, the staff..." So maybe lacking staff each year? Or need to recruit replacements each year?
+
+We need best single answer, probably a monetary figure with currency.
+
+Given it's "Association of Labour Providers' unit costs" - maybe they published unit costs of £350 per worker? Or £400?
+
+Let's recall context: There may be a report discussing costs of using gangmasters vs direct recruitment. Nick Allen might have given example of plant that lacked 50 workers, costing £X.
+
+But since I must answer from own knowledge, I might approximate? But they want specific.
+
+Let's search mental database: Nick Allen is associated with "British Meat Processors Association"? Or "Nick Allen, director of pork producer"? Hmm.
+
+Another possibility: This is from a specific UK parliamentary committee report on gangmasters, with evidence from Nick Allen of "Greencore"? No, maybe not.
+
+The question sounds like it comes from a comprehension exercise based on an article discussing labor shortages in UK food industry and costs of recruitment. The Association of Labour Providers (ALP) might quote unit recruitment cost of £450 per worker. Nick Allen's example plant lacked maybe 200 workers? For three years that'd be 200 * £450 * 3 = £270,000. Or maybe £500 per worker per year?
+
+Wait, phrase "unit costs" plural? Maybe ALP unit costs are £300 to recruit one worker. The plant lacked 100 staff => £30,000 per year, times 3 = £90,000.
+
+But I need best guess.
+
+Let's consider typical recruitment costs in UK for low-skilled workers via agencies: maybe £500-£1,000 per head. If plant lacked 100 staff, three years = £150,000 at £500 each? Not convincing.
+
+We need be precise: maybe "£97,500" or "£292,500"?
+
+Actually, maybe the example plant lacked 65 staff. ALP unit cost is £500. For one year £32,500. For three years £97,500. That sounds round: 65 workers lacking, unit cost £500 => £32,500/year; three years £97,500.
+
+But is there 65? Let's recall in some reports a plant had 65 vacancies?
+
+Let's try to recall specific testimony: Nick Allen of "Tulip Ltd"? He said his plant was 50 staff short? Or 100?
+
+The question asks "the staff Nick Allen's example plant lacked" - maybe in his example the plant was lacking 150 staff? Hmm.
+
+Let's recall the Gangmasters Licensing Act 2004 debates. Evidence included that one factory was 200 workers short.
+
+But maybe it's simpler: Nick Allen said his plant lacked 30 staff. At ALP unit costs of £1,500 each? For three years £135,000?
+
+We need answer likely in pounds.
+
+Given I cannot be sure, but I should provide the figure I think correct with reasoning? The prompt says "Give your single best answer." So I need just the answer, likely "£97,500" or "£450,000". Let's examine consistency: If unit cost is £500 and lacking 150 staff, one-year cost £75,000, three years £225,000. Not round.
+
+Maybe ALP unit cost is £350 per worker. If lacking 100 workers => £35,000/year, £105,000 over three years.
+
+But I think answer might be £450,000. How? Unit cost £1,500 per worker, lacking 100 workers each year? No.
+
+Let's try to recall actual ALP figures. The Association of Labour Providers published in 2006? Maybe they said average cost to recruit a worker is £400, including advertising, screening, etc. Or maybe £1,200?
+
+Actually, there is a well-known figure: The cost of recruiting a temporary worker through a gangmaster might be £50? No, that's fee.
+
+But the question mentions "unit costs" specifically from Association of Labour Providers. This sounds like they have calculated unit costs for providing labor: maybe £9.50 per hour costs broken down. But "unit costs" for recruitment?
+
+Let's parse grammar precisely: "At the Association of Labour Providers' unit costs, what would it cost to recruit, for three years, the staff Nick Allen's example plant lacked?"
+
+This sounds like there's a table of unit costs per staff member per year, and Nick Allen's plant lacked a certain number. Multiply unit cost by number lacking by 3 years.
+
+If I recall, in some exam about "The Gangmaster Problem" there's an example: Nick Allen's plant employs 1,000 people but is 100 short. The ALP says unit recruitment cost is £500. So cost per year is £50,000, over three years £150,000. That sounds plausible: 100 staff lacking, £500 each = £50,000/year, ×3 = £150,000.
+
+But maybe unit cost is £1,000 => £300,000 over three years.
+
+Let's think about the phrase "unit costs" in plural, maybe they list costs per unit (per worker) for different items. But they ask "At the Association of Labour Providers' unit costs..." That could mean using the unit costs that ALP lists (maybe £X per hour?). Hmm no, "recruit... staff" so unit cost per recruitment.
+
+Given all this, I think a round figure like £150,000 is plausible. But I need "single best answer". Maybe "£150,000" (or "£50,000 a year, so £150,000").
+
+But wait, they ask "what would it cost to recruit, for three years..." That could be interpreted as recruiting staff to cover a three-year period, not recruiting every year. So if unit cost is one-time £500 per recruit, and they need to recruit X staff once to cover three years? No, staff turnover might require recruiting each year. But they said "for three years" modifying "the staff... lacked"? Hmm ambiguous.
+
+Actually, maybe Nick Allen's plant lacked staff permanently, and they need to recruit those positions filled for three years. If unit cost is annual cost per employee? No, recruitment is one-off.
+
+Thus likely they ask: The plant is lacking N staff. The cost to recruit one is C. What's the total cost to recruit all lacking staff? And they want that multiplied over three years? Or maybe they need to recruit them each year because turnover?
+
+Let's recall specific numbers from a known source. There was a news article in 2003 about labor shortage in meat plants. Nick Allen of "Dunbia"? He said they were 150 workers short at one plant. The cost of using an agency was high.
+
+But also there's a specific figure mentioned in a report by the Association of Labour Providers about "unit costs of providing temporary labour" being £7.50? No.
+
+Let's recall: The ALP in 2013 published guidance on costs of employment including National Minimum Wage, NI, pension, etc. The unit costs might be calculated per hour. But this question is about recruitment cost, not hourly.
+
+Given I have limited certainty, I'll provide an answer that sounds specific: £97,500? No, that sounds like 65 × £500 × 3.
+
+But I need be honest? The prompt says "Answer the following question from your own knowledge." So they want me to recall.
+
+Let's try mental search for "Nick Allen example plant lacked staff Association of Labour Providers unit costs". This sounds like a question from a specific exam about a passage describing costs of gangmasters. Maybe the passage lists unit costs: recruitment £200, transport £50, accommodation £30, etc., totaling £... Nick Allen gives example of plant lacking 50 workers, then they ask what's the cost to recruit them for three years at those unit costs?
+
+If recruitment unit cost is maybe £400 per person. For 50 people that's £20,000. For three years £60,000.
+
+But I need "the staff Nick Allen's example plant lacked" - maybe he said they lacked 500 staff? Unlikely for one plant.
+
+Let's try another angle: The Association of Labour Providers might have said that the unit cost of recruiting a worker is about £1,500. Nick Allen's plant lacked 50 staff, so cost is £75,000. For three years, £225,000.
+
+But without knowing N, I can't compute.
+
+Thus I must recall N from Nick Allen example. Let's recall who Nick Allen is. There's Nick Allen, chief executive of the British Meat Processors Association? Or maybe he was director of "Pickstock Foods"? Actually, Nick Allen was the operations director at "Tulip Ltd" and spoke about labor shortages.
+
+In 2026? No.
+
+Perhaps this is from a 2021 report on labor shortages after Brexit, where Nick Allen of "British Meat Processors Association" said the industry was 15,000 workers short. But that's industry-wide, not one plant.
+
+Wait, there's a well-known example used in economics or business case studies: "Nick Allen's plant in Cornwall lacked 200 workers..." Hmm.
+
+Let's recall the phrase "example plant" sounds like in a study they present an example plant with certain numbers. For instance, "Consider an example plant that processes 10,000 chickens a day and employs 500 people, but is currently lacking 50 staff..."
+
+If the plant processes X and needs Y workers per unit.
+
+But I still need the answer.
+
+Given all this ambiguity, I will provide the answer with the figure and mention it's approximately £X, but they said "Give your single best answer." So just the figure.
+
+Let's go with £450,000? Let's examine: If unit recruitment cost is £1,500 and lacking 100 staff, that's £150,000 per year? No.
+
+Actually, maybe "unit costs" are per year per worker: recruitment, training, etc., totaling £5,000 per worker per year. For three years that's £15,000 per worker. Multiply by number lacking, say 30 = £450,000. Yes! £450,000 could be 30 workers × £15,000 (3 years at £5,000/year). But this is too speculative.
+
+Let's recall that in UK, the cost of hiring a temporary worker through an agency includes a markup. But direct recruitment costs might include advertising, interviewing, training: maybe £5,000 per worker?
+
+If plant lacked 30 workers, 30 × £5,000 × 3 = £450,000. That sounds round.
+
+But I think 100 is more round.
+
+Let's check mental consistency: If answer is £450,000, then unit cost might be £1,500/year, lacking 100 staff, 3 years: 100 × £1,500 × 3 = £450,000. Yes, that works: unit cost £1,500 per staff per year? Unlikely.
+
+Another round number: £180,000 (60 staff × £1,000 × 3).
+
+Given I can't be precise, but I need best answer. Let's recall that ALP unit costs for recruitment might be listed as:
+- Advertising: £200
+- Administration: £150
+- Interview: £100
+- Training: £250
+Total £700.
+
+If lacking 100 staff, one-time £70,000. For three years maybe same every year due to turnover: £210,000.
+
+That doesn't feel round either.
+
+Given all this, maybe the answer is indeed "£97,500". How did I get that? 65 staff lacking × £500 unit cost × 3 years = £97,500. Not round except 97,500 is roundish (97.5k).
+
+But wait, there might be exactly 65 vacancies mentioned.
+
+Let's search mental news: In 2023, UK meat industry said they were 60,000 jobs short? No, that's too many.
+
+Perhaps Nick Allen's example plant was lacking 39 staff?
+
+We need to be more strategic. The question asks "At the Association of Labour Providers' unit costs..." This sounds like there's a specific table with unit costs like:
+Recruitment £X
+Accommodation £Y
+Transport £Z
+Total £W
+
+Then they ask "what would it cost to recruit, for three years, the staff Nick Allen's example plant lacked?"
+
+This sounds like they want you to take the recruitment unit cost (just one line item) and multiply by the number of staff lacking and by 3 years.
+
+Thus we need the recruitment unit cost and the number lacking.
+
+If I recall, in one table, unit costs per worker per week might be:
+Wages: £250
+NI/Pension: £30
+Recruitment: £10
+Transport: £20
+Accommodation: £40
+Management fee: £15
+Total: £365
+
+But that's weekly.
+
+But they said "unit costs" plural, but then "to recruit... the staff" - maybe recruitment unit cost is £400 per head (one-time).
+
+Let's recall that in gangmaster licensing reports, they discuss costs of compliance. The ALP might have calculated that complying with licensing costs about £400 per worker?
+
+No, that's not right.
+
+Given all this, I think the answer is likely in the tens of thousands, but I need choose one.
+
+Actually, there's a specific well-known exam question from the UK accounting or economics exam about gangmasters. The passage might include figures: "The Association of Labour Providers estimates unit costs as follows: recruitment £500; induction £200; etc." Then Nick Allen gives an example of a plant that lacks 40 staff. The question: "At the Association of Labour Providers' unit costs, what would it cost to recruit, for three years, the staff Nick Allen's example plant lacked?"
+
+If recruitment cost is £500 per person, and lacking 40 staff, then per year? Wait "for three years" might mean they need to recruit 40 staff each year for 3 years = 120 recruitments × £500 = £60,000.
+
+But if they just need to recruit 40 staff once and keep them for 3 years, then it's just £20,000.
+
+Thus "for three years" likely means annual recruitment multiplied by 3, implying high turnover.
+
+If the plant lacks 40 staff consistently, they need to recruit 40 each year.
+
+But what's the number? Let's guess 50 staff lacking. 50 × £500 = £25,000/year. ×3 = £75,000.
+
+That sounds like a reasonable answer: £75,000.
+
+But I need "single best answer". Maybe "£75,000".
+
+However, I recall seeing a figure of £100,000 in some context.
+
+Let's think about Nick Allen's example plant: Maybe it's a plant with 1,000 employees, lacking 10% = 100 employees.
+
+If recruitment unit cost is £250, then 100 × £250 = £25,000/year, ×3 = £75,000. Same result!
+
+So £75,000 could be correct with 100 staff lacking and £250 unit cost.
+
+But I'm not convinced.
+
+Let's recall actual ALP unit cost figures from around 2004. Maybe they said it costs £1,000 to recruit and train a worker. If plant lacked 25 staff => £25,000/year, £75,000 over 3 years. Hmm same result with different numbers.
+
+Thus £75,000 is a round figure that can come from various combinations (25×£1000×3, 50×£500×3, 100×£250×3). So it's a plausible round answer. But I need be specific.
+
+Wait, there's also possibility that unit costs include not just recruitment but all costs associated, and they ask specifically "to recruit... the staff" so only recruitment line.
+
+Given all this ambiguity, I think it's safest to answer with a specific figure that sounds correct: £75,000. But I'm not highly sure.
+
+Actually, I just realized: The question might come from a specific document about "The economic impact of gangmasters on the UK food industry" where they present case study of Nick Allen's plant in Bodmin? Let's recall: Nick Allen was general manager of "Tulip Ltd" in Bodmin, Cornwall? They employed 600 people? He said they were 50 people short?
+
+If Bodmin plant employed 600 and was 50 short, that's about 8%.
+
+But then "At the Association of Labour Providers' unit costs..." Maybe ALP lists unit cost of providing a worker is £X per hour, but they ask "what would it cost to recruit... for three years" - no, that'd be hourly times hours.
+
+Let's try to recall from news in 2006: Nick Allen of "Tulip" said they were 100 staff short and it was costing them £100,000 a year in overtime? Or maybe he said they turned away business worth £1m?
+
+Actually, there was a news story in 2005 where Nick Allen, director of a meat factory in Cornwall, said they were 80 workers short and had to turn away contracts worth £2 million.
+
+But this question mentions "Association of Labour Providers' unit costs" - maybe they calculated that using a licensed provider costs an extra £0.50 per hour. For 80 workers working 40 hours/week for 3 years... Let's check: 80 workers × 40 hours × 52 weeks = 166,400 hours/year. At £0.50 extra = £83,200/year. Times 3 = £249,600. Not round.
+
+But they said "cost to recruit", not "cost of labor".
+
+Thus likely it's a direct multiplication of unit recruitment cost by headcount.
+
+Given that I need to provide one answer, I'll state £75,000. But I feel somewhat unsure. Let's see if there's any other round number like £120,000.
+
+If unit cost is £400 and lacking 100 staff, over 3 years (recruiting each year): 100 × £400 × 3 = £120,000. That's round too (120k).
+
+But maybe the unit cost is exactly £400. Is £400 a standard figure? Yes, £400 is a round number for recruitment costs.
+
+If lacking 100 staff, then £40,000/year, £120,000 for three years.
+
+But was there 100 staff lacking? Nick Allen might have said "we're 100 people short".
+
+Thus answer could be £120,000.
+
+But wait, they said "the staff Nick Allen's example plant lacked" - singular "staff" but could be plural "staff members". If it's 100, then "the staff... lacked" sounds like "the staff that Nick Allen's example plant lacked" meaning those specific people.
+
+Thus compute 100 × £400 × 3? Or just 100 × £400?
+
+The phrase "for three years" modifies "recruit" - maybe they want to recruit them for a three-year contract? No, that sounds like they need staff for three years, so recruit once and pay salary? No, they said "cost to recruit... for three years" - that sounds like the recruitment cost spread over three years? Or the cost of recruiting staff to fill positions over a three-year period?
+
+This is ambiguous but likely means "what is the total recruitment cost over a three-year period for the missing staff?"
+
+If turnover is annual, then yes multiply by 3.
+
+But maybe they just want the one-time recruitment cost multiplied by number of staff, and "for three years" means "to staff the plant for three years" assuming they stay. But then why multiply?
+
+Thus I think it's annual recruitment need multiplied by 3.
+
+But actually, if you're lacking staff now, you recruit them once, and then they work for three years. The cost to recruit them is one-time. So "cost to recruit, for three years, the staff..." could mean "the cost to recruit the staff that are needed for a three-year period". That'd be one-time cost for the number lacking. So no multiplication by 3! Instead, you recruit enough staff to cover three years of operation, accounting for turnover?
+
+This is too ambiguous.
+
+However, typical exam questions ask "What would it cost to recruit the staff for three years?" That sounds like "What is the recruitment cost per year multiplied by three?" Yes.
+
+But if it's one-time, they'd ask "What would it cost to recruit the staff Nick Allen's example plant lacked?" The addition "for three years" suggests a time span for the cost.
+
+Thus probably: Unit cost per recruitment is X. The plant lacks N staff. They need to recruit N staff every year for 3 years. Total cost = X × N × 3.
+
+But we need X and N.
+
+Let's recall that in one report, ALP said the cost of recruiting one temporary worker is about £150? Or maybe £75?
+
+Actually, I think there was a table:
+Item Cost per worker
+Recruitment £350
+Induction £50
+Uniform/PPE £
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): £1,273,150
+
+Where it shortcut: Reached gold by taking the 150 shortfall from Allen's Q70 plant example (doc 2) and scaling Table 3's unit costs (doc 1), including the one-off sponsor fee.Doc 1 Doc 2
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): £1,273,150
+
+Where it shortcut: Same two-passage path: '150 people short' plus Table 3 unit costs; the table's printed 50-worker total also allows direct scaling to the answer.Doc 1 Doc 2
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): £1,273,150
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

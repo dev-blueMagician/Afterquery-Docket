@@ -1,0 +1,68 @@
+{
+  "question": "How much did the assets for which State Street was actually the investment manager grow between June 30, 2025 and June 30, 2026, in percent to two decimal places?",
+  "number_of_asks": 1,
+  "gold_answer": "22.40%",
+  "step_by_step_reasoning": "Step 1. Doc 10: State Street's assets under management at June 30, 2026 were 6,278 ($ billions), the closing balance of its 2Q26 AUM table.\n\nStep 2. Doc 10: not all of that total is assets for which State Street is the investment manager. The asset-class note says the SPDR Gold Shares and SPDR Gold MiniShares Trust are products \"for which we are not the investment manager but act as the marketing agent\", and the closing note says AUM at June 30, 2026 \"includes approximately $157 billion\" of SPDR products for which State Street's distributor acts solely as the marketing agent: 6,278 - 157 = 6,121.\n\nStep 3. Doc 6: State Street's assets under management at June 30, 2025 were 5,117, the ending balance of its 2Q25 AUM table.\n\nStep 4. Doc 6: that total \"includes approximately $116 billion\" of the same marketing-agent SPDR assets: 5,117 - 116 = 5,001.\n\nStep 5. Doc 6 and Doc 10: 6,121 - 5,001 = 1,120.\n\nStep 6. Doc 6 and Doc 10: 1,120 / 5,001 = 22.40%.",
+  "answer_components": [
+    "22.40%"
+  ],
+  "evidence": [
+    {
+      "document_number": 10,
+      "component_number": 1,
+      "quote": "Total Assets Under Management $ 5,620 $ 114 $ 551 $ (7) $ 544 $ 6,278"
+    },
+    {
+      "document_number": 10,
+      "component_number": 1,
+      "quote": "for which we are not the investment manager but act as the marketing agent"
+    },
+    {
+      "document_number": 10,
+      "component_number": 1,
+      "quote": "Assets under management as of June 30, 2026 includes approximately $157 billion of assets with respect to SPDR® products for which State Street Global Advisors Funds Distributors, LLC (SSGA FD) acts solely as the marketing agent"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "Ending balance as of June 30, 2025 $ 3,218 $ 700 $ 525 $ 449 $ 225 $ 5,117"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "Assets under management as of June 30, 2025 includes approximately $116 billion of assets with respect to SPDR® products for which State Street Global Advisors Funds Distributors, LLC (SSGA FD) acts solely as the marketing agent"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        10
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Conditional filter"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    },
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    }
+  ],
+  "why_these_are_traps": "Doc 10's AUM (6,278 against 5,117) includes SPDR gold trusts State Street only markets (note (2)), so total AUM gives 22.69%. Removing $157 billion (Doc 10) and $116 billion (Doc 6) gives 22.40%; removing at one end gives 19.62%, $157 billion at both ends 23.41%."
+}

@@ -1,0 +1,52 @@
+{
+  "bundle": "aq-02626",
+  "corpus_sha256": {
+    "docs/fr_2025_11907.txt": "a49ee191e051c260908f6aa55c0c02c0bb3a12e2530b88fb6afec5627502e77d",
+    "docs/fr_2025_16801.txt": "63e2b2c3c7a0aee826a9e544a4f38f0a05379896a150e134559e5472fa665290",
+    "docs/fr_2026_08662.txt": "9125ec900694a12c3b1c75f1f69f1b4fa87340b24447a6c1ef73efb37e8a17c8",
+    "docs/fr_2026_11312.txt": "a4d2788dd5bd38c23e1836ef07118a0108dd3210ec67f033925badb96373a091",
+    "docs/fr_2026_14118.txt": "c7e9f17ac48dda5d7d73a356304135396ad663fb612810e8ea0c260cc94ca2ee",
+    "docs/fr_2026_18552.txt": "56e32345ff72728e20ca85bf4f9691458d0aa8ae97c60dbf3bc6a9a212529dc8",
+    "text/D01.txt": "6fb99f063f1e3261c129606e47ae931207738f7d345f7d735d89625a24a1d4e9",
+    "text/D02.txt": "f268a3b20c14dcb28f54a47f647202eed1788b3a156bed8ea96791f5d0efdf05",
+    "text/D03.txt": "3cc5f13a77684dcb26bae20a976e6037733157e985334fd48fed6b85e3402954",
+    "text/D04.txt": "f307f1ef8cac1f6b0ad416b80064833c5e46b776c96cd3ed9a265576da6ae2b4",
+    "text/D05.txt": "c1f09108f8b49995cfbf37e2a62d9c0ba5882239e0cd9ec96f97407d3075875d",
+    "text/D06.txt": "9014006d625c454efded975e3d26a810f993e75699a15a397e66bff7544622ac",
+    "text/manifest.json": "84e55f321b55d281717751243362c37a2967e31176732c895bed64723ea5d03c"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "e9fe1ba18927da6cb5eb5bebd8906a52462ae2e52ca8ef5e44170b98b54eb9c4",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D03, D05",
+    "id": "q02",
+    "levers": "Scatter the pieces; Calculate across documents; State the rounding",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i03",
+    "status": "draft",
+    "tags": "Cross-document join; Aggregation"
+  },
+  "question_id": "q02",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "$62,260",
+    "components": "- c1: $62,260",
+    "evidence": "- D05 (Alabama CCR Units and Resources, L276) [c1]: \"ADEM has been awarded a total of $1,069,479 from EPA's CCR State and Tribal Assistance Grants (STAG) funding.\"\n- D05 (Alabama CCR Units and Resources, L276) [c1]: \"EPA anticipates ADEM will be awarded an additional $203,390 in the upcoming round of funding, for a total of $1,272,869.\"\n- D05 (Alabama's Permits Issued Under the State CCR Regulations, L397) [c1]: \"Subsequently, ADEM issued permits for the following CCR facilities: (1) The James H. Miller Electric Generating Plant (Permit #37-51, issued December 18, 2020); (2) Greene County Electric Generating Plant (Permit #32-03, issued December 18, 2020);\"\n- D05 (Alabama's Permits Issued Under the State CCR Regulations, L398) [c1]: \"(7) Plant Gorgas (Permit #64-12, issued February 28, 2022); and (8) TVA Colbert Plant (Permit #17-11, issued October 25, 2022).\"\n- D03 (Virginia CCR Units and Resources, L226) [c1]: \"VADEQ has identified 25 disposal units that are currently or have been used for disposal of CCR wastes (7 landfills and 18 surface impoundments) at 8 facilities in Virginia.\"\n- D03 (Virginia CCR Units and Resources, L226) [c1]: \"In total, VADEQ has received $571,396.00 in funding to develop its CCR permit program.\"\n- D03 (Virginia's Permits Issued Under the Commonwealth CCR Regulations, L329) [c1]: \"Subsequently, VADEQ issued permits to the owners and/or operators of all CCR units in the Commonwealth.\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: picking the right measure plus an unprinted count (hook h14, sketch i03): Alabama's awarded total beside a larger total that adds anticipated money, and a facility count that exists only as a numbered permit list in another section. Target medium (user 2026-10-10: no Easy slot, \"target medium and high\"). The task page lists \"Picking the right measure\" among the shapes it is short of. Measured platform result pending; no quick test yet.\n- Dependency plan: Doc 5 L276 awarded $1,069,479 (anticipated $203,390 more, total $1,272,869); L397-L398 permits issued for facilities (1)-(8) -> 1,069,479 / 8 = 133,684.875. Doc 3 L226 8 facilities and $571,396.00 received; L329 all CCR units permitted -> 571,396.00 / 8 = 71,424.5. Difference 62,260.375 -> $62,260.\n- Universe: Alabama's permitted facilities are the eight listed at L397-L398 (Miller, Greene County, Gadsden, Barry, Gaston, Lowman, Gorgas, TVA Colbert); the list is introduced as the facilities ADEM issued permits for, after \"All owners and operators of CCR units within the State applied for a permit\". Virginia: 8 facilities (L226), every unit permitted (L329). Wyoming and Louisiana have issued no State CCR permits (D02 L302, D04 L400) and are not asked about.\n- Necessity: Doc 5 is the only source of Alabama's award and of its permitted facilities (grep \"1,069,479\", \"issued permits for the following\": D05 only). Doc 3 is the only source of Virginia's $571,396.00, its 8 facilities and the all-units-permitted statement (grep: D03 L226, L329). Doc 2 prints an equal $571,396, but for Wyoming (4 facilities, no State permits issued), so it cannot stand in for Doc 3. Without either document that State's per-facility figure is unknown.\n- Selected-lever checks: Scatter the pieces: Alabama's award (L276) and its facility list (L397-L398) are 120 lines apart, and Virginia's inputs are in two sections of Doc 3. State the rounding: 62,260.375 rounds to 62,260; no input has a second stated value. Calculate across documents: one per-facility figure from each document, then a subtraction. No which-items decoy applies.\n- Targeted failure modes: mode 1 (Look-alike measure / Takes the wrong line item): Doc 5 L276 \"for a total of $1,272,869\"; 1,272,869 / 8 = 159,108.625 and 159,108.625 - 71,424.5 = 87,684.125 -> $87,684. Recomputed 2026-10-10. Considered and not declared: dividing by units instead of facilities (1,069,479 / 16 - 571,396 / 25 = 43,986.60), which the wording \"per facility\" rules out; taking Wyoming's equal figure for Virginia's (same dollars, wrong State and facility count).\n- Calculation verification: python 2026-10-10 (caller): 1069479 / 8 = 133684.875; 571396 / 8 = 71424.5; difference 62260.375; check 1069479 + 203390 = 1272869; wrong route 87684.125.\n- Semantic/ID/overview probes: no document prints a per-facility funding figure or a facility count for Alabama (L279's footnote sends the reader to the State's application). The page overview lists Doc 2's \"$571,396 in funding\" (Wyoming) and no Alabama or Virginia funding figure. Shortest route: Doc 5 L276 and L397-L398, Doc 3 L226 and L329, two divisions and a subtraction.\n- Precision/readings: \"had ... been awarded\" excludes the anticipated $203,390; \"holding a State-issued coal-ash permit\" selects Alabama's eight listed facilities and all eight of Virginia's; \"per facility\" compares each State's own figure (with eight on both sides this equals the gap divided by eight); \"to the nearest dollar\" fixes 62,260.375 -> 62,260.\n- Completeness: full corpus, no gaps (intake: incomplete false, gap 0 for all six documents).\n- Style/set review: 24 words, one ask; \"STAG\" and the State names are identifiers, the rest is paraphrase. q01 uses Doc 3's public-participation sentence and Doc 2; no shared fact or hint. Sketch i04 (five-State awarded total) shares the Alabama measure choice, so at most one of q02/i04 is submitted.\n- Warnings answered: see the hand-over note; filled after the floor run.",
+    "necessary documents": "- D03: Answer component\n- D05: Answer component",
+    "platform validation": "",
+    "question": "Per facility holding a State-issued coal-ash permit, how much more STAG funding had Alabama been awarded than Virginia had received, to the nearest dollar?",
+    "reasoning": "Step 1. Source input (Doc 5, Alabama CCR Units and Resources): \"ADEM has been awarded a total of $1,069,479 from EPA's CCR State and Tribal Assistance Grants (STAG) funding.\" The same paragraph also prints a larger total that adds an amount EPA only \"anticipates ADEM will be awarded\"; that money is not yet awarded and is left out.\nStep 2. Source input (Doc 5, Alabama's Permits Issued Under the State CCR Regulations): ADEM \"issued permits for the following CCR facilities\", a list numbered (1) to (8), from the James H. Miller Electric Generating Plant to the TVA Colbert Plant. Alabama therefore has 8 facilities holding State coal-ash permits; the units paragraph gives no facility count.\nStep 3. Calculation (Doc 5): Alabama's awarded funding per permitted facility, in dollars: 1,069,479 / 8 = 133,684.875.\nStep 4. Source input (Doc 3, Virginia CCR Units and Resources): VADEQ identified its disposal units \"at 8 facilities in Virginia\" and \"has received $571,396.00 in funding to develop its CCR permit program\", after applying for STAG funding.\nStep 5. Source input (Doc 3, Virginia's Permits Issued Under the Commonwealth CCR Regulations): \"VADEQ issued permits to the owners and/or operators of all CCR units in the Commonwealth\", so all 8 Virginia facilities hold State permits.\nStep 6. Calculation (Doc 3): Virginia's funding per permitted facility, in dollars: 571,396.00 / 8 = 71,424.5.\nStep 7. Final answer (Doc 3 and Doc 5): Alabama's excess per permitted facility, in dollars: 133,684.875 - 71,424.5 = 62,260.375. To the nearest dollar the fraction drops, giving the gold answer.",
+    "targeted failure modes": "### Failure mode 1\nTrap: Look-alike measure\nHow a careless solver fails: Takes the wrong line item\n\nWhy these are traps: Look-alike measure: Doc 5's resources paragraph prints $1,272,869 beside the $1,069,479 awarded; that larger total adds $203,390 EPA only anticipates. Taking it gives $159,109 per facility and $87,684 more than Virginia. The gold uses the awarded figure over Doc 5's eight permitted facilities: $62,260."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "eaf8ef1c02a2dcb090e0262fad5fd9e7bd0989b6669a73b765628265053c532a"
+}

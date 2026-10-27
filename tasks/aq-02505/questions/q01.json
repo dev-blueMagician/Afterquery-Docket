@@ -1,0 +1,83 @@
+{
+  "question": "To one decimal place, by what percentage did the number of UFLPA-listed entities grow from the list in force on November 15, 2024 to August 3, 2026?",
+  "number_of_asks": 1,
+  "gold_answer": "139.7%",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 2, dates and appendix 1): the November 2024 notice announces the UFLPA Entity List \"updated as of November 25, 2024\" and supersedes the list published in the Federal Register on November 1, 2024, so on November 15, 2024 the November 1 version was still in force. The list as of November 25, 2024 specifies \"One hundred and seven entities\" (107).\n\nStep 2. Source fact (Doc 2, summary and appendix 1): the November 25, 2024 update adds five entities (5) to the section 2(d)(2)(B)(ii) list and twenty-five entities (25) to the section 2(d)(2)(B)(v) list, and no removals are made.\n\nStep 3. Source fact (Doc 2, Xinjiang Daqo New Energy paragraph and the 2(d)(2)(B)(i) list): one of the twenty-five (v) additions, Xinjiang Daqo New Energy Co., Ltd., \"was first listed on the UFLPA Entity List, pursuant to Section 2(d)(2)(B)(i), in June 2022\" and still appears on the (i) list, so it was already on the November 1, 2024 version. None of the other additions appears on another sub-list.\n\nStep 4. Calculation (Doc 2 and Doc 6): sub-list additions in the November 25, 2024 update: 5 + 25 = 30.\n\nStep 5. Calculation (Doc 2 and Doc 6): entities new to the list in that update, leaving out Xinjiang Daqo: 30 - 1 = 29.\n\nStep 6. Calculation (Doc 2 and Doc 6): entities on the November 1, 2024 version, still in force on November 15, 2024: 107 - 29 = 78.\n\nStep 7. Source fact (Doc 6, appendix 1): the UFLPA Entity List as of August 3, 2026 specifies \"One hundred and eighty-seven entities\" (187).\n\nStep 8. Calculation (Doc 2 and Doc 6): growth in listed entities from the list in force on November 15, 2024 to the August 3, 2026 list: 187 - 78 = 109.\n\nStep 9. Calculation (Doc 2 and Doc 6): growth as a share of the November 15, 2024 count, converted to percent and rounded to one decimal place: 109 / 78 = 139.7%.",
+  "answer_components": [
+    "139.7%"
+  ],
+  "evidence": [
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "This notice announces the publication and availability of the UFLPA Entity List updated as of November 25, 2024"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "This notice supersedes the UFLPA Entity List published in the Federal Register on November 1, 2024 (89 FR 87391)."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "This update adds five entities to the section 2(d)(2)(B)(ii) list of the UFLPA and twenty-five entities to the section 2(d)(2)(B)(v) list of the UFLPA."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "This company was first listed on the UFLPA Entity List, pursuant to Section 2(d)(2)(B)(i), in June 2022."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "No removals are being made to the UFLPA Entity List at this time."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "One hundred and seven entities that meet the criteria set forth in the four required lists"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "The UFLPA Entity List as of August 3, 2026 is available in this appendix"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "One hundred and eighty-seven entities that meet the criteria set forth in the four required lists"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    },
+    {
+      "trap": "Wrong year or edition",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Look-alike measure: Doc 2's five plus twenty-five sub-list additions include Xinjiang Daqo, listed since June 2022, so only 29 were new; counting 30 gives a 77 base and 142.9%. Wrong edition: Doc 2's 107 dates from November 25, after November 15; as the base it gives 74.8%."
+}

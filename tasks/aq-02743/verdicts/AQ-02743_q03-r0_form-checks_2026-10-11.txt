@@ -1,0 +1,37 @@
+AQ-02743 q03 rev 0 - form Checks, user screenshot 2026-10-11 about 17:15 (chat message: "three checks failed and can't check difficulty")
+Raw image: AQ-02743_q03-r0_form-checks_2026-10-11.png (same folder). Transcribed by the caller from the image.
+The screenshot shows 10 of the form's checks, from "Reasoning reaches the answer" down; the top of the list
+(including "One defensible answer") and the page footer are outside it.
+Version id: not visible. Content match to q03 rev 0 (tested_sha256 d0212279...): the advisories say "your answer has
+350", quote two of rev 0's evidence rows and the question's phrase "50,000 or more people"; two checks are dated
+"19 hr ago", the time of Run 1 on Version 90fd80.
+
+Reasoning reaches the answer | Passed - 27 min ago
+Followed step by step, your reasoning arrives at the answer you gave.
+
+Evidence supports its component | Passed - 27 min ago - advisory
+Each quote gives the value of the component it is attached to, or a figure or fact used to work it out. A warning, never a block.
+
+Question does not hint the answer | Passed - 27 min ago - advisory
+The question does not point to or name any part of the answer in other words. A warning, never a block.
+
+No single passage gives the answer | Warning - 27 min ago - advisory
+Doc 3 or Doc 4 on its own may give enough to compute the answer. You have re-run this check as many times as allowed on this version. Re-running shows the same result until you change the question or the answer, or an admin clears it.
+
+Left-out items do not qualify | Passed - 27 min ago - advisory
+For a list or count answer, no item of the same kind that the answer leaves out meets the question's condition, and no other pair of documents than the ones you marked gives the same answer. A warning, never a block.
+
+Answer matches a stated figure | Warning - 27 min ago - advisory
+Doc 4 states 11; your answer has 350. Use it, or say in the question to compute it from the other figures. See: "The compliance date for recipients with fifteen (15) or more employees is extended from May 11, 2026, to May 11, 2027." Doc 3 states 24; your answer has 350. Use it, or say in the question to compute it from the other figures. See: "The compliance date for State and local government entities with a total population of 50,000 or more is extended from April 24, 2026, to April 26, 2027." You have re-run this check as many times as allowed on this version. Re-running shows the same result until you change the question or the answer, or an admin clears it.
+
+Each description fits one thing | Warning - 27 min ago - advisory
+"50,000 or more people" - 2 matches: public entities with a total population of 50,000 or more (Doc 3, prose), recipients with fifteen (15) or more employees (Doc 4, prose). Narrow the description. You have re-run this check as many times as allowed on this version. Re-running shows the same result until you change the question or the answer, or an admin clears it.
+
+Answer covers every ask | Passed - 19 hr ago
+The answer has at least as many parts as the question asks for (your number of asks, or what the question asks, whichever is more).
+
+Needs the documents | Passed - 19 hr ago
+The question cannot be answered correctly without the documents.
+
+Question mix | Passed - 28 min ago - advisory
+Your questions are not mostly lists of items that meet several conditions. A warning on your own pattern, never a block, and never about this question being wrong.

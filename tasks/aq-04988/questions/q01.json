@@ -1,0 +1,73 @@
+{
+  "question": "Argentina's 2011-2015 fall in mean salt intake was how many times the average cut a review credits to mandatory reformulation alone? Answer to one decimal place.",
+  "number_of_asks": 1,
+  "gold_answer": "1.4",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 7, table of countries with reported data on change in mean salt intake, Argentina row, the timescale the question names): Argentina's mean salt intake, measured by urine collection, fell from 11.2 g a day to 9.2 g a day.\nStep 2. Source input (Doc 2, discussion of a systematic review of salt reduction policies): \"Mandatory reformulation alone could achieve a reduction averaging around 0.58g/day\". That sentence names no nutrient. The sentence before it gives the same review's reductions as \"reductions in sodium consumption\", and the sentence after it as reductions in \"sodium intake\", so the 0.58 g is a cut in sodium, not in salt.\nStep 3. Source input (Doc 2, results): Brazil's modelled decline is given as \"0.1 g/day of sodium\" and, in brackets, as \"0.25 g/day salt\", which is the conversion Doc 2 uses between sodium and salt.\nStep 4. Calculation (Doc 2): 0.25 / 0.1 = 2.5 (grams of salt per gram of sodium, derived).\nStep 5. Calculation (Doc 7 and Doc 2): 11.2 / 2.5 = 4.48 (Argentina's starting intake in grams of sodium a day, derived).\nStep 6. Calculation (Doc 7 and Doc 2): 9.2 / 2.5 = 3.68 (Argentina's end intake in grams of sodium a day, derived).\nStep 7. Calculation (Doc 7 and Doc 2): 4.48 - 3.68 = 0.8 (Argentina's fall in grams of sodium a day, derived).\nStep 8. Calculation (Doc 7 and Doc 2): 0.8 / 0.58 = 137.9% (Argentina's fall as a percentage of the review's average cut for mandatory reformulation alone, derived; multiplying by 100 converts the ratio to percent).\nStep 9. Final answer (Doc 7 and Doc 2): Argentina's fall was 137.9% of that cut, which is 1.4 times to one decimal place.",
+  "answer_components": [
+    "1.4"
+  ],
+  "evidence": [
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "Countries with reported data on change in mean salt intake over time"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "|Argentina (18)|2011–2015|24-hour urine|11.2g to 9.2g; −18%|"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "A systematic review of 70 papers concluded that multi-component strategies"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "generally achieved the most considerable reductions in sodium consumption across an entire population, most notably 1.6g/day in Finland and Japan, 1.2g/day in Turkey, and 0.52g/day recently in the UK"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Mandatory reformulation alone could achieve a reduction averaging around 0.58g/day (three separate studies)"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Tax and community-based counselling could each typically reduce sodium intake by 0.12g/day"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "have led to a 0.1 g/day of sodium decline in sodium consumption (0.25 g/day salt) from 2011 to 2017"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        7
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Unit normalization"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Unit or basis",
+      "how_a_careless_solver_fails": "Rounding, scale or sign"
+    }
+  ],
+  "why_these_are_traps": "Unit or basis: Doc 2's review gives mandatory reformulation's average cut, 0.58 g/day, in sodium, while Doc 7's Argentina row is salt, 11.2 to 9.2 g. A careless solver divides 2.0 by 0.58 and answers 3.4; converting with Doc 2's own sodium-to-salt figures gives 1.4."
+}

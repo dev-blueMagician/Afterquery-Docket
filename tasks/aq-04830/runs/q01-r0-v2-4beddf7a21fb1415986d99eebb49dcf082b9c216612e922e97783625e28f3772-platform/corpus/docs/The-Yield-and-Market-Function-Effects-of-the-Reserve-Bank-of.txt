@@ -1,0 +1,1939 @@
+## Research Discussion Paper
+
+R D P 2022- 02
+
+The Yield and Market Function Effects of the Reserve Bank of Australia’s 
+Bond Purchases
+
+## Richard Finlay, Dmitry Titkov and Michelle Xiang
+
+
+-----
+
+The Discussion Paper series is intended to make the results of the current economic research within the Reserve Bank of Australia (RBA) available to other economists. Its aim is to present preliminary results of research so as to encourage discussion and comment. Views expressed in this paper are those of the authors and not necessarily those of the RBA. However, the RBA owns the copyright in this paper.
+© Reserve Bank of Australia 2022
+Apart from any use permitted under the Copyright Act 1968, and the permissions explictly granted below, all other rights are reserved in all materials contained in this paper.
+All materials contained in this paper, with the exception of any Excluded Material as defined on the RBA website, are provided under a Creative Commons Attribution 4.0 International License. The materials covered by this licence may be used, reproduced, published, communicated to the public and adapted provided that there is attribution to the authors in a way that makes clear that the paper is the work of the authors and the views in the paper are those of the authors and not the RBA.
+For the full copyright and disclaimer provisions which apply to this paper, including those provisions which relate to Excluded Material, see the RBA website.
+
+Enquiries:
+
+Phone: +61 2 9551 9830 
+Facsimile: +61 2 9551 8033 
+Email: rbainfo@rba.gov.au 
+Website: https://www.rba.gov.au
+
+Figures in this publication were generated using Mathematica.
+
+ISSN 1448-5109 (Online)
+
+
+-----
+
+The Yield and Market Function Effects of the 
+Reserve Bank of Australia’s Bond Purchases 
+
+## Richard Finlay, Dmitry Titkov and Michelle Xiang
+
+Research Discussion Paper 
+2022-02 
+
+May 2022 
+
+Domestic Markets Department 
+Reserve Bank of Australia 
+
+The authors would like to thank Matthew Boge, Andrea Brischetto, Christopher Kent, Marion Kohler, Carl Schwartz, John Simon, Matthew Wheadon and participants in internal Reserve Bank seminars for helpful comments and suggestions. The views expressed in this paper are those of the authors and do not necessarily reflect the views of the Reserve Bank of Australia. The authors are solely responsible for any errors. 
+
+Corresponding Author: finlayr at domain rba.gov.au 
+
+External Communications: rbainfo@rba.gov.au 
+
+https://doi.org/10.47688/rdp2022-02 
+
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+-----
+
+## Abstract
+
+We  examine  the  effect  on  government  bond  yields  of  three  Reserve  Bank  of  Australia  policy measures implemented following the onset of the COVID-19 pandemic. We also assess the impact of  the  three  measures  on  government  bond  market  functioning.  The  three  measures  were: 
+purchases to support government bond market function over early 2020; the yield target on 3-year Australian government bonds; and the bond purchase program to lower longer-term yields from late 2020 until early 2022. For purchases to support market function, we find that the announcement lowered short-dated Australian Government Securities (AGS) yields, but did not lower longer-dated AGS yields. We also find that such purchases led to lower yields as and when they were implemented, and that they supported market function by lowering bid-offer spreads. For the yield target, we find a substantial announcement effect and moderate implementation effects on yields. Conversely, the yield  target  appears  to  have  detrimentally  affected  some  aspects  of  government  bond  market function. For the bond purchase program, we find an announcement effect of around 30 basis points for longer-term AGS yields, while any implementation effects were small and temporary. 
+
+JEL Classification Numbers: E52, E58, G12 
+Keywords: market function, yield target, quantitative easing, event study 
+
+ 
+  
+ 
+ 
+
+
+-----
+
+1. 
+
+2. 
+
+3. 
+
+## Table of Contents
+
+## Introduction
+
+## How Bond Purchases Work, and the International Experience
+
+Event Study of Announcement Effects 
+3.1  Purchases to support market function 
+3.2  The yield target 
+3.3  The bond purchase program 
+
+4. 
+
+Implementation Effects 
+4.1  Time-series evidence using purchase amounts 
+
+4.1.1  Market function purchases and the bond purchase program 4.1.2 
+
+The yield target 
+
+4.2  Time-series evidence using inclusion and exclusion dummies 4.3  Cross-sectional evidence 
+4.4  Summary 
+
+5. 
+
+6. 
+
+7. 
+
+8. 
+
+## Additional Analysis of Yield Effects
+
+## Expected Future Short-term Rates and Term Premia
+
+## Effects on Market Functioning
+
+## Conclusion
+
+## References
+
+1 
+
+3 
+
+5 
+5 
+8 
+9 
+
+13 
+14 
+14 
+15 
+19 
+21 
+23 
+
+24 
+
+28 
+
+31 
+
+37 
+
+ 
+  
+ 
+ 
+
+
+-----
+
+-----
+
+1. 
+
+## Introduction
+
+This paper focuses on three Reserve Bank of Australia policy measures that were implemented in the wake of the COVID-19 pandemic and involved purchases of government bonds.1 In particular, there were: purchases to support government bond market function; purchases to support a yield target for 3-year Australian Government Securities (AGS); and purchases under the bond purchase program designed to lower yields across the yield curve. Our focus is on the extent to which these measures led to lower government bond yields, and also the effect of bond purchases on various measures of government bond market function. 
+
+Purchases under the bond purchase program were clearly delineated from other purchases, while the distinction between purchases to support market function and purchases to support the yield target were less clear. For the purposes of this paper we define purchases to support market function as the bonds purchased at auction between 20 March 2020 and 6 May 2020, which consisted of $51.3 billion in purchases of AGS and securities issued by the states and territories (semi-government securities, or semis) with residual maturity between 1 and 10½ years. While these purchases also supported the yield target, and included the yield target bond, their primary focus was  to restore good function in government bond markets, which were under considerable strain at the time. We define  purchases  to  support  the  yield  target  as  the  purchases  made  at  auction  between 
+5 August 2020 and 22 October 2021 that were not made under the bond purchase program; they totalled $29 billion, and all were of either the November 2022, April 2023, or April 2024 AGS.2 
+
+In  Section  2  we  briefly  discuss  how  central  bank  government  bond  purchases  can  work  to  ease financial conditions, and review some of the international experience of large-scale bond purchases. 
+This includes both purchases in aid of market function, and purchases designed to lower longer-term yields,  commonly  known  as  quantitative  easing,  or  QE.  In  theory,  bond  purchases  could  affect financial conditions when the purchases are announced, when the purchases are implemented, or at  both  announcement  and  implementation.  We  assess  both  the  announcement  effects  of  the Reserve Bank’s three measures (Section 3) and the implementation effects – that is, any additional effects that occurred as and when purchases were conducted (Section 4). 
+
+1  See Debelle (2021) for a discussion of all of the Reserve Bank’s policy measures during the pandemic. 
+2  From its inception on 19 March 2020 until 6 July 2021, the yield target was for the ‘3-year AGS’, specified in terms of the  AGS  with  residual  maturity  closest  to  three  years,  being  the  April  2023  AGS  until  20  October  2020,  and  the April 2024 AGS thereafter. From 6 July 2021 until it was discontinued on 2 November 2021, the yield target shifted from applying to the 3-year AGS – which changes over time – to applying specifically to the April 2024 AGS. The level of the  yield target was changed once, in line  with  a  change  in the  cash  rate  target, being around 25 basis  points between  19  March  2020  and  3  November  2020,  and  around  10  basis  points  from  4  November  2020  until 
+2 November 2021. The bond purchase program was initiated at the November 2020 Board meeting when $100 billion of purchases were announced, with an 80/20 split between AGS and semis. In February 2021, the Board extended the  program  by  announcing  the  purchase  of  an  additional  $100  billion  of  bonds  after  the  completion  of  the  initial purchases in mid-April 2021. In July and September 2021, the Board further extended the program, to the effect that purchases would proceed at a pace of $4 billion per week until at least mid-February 2022. The bond purchase program ended  on  10  February  2022. Overall,  the  Reserve  Bank  purchased  $40.3  billion  of  AGS  and  $11.1  billion  of  semis ($51.3 billion in  total) to support market function between  20 March 2020  and 6 May 2020;  $29 billion of AGS  to support the yield target between 5 August 2020 and 22 October 2021; and $223.7 billion of AGS and $57.0 billion of semis ($280.7 billion in total) under the bond purchase program between 5 November 2020 and 10 February 2022. 
+Purchases  under  each  measure  are  detailed  in  Statistical  Table  A3  ‘Monetary  Policy  Operations’  –  see <https://www.rba.gov.au/statistics/tables/xls/a03.xls>. 
+
+ 
+  
+                                                     
+
+
+-----
+
+For  central  bank  bond  purchases  announced  and  conducted  during  periods  when  markets  are well-functioning, where the amount of future purchases is reasonably predictable, and where the central bank announcement is credible, we would expect most of the effect on yields to occur in anticipation of or at the announcement of the measure, and for there to be relatively little additional implementation effect on yields as purchases are actually made. This follows from the observation that government bond market participants are forward-looking, and so will trade on news regarding future central bank purchases, causing prices to adjust as that news is anticipated or announced.3 
+
+The  above  description  of  the  announcement  of  a  credible  and  predictable  purchase  amount  in  a well-functioning  market  fits  well  with  the  Reserve  Bank’s  bond  purchase  program,  which  was announced  and  carried  out  during  a  period  over  which  markets  were,  for  the  most  part,  calm. 
+Reflecting  this,  we  find  that  most  of  the  yield  effect  of  the  bond  purchase  program  occurred  as market prices adjusted in anticipation of the announcement, and our key results come from an event study  covering  the  period  leading  up  to  the  announcement.  In  particular,  from  September  2020 financial markets were increasingly pricing in the possibility that the Reserve Bank would conduct a bond purchase program focused on longer-term bonds, with these expectations confirmed by the Board announcement on 3 November 2020. We identify the key events that led financial markets to reassess the likelihood that the Reserve Bank would conduct a bond purchase program, and measure the change in government bond yields around these dates. In sum, the yield on the 10-year AGS declined by around 30 basis points. The events include public communications by the Reserve Bank, newspaper  articles  and  market  economist  reports.  In  contrast,  we  find  relatively  little  additional effect on yields from the purchases themselves. For bond purchases to restore market function we find  a  smaller  announcement  effect  and  on  balance  a  larger  implementation  effect.  This  is unsurprising as these bond purchases were announced and conducted during a period of market stress, and the amount of purchases was not specified nor predictable at the outset. For the yield target,  we  find  a  substantial  announcement  effect  and  moderate  implementation  effects.  These findings are discussed in Sections 3 and 4. 
+
+In Section 5 we also consider an alternative approach to measuring the effect of the bond purchase program  –  we  construct  a  counterfactual  scenario  of  what  bond  yields  might  have  been  in  the absence of the program. In particular we consider two variants: the first assumes that AGS yields would  have  moved  in  line  with  those  of  US  Treasury  bonds;  and  the  second  constructs  a counterfactual based on the historical relationship between  AGS  yields  and a  handful of financial market factors, both domestic and international. The counterfactual scenarios suggest that the bond purchase program reduced yields by somewhere between 20 and 30 basis points, broadly in line with the results from our event study. While longer-term bond yields rose subsequent to the bond purchase  program  being  introduced,  this  does  not  imply  that  the  effect  of  the  program  was transitory:  many  other  factors  influence  bond  yields,  and  the  evidence  suggests  that  the 
+
+3  A thought experiment is useful in affirming this: imagine that a central bank could credibly commit to a set amount of bond purchases, and no more, and then implemented this policy. If yields responded to the flow of these purchases, rather  than  the  announced  stock,  yields  would  fall  when  the  central  bank  commenced  purchasing  bonds  but  then spring back as soon as purchases stopped. But such a predictable course of events would present a large arbitrage opportunity to bond traders, who would exploit and therefore remove it. See also D’Amico and King (2013), Arrata and Nguyen (2017) and De Santis and Holm-Hadulla (2020). 
+
+  
+                                                     
+
+
+-----
+
+accumulation of bonds by a central bank holds yields lower than they would have otherwise been over an extended period.4 
+
+Bond yields can change due to changing expectations of future short-term interest rates or changes in term premia, and in Section 6 we discuss the results of a model that seeks to decompose observed bond  yields  into  these  two  components.  In  Section  7  we  assess  how  bond  purchases  affected government  bond  market  functioning  (helping  for  purchases  in  support  of  market  function,  but hindering, to some degree, for the yield target and bond purchase program). Section 8 concludes. 
+
+2. 
+
+## How Bond Purchases Work, and the International Experience
+
+Central bank purchases of longer-term government bonds can lower bond yields via a number of channels including: 
+
+  portfolio rebalancing – the accumulation of government bonds by the central bank bids up their price as other assets are only imperfect substitutes, removes interest rate risk from the market, reduces term premia, and induces investors to buy other assets, including to replace the bonds that they sold;5 
+
+  signalling – bond purchases underline the commitment of the central bank to hold policy rates lower for longer (including because policy rates are unlikely to be raised while bond purchases are ongoing) and so reinforce expectations for a low policy rate;6 and 
+
+  reducing liquidity premia – steady central bank buying reduces the risk of investors being unable 
+
+to sell bonds at a reasonable price, and increases commercial banks’ reserve balances.7 
+
+The portfolio rebalancing and signalling channels operate in the main via an announcement effect; that is, they cause bond yields to change when bond purchases are announced, rather than when purchases  are  actually  made.  For  the  signalling  channel,  this  is  because  –  assuming  the  central bank’s commitment is credible – signals are delivered with the initial announcement of the program, or subsequent announcements relevant to the total amounts of bonds to be purchased and/or the holding period for those bonds. For the portfolio rebalancing channel, this follows from the fact that market participants are forward-looking, and so will anticipate and trade on the expected effect of future  rebalancing  flows  immediately,  as  discussed  above.  Conversely,  if  the  purchase 
+
+4  Here we are referring to the portfolio rebalancing effect of bond purchases, discussed in Section 2; the liquidity effect is related to the flow of bond purchases and so is likely to exist only while purchases are being conducted, while the signalling effect will be affected by any future signals from the central bank. See, for example, Ihrig et al (2018) and Eser et al (2019) for further discussion. 
+
+5  Portfolio rebalancing flows will tend to be strongest for assets that are most similar to those purchased, and be weaker for assets that are less similar (Krishnamurthy and Vissing-Jorgensen 2012). For example, if the central bank wishes to purchase a large volume of 10-year government bonds, it will need to induce those currently holding those bonds, and who may highly value their liquidity and safety, for example, to sell and purchase other assets instead. A small fall  in  the  yield  of  10-year  government  bonds  relative  to other  very  similar  assets  (e.g.  9-  or  11-year  government bonds) may be enough to induce investors to rebalance their portfolios to such substitutable assets, thereby spreading the price impact of central bank buying to those assets. Conversely, government bond yields are likely to have to fall more significantly in order to induce an investor to instead buy corporate bonds, or equities, which have quite different characteristics to government bonds. See also Li and Wei (2013), Gorodnichenko and Ray (2017) and Vayanos and Vila (2021) for models in which preferred habitats play an important role in the portfolio rebalancing channel. 
+6  See also Schnabel (2021) and the references therein for a discussion of how the signalling channel might operate. 
+7  See also Christensen and Krogstrup (2019) for a discussion of the role of central bank reserves. 
+
+  
+                                                     
+
+
+-----
+
+announcement is not perfectly credible, some of the signalling and portfolio rebalancing effect may be delayed until the announcement is actually delivered upon and purchases (and other actions such as reinvestments) are undertaken. The liquidity premia channel relates to the ability to sell bonds in the market without adversely moving yields, and so, to the extent that this is significant, it will have a larger implementation component associated with actual bond purchases as and when they are made (this is especially the case in government bond markets, when liquidity premia are likely to be elevated  only  in  stress  conditions).  There  is  no  consensus  about  the  relative  importance  of  each channel,  but  it  is  generally  accepted  that  the  liquidity  premia  channel  is  most  important  during periods of market stress – for example, in March 2020 and the months following – whereas in more normal times, when government bond markets are liquid and well-functioning, liquidity premia are already low and that channel is less important. 
+
+The empirical literature on bond purchases, based on experiences in other countries, suggests that at  the  initial  purchase  program  announcement  each  1  per  cent  of  GDP  worth  of  purchases  sees yields  decline  by  around  5–7  basis  points  on  average,  although  the  range  of  estimates  is  wide.8 Initial bond purchase programs also tend to have larger apparent effects than the announcement of subsequent programs or extensions of the initial program. This is because additional rounds of bond purchases are often expected by markets and so are at least partially priced in already at the initial announcement of a program, and it is difficult to disentangle these pre-existing expectations from the new information in an announcement of a program extension. Also, many early bond purchase programs were initiated during a period of market stress, when the liquidity premia channel of bond purchases was relatively important, whereas subsequent programs were often implemented in more settled markets when liquidity premia were low. Of note, government bond markets were stable and well-functioning in November 2020 when the Reserve Bank commenced its bond purchase program, whereas this was not the case in early 2020 when the Reserve Bank was purchasing government bonds to restore market function. 
+
+The  $100  billion  of  bond  purchases  announced  by  the  Reserve  Bank  under  the  bond  purchase program on 3 November 2020 was equivalent to around 5 per cent of nominal GDP in Australia, and so applying the international experience to Australia would suggest a reduction in longer-term yields of around 25–35 basis points. Further, most of the effect would have been expected to have come via the portfolio rebalancing channel lowering term premia: liquidity premia were already low and, while bond purchases would have had some signalling effect, forward guidance and the 3-year yield target were already providing a powerful signal regarding future policy. 
+
+8  See, for example, Gagnon (2016), CGFS (2019), Bailey et al (2020) and Bank of England’s Independent Evaluation 
+
+Office (2021) for review papers. 
+
+  
+ 
+ 
+                                                     
+
+
+-----
+
+3. 
+
+## Event Study of Announcement Effects
+
+5 
+
+As noted, the literature tends to find that in normal markets most of the effect on yields from credible and predictable central bank bond purchase programs occurs when expectations are formed, rather than when purchases are made. For bond purchases that are less credible or predictable, and/or conducted during times of stress and aimed at restoring bond market function, the evidence is more mixed, with a substantial implementation effect from the act of purchasing bonds evident, and a weaker  announcement  effect  as  strained  markets  may  fail  to  immediately  incorporate  news  into bond prices.9 
+
+This suggests that an event study of the Reserve Bank’s bond purchase program – where key dates in the lead-up to and announcement of the program are identified and the yield change that occurs on those dates is assessed – is one way to measure the overall effect of that program. For purchases to support market function and the yield target, it is likely that the announcement effect will only capture  part  of  the  overall  effect.  This  is  because  bond  markets  were  not  functioning  well  when those policies were announced, the quantum of purchases was not readily predictable in advance, and  for  the  yield  target  perhaps  also  because  of  some  degree  of  scepticism  among  market participants  around  the  Reserve  Bank’s  level  of  commitment  to  the  program.  In  this  section  we consider each policy announcement in turn. 
+
+3.1 
+
+Purchases to support market function 
+
+At  midday  on  16  March  2020,  amid  a  serious  deterioration  in  financial  market  function,  the Reserve Bank  released  a  statement  stating  that  the  Bank  ‘stands  ready  to  purchase  Australian government  bonds  in  the  secondary  market  to  support  the  smooth  functioning  of  that  market’ (RBA 2020a),  while  on  19  March  2020  at  2.30  pm  following  an  out-of-cycle  Board  meeting,  the Reserve  Bank  announced  a  package  of  policy  measures,  including  its  intention  to  purchase ‘Government  bonds  and  semi-government  securities  across  the  yield  curve  …  to  address  market dislocations’ (RBA 2020b); purchases began the following day. 
+
+To assess the effect on AGS yields stemming from these policy announcements, we sum the change in yields over the Australian trading day (8.30 am until 4.30 pm) on 16 and 19 March 2020. As well as examining the change in AGS yields themselves, we also examine the change in the spreads of AGS yields to term-matched overnight indexed swap (OIS) rates.10 The cash rate target was reduced on 19 March 2020, and a number of other policy measures were announced, all of which were likely to  have  had  an  effect  on  government  bond  yields.  OIS  rates  provide  a  measure  of  market expectations for the evolution of the cash rate, and so can be used as at least a partial control to isolate the effect of the announcement of bond purchases to restore market function, separate from 
+
+9  See, for example, Bailey et al (2020) and the references therein, as well as Ihrig et al (2018) and Eser et al (2019). 
+10  OIS are a fixed-for-floating interest rate swap, where one party agrees to pay a market-determined fixed interest rate (the ‘OIS rate’) in exchange for receiving a floating interest rate based on the realised daily overnight cash rate, and the other party agrees to take the other side of those cash flows. Abstracting from the existence of various types of risk premia, which may bias the OIS rate up or down, the fixed OIS rate can be interpreted as a market measure of the expected average overnight cash rate over the term of the OIS contract. 
+
+  
+                                                     
+
+
+-----
+
+the effects of other policy measures or news released at the same time.11 For semis, we measure the announcement effect as the change in the spreads of semis yields to AGS yields. 
+
+For AGS, we find that the announcement effect varied by term to maturity, with the yields on shorter maturity bonds falling by around 10 basis points in absolute terms (although they would also have been affected by the reduction in the cash rate target and the 3-year yield target, also announced on 19 March 2020), while yields on longer maturity bonds rose by around 10 basis points (Figure 1). 
+Relative to OIS rates, the announcement effect on AGS yields was more pronounced at both ends of  the  yield  curve,  with  spreads  to  OIS  for  the  shortest  maturity  bonds  falling  by  around 
+20 basis points,  while  spreads  for  the  longest  maturity  bonds  rose  by  20  basis  points  or  more (Figure 2). 
+
+Figure 1: Change in AGS Yields 
+Over 16 and 19 March 2020 
+
+Sources: 
+
+Authors’ calculations; Bloomberg 
+
+11  OIS  rates  will  also  be  influenced  by  bond  purchases,  so  measuring  the  announcement  effect  of  purchases  as  the change  in  the  spreads  of  AGS  yields  to  OIS  rates  will  tend  to  understate  the  impact.  Note  also  that,  in  Australia, long-dated OIS rates are priced based on the prevailing rates on two other types of financial instruments: standard fixed-for-floating interest rate swaps and BBSW–OIS basis swaps, both of which are liquid out to ten or more years into the future. In a standard fixed-for-floating interest rate swap, one party receives a fixed interest rate (the ‘swap rate’) in exchange for paying a floating 3- or 6-month bank bill swap rate (BBSW). In a BBSW–OIS basis swap, a party pays the floating 3- or 6-month BBSW, and receives a floating rate that is linked to the realised cash rate. By entering both of these swaps, an investor can engineer an exposure where they receive a fixed rate and pay a floating rate linked to the realised daily overnight cash rate, which is what an OIS contract delivers. 
+
+123456789102030-20-10010bps-20-10010bpsTermtomaturity–years  
+ 
+                                                     
+
+
+-----
+
+Figure 2: Change in AGS Spreads to OIS 
+Over 16 and 19 March 2020 
+
+Sources: 
+
+Authors’ calculations; Bloomberg 
+
+For semis, spreads to AGS were little changed on average; that is, semis yields broadly tracked AGS yields over the two policy announcement days (Figure 3). 
+
+Figure 3: Change in Semis Spreads to AGS 
+Over 16 and 19 March 2020 
+
+Note: 
+Sources: 
+
+Simple average for the states, Tasmania and the two territories are excluded. 
+Authors’ calculations; Bloomberg 
+
+123456789102030-40-2002040bps-40-2002040bpsTermtomaturity–years123456789101215-10-505bps-10-505bpsTermtomaturity–years  
+ 
+ 
+
+
+-----
+
+Taking a longer event window from the open on 16 March 2020 until the close on 20 March 2020 does not change the results for AGS yields or AGS spreads to OIS rates at the short end, although the  increases  at  the  long  end  were  larger;  for  semis,  we  find  that  spreads  to  AGS  fell  by 5–10  basis  points  across  the  yield  curve.  Conversely, taking a  shorter  window  of just  the  day  of 
+19 March 2020, the fall in shorter-dated AGS yields was slightly larger, and spreads to OIS for longer-dated AGS did not widen by as much as when using a window of both of the policy announcement days; for semis, the results were little changed. 
+
+The  lack  of  a  beneficial  announcement  effect  for  longer-dated  AGS  yields  and  semis  spreads  is perhaps  related  to  uncertainty  by  market  participants  regarding  which  bonds  the  Reserve  Bank would  purchase  –  while  the  Reserve  Bank’s  19  March  2020  statement  noted  that  purchases  to support market function would be of bonds across the yield curve, that text came under the rubric of ‘A target for the yield on 3-year Australian Government bonds of around 0.25 per cent’, and some market  participants  may  have  assumed  that  purchases  would  be  concentrated  in  shorter-dated bonds.12 Further, the distressed nature of financial markets and strong desire of market participants to raise cash by selling bonds meant that announcements by themselves would not be enough to unclog  bond  dealers’  balance  sheets.  Rather,  that  would  require  actual  purchases  by  the Reserve Bank (Finlay, Seibold and Xiang 2020). In any case, these purchases were not designed to reduce yields, but to restore good market function, which they achieved, as discussed in Section 7 below. 
+
+3.2 
+
+The yield target 
+
+At  2.30  pm  on  19  March  2020  the  Reserve  Bank  announced  the  introduction  of  a  target  for  the 3-year AGS yield of around 25 basis points, and at the same time announced a reduction in the cash rate target from 50 basis points to 25 basis points. To assess the announcement effect associated with the yield target we consider the change in the yield on the April 2023 AGS – the 3-year AGS at the time – over a 30-minute window following the announcement, as well over the entire day of the announcement. Note that the 3-year yield target provided a form of forward guidance concerning the cash rate, and so attempting to abstract from changes in cash rate expectations by considering the spread of the April 2023 AGS yield to the 3-year OIS rate would be inappropriate, as it would exclude part of the policy’s intended effect.13 
+
+The announcement effect was substantial, at around 25 basis points if measured over a 30-minute event  window,  or  around  15  basis  points  if  measured  over  the  course  of  the  day,  although  the observed effect is confounded with the reduction in the cash rate target, announced at the same time (Figure 4). However, the effect was insufficient to reduce the 3-year AGS yield all the way to the  target; as the Reserve Bank began to implement bond purchases  over subsequent  days, the yield declined further to become consistent with the target. 
+
+12  See  the  text associated  with  the  second numbered item in RBA (2020b). The yield on the  10-year AGS  rose from 1.5 per cent immediately prior to the 2.30 pm Board announcement on 19 March 2020 to 1.9 per cent immediately after. It traded between 1.6 and 1.9 per cent over the following half-hour in very strained conditions, before falling back to 1.5 per cent over the rest of the afternoon. The yield had been around 1 per cent two days prior, and was 0.9 per cent two days later. 
+
+13  On the day, the 3-year OIS rate fell from around 30 basis points pre-announcement to a little below 25 basis points 
+
+by the end of the day, that is, it closed in line with the Bank’s forward guidance (Figure 4). 
+
+  
+                                                     
+
+
+-----
+
+Figure 4: April 2023 AGS Yield and the Introduction of the Yield Target 5-minute intervals 
+
+Sources: 
+
+## Tullett Prebon; Yieldbroker
+
+3.3 
+
+The bond purchase program 
+
+The Reserve Bank’s bond purchase program was announced at 2.30 pm on 3 November 2020, but there was market speculation leading up to this date that the Bank would announce a QE program. 
+To conduct an event study of the announcement effect we identify nine events in the two months leading up to the initial announcement. We then sum the cumulative change over those dates in AGS yields, the spreads of AGS yields to OIS rates, and the spreads of semis yields to AGS yields. 
+
+To identify events, we examine end-of-day market summary reports written by bond traders and market economists over September and October 2020, and select those days where a piece of news was widely cited as relevant to the potential for a Reserve Bank bond purchase program. In total we  identify  nine  such  events,  which  include  speeches  by  Reserve  Bank  Governor  Lowe  and Deputy Governor Debelle, the October and November 2020 Reserve Bank Board announcements, three newspaper articles, and two market economist reports (Table 1). We use a one-day interval to  measure  the  change  in  yields  for  each  event  –  either  ‘open-to-close’  for  events  that  occurred during trading hours, or ‘previous close-to-close’ for events that occurred before the market opened (a two-day event window gives similar results, as does controlling for offshore events by measuring AGS yields as a spread to US Treasury yields). 
+
+AGS yields declined across the curve in response to the identified events, with the cumulative change largest at the 10-year point at around 30 basis points (Figure 5). Although the 10-year AGS yield declined for each of the identified events using a one-day window, for a few of the events this masks substantial intraday yield retracements, as markets digested the news associated with the event – our approach thus captures both increases and decreases in expectations for a Reserve Bank bond purchase program, at least on the dates identified. To the extent that we have correctly identified 
+
+08:3009:3010:3011:3012:3013:3014:3015:3016:3001020304050bps01020304050bps19March2020AGSyield3-yearOISrateTargetintroduced  
+ 
+
+
+-----
+
+the key dates when market participants reassessed the likelihood of the Reserve Bank conducting a bond purchase program, and no other major news occurred on those dates to move yields for other reasons,  this  suggests  that  the  bond  purchase  program  led  to  a  fall  in  the  10-year  AGS  yield  of around 30 basis points.14 
+
+Table 1: Key Event Study Days 
+
+## Event
+
+Date 
+14 September 2020*  Newspaper article (‘RBA and markets out of tune’) 
+
+22 September	2020
+23 September	2020
+28 September	2020
+6 October	2020
+7 October 2020* 
+15 October 2020 
+26 October 2020* 
+3 November 2020 
+Notes: 
+
+Speech by Deputy Governor Debelle 
+Market economist report calling for further policy easing 
+Market economist report calling for further policy easing 
+October Board announcement 
+Newspaper article (‘Odds shortened on more easing’) 
+Speech by Governor Lowe 
+Newspaper article (‘RBA to buy bonds’) 
+November Board announcement 
+
+Change in the 10-year AGS yield 
+–4 bps 
+–½ bps 
+–4½ bps 
+–½ bps 
+–3½ bps 
+–4½ bps 
+–7½ bps 
+–5 bps 
+–3 bps 
+
+Yield change measured as ‘open-to-close’ for events that occurred during trading hours, and as ‘previous close-to-close’ for events that occurred outside of trading hours (which are asterisked). In the latter case the date shown is for the next good business day, rather than the date of the event itself. 
+Authors’ calculations; Bloomberg; RBA 
+
+Sources: 
+
+Figure 5: Change in AGS Yields 
+Over key event study days 
+
+Sources: 
+
+Authors’ calculations; Bloomberg 
+
+14  By comparison, if we consider the four months preceding the 3 November 2020 announcement, excluding those dates identified in our event study, and sum random samples of nine daily changes in the 10-year AGS yield selected from that period, we find a mean yield change of +3 basis points and that 95 per cent of the samples had a yield change of between –7 and +25 basis points, suggesting that our event study result is statistically significant. 
+
+123456789102030-40-30-20-100bps-40-30-20-100bpsTermtomaturity–years  
+ 
+ 
+                                                     
+
+
+-----
+
+Next, we examine how the spreads of AGS yields relative to OIS rates changed over the event study days. As noted earlier, OIS rates provide a measure of market expectations for the evolution of the cash rate, and so can be used as at least a partial control for any other macroeconomic or financial market news that was unrelated to bond purchases but affected cash rate expectations. This will, however, also ‘control’ for any signalling effect of QE, which will therefore not be captured.15 The results of this analysis are presented in Figure 6, and show that shorter-dated OIS rates fell by a similar  magnitude  to  AGS  yields.  This  in  turn  suggests  that,  for  shorter-dated  maturities  out  to around five years, most of the observed fall in AGS yields was due to lower cash rate expectations (or that lower term premia on AGS yields flowed through to lower term premia in OIS rates).16 For bonds with residual maturity of around 10 years, the fall in the spread of AGS yields to OIS rates is very similar to the fall in actual AGS yields, at around 30 basis points. This suggests that the fall in the 10-year AGS yield was for the most part driven by falls in AGS term and liquidity premia, and most  likely  the  former  (because  outside  of  periods  of  market  dysfunction,  liquidity  premia  are typically low in the AGS market).17 
+
+Figure 6: Change in AGS Spreads to OIS 
+Over key event study days 
+
+Sources: 
+
+Authors’ calculations; Bloomberg 
+
+15  OIS rates also contain term and other premia, which will be somewhat affected by government bond purchases. 
+16  Of these two interpretations, the first interpretation appears the most likely, including because the Reserve Bank also lowered the cash rate target and the target for the yield on the 3-year Australian Government bond from 25 basis points to 10 basis points at the November 2020 Board meeting. 
+
+17  In fact, the expected impact of bond purchases on longer-term policy rate expectations is ambiguous. On the one hand, bond purchases serve to underline the central bank’s commitment to keep policy rates low for a long period. 
+But conversely, to the extent that bond purchases are effective in boosting economic activity and inflation, they should bring forward the day when the policy rate needs to be increased. 
+
+123456789102030-40-30-20-100bps-40-30-20-100bpsTermtomaturity–years  
+ 
+ 
+ 
+                                                     
+
+
+-----
+
+Additionally, the bond purchase program led to a larger fall in semis yields than in AGS yields, with the spreads of semis yields to AGS yields at the relevant maturities narrowing by around 5 basis points when measured over a one-day event window (Figure 7), and by around 10 basis points when measured over a two-day window.18 AGS yields act as the benchmark yield curve in Australia, with other fixed income securities typically priced relative to AGS yields or swap rates. If the Reserve Bank had elected to purchase only AGS as part of its bond purchase program, it is likely that semis yields would have fallen by roughly the same amount as AGS yields, leaving the spreads between semis and  AGS  little  changed.  The  evidence  suggests  that  the  inclusion  of  semis  in  the  program  put additional downward pressure on semis yields, resulting in a narrowing in spreads. 
+
+Figure 7: Change in Semis Spreads to AGS 
+Over key event study days 
+
+Note: 
+Sources: 
+
+Simple average for the states, Tasmania and the two territories are excluded. 
+Authors’ calculations; Bloomberg 
+
+While the Reserve Bank announced a $100 billion bond purchase program on 3 November 2020, many market participants were likely to have expected from the outset that further extensions to this program would be announced in time. This implies that the 30 basis point fall in longer-term AGS yields that was observed may be better explained by a larger total expected stock of purchases than the size of the initial announcement. It is hard to be precise about how large the total expected stock of purchases might have been, but it seems reasonable to think that expectations might have been in the order of $200 billion to $300 billion, and later forecasts made by market economists over the  first  half  of  2021  tended  to  fall  within  that  range.  This  would imply  that  each  $10  billion  (or roughly  ½  percentage  point  of  GDP)  of  expected  purchases  over  the  life  of  the  bond  purchase program resulted in a fall in longer-term AGS yields of around 1 to 1½ basis points. 
+
+Following the initial announcement, two further announcements by the Reserve Bank had relevance for  the  total  expected  stock  of  bond  purchases.  First,  there  was  the  announcement  on 
+
+18  Semis are less liquid than AGS, and so measuring yield changes over a slightly longer window may be appropriate. 
+
+123456789101215-10-505bps-10-505bpsTermtomaturity–years  
+ 
+                                                     
+
+
+-----
+
+2 February 2021 of the first extension to the bond purchase program  of a further $100 billion of bond  purchases.  Second,  there  was  the  announcement  on  6  July  2021  that,  from  September, purchases would proceed at a reduced pace of $4 billion per month, down from $5 billion, until at least mid-November 2021. We briefly consider these two subsequent announcements in turn. 
+
+A poll by Reuters ahead of the February 2021 Board meeting found that market economists expected the Reserve Bank to announce a further QE program of around $80 billion on average, although the modal expectation was for a $100 billion extension. In the event, the Reserve Bank announced that it would purchase an additional $100 billion of bonds once the original $100 billion of bond purchases was completed in mid-April 2021. AGS yields fell around 1½ basis points in subsequent trading. If one assumes that market economist expectations are representative of wider market expectations as embedded in bond yields, then the $20 billion upward surprise to the total expected stock of bond purchases resulted in a fall in AGS yields of around 1½ basis points, or around ¾ basis points per $10 billion. This is a little lower than the earlier estimate, but given the uncertainties inherent in the estimate it is reasonably close. 
+
+On 6 July 2021, the Reserve Bank announced that from early September 2021 it would reduce the pace of bond purchases from $5 billion per week to $4 billion per week, with the new pace to be maintained  until  at  least  mid-November  2021.  Around  half  of  surveyed  market  economists  had expected the pace of purchases to continue at $5 billion per week and around half had expected a small reduction in the pace. Market economists expected total future purchases to be in the order of $100 billion. If we apply the roughly 10 per cent downward surprise on the pace of purchases to the  $100  billion  figure  for  total  future  purchases,  then  we  arrive  at  an  estimate  that  the announcement  led  to  a  revision  lower  in  the  total  expected  stock  of  purchases  in  the  order  of $10 billion. The yields on AGS eligible to be purchased under the bond purchase program rose by around 2 basis points in the 30 minutes immediately following the 2.30 pm announcement, where they finished the trading day. This change of 2 basis points following a $10 billion surprise is a little larger  than  the  earlier  estimate  of  1  to  1½  basis  points  per  $10  billion,  but  again  given  the uncertainties inherent in the estimate, it is reasonably close. 
+
+4. 
+
+## Implementation Effects
+
+In addition to the announcement effects described above, the Reserve Bank’s bond purchases may also  have  lowered  yields  as  and  when  they  occurred.  We  assess  the  extent  of  these  possible implementation effects in three main ways: 
+
+  First, we examine time-series evidence by using regressions to test whether larger purchases of an  individual  bond  resulted  in  larger  yield  changes  on  the  day  of  the  purchases  (or  over subsequent  days).19  For  purchases  to  support  market  function  and  purchases  under  the  bond purchase program, we use the same functional form for our regression, as the way in which these purchases were conducted was similar, even if the aims were different. For purchases under the yield target we adapt the regression slightly to better suit the context for those purchases. 
+
+19  Note that under the bond purchase program, the amount of purchases of any individual bond was determined by the relative attractiveness of offers to sell that bond, compared with other bonds also eligible to be purchased. That is, the Reserve Bank did not set purchase amounts for individual bonds. See below for further discussion. 
+
+  
+                                                     
+
+
+-----
+
+  Second, we perform a similar time-series analysis, but use inclusion or exclusion in a purchase operation as the key explanatory variable, rather than the purchase amount. We only consider purchases to support market function and purchases under the bond purchase program, as the concept of inclusion or exclusion is less relevant for yield target purchases. 
+
+  Third, we look at the cross-sectional evidence over the course of a program to see whether bond lines that were more heavily purchased by the Reserve Bank saw larger changes in yields that persisted for some time after the purchases were made. Again, we only consider purchases to support market function and purchases under the bond purchase program. 
+
+We do not examine directly the related question of whether the flow of new bond issuance leads to higher yields as and when it occurs, though new issuance indirectly enters our analysis by adding to the outstanding stock of bonds. 
+
+4.1 
+
+Time-series evidence using purchase amounts 
+
+4.1.1  Market function purchases and the bond purchase program 
+
+Following the approach of De Santis and Holm‐Hadulla (2020), we use the time series of bond yields to measure the effect of bond purchases on those yields. In particular, we estimate the equation: 
+
+(1) 
+
+where 
+
+ denotes, for bond  , the day denotes the amount of bond 
+
+ change in yield (for AGS) or spread to AGS (for semis); relative to the remaining free float purchased on day 
+of bond   (that is, purchases of bond   divided by the outstanding stock of bond   not already held 
+  denotes  the  amount  of  bonds  within  one  year’s by  the  Reserve  Bank); 
+ (that relative to the remaining free float of bond residual maturity of bond is, purchases of bonds within one year’s residual maturity of bond   divided by the outstanding stock of bond 
+
+ not already held by the Reserve Bank); and 
+
+ are bond and time fixed effects. 
+
+ purchased on day 
+
+ and 
+
+We estimate this equation via ordinary least squares (OLS), and also via instrumental variables (IV) where we use a dummy variable indicating those bonds excluded from a given auction either because they had recently been issued or tapped by the issuing authority, or because they were not within 
+ we instrument the target purchase range, to instrument for using the share of bonds with residual maturity within one year of bond   that are excluded because they have recently been issued or  tapped by the issuing authority.20 These instruments  are both relevant – a bond cannot be purchased if it is not included in a given auction – and exogenous. 
+
+. For 
+
+IV would be the more appropriate estimation method to employ if, within an auction, the amount of each bond purchased by the Reserve Bank depended on the level of, or changes in, the yield on that bond over the day in question. However, the Reserve Bank did not adjust its purchases in this way:  within  a  given  auction,  the  purchase  amount  of  each  bond  was  determined  based  on  the 
+
+20  The Reserve Bank offered to purchase different sets of bonds on alternating days, and excluded recently tapped or issued bonds from its bond auctions – see ‘Reserve Bank Purchases of Government Securities’, 3 November 2020, available  at  <https://www.rba.gov.au/mkt-operations/announcements/rba-purchases-of-government-securities-2020- 11.html>. 
+
+12_itititititypurchasespurchasesadjacentbvityititpurchasesitiii_itpurchasesadjacentitiiiibtvitpurchases_itpurchasesadjacenti  
+ 
+ 
+                                                     
+
+
+-----
+
+relative  attractiveness  of  offers  to  sell  that  bond,  where  attractiveness  was  assessed  using  the offered yield relative to prevailing mid-market rates. It is possible that counterparties adjusted the attractiveness of their offers to sell different bonds based on yield levels or changes, although any desire on the part of dealers to sell more or less of any individual bond should already have been reflected in the market price of that bond, so it is not clear that this would be the case. For these reasons, we prefer the OLS estimates, but for completeness also provide IV estimates. 
+
+Results  are  shown  in  Table  2.  For  AGS  purchases  in  aid  of  market  functioning,  purchasing 
+1 percentage point of the free float of a bond reduces its yield and the yield on adjacent bonds by around ¼ basis points on average, although there is considerable noise in the data and these results are  not  statistically  significant.  For  AGS  purchases  under  the  bond  purchase  program,  the  yield effects are smaller but statistically significant, at around 0.1 to 0.2 basis points. For semis, we find that purchases in aid of market function reduce spreads to AGS by between 0.1 and 0.5 basis points, depending on the estimation method, while purchases of adjacent bonds have no effect. For semis purchases under the bond purchase program, the effects are smaller, at around 0.1 basis points for direct purchases and again no effect for purchases of adjacent bonds. Overall, we tend to find larger effects when one would expect liquidity premia to be relatively high. 
+
+Table 2: One-day Impact of the Flow of Bond Purchases 
+Effect of purchasing 1 percentage point of the free float of eligible/adjacent bonds Bond purchase program 
+
+Market functioning purchases 
+AGS yields 
+IV 
+–0.27 
+(0.37) 
+
+Semis spreads 
+OLS 
+IV 
+–0.48*** 
+  –0.14*** 
+(0.14) 
+(0.04) 
+
+OLS 
+–0.34 
+(0.25) 
+
+AGS yields 
+IV 
+–0.22*** 
+(0.08) 
+
+OLS 
+  –0.11** 
+(0.04) 
+
+Semis spreads 
+IV 
+OLS 
+–0.14** 
+–0.08** 
+(0.06) 
+(0.03) 
+
+Purchases of the eligible bond 
+
+Fixed effects 
+No of obs 
+Adjusted R 2 
+Notes: 
+
+Purchases of its adjacent bonds 
+
+–0.20 
+(0.15) 
+
+–0.25 
+(0.16) 
+
+  –0.01 
+(0.01) 
+
+0.08 
+(0.06) 
+
+  –0.10*** 
+(0.02) 
+
+–0.17*** 
+(0.03) 
+
+0.00 
+(0.00) 
+
+–0.02 
+(0.02) 
+
+448 
+0.56 
+
+448 
+0.56 
+
+Bond and time fixed effects for all regressions 
+1,696 
+5,234 
+0.89 
+0.54 
+
+1,696 
+0.50 
+
+5,234 
+0.89 
+
+13,372 
+0.29 
+
+13,372 
+0.28 
+
+Heteroskedasticity  and  autocorrelation  corrected  (HAC)  standard  errors  in  parentheses;  *,  **  and  ***  denote  statistical significance  at  the  10,  5  and  1  per  cent  levels,  respectively.  Yields  and  spreads  in  basis  points.  For  market  functioning purchases, the sample is from 20 March 2020 to 6 May 2020; for the bond purchase program, it is from 5 November 2020 to 10 February 2022. Bonds issued by Tasmania and the two territories are excluded. Adjacent bonds are those that mature within one year of the eligible bond. An F-test on the instrument equation rejects the null of weak instruments at the 1 per cent level for all models, while the Wu-Hausman test fails to reject the null that OLS is consistent for the AGS market function model and the semis bond purchase program model, but rejects the null for the other models. 
+Austraclear; Australian Office of Financial Management; Authors’ calculations; RBA; Yieldbroker 
+
+Sources: 
+
+4.1.2  The yield target 
+
+The yield on the 3-year AGS rose above target on occasion. One method that the Reserve Bank used to achieve the yield target was to purchase the target bond, and also AGS with residual maturity close  to  that  of  the  target  bond.  From  March  to  May  2020  such  purchases  were  aimed  at  both supporting  government  bond  market  function  and  the  yield  target,  while  from  August  2020  until October 2021 they were conducted in support of the yield target alone. Accordingly, we will look at only these later purchases. 
+
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+-----
+
+The Reserve Bank conducted purchases in support of the yield target a total of 18 times between August 2020 and October 2021, buying a total of $29 billion across the November 2022, April 2023 and April 2024 AGS (Figure 8). On average, the yields on the target bonds fell by around 1 basis point on days when they were purchased by the Reserve Bank and  were little changed on other days (Figure 9). The Reserve Bank’s ownership shares of these bond lines increased to 8, 39 and 
+63 per cent of the outstanding amounts for the 2022, 2023 and 2024 bonds respectively, from 7, 10 and 5 per cent at the start of August 2020. 
+
+Figure 8: Yield Target and Bond Purchases 
+
+Notes: 
+
+Sources: 
+
+3-year AGS yields are for the April 2023 AGS until 20 October 2020, and the April 2024 AGS thereafter. Purchases are of November 2022, April 2023 and April 2024 AGS. 
+Bloomberg; RBA; Yieldbroker 
+
+3-yearrates0.250.500.751.00%0.250.500.751.00%AGSyieldOISrateTargetintroducedPurchasesMMJJSSDD202120200123$b0123$bTargetloweredTargetdiscontinued  
+ 
+
+
+-----
+
+Figure 9: On-the-day Changes in Target Bond Yields 
+From 5 August 2020 to 2 November 2021 
+
+Note: 
+Sources: 
+
+Dots show the average change, whiskers show a range within one standard deviation of the average. 
+Authors’ calculations; Yieldbroker 
+
+However, the average change does not account for differences in the size of the  Reserve Bank’s purchases, or other potentially relevant factors such as changes in expectations for the cash rate. 
+To assess more accurately the impact of the Reserve Bank’s purchases, we estimate a regression that includes the size of the purchases, as well as the 3-month OIS rate and the 10-year AGS yield (Table 3).21 Overall, we find that purchasing $1 billion of the target bond reduced the yield on that bond by 1 basis point. Using the share of free float purchased rather than the dollar value as the explanatory variable, we find that purchasing 1 percentage point of the free float reduced the yield by 0.2 basis points. Purchases were therefore effective in achieving the yield target, although the measured effect of purchases on the yield is estimated to have dissipated over time. 
+
+21  Note that  while  only  one bond  was the  target  bond for the  purpose of the  yield target  at any  particular time,  we consider  the  yields  on  both  the  April  2023  AGS  and  the  April  2024  AGS  throughout  our  analysis.  This  is  for  three reasons: both of these bonds were at some point the target bond; even prior to the April 2024 AGS becoming the target bond, the Reserve Bank made some purchases of the April 2024 AGS to smooth the transition between target bonds; and even after the April 2024 AGS became the target bond, the Reserve Bank made some purchases of the April 2023 AGS in order to reinforce the forward guidance associated with the yield target. See RBA (2020c) for further details. 
+
+## PurchasedaysOtherdays-4-202bps-4-202bps
+ 
+                                                     
+
+
+-----
+
+Table 3: On-the-day Impact of Yield Target Purchases 
+Linear regressions of daily open-to-close changes from 5 August 2020 to 2 November 2020 
+
+Purchases in $b 
+
+  Purchases as a share of free float of target bond 
+
+Target bond yields 
+–1.02*** 
+(0.24) 
+
+3-year OIS rate 
+0.60 
+(0.48) 
+
+Target bond yields 
+–0.22*** 
+(0.03) 
+
+3-year OIS rate 
+0.14 
+(0.09) 
+
+–0.44 
+(0.27) 
+
+0.76** 
+(0.36) 
+0.31** 
+(0.15) 
+
+630 
+0.22 
+
+0.44 
+(0.56) 
+
+1.12*** 
+(0.19) 
+0.36*** 
+(0.08) 
+
+315 
+0.23 
+
+–0.12* 
+(0.06) 
+
+0.77** 
+(0.36) 
+0.31** 
+(0.15) 
+
+630 
+0.22 
+
+0.16 
+(0.16) 
+
+1.11*** 
+(0.18) 
+0.36*** 
+(0.09) 
+
+315 
+0.24 
+
+HAC  standard  errors  in  parentheses;  *,  **  and  ***  denote  statistical  significance  at  the  10,  5  and  1  per  cent  levels, respectively. Yields and rates in basis points. 
+Australian Office of Financial Management; Authors’ calculations; Fenics; RBA; Yieldbroker 
+
+Purchases of target bond 
+
+Purchases of adjacent bond 
+
+Change in 3-month 
+OIS rate 
+
+Change in 10-year 
+AGS yield 
+
+No of obs 
+Adjusted R 2 
+Notes: 
+
+Sources: 
+
+By contrast, a regression of daily changes in the 3-year OIS rate on similar factors indicates that purchases  of the target  bond  were  associated  with increases  in  the  3-year  OIS  rate  on  average, although the moves were not statistically significant.22 This suggests that, although the Reserve Bank tended to purchase bonds in response to sustained increases in market participants’ expectations for the cash rate (when the increases were reflected in the yield on the 3-year AGS), the Reserve Bank’s purchases did not – on their own, on the days of the purchases – dampen participants’ cash rate  expectations.  This  is  consistent  with  the  flow  of  Reserve  Bank  purchases  being  interpreted narrowly by the market as an operational tool for achieving the yield target on the relevant AGS, rather than as a new signal about the Board’s future monetary policy decisions. See also Lucca and Wright (2022) for a discussion of the yield target and the effect of yield target bond purchases. 
+
+The announcements by the Reserve Bank of bond purchases to support the yield target typically contained an element of news for market participants, perhaps in part because participants were still learning about the Reserve Bank’s reaction function for the use of this new tool. On days when such purchases were announced, the yield on the 3-year AGS tended to fall immediately after the announcement;  by  contrast,  announcements  of  the  Reserve  Bank’s  regular  and  predictable purchases  under  the  bond  purchase  program  elicited  negligible  immediate  market  reaction (Figure 10). For the 3-year AGS, the element of news was consistent with the aim of the policy being to keep the yield on the target bond ‘around’ a certain level, rather than exactly at a certain level. 
+Hence, participants could not predict whether the Reserve Bank would intervene on any particular day. It was also consistent with the Reserve Bank retaining operational flexibility in its purchases, rather than committing to a strict rule or pattern for these purchases. 
+
+22  It  is  likely  that  any  causation  is  going  in  the  other  direction,  with  higher  3-year  OIS  rates  associated  with  higher 
+
+3-year AGS yields and therefore with the Reserve Bank deciding to conduct yield target purchases. 
+
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                     
+
+
+-----
+
+Figure 10: Yield Impact of Purchase Announcements 
+5-minute intervals; dashed line indicates publication of announcement, shading indicates actual purchases 
+
+Notes: 
+
+Source: 
+
+Impact calculated by taking a simple average of changes in yields on bonds eligible for purchase, from the publication time of  11.15  am  =  0  bps.  AGS  series  excludes  impact  of  purchases  brought  forward  under  the  bond  purchase  program  on 
+1 March 2021. AGS purchases under the bond purchase program occurred between 3.25 pm and 3.30 pm; semis purchases under  the  bond  purchase  program  occurred  in  three  groups  between  2.30  pm  and  2.35  pm,  3.00  pm  and  3.05  pm,  and 3.30 pm and 3.35 pm. 
+Yieldbroker 
+
+4.2 
+
+Time-series evidence using inclusion and exclusion dummies 
+
+We  estimate  a  dummy  variable  regression  similar  to  that  in  Section  4.1.1,  where  we  model  the change in yield (for AGS) or spread to AGS (for semis) on a variable indicating whether a bond was included in an auction (i.e. eligible for purchase), and additionally control for the effect of each bond line and day (this is similar to performing an analysis of variance to test whether, on auction days, bonds that were in the auction saw statistically different yield changes from bonds that were not in the  auction;  see  Fisher  (1925)).  Similar  to  the  IV  regressions  discussed  previously,  taking  the eligibility of a bond to be purchased in an auction as a ‘treatment’ (and ignoring how much of each bond is actually purchased) has the advantage of using only variables that we know to be exogenous as regressors. 
+
+As background, AGS purchases under the bond purchase program were conducted on Mondays and Thursdays, with Mondays for bonds with residual maturity of around 5 to 7 years, and Thursdays for bonds with residual maturity of around 7 to 10 years. Semis auctions under the bond purchase program were conducted on Wednesdays, and initially alternated between shorter-dated and longer-dated bonds on a fortnightly basis, before these auctions were combined in March 2021 into a single auction spanning all eligible bonds. Considering shorter-dated and longer-dated auctions separately, we find that eligibility within auctions has no statistically significant impact on the change in yield or spread (Table 4). 
+
+YieldtargetpurchasesAug2020toOct202110:0012:0014:00-1.5-1.0-0.50.00.5bpsBondpurchaseprogramNov2020toFeb202212:0014:0016:00-1.5-1.0-0.50.00.5bpsAGSSemis  
+ 
+
+
+-----
+
+Table 4: One-day Impact of Eligibility within Auctions in the Bond Purchase Program Ineligible bonds are those that were excluded due to being recently tapped or issued 
+
+AGS yields 
+
+Short-dated 
+–0.11 
+(0.14) 
+
+Long-dated 
+–0.02 
+(0.07) 
+
+Short-dated 
+0.41 
+(0.27) 
+
+Semis spreads 
+Long-dated 
+0.37 
+(0.24) 
+
+Combined 
+0.02 
+(0.08) 
+
+Bond and time 
+495 
+0.94 
+
+Bond and time 
+486 
+0.99 
+
+Bond and time 
+148 
+0.54 
+
+Bond and time 
+179 
+0.37 
+
+Bind and time 
+1,877 
+0.40 
+
+Bond eligible for purchase 
+
+Fixed effects 
+No of obs 
+Adjusted R 2 
+Notes: 
+
+Heteroskedasticity corrected (HC) standard errors in parentheses; *, ** and *** denote statistical significance at the 10, 5 and 1 per cent levels, respectively. Yields and spreads in basis points. The sample is purchase days from 5 November 2020 to  10  February  2022.  Combined  semis  auctions  replaced  the  short-  and  long-dated  auctions  from  24  March  2021.  Bonds issued by Tasmania and the two territories are excluded. 
+Authors’ calculations; RBA; Yieldbroker 
+
+Sources: 
+
+Alternatively, we can consider the shorter-dated and longer-dated groupings of bonds together, such that  for  each  auction  the  non-eligible  bonds  consist  of  not  only  those  bonds  within  the  relevant maturity grouping that  were  excluded due to being  recently tapped  or issued, but also all  bonds from the other maturity grouping (which were also not eligible to be purchased). Using this approach, we find that purchases under the bond purchase program lowered AGS yields by 0.6 basis points on the  day,  and  lowered  semis  spreads  by  0.2  basis  points  on  the  day  (Table  5).23  These  results, combined with those above, suggest that purchases in one segment of the yield curve affect yields and spreads in that part of the yield curve relative to other parts of the yield curve, even if they do not affect relative yields and spreads within that segment of the yield curve. The effect is short-lived, however,  and  dissipates  after  a  few  days  (Figure  11).  For  bond  purchases  in  support  of  market function, we find that an AGS being eligible to be purchased reduced its yield by 1.1 basis points, relative to other AGS not eligible to be purchased, while for semis, eligibility resulted in a 0.6 basis point reduction in spread to AGS (Table 5). Similar to purchases under the bond purchase program, the effect is short-lived and dissipates after a few days. 
+
+Table 5: One-day Impact of Eligibility across each Purchase Program Ineligible bonds are those that were in the program but were not eligible for purchase on the day 
+
+Market functioning purchases 
+Semis spreads 
+AGS yields 
+–0.64*** 
+–1.12** 
+(0.17) 
+(0.52) 
+
+Bond and time 
+448 
+0.56 
+
+Bond and time 
+1,696 
+0.54 
+
+Bond purchase program 
+
+AGS yields 
+–0.57*** 
+(0.07) 
+
+Bond and time 
+5,234 
+0.89 
+
+Semis spreads 
+–0.17*** 
+(0.05) 
+
+Bond and time 
+13,372 
+0.29 
+
+Bond eligible for purchase 
+
+Fixed effects 
+No of obs 
+Adjusted R 2 
+Notes: 
+
+HAC  standard  errors  in  parentheses;  *,  **  and  ***  denote  statistical  significance  at  the  10,  5  and  1  per  cent  levels, respectively.  Yields  and  spreads  in  basis  points.  For  market  functioning  purchases,  the  sample  is  from  20  March  2020  to 
+6 May 2020; for the bond purchase program, it is from 5 November 2020 to 10 February 2022. Bonds issued by Tasmania and the two territories are excluded. 
+Authors’ calculations; RBA; Yieldbroker 
+
+Sources: 
+
+23  Note that the regression results presented in Table 2 of Section 4.1.1 also included both auction buckets. 
+
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                     
+
+
+-----
+
+Figure 11: Impact of Eligibility in the Bond Purchase Program November 2020 to February 2022 
+
+Note: 
+Sources: 
+
+Dots show the estimated effect, whiskers show a 95 per cent confidence interval. 
+Authors’ calculations; Yieldbroker 
+
+4.3 
+
+Cross-sectional evidence 
+
+Finally, following the approach of D’Amico and King (2013), we use variation in the share of individual bond lines that were purchased over the course of a program to examine whether the purchase of a larger share of bonds resulted in larger yield changes that were persistent. In particular, for AGS we estimate the equation: 
+
+(2) 
+
+  denotes  the  change  in  yield  on  bond 
+
+where 
+  from  the  day  before  purchases  began  until 
+6 May 2020 for purchases to restore market function, or 10 February 2022 for purchases under the 
+ denotes the share of free float of bond   that the Reserve Bank bond purchase program; 
+ denotes the share of free float of bonds with residual maturity purchased; 
+ denotes the residual maturity of within one year of bond 
+  denotes  the  coupon  of 
+;  and bond bond 
+  instead  denotes  the  change  in spread to AGS of bond 
+
+ that the Reserve Bank purchased; 
+  denotes  the  squared  residual  maturity  of  bond 
+; 
+.24  For  semis,  we  estimate  a  similar  equation,  where 
+
+, and an additional term denoting issuer fixed effects is included. 
+
+24  Some authors such as D’Amico and King (2013) estimate a regression  similar to the above, but use the change in price as the variable of interest, rather than the change in yield. We do not do this as the Reserve Bank’s explicit aim under the bond purchase program was to lower bond yields, rather than raise bond prices (even if the two concepts are closely related). Changes in bond prices are also more likely to be mechanically affected by the coupon and term to maturity of each bond than are changes in yield. 
+
+212345_iiiiiiiypurchasespurchasesadjacentmmciyiipurchasesi_ipurchasesadjacentiimi2imiiciiyiAGSyields1234-1.0-0.50.00.5bpsSemispreads1234-1.0-0.50.00.5bpsDaysinimpactmeasurementwindow  
+ 
+ 
+ 
+                                                     
+
+
+-----
+
+We estimate this equation via OLS, also via IV where we use inclusion in a bond futures basket (of 
+ and also the share of bonds within one year’s residual maturity of bond  ); the share both bond of bonds held by the Reserve Bank just prior to the program commencement (of both bond 
+ and also bonds within one year’s residual maturity of bond  ); and yield curve fitting errors just prior to .25  These the  program  commencement,  to  instrument  for instruments  are  clearly  exogenous,  being  determined  before  any  purchases  took  place,  and  are relevant to the extent that Reserve Bank purchases are correlated with pricing anomalies (captured by  yield  curve  fitting  errors),  previous  ownership  levels,  and/or  the  liquidity  of  each  bond  line (captured by inclusion in a futures basket).26 
+
+  and 
+
+We consider IV in case of any possible endogeneity between the yield change that we observe and the share of bonds purchased (this could occur, for example, if the Reserve Bank purchased bonds in part due to their higher yield, although as noted earlier  this was not the case).  As earlier,  we prefer the OLS estimates (and cannot reject that they are consistent), but provide IV estimates for completeness. 
+
+For purchases in support of market function, we find that purchasing 1 percentage point of the free float of an AGS reduced the yield on that bond by 0.7 to 0.8 basis points, while purchases of adjacent bonds resulted in a fall in yield of 1.2 to 1.5 basis points; for semis, there was little to no additional impact on the spread to AGS for purchases of the bond itself or adjacent bonds (Table 6). For the bond purchase program, we find no statistically significant effect of purchases on AGS yields or semis spreads. 
+
+25  For semis, the futures basket instruments are not used (because bond futures contracts refer to AGS only). For AGS purchased  to  support  market  function,  the  pre-commencement  holdings  instruments  are  not  used  (because  the Reserve Bank held none of the AGS purchased prior to the commencement of the program). 
+
+26  Bonds included in a bond futures basket tend to be more liquid and actively traded than otherwise similar bonds, while 
+
+yield curve fitting errors can be used as an indication of bond mispricing. 
+
+iiiiipurchases_ipurchasesadjacent  
+                                                     
+
+
+-----
+
+Table 6: Cross-sectional Impact of the Flow of Bond Purchases Effect of purchasing 1 percentage point of the free float of eligible/adjacent bonds Bond purchase program 
+
+Market functioning purchases 
+AGS yields 
+IV 
+–0.69*** 
+(0.16) 
+
+Semis spreads 
+IV 
+OLS 
+0.38 
+  –0.12 
+(0.41) 
+(0.11) 
+
+OLS 
+–0.82*** 
+(0.16) 
+
+AGS yields 
+IV 
+0.20 
+(0.14) 
+
+OLS 
+0.17 
+(0.12) 
+
+Semis spreads 
+IV 
+OLS 
+0.00 
+0.02 
+(0.09) 
+(0.04) 
+
+–1.54*** 
+(0.36) 
+
+–1.21*** 
+(0.27) 
+
+0.18 
+(0.12) 
+
+1.00 
+(0.66) 
+
+0.26 
+(0.21) 
+
+0.22 
+(0.27) 
+
+  –0.01 
+(0.03) 
+
+–0.06 
+(0.08) 
+
+9.35*** 
+(1.57) 
+
+6.63** 
+(2.23) 
+
+  –7.08*** 
+(1.14) 
+
+–2.89 
+(3.22) 
+
+  11.08*** 
+(3.19) 
+
+11.35*** 
+(3.23) 
+
+5.51*** 
+(0.96) 
+
+6.03*** 
+(2.00) 
+
+–1.55*** 
+(0.15) 
+
+–1.31*** 
+(0.20) 
+
+0.61*** 
+(0.10) 
+
+0.21 
+(0.26) 
+
+  –0.96*** 
+(0.25) 
+
+–0.98*** 
+(0.25) 
+
+  –0.46*** 
+(0.07) 
+
+–0.49*** 
+(0.17) 
+
+–0.40 
+(0.37) 
+
+–0.13 
+(0.67) 
+
+None 
+14 
+0.98 
+
+None 
+12 
+0.98 
+
+0.33 
+(0.54) 
+
+Issuer 
+53 
+0.56 
+
+0.84 
+(0.88) 
+
+Issuer 
+37 
+0.22 
+
+0.84 
+(0.94) 
+
+0.88 
+(0.99) 
+
+1.02*** 
+(0.33) 
+
+0.85* 
+(0.44) 
+
+None 
+16 
+0.72 
+
+None 
+16 
+0.72 
+
+Issuer 
+36 
+0.67 
+
+Issuer 
+31 
+0.51 
+
+Purchases of the eligible bond 
+Purchase of its adjacent bonds 
+Residual maturity 
+(years) 
+Residual years2 
+(years2) 
+Coupon rate 
+(per cent) 
+
+Fixed effects 
+No of obs 
+Adjusted R 2 
+Notes: 
+
+HC standard errors in parentheses; *, ** and *** denote statistical significance at the 10, 5 and 1 per cent levels, respectively. 
+Yields and spreads in basis points. For market functioning purchases, the start and end dates are 19 March 2020 and 6 May 2020; for the bond purchase program, they are 4 November 2020 and 10 February 2022. Bonds issued by Tasmania and the two territories are excluded, and the bond purchase program regressions only include bonds that were included in the program from the start. An F-test on the instrument equation rejects the null of weak instruments for the market function AGS model but not the other IV models, while the Wu Hausman test fails to reject the null that OLS is consistent for all IV models. 
+Austraclear; Australian Office of Financial Management; Authors’ calculations; Bloomberg; RBA; Yieldbroker 
+
+Sources: 
+
+4.4 
+
+## Summary
+
+To  summarise,  our  results  suggest  that  the  implementation  effect  for  purchases  under  the  bond purchase  program  was,  at  most,  small  and  temporary.  This  conclusion  can  be  supported  by examining how the yields on AGS and semis just outside the purchase range evolved relative to the yields of AGS and semis just inside the purchase range. The difference in yields between these sets of non-purchased and purchased bonds did not steadily increase for either AGS or semis, as one might have expected if the implementation effect was strong and persistent, but rather tended to follow changes in the equivalent difference in OIS rates (which should have been largely unaffected by any implementation effect associated with bond purchases; Figure 12). 
+
+For  purchases  in  support  of  market  function  and  purchases  in  support  of  the  yield  target,  the estimated implementation effects are on balance larger. The first finding is broadly consistent with the international literature on bond purchases, with the impact of purchases as and when they are made being more important during periods of market stress. The second finding is consistent with yield  target  purchases  containing  an  element  of  news  as  market  participants  learned  about  the Reserve Bank’s reaction function – that is, its commitment to this objective. 
+
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+-----
+
+Figure 12: Change in Spread between 10-year and 12-year Rates 
+3 November 2020 = 0 basis points, one-week moving average 
+
+Note: 
+Sources: 
+
+Semis yield is a simple average of the linearly interpolated rates for the states, Tasmania and the two territories are excluded. 
+Authors’ calculations; Bloomberg 
+
+5. 
+
+## Additional Analysis of Yield Effects
+
+In  addition  to  the  announcement  of  the  yield  target  and  purchases  of  the  target  bond,  other Reserve Bank  actions  in  support  of  the  yield  target  had  an  effect  on  the  target  bond  yield.  In particular,  in  early  March  2021  the  April  2024  AGS  yield  had  risen  above  the  target  and  liaison suggested  that  a  number  of  market  participants  had  positioned  to  profit  from  the  Reserve  Bank discontinuing the yield target in the near future, by borrowing the target bond under repo and selling it  outright  (that  is,  short-selling  the  bond).  At  12.30  pm  on  9  March  2021  the  Reserve  Bank communicated  to  market  participants  that  it  had  increased  the  fee  that  it  was  going  to  charge counterparties to borrow the target bond from 25 to 100 basis points, which made short-selling the bond  more  costly,  while  at  9  am  on  10  March  2021  Governor  Lowe  gave  a  speech  in  which  he reaffirmed  the  Reserve  Bank’s  commitment  to  the  yield  target  (Lowe  2021).  The  increase  in  the stock lending fee saw the April 2024 AGS yield fall by around 2 basis points on announcement, while Governor Lowe’s speech saw the yield open a further 1 basis point lower the next day, and continue to fall over the course of the week (Figure 13). See also RBA (2021) for a further discussion of these events. 
+
+The stock lending fee for the target bond was changed two further times, with similarly large impacts on the target bond yield. The stock lending fee was decreased from 100 basis points to 25 basis points, announced around 12.30 pm on 7 May 2021 following a sharp fall in the April 2024 AGS yield to a level below the target. This saw the yield move around 2 basis points higher (Figure 13). An increase in the stock lending fee at 4.30 pm on 19 October 2021 back to 100 basis points saw the yield  fall  from  around  17  basis  points  to  around  11  basis  points.  The  standard  deviation  of  daily changes for the 3-year AGS yield is a little less than 1 basis point, so the relatively large moves in 
+
+MMMJJSSDD202120202022-15-10-50bps-15-10-50bpsSemisOISAGSBondpurchaseprogramintroduced  
+ 
+
+
+-----
+
+the yield following the stock lending fee changes and Governor Lowe’s speech, in the absence of any other news of note, suggests that these actions had a meaningful effect on the target bond yield. A higher stock lending fee makes bond market intermediation more costly, and this is discussed further in Section 7. 
+
+Figure 13: April 2024 AGS Yield and Stock Lending Fee Changes 5-minute intervals, 2021 
+
+Source: 
+
+## Yieldbroker
+
+Turning  to  the  bond  purchase  program,  to  complement  our  main  results  we  construct  a counterfactual  scenario  for  how  AGS  yields  might  have  moved  in  its  absence.  We  then  take  the difference between the observed yield change and this counterfactual as  another measure of the impact of the program. 
+
+A simple counterfactual is to assume that, in the absence of bond purchases by the Reserve Bank, longer-term  AGS  yields  would  have  moved  in  line  with  the  government  bond  yields  of  the United States. This approach makes a few assumptions. In particular, it assumes that AGS yields 
+
+9and10March1216bps1216bpsIncreaseinfeeLowespeech7and10May812bps812bpsDecreaseinfee19and20October08:3009:3010:3011:3012:3013:3014:3015:3016:3009:3010:3011:3012:3013:3014:3015:3016:3081216bps81216bpsIncreaseinfee  
+ 
+
+
+-----
+
+tend to move with US Treasury yields in response to global news events (but not necessarily news pertaining  to  a  change  in  the  relative  economic  prospects  or  stance  of  monetary  policy  in  each country). Another assumption is that the main news on relative monetary policy stances over the period in question related to domestic bond purchase expectations. 
+
+Focusing on the spread between 10-year yields for AGS and US Treasury bonds, after rising at the onset of the COVID-19 crisis as the relative outlook for US growth and inflation deteriorated rapidly, the  spread  remained  stable  at  around  25  to  30  basis  points  through  to  mid-2020  (Figure  14). 
+However, this spread narrowed over September and October 2020 as market participants began to price-in the likelihood of bond purchases in Australia, with the spread reaching around zero when the Reserve Bank’s bond purchase program was announced in early November. To the extent that the evolution of longer-term US Treasury yields provides a good counterfactual for what would have happened  to  longer-term  AGS  yields  in  the  absence  of  a  bond  purchase  program,  this  approach suggests  that the  announcement  of the  bond  purchase  program  led to a  fall  in  longer-term  AGS yields of around 30 basis points. With the exception of relatively short-lived moves higher in early and late 2021 associated with global increases in bond yields, the spread remained close to zero for an extended period, suggesting that the announcement effect was persistent but that there was no additional  implementation  effect  that  depressed  Australian  yields  further  as  and  when  bond purchases were made. However, over time the accumulation of other market moving events and differing outcomes for the Australian and US economies lessens the validity of this comparison, and we would not expect the spread to remain near zero indefinitely. 
+
+Figure 14: 10-year Government Bond Yields 
+
+Sources: 
+
+## Bloomberg; Yieldbroker
+
+A  slightly  more  sophisticated  approach  is  to  construct  a  model  of  AGS  yields  that  controls  for  a handful of domestic and international factors, but for the most part does not capture the effects of the Reserve Bank’s bond purchase program, and then use the implied path of AGS yields resulting 
+
+123%123%AustraliaUSAustralia–USspread20212020201920182022-90-60-30030bps-90-60-30030bps  
+ 
+
+
+-----
+
+from this model as a counterfactual against which to measure the  yield impact of the program.27 The model we employ attempts to explain monthly changes in the 10-year AGS yield using: changes in the 10-year Australian OIS rate; changes in the 10-year US Treasury yield; changes in US Federal Reserve  bond  holdings  as  a  share  of  US  GDP;  and  changes  in  the  spread  between  the  3-month BBSW  and  the  3-month  Australian  OIS  rate.  As  noted  earlier,  the  10-year  OIS  rate  will  capture market expectations for the cash rate path, and therefore any signalling effect of bond purchases. 
+This implies that our measure will abstract from any such signalling effect, so the measure should be taken as a lower bound rather than a central estimate. Regarding the other explanatory variables: 
+the US Treasury yield captures international factors affecting long-term interest rates; US Federal Reserve bond holdings capture the yield impact of bond purchases in the United States (with market expectations  for  bond  holdings,  which  were  estimated  using  survey  data,  used  instead  of  actual holdings starting from May 2020); and the BBSW–OIS spread is a measure of domestic risk aversion and a proxy for the cost of funding holdings of AGS in the repo market. Overall, the counterfactual 10-year AGS yield implied by the model, in the absence of bond purchases, is up to around 20 basis points higher than the observed 10-year AGS yield around the announcement of the bond purchase program, with much of the difference persisting for an extended period (Figure 15). 
+
+Figure 15: 10-year AGS Yield 
+End of month, shading indicates the out-of-sample period for the counterfactual 
+
+Note: 
+Sources: 
+
+Counterfactual calculated by cumulating modelled changes in the 10-year AGS yield. 
+Authors’ calculations; Bloomberg; Federal Reserve Bank of New York; Yieldbroker 
+
+27  See Kawamoto et al (2021) for a similar exercise focused on Japan. Ideally, we would prefer to construct a model of AGS yields that accurately captures the channels of a bond purchase program discussed earlier, and then use this model to directly measure the impact of bond purchases on yields. The relatively short time horizon over which the Reserve Bank has been conducting bond purchases, however, means that any such model would be poorly estimated. 
+Further, and as discussed earlier, market participants’ expectations of bond purchases are an important determinant of yields, and we do not have an accurate measure of these expectations through time for Australia. Together, these difficulties make estimating a model of yields that directly captures the effect of bond purchases unviable in the current context. 
+
+12%12%ActualCounterfactualDifference20212020201920182022-40-200bps-40-200bps  
+ 
+                                                     
+
+
+-----
+
+Model results are given in Table 7.28 
+
+28 
+
+Table 7: Linear Regressions of Monthly Changes in the 10-year AGS Yield From start 2018 to August 2020, all variables in first-difference terms, percentage points Preferred 
+Model 2 model 
+Includes Reserve 
+Bank bond holdings to Australian GDP 
+0.81*** 
+(0.12) 
+
+Model 3 
+Includes 10-year US 
+Treasury yield–OIS spread 
+0.81*** 
+(0.12) 
+
+Model 1 
+Includes 3-month 
+USD LIBOR–OIS 
+spread 
+0.79*** 
+(0.12) 
+
+0.77*** 
+(0.09) 
+
+10-year AUD OIS rate 
+
+10-year US Treasury yield 
+
+10-year US Treasury yield–OIS spread 
+
+Reserve Bank bond holdings to GDP 
+
+US Federal Reserve bond holdings to GDP 
+
+3-month BBSW–OIS spread 
+
+3-month USD LIBOR–OIS spread 
+
+No of obs 
+Adjusted R 2 
+Durbin-Watson statistic 
+Notes: 
+
+0.22*** 
+(0.08) 
+0.34 
+(0.43) 
+
+0.01 
+(0.07) 
+
+0.04** 
+(0.02) 
+0.18* 
+(0.11) 
+
+0.02 
+(0.03) 
+
+32 
+0.94 
+2.29 
+
+0.21*** 
+(0.07) 
+0.37 
+(0.43) 
+
+0.04 
+(0.06) 
+
+0.03*** 
+(0.01) 
+0.19* 
+(0.10) 
+
+32 
+0.94 
+2.36 
+
+0.20*** 
+(0.07) 
+0.35 
+(0.43) 
+
+0.04*** 
+(0.01) 
+0.20** 
+(0.10) 
+
+32 
+0.94 
+2.43 
+
+0.22*** 
+(0.06) 
+
+0.04*** 
+(0.01) 
+0.16 
+(0.10) 
+
+32 
+0.94 
+2.48 
+
+HAC  standard  errors  in  parentheses;  *,  **  and  ***  denote  statistical  significance  at  the  10,  5  and  1  per  cent  levels, respectively. Estimated zero-coupon yields were used for AGS and US Treasury yields throughout the models. 
+Authors’ calculations; Bloomberg; Federal Reserve Bank of New York; RBA; Yieldbroker 
+
+Sources: 
+
+6. 
+
+## Expected Future Short-term Rates and Term Premia
+
+So far we have focused on estimating the effect of the Reserve Bank’s bond purchases on the overall level  of  government  bond  yields.  Bond  yields  can  also  be  thought  of  as  having  two  distinct components:  the  average  short-term  interest  rate  that  is  expected  to  prevail  over  the  life  of  the bond (i.e. the expected return from investing in a series of short-term government notes over the coming ten years); and the term premium that investors demand for holding a long-term bond rather than investing in a series of shorter-term investments. Changes in expectations for future short-term interest rates give information on bond investors’ expectations of policy rates over coming years, while changes in term premia give information on the levels of interest rate risk and inflation risk that  investors  perceive,  among  other  things,  as  well  as  their  attitudes  to  these  risks.  We  would expect a bond purchase program to push down on term premia via the portfolio rebalancing channel, 
+
+28  Modelling the spread between 10-year AGS and US Treasury yields, and/or including additional explanatory variables (such as Reserve Bank bond holdings, the 10-year US OIS rate and the 3-month USD LIBOR–OIS spread) produced similar results. The additional explanatory variables that we tested were not statistically (or economically) significant in most specifications, so we did not include them in our preferred model. Although the 3-month BBSW–OIS spread fell short of statistical significance in some specifications, we have included it in our preferred model as we consider it likely that the spread had some influence on the 10-year AGS yield in the sample period. 
+
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                     
+
+
+-----
+
+while the effect on investors’ expectations for future short-term interest rates is less clear: future short-term  rate  expectations  could  be lowered  via  the signalling  channel  if  bond  purchases  were taken as a signal that policy rates would be held lower for longer than previously expected; or future short-term rate expectations could actually increase if bond purchases now were seen as supporting the economy and bringing forward the day when a higher policy rate was needed. 
+
+One cannot observe expected future short-term rates or term premia directly by looking at bond yields, since bond yields reflect the combination of both. One can, however, estimate these quantities using a model. A model that is often used for this purpose is a so-called affine term structure model, which  assumes  that  expectations  and  term  premia  (and  therefore  yields)  are  driven  by  a  few unobserved  factors.  By  estimating  those  factors,  and  the  model  parameters,  one  can  recover estimates  of  expectations  and  term  premia.  It  is  important  to  note,  however,  that  a  number  of assumptions must be made to estimate an affine term structure model, some of which may not hold, and so model outputs should be taken as indicative only. 
+
+We  use  the  model  of  Hambur  and  Finlay  (2018)  to  estimate  expected  future  short-term  interest rates and term premia.29 Figure 16 shows that the 10-year nominal bond yield fell over the first few months of 2020 and reached a low in March of that year, as fears around the health and economic impact of COVID-19 grew. The 10-year yield stayed in a relatively narrow range over the remainder of  2020,  before  increasing  in  early  2021  alongside  increasing  optimism  regarding  the  economic outlook. Underlying these movements, however, are divergent trends in estimates of expectations for future short-term rates and term premia. In particular, the onset of the crisis saw expectations of  average  future  short-term  rates  fall  substantially,  before  rebounding  in  early  2021.  The  term premium, in contrast, rose as the crisis intensified, but then fell over the remainder of 2020. These outcomes align with what might have been expected: as the crisis intensified, investors began to expect that the Reserve Bank would hold  policy rates low for many years into the future. At  the same time, the amount of risk in the economy was clearly increasing, and investors’ desire to bear that  risk  was  declining,  leading  to  higher  term  premia.  But  as  governments  and  central  banks responded to the crisis, and as effective vaccines were developed, investors became more optimistic about future prospects and so raised their expectations for average future short-term interest rates. 
+At  the  same  time  the  Reserve  Bank  undertook  substantial  purchases  of  government  bonds,  the perceived  riskiness  of  holding  bonds  fell,  and  investors’  appetite  to  bear  risk  increased,  pushing down on term premia.30 
+
+29  The model separates expectations from term premia using the time-series properties of the estimated factors (which are assumed to evolve according to the distribution under which expectations are formed) and also survey data on economists’ cash rate and inflation expectations (which do not contain term premia). 
+
+30  Term premia are also estimated to have been quite low (and sometimes negative) in the years preceding the pandemic, 
+
+and earlier bond purchase programs by other central banks are likely to have contributed to this. 
+
+  
+                                                     
+
+
+-----
+
+Figure 16: Decomposition of Nominal 10-year Yield 
+
+One  can  decompose  the  three  nominal  time  series  presented  in  Figure  16  further,  with  each composed of a real component and an inflation-compensation component. That is, expectations for average future nominal short-term rates can be thought of as comprising expectations for average future real (i.e. inflation-adjusted) short-term rates plus expectations for average future inflation, and similarly for term premia. These decompositions are shown in Figures 17 and 18, and suggest that the fall and then increase in nominal short-term interest rate expectations was largely driven by  moves  in  real  rate  expectations,  which  were  likely  to  have  been  related  to  lower  real  growth expectations  initially,  which  then  recovered.  Meanwhile,  changes  in  inflation  expectations  were similar in direction but more muted. It was also a sharp move higher in real term premia in early 2020  that  drove  nominal  term  premia  higher,  while  the  inflation  risk  premium  initially  fell  as  the perceived probability of high future inflation declined.31 Higher real term premia reflected uncertainty around future real interest rates, in turn driven by uncertainty around economic growth, while lower inflation risk premia reflected less concern around the risk of high future inflation.32 These moves were then reversed over the rest of 2020 and into 2021. 
+
+31  Part of the fall in our estimate of the inflation risk premium (and part of its subsequent reversal, at least initially) is better attributed to the  deterioration  (and subsequent  recovery) in the  function of government bond markets, the prices of which underpin our estimate. However, the continued increase in the inflation risk premium from the second half of 2020 is less attributable to this, because by that time government bond markets were again functioning fairly well. 
+
+32  Movements  in  the  equivalent  3-year  rates  and  premia  are  qualitatively  similar,  although  the  nominal  3-year  term premium rose more sharply over 2021, driven mainly by a move higher in the inflation risk premium; the expected 3-year real rate was more negative over 2020 and 2021 at around –1½ per cent; and the increase in expected inflation from the low in March 2020 was more pronounced. 
+
+202020182016201420122022-2-101234%-2-101234%ObservedyieldExpectedaverageshort-termrateTermpremium  
+ 
+                                                     
+
+
+-----
+
+Figure 17: Decomposition of Real 10-year Yield 
+
+Figure 18: Decomposition of Implied 10-year Inflation 
+
+7. 
+
+## Effects on Market Functioning
+
+Finally,  we  examine  how  bond  purchases  by  the  Reserve  Bank  affected  the  functioning  of government bond markets. The international experience suggests that central bank purchases can support good bond market function and lower liquidity premia, particularly in times of market stress. 
+This was in fact the aim of purchases by the Reserve Bank in support of market function. However, the Reserve Bank buying a large share of outstanding government bonds could, in principle, have negative effects on Australia’s government bond markets. For example, if the Reserve Bank were to buy so much of a certain bond line that it became scarce, bond dealers may become reluctant to 
+
+202020182016201420122022-2-10123%-2-10123%ObservedyieldTermpremiumExpectedaverageshort-termrate202020182016201420122022-2-10123%-2-10123%Observedbreak-eveninflationrateExpectedaverageinflationrateInflationriskpremium  
+ 
+ 
+
+
+-----
+
+offer  to  sell  that  bond  to  their  clients  for  fear  that  they  would  be  left  short.  This  could  result  in reduced bond market liquidity, and could see bid-offer spreads widen and pricing anomalies emerge. 
+Eventually, this could impair related instruments such as bond futures contracts (which are used by banks  and  corporations  to  hedge  interest  rate  risk),  it  could  diminish  the  attractiveness  of government  bond  markets  for  investors,  and  could  contribute  to  larger  liquidity  premia  for government  bonds  in  Australia  (e.g.  Han  and  Seneviratne  2018;  Blix  Grimaldi,  Crosta  and Zhang 2021). 
+
+For bonds purchased with the aim of supporting market function, there was no sign of harm. Rather, the evidence suggests that these purchases achieved their aim: bid-offer spreads and yield curve fitting  errors,  both  of  which  spiked  dramatically  higher  in  early  March  2020,  fell  as  purchases proceeded (Figures 19 and 20).33 Conversely, there is evidence that the Reserve Bank’s substantial holdings of the April 2023 and April 2024 AGS – purchased in support of the yield target – resulted in some deterioration in market function around the 3-year part of the yield curve. For example, bid-offer spreads remained very low for longer-term AGS and for semis over the second half of 2020 and through 2021, but rose to be higher than usual for shorter-term AGS, spiking in particular for the  April  2024  AGS  around  the  discontinuation  of  the  yield  target  (Figure  19).  Yield  curve  fitting errors for bonds purchased under the bond purchase program also remained within their historical range over the second half of 2020 and most of 2021, although rose for semis alongside a sharp global increase in yields in early 2021, and rose for AGS alongside an increase in global yields and the discontinuation of the yield target in late 2021 (Figure 20). 
+
+Figure 19: Bid-offer Spreads 
+
+Source: 
+
+## Yieldbroker
+
+33  See also Finlay et al (2020) for further discussion of these measures of market function, and for a broader discussion 
+
+of how bond purchases by the Reserve Bank supported government bond market function over early 2020. 
+
+AGS102030bps102030bps5-yearYieldtargetbonds10-yearSemis5-yearWAQldVicNSWMMMJJSSDD2021202020220153045bps0153045bps  
+ 
+                                                     
+
+
+-----
+
+Figure 20: Yield Curve Fitting Errors 
+Only bonds eligible for the bond purchase program, one-week moving average 
+
+Notes: 
+Sources: 
+
+Fitting errors for semis are a simple average of the states and territories. AGS series excludes the April 2024 AGS. 
+Authors’ calculations; Bloomberg 
+
+Indicators of bond futures market function suggest a similar story: the period over which purchases to  support  bond  market  function  were  undertaken  saw  mispricing  between  bonds  and  futures narrow, after having risen substantially around the onset of the pandemic, and saw more futures contracts  available  to  trade  at  the  best  available  price  (Figure  21).  Conversely,  these  measures deteriorated over 2021, particularly for the 3-year futures contract, and particularly around periods of market volatility (including early 2021 and ahead of November 2021 when the yield target was discontinued). Market contacts noted the perceived risk of the Reserve Bank discontinuing the yield target at various points through 2021, which would have seen the 3-year futures price gap lower, as well as the Reserve Bank’s substantial holdings of 3-year bonds (and an associated fall in liquidity which made hedging futures  against bonds more difficult), as contributing to the deterioration in futures  market  function,  although  other  factors  including  uncertainty  associated  with  the  rapidly changing economic outlook may also have contributed. 
+
+## MMMJJSSDD20212020202201234bps01234bpsAGSSemis
+ 
+
+
+-----
+
+Figure 21: Bond Futures Market Functioning 
+
+Note: 
+
+Sources: 
+
+(a)  One-week  moving  average.  Seasonally  adjusted  to  remove  predictable  intra-quarter  variation.  Number  of  top-of-book contracts. 
+Authors’ calculations; Bloomberg; Thomson Reuters 
+
+To formally test the effect of the Reserve Bank’s bond purchases on bid-offer spreads, we estimate the equation: 
+
+(3) 
+
+  denotes  the  average  bid-offer  spread  for  bond 
+
+where 
+  denotes  the 
+share of remaining free float of bond   purchased in week   (that is, purchases in the week divided 
+by  the  outstanding  stock  not  already  held  by  the  Reserve  Bank  at  the  beginning  of  the  week); 
+ denotes the share of the total stock of bond   held by the Reserve Bank at the beginning 
+
+  in  week 
+
+; 
+
+of week  ; and 
+
+ and 
+
+ are bond and time fixed effects. 
+
+We estimate this equation for AGS and semis purchased in support of market functioning and under the bond purchase program (using issuer fixed effects instead of bond fixed effects in the case of 
+
+12itititititypurchasesholdingsbvityititpurchasesititholdingsitibtvBondfuturesmarketdepth(a)1020’00012’0003-year10-year(LHS)(RHS)SpreadbetweenbondsandfuturesMMMJJSSDD202120202022-8-4048bps-6-3036bps  
+ 
+ 
+ 
+
+
+-----
+
+Yield target purchases 
+
+0.44*** 
+(0.01) 
+
+0.53*** 
+(0.01) 
+
+2.89*** 
+(0.24) 
+
+Bond 
+132 
+0.23 
+
+35 
+
+semis), and also estimate a similar equation for purchases in support of the yield target, but in this case dropping time fixed effects in favour of a dummy to denote weeks in which the stock lending fee charged for borrowing April 2023 AGS and April 2024 AGS from the Reserve Bank was elevated. 
+Results are presented in Table 8. 
+
+Table 8: Effect on Bid-offer Spreads of Bond Purchases/Holdings Spreads in basis points, purchases/holdings are shares in tens of percentage points 
+
+Market functioning purchases 
+
+AGS 
+–1.61*** 
+(0.36) 
+
+–0.53 
+(0.33) 
+
+Semis 
+–3.28** 
+(1.48) 
+
+–2.00* 
+(1.10) 
+
+Bond purchase program 
+Semis 
+AGS 
+–1.57 
+0.23* 
+(1.30) 
+(0.12) 
+
+0.18*** 
+(0.07) 
+
+–0.67 
+(0.49) 
+
+Purchases of free float in the week 
+
+Holdings of total stock at the start of the week 
+
+Dummy for elevated stock lending fee 
+
+Fixed effects 
+No of obs 
+Adjusted R 2 
+Notes: 
+
+Bond and time 
+112 
+0.81 
+
+Issuer and time 
+425 
+0.66 
+
+Bond and time 
+1,098 
+0.78 
+
+Issuer and time 
+2,802 
+0.03 
+
+HAC  standard  errors  in  parentheses;  *,  **  and  ***  denote  statistical  significance  at  the  10,  5  and  1  per  cent  levels, respectively. For market functioning purchases, the sample is from 20 March 2020 to 6 May 2020; for the bond purchase program, it is from 5 November 2020 to 10 February 2022; for yield target purchases, it is from 5 August 2020 to 2 November 2021. Bonds issued by Tasmania and the two territories are excluded. 
+Austraclear; Australian Office of Financial Management; Authors’ calculations; RBA; Yieldbroker 
+
+Sources: 
+
+We find that purchases in support of market function led to lower bid-offer spreads, as intended. In particular, for each 10 percentage points of the free float of an AGS purchased to support market function, the bid-offer spread of that bond narrowed by 1.6 basis points, while for semis the effect was larger at 3.3 basis points. Additionally, a 10 percentage point higher share of the outstanding stock of a semis bond line by the Reserve Bank was associated with the bid-offer spread on that bond  being  2  basis  points  narrower,  perhaps  because  higher  Reserve  Bank  holdings  during  the period of market dysfunction in early 2020 were associated with less of a supply overhang on dealer balance sheets for those bond lines. 
+
+For the bond purchase program and yield target, however, we find that AGS purchases led to wider bid-offer spreads. For AGS purchased under the bond purchase program, each 10 percentage points of purchases of the free float was associated with bid-offer spreads being 0.2 basis points wider, and similarly each 10 percentage points of holdings of the outstanding stock was associated with bid-offer spreads being 0.2 basis points wider. For AGS purchased to support the yield target, each 
+10  percentage  points  of  purchases  was  associated  with  bid-offer  spreads  being  0.4  basis  points wider, while each 10 percentage points of bond holdings was associated with bid-offer spreads being 0.5 basis points wider. We also find that an elevated stock lending fee led to higher bid-offer spreads, which is unsurprising as a higher fee makes intermediation by bond dealers more costly.34 
+
+34  As discussed earlier, however, increasing the stock lending fee tended to lower the 3-year AGS yield, thereby obviating the need for additional bond purchases, which would have reduced the free float of bonds and increased bid-offer spreads. 
+
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                     
+
+
+-----
+
+For semis purchased under the bond purchase program, there was no statistically significant effect of purchases on bid-offer spreads. Taken together, the results above suggest that in the already liquid AGS market, the Reserve Bank removing bonds from the market outside of periods of stress can lead to a rise in bid-offer spreads as bonds become more difficult to source. Conversely, for the less liquid semis market, the existence of a regular buyer in the form of the Reserve Bank offsets any negative impact from less bonds being available to the wider market. 
+
+  in  week 
+
+  instead 
+We  also  replicate  the  above  analysis  for  turnover  in  place  of  bid-offer  spreads,  with denoting  the  log  of  the  average  turnover  in  bond 
+,  using  turnover  data  for  trades processed through the Yieldbroker platform. Although these trades represent only a part of trading activity for AGS and semis, our results will be informative if the sample is representative of trading in the wider market. Results are presented in Table 9. For market function purchases and purchases under the bond purchase program, we find no statistically significant effect of purchases or holdings on turnover. For yield target purchases, by contrast, we find that turnover increases significantly in weeks when the Reserve Bank makes purchases, but that higher Reserve Bank holdings ultimately result in less secondary market turnover. 
+
+Table 9: Effect on Turnover of Bond Purchases/Holdings 
+Turnover in log terms, purchases/holdings are shares in tens of percentage points 
+
+Market functioning purchases 
+
+AGS 
+0.13 
+(0.43) 
+
+0.10 
+(0.36) 
+
+Semis 
+0.90 
+(0.67) 
+
+–0.52 
+(0.37) 
+
+Bond purchase program 
+Semis 
+AGS 
+0.32 
+–0.03 
+(0.60) 
+(0.25) 
+
+–0.08 
+(0.11) 
+
+–0.03 
+(0.11) 
+
+Purchases of free float in the week 
+
+Holdings of total stock at the start of the week 
+
+Dummy for elevated stock lending fee 
+
+Fixed effects 
+No of obs 
+Adjusted R 2 
+Notes: 
+
+Bond and time 
+112 
+0.28 
+
+Issuer and time 
+384 
+0.35 
+
+Bond and time 
+1,098 
+0.39 
+
+Issuer and time 
+2,639 
+0.19 
+
+HAC  standard  errors  in  parentheses;  *,  **  and  ***  denote  statistical  significance  at  the  10,  5  and  1  per  cent  levels, respectively. For market functioning purchases, the sample is from 20 March 2020 to 6 May 2020; for the bond purchase program,  it  is  from  5  November  2020  to  10  February  2022;  for  yield  target  purchases,  it  is  from  5  August  2020  to 
+2 November 2021. Bonds issued by Tasmania and the two territories are excluded. 
+Austraclear; Australian Office of Financial Management; Authors’ calculations; RBA; Yieldbroker 
+
+Sources: 
+
+Finally,  by  regressing  the  log  change  in  the  weekly  average  number  of  3-year  futures  contracts available to trade at the best price on weekly yield target purchases, we find that each 10 percentage points of purchases of the free float across either the April 2023 or April 2024 bond is associated with a 36 per cent fall in the number of futures contracts available to trade, significant at the 1 per cent level. Similarly, regressing average weekly mispricing between 3-year bonds and 3-year futures on weekly yield target purchases, yield target bond holdings and the stock lending fee suggests that each  10  percentage  points  of  bond  purchases  is  associated  with  a  0.4  basis  point  increase  in 
+
+Yield target purchases 
+
+0.93*** 
+(0.27) 
+
+–0.27*** 
+(0.07) 
+
+0.17 
+(0.42) 
+
+Bond 
+132 
+0.09 
+
+ityit  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+-----
+
+bond-futures  mispricing,  while  an  elevated  stock  lending  fee  is  associated  with  a  1  basis  point increase in bond-futures mispricing, both significant at the 1 per cent level.35 
+
+8. 
+
+## Conclusion
+
+In this paper we assess the effect of three Reserve Bank policy measures involving government bond purchases: purchases in support of government bond market function conducted between March and  May  2020;  purchases  in  support  of  the  yield  target  conducted  from  August  2020  until October 2021,  and  purchases  aimed  at  lowering  longer-term  yields  conducted  under  the  bond purchase program from November 2020 until February 2022. 
+
+We find that the announcement of purchases in support of market function saw a reduction in the yields on shorter-dated AGS of 10 to 20 basis points, but that there was no decline in longer-dated AGS yields or in the spreads of semis yields to AGS. The actual purchases had an additional yield effect, with each percentage point of the free float of AGS purchased estimated to have reduced yields  by  up  to  around  1½  basis  points,  and  each  percentage  point  of  the  free  float  of  semis purchased estimated to have reduced semis spreads by up to around ½ basis point. These purchases were not designed to lower yields, however. Rather, they were designed to support market function, and the evidence suggests that they achieved this: bid-offer spreads fell as purchases proceeded, and various measures of futures market function improved. 
+
+For the yield target, we find a significant announcement effect on the 3-year AGS yield, in the order of 15 to 25 basis points. However, the policy announcement was not enough by itself to keep the 3-year  yield  consistently  at  the  target,  especially  given  how  uncertain  and  rapidly  changing  the economic outlook was over the period. Occasional bond purchases were required to reinforce the target. Purchases did have an effect on yields, of around 1 basis point per $1 billion purchased, or 0.2  basis  points  per  percentage  point  of  free  float  purchased,  although  this  effect  appeared  to dissipate  over  time.  Yield  target  purchases  led  to  wider  bid-offer  spreads  and  are  likely  to  have contributed to some reduction in the functioning in the 3-year futures contract for a time. 
+
+Our best estimate is that the bond purchase program reduced longer-term AGS yields by around 
+30 basis  points  leading  up  to  and  on  the  announcement  of  the  program,  while  the  additional implementation  effect  from  purchases  appears  to  have  been  be  small  and  temporary.  Purchases under the program were associated with a small widening in bid-offer spreads. 
+
+35  Note that we use a log differences specification for the first regression as the number of futures contracts available to trade appears to be non-stationary, while we use a levels specification for the bond-futures mispricing regression as that variable is stationary. Note also that we control for predictable intra-quarter variation, due to the futures expiry cycle, in both regressions. We do not attempt similar regressions for purchases to support market function or purchases under the bond purchase program, as those programs had much less week-to-week variation in purchases, making identification of any effect more difficult. 
+
+  
+                                                     
+
+
+-----
+
+## References
+
+38 
+
+Arrata W and B Nguyen (2017), ‘Price Impact of Bond Supply Shocks: Evidence from the Eurosystem’s Asset Purchase Program’, Banque de France Working Paper 623. 
+
+Bailey A, J Bridges, R Harrison, J Jones and A Mankodi (2020), ‘The Central Bank Balance Sheet as a Policy Tool: Past, Present and Future’, Paper prepared for the Federal Reserve Bank of Kansas City Economic Policy  Symposium  on  ‘Navigating  the  Decade  Ahead:  Implications  for  Monetary  Policy’,  Jackson  Hole, 27–28  August.  Available  at  <https://www.bankofengland.co.uk/-/media/boe/files/paper/2020/the-central-bank-balance-sheet-as-a-policy-tool-past-present-and-future.pdf?la=en&h>. 
+
+Bank  of  England’s  Independent Evaluation Office  (2021),  ‘IEO  Evaluation  of  the  Bank  of  England's Approach  to  Quantitative  Easing’,  January.  Available  at  <https://www.bankofengland.co.uk/independent-evaluation-office/ieo-report-january-2021/ieo-evaluation-of-the-bank-of-englands-approach-to-quantitative-easing>. 
+
+Blix Grimaldi M, A Crosta and D Zhang (2021), ‘The Liquidity of the Government Bond Market – What Impact  Does  Quantitative  Easing  Have?  Evidence  from  Sweden’,  Sveriges  Riksbank  Working  Paper Series No 402. 
+
+CGFS (Committee on the Global Financial System) (2019), Unconventional Monetary Policy Tools: A Cross-Country Analysis, CGFS Papers No 63, Bank for International Settlements, Basel. 
+
+Christensen JHE and S Krogstrup (2019), ‘Transmission of Quantitative Easing: The Role of Central Bank Reserves’, The Economic Journal, 129(617), pp 249–272. 
+
+D’Amico S and T King (2013), ‘Flow and Stock Effects of Large-Scale Treasury Purchases: Evidence on the Importance of Local Supply’, Journal of Financial Economics, 108(2), pp 425–448. 
+
+De Santis RA and F Holm-Hadulla (2020), ‘Flow Effects of Central Bank Asset Purchases on Sovereign Bond  Prices:  Evidence  from  a  Natural  Experiment’,  Journal  of Money,  Credit  and Banking,  52(6), pp 1467–1491. 
+
+Debelle G (2021), ‘Monetary Policy during COVID’, Shann Memorial Lecture, Online, 6 May. 
+
+Eser F, W Lemke, K Nyholm, S Radde and AL Vladu (2019), ‘Tracing the Impact of the ECB’s Asset Purchase Programme on the Yield Curve’, European Central Bank Working Paper Series No 2293. 
+
+Finlay  R,  C  Seibold  and  M  Xiang  (2020),  ‘Government  Bond  Market  Functioning  and  COVID-19’, RBA Bulletin, September. 
+
+Fisher RA (1925), Statistical Methods for Research Workers, Oliver and Boyd, Edinburgh. Internet resource available at <http://psychclassics.yorku.ca/Fisher/Methods/>. 
+
+Gagnon JE (2016), ‘Quantitative Easing: An Underappreciated Success’, Peterson Institute for International Economics Policy Brief No PB16-4. 
+
+Gorodnichenko Y and W Ray (2017), ‘The Effects of Quantitative Easing: Taking a Cue from Treasury Auctions’, NBER Working Paper 24122, rev March 2018. 
+
+  
+
+
+-----
+
+Hambur J and R Finlay (2018), ‘Affine Endeavour: Estimating a Joint Model of the Nominal and Real Term Structures of Interest Rates in Australia’, RBA Research Discussion Paper No 2018-02. 
+
+Han F and D Seneviratne (2018), ‘Scarcity Effects of Quantitative Easing on Market Liquidity: Evidence from the Japanese Government Bond Market’, IMF Working Paper No WP/18/96. 
+
+Ihrig J, E Klee, C Li, M Wei and J Kachovec (2018), ‘Expectations about the Federal Reserve’s Balance Sheet and the Term Structure of Interest Rates’, International Journal of Central Banking, 14(2), pp 341–390. 
+
+Kawamoto T, T Nakazawa, Y Kishaba, K Matsumura and J Nakajima (2021), ‘Estimating Effects of Expansionary Monetary Policy since the Introduction of Quantitative and Qualitative Monetary Easing (QQE) Using the Macroeconomic Model (Q-JEM)’, Bank of Japan Working Paper Series No 21-E-4. 
+
+Krishnamurthy A and A Vissing-Jorgensen (2012), ‘The Aggregate Demand for Treasury Debt’, Journal of Political Economy, 120(2), pp 233–267. 
+
+Li C and M Wei (2013), ‘Term Structure Modeling with Supply Factors and the Federal Reserve’s Large- Scale Asset Purchase Programs’, International Journal of Central Banking, 9(1), pp 3–39. 
+
+Lowe  P  (2021),  ‘The  Recovery,  Investment  and  Monetary  Policy’,  Keynote  address  to  the  AFR  Business Summit, Sydney, 10 March. 
+
+Lucca DO and JH Wright (2022), ‘The Narrow Channel of Quantitative Easing: Evidence from YCC Down Under’, Federal Reserve Bank of New York Staff Report No 1013. 
+
+RBA (Reserve Bank of Australia) (2020a), ‘Statement by Philip Lowe, Governor’, Media Release No 2020-07, 
+16 March. 
+
+RBA (2020b), ‘Statement by Philip Lowe, Governor: Monetary Policy Decision’, Media Release No 2020-08, 
+19 March. 
+
+RBA (2020c), Statement on Monetary Policy, November. 
+
+RBA (2021), Statement on Monetary Policy, May. 
+
+Schnabel I (2021),  ‘Asset  Purchases:  From  Crisis  to  Recovery’,  Keynote  speech  at  the  Annual  Economic Conference of Latvijas Banka on ‘Sustainable Economy in Times of Change’, Online, 20 September. 
+
+Vayanos  D  and  J-L  Vila  (2021),  ‘A  Preferred-Habitat  Model  of  the  Term  Structure  of  Interest  Rates’, Econometrica, 89(1), pp 77–112. 
+
+  
+
+
+-----

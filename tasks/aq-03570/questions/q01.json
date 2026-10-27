@@ -1,0 +1,96 @@
+{
+  "question": "How many days on average separated consecutive comment letters that the Sierra Club signed on the SEC's fund ESG disclosure proposal through April 2024?",
+  "number_of_asks": 1,
+  "gold_answer": "203 days",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 1, date line, heading and footnote 1): the Sierra Club's supplemental comments of November 1, 2022 are filed on both the climate risk disclosure rule and the ESG disclosure rule (File Nos. S7-10-22 and S7-17-22). Footnote 1 says its comments on the ESG disclosure rule were submitted on August 16, 2022. That earlier letter is not among the documents, but it is the Sierra Club's own letter on this proposal, so it is the first one and the November letter is the second.\n\nStep 2. Source input (Doc 7, date line, subject line and opening paragraph): the Sierra Club wrote again on October 19, 2023 about the same proposal, File No. S7-17-22. It calls that letter a supplement to the comments it submitted on August 16, 2022 and does not mention the November letter.\n\nStep 3. Source input (Doc 12, date line, subject line, opening paragraph and signature block): the letter of April 16, 2024 on the same proposal comes from Americans for Financial Reform Education Fund and the organizations signed below it. The Sierra Club is one of those signers, so this is a fourth letter that it signed.\n\nStep 4. Application (Doc 1, Doc 7 and Doc 12): together these documents show four letters signed by the Sierra Club on this proposal through April 2024. In date order they are August 16, 2022, then November 1, 2022, then October 19, 2023, then April 16, 2024, which leaves three gaps between one letter and the next. Counting only the letters that are themselves among the documents drops the first, and counting only the Sierra Club's own letters drops the last.\n\nStep 5. Calculation (Doc 1 and Doc 7): August has 31 days, so after August 16 it has this many left: 31 - 16 = 15\n\nStep 6. Calculation (Doc 1 and Doc 7): the first gap, adding September, October and November 1: 15 + 30 + 31 + 1 = 77\n\nStep 7. Calculation (Doc 1 and Doc 7): days from November 1, 2022 to October 1, 2023, taking the months from November to September in turn: 30 + 31 + 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 = 334\n\nStep 8. Calculation (Doc 1 and Doc 7): days from October 1 to October 19: 19 - 1 = 18\n\nStep 9. Calculation (Doc 1 and Doc 7): the second gap, from November 1, 2022 to October 19, 2023: 334 + 18 = 352\n\nStep 10. Calculation (Doc 7 and Doc 12): October has 31 days, so after October 19 it has this many left: 31 - 19 = 12\n\nStep 11. Calculation (Doc 7 and Doc 12): 2024 is a leap year, so the days in its February are: 28 + 1 = 29\n\nStep 12. Calculation (Doc 7 and Doc 12): the third gap, adding November, December, January, February, March and 16 days of April: 12 + 30 + 31 + 31 + 29 + 31 + 16 = 180\n\nStep 13. Calculation (Doc 1, Doc 7 and Doc 12): the three gaps together, in days: 77 + 352 + 180 = 609\n\nStep 14. Final answer (Doc 1, Doc 7 and Doc 12): the average gap between consecutive letters, in days: 609 / 3 = 203",
+  "answer_components": [
+    "203 days"
+  ],
+  "evidence": [
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "November 1, 2022"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Supplemental Comments by the Sierra Club on Proposed Climate Risk Disclosure Rule and ESG Disclosure Rule (File Nos. S7-10-22 and S7-17-22)"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "our comments on the ESG disclosure rule were submitted on August 16, 2022"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "October 19, 2023"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "Governance Investment Practices, File No. S7-17-22"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "This letter supplements the comments we submitted on August 16, 2022."
+    },
+    {
+      "document_number": 12,
+      "component_number": 1,
+      "quote": "April 16, 2024"
+    },
+    {
+      "document_number": 12,
+      "component_number": 1,
+      "quote": "Re: Enhanced Disclosures by Certain Investment Advisers and Investment Companies about Environmental, Social, and Governance (ESG) Investment Practices"
+    },
+    {
+      "document_number": 12,
+      "component_number": 1,
+      "quote": "Americans for Financial Reform Education Fund and the below-signed organizations appreciate the opportunity to comment on the proposal"
+    },
+    {
+      "document_number": 12,
+      "component_number": 1,
+      "quote": "Seventh Generation Interfaith Coalition for Responsible Investment Sierra Club"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        7
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        12
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: the first letter (August 16, 2022) appears only in Doc 1's footnote 1 and Doc 7's opening, the last only as a signature in Doc 12. Dropping the first gives 266 days, dropping the last 214.5; all four letters give 203."
+}

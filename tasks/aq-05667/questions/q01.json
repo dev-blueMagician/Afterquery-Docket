@@ -1,0 +1,54 @@
+{
+  "question": "What was Sherwin-Williams' actual 2025 increase in interest expense minus the increase it had anticipated for that year in its annual report for 2024, in millions of dollars to one decimal place?",
+  "number_of_asks": 1,
+  "gold_answer": "-10.7",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 3, outlook for 2025): Doc 3 expects Interest expense to increase by approximately 40 million dollars in 2025, from refinancing at higher interest rates the long-term debt maturities due in 2025, together with those refinanced during 2024.\nStep 2. Source input (Doc 3, same outlook paragraph, next sentence): \"In addition\", Doc 3 expects about 100 million dollars of additional costs in 2025 from the transition into the new global headquarters and R&D center, which include about 80 million dollars of selling, general and administrative expenses and about 20 million dollars of Interest expense.\nStep 3. Calculation (Doc 3): the increase in Interest expense anticipated for 2025 is the refinancing rise plus the headquarters interest: 40 + 20 = 60 million dollars (derived).\nStep 4. Source input (Doc 7, results of operations for 2025): Doc 7 states that Interest expense \"increased $49.3 million in 2025 compared to 2024\", partly from interest related to the new global headquarters and R&D center, both placed into service in 2025.\nStep 5. Final answer (Doc 3 and Doc 7): actual increase minus anticipated increase: 49.3 - 60 = -10.7 million dollars.",
+  "answer_components": [
+    "-10.7"
+  ],
+  "evidence": [
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Together with the long-term debt maturities refinanced during 2024, Interest expense is expected to increase by approximately $40 million in 2025."
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "In addition, we expect to incur additional costs associated with the transition into our new global headquarters and research and development (R&D) center in 2025 of approximately $100 million, which includes approximately $80 million of Selling, general and administrative expenses and approximately $20 million of Interest expense."
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "Interest expense increased $49.3 million in 2025 compared to 2024 primarily due to an increase in long-term debt, interest expense related to the new global headquarters and research and development center which were both placed into service in 2025"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        7
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Part vs total: Doc 3's 2025 outlook prints a $40 million interest-expense rise, then adds \"In addition\" about $20 million of headquarters interest. Using $40 million alone gives +9.3. The anticipated total is $60 million; Doc 7's actual rise is $49.3 million, so -10.7."
+}

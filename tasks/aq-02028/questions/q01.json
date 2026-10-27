@@ -1,0 +1,102 @@
+{
+  "question": "On the WA coastal-trading exemption's last day, what was the mean stevedore infrastructure surcharge per full import container across the 13 container terminals at Adelaide, Brisbane, Fremantle, Melbourne and Sydney, to the nearest cent?",
+  "number_of_asks": 1,
+  "gold_answer": "$117.39",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 6, section on a permanent coastal trading exemption): the Federal government's section 11 exemption of the Coastal Trading (Revitalising Australian Shipping) Act 2012 for voyages by container and roll-on, roll-off vessels to Western Australia applied until 31 March 2022, so its last day was 31 March 2022.\n\nStep 2. Source fact (Doc 2, Attachment A title, header and narrative): the national stevedore infrastructure surcharges are listed per full container, excluding GST, as at 25 January 2022, in columns for stevedore, port, export, import and effective date. Doc 2's text says the latest increases by Patrick Terminals are shown on the right-hand side and will be implemented on 1 March 2022.\n\nStep 3. Source fact (Doc 2, Attachment A rows with no later rate): the import surcharge per full container was $100.00 at AAT Brisbane (effective 1-Jul-21), $128.90 at DP World Australia Brisbane (1-Jan-22), $133.08 at Hutchison Ports Brisbane (1-Mar-21), $45.00 at DP World Australia Fremantle (1-Jan-21), $144.70 at DP World Australia Melbourne (1-Jan-22), $141.80 at VICT Melbourne (1-Jan-22), $131.60 at DP World Australia Sydney (1-Jan-22) and $135.65 at Hutchison Ports Sydney (1-Mar-21). None of these rows lists a later rate.\n\nStep 4. Source fact (Doc 2, Attachment A Patrick rows): Patrick's import surcharge from 1-Mar-21 was $113.20 at Brisbane, $53.85 at Fremantle, $129.50 at Melbourne and $117.85 at Sydney. Each Patrick row adds a right-hand import rate dated 7/03/2022: 135.85 at Brisbane, 57.69 at Fremantle, 155.40 at Melbourne and 141.45 at Sydney.\n\nStep 5. Source fact (Doc 2, Attachment A Flinders Adelaide Container Terminal row): the import surcharge was $75.00 from 1-Jul-21, with a right-hand import rate of 112.50 dated 1/04/2022.\n\nStep 6. Date check (from Steps 1, 2, 4 and 5; Doc 6 and Doc 2): Doc 2 writes these dates day first, since its text puts Patrick's increases in March (1 March 2022) while the table dates them 7/03/2022. Patrick's increases had taken effect by 31 March 2022, so that day its import rates were 135.85, 57.69, 155.40 and 141.45. The Flinders Adelaide increase starts on 1/04/2022, the day after 31 March 2022, so that terminal still charged $75.00.\n\nStep 7. Count (from Steps 3 to 5; Doc 2): the table lists 1 terminal at Adelaide, 4 at Brisbane, 2 at Fremantle, 3 at Melbourne and 3 at Sydney: 1 + 4 + 2 + 3 + 3 = 13 terminals.\n\nStep 8. Calculation (from Steps 3, 5 and 6; Doc 2): sum of the import rates in force that day, in the table's order (Adelaide; Brisbane AAT, DP World, Hutchison, Patrick; Fremantle DP World, Patrick; Melbourne DP World, Patrick, VICT; Sydney DP World, Hutchison, Patrick): 75.00 + 100.00 + 128.90 + 133.08 + 135.85 + 45.00 + 57.69 + 144.70 + 155.40 + 141.80 + 131.60 + 135.65 + 141.45 = $1,526.12.\n\nStep 9. Calculation (from Steps 7 and 8; Doc 2 and Doc 6): mean import surcharge = 1,526.12 / 13 = $117.39 (to the nearest cent).",
+  "answer_components": [
+    "$117.39"
+  ],
+  "evidence": [
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "for voyages by container and roll-on, roll-off vessels to Western Australia until 31 March 2022"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "INFRASTRUCTURE SURCHARGES - AS AT 25 January 2022 per full container / excluding GST"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "STEVEDORE PORT EXPORT IMPORT EFFECTIVE"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "the latest increases in charges by Patrick Terminals are highlighted on the right-hand side which will be implemented on 1 March 2022"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Flinders Adelaide Container Terminal Adelaide $75.00 $75.00 1-Jul-21 79.50 112.50 1/04/2022 Australian Amalgamated Terminals (AAT) Brisbane $78.00 $100.00 1-Jul-21 DP World Australia Brisbane $105.90 $128.90 1-Jan-22"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Hutchison Ports Brisbane $133.08 $133.08 1-Mar-21"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Patrick Brisbane $84.90 $113.20 1-Mar-21 101.90 135.85 7/03/2022 DP World Australia Fremantle $45.00 $45.00 1-Jan-21"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Patrick Fremantle $26.92 $53.85 1-Mar-21 28.84 57.69 7/03/2022 DP World Australia Melbourne $105.90 $144.70 1-Jan-22"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Patrick Melbourne $84.90 $129.50 1-Mar-21 101.90 155.40 7/03/2022 Victoria International Container Terminal (VICT) Melbourne $141.80 $141.80 1-Jan-22 DP World Australia Sydney $105.90 $131.60 1-Jan-22"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Hutchison Ports Sydney $135.65 $135.65 1-Mar-21"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Patrick Sydney $84.90 $117.85 1-Mar-21 101.90 141.45 7/03/2022"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Used to identify",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Superseded date or version",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    },
+    {
+      "trap": "Out-of-range period",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    },
+    {
+      "trap": "Document convention",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Doc 2's surcharge table shows 25 January 2022 rates, averaging $111.55. Doc 6 dates the exemption's last day to 31 March 2022: Patrick's 7/03/2022 rises apply, Adelaide's 1/04/2022 rise does not ($120.28 if applied). Reading those dates month-first gives $114.43. Correct mean: $117.39."
+}

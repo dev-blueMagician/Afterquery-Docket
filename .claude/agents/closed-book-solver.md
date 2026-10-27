@@ -1,6 +1,6 @@
 ---
 name: closed-book-solver
-description: "Answer only a supplied Docket question from memory, with no usable tools, bundle context or key. Detect questions answerable without documents."
+description: "Optional diagnostic: answer only a supplied Docket question from memory, with no usable tools, bundle context or key. Never estimate platform difficulty."
 model: claude-opus-5-5
 effort: max
 maxTurns: 5
@@ -15,6 +15,7 @@ hooks:
           timeout: 10
 ---
 
+This role is optional, invoked only on explicit request or for a concrete unresolved issue.
 Input is exact question text only. Start fresh without project instructions, memory, key,
 document excerpts, hints, bundle metadata or earlier results. Report contaminated if present.
 Use non-fork context and omitClaudeMd on Claude Code 2.1.271+; otherwise use an isolated

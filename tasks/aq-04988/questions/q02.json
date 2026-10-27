@@ -1,0 +1,84 @@
+{
+  "question": "What is the largest percentage fall in a country's mean salt intake between two whole-country 24-hour urine surveys? Answer to one decimal place.",
+  "number_of_asks": 1,
+  "gold_answer": "16.7%",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 7, table of countries with reported data on change in mean salt intake): the rows whose assessment method is 24-hour urine are Argentina, Australia, Fiji, Finland, Italy, the Netherlands, Samoa, Slovenia, Switzerland, Turkey and the United Kingdom.\nStep 2. Source input (Doc 7, same table and its footnote): the Australian row (Victoria) and the Finnish rows (Kuopio area, North Karelia, Southwestern Finland) carry the mark for \"Change in salt intake measured at the subnational level\", so they are not pairs of whole-country surveys. The other urine rows carry no mark.\nStep 3. Source input (Doc 7, Argentina row): mean salt intake fell from 11.2 g a day to 9.2 g a day, the largest fall among the unmarked urine rows.\nStep 4. Source input (Doc 9, surveillance table and discussion): Argentina's salt intake measurement by this method is listed as a \"Regional survey\", the discussion says \"Argentina and South Africa conducted regional surveys to measure salt intake using 24-h urines\", and only Mongolia had a national measure by this method at baseline. So Argentina's urine pair in Doc 7 is not a pair of whole-country surveys, and it is left out.\nStep 5. Source input (Doc 7, Turkey row): mean salt intake fell from 18.0 g a day to 15.0 g a day; the row carries no subnational mark.\nStep 6. Calculation (Doc 7): 18.0 - 15.0 = 3.0 (Turkey's fall in grams of salt a day, derived).\nStep 7. Calculation (Doc 7): 3.0 / 18.0 = 16.7% (Turkey's fall as a share of its first survey's intake, derived and expressed as a percentage).\nStep 8. Source input (Doc 7, remaining unmarked urine rows): Fiji, Italy, the Netherlands, Samoa, Slovenia, Switzerland and the United Kingdom all show smaller falls than Turkey's, or rises.\nStep 9. Final answer (Doc 7 and Doc 9): the largest fall between two whole-country 24-hour urine surveys is Turkey's, 16.7% to one decimal place.",
+  "answer_components": [
+    "16.7%"
+  ],
+  "evidence": [
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "Countries with reported data on change in mean salt intake over time"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "|Turkey (35)|2008–2012|24-hour urine|18.0g to 15.0g; −17%|"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "|Argentina (18)|2011–2015|24-hour urine|11.2g to 9.2g; −18%|"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "|Australia1 (19)|2011–2014|24-hour urine|Victoria|"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "|Finland1 (20, 24)|1979–1987|24-hour urine|Kuopio area|"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "Change in salt intake measured at the subnational level."
+    },
+    {
+      "document_number": 9,
+      "component_number": 1,
+      "quote": "|Argentina|Regional survey (24 h urine)11 g (2011)(38)|"
+    },
+    {
+      "document_number": 9,
+      "component_number": 1,
+      "quote": "Of the four countries, only Mongolia had a national measure of salt intake based on this method at baseline."
+    },
+    {
+      "document_number": 9,
+      "component_number": 1,
+      "quote": "Argentina and South Africa conducted regional surveys to measure salt intake using 24-h urines, while Vietnam had a national survey but used spot urines."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        7
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        9
+      ],
+      "role": "Exclusion / condition source",
+      "reviewer_note": "Doc 9 shows Argentina's 24-hour urine surveys were regional, ruling out Argentina's 11.2 to 9.2 g pair (17.9%), which Doc 7's table lists without a subnational mark."
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Wrong jurisdiction or scope",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    }
+  ],
+  "why_these_are_traps": "Wrong jurisdiction or scope: Doc 7's salt-intake table lists Argentina's 24-hour urine pair, 11.2 to 9.2 g, without a subnational mark, so a careless solver answers 17.9%. Doc 9 says Argentina's urine surveys were regional; the largest whole-country pair left, Turkey's 18.0 to 15.0 g, gives 16.7%."
+}

@@ -1,0 +1,853 @@
+keystone.com 1
+MASTERCARD SUBMISSION
+TO THE NZCC
+Prepared for: Mastercard
+
+May 21, 2026 2
+Table of Contents
+1.0 Executive summary.................................................................................................... 3 2.0 Overview of commercial card networks and their role in sustaining the B2B payment ecosystem............................................................................................................. 5 2.1 Commercial card networks operate within multi-party networks in which interchange sustains participation .................................................................................................................. 6 Figure 1: Flow of fees in a four-party network ........................................................................... 8 2.2 Commercial cards generate significant economic and operational benefits to both cardholders and merchants....................................................................................................... 10 3.0 Commercial card interchange in New Zealand: the case for a distinct, contextspecific assessment .......................................................................................................... 17 3.1 New Zealand’s economic structure makes commercial cards particularly important for SME liquidity and resilience ................................................................................................ 18 3.2 Commercial cards exhibit distinct economic characteristics relative to consumer cards .......................................................................................................................................... 20 4.0 Competitive dynamics and alternatives in the B2B payments ecosystem ......... 25 4.1 Commercial cards operate within a broader B2B payments ecosystem ..................... 25 4.2 B2B payments are characterised by dynamic competition and ongoing innovation . 28 4.3 Flexible, unregulated interchange maintains competitive neutrality between fourparty networks and three-party networks................................................................................. 31 5.0 The role of interchange fees in sustaining participation and investment in commercial cards............................................................................................................... 32 5.1 Commercial card networks are two-sided platforms in which pricing affects participation on both sides........................................................................................................ 33 5.2 Interchange fees play a key role in shaping participation incentives in commercial cards .......................................................................................................................................... 34 5.3 International best practice broadly supports maintaining flexibility for commercial cards interchange ...................................................................................................................... 41 Appendix............................................................................................................................. 45 Table 1: Commercial Card Benefits for Cardholders and Merchants ..................................... 45
+
+May 21, 2026 3
+1.0 Executive summary
+1. This submission has been prepared by Keystone on behalf of Mastercard to support engagement with the New Zealand Commerce Commission (NZCC) in the context of its review of the market for commercial cards in New Zealand. It provides an economic assessment grounded in publicly available evidence, Mastercard internal information, and established principles of platform economics.
+
+2. Keystone (www.Keystone.com) is an economic and strategy consulting firm with offices in the US and London, which focuses on competition matters in tech markets. This report has been authored by Dr Andrea Coscelli, Senior Partner and former Chief Executive Officer of the UK Competition and Markets Authority, Dr George Charlson, Senior Engagement Manager, Francesca Montrasio, Engagement Manager and Paripoorna Baxi, Consultant.
+
+3. Commercial cards are an important component of the B2B payments ecosystem.1 They are used by businesses and public sector entities across a wide range of purchasing contexts, including procurement, supplier payments, travel and entertainment, and online transactions. Commercial cards operate within organised card networks2that coordinate multiple participants whose decisions are interdependent. Four-party card networks (such as Mastercard or Visa) are comprised of cardholders, merchants, issuers and acquirers.
+
+3
+In the case of commercial cards, the “cardholder” is the buyer business while the supplier business is the card-accepting merchant.
+In four-party networks,
+4 the interchange fee reallocates value between the issuing and acquiring sides of the platform and is a component of the merchant service fee (MSF).
+
+5
+1 We define commercial cards as business or corporate debit, credit or prepaid cards that are issued to businesses or their employees for business expenses. See European Parliament & Council, “Regulation (EU) 2015/751 of the European Parliament and of the Council of 29 April 2015 on interchange fees for card-based payment transactions,” (19 May 2015), available at https://eur-lex.europa.eu/eli/reg/2015/751/oj/eng.
+2 Card networks refer to the card payment organisations that regulate and control activity on the payment network, such as Visa and Mastercard. This is the term used by the Reserve Bank of Australia (“RBA”) and NZCC. Instead, the European Commission and Payment Systems Regulator use the term card scheme. We stick with card network following the terminology used by the RBA/NZCC. See Reserve Bank of Australia, “Review of Merchant Card Payment Costs and Surcharging Conclusions Paper,” p.4 (31 March 2026), available at https://www.rba.gov.au/payments-and-infrastructure/review-of-retail-payments-regulation/2026- 03/conclusions-paper/pdf/conclusions-paper.pdf.
+
+3 We define each of these actors as follows: (i) cardholders are the buyer businesses that use commercial cards to make payments; (ii) merchants are the supplier businesses that accept commercial cards as a payment instrument; (iii) issuers are typically banks that provide cards to commercial cardholders; (iv) acquirers are typically banks that provide merchants with the infrastructure to accept card payments and process transactions. Please refer to Section 2.1 for a full set of terminology and definitions.
+4 A four-party card network (four-party network) is a network where card-based transactions are made through the intermediation of the card network, an issuer, and an acquirer (for example, Mastercard and Visa). In contrast, a three-party card network (three-party network) is one in which the network itself provides acquiring and issuing services (for example, Amex). See EU Interchange Fee Regulation (2015).
+5 When a commercial card transaction occurs in a four-party network, the issuer transfers the transaction value to the acquirer, minus an interchange fee. The interchange fee is the transaction-based fee paid by the acquirer to the issuer in a card-based payment transaction and the merchant service charge (MSC) (or merchant
+
+May 21, 2026 4
+4. Because commercial card networks are two-sided platforms,6the interchange fee cannot be assessed solely as a merchant-facing cost. It reallocates value across both sides of the platform and influences participation, usage, pricing, credit provision, service quality, and investment decisions on both the issuing and acquiring sides. Assessing the appropriate level of interchange therefore depends not only on the level of fees, but on how value is allocated to sustain usage and investment across all participants.
+
+5. The report sets out the main economic and operational benefits generated by commercial cards for both cardholders and merchants. These include liquidity and working-capital support, operational efficiency, enhanced payment security, and revenue and growth effects for merchants. These benefits are central to understanding the value created by commercial card systems and the role of interchange fees in supporting that value.
+
+6. In practice, commercial cards support a range of economic and operational functions that extend beyond simple payment execution. They combine payment functionality with short-term financing and operational tools. Businesses use them to manage cash flow and access liquidity at the point of transaction, while merchants benefit from faster and more predictable settlement, reduced collection risk, and streamlined reconciliation processes.7 The integration of payment, credit, and data can reduce administrative costs and support more efficient business operations for both cardholders and merchants. These benefits are relevant when assessing how pricing structures influence participation and investment within the ecosystem.
+
+7. The New Zealand context further shapes the relevance of commercial cards. The New Zealand economy is characterised by a high prevalence of small businesses, widespread use of trade credit, and exposure to payment delays in B2B transactions amongst New Zealand businesses.
+As a small open economy, New Zealand is also vulnerable to external, international shocks that can affect domestic firm-level cash flow and financing conditions,
+8 which increases the importance of flexible payment and working capital tools. In such an environment, tools that support liquidity, payment certainty, and short-term financial flexibility are particularly important for business resilience.
+
+service fee (MSF)) is the fee paid by the merchant to the acquirer for card acceptance and processing services.
+See EU Interchange Fee Regulation (2015).
+
+6 Two-sided platforms refer to intermediaries that bring together two distinct groups of users and enable interactions between them, where the value of participation on one side depends on participation on the other.
+See Rochet & Tirole, “Two-Sided Markets: A Progress Report,” (2006), available at https://www.jstor.org/stable/25046265.
+
+7 Reconciliation is the process of matching and verifying transaction records against entries in bank statements or payment system records to ensure that all funds moving into and out of an account are accurately recorded and consistent. See Stripe, “Payment reconciliation 101: How it works and best practices for businesses,” (21 February 2025), available at https://stripe.com/gb/resources/more/payment-reconciliation-101.
+8 Reserve Bank of New Zealand, “How does macroeconomic uncertainty impact the New Zealand economy?,” (24 July 2025), available at https://www.rbnz.govt.nz/hub/publications/analytical-note/2025/how-doesmacroeconomic-uncertainty-impact-the-new-zealand-economy (“Since New Zealand is a small open economy, heightened global uncertainty can influence sentiment and decision-making for New Zealand firms and households. Global economic uncertainty, and in particular trade policy uncertainty, increased significantly during the first half of 2025.”).
+
+May 21, 2026 5
+8. Commercial cards also differ materially from consumer cards.9 They are more heavily creditbased, involve larger credit lines and higher spend per-account, and are typically embedded within broader banking and commercial relationships. They are also associated with reconciliation and account-management features,
+10 enhanced controls like spend limits and restrictions on types of purchases,
+11 and integration with business systems. These features mean that commercial cards serve distinct economic functions and require a separate analytical framework from consumer card products.
+
+9. Publicly available evidence suggests that commercial cards operate in New Zealand within a competitive and evolving B2B payments ecosystem alongside bank transfers, three-party networks, and emerging fintech and open-banking solutions. In this context, interchange fees play a role in sustaining participation and coordinating incentives across the platform, and changes to it may have effects beyond any immediate change in merchant charges, including impacts on credit provision, usage patterns, and substitution across payment instruments. Importantly, flexible, unregulated interchange ensures competitive neutrality is maintained between four-party networks and three-party networks.
+
+10. The final section of this submission develops an economic framework for assessing how interchange fees sustain participation and investment in commercial card markets. It also explains why, in a two-sided system, capping interchange fees is likely to have system-wide effects (including altered issuer incentives, changes in cardholder usage, and potential shifts by merchants toward alternative payment instruments) rather than simply delivering straightforward reductions in merchant costs. It then reviews international best practice and shows that the most relevant overseas comparators support maintaining greater flexibility for commercial card interchange fees than for consumer cards.
+
+2.0 Overview of commercial card networks and their role in sustaining the B2B payment ecosystem
+11. This section provides an overview of how commercial card networks operate within multi-party B2B payment systems, the role played by interchange fees in sustaining participation across these systems, and the broader economic context in which these arrangements function. It first explains the structure of commercial card networks, including the roles of issuers, acquirers, cardholders (buyer businesses) and merchants (supplier businesses), and how interchange fees contribute to balancing incentives across these interdependent participants (Section 2.1). It then sets out the economic and operational benefits that commercial cards deliver to both cardholders
+9 Consumer cards are card-based payment instruments issued to a consumer, defined as a natural person who is acting for purposes other than the trade, business or profession of that person. See EU Interchange Fee Regulation (2015).
+
+10 Capgemini, “The Future of Commercial Cards,” (2015), available at https://www.capgemini.com/mx-es/wpcontent/uploads/sites/28/2022/12/the_future_of_commercial_cards.pdf (“Financial institutions can provide program management tools to help manage various aspects of a commercial cards program such as reporting, workflow management, dashboards, reconciliation, and account management.”).
+
+11 J.P. Morgan, “Why businesses are adopting commercial card programs,” (30 August 2021), available at https://www.jpmorgan.com/insights/treasury/cards-expense-management/Why-businesses-are-adoptingcommercial-cards (“Commercial cards offer a robust set of security and controls that help mitigate fraud and misuse. For example, businesses can set merchant category codes (MCC) to limit where the cards may be used.”).
+
+May 21, 2026 6 and merchants, including in areas such as liquidity,12 working capital management, operational efficiency, and revenue generation (Section 2.2). Together, these sections provide the foundation for understanding how commercial card networks should be analysed in the New Zealand context from an economics lens.
+
+2.1 Commercial card networks operate within multi-party networks in which interchange sustains participation
+12. Commercial cards are payment cards issued to businesses and public sector entities to facilitate payments for goods and services. They are used in a range of contexts, including point-of-sale purchases, online procurement, travel and entertainment expenses, and supplier payments.
+13. Like consumer cards, commercial cards operate within organised card payment networks.13 Card networks (such as Visa, Mastercard, and American Express) provide the infrastructure, operating rules, and pricing frameworks that allow the system to function. There are two primary types of card networks: four-party networks and three-party networks.
+
+14. In a four-party commercial card network (such as Visa or Mastercard), four distinct entities participate in each transaction (in addition to the network operator itself): cardholders, merchants, issuers and acquirers.
+
+a. Cardholders are the buyer businesses that use commercial cards to make payments.14 Commercial cardholders are businesses ranging from sole proprietors and small and medium-sized enterprises to large corporate and public sector entities. They benefit from payment functionality, short-term credit (where applicable), security protections, and operational tools such as expense tracking and reporting.
+
+b. Merchants are the supplier businesses that accept commercial cards as a payment instrument.
+
+15 Merchants benefit from card acceptance16 through faster settlement,17 lower
+12 Liquidity refers to the ability of an economic agent to meet their short-term financial obligations. See OECD, “OECD Glossary of Statistical Terms,” p.309 (1 September 2008), available at https://www.oecd.org/en/publications/oecd-glossary-of-statistical-terms_9789264055087-en.html.
+13 We refer to a payment network as the infrastructure over which payments take place, and a card network as the card payment organisation that regulates and controls activity on the payment network.
+14 See Payment Systems Regulator, “Card payments,” available at https://www.psr.org.uk/our-work/cardpayments/.
+15 See Payment Systems Regulator, “Guidance on the PSR's approach as a competent authority for the EU Interchange Fee Regulation,” p.73 (October 2016), available at https://www.psr.org.uk/media/dwcjuiow/psr-ifrguidance-phase-2.pdf. Payment instruments are the means by which a payment is initiated (e.g. cards, bank transfers).
+
+16 Card acceptance refers to a merchant’s ability to accept and process payment card transactions through an acquiring bank or service provider. See European Central Bank, “All glossary entries,” available at https://www.ecb.europa.eu/services/glossary/html/glossa.en.html.
+
+17 Settlement is defined as the process by which a card network facilitates the exchange of funds between the issuer and the acquirer, thereby completing the transaction and enabling the funds to be made available to the merchant. See Stripe, “Payment settlement explained: How it works and how long it takes,” (14 October 2025), available at https://stripe.com/gb/resources/more/payment-settlement-explained-how-it-works-and-how-long-ittakes.
+
+May 21, 2026 7 reconciliation costs,18 reduced cash handling, improved payment security, and in some cases guaranteed payment relative to invoicing arrangements.
+
+c. Issuers are typically banks that provide commercial cards to commercial cardholders. They extend credit, set credit limits,19 and bear the costs of issuing (cardholder acquisition, customer service, card features and rewards, processing, cost of funds, credit losses, and fraud losses).
+
+20
+d. Acquirers are typically banks that provide merchants with the infrastructure to accept card payments and process transactions.21
+15. When a commercial card transaction occurs in a four-party network, the issuer transfers the transaction value to the acquirer, minus an interchange fee. The interchange fee is a transactionbased fee paid by the acquirer to the issuer. The acquirer, in turn, charges the merchant an MSF, 22 for card acceptance and processing services. The interchange fee is an important component of the MSF, among scheme and processing fees,23 and acquirer margins.24 The card network does not receive any interchange revenue.
+
+16. Commercial card transactions may occur in both point-of-sale (POS) and invoiced payment contexts. In POS transactions, the value proposition of commercial cards is often linked to access to credit, faster funding, and product functionality such as spending controls and fraud protection.
+18 Visa/KoreFusion, “From Transaction to Transformation: Quantifying the Value of B2B Card Acceptance to Large Asia Pacific Suppliers,” p.19 (June 2025), available at https://corporate.visa.com/en/solutions/commercial-solutions/knowledge-hub/total-value-of-commercial-creditcard-acceptance.html (“For example, reconciliation problems are reported by 78% of merchants and affect 1.79% of invoices at a cost of 1.7% of invoice value. Among card acceptors, 53% report benefits in this area, achieving a 63% reduction in reconciliation issues.”).
+
+19 Credit limits refer to the maximum amount that a borrower is permitted to draw under a credit facility at a particular time. See Capital One, “Guide to business credit card limits & how to increase them,” (24 June 2025), available at https://www.capitalone.com/learn-grow/business-resources/business-credit-card-limit/.
+20 See EU Interchange Fee Regulation (2015).
+
+21 See EU Interchange Fee Regulation (2015).
+
+22 NZCC, “Retail Payment System: Costs to businesses and consumers of card payments in Aotearoa New Zealand: Consultation Paper,” p.12 (23 July 2024), available at https://www.comcom.govt.nz/__data/assets/pdf_file/0031/359491/Retail-Payment-System-Costs-tobusinesses-and-consumers-of-card-payments-in-Aotearoa-New-Zealand-Consultation-Paper-23-July2024.pdf?trk=public_post_comment-text (“This paper is mainly focused on interchange fees [...] These fees form a significant portion of the merchant service fee”);
+
+Payment Systems Regulator, “Market review of UK-EEA consumer cross-border interchange fees,” p.17 (December 2024), available at https://www.psr.org.uk/media/vrcimoxw/mr22-27-xbif-final-report-dec-2024- v3.pdf (“[M]erchant service charge (MSC [or MSF]), which is the total amount merchants pay to acquirers for card-acquiring services; this comprises IFs, scheme and processing fees, and acquirer net revenue.”).
+23 Scheme and processing fees are the fees charged by card networks to acquirers and issuers for the provision of card payment services. Scheme fees relate to participation in the scheme, while processing fees are charged for the authorisation, clearing, and settlement of payments. See Reserve Bank of Australia, “Backgrounder on Interchange and Scheme Fees,” (October 2024), available at https://www.rba.gov.au/payments-and-infrastructure/review-of-retail-paymentsregulation/backgrounders/backgrounder-on-interchange-and-scheme-fees.html.
+24 Payment Systems Regulator UK-EEA Cross-border interchange fees review, p.17 (2024) (“[M]erchant service charge (MSC [or MSF]), which is the total amount merchants pay to acquirers for card-acquiring services; this comprises IFs, scheme and processing fees, and acquirer net revenue.”).
+
+May 21, 2026 8
+In invoiced payment contexts, transactions typically occur within an existing commercial relationship where counterparties directly agree on payment terms.
+
+17. Card networks define the default interchange fee unless the issuer and acquirer have agreed upon a different bilateral interchange fee. While the interchange fee is paid between banks (issuers & acquirers), its economic incidence is ultimately shared between merchants and cardholders, depending on competitive conditions and the extent of pass-through.25 Figure 1: Flow of fees in a four-party network26
+18. Since the four-party networks involve multiple interdependent participants, interchange fees affect participation incentives across the ecosystem, reallocating value from the acquiring side of the platform to the issuing side and serving to balance incentives between card issuance and merchant acceptance.27
+25 Shabgard & Asensio, “The price effects of reducing payment card interchange fees,” p.190 (27 April 2023), available at https://link.springer.com/article/10.1007/s13209-023-00278-y (“A higher IF results in a higher cost of accepting card payments for the merchant, which he may pass through to consumers in the form of higher retail prices.”).
+
+Pass-through is defined as the proportion of a change in interchange fees that is reflected in the merchant service charges (or merchant service fees) paid by merchants to acquirers. The determinants of pass-through include the pricing model (e.g. whether the plan is blended or unblended), the merchant's bargaining position, and the level of competition between acquirers. See Payment Systems Regulator, “Market review into the supply of card-acquiring services: Final report,” p.66 (November 2021), available at https://www.psr.org.uk/media/p1tlg0iw/psr-card-acquiring-market-review-final-report-november-2021.pdf.
+26 Direction of arrow represents flow of fees (e.g., the merchant pays the MSC [or MSF] to the acquiring bank etc.). Dotted line represents a contractual relationship.
+
+27 Börestam & Schmiedel, “Interchange fees in card payments,” p.11 (September 2011), available at https://www.ecb.europa.eu/pub/pdf/scpops/ecbocp131.pdf (“The interchange fee [...] is paid by the acquirer to the issuer. In other words, interchange fees are basically a balancing mechanism through which some of the costs on the issuing side are covered by the acquiring side.”).
+
+May 21, 2026 9
+a. Issuers. Issuers generate revenue from interest income, annual or programme fees, and receive interchange fees from acquirers.
+
+28 Interchange fees play a key role in covering the costs associated with credit risk,29 capital allocation,30 fraud management, and account servicing.31 If interchanges fees are reduced and issuer revenue decreases, issuers may respond by increasing cardholder fees, reducing benefits and innovation in new features, lowering credit limits, and/or adjusting rewards structures.
+
+32
+b. Cardholders. The level of interchange fees also impacts the value proposition available to cardholders. Issuer revenue, including from interchange fees, helps fund the costs of providing value-added services and rewards to cardholders. A lower level of interchange can impact the provision of these services and affect the attractiveness of commercial cards and change cardholder usage patterns.
+
+c. Acquirers. Acquirers pay interchange fees to issuers and recover this cost through the MSF.
+
+33 The interchange fee is a per-transaction transfer (typically calculated as a percentage of transaction value) that the acquirer passes through to the issuer, rather than a retained cost in the conventional sense. As such, a higher interchange fee increases the portion of each transaction value that is passed on to the issuer, reducing the net amount retained by the acquirer from that transaction (all else equal). Acquirers therefore have an incentive to pass this additional cost on to merchants through the MSF, but the extent to which they can do so depends on competitive conditions.
+
+34
+28 Additionally, issuers may generate revenue from other sources such as late payment fees and cross-border exchange rate gains. Board of Governors of the Federal Reserve System, “Credit Card Profitability,” (9 September 2022), available at https://www.federalreserve.gov/econres/notes/feds-notes/credit-cardprofitability-20220909.html (“The last source of credit card revenue is usage fees, including late fees, over-limit fees, foreign exchange fees, and so on.”)
+
+29 Credit risk refers to the risk that a borrower will fail to meet its contractual financial obligations in full and on time, causing the lender to incur financial loss. See OECD Glossary of Statistical Terms, p.111 (2008).
+30 Capital allocation refers to the process by which a bank assigns its equity capital to different activities to support operations, meet regulatory requirements, and manage performance. See Bank of England, “Banks’ internal capital markets: how do banks allocate capital internally?,” p.3 (2018), available at https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2018/banks-internal-capital-markets-howdo-banks-allocate-capital-internally.
+31 Stripe, “Interchange fees – the basics: What they are, how they work and how to cut costs,” (12 March 2024), available at https://stripe.com/gb/resources/more/interchange-fees-101-what-they-are-how-they-work-and-howto-cut-costs (“Interchange fees serve several purposes [...] compensate the cardholder’s issuing bank for the costs of providing and maintaining the payment card [...] incentivise issuing banks to promote payment cards to customers [...] cover the costs associated with network infrastructure, fraud prevention measures and other services provided by the networks.”).
+
+32 Mukharlyamov and Sarin, “Price Regulation in Two-Sided Markets: Empirical Evidence from Debit Cards,” Journal of Financial Economics (2025), available at https://www.sciencedirect.com/science/article/pii/S0304405X25001023 (“[I]ssuers will pass on an increase in interchange fees to cardholders (e.g., via lower account/card fees or higher rewards); a decrease in interchange fees should trigger a similar offset.”).
+
+33 Payment Systems Regulator UK-EEA Cross-border interchange fees review, p.9 (2024) (“The acquirer may recover that cost as part of the merchant service charges (MSC [or MSF]) that it levies, so that IFs represent a cost to the merchant who accepted the card payment.”).
+
+34 Where pass-through is complete, changes in interchange fees primarily affect merchant pricing rather than acquirer margins. Where pass-through is incomplete, the acquirer may absorb part of the change, which would
+
+May 21, 2026 10
+d. Merchants. Changes in interchange fees also affect merchants’ acceptance decisions. For example (since the interchange fee is one component of the MSF charged by the acquirer), if the interchange fee increases and the acquirer reflects that increase fully in the MSF, the merchant’s cost of accepting commercial cards will increase. However, even where acceptance costs increase, merchants may continue to accept commercial cards where the net surplus from acceptance remains positive (e.g. due to increased sales, faster payment, or reduced receivables risk). In practice, the impact of interchange fee changes on merchant behaviour will depend not only on cost pass-through by acquirers, but also on the overall value derived from card acceptance under prevailing competitive conditions.
+
+19. In a three-party network (such as American Express or Discover), the network operator acts as both issuer and acquirer. It manages the relationship with both the cardholder and the merchant directly. Instead of an interchange fee between separate issuing and acquiring banks, the network sets the MSF and any cardholder-facing fees directly. Although the organisational structure differs, the underlying economic challenge is similar: the platform must balance incentives to encourage both usage by cardholders and acceptance by merchants. Overall, a three-party network operates an implicit interchange fee with the acquiring side partially funding issuing costs.
+20. In New Zealand, American Express is the main three-party network, while Visa and Mastercard are the main four-party networks. Other networks, such as UnionPay and JCB, are also present, but their role is more limited, with JCB acceptance facilitated through its partnership with American Express.
+
+35 Card issuance and acquiring are concentrated among a small number of banks, including ANZ Bank, ASB Bank, Bank of New Zealand (BNZ), Westpac, and Kiwibank.
+
+2.2 Commercial cards generate significant economic and operational benefits to both cardholders and merchants
+21. Commercial cards are associated with a number of economic and operational benefits. Some accrue primarily to the cardholders (i.e., the buyer businesses), some to the merchants (i.e., supplier businesses), and some to both sides of the system. These benefits are relevant when assessing the role of the interchange fees in sustaining the commercial card ecosystem.36 The remainder of this section expands on these benefits. A systematic summary of these can be found in Table 1 at the end of this report.
+
+2.2.1. Liquidity and working capital support for both cardholders and merchants, particularly SMEs
+22. Commercial cards provide liquidity to both cardholders and merchants, by allowing cardholders to defer payment through short-term credit and by supporting merchants with faster and more reduce its net margin. The degree and symmetry of pass-through (i.e. whether increases and decreases in interchange fees are reflected similarly in merchant pricing) is an empirical question.
+35 JCB, “What We Do,” available at https://www.global.jcb/en/about-us/what-we-do/index.html (“JCB cards are accepted in Australia, New Zealand, and Canada through our partnership with American Express”).
+36 The commercial card ecosystem includes all participants involved in commercial card payments, including issuers, acquirers, networks, merchants, and cardholders.
+
+May 21, 2026 11 predictable receipt of funds relative to invoice-based payment terms.
+
+37 These timing effects may be especially relevant where firms face tighter cash-flow constraints.
+
+23. For cardholders, commercial cards are predominantly credit-based products and are frequently used as a source of short-term financing. Unlike other payment instruments, which typically require (near) immediate settlement, commercial cards allow cardholders to access short-term liquidity at the point of transaction without the need for separate financing arrangements.38
+24. Empirical evidence supports the importance of commercial cards as a financing tool: an NBER working paper finds that 55% of US businesses surveyed used commercial cards for financing in the previous 12 months, with younger and smaller firms relying more heavily on card credit.39 In the same study, over 61% of businesses reported financial benefits of commercial cards, such as ease of access, emergency use, and repayment.
+
+40 Survey evidence similarly indicates that a significant proportion of small firms use credit cards as a financing and cash flow management tool.
+
+41
+25. The availability of interest-free credit associated with commercial credit cards can also generate value for cardholders. Publicly available evidence reinforces the use of commercial cards by businesses for working capital management.
+
+42
+37 Invoice-based payments refer to payment arrangements in which a supplier issues an invoice and the buyer subsequently makes payment, typically via bank transfer, under agreed payment terms (e.g. 30 or 60 days).
+See Stripe, “What is an invoice? What businesses need to know,” (9 October 2023), available at https://stripe.com/gb/resources/more/what-is-an-invoice.
+
+38 Visa/Forrester Consulting, “Drive Commercial Card Growth with Custom Interchange,” p.5 (September 2024), available at https://corporate.visa.com/en/solutions/commercial-solutions/knowledge-hub/forrester-drivecommercial-card-growth.html (“Nearly 50% of the B2B buyers we surveyed said they use commercial cards because of the higher DPO it offers compared with other payment methods, and they expected improved cash flow as a result.”).
+
+39 Akcigit et al., “Credit Card Entrepreneurs,” p.3 (14 March 2025), available at https://www.nber.org/papers/w33618 (“[M]ore than 55% of businesses report using business credit cards for financing in the past 12 months [...] [Y]ounger firms, smaller firms, and those with lower cash reserves consistently allocate a larger share of their payments to credit card financing.”).
+40 The same evidence also indicates that firms continue to rely on commercial cards even when they may incur higher financing costs, underscoring the value businesses place on their flexibility and immediate availability.
+NBER, “Credit Cards and the Financing of Small Businesses,” (1 July 2025), available at https://www.nber.org/digest/202507/credit-cards-financial-source-small-businesses?page=1&perPage=50 (“In more than 61 percent of responses, firms underlined the financial benefits of relying on business credit cards, such as ease of access, emergency use, and repayment flexibility, while the main drawbacks were debt (23 percent) and high interest rates (18 percent).”).
+
+41 JPMorgan Chase Institute, “Cash or Credit: Small Business Use of Credit Cards for Cash Flow Management,” (May 2023), available at https://www.jpmorganchase.com/institute/all-topics/business-growthand-entrepreneurship/small-business-use-of-credit-cards (“Credit cards are part of a suite of cash flow management tools. Credit cards can be an alternative for cash liquidity, providing financing when firms cannot pay in cash.”). More broadly, survey data from the United States, Canada, and the United Kingdom suggest that a material share of small businesses rely on credit card debt during the year, with as many as 30% of US firms reporting such use. Intuit QuickBooks, “Small Business Index Annual Report 2023,” p.60 (6 October 2023), available at intuit-quickbooks-small-business-index-annual-report-2023.pdf (“[A] significant number of small businesses have relied on credit card debt over the past 12 months—30% in the US, 21% in Canada, and 14% in the UK”).
+
+42 A study by Deloitte in Australia suggests that cardholders could save AUD 506 million in interest payments that they would otherwise assume if they took loans for short-term financing. Deloitte, “The Value of Australia’s Retail Payments System,” p.28 (2024), available at https://www.deloitte.com/content/dam/assets-
+
+May 21, 2026 12
+26. For merchants, commercial card acceptance can improve working capital by accelerating receivables and reducing exposure to slow payment under invoice-based terms (e.g., a 30 or 60- day settlement period). This can allow suppliers to receive payments more quickly, regardless of the buyer's payment timing, accelerating cash conversion43 and reducing days sales outstanding.44
+27. This acceleration of payment reflects an embedded financing function within card transactions.
+While settlement occurs via the acquirer, the issuer’s extension of credit to the cardholder enables funds to be transferred to the merchant at or shortly after the point of sale, with the cardholder repaying at a later date (often within an interest-free period). From the merchant’s perspective, this is economically similar to receivables financing (or factoring), whereby future payment obligations are converted into immediate, guaranteed cash flows in exchange for a fee (the merchant service fee).45 This mechanism reduces reliance on invoice-based credit and external working capital facilities.
+
+28. These merchant-side liquidity benefits are supported by global survey evidence. In one global survey of senior financial decision-makers at large B2B suppliers, card accepting merchants were
+14 percentage points more likely than non-acceptors to say they were very efficient at maximising working capital and 12 percentage points less likely to say they often faced working-capital challenges.
+
+46 In the same survey, 34% of respondents identified increased speed of receiving payments as a benefit of acceptance.47 Complementary survey evidence from Asia Pacific and Europe similarly reports reduced financing frictions: in Asia Pacific, 49% of card-accepting merchants reported decreased bad debt or write-offs and acceptance was associated with 51 zone1/au/en/docs/services/economics/the-value-of-ustralia-retail-payments-system.pdf (“Approximately $6 billion each month is not accruing interest. Given a lending rate of 8.56%, which was the average lending rate on variable loans for small businesses in 2023, this could represent around $506 million in avoided interest payments on the average monthly balance in 2023 for commercial cards, by using credit instead of a loan.”).
+43 Visa/Forrester, Drive Commercial Card Growth with Custom Interchange, p.8 (2024) (“Sixty-two percent [of suppliers] said they have improved cash flow through faster settlement times”).
+
+44 Visa/KoreFusion, Understanding the value of commercial card acceptance in Asia Pacific, p.17 (2025) (“[M]erchants reported that card acceptance led to an average reduction in DSO of 4 days”).
+Days Sales Outstanding (DSO) is a measure of working capital that captures the average time taken for a firm to collect payment after a sale has been made.
+
+45 Factoring is a financing technique allowing a company (the member) to transfer its trade receivables (invoices owed by customers) to a specialised financial institution (called the factor). See Société Générale, “Factoring and receivables finance,” available at https://wholesale.banking.societegenerale.com/en/newsinsights/glossary/factoring-and-receivables-finance/.
+46 Mastercard, “The State of Commercial Card Acceptance,” p.7 (April 2025), available at https://www.mastercard.com/content/dam/mccom/shared/news-and-trends/insights/2025/the-state-ofcommercial-card-acceptance-2025/pdf/The_state_of_commercial_card_acceptance_2025.pdf (“Card acceptors are 14 percentage points more likely than non-acceptors to say their businesses are efficient at maximizing working capital. Card acceptors are 12 percentage points less likely to say they often face challenges around working capital.”).
+
+47 Mastercard, “The State of Commercial Card Acceptance,” p.8 (2025) (“34% of suppliers that accept cards say their business has benefited from increased speed of receiving payments as a result of accepting card.”).
+
+May 21, 2026 13 basis points of savings in third-party financing costs;
+
+48 in Europe, the equivalent figures were 48% and 50 basis points.49
+29. This evidence suggests that working capital benefits are not confined to cardholders, but also accrue materially to merchants through faster, more predictable, and lower-risk settlement. While some merchants may offer similar nominal payment terms across instruments, commercial cards differ in the certainty and timing of payment, as well as in the reduction of collection risk and administrative burden. The relevant comparison is therefore not limited to stated payment terms, but extends to the overall quality and reliability of cash flows. These features can have a meaningful impact on working capital, particularly for SMEs and firms with limited access to alternative financing. For example, while factoring is generally more accessible for large businesses (it requires credit assessment, banking relationships, and scale), SMEs can gain access to sophisticated financing through commercial cards.
+
+30. Commercial card acceptance may therefore be understood in economic terms as a timing tradeoff, under which the supplier receives payment earlier and with greater certainty relative to ordinary invoice terms in exchange for a transaction fee. This is particularly valuable for SMEs, who may have more limited access to traditional financing.50
+2.2.2. Operational efficiency, data and cost reduction for both cardholders and merchants
+31. Commercial cards can streamline payment and reconciliation processes for both cardholders and merchants. For cardholders, they can reduce administrative effort through more automated workflows, improved spend controls, and better integration with internal finance systems. For merchants, they can reduce exception handling51 and payment processing frictions by improving remittance visibility and reconciliation.
+
+48 Visa/KoreFusion, Understanding the value of commercial card acceptance in Asia Pacific, p.15-16 (2025) (“In our research, 49% of card-accepting merchants reported a decrease in bad debt or write-offs due to adopting card payments, with those experiencing benefits noting an average improvement of 216 basis points among merchants reporting a benefit, and 106 basis points across all merchants […] By switching to card payments, these merchants could potentially reduce or eliminate their dependence on external financing, translating into an estimated savings of 51 basis points of total sales value in third-party financing costs across their entire portfolio of invoices.”).
+
+49 Visa/KoreFusion, “From Transaction to Transformation: Quantifying the Value of B2B Card Acceptance to Large European Suppliers,” p.15-16 (April 2025), available at https://corporate.visa.com/en/solutions/commercial-solutions/knowledge-hub/total-value-of-commercial-creditcard-acceptance.html (“48% of card-accepting merchants reported a decrease in bad debt or write-offs due to adopting card payments […] By switching to card payments, these merchants could potentially reduce or eliminate their dependence on external financing, translating into an estimated savings of 50 basis points of total sales value in third-party financing costs across their entire portfolio of invoices.”)
+50 World Bank, “Fintech and SME Finance: Expanding Responsible Access,” p.4 (2022), available at https://documents1.worldbank.org/curated/en/099735004212257410/pdf/P17300606103440d8083ca064c26ca 7f8dc.pdf (“Access to finance is a critical barrier for SMEs to start, sustain and grow their businesses. About half of formal SMEs do not have access to formal credit and instead rely on internal funds, or cash from friends and family, to launch and initially run their business.”).
+
+51 Exception handling refers to the process of identifying, investigating, and resolving transactions that fail or deviate from normal processing. See SWIFT, “Use case 2 - Improve payments exceptions and investigations,” available at https://www.swift.com/standards/iso-20022/supercharge-your-payments-business/chapter-6.
+
+May 21, 2026 14
+32. On the cardholder side, commercial cards are frequently integrated into accounting and enterprise resource planning systems,52 enabling automated reconciliation, streamlined expense management, and improved audit trails. Commercial cards also provide greater visibility into spending data, with 61% of cardholders citing this as a key reason for using commercial cards for B2B payments.53 This allows firms to monitor expenditure more closely, apply internal controls more effectively, and reduce manual back-office processing.
+
+33. For cardholders, this combination of improved spend visibility, process automation, and access to short-term liquidity through card-based payments can similarly support expansion and operational resilience. By optimising working capital and reducing administrative frictions, firms are better able to manage cash flow volatility, pursue new procurement or investment opportunities, and scale operations without commensurate increases in back-office costs.54
+34. More efficient and predictable payment processes can also enable firms to engage with a broader set of suppliers, including those that may previously have been considered too operationally complex or resource-intensive to manage. In this way, in some instances, the efficiency and data benefits of commercial cards can contribute not only to cost reduction, but to a reconfiguration of business models that supports growth, innovation, and more stable commercial relationships across the B2B ecosystem.55
+35. On the merchant side, studies examining B2B card usage report that suppliers experience substantial reductions in administrative costs, including significant decreases in reconciliation time and dispute resolution costs relative to traditional payment instruments.
+
+56 Estimates indicate that the end-to-end administrative cost of invoice-based payments can account for around 4.3% of transaction value, rising to approximately 5.6% when including the costs of late and nonpayment, exceeding the level of commercial card interchange fees.
+57 European survey evidence
+52 An Enterprise Resource Planning (ERP) system is an integrated software platform that manages and automates processes such as accounts payable, accounts receivable, and payment processing. See SAP, “Enterprise resource planning software,” available at https://www.sap.com/sea/products/erp.html.
+53 Visa/Forrester, Drive Commercial Card Growth with Custom Interchange, p.6 (2024) (“Beyond their desire for greater working capital, organizations adopt commercial cards to drive more value for their business [...] [T]op use cases included greater visibility into spending data than with other payment methods (61%) and faster payment processing (61%)”).
+
+54 J.P. Morgan, “How commercial card creates value for your business and suppliers,” available at https://www.jpmorgan.com/insights/treasury/cards-expense-management/how-commercial-card-creates-value (“One commonly cited advantage of commercial card programs is the ability to optimize working capital [...]
+Additionally, card payments are simple and involve less manual processing, which reduces the chance of payment delays or errors and results in a smoother and more reliable collection process.”).
+55 Mastercard, “The State of Commercial Card Acceptance,” p.6 (2025) (“Suppliers report that card acceptance is equally valuable for strengthening relationships with current buyers (34%) and meeting new buyer demand (33%).”).
+
+56 Visa/KoreFusion, Understanding the value of commercial card acceptance in Europe, p.13 (2025) (“Card acceptance significantly reduces exception handling expenses, including a 69% drop in reconciliation costs and targeted savings in dispute resolution and bad payments.”).
+
+57 Mastercard/Oxera, “The economics of commercial cards,” p.1 (6 February 2019), available at https://www.mastercard.hu/content/dam/public/mastercardcom/eu/hu/pdfs/Oxera_Commercial_Policy_Paper.p df (“We estimate that the ‘end to end’ administration cost associated with relying on invoicing rather than commercial card payments amounts to 4.3% of the average transaction value. This is much higher than current commercial interchange fees. Furthermore, when the combined cost of late/non-payments is included, this rises to 5.6%.”).
+
+May 21, 2026 15 further reports that card acceptance can significantly reduce exception handling expenses, including a 69% reduction in reconciliation costs.
+
+58 In one global survey of large B2B suppliers,
+32% of card-accepting merchants identified greater payment visibility as a benefit of acceptance, 30% cited payment processing speed, and 24% cited lower payment processing costs.59
+36. The Federal Reserve’s 2024 small-business payments study also reports that firms receiving payments through third parties commonly face time-consuming processes and delays in settlement, underscoring the value of tools that reduce manual handling and improve information flow.60
+37. These operational benefits are supported by the structured payment and remittance data that accompanies card payments. Improved payment certainty, faster cash conversion, and enhanced remittance data61 can strengthen working capital positions and reduce reliance on third-party financing.62 This, in turn, can enable suppliers to expand their customer base, offer more flexible commercial terms, and invest in product and service innovation. Evidence indicates that suppliers accepting commercial cards experience increased revenue and sales opportunities, including through attracting new customers and enabling larger or more frequent transactions.63 Improved payment experience and acceptance of buyer-preferred payment instruments can also enhance customer satisfaction and retention, supporting more competitive and scalable business models.64
+38. Taken together, by reducing manual processing and improving data visibility, commercial cards can lower operational costs for both cardholders and merchants. Beyond these direct operational
+58 Visa/KoreFusion, Understanding the value of commercial card acceptance in Europe, p.19 (2025) (“Among card acceptors, 44% report benefits in this area, achieving a 69% reduction in reconciliation issues.”).
+59 Mastercard, “The State of Commercial Card Acceptance,” p.7 (2025) (“Suppliers that accept cards report greater payment visibility (32%), payment processing speed (30%), and lower payment processing costs (24%) as top benefits of card acceptance.”).
+
+60 Fed Small Business, “2024 Report on Payments: Findings from the 2023 Small Business Credit Survey,” (5 December 2024), available at https://www.fedsmallbusiness.org/reports/survey/2024/2024-report-on-payments (“[F]or firms that collect payment through a third party, time-consuming payments and delays in settlement or availability of funds are the biggest obstacles.”).
+
+61 Remittance data refers to the information that accompanies a payment, including invoice references, amounts, and the payment instrument used. This information enables the recipient to reconcile the payment with underlying transactions. See J.P. Morgan, “Simplify payment reconciliation with remittance advice,” (2 May 2025), available at https://www.jpmorgan.com/insights/treasury/receivables/remittance-explained-what-isremittance-advice.
+62 Visa/KoreFusion, Understanding the value of commercial card acceptance in Europe, p.13 (2025) (“Card acceptance helps merchants reduce reliance on costly third-party financing, with potential savings of 50 basis points across their invoice portfolio”).
+
+63 Visa/Forrester, Total Economic Impact of Commercial Credit Card Acceptance, p.8 (2024), available at https://corporate.visa.com/content/dam/VCOM/corporate/solutions/documents/forrester-white-paper-the-totaleconomic-impact-of-commercial-credit-card-acceptance.pdf (“After introducing commercial credit cards as a payment option, interviewees’ organizations saw incremental revenue gains by [...] unlocking more business opportunities from both new and existing customers that decided to make larger, more frequent purchases”).
+64 Mastercard, “The State of Commercial Card Acceptance,” p.6 (2025) (“Cards provide a seamless bridge that can both enhance buyer satisfaction and cultivate competitive advantage. Among suppliers who accept cards, one in three say greater customer convenience is a benefit they have experienced as a result of their card acceptance. Accepting commercial cards benefits both buyer retention and acquisition.”).
+
+May 21, 2026 16 efficiencies, the combined benefits described above can support broader changes in how firms organise and grow their businesses.
+
+2.2.3. Enhanced fraud protection and payment security for cardholders and merchants
+39. Commercial cards can enhance payment security for both cardholders and merchants through advanced fraud detection tools, virtual card65 functionality, and transaction-level controls. This is particularly relevant given the fraud risks associated with alternative payment instruments – for example, almost two thirds of firms report experiencing actual or attempted fraud via cheques.66
+40. On the cardholder side, security benefits arise primarily from the ability to place tighter security around payment initiation and use. Survey evidence indicates that fraud attempts are materially lower for virtual cards (5%) relative to certain alternative payment instruments such as cheques (63%), ACH debits (38%), or wire transfers (30%).
+
+67
+41. On the merchant side, fraud protection is one of the most frequently cited reasons for adopting commercial cards.
+
+68 A 2025 global survey of senior financial decision-makers at large B2B suppliers reported that 31% of card-accepting suppliers identified increased transaction security as a benefit of acceptance and 25% identified lower fraud incidence as a benefit.69 Enhanced controls and monitoring can be particularly valuable in multi-user business environments, where oversight and risk management requirements are more complex than in typical consumer transactions.
+
+2.2.4. Increased sales and revenue opportunities for merchants
+42. Commercial card acceptance can support higher revenues for merchants through both increased spend from existing customers and access to new customers who prefer or require payment by
+65 Virtual cards are digital payment instruments with electronically generated card credentials linked to an underlying funding account that enable card-based payment transactions without a physical card. See Ramp, “Virtual credit cards: What they are and how they work,” (5 November 2025), available at https://ramp.com/blog/virtual-credit-card-guide.
+
+66 Association for Financial Professionals, “Payments Fraud and Control Survey Report: Key Highlights,” p.10 (2023), available at https://www.jpmorgan.com/content/dam/jpm/commercialbanking/insights/cybersecurity/download-payments-fraud-Survey-key-highlights-ada.pdf (“In 2022, checks continued to be the payment method impacted most often by fraud activity; 63 percent of respondents report that their organizations faced some kind of check fraud activity, attempted or actual.”).
+67 Forbes, “Why It’s Time To Rethink B2B Payments (And The Role Of Commercial Cards),” (29 September 2025), available at https://www.forbes.com/councils/forbesfinancecouncil/2025/09/29/why-its-time-to-rethinkb2b-payments-and-the-role-of-commercial-cards/ (“[O]nly 5% of organizations reported fraud attempts with virtual cards, compared to 38% for ACH debits, 20% for ACH credits, 30% for wires and 63% for checks.”). We define wire transfers as methods of electronic funds transfer in which money is sent directly between financial institutions via secure networks. See Wise, “What is the Difference Between Wire Transfer vs Bank Transfer:
+Key Differences Explained,” (4 December 2024), available at https://wise.com/us/blog/wire-transfer-vs-banktransfer.
+68 Visa/Forrester, Total Economic Impact of Commercial Credit Card Acceptance, p.15 (2024) (“Interviewees reported a reduction in the administrative and legal burden associated with addressing fraud after accepting commercial credit cards.”).
+
+69 Mastercard, “The State of Commercial Card Acceptance,” p.8 (2025) (“31% of suppliers that accept cards say increased transaction security is a benefit of accepting card […] 25% of suppliers that accept cards say their business has benefited from lower fraud incidence as a result of accepting card.”).
+
+May 21, 2026 17 commercial card.70 A 2024 Forrester study indicates that 66% of merchant respondents reported increased access to new B2B customers and/or markets that may not be able to pay via other payment instruments.
+
+71
+43. Additionally, merchant survey evidence indicates that 96% of respondents that accept commercial cards seek to increase card volumes to drive higher sales.72 Conversely, 35% of merchants that did not accept commercial cards reported lost sales, with losses averaging 1.31% of total B2B sales.73 Among merchants that reported revenue benefits from commercial card acceptance, regional survey evidence also reports average sales uplifts of 4.32% in Asia Pacific and 6.67% in Europe following commercial card acceptance.74
+3.0 Commercial card interchange in New Zealand:
+
+the case for a distinct, context-specific assessment
+44. This section explains why regulatory approaches developed for other card product categories, particularly consumer cards, and in other jurisdictions cannot be assumed to apply directly to commercial cards in New Zealand. It first sets out the features of the New Zealand economy that make commercial cards particularly important for SME liquidity, cash-flow resilience, and adjustment to payment delays and external shocks (Section 3.1). It then explains why commercial cards exhibit distinct economic characteristics from consumer cards, including their stronger credit function, closer integration with broader banking relationships, higher transaction values, and greater service and control requirements (Section 3.2). Together, these considerations show that the New Zealand commercial card segment requires a distinct, market-specific assessment rather than a simple transposition of consumer-card logic or overseas regulatory settings.
+70 Visa/Forrester, Total Economic Impact of Commercial Credit Card Acceptance, p.8 (2024) (“After introducing commercial credit cards as a payment option, interviewees’ organizations saw incremental revenue gains by: 1) protecting revenue from potential business lost to a competitor if commercial credit cards were not a payment option and 2) unlocking more business opportunities from both new and existing customers that decided to make larger, more frequent purchases because commercial credit cards were an accepted form of payment.”).
+71 Visa/Forrester, Drive Commercial Card Growth with Custom Interchange, p.8 (2024) (“66% [of supplier respondents] stated that they have increased access to new B2B customers and/or markets that may not be able to pay via other methods.”).
+
+72 Visa/KoreFusion, Understanding the value of commercial card acceptance in Asia Pacific, p.4 (2025) (“Ninety-six (96%) percent of these merchants [that accept card payments] want to increase card payment volumes in order to increase sales and reduce their payment acceptance costs.”).
+73 Visa/KoreFusion, Understanding the value of commercial card acceptance in Asia Pacific, p.14 (2025) (“These benefits are also observed by all suppliers with 35% of non-card accepting suppliers reporting lost sales due to non-acceptance, with these losses averaging 1.31% of their total B2B sales.”).
+74 Visa/KoreFusion, Understanding the value of commercial card acceptance in Asia Pacific, p.14 (2025) (“Among card-accepting merchants, 50% reported an increase in sales attributable to this payment method, with those experiencing benefits noting an average uplift of 432 basis points”); Visa/KoreFusion, Understanding the value of commercial card acceptance in Europe, p.14 (2025) (“Among card-accepting merchants, 54% reported an increase in sales attributable to this payment method, with those experiencing benefits noting an average uplift of 667 basis points”).
+
+May 21, 2026 18
+3.1 New Zealand’s economic structure makes commercial cards particularly important for SME liquidity and resilience
+45. Several features of the New Zealand economy are relevant to the role and value of commercial cards. In particular, the predominance of small businesses in New Zealand, their exposure to payment delays in B2B transactions, and New Zealand’s vulnerability to external trade shocks as a small open economy, all provide important context for assessing the importance of commercial cards for New Zealand and any knock-on effects of regulating commercial card interchange fees.
+46. Small businesses make up the overwhelming majority of New Zealand firms, so issues affecting small business cash flow are economically significant to New Zealand.75 The Ministry of Business, Innovation, and Employment (MBIE) notes that small businesses tend to be owner-operated, time-poor and budget constrained.76 In such an economy, financial tools that provide cash flow flexibility are likely to be particularly important. This is consistent with evidence from the Reserve Bank of New Zealand (RBNZ) that firms have increasingly relied on overdraft facilities for working capital as cash buffers have eroded.77 For many of these businesses, commercial cards can provide not only a means of settling transactions but also a flexible source of short-term financing.
+47. Available New Zealand card data supports that commercial cards are a growing segment of the B2B payments landscape. Commercial card spend has grown year on year, from $7.2bn in 2023 to $8.2bn in 2026,
+78 indicating that New Zealand businesses are increasingly adopting commercial cards as part of their payment portfolio.
+
+48. Commercial cards’ ability to reduce administrative and payment-management frictions can also generate value for small businesses. MBIE’s research indicates that many New Zealand businesses still face practical barriers to adopting and using digital tools, including lack of time (35%), lack of staff skills (35%), and lack of knowledge about which tools to invest in (39%).79 In that context, commercial cards can reduce the time, effort and in-house capabilities required for
+75 The Ministry of Business, Innovation and Employment (MBIE) notes that small businesses make up around 97% of all enterprises and contribute about 42% of New Zealand’s total economic value. MBIE, “Small Business and Manufacturing,” (26 March 2025), available at https://www.mbie.govt.nz/business-andemployment/business/support-for-business/small-business-and-manufacturing (“Small businesses (those with fewer than 20 employees) are a major part of New Zealand’s success story. They make up around 97% of all enterprises and contribute about 42% of our total economic value.”).
+
+76 MBIE, “Health and Safety at Work Strategy 2018-2028: Small Businesses,” p.1, available at https://www.mbie.govt.nz/assets/3b7892473c/small-business-factsheet.pdf, (“What are some of the challenges small businesses face? They tend to be owner-operated and have limited access to external support […] Their owners are time-poor and tend to wear many hats […] They face budget constraints.”).
+77 RBNZ, “Financial Stability Report,” p.19 (November 2025), available at https://www.rbnz.govt.nz/- /media/project/sites/rbnz/files/publications/financial-stability-reports/2025/november/fsr-nov-2025.pdf (“Where cash buffers have eroded, firms may rely on banks to provide working capital. Since the start of 2021, businesses have borrowed more through overdraft facilities.”).
+
+78 MWE Consulting, “New Zealand Cards Report,” p.7 (February 2026).
+
+79 Better for Business, “Business Digital Capability Monitor – Key findings and update,” p.4 (May 2023), available at https://www.mbie.govt.nz/dmsdocument/28125-business-digital-capability-monitor-key-findingsand-update-may-2023-pdf (“35% say a lack of time is holding them back from further digital enablement – up from 30% last year […] Confidence using basic tools appears to have dipped slightly while lack of staff skills (35%) and lack of knowledge about which tools to invest in (39%) remain persistently prevalent barriers.”).
+
+May 21, 2026 19 small businesses to manage spending, reconcile transactions and administer payments efficiently.
+
+49. Small businesses in New Zealand are also exposed to delayed payments by their business customers. MBIE notes that trade credit is common in B2B transactions, meaning that suppliers often deliver first and are paid later under invoice terms.80 If business customers then pay late, or impose lengthy payment terms, the supplier may face cash-flow pressure, disruption to hiring or investment, and a need for additional financing.81 MBIE further notes that these effects tend to fall disproportionately on small businesses.82 In that setting, commercial cards may have particular value as a payment tool that can support liquidity and reduce exposure to delayed payments.
+
+50. New Zealand’s macroeconomic characteristics further shape the relevance of commercial cards, particularly for small businesses. New Zealand is a small, open economy with a high dependence on imports and exports. The RBNZ notes that, as a small economy, New Zealand is vulnerable to global shocks and spillovers,83 and that heightened global uncertainty can affect decision making by New Zealand firms.84 World Bank data likewise indicates that New Zealand’s economy is highly exposed to trade, with imports of goods and services equal to 26.7% of GDP and exports equal to 23.7% of GDP in 2023.85 Recent SME-focused evidence suggests that conditions for New Zealand small businesses remained challenging heading into 2026.86
+80 MBIE, “Regulatory Impact Statement: Better Business to Business Payment Practices,” p.4 (2 December 2021), available at https://www.mbie.govt.nz/assets/regulatory-impact-statement-better-business-to-businesspayment-practices.pdf (“It is common practice for businesses to supply goods and services on trade credit to their business customers. Trade credit is where payment is deferred for a period after delivery, for example, within 30 days of the invoice date or by the 20th of the month following the invoice date, rather than requiring immediate payment.”).
+
+81 MBIE, Better Business to Business Payment Practices, p.4 (2021) (“The impacts of late and lengthy payments include: disruption to hiring and capital investment due to uncertain cashflow, a need to source additional financing, and an increased risk of insolvency in the case of already capital constrained firms.”).
+82 MBIE, Better Business to Business Payment Practices, p.4 (2021) (“Where there is harm from such practices, it tends to fall disproportionately on small businesses. Small businesses are less resilient to poor payment practices because they are less well-equipped or resourced to weather such practices.”).
+83 RBNZ, “Opening the toolbox: how does the Reserve Bank analyse the world?,” (1 May 2019), available at https://www.rbnz.govt.nz/hub/publications/bulletin/2019/rbb2019-82-04 (“As a small open economy, New Zealand is particularly vulnerable to international shocks […] These events, or shocks as they are called by economists, can either affect many countries simultaneously (i.e. a global shock), or originate in one country and transmit to other countries (i.e. spillovers).”).
+
+84 RBNZ, Analytical note on macroeconomic uncertainty (2025) (“Since New Zealand is a small open economy, heightened global uncertainty can influence sentiment and decision-making for New Zealand firms and households.”).
+
+85 See World Integrated Trade Solution (World Bank), “New Zealand Trade,” (2023), available at https://wits.worldbank.org/countrysnapshot/en/NZL/textview.
+
+86 Only 38% of New Zealand small businesses recorded growth in 2025, and 48% expected growth in 2026, the lowest rates among the 11 surveyed Asia-Pacific markets. See CPA Australia, “CPA Australia Asia-Pacific Small Business Survey 2025-2026: New Zealand market summary,” p.3 (2026), available at https://www.cpaaustralia.com.au/-/media/project/cpa/corporate/documents/tools-and-resources/businessmanagement/small-business-survey/2025-2026-market-summaries/sbs---new-zealand-market-summary-2025- 26.pdf?rev=472fa86b724c4386b804d30d7d5647f2&. Similarly, although performance improved at the end of 2025, it remained below average overall. See Xero, “New Zealand Small Business Insights,” (26 February 2026), available at https://www.xero.com/nz/resources/small-business-insights/latest-new-zealand/.
+
+May 21, 2026 20
+51. In such an environment, the ability of firms – particularly small businesses – to preserve liquidity and quickly adjust to changing trade conditions (for example, in response to cost shocks such as increases in fuel prices, or disruptions to supply chains that raise procurement costs and create cash flow pressures) is critical. In such conditions, access to flexible sources of short-term financing becomes increasingly important. Rather than supporting risk-taking or expansionary investment, products such as commercial cards can enable businesses to manage liquidity, smooth cash flow, and respond to short-term fluctuations in demand and costs, thereby supporting resilience.
+
+52. Overall, New Zealand’s combination of an SME-heavy business base, widespread use of trade credit, and exposure to external shocks give commercial cards the potential to be a broader economic function rather than just a simple payment execution tool. This means that interchange fee regulation that affects the availability or functionality of commercial cards may indirectly affect SME resilience and financial flexibility.
+
+3.2 Commercial cards exhibit distinct economic characteristics relative to consumer cards
+53. The existence of consumer card interchange fee regulation does not imply that the same analytical framework can be applied to commercial cards. Commercial cards differ materially in their usage patterns, risk characteristics, and institutional features. As set out below, these differences mean that the economics of consumer card markets cannot simply be transposed to the commercial segment.
+
+54. The commercial card segment demonstrates a significantly higher reliance on credit and overall reliance on credit compared to the consumer segment.
+
+87 Approximately 97% of commercial cards are credit cards, compared with a substantially lower share (60%) in the consumer segment.
+
+88 Average commercial card limits for SMEs are materially higher than consumer limits (for example, around USD 16,000 in the United States), with an average utilisation rate of around 26%.
+
+89 The greater reliance on credit in the commercial segment has implications for issuer risk exposure, capital allocation, and product design.
+
+55. Unlike for consumer cards, businesses in New Zealand use commercial cards as a shortterm liquidity tool rather than a long-term source of revolving debt. In fact, commercial card balances remain low at roughly 6% of total commercial card spend, compared with consumer In response to this environment, SMEs are adapting cautiously, with a focus on cost control and financial flexibility rather than expansion. CPA Australia, Asia-Pacific Small Business Survey: New Zealand, p.3 (2026) ("Most businesses are unlikely to pursue high-growth or expansion strategies").
+
+87 We define credit intensity as the extent of credit exposure, reflected in the magnitude of balances or credit limits relative to spend.
+
+88 Mastercard/Oxera, The economics of commercial cards, p.1 (2019) (“Commercial cards are a potential source of credit, and this is reflected in Mastercard’s mix of cards in Europe: 60% of consumer cards are credit cards, compared with 97% of commercial cards.”).
+
+89 Benetton and Buchak, “Revolving Credit to SMEs: The Role of Business Credit Cards,” p.4 (13 December 2024), available at https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4997456 (“[W]e document that the average limit on business cards is roughly $16 thousand with an average utilization rate of around 26%.”).
+The utilisation rate refers to the percentage of a borrower’s available credit limit that is currently being used on revolving credit accounts such as credit cards. See Citi, “What Is a Credit Utilization Rate?,” (29 October 2025), available at https://www.citi.com/credit-cards/understanding-credit-cards/what-is-credit-utilization-ratio.
+
+May 21, 2026 21 card balances of approximately 12% of total consumer card spend.
+
+90 This functionality differentiates commercial card network incentives from consumer cards; commercial cardholders repay balances quickly leading to low interest revenue for issuers. Issuers then rely more on transaction-linked revenue, to maintain commercial card offerings.
+
+56. In contrast to consumer cards, commercial card programmes are often embedded within broader banking relationships, enabling the provision of more flexible financing for businesses. This can include overdrafts, lending facilities, and treasury services. Issuers rely on ongoing relationships with business customers to assess credit risk, adjust limits in line with revenue growth, and integrate card facilities with other forms of financing. This relationship-based model differs from the more standardised nature of consumer card issuance. In this context, interchange fees may play a more significant role in the commercial card market in supporting issuer participation and investment.91 On the merchant side, this financing capability can complement or substitute for trade credit. By contrast, commercial cards enable suppliers to receive payment promptly,92 while the issuer assumes the credit exposure to the buyer.93
+57. B2B transactions frequently occur within ongoing supplier-buyer commercial relationships, in contrast to consumer transactions, which are typically arm’s length. As a result, merchant acceptance decisions may be influenced not only by the cost of acceptance,94 but also by the importance of maintaining commercial relationships with key buyers.95 This is supported by merchant research: almost two-thirds of small businesses surveyed identified ease of payment for customers as the most important factor when adopting a new payment instrument, while around one third cited access to a new customer base as a benefit of adopting new payment instruments.
+
+96 This suggests that the interchange fee is one of several factors affecting
+90 MWE Consulting, “New Zealand Cards Report,” p.7 (February 2026).
+
+91 It helps sustain a model in which issuers provide tailored credit limits, ongoing servicing, and integrated payment solutions. It also supports the integration of card products within broader financial relationships, enabling issuers to extend credit that is larger in scale and more responsive to businesses’ evolving financing needs, and to deliver more flexible and responsive financing solutions to firms over time.
+92 Visa/KoreFusion, Understanding the value of commercial card acceptance in Europe, p.17 (2025) (“Card acceptance enhances merchant cash flow in two significant ways: by reducing Days Sales Outstanding and by potentially accelerating payments.”).
+
+93 Citigroup/PYMNTS, “The Treasury Management Playbook: Businesses Give Commercial Cards a Fresh Look,” p.6 (August 2023), available at https://www.citigroup.com/rcs/citigpa/storage/public/icpublic/CommercialCards%20Playbook.pdf (“On the buyer’s side, [commercial cards provide] a line of credit and the ability to float working capital from statement to statement”).
+
+94 We define the cost of acceptance as the total cost to a merchant of accepting a payment instrument, including both direct costs (e.g. interchange and other fees) and indirect costs (e.g. administrative costs). See Mastercard, “Mastercard response to Commerce Commission consultation: Retail Payment System,” p.21 (2 September 2024), available at https://www.comcom.govt.nz/__data/assets/pdf_file/0029/363782/MastercardSubmission-on-Retail-Payment-System-Consultation-on-Costs-to-businesses-and-consumers-of-cardpayments-2-September-2024.pdf.
+95 Mastercard, “The State of Commercial Card Acceptance,” p.3 (2025) (“Accepting buyers’ preferred payment methods can help with both strengthening current relationships and attracting new buyers.”).
+96 Xero, “I want to pay that way,” p.30 (20 August 2024), available at https://brandfolder.xero.com/8HSCTPAX/as/35k7jx5w5bf6bkn6sjh7v/2024_Xero_Global_Payments_Report_- _I_want_to_pay_that_way (“When exploring new payment options, 62% of small businesses said ease of payment for their customers was the most important factor […] Accessing a new customer base (31%), […]
+
+May 21, 2026 22 commercial card acceptance and hence may be less important for the acceptance than in consumer card markets.
+
+58. Commercial card transactions tend to be larger on average than consumer transactions, leading to greater exposure per account for issuers.
+
+97 While commercial cards typically represent a smaller share of total card transactions by volume than consumer cards,98 they account for a disproportionately higher share of transaction value. Higher transaction values and higher credit limits imply greater exposure per account for issuers and, correspondingly, higher potential risk and servicing costs. These features result in a more concentrated and, in many cases, more commercially sensitive risk profile compared to the diversified exposures characteristic of consumer card portfolios. For merchants, larger transaction values can increase the importance of payment certainty and timely settlement, particularly where invoice-based alternatives would otherwise expose them to higher counterparty risk or delayed cash flows.99
+59. Commercial cardholders often require functionality beyond basic payment capability.
+Merchants may also benefit from these enhanced features through improved payment visibility,100 richer remittance data,101 and more efficient reconciliation processes102 compared to traditional invoicing arrangements. This reflects the nature of B2B transactions, which are often higher value and more volatile than consumer transactions, creating the need for additional services. These services can include:
+
+a. Integration with corporate accounting platforms. In New Zealand, commercial card functionality often extends beyond payment capability to include integration with expense management, corporate accounting, and reimbursement processes.103 This can help address common challenges faced by New Zealand small businesses in paying supplier retaining more business (28%) […] were some of the other benefits realised by small businesses from adopting new payment methods in their business in the last 6 to 12 months.”).
+
+97 For example, evidence from the United States indicates that the average payment per business generalpurpose credit card transaction is more than three times higher than that for a consumer credit card transaction. See Board of Governors of the Federal Reserve System, “Federal Reserve Payments Study (FRPS),” (November 2024), available at https://www.federalreserve.gov/paymentsystems/frps_npips24ddr.htm.
+98 See FRPS (2024).
+
+99 Visa/KoreFusion, Understanding the value of commercial card acceptance in Asia Pacific, p.15-16 (2025) (“Merchants reported that card acceptance decreases buyer defaults and non-payment, resulting in fewer write-offs and less bad debt [...] Card acceptance accelerated payment”).
+
+100 Mastercard, “The State of Commercial Card Acceptance,” p.7 (2025) (“Suppliers that accept cards report greater payment visibility (32%)”).
+
+101 Mastercard, “Suppliers and the demands of the digital economy: A powerful case for commercial card acceptance,” (5 May 2025), available at https://www.mastercard.com/global/en/news-andtrends/stories/2025/commercial-card-acceptance.html (“[N]on-card payments don’t come with the same rich data that speeds up tedious accounting.”).
+
+102 Visa/Forrester, Total Economic Impact of Commercial Credit Card Acceptance, p.3 (2024) (“Commercial credit card acceptance allows the composite organization to integrate cards with external self-service tools to automate payment related tasks such as transaction processing and reconciliation”).
+103 ASB, “ASB Expense Manager,” available at https://www.asb.co.nz/business-banking/expense-manager.html (“ASB Expense Manager works with your ASB Visa Business credit card facility to create a comprehensive and efficient online reporting and spend management system that allows cardholders and managers to code and approve transactions.”).
+
+May 21, 2026 23 bills, including inconsistencies in bill information and the need to re-enter details manually.
+104
+By feeding transaction data directly into accounting or expense management platforms, commercial card programmes can support automated reconciliation, reduce manual errors, and provide more consistent payment data. For merchants, this can also improve invoice matching and reduce reconciliation effort.
+
+105
+b. Data reporting. Commercial card offerings in New Zealand typically provide enhanced data reporting tools and richer transaction data.
+
+106 This can help merchants address payment reconciliation challenges by improving invoice matching, reducing manual reconciliation, and enabling discrepancies to be identified earlier. This is particularly relevant in the Asia-Pacific context, given that 78% of merchants report reconciliation problems, at an overall cost of 1.7% of invoice value.107 This can also improve transparency for merchants receiving payments, particularly where enhanced data accompanies transactions.
+
+c. Enhanced fraud protections. Commercial card issuers in New Zealand generally provide enhanced fraud protections, including individual card controls, insurance against unauthorised card transactions, and monthly spending limits.
+
+108 These features can reduce fraud and non-payment risk for merchants relative to some alternative payment instruments.
+
+109
+d. Working capital benefits. Asia-Pacific cost of acceptance research highlights the working capital benefits provided by commercial cards, including an average reduction in Days Sales Outstanding by 4 days.
+
+110 This is particularly relevant for New Zealand small businesses, with one report finding that one in six experienced more than six months of negative cash
+104 See Xero, “I want to pay that way,” p.25 (20 August 2024), available at https://brandfolder.xero.com/8HSCTPAX/as/35k7jx5w5bf6bkn6sjh7v/2024_Xero_Global_Payments_Report_- _I_want_to_pay_that_way.
+
+105 Visa/KoreFusion, Understanding the value of commercial card acceptance in Asia Pacific, p.19 (2025) (“Card acceptance delivers significant operational improvements and cost savings by streamlining invoice reconciliation and enhancing the management of various exceptions.”).
+
+106 Visa, “Simplify B2B Payments with Visa Commercial Pay,” available at https://www.visa.co.nz/products/visacommercial-pay.html#174773cb41 (“Visa Commercial Pay seamlessly integrates into business travel processes to deliver enhanced data, full spend visibility and automated expense reconciliation.”).
+107 Visa/KoreFusion, Understanding the value of commercial card acceptance in Asia Pacific, p.19 (2025) (“For example, reconciliation problems are reported by 78% of merchants and affect 1.79% of invoices at a cost of 1.7% of invoice value.”)
+
+108 Westpac, “Business Mastercard®,” available at https://www.westpac.co.nz/business/accounts-andcards/business-mastercard/ (“Set individual card controls to help prevent misuse.”); ANZ, “ANZ Visa Corporate card,”, available at https://www.anz.co.nz/business/accounts-and-cards/businesscredit-cards/visa-corporate-card/ (“Set individual monthly spending limits for each card, as well as different limits for purchases and cash advances […] Complimentary Liability Waiver Insurance protects your business against unauthorised card transactions.”).
+
+109 Visa/Forrester, Drive Commercial Card Growth with Custom Interchange, p.8 (2024) (“[M]ore than 70% of supplier respondents reported that they have reduced fraud risk by accepting commercial cards for B2B transactions”).
+
+110 Visa/KoreFusion, Understanding the value of commercial card acceptance in Asia Pacific, p.13 (2025) (“Card acceptance improves merchant cash flow by reducing Days Sales Outstanding by an average of 4 days and providing an estimated cash flow benefit of 0.44% of total invoice value.”)
+
+May 21, 2026 24 flow in a year, and that the average small business recorded four months with negative cash flow in the year.
+
+111
+60. These features reflect the fact that commercial cards are frequently used as part of a broader payments and financial management solution, rather than solely as a retail payment instrument.
+Commercial cards provide value in business-payment contexts where cardholders value working capital flexibility, internal controls, and integration with finance, procurement, or expensemanagement processes.112
+61. Taken together, these characteristics indicate that commercial cards serve distinct economic functions compared to consumer cards. These structural differences are directly relevant when assessing the competitive dynamics and appropriate regulatory framework for the commercial card segment. The distinction between commercial and consumer cards is also reflected in regulatory practice overseas.
+
+62. In the EU, the Interchange Fee Regulation (IFR) capped interchange fees for consumer debit and consumer credit cards, but commercial cards were treated separately.113 The United Kingdom’s inherited IFR framework likewise continues to only cap consumer debit and credit transactions, excluding commercial cards.
+
+114
+63. The Reserve Bank of Australia (RBA) also highlights both the relevance of separate treatment for consumer and commercial cards, and the importance of assessing overall competitive effects, including substitution towards three-party networks.
+
+115 At the same time, their view that commercial and consumer credit cards are similar because both facilitate payment and smooth
+111 Xero/Accenture, “Cash flow challenges facing small businesses,” p.7-8 (July 2022), available at https://www.xero.com/content/dam/xero/pdfs/xsbi/cash-flow-challenges-facing-small-businesses.pdf (“As shown in Figure 3, in Australia, one in five (20%) small businesses experienced more than six months of negative cash flow in the year […] This compared to one in six small businesses (17%) in New Zealand […] In New Zealand, the average small business experienced 4.0 months of negative cash flow in 2021”).
+112 Mastercard, “Morgan Stanley Technology, Media & Telecom Conference,” p.5 (4 March 2026), available at https://seekingalpha.com/article/4878451-mastercard-incorporated-ma-presents-at-morgan-stanley-technologymedia-and-telecom-conference (“In this environment, the businesses are very focused on reducing expenses, digitizing, reducing – optimizing their working capital, reducing ups and downs in their cash flow. That plays to our strength.”).
+
+113 European Commission, “Commission Staff Working Document: Impact Assessment,” p.39 (24 July 2013), available at https://eur-lex.europa.eu/resource.html?uri=cellar:906ed6d3-f509-11e2-a22e01aa75ed71a1.0001.04/DOC_1&format=PDF (“Commercial cards and three party schemes – to the extent that they do not make use of licensed banks – would be exempted from the options previously discussed as these schemes have limited market shares in the EU and different fee structures.”).
+
+114 Payment Systems Regulator, “Interchange Fee Regulation - what it is, what it does, and our role,” available at https://www.psr.org.uk/our-work/card-payments/the-ifr/ (“The UK IFR caps interchange fees on consumer debit and credit card transactions (except some American Express cards) where the point of sale (‘merchant’), acquirer and card issuer are all within the UK.”).
+
+115 RBA Conclusions Paper, p.55 (2026) available at https://www.rba.gov.au/payments-andinfrastructure/review-of-retail-payments-regulation/2026-03/conclusions-paper/pdf/conclusions-paper.pdf (“reducing interchange on commercial credit cards at this time would harm competition for commercial credit cards, which would likely offset any efficiency benefits of lower interchange fee… there is a substantial risk that such reductions could materially advantage three-party networks that are not subject to interchange regulation”)
+
+May 21, 2026 25 consumption potentially fails to acknowledge some of the differences in the products highlighted above, as we also discuss in Section 5.3 in more detail.116
+4.0 Competitive dynamics and alternatives in the
+B2B payments ecosystem
+64. This section provides an overview of the broader B2B payments ecosystem within which commercial cards operate, including the range of alternative payment instruments available to businesses and the evolving competitive landscape. It first describes the different payment instruments used in B2B transactions, and how commercial cards interact with and differ from other instruments such as bank transfers, cheques, and emerging fintech-enabled solutions (Section 4.1). It then considers the dynamic nature of competition in B2B payments, including the role of ongoing innovation, open banking developments, and the entry of new providers in expanding the set of options available to businesses (Section 4.2). Finally, it considers the importance of maintaining competitive neutrality between four-party networks and three-party networks, and the potential for interchange regulation to affect competitive dynamics and substitution between payment systems (Section 4.3).
+
+65. Together, this section shows that commercial cards operate in a competitive and evolving ecosystem, in which businesses have access to a range of alternative payment instruments and solutions.
+
+4.1 Commercial cards operate within a broader B2B payments ecosystem
+66. B2B payments are made using a range of instruments. These include card payments and account-to-account bank transfers (e.g., bank transfers or faster/instant payment systems), alongside other payment instruments such as cheques. Global payment studies note that B2B payments are still dominated by bank transfers and instant payments, even in the face of widespread digital adoption.117 Asia-Pacific centric studies also note that electronic funds transfer dominate B2B payments, while also noting that cash remains in use in some emerging markets.118
+67. This broader picture is consistent with Mastercard’s estimate of a global commercial payments opportunity of approximately $80 trillion, of which around $77 trillion are non-carded payments.
+For commercial point-of-sale transactions, cash and cheque remain significant globally: of an estimated $17 trillion (of the $80 trillion market), around $16 trillion (94%) is paid by cash or cheque, compared with around $1 trillion (6%) by card. Invoice-based payments account for around $63 trillion (out of the $80 trillion market), of which approximately $53 trillion (84%) is paid
+116 RBA Conclusions Paper, p.54 (2026) (“Commercial credit cards are similar products to consumer credit cards. Both products serve similar purposes of facilitating payments and smoothing consumption…”)
+117 McKinsey, “The 2025 McKinsey Global Payments Report: Competing Systems, Contested Outcomes,” (26 September 2025), available at https://www.mckinsey.com/industries/financial-services/our-insights/globalpayments-report (“Digital adoption is widespread in B2B payments; however, activity is mainly in low-margin channels such as bank transfers and instant payments.”).
+
+118 Boost Payment Solutions, “State of B2B Payments: Asia Pacific,” p.2, available at https://www.boostb2b.com/hubfs/APAC%20White%20Paper.pdf (“Within individual countries, electronic funds transfer is the predominant means of B2B payments in most of the markets. There is still cash flowing around emerging markets as well.”).
+
+May 21, 2026 26 by account-to-account bank transfers, around $8 trillion (13%) by cheque, and around $2 trillion (3%) by card.119
+68. Commercial cards typically operate alongside other payment channels, including bank transfers, across a range of payment categories. We note that there are a number of alternative payment instruments available to commercial cardholders. In broad terms, these alternatives differ in the extent to which they replicate (i) the ability to pay and (ii) any operational tools that may be bundled with commercial card programmes (e.g., expense workflows and controls).
+
+a. Cash. For some use cases, such as small, infrequent purchases, office expenses or for very small businesses who largely receive cash payments, cash would be a viable alternative to commercial cards.120
+b. Cheques and bank transfers. Businesses also use bank and wire transfers and cheques for at least some of their payment needs.121
+c. Three-party network operators. Three-party networks, like American Express, can provide an alternative card-based payment option wherein the network provides both issuing and acquiring services.122
+d. Consumer credit and debit cards. Microbusinesses with very few employees could use personal consumer credit and debit cards instead of commercial cards.123 Personal cards may be used for business expenses because they are already available and provide immediate access to funds.124 However, personal cards are not equivalent to commercial cards, which are specifically designed for business use and typically provide enhanced controls, richer transaction data, and integration with accounting systems. Moreover, using
+119 See Mastercard, “Mastercard Investment Community Meeting,” p.26 (13 November 2024), available at https://s25.q4cdn.com/479285134/files/doc_events/2024-Mastercard-Investment-Community-Presentation.pdf.
+120 As per an EU survey study by Oxera, cash was used by 15% of their respondents as an alternative to commercial cards. See Mastercard/Oxera, The economics of commercial cards, p.3 (2019).
+121 Deloitte Insights, “Fasten your seat belts: Real-time, business-to-business payments are preparing for takeoff,” (27 July 2023), available at https://www.deloitte.com/us/en/insights/industry/financial-services/fsi-b2breal-time-payments-predictions.html (“When asked about their payment methods, more than one-half used wire transfers (one of the most expensive methods) and bank transfers; 28% used e-checks; and 17% used physical checks and cash.”).
+
+122 Irish Legal, “Three party card scheme may be tantamount to four party scheme for interchange fee purposes,” (14 February 2018), available at https://www.irishlegal.com/articles/three-party-card-scheme-maytantamount-four-party-scheme-interchange-fee-purposes (“In contrast, in three party schemes, the acquiring and issuing services are provided by the scheme itself and card-based payment transactions are made from the payment account of a payer to the payment account of a payee within the scheme. American Express operates a three party payment card scheme.”).
+
+123 For example, research commissioned by Mastercard finds that 30% of SMEs use personal credit cards for business expenses. See PYMNTS/Mastercard, “Ready for change: Why nearly half of SMBs want to ditch cash and checks,” (February 2026), available at https://www.pymnts.com/wp-content/uploads/2026/02/PYMNTSIntelligence-Ready-for-Change-February-2026.pdf.
+124 Funding Circle, “Can I use a personal credit card for business?,” available at https://www.fundingcircle.com/uk/resources/business-finance/can-i-use-a-personal-credit-card-for-business/ (“If you’re just starting out or need immediate payment options, using your personal card requires no additional applications or waiting periods.”).
+
+May 21, 2026 27 personal cards for business purposes can create risks, including personal liability, reduced cost efficiency, and a higher likelihood of accounting errors and tax complications.125
+a. Fintech solutions.126 Increasingly, businesses also use fintech-enabled payment and spend-management tools. These products sit at different layers of the payments stack. Some operate as interface solutions, such as digital wallets, which change how payments are initiated or presented while continuing to rely on an underlying card or bank account. Others provide digital or API-based functionality, such as foreign exchange services, virtual cards, or spend-management tools. A further group comprises account-to-account and openbanking solutions, which enable payments to be made directly from bank accounts without using card rails. These products illustrate the growing range of digital payment and paymentmanagement tools available to businesses. Examples from the New Zealand market are discussed below.
+
+69. Businesses commonly use more than one payment instrument.127 The instrument choice depends on the spend context and the operating needs around that spend (e.g., timing, controls, and credit). For example, bank transfers are often used when payment follows an invoice or agreed settlement terms. On the other hand, commercial cards are often used when firms want stronger controls, reporting, and simpler administration around spend.
+
+70. In New Zealand, these alternative payment instruments appear in different forms and remain relevant to different business contexts. Bank transfers and other account-to-account payments remain an important part of the wider business payments landscape. This is reinforced by the RBNZ’s recent focus on improving New Zealand’s real-time account-to-account payment capability.128 Three-party networks, such as American Express, also operate as an alternative card-based option.
+
+71. Cash also remains relevant in the New Zealand payments landscape, especially to small businesses. Recent survey evidence indicates that 72% of small businesses would be adversely
+125 Ramp, “Can you use a personal credit card for business expenses?,” (14 July 2025), available at https://ramp.com/blog/using-personal-credit-card-for-business-expenses (“Using a personal credit card for business can make it harder to keep business and personal spending separate, cause bookkeeping difficulties, and open you up to personal liability if your business runs into financial trouble.”).
+126 We define fintech solutions as digital tools and platforms that help businesses execute, manage, and optimise payments and payment-related operations across the value chain (examples include wallets, FX tools, spend management platforms, amongst others). See House of Commons Library, “Fintech: a guide to financial technology,” (26 April 2021), available at https://researchbriefings.files.parliament.uk/documents/CBP9150/CBP-9150.pdf.
+127 Airwallex, “What are B2B payments? How they work and what to look for”, (12 March 2025), available at https://www.airwallex.com/uk/blog/b2b-payments-guide (“Common B2B payment methods include online payment platforms, bank transfers, electronic fund transfers (like ACH and BACS), credit and debit cards, corporate cards, cheques, and trade credit… With so many options, the right choice depends on your transaction size, how fast you need funds to arrive, and whether you're paying domestically or across borders.”)
+
+128 RBNZ, “Reserve Bank position on Aotearoa New Zealand’s need for real time payment capability,” p.2 (10 July 2023), available at https://www.rbnz.govt.nz/-/media/project/sites/rbnz/files/publications/informationreleases/2023/letter-to-payments-nz-on-nzs-need-for-real-time-payments-10-july-2023.pdf (“Real time payments can directly contribute to a more efficient and reliable money and payments system that supports innovation and inclusion. New Zealanders and the New Zealand economy should benefit from having access to modern real time account-to-account payments capability.”).
+
+May 21, 2026 28 affected if cash were unavailable as a means of payment.129 RBNZ evidence also indicates that over 80% of adults use cash at least sometimes, 56% store cash, and 8% rely on cash as their sole means of payment.130 At the smaller end of the market, some microbusinesses may continue to use personal consumer debit or credit cards for business-related spending, particularly where formal programme features are less important.
+
+72. From the merchant perspective, the alternative to accepting commercial cards is typically to require payment via bank transfer/ACH (or cheque) and to maintain existing invoicing and collections processes. Evidence suggests that many merchants view commercial card acceptance as a value-add relative to these alternatives, once impacts beyond just the MSF are considered.131
+73. These merchant-side value drivers indicate that acceptance decisions are not driven by up-front acceptance charges alone. Switching to alternatives like bank transfers and cheques involves trade-offs, including foregone sales or higher internal costs on invoicing. As a result, evaluating alternatives to commercial cards on the merchant side requires considering both direct costs of acceptance and wider commercial and operational implications of shifting payment instruments.
+Section 5.2 examines these dynamics further, including the potential implications of introducing
+an interchange fee cap on merchant economics.
+
+4.2 B2B payments are characterised by dynamic competition and ongoing innovation
+74. Competition in B2B payments is dynamic and evolving over time. The competitive landscape is an area which the NZCC has stated it is particularly focused on, with a goal of supporting the entry and growth of alternative payment providers to drive greater competition in the payments market, including to card payments.132 In its 2024 submission on open banking progress in New Zealand, the NZCC stated that the development and adoption of “new, safe, low cost and accessible open banking payment solutions” could provide viable alternatives to traditional payment instruments.
+
+133 NZCC’s recent updates and consultation documents indicate that open banking has remained an active area of regulatory and policy focus in New Zealand.
+129 Xero, “I want to pay that way,” p.16 (20 August 2024), available at https://brandfolder.xero.com/8HSCTPAX/as/35k7jx5w5bf6bkn6sjh7v/2024_Xero_Global_Payments_Report_- _I_want_to_pay_that_way (“Small businesses, on the other hand, have a higher reliance on cash payments, with 72% believing that if cash or cheque disappeared tomorrow it would have an impact on their business.”).
+130 MBIE, “Is cash important to your business?,” (12 March 2026), available at https://www.business.govt.nz/news/is-cash-important-to-your-business (“The bank’s own survey says that over 80% of adults use cash sometimes, over half (56%) store cash and 8% rely on cash as their sole means of payment.”).
+
+131 As explained more in detail in Section 2.2.2, several studies examining B2B card usage report that suppliers experience substantial reductions in administrative costs when using cards, including significant decreases in reconciliation time and dispute resolution costs (relative to traditional payment instruments).
+132 NZCC, “Open Banking Update Letter,” p.2 (5 March 2026), available at https://www.comcom.govt.nz/assets/Documents/retail-payment-system/Retail-Payment-System-Open-bankingupdate-letter-5-March-2026.pdf (“We support the entry and growth of alternative payments providers to drive greater competition in the payments market, including to card payments.”).
+
+133 NZCC, “Retail Payment System – Update on open banking progress,” p.10 (10 December 2024) available at https://www.comcom.govt.nz/__data/assets/pdf_file/0025/363652/Retail-Payment-System-Update-on-open-
+
+May 21, 2026 29
+75. Open banking allows third parties such as fintech businesses to initiate payments from a user’s bank account to use banking data in new ways to offer payment, budgeting, and other financialmanagement tools.
+134 This is relevant to B2B payments because it can support new ways for businesses to make account-to-account payments with added functionality for managing payment workflows, in turn expanding the range of payment options available to businesses.
+76. With NZCC’s regulatory focus on access and wider adoption, open banking is becoming more established in New Zealand. Mandated open banking formally began on 1st December 2025, when the four largest banks in New Zealand (ANZ, ASB, BNZ, and Westpac) were required to have open banking systems ready.135 Their participation makes it easier for fintech and other third-party providers to offer account-to-account payment services at a greater scale.
+77. Before mandated open banking began, the four major banks had already been developing and aligning with Payment NZ’s open-banking API standards set up in 2019, indicating an early willingness within the industry to adopt such solutions even in the absence of a regulatory mandate.
+
+136 Although all four major banks had standard payment APIs in the market by May 2024, only BNZ had progressed to use of the API by third-party providers.137 From 2023 onwards, the NZCC increasingly focused on measures to improve access to, and accelerate adoption of, innovative methods facilitating bank transfers.
+
+138 banking-progress-10-December-2024.pdf (“The development and adoption of new, safe, low cost and accessible open banking payment solutions, includes the adoption of viable alternatives for traditional Eftpos to compete with Visa and Mastercard.”).
+
+134 Payments NZ, “Payments NZ seeks authorisation to further develop its open banking framework,” (16 January 2024), available at https://www.comcom.govt.nz/news-and-media/news-and-events/2024/paymentsnz-seeks-authorisation-to-further-develop-its-open-banking-framework/ (“Open banking refers to consumers using third parties such as fintechs to send payments from their bank account, and using their banking information (eg, transaction histories) in new ways such as improved budgeting and personal finance tools”).
+135 Hon Scott Simpson, “Open Banking goes live for Kiwi customers,” New Zealand Government (1 December 2025), available at https://www.beehive.govt.nz/release/open-banking-goes-live-kiwi-customers (“The new open banking regulations, released in October, require the four major banks – ANZ, ASB, BNZ, and Westpac – to have certain open banking systems ready by today, 1 December 2025.”).
+
+136 Ozone API, “Open Banking in New Zealand: Why It Isn’t Just for the Big Banks,” (9 September 2025), available at https://ozoneapi.com/blog/open-banking-in-new-zealand-why-it-isnt-just-for-the-big-banks/ (“From as early as 2019, the big four banks were voluntarily developing and aligning with open banking API standards through Payments NZ’s API Centre. Their early participation gave them influence, insight, and a major head start on customer-centric innovation.”);
+
+Ozone API, “Payments NZ,” available at https://ozoneapi.com/the-open-finance-tracker/library/payments-nz/ (“In 2019 the API centre, part of Payments NZ, was launched to facilitate work that would lead to a set of API standards to deliver Open Banking to New Zealanders.”).
+
+137 NZCC, “Update on open banking progress,” p.3 (10 December 2024) available at https://www.comcom.govt.nz/__data/assets/pdf_file/0025/363652/Retail-Payment-System-Update-on-openbanking-progress-10-December-2024.pdf (“As of 30 May this year, each of the four largest banks in Aotearoa has had a standardised open banking payment API in market. This was a significant milestone for open banking in New Zealand. Only BNZ, however, was open for partnering and live with multiple third parties prior to this deadline.”).
+
+138 NZCC, “Retail Payment System: Payments Between Bank Accounts,” p.5 (31 July 2023), available at https://www.comcom.govt.nz/assets/pdf_file/0016/323602/Retail-Payment-System-Payments-Between-BankAccounts-Request-for-views-paper-31-July-2023.pdf (“We have observed the lack of recent innovation in options to make bank transfers in New Zealand, particularly the limited ability to make in-person payments using bank transfers.”).
+
+May 21, 2026 30
+78. Whilst adoption rates currently remain at an early-stage relative to the wider payment system, evidence suggests that open banking is gaining traction. Payments NZ reported that in October 2025, more than 100,000 unique customers used open banking services and completed over 180,000 transactions.139 The NZCC estimated that at least 15% of eligible customers at the four largest banks in New Zealand had made an open banking payment using APIs.140 Westpac has likewise stated that it facilitated more than 80,000 payments totalling nearly NZD 75 million for more than 41,000 customers on its open-banking rails since launch.
+
+141
+79. New Zealand also has a growing range of fintech-enabled payment and spend-management tools. Digital or API-based providers such as Airwallex,142 Wise143 and Emerge144 offer functions such as foreign exchange services, virtual cards and spend-management tools. Account-toaccount and open-banking providers such as BlinkPay,145 Qippay,146 Volley147 and Worldline’s Online EFTPOS148 enable payments to be made directly from bank accounts without using card rails. Other digital consumer-facing products, such as Dosh149 and PayPal,150 also form part of
+139 Payments NZ, “180,000 open banking payments in Aotearoa last month – what’s next?,” (27 November 2025), available at https://www.apicentre.paymentsnz.co.nz/news/articles/180000-open-banking-payments-inaotearoa-last-month--whats-next/ (“In October, more than 100,000 unique customers used open banking services powered by the Payments NZ API Centre’s industry-created API standards, completing over 180,000 payments – a significant milestone in how New Zealanders choose to send and receive payments.”).
+140 NZCC, Update on Open Banking progress, p.2 (2024) (“New Zealand is on the cusp of realising the benefits of open banking. We estimate at least 15% of eligible customers at each of the four largest banks have now made an open banking payment using APIs. This is encouraging and exceeds the levels seen to date in both Australia and the UK.”).
+
+141 Westpac, “Westpac NZ becomes first bank to hit key open banking milestone,” (17 November 2025), available at https://www.westpac.co.nz/about-us/media/westpac-nz-becomes-first-bank-to-hit-key-openbanking-milestone/ (“We’ve facilitated more than 80,000 payments totalling nearly $75m for more than 41,000 customers on our open banking rails since we went live last year. We already work with a range of innovative Kiwi fintechs and are open to further API agreements.”).
+
+142 Airwallex Corporate Cards, “A smarter approach to spending, locally and globally,” available at https://www.airwallex.com/nz/spend-management/cards (“Pay global expenses directly from your Airwallex multi-currency wallet, eliminating unnecessary FX conversion fees.”).
+
+143 Wise Business, “The business account for going global,” available at https://wise.com/gb/business/ (“Make payments, get paid, spend and earn returns in different currencies. Save time, money and hassle with the allin-one Wise Business account.”).
+144 Emerge Business, “A smarter way to run your business finances,” available at https://www.emerge.nz/business/business-account.
+
+145 BlinkPay, “Pay in a Blink: Make Payments Effortlessly,” available at https://www.blinkpay.co.nz/makingpayments.
+146 Quippay, available at https://www.qippay.com/payby.
+
+147 Volley Business, available at https://volley.nz/for-business.
+
+148 Worldline EFTPOS, available at https://worldline.com/en-nz/home. EFTPOS is a domestic payment system used in New Zealand that enables consumers to make in-person payments using a debit card at a point-of-sale terminal. See Stripe, “EFTPOS in New Zealand: A practical guide to modern payment terminals for businesses,” (1 January 2026), available at https://stripe.com/nz/resources/more/eftpos-in-new-zealand.
+149 Dosh, available at https://www.dosh.nz/.
+
+150 PayPal New Zealand, available at https://www.paypal.com/nz/business.
+
+May 21, 2026 31 the broader payments landscape. These examples illustrate the range of payment and paymentmanagement tools now available in New Zealand.
+80. These developments illustrate that businesses increasingly have access to a broader set of payment and payment-management options. Over time, such innovation will continue to strengthen competitive pressure in parts of the B2B payments landscape, to the benefit of both merchants and cardholders.
+
+4.3 Flexible, unregulated interchange maintains competitive neutrality between four-party networks and three-party networks
+81. Interchange regulation may create competitive distortions where it constrains four-party networks (such as Mastercard and Visa) but does not apply in the same way to three-party networks (such as American Express).
+
+82. In this context, regulation could alter the relative attractiveness and competitive position of different card-based payment options for commercial card transactions. Importantly, as discussed further in Section 5.2, economic theory suggests that cardholders and merchants would adjust their behaviour and payment choices in response to the introduction of a cap. If lower interchange reduces revenues for Mastercard and Visa issuers and, in turn, impacts issuers’ ability to support a robust commercial card offering and related features, cardholders may have stronger incentives to switch to three-party networks for at least some commercial spend.
+
+83. As outlined in Sections 2.2 and 3.2, commercial cardholders often value features beyond basic payment execution, including working-capital flexibility, expense-management functionality, programme servicing, and integrated controls. To the extent that lower interchange reduces the ability of four-party issuers to support these features, commercial cardholders may have stronger incentives to shift spend toward alternative networks that continue to offer a more attractive commercial card proposition.
+
+84. This position is also shared by the RBAin their Conclusions Paper, in which the Payments System Board (PSB) recognised that reducing interchange fees on commercial credit cards could harm competition in the commercial card market, and that there is a material risk that such reductions could confer a competitive advantage on three-party networks that are not subject to equivalent interchange regulation, such as American Express.151
+85. The RBA has also stated that, in Australia, American Express cards are more expensive to merchants to accept than equivalent four-party network cards.152 In particular, if regulation were
+151 RBA Conclusions Paper, p.55 (2026) (“However, the PSB has concluded that reducing interchange on commercial credit cards at this time would harm competition for commercial credit cards, which would likely offset any efficiency benefits of lower interchange fees. The PSB considers that there is a substantial risk that such reductions could materially advantage three-party networks that are not subject to interchange regulation, given the current competitive dynamics, where American Express is by far the largest issuer of commercial credit cards. This would likely raise payment costs for merchants.”).
+
+152 RBA Conclusions Paper, p.55 (2026) (“This could raise payment costs because domestic-issued American Express cards are on average more expensive for Australian merchants to accept than equivalent four-party network cards.”). Recall that in four-party networks, interchange is paid by acquirers to issuers. In three-party networks, there is no equivalent explicit interchange fee because the network performs both issuing and acquiring functions. However, three-party networks still charge merchants an MSC [or MSF], which funds the costs of serving both sides of the platform and balancing cardholder incentives with merchant acceptance.
+
+May 21, 2026 32 to encourage substitution away from regulated four-party commercial cards toward unregulated three-party networks, merchants could face higher overall acceptance costs despite lower regulated interchange fees within four-party systems. While there is no reliable publicly available information on Amex’s share of the market in New Zealand, we understand that they are a material competitor to the four-party networks.
+
+5.0 The role of interchange fees in sustaining participation and investment in commercial cards
+86. Commercial cards operate as two-sided platforms – the more merchants (i.e., supplier businesses) that accept a particular commercial card, the greater the benefits cardholders (i.e., buyer businesses) receive from holding the card and vice versa. The two-sidedness of the market results in there being strong value-generating interdependencies between market participants.153
+87. This section considers how interchange fees shape the economic incentives of each participant in the commercial card ecosystem (5.1). It then examines the broader coordination function that interchange fees perform in sustaining participation and balancing value across the commercial card ecosystem and evaluates how a cap on commercial cards may alter incentives across the ecosystem (5.2).
+
+88. Our framework suggests that:
+
+a. A reduction in the interchange fee would reduce the ability and incentive for issuers to offer Mastercard and Visa commercial card network value-added services.
+
+b. A reduction in the supply and quality of Mastercard and Visa card offerings would incentivise cardholders to switch to other card networks (e.g., American Express) and other payment instruments.
+
+c. This, in turn, would force merchants to increasingly accept alternative payment instruments that can be more costly to them. For example, an EU study comparing the costs of accepting different payment instruments estimates that cheques and bank transfers can be 35-110% more costly than commercial cards.154
+89. Building on this analysis, Section 5.3 reviews international regulatory practice and shows that the most relevant overseas comparators support maintaining greater flexibility for commercial card interchange fees than for consumer cards.
+
+153 Rysman, “The Economics of Two-Sided Markets,” Journal of Economic Perspectives, p.126 (2009), available at https://www.aeaweb.org/articles?id=10.1257/jep.23.3.125 (“Generally speaking, research in twosided markets explores choices by market intermediaries, particularly pricing, when there is some kind of interdependence or externality between groups of agents that the intermediary serves.”).
+154 Mastercard/Oxera, The economics of commercial cards, p.1 (2019) (“[T]he estimated full costs of acceptance of cheque and bank transfer are approximately 35–110% higher than those of commercial cards.”).
+
+May 21, 2026 33
+5.1 Commercial card networks are two-sided platforms in which pricing affects participation on both sides
+90. As recognised in the economic literature on payment systems and platform markets, interdependence between the two sides of the market gives rise to indirect network effects, where the attractiveness of participation on each side therefore depends, in part, on the value and participation decisions of the other side.155
+91. Because of these cross-side linkages, the overall performance of the platform depends not only on the total level of fees charged within the system, but also on the structure of those fees across participants.156 Economic theory distinguishes between the price level (the aggregate prices charged by the platform for participation and use) and the price structure (how the economic value generated by the platform is allocated between the two sides).157 In two-sided platforms, adjustments to pricing on one side may affect usage, investment, and participation on the other side in ways that are not observed in one-sided markets.
+
+92. In four-party networks, interchange fees serve as a mechanism through which value is balanced and allocated between the issuing side and the acquiring side of the platform. By transferring value from acquirers (and indirectly merchants) to issuers (and cardholders), interchange fees influence the relative prices faced by merchants and commercial cardholders, and thereby the distribution of value between the two sides of the platform. Changes in interchange fees therefore affect issuer revenues per transaction and the net value proposition for merchants, which in turn may influence credit provision, service levels, cardholder pricing, and acceptance decisions.
+93. The way in which this value is shared between the two sides may affect incentives to participate.
+A greater share of value accruing to issuers may support growth in cardholder adoption, credit provision, fraud management, customer servicing, and investment in functionality. At the same time, the value proposition for merchants remains central to acceptance decisions. Changes in interchange fees that alter this balance may therefore influence both the extent of issuer-side investment and the attractiveness of acceptance to merchants. In this context, flexibility in interchange fees allows the allocation of value between the two sides of the platform to adjust in response to changing market conditions, supporting efficient participation and investment decisions on both sides rather than distorting the underlying economics of the system.
+94. These dynamics are particularly relevant in the commercial card segment. As discussed in Section 3.2, commercial cards are characterised by greater reliance on credit, higher transaction values, more concentrated exposure per account, and enhanced service requirements relative to consumer cards. Moreover, the commercial card market is less mature and has lower penetration
+155 Huynh et al., “Explaining the Interplay Between Merchant Acceptance and Consumer Adoption in Two-Sided Markets for Payment Methods,” p.ii (August 2019), available at https://www.bankofcanada.ca/2019/08/staffworking-paper-2019-32/ (“The market for payment cards is inherently two-sided. Consumers benefit from increased merchant acceptance of payment cards and vice versa.”).
+
+156 Rochet & Tirole, “Two-Sided Markets: A Progress Report,” p.21 (2006) (“We define two-sided markets as ones in which the price structure [...] affects the economic outcome (volume, profits, and/or welfare).”).
+157 Rochet & Tirole, “Two-Sided Markets: A Progress Report,” p.6 (2006) (“We therefore introduce a distinction between the price level, defined as the total price charged by the platform to the two sides, and the price structure, referring to the decomposition or allocation of the total price between the buyer and the seller.”).
+
+May 21, 2026 34 than the consumer card market,158 requiring greater investment by issuers to support adoption and market expansion; interchange fees may help support these investments by covering a portion of issuer costs. Issuer participation in the commercial segment is typically more capitalintensive and more closely linked to credit risk management and ongoing relationship servicing.
+In this context, pricing structures in two-sided platforms imply that issuer revenues are expected to positively influence credit availability, value-added services, and participation decisions within the commercial card ecosystem.
+
+95. These considerations are central to the proper assessment of commercial card markets, yet have not always been fully reflected in regulatory approaches. In particular, some analyses (which will be discussed in Section 5.3) have placed greater emphasis on one side of the market, without fully accounting for the interdependence between participants. It is therefore important to adopt a two-sided analytical framework that captures the underlying economics of the system when evaluating the interchange fees.
+
+5.2 Interchange fees play a key role in shaping participation incentives in commercial cards
+5.2.1. Issuers: incentives to supply credit, invest, and sustain participation in the market
+96. As outlined in Section 3.2, in commercial cards, participation is more capital-intensive and more closely linked to credit risk management and customer-specific servicing than in mass-market consumer portfolios.
+
+159
+97. Interchange fees contribute to issuer revenue on a per-transaction basis and influence the expected return on issuing commercial cards. This affects ongoing issuer decisions and strategy about (i) willingness to supply credit, (ii) credit limits and underwriting standards, (iii) provision of value-added services, and (iv) investment and innovation in programme features. Where transaction-linked revenue declines, issuers may adjust these margins, particularly for smaller or higher-risk firms whose servicing costs are high relative to spend. The sustainability of commercial card programmes therefore depends not only on processing revenues but on the broader economic return associated with providing credit, managing risk, and delivering integrated service features.
+
+98. Some regulatory cost studies, including the RBA’s 2025 Issuer Cost Study, attempt to measure the costs associated with issuing commercial cards.
+
+160 While such studies provide useful data points, they are typically designed around specific regulatory objectives and defined cost
+158 Mastercard, “Breaking down barriers in commercial card acceptance,” p.6 (December 2024), available at https://www.mastercard.com/content/dam/mccom/shared/news-and-trends/insights/2024/highlights-from-ajourney-to-support-women-entrepreneurs/commercial-card-acceptance-payments-paper-2024.pdf (“B2B and corporate payments are a decade or so behind those in the consumer space.”).
+
+159 As noted in Section 3.2, for commercial cards, credit limits are materially higher and exposures more concentrated than in consumer portfolios. Additionally, commercial card programmes are often embedded within broader banking relationships and may involve bespoke servicing, integration with enterprise systems, and ongoing programme-level oversight.
+
+160 See RBA, “Review of Merchant Card Payment Costs and Surcharging: Issuer Cost Study,” Table 1 p.6 (19 August 2025), available at https://www.rba.gov.au/payments-and-infrastructure/review-of-retail-paymentsregulation/issuer-cost-study/2025-08/pdf/issuer-cost-study.pdf.
+
+May 21, 2026 35 constructs rather than a full economic assessment of issuer participation in commercial card markets.
+
+99. In particular, regulatory cost frameworks often focus on identifiable network service costs such as authorisation, processing, certain fraud prevention expenses, and funding of the interest-free period. However, commercial card issuance entails a broader set of economically relevant costs.
+These include credit underwriting, ongoing monitoring of larger and more concentrated exposures, capital allocation, dispute resolution and collections, programme-level administration, customer-specific integration with accounting and enterprise systems, and relationship management.
+
+100. Many of these activities are central to the commercial value proposition but may sit outside narrowly defined “eligible” or “avoidable” cost categories used for benchmarking purposes. As a result, regulatory cost measures may not fully capture the economic resources committed by issuers to sustain commercial card programmes, particularly where those programmes involve differentiated services and higher capital intensity.
+
+101. More broadly, the RBA’s reliance on an “eligible cost” framework abstracts from the broader set of functions supported by issuers in the commercial segment, including credit provision, risk management, customer servicing, and ongoing investment in functionality and network development. These activities are not fully captured by transaction-level cost metrics but are integral to the value generated by the system as a whole.
+
+102. Therefore, an assessment of interchange fees in commercial card markets should adopt a comprehensive and economically grounded view of issuer costs and incentives. A narrow focus on technical network costs risks understating the broader credit, capital, and service commitments that underpin commercial card participation and investment.
+
+161
+103. Importantly, these investments also have a dynamic and forward-looking dimension. Issuers incur costs to recruit and incentivise cardholders, expand usage, and build network scale over time, which in turn enhances the value of acceptance for merchants. In this sense, part of the value generated for merchants arises over time through issuer-side investment, rather than solely at the point at which a transaction occurs. A cap on interchange fees would weaken these investment incentives by reducing the expected return on such upfront and ongoing expenditure, thereby slowing cardholder growth and usage, and ultimately reducing the scale and value of the network to merchants over time.
+
+104. Economic logic can inform how a cap on interchange fees would affect issuer incentives by altering both the level of transaction-linked revenue and the drivers of transaction volume. This can be illustrated through a simple framework in which issuer revenue depends on both the fee level and the volume of transactions, with volume itself influenced by card features and merchant acceptance.
+
+161 The academic literature has documented the impact of interchange regulation on investment decisions, with some studies suggesting that caps on interchange fees often fail to adequately account for their effects on investment incentives. See Reisinger & Zenger, “Interchange Fee Regulation and Service Investments” p. 22, (May 2019), available at https://www.sciencedirect.com/science/article/abs/pii/S0167718719300311 (“In particular, regulation of interchange fees usually suggests caps because card associations may inefficiently reallocate costs via the interchange fee such that consumers benefit and retailers are hurt. This logic is based on a static perspective, in which investment incentives are ignored.”).
+
+May 21, 2026 36
+105. In particular, issuer interchange fee revenue can be expressed as the product of transaction volume and the effective interchange fee. Transaction volume is not fixed, but depends on factors such as the features and benefits offered to cardholders (which are partly funded by interchange fees) and the level of merchant acceptance (which depends, in part, on merchant-facing pricing).
+106. In this framework, a reduction in interchange fees affects issuer revenue through three channels:
+(i) an immediate reduction in revenue on existing transaction volumes; (ii) a reduction in cardholder value and usage as features and benefits adjust; and (iii) broader network effects, where changes in merchant acceptance and cardholder usage reinforce each other, which may reduce transaction volumes over time. The overall effect depends on the responsiveness of these factors, including the extent to which interchange fee changes are passed through to merchants and how both merchants and cardholders respond.
+
+107. A high-level estimate suggests that commercial cards can generate up to approximately 15% of issuer transaction-linked revenues in New Zealand.162 Revenues are also likely to vary across different categories of commercial cardholders, including SMEs, mid-market customers, travel and entertainment users, and broader B2B accounts. The relative contribution of these segments to issuer revenues may imply a degree of cross-subsidisation across customer types. At the same time, servicing costs are unlikely to be uniform: larger or more complex enterprises may involve higher programme-level servicing, integration, and risk management costs, while smaller firms may involve higher relative credit risk.163 These differences in revenue contribution and cost intensity are relevant when assessing how a cap might affect issuer incentives across segments.
+108. A cap would reduce issuer-side transaction revenue, which in turn may reduce service quality, cause card issuers to limit commercial card issuance, and/or reduce incentives to promote and support card issuance. Potential issuer responses include tighter underwriting, reduced credit limits, higher direct fees, rationalisation of service features, or reallocation toward lower-risk customers. Uniform pricing constraints may result in greater standardisation of offerings and reduced tailoring to specific business needs.
+
+109. Over time, a cap could also result in increased barriers to entry for smaller or innovative issuers (e.g. fintech), particularly where their business models rely on interchange revenue. For these providers, interchange fees often represent a key source of funding to support customer acquisition, product development, and ongoing servicing, especially where they offer low- or zerofee products to attract users.164 A reduction in this revenue stream may compress margins and
+162 This figure is an estimate based on the fact that commercial cards represent around 6% of total transaction volumes in New Zealand (see Mastercard Submission to NZCC on Retail Payment System, p.27 (September 2024)). Interchange fees on domestic commercial credit cards of up to 2.20%, which can be up to approximately 2.75x higher than consumer credit card fees (0.80%). Based on this high level approximation, one can roughly estimate that commercial cards generate up to 16.5% (6%*2.75) of issuer revenues in New Zealand. (see NZCC, “Retail Payment System: Interchange Fee Regulation for Mastercard and Visa Networks
+– Final Decision and Reasons Paper,” Table X1, p.7 (17 July 2025) available at https://www.comcom.govt.nz/assets/pdf_file/0032/367457/Retail-Payment-System-Interchange-fee-regulationfor-Mastercard-and-Visa-networks-Final-Decision-and-Reasons-Paper-17-July-2025.pdf).
+163 See CAT, Umbrella Interchange Fee Proceedings, p.264 (2025).
+
+164 Lithic, “What is Interchange? How Fintechs Earn Interchange Revenue from Credit and Debit Cards,” (4 April 2023), available at https://www.lithic.com/blog/interchange (“Some fintechs get most of their revenue from these [interchange] fees; others use interchange income to fund customer rewards that make their products stickier.”);
+
+Bain & Company, “As Funding Dries Up, Can Neobanks Diversify Their Revenue Streams?,” available at
+
+May 21, 2026 37 make it more difficult to achieve scale, which in turn can disproportionately disadvantage smaller players relative to established incumbents with more diversified income sources and larger customer bases.
+
+5.2.2. Cardholders (buyer businesses): incentives to use cards as both payment and financing tools
+110. As Section 2.2 expands on, commercial cardholders derive value not only from payment execution but from integrated credit and spend control features.165 If issuer-side incentives weaken due to an interchange fee cap, adjustments in credit limits, pricing, or service features may affect business usage decisions.
+
+111. Where cardholder value depends on integrated credit, liquidity management, and transaction control functions, a reduction in these services or credit availability may alter business usage decisions. If issuers respond to reduced transaction-linked revenue by tightening credit limits, increasing direct fees, or scaling back programme features (such as detailed reporting, spend controls, or integration tools), the net value proposition of commercial cards may decline for certain firms.
+
+112. Businesses that rely on these bundled features for working capital management or internal control processes may therefore consider alternative payment and financing arrangements. This in turn has the potential to negatively affect merchant economics via broader network effects, where changes in merchant acceptance and cardholder usage reinforce each other.
+
+5.2.3. Acquirers: incentives to pass through interchange and expand merchant acceptance
+113. Acquirers provide a bundle of merchant services supporting the full transaction lifecycle, including onboarding and underwriting, transaction authorisation, clearing and settlement, and the provision of information and reporting statements.166 They also undertake risk management functions, such as assuming chargeback risk and conducting compliance checks (e.g. know your https://www.bain.com/insights/as-funding-dries-up-can-neobanks-diversify-their-revenue-streams/ (“To turn customer acquisition into revenue, neobanks have traditionally relied heavily on interchange fees”).
+165 Evidence suggests that a significant proportion of small businesses rely on business credit cards for working capital and liquidity management during the year. JPMorgan Chase Institute, Small Business Use of Credit Cards (2023) (“Credit cards are part of a suite of cash flow management tools. Credit cards can be an alternative for cash liquidity, providing financing when firms cannot pay in cash.”).
+Commercial cards often combine settlement, revolving credit, transaction controls, and reporting tools in a single instrument. Chase, “Business Credit Cards vs. Consumer Credit Cards,” available at https://www.chase.com/personal/credit-cards/education/basics/business-vs-consumer-credit-cards (“Common features of business credit cards [...] Custom rewards programs [...] Expense management tools [...] Enhanced spending controls [...] Higher credit limits”).
+
+166 Kjos, “The Merchant-Acquiring Side of the Payment Card Industry: Structure, Operations, and Challenges,” p.3 (October 2007), available at https://www.philadelphiafed.org/-/media/frbp/assets/consumerfinance/discussion-papers/D2007OctoberMerchantAcquiring.pdf (“In support of the transaction flow, merchant acquirers generally perform four key functions: (1) signing up and underwriting merchants to accept networkbranded cards, (2) providing the means to authorize valid card transactions at client merchant locations (3) facilitating the clearing and settlement of the transactions through the payment network, and (4) providing other relevant information services, such as sending out statements.”).
+
+May 21, 2026 38 customer and anti-money laundering checks).167 This contrasts with the business of issuing, where revenue is primarily driven by the extension of credit and the pricing of risk.
+114. Acquirers charge MSFs to merchants, which generally include three main components:
+interchange fees, scheme and processing fees, and acquirer net revenue. Acquirer net revenue is the portion of the MSF retained by the acquirer to cover its cost of providing payment services and its profit margin.168 Acquirers commonly recover interchange and scheme fees from merchants through the MSF.
+
+169 The level of the MSF is determined through negotiation between the merchant and the acquirer and can vary by merchant size, with smaller businesses typically paying higher MSFs than larger merchants.170
+115. As has been amply documented in the academic and industry literature, a reduction in interchange fees does not necessarily translate into an equivalent reduction in merchant charges.
+Pass-through to merchants is not always complete or immediate, and the extent of pass-through can depend on the pricing model, the merchant’s bargaining position, and the level of competition in the acquiring market.
+
+116. This is consistent with the EC’s 2020 review of their IFR, which reported that only around half of surveyed acquirers said they had passed through all interchange-fee savings to merchants, while around two thirds said they had passed through at least part of those savings.171 Evidence from other settings also points in the same direction. For example, one Spanish study estimates that a 1% reduction in interchange fees is associated in the long run with a 0.39% reduction in MSFs, suggesting partial rather than full pass-through.172
+117. The implication is that lower interchange fees do not necessarily deliver the full expected benefit to merchants. Part of any reduction may instead be retained within the acquiring side of the system and larger merchants, depending on merchant pricing arrangements and competitive conditions.
+
+167 PSR, Card-acquiring services market review, p.21 (2021) (“The chargeback process gives rise to a credit risk for acquirers [...] Acquirers carry out due diligence on merchants as part of the onboarding process and on an ongoing basis to help them manage the credit risk and other risks they carry. For example, acquirers carry out know your customer and anti-money laundering checks.”).
+
+168 PSR, Card-acquiring services market review, p.74 (2021) (“The MSC [or MSF] comprises: interchange fees, paid by the acquirer to the issuer [...] scheme fees, paid by the acquirer to the operator of the card payment system [...] acquirer net revenue, which recovers the acquirer’s other costs and margin”).
+169 CAT, Umbrella Interchange Fee Proceedings, p.21 (2025) (“Acquirers pass on all of the MIF [...] and the scheme fee, to merchants through the MSC [or MSF]”).
+
+170 See PSR, Card-acquiring services market review, p.64 (2021) (“Irrespective of the pricing option a large merchant has, they generally pay lower MSCs [or MSFs] for card-acquiring services than small and mediumsized merchants.”)
+171 EC, Study on the application of the IFR, p.156 (2020) (“Acquirers were asked whether and how they had passed-on savings in the interchange fees to merchants. Half of the respondents indicated that they had passed-on all interchange fee savings, see Figure 66. Two thirds indicated that they had at least partially passed-on the reduction. One third indicated that they mostly compensated by improving the quality of their services.”).
+
+172 Shabgard & Asensio, “The price effects of reducing payment card interchange fees,” p.16 (2023) (“The IF has a positive effect on the MSC [or MSF], implying that a 1% reduction in the IF is passed through as a 0.39% lower MSC [or MSF] in the long run.”).
+
+May 21, 2026 39
+5.2.4. Merchants (supplier businesses): incentives to accept and value derived from transactions
+118. Merchants face MSFs that include interchange fees as a component. Reductions in interchange fees may lower acceptance costs to the extent they are passed through by acquirers. However, merchant acceptance decisions depend not only on cost but also on value generated. For instance, the previously on-the-margin merchant may realise limited or no benefit from card acceptance due to cardholders no longer receiving sufficient incentives to pay with their card.
+119. The interchange fee partly reflects the value of the issuer’s immediate and guaranteed payment to the merchant. Accordingly, the MSF is often referred to as the Merchant Discount Rate (MDR), since the merchant receives payment at a discount in return for this advanced and guaranteed receipt of funds. At the same time, the issuer effectively extends credit to the cardholder and assumes repayment risk between the time of the transaction and settlement.
+
+120. Therefore, the interchange fee should be evaluated not solely as a transactional cost, but in the context of its contribution to supporting the features that merchants value. These features – including faster, more certain payment and reduced reliance on managing receivables – are not limited to large merchants. Card acceptance can enable smaller merchants, who may have more limited access to alternative financing or sophisticated payment infrastructure, to access similar liquidity and risk-management benefits. In this sense, card systems can broaden access to payment and financing functionalities across merchants of different sizes.
+
+121. As laid out in Sections 2 and 3, commercial card transactions are often larger in value, may settle more quickly than certain alternatives (e.g., bank transfers), and reduce counterparty and fraud risk relative to some payment instruments. In B2B contexts, card acceptance may also facilitate procurement processes and attract business customers who rely on card-based purchasing systems. The net merchant incentive depends on the balance between acceptance cost and these value drivers.
+
+122. If changes to interchange fees were to reduce the attractiveness of commercial card programmes and prompt cardholders to substitute towards alternative payment instruments, the net effect for merchants may not necessarily be cost-reducing. As previewed, while attention often focuses on MSFs, a broader economic assessment must consider both direct and indirect costs associated with alternative payment instruments.
+
+123. Firstly, alternative payment instruments are not necessarily cheaper in direct terms. Merchants frequently incur processing fees, scheme fees, or acceptance costs when accepting other cardbased instruments, including three-party networks. In some cases, MSFs for alternative card networks may exceed those associated with four-party commercial card transactions.
+Accordingly, substitution from one card network to another may increase, rather than reduce, direct acceptance costs.
+
+124. Further, non-card payment instruments can impose material indirect costs on merchants. Cash and cheques, for example, involve handling, storage, security, reconciliation, and deposit costs.
+They also carry higher risks of theft, fraud, and error. Even bank transfers, while often perceived as low-cost, can involve administrative burdens associated with invoice matching, reconciliation, and payment tracking, particularly in high-volume or fragmented B2B environments. Industry studies, including analysis by the European Central Bank, indicate that once labour and
+
+May 21, 2026 40 reconciliation time are taken into account, the unit costs of cash are not consistently lower than non-cash payment instruments and can in some contexts be higher.173
+125. Taken together, these considerations suggest that substitution away from commercial cards may impose higher direct or indirect costs on merchants, particularly where commercial cards currently support operational efficiencies or reduce payment risk.
+
+126. Finally, substitution effects may extend beyond shifts to alternative payment instruments. Some businesses may instead revert to using consumer credit cards for business expenditure, as suggested by NBER research.174 More broadly, this highlights that capping interchange fees on commercial cards may reduce the attractiveness of dedicated commercial card programmes, potentially leading to substitution toward less tailored or less efficient payment solutions. Such outcomes would run counter to policy objectives aimed at supporting the adoption of payment instruments that are specifically designed for business use.
+
+5.2.5. Platform-level coordination: critical mass and value rebalancing
+127. The interchange fee serves a coordination function in this multi-party system. It supports critical mass by balancing incentives between issuance and acceptance. Because business and merchant value drivers differ (and differ from those in consumer markets), pricing flexibility allows revenue to be allocated in a way that sustains participation across heterogeneous segments.
+128. Pricing flexibility also allows four-party networks to support both default interchange rates and commercially negotiated bilateral arrangements between issuers and acquirers. Bilateral arrangements can reflect the specific value exchange, commercial relationship, and risk allocation agreed between participants. Regulating interchange may reduce this flexibility by limiting the scope for parties to negotiate bespoke arrangements and tailor pricing to their particular commercial circumstances.
+
+129. Overall, evidence from jurisdictions that have reduced interchange fees (including, for example, Poland’s reforms)
+
+175 indicates that regulatory changes can affect acceptance network development and usage growth trajectories. While outcomes are context-specific, such evidence highlights the importance of assessing dynamic participation effects rather than focusing exclusively on static merchant cost changes.
+
+130. In commercial card markets characterised by two-sided interdependence, higher reliance on credit, and heterogeneous business needs, the effects of a cap are likely to extend beyond immediate fee adjustments. A comprehensive assessment should therefore consider impacts on
+173 European Central Bank, “Costs of retail payments – an overview of recent national studies in Europe,” p.2 (December 2022), available at https://www.ecb.europa.eu/pub/pdf/scpops/ecb.op294~8ac480631a.en.pdf (“[T]he increasing number of debit card payments, to which high fixed costs are attached, has led to lower unit costs relative to those of cash.”).
+
+174 Akcigit et al., Credit Card Entrepreneurs, p.14 (2025) (“Business credit cards are the most commonly used financing instrument, with 55% of businesses reporting their use over the past year. Personal credit cards and lines of credit follow in use but with only half the frequency of business credit cards. Additionally, a notable 26% of respondents rely on personal cash and loans to fund their business operations. The predominant use of credit cards reported by our survey respondents aligns with previous findings on small business finance.”)
+175 Mastercard/Oxera, The economics of commercial cards, p.4 (2019) (“[T]he average annual number of commercial card transactions would have been significantly higher in Poland without the interchange fee cap.”).
+
+May 21, 2026 41 credit availability, service differentiation, issuer participation, and overall B2B payments efficiency in New Zealand.
+
+5.3 International best practice broadly supports maintaining flexibility for commercial cards interchange
+131. New Zealand’s regulatory framework currently adopts a differentiated treatment across card products and channels. On the consumer side, consumer debit and credit interchange fees are capped. In the commercial segment, domestic commercial debit is currently regulated but domestic commercial credit and foreign-issued commercial credit remain uncapped.176 All domestic prepaid cards are also currently uncapped, while from 1st May 2026, caps are in effect for foreign-issued commercial debit and foreign-issued commercial prepaid transactions.177
+132. International best practice supports treating commercial cards as a distinct product category and preserving greater pricing flexibility for them than for consumer cards. This is consistent with the economic reality that, as highlighted in Section 3.2, commercial cards exhibit features that are clearly distinct from consumer cards.
+
+133. Regulatory best practice in Europe most clearly reflects this position. Indeed, when regulating interchange fees for consumer cards, both the EU and the UK left commercial cards outside the consumer cap framework, recognising them as a separate product class with different characteristics and commercial dynamics.178 The European Commission (EC) has identified a number of structural features that distinguish commercial cards from consumer cards, including market specificity, because they serve a distinct business segment and are not substitutes for consumer cards.
+
+179
+134. The best available empirical evidence also does not support intervention for commercial cards.
+In its 2020 study on the application of the IFR, the EC found no evidence of statistically significant increases in commercial card interchange fees following the introduction of interchange fee caps on consumer cards that would justify removing the commercial card carve-out.180 The EC was
+176 See NZCC, “Retail Payment System: Interchange Fee Regulation for Mastercard and Visa Networks – Final Decision and Reasons Paper,” Table X1, p.7 (17 July 2025).
+
+177 At this stage, the current submission does not assess the distinction between domestic- and foreign-issued cards or the associated cross-border considerations, and instead focuses on the treatment of commercial cards as a distinct product category to consumer cards.
+
+178 European Commission, IFR Impact Assessment, p.56 (2013) (“They [commercial cards] could not substitute consumer credit or debit cards as they cater for a specific market segments and their needs, not for the average consumer.”).
+
+179 EC, IFR Impact Assessment, p.56 (2013) (“They [commercial cards] could not substitute consumer credit or debit cards as they cater for a specific market segments and their needs, not for the average consumer.”).
+180 EC, “Study on the application of the Interchange Fee Regulation,” p.203 (2020), available at https://copenhageneconomics.com/wp-content/uploads/2021/12/copenhagen-economics_march_ifr-report.pdf (“The hypothesis that the exclusion of commercial cards from the cap set by the IFR could lead to higher interchange fees applied to commercial card transactions is not confirmed. The average interchange fee applied on commercial cards transactions decreased across the EU, from 0.95% to 0.86% of the transaction value in the period 2015-2017 [...] However, the decrease in interchange fees applied on commercial cards was not statistically significant”).
+
+May 21, 2026 42 also concerned that leaving commercial cards uncapped might simply shift volume and fee revenue into higher-cost products, but found no evidence to this effect.
+
+181
+135. By contrast, the UK and Australian positions seem to be based on more limited empirical evidence. The UK Payment Systems Regulator (PSR) continues not to regulate commercial cards, but in its 2025 market review, it appears to treat commercial and consumer payments as functionally similar without a robust market-specific assessment of competitive constraints in business payments. The RBA has retained a separate cap for domestic–issued commercial credit cards for now rather than exempting them, but its justification turns heavily on premises which, as discussed below, have some weaknesses.
+
+5.3.1. The EC provides the clearest and most credible international comparator
+136. As noted above, the EC deliberately excluded commercial cards from the IFR caps applied to consumer debit and credit cards, recognising that commercial cards are a distinct category and should not automatically be regulated in the same way as consumer products.
+
+182
+5.3.2. The UK PSR position
+137. The PSR has not imposed equivalent regulation on commercial cards. Its 2025 market review does not appear to analyse commercial payments as a distinct market. Instead, it focuses on spontaneous consumer payments as the core segment and reasons from the fact that business payments account for only a small share of overall card transactions.
+
+183
+5.3.3. The RBA Conclusions Paper (March 2026)
+
+138. The RBA’s March 2026 Conclusions Paper supports a cautious approach to commercial card interchange regulation.
+
+139. Importantly, the RBA assessed commercial interchange regulation by reference to market wide effects, not only the direct effects of lower Mastercard and Visa interchange fees. As stated in Section 4.3, it concluded that reducing interchange fees could harm competition for commercial credit cards and materially advantage three-party networks that are not subject to interchange regulation. It also recognised American Express as the relevant three-party competitive constraint in this context.
+
+140. As raised in Section 4.3, given that domestic-issued American Express cards are, on average, more expensive for Australian merchants to accept than alternative four-party network cards, interchange fee caps could lead to increased merchant payment costs instead.184 The RBA
+181 EC, Study on the application of the IFR, p.200 (2020) (“The relative share of commercial cards in the total number of cards in circulation (commercial cards plus consumer debit and credit cards) remained stable across EU in 2015-2017 at around 3%, see Figure 81.”).
+
+182 EC, IFR Impact Assessment, p.56 (2013) (“They [commercial cards] could not substitute consumer credit or debit cards as they cater for a specific market segments and their needs, not for the average consumer.”).
+183 See PSR, “Market review of card scheme and processing fees: Final report,” paras 4.30 and 4.32 to 4.34 (March 2025), available at https://www.psr.org.uk/media/sogjjvl4/mr22-110-card-sp-fees-mr-final-reportpublication-redacted-mar-2025-updated.pdf.
+184 RBA Conclusions Paper, p.55 (2026) (“This could raise payment costs because domestic-issued American Express cards are on average more expensive for Australian merchants to accept than equivalent four-party network cards.”).
+
+May 21, 2026 43 therefore recognised that the relevant question is not only whether a cap would reduce Mastercard and Visa interchange fees on a per-transaction basis, but whether the cap would shift spend toward higher-cost alternatives and increase merchant costs overall.
+
+141. The RBA’s decision also supports a separate assessment of commercial and consumer credit cards. The RBA acknowledged that interchange levels have uneven competitive effects for commercial versus consumer credit cards and lowered domestic consumer credit cap to 0.3%, while maintaining the domestic commercial credit cap at 0.8%. They argued that:
+
+185
+a. The proposed reduction would have been larger for commercial credit than for consumer credit: reducing average four-party commercial interchange from around 0.78 per cent to 0.3 per cent would have represented a materially larger fall in issuer revenue than the equivalent change for consumer credit (0.47 per cent on average to 0.3 per cent with caps).
+b. Commercial credit card issuers had fewer alternative revenue sources than consumer cards, because commercial cards are typically paid off in full each month, meaning issuers earn less interest income and rely more on interchange to fund cardholder propositions.
+142. Together, these factors affect issuer incentives, cardholder behaviour and the likelihood of substitution toward unregulated three-party networks. They therefore reinforce the need to assess commercial card interchange on its own terms, rather than assuming that consumer-card regulation provides a reliable guide.
+
+143. The RBA’s broader rationale for retaining regulation on commercial card interchange fees is, however, less robust. Its reasoning appears to rest on the propositions that commercial and consumer credit cards are “similar products”, that commercial cards are must-take for merchants, and that there is no evidence issuers incur higher costs on commercial cards as a share of transaction value.186 The RBA also concluded that additional benefits of commercial cards accrue primarily to cardholders rather than merchants, that interchange fees should not be used to fund cardholder rebates or rewards, and that they had not received compelling evidence for commercial cards retaining higher interchange fees to support working-capital benefits.
+187 This view is incomplete, as Section 2.2 and Table 1 below demonstrate that the benefits of commercial cards accrue to both cardholders and merchants across the platform.
+
+144. The RBA also relies on its issuer cost study188 when considering the differences between commercial and consumer credit card costs. Whilst their study suggests that commercial card
+185 RBA Conclusions Paper, p.55-56 (2026) (“[S]o a reduction in the cap to 0.3 per cent would represent a much larger percentage reduction in interchange fees for commercial credit cards compared with consumer credit cards… commercial credit card issuers may have fewer revenue sources to fund issuance.”)
+186 RBA Conclusions Paper, p.54 (2026); Also see RBA, Issuer Cost Study (19 August 2025).
+187 RBA Conclusions Paper, p.54 (2026) (“Additional benefits of commercial credit cards accrue to the cardholder, not the merchant […] Several issuers use commercial credit card interchange revenue to provide cash rebates or rewards to cardholders […] The PSB does not consider there is a compelling efficiency case to retain high levels of interchange on commercial credit cards so as to fund any working capital benefits.”).
+188 See RBA, Issuer Cost Study (19 August 2025).
+
+We note that it has been highlighted by other courts and regulators (in particular, the UK CAT) that the evidence base on issuer economics remains underdeveloped. For example, in the CAT Trial 1 Judgment, the Tribunal expressly noted the lack of evidence on issuer-side commercial card economics, including the actual costs of different service elements, issuers’ other revenue sources, and the extent to which additional services depend on MIF revenue. See CAT, Umbrella Interchange Fee Proceedings (2025).
+
+May 21, 2026 44 issuance is cheaper than consumer cards, this finding is based on the RBA’s eligible cost framework, which excludes several costs that are relevant to commercial cards, including funding of the interest-free period, product development, account set-up, overheads and maintenance, rewards or other cardholder benefits. The RBA also acknowledges that aspects of commercialcard offerings including rewards and expense-management programmes influence competitive outcomes.189 These value-add features are central to the commercial card proposition, but are not fully captured by a narrow eligible-cost benchmark.
+
+145. More fundamentally, the RBA places primary emphasis on merchant-facing charges and issuer cost metrics, but seems to give limited consideration to the two-sided nature of commercial card systems and the role of interchange fees in balancing value and incentives across participants.190 The RBA’s focus on whether specific benefits accrue directly to merchants may therefore understate that, in a two-sided platform, the allocation of value between participants does not need to mirror the incidence of direct benefits on a transaction-by-transaction basis in order to be efficient.
+
+146. Pricing structures are designed to support participation on both sides of the market, taking into account demand conditions, elasticities, and the need to sustain investment and usage. In this context, the relevant question is not whether particular features benefit cardholders or merchants in isolation, but whether the overall allocation of value supports efficient participation and maximises the total value generated by the system. A framework that recognises these crossside effects and the role of interchange fees in balancing value across participants provides a more complete basis for assessing efficiency and value distribution in commercial card markets.
+189 RBA Conclusions Paper, p.55 (2026) (“While these programs are considered outside the scope of the RBA’s eligible costs framework when assessing interchange settings in the public interest, they nonetheless play a role in influencing competitive outcomes and many issuers use interchange revenue to fund them.”).
+190 See RBA Conclusions Paper, p.54-56 (2026).
+
+May 21, 2026 45
+Appendix
+Table 1: Commercial Card Benefits for Cardholders and Merchants Report
+Section Value Cardholder (buyer business) benefits
+Merchant (supplier business)
+
+benefits
+2.2.1 Cash flow & liquidity Access to interest-free short-term liquidity and working-capital flexibility through deferred payment
+Faster and more predictable settlement; reduced receivables risk and lower exposure to delayed payment
+2.2.2 Operational efficiency Automation of procurement, expense management, and finance workflows;
+
+reduced back-office processing
+Lower reconciliation and paymentprocessing frictions; reduced administrative burden
+2.2.2 Data & reconciliation Enhanced transaction data, reporting, and auditability
+More predictable, structured payment flows that simplify reconciliation.
+
+2.2.3 Enhanced fraud protection
+Tighter security around payment initiation, authorization controls, and data monitoring.
+
+Reduced fraud and non-payment risk relative to some paper- and invoicebased instruments.
+
+2.2.3 Reduced payment risk Improved visibility and controls that reduce operational and financial risk.
+
+Lower exposure to nonpayment and late-payment risk; reduced bad debt and write-offs.
+
+2.2.4 Sales growth / customer relationships
+Improved supplier relationships through timely and predictable payment.
+
+Potential to increase sales, support larger transactions, and strengthen customer relationships.
+
+4.1 Comparison vs.
+
+alternatives
+Cards support digital workflows that can reduce reliance on manual invoicing and other non-carded payment processes.
+
+Compared with alternatives, cards can reduce delays, reconciliation burdens, fraud risk and cash-flow uncertainty
+
+
+-----

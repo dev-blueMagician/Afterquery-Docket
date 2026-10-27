@@ -1,0 +1,57 @@
+{
+  "question": "By what percentage did the percentage point gap between private and social rented non-decency shrink from 2010 to 2020, to one decimal place?",
+  "number_of_asks": 1,
+  "gold_answer": "53.5%",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 4, introduction): the proportion of substandard dwellings in the private rented sector fell from 37.2% in 2010 to 21.0% in 2020.\n\nStep 2. Source fact (Doc 4, background to the Decent Homes Standard): the proportion of social rented homes that do not meet the Standard fell from 39% in 2001 to 13% in 2020.\n\nStep 3. Source fact (Doc 1, introduction): in 2010, 759,000 social rented homes (20%) were non-decent.\n\nStep 4. Calculation (from Steps 1 and 3; Doc 4 and Doc 1), percentage-point gap in 2010: 37.2 - 20 = 17.2 percentage points.\n\nStep 5. Calculation (from Steps 1 and 2; Doc 4), percentage-point gap in 2020: 21.0 - 13 = 8 percentage points.\n\nStep 6. Calculation (from Steps 4 and 5; Doc 4 and Doc 1), narrowing of the gap: 17.2 - 8 = 9.2 percentage points.\n\nStep 7. Calculation (from Steps 4 and 6; Doc 4 and Doc 1), narrowing as a share of the 2010 gap: 9.2 / 17.2 = 53.5% (to one decimal place).",
+  "answer_components": [
+    "53.5%"
+  ],
+  "evidence": [
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "the proportion of substandard dwellings in the private rented sector falling from 37.2% in 2010 to 21.0% in 2020"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "the proportion of homes that do not meet the Standard has reduced from 39% in 2001 to 13% in 2020"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "In 2021, there were 380,000 (10%) non-decent social rented homes, down from 759,000 (20%) in 2010."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Wrong year or edition",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    },
+    {
+      "trap": "Out-of-range period",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Doc 1's 10% social share is for 2021 and Doc 5's for 2023; using either for 2020 gives 36.0%. Doc 4 gives social non-decency for 2001 (39%), not 2010; using it makes the gap widen 9.8 points. Gold: gaps 17.2 and 8.0, shrink 53.5%."
+}

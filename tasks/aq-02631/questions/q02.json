@@ -1,0 +1,85 @@
+{
+  "question": "By how many percentage points would Solana's weight in the Hashdex trust, at its index's December 31, 2024 weights under the strategy as Nasdaq filed it, exceed its June 30, 2025 weight in Bitwise 10 (two decimals)?",
+  "number_of_asks": 1,
+  "gold_answer": "1.10 percentage points",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 2, proposed Rule 5712(e)(1)(ii)): at least 90% of the weight of the trust's holdings must be in assets on which Nasdaq can obtain information through the Intermarket Surveillance Group or a surveillance sharing agreement.\n\nStep 2. Source input (Doc 2, the proposed strategy): the trust's weights are expected to match the index, but the strategy as filed also says the sponsor checks the weights daily and, if the portfolio breaches that requirement, will limit all assets other than the eligible ones to a tenth of the portfolio together, each in proportion to its index weight.\n\nStep 3. Source input (Doc 2, surveillance discussion): when the proposal was filed, the futures markets through which Nasdaq says it can obtain information were CME's for bitcoin and ether and Coinbase Derivatives' for Chainlink, Litecoin and Avalanche. The filing names none for Solana, XRP, Cardano or Uniswap, so those four are outside the eligible set.\n\nStep 4. Source input and calculation (Doc 2, table of index constituents and weightings at the end of December 2024): the four are weighted Solana 4.78, XRP 5.02, Cardano 1.50 and Uniswap 0.27. Their combined weight: 4.78 + 5.02 + 1.50 + 0.27 = 11.57. That is more than a tenth of the index, so a portfolio held at index weights breaches the requirement and the method applies.\n\nStep 5. Source input (Doc 5, portfolio weightings as of June 30, 2025): Solana is 3.03% of the Bitwise 10 trust's portfolio. The earlier staff order prints the same sentence.\n\nStep 6. Calculation (Doc 2 and Doc 5): the factor that brings the capped group down to its limit: 10 / 11.57 = 86.43%.\n\nStep 7. Calculation (Doc 2 and Doc 5): Solana's weight in the Hashdex portfolio after the cap: 4.78 × 86.43% = 4.131354.\n\nStep 8. Final answer (Doc 2 and Doc 5): the capped Hashdex weight minus the Bitwise weight, in percentage points: 4.131354 - 3.03 = 1.101354, which is the gold answer at two decimals. Carrying the unrounded factor gives the same two decimals.",
+  "answer_components": [
+    "1.10"
+  ],
+  "evidence": [
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "at least 90% of the weight of such holdings shall, on both an initial and continuing basis, consist of commodities and/or digital assets concerning which the Exchange is able to obtain information via the Intermarket Surveillance Group"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "If the portfolio breaches the requirement, the Sponsor will adjust the portfolio to comply with its listing rule according to the following method:"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "The combined allocation of all digital assets other than those eligible under the 90% requirement will be limited to 10% of the portfolio, with their individual weights proportionally adjusted to reflect their relative weightings in the Index."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "As of December 31, 2024, the Index Constituents and their weightings"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Bitcoin (BTC)................................................ 72.70 Ether (ETH).................................................. 14.48 Solana (SOL)................................................. 4.78 XRP Ledger (XRP)............................................. 5.02 Cardano (ADA)................................................ 1.50 Chainlink (LINK)............................................. 0.51 Avalanche (AVAX)............................................. 0.37 Litecoin (LTC)............................................... 0.37 Uniswap (UNI)................................................ 0.27"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Notably, the Coinbase Derivatives offers derivative products for three additional Index Constituents (as of the filing date): chainlink (LINK), litecoin (LTC), and avalanche (AVAX)."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "In particular, the CME bitcoin futures market and CME ether futures market are large, surveilled, and regulated markets"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "As of June 30, 2025, the Trust's Portfolio Assets and their weightings were: 78.72% bitcoin (BTC), 11.10% ether (ETH), 4.97% XRP (XRP), 3.03% Solana (SOL), 0.78% Cardano (ADA), 0.35% SUI (SUI), 0.32% Chainlink (LINK), 0.28% Avalanche (AVAX), 0.24% Litecoin (LTC), and 0.19% Polkadot (DOT)."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "As of June 30, 2025, the Trust's Portfolio Assets and their weightings were: 78.72% bitcoin (BTC), 11.10% ether (ETH), 4.97% XRP (XRP), 3.03% Solana (SOL), 0.78% Cardano (ADA), 0.35% SUI (SUI), 0.32% Chainlink (LINK), 0.28% Avalanche (AVAX), 0.24% Litecoin (LTC), and 0.19% Polkadot (DOT)."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        5,
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Look-alike measure: Doc 2's constituent table prints Solana's index weight, 4.78; taking it as the portfolio weight gives 1.75. The uncovered assets total 11.57, above the 10% cap, so the sponsor's method scales Solana to 4.13, and against Doc 5's 3.03 the answer is 1.10."
+}

@@ -1,0 +1,561 @@
+AQ-06835 · Corporate filingsHard only — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-06835
+Saved: 2026-10-19 05:49 (local time)
+Bundle: Corporate filingsHard only · Stryker Corporation, Zimmer Biomet Holdings, Inc. and Edwards Lifesciences Corporation · 9 documents · 83,721 prompt tokens
+Run read: Run 2, the latest of 2
+Attempts read: 4
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 17 runs left · 4 of 60 runs used in the last 24 h (all tasks)
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 3 attempts right
+
+Solver A 3/3 · Solver B not needed · Not Hard: Solver A solved 3/3
+
+High model: two solvers (Solver A, Solver B) try up to 3 times each. Hard = each of the two Hard solvers gets it wrong at least once in its three runs, even if every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Avoid signaling the derived quarter. Ask instead for a comparison across quarters, e.g. 'Which 2025 quarter had the lowest adjusted gross profit margin, and what was its reported operating income margin?' or embed the quarter identification in a metric where all four quarters must be computed, so the two-decimal instruction does not point at the unreported period. Why: The phrase 'quarter with the lowest adjusted gross profit margin' plus 'to two decimal places' signals that the answer is a derived, non-stated figure, which itself hints that the target quarter is one not directly reported (Q3). A solver reading only the headline margins can infer the design of the question. Notably, Low model with no documents at all still guessed Q3 2025 as the lowest-margin quarter, showing the quarter is guessable without any document support. Doc 1 Doc 2 Doc 3
+
+Structure · Which documents it needs, and how they combine
+----------------------------------------------------------
+
+- 2 Make the retrieval less direct: require the solver to pull Q3 figures from multiple different line items (e.g. combine the derived Q3 operating income with a segment or geographic figure), or ask for a ratio mixing adjusted and reported measures so the solver must consult both the GAAP statements and the non-GAAP reconciliation in separate documents. Why: The final arithmetic is a single chain of subtractions within figures that sit in adjacent lines of the same reconciliation tables (FY 2025 and Q4 2025 in document 1, H1 2025 in document 3): net sales 25,116 - 11,888 - 7,171 and operating income 4,889 - 1,950 - 1,804. Every input is a headline number the expert's evidence quotes directly, so once the quarter is picked there is no further reading or cross-checking required. From a run (High model · attempt 2): Once Q3 is chosen, the answer follows from subtracting quoted headline figures (FY minus H1 minus Q4 net sales and operating income) in documents 1 and 3. Doc 1 Doc 3
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 2 (Oct 19, 2026, 5:32 AM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+2 runs
+
+Only the latest run, Run 2, is in this file; 1 earlier run is left out.
+
+------------------------------------------------------------------------
+Run 2 · Too easy · Result the gate uses
+Oct 19, 2026, 5:32 AM · Version 1d7329 (current) · Low — · Medium — · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: question: removed “Zimmer Biomet's”, “highest”, “profit”; added “Stryker's”, “lowest”, “profit”, “income”. answer: removed “17.55%”; added “18.74%”
+
+Solver summary: Run 2 · Too easy · 3 of 3 right
+Every solver attempt got it (3 of 3).
+
+Your answer: 18.74%
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: —
+
+Final answer: The quarter is Q3 2025 (adjusted gross profit margin of about 64.3%, the lowest of the year). For that quarter Stryker reported net sales of roughly $6.06B and operating income of about $1.04B, giving an operating income margin of 17.10%. | Your answer (gold): 18.74%
+
+Full answer
+-----------
+
+The quarter is Q3 2025 (adjusted gross profit margin of about 64.3%, the lowest of the year). For that quarter Stryker reported net sales of roughly $6.06B and operating income of about $1.04B, giving an operating income margin of 17.10%.
+
+Reasoning
+---------
+
+We need answer: For Stryker's 2025 quarter with the lowest adjusted gross profit margin, what was its reported operating income margin? Give percentage to two decimal places.
+
+Need recall or know Stryker 2025 quarterly results, gross profit margin adjusted, operating income margin reported. Need identify quarter in 2025 with lowest adjusted gross profit margin, then report operating income margin for that quarter.
+
+We need from knowledge. Let's recall Stryker Corporation financial results for 2025 quarters: Q1, Q2, Q3, maybe Q4 not out? Let's recall figures.
+
+Stryker reports net sales, gross profit, operating income, etc. Adjusted gross profit margin is usually around 64-65%? Let's recall specific quarters in 2025.
+
+Q1 2025: Net sales maybe $5.87B? Or was that Q2? Let's recall news in April 2025: Stryker Q1 2025 sales up 11.9%? Let's check mental.
+
+In April 2025, Stryker announced first-quarter 2025 results? Actually Stryker reported Q1 2025 in early May? Let's recall details.
+
+Stryker Q1 2025: Net sales of $5.867 billion? Wait that sounds like Q2? Let's systematically recall quarterly reports in 2025.
+
+We have Stryker in January 2025? No, they reported Q4 2024 in late January/early February 2025. Then Q1 2025 in late April/early May. Q2 2025 in late July/early August. Q3 2025 in late October/early November?
+
+Let's recall Q4 2024 results (reported Feb 2025?): Net sales $6.4B? Actually Stryker 2024 full year sales were $23.0B, up 8.1%. Q4 2024 sales were $6.4B? Let's not confuse.
+
+But we need 2025 quarters only.
+
+Let's recall Q2 2025 report around August 2023? No. Let's recall headlines in August 2025: Stryker Corporation reported second-quarter 2025 earnings? The headline might have said net earnings per diluted share of $1.82? Or adjusted EPS $3.07? Let's try.
+
+Actually in August 2025, Stryker reported Q2 2025 results: net sales of $6.0B? Let's check mental consistency: Stryker annual sales around $24B in 2025? Quarterly average about $6B. Yes Q2 might be around $5.8B? Wait need correct.
+
+Let's recall specific margins. Adjusted gross profit margin for Q1, Q2, Q3 2025 might be:
+Q1: adjusted gross profit margin 64.5%? Or 64.8?
+Q2: maybe 64.3?
+Q3: maybe 63.9? Or 65?
+
+We need the quarter with the lowest adjusted gross profit margin. Then reported operating income margin (not adjusted?) for that quarter.
+
+We need precise operating income margin percentage, likely calculated as operating income divided by net sales.
+
+Let's recall reported figures for each quarter.
+
+We need to be accurate to two decimal places, so need correct quarter with correct operating income and net sales.
+
+Let's recall Q3 2025 report (around late October 2025?). Stryker reported net sales of $6.1B? Or $6.06B? Operating income might be around $1.1B? Margin around 17.5?
+
+Actually Stryker operating margins are usually around 17-20%. Let's recall adjusted operating income margin is around 24-25%, but reported (GAAP) is lower due to amortization, etc., maybe around 16-18%.
+
+We need identify quarter with lowest adjusted gross profit margin. Let's recall adjusted gross margin figures mentioned in earnings reports.
+
+In earnings reports, they have a reconciliation of gross profit:
+Reported gross profit
+Adjustment for inventory step-up, etc.
+Adjusted gross profit
+
+The adjusted gross profit margin might be listed.
+
+Let's recall Q1 2025 report details:
+Net sales: $5,866,521? Or $5.87B?
+Reported gross profit: maybe $3,584,000? Margin 61.0? Wait need check.
+
+Actually Stryker's gross margin (reported) is usually around 64%? Wait no, medical devices have high gross margins around 65-70%. Let's check mental: Stryker in 2023 gross margin was about 64.5%. Yes.
+
+So adjusted gross profit margin might be around 64.5%, and reported gross profit margin might be around 63.8%, etc.
+
+But we need adjusted gross profit margin for each quarter in 2025.
+
+Let's recall from press releases:
+In Q1 2025, gross profit was $3,796,xxx? Hmm.
+
+Let's try to recall the actual tables in earnings release.
+
+Stryker earnings release format:
+Net sales
+Cost of products sold
+Cost of services
+Gross profit
+Research and development
+Selling, general and administrative
+Intangible amortization
+Other income (expense), net
+Earnings before income taxes
+Taxes on earnings
+Net earnings
+
+Then they have adjustments: inventory stepped-up to fair value, acquisition and integration-related charges, amortization of intangibles, etc., leading to adjusted gross profit, adjusted operating income, etc.
+
+They typically present both reported and adjusted figures in tables.
+
+Let's recall Q2 2025 figures:
+Net sales: maybe $5,811,509? Wait that sounds right for Q2 2024? Let's check mental consistency: Stryker Q2 2024 net sales were about $5.4B? Actually in 2024, quarterly sales: Q1 $5.3B, Q2 $5.4B, Q3 $5.15B? No that seems low. Let's check mental: Full year 2024 net sales were $23,002,391 (about $23B). Quarterly averages about $5.75B. So Q1 might be $5.5B, Q2 $5.6B, Q3 $5.7B, Q4 $6.2B? Hmm not evenly distributed because seasonal? Actually medical devices somewhat even.
+
+But in 2025, sales grew about 8-11%, so quarterly sales might be around $5.9B to $6.4B.
+
+Let's recall specific headline in August 2025: Stryker Q2 2025 net sales up 11.3 percent? Or 11.1? Maybe net sales were $5.85B? Let's check mental news: In August 2025, Stryker reported second-quarter sales of $5.8B? Or net earnings?
+
+Actually, I think in August 2025 Stryker reported:
+Net earnings of $924 million? Or diluted EPS?
+Let's recall stock news: On August 2025, Stryker (SYK) reported Q2 earnings of $2.01 per share? Or adjusted EPS of $3.07? Yes that sounds familiar: adjusted EPS was $3.07, beating expectations of $3.01? Or maybe $3.69?
+
+Wait let's recall in late October 2025, Stryker reported Q3 results with adjusted EPS of $3.37? Or $3.31?
+
+Let's try to recall news headlines in October/November 2025:
+"Stryker Corporation Announces Results for 2025 Third Quarter" maybe on October 29, 2025?
+The figures might include:
+Net sales of $6,054,850? Or $6.1B?
+Net earnings of $949 million?
+Diluted earnings per share of $1.93?
+Adjusted diluted EPS of $3.37?
+
+Let's check consistency: If net earnings are around $950M and shares around 380M? Then EPS about $2.50. But diluted EPS might be $2.20? Not matching.
+
+Alternatively, maybe Q3 net earnings were $838M and diluted EPS $2.31? Hmm.
+
+We need specifically reported operating income margin = operating income / net sales * 100.
+
+Let's recall that in Q3 2020? No.
+
+But perhaps easier: The quarter with lowest adjusted gross profit margin might be Q3 2025? Or Q1?
+
+We need be precise: "For Stryker's 2025 quarter with the lowest adjusted gross profit margin..." This sounds like in 2025, there were three quarters reported (Q1-Q3), each with an adjusted gross profit margin figure. One of them is the lowest. We need its reported operating income margin.
+
+Thus need correct values for all three quarters.
+
+Let's recall from earnings reports the adjusted gross profit margin line.
+
+In 2024 reports, adjusted gross profit margin was about 64.4% in Q1, 64.9 in Q2, etc.
+
+But for 2025, maybe:
+Q1 adjusted gross profit margin = 65.0? Or 64.7?
+Q2 = 64.8?
+Q3 = 64.1?
+
+We need identify lowest.
+
+Let's recall specific numbers in the reconciliation tables.
+
+For Q1 2025 (reported around late April/early May 2025):
+Reported gross profit maybe $3,848,xxx?
+Cost of products sold maybe $2,xxx?
+
+Actually, let's recall the actual income statement for three months ended March 2025? Or March 2024?
+
+We need precise values. Let's try to recall from the 10-Q filing for three months ended March 30, 2025? Or March 31?
+
+But since I have to answer from knowledge, I need be as accurate as possible.
+
+Let's recall the headline figures from Stryker Q1 2025 press release around May 2025:
+- Net sales: $5.868 billion? Or $5.87B?
+- Net earnings: maybe $842 million?
+- Diluted net earnings per share: $2.00?
+- Adjusted net earnings per diluted share: $3.19?
+
+Wait that sounds right: adjusted EPS around $3.19 in Q1?
+
+Let's check mental consistency: In Q1 2024, adjusted EPS was around $2.50? Actually in Q1 2024, Stryker reported adjusted EPS of $2.50, net sales $5.3B. So in Q1 2025, adjusted EPS might be around $2.84? Or $3.84?
+
+Let's recall in February 2025 they reported Q4 2024 adjusted EPS of $4.01? Or maybe $3.69?
+
+Actually in February 2025, Stryker reported Q4 2024 results:
+Net sales: $6.44B?
+Net earnings: $788M?
+Diluted EPS: $2.14?
+Adjusted diluted EPS: $4.01?
+
+That sounds right: Q4 2024 adjusted EPS was high, around $4.01.
+
+Then for full year 2024 adjusted EPS was about $12.19?
+
+So for Q1 2025, adjusted EPS might be around $2.84? Or $3.07?
+
+Wait, there's seasonal? Not necessarily.
+
+But we just need operating income margin for one quarter.
+
+Let's recall Q1 2025 operating income: maybe $1,019M? Net sales $5.87B => margin about 17.36%?
+
+But need correct.
+
+Let's recall the actual table for three months ended March 31, 2025:
+Net sales: $5,866,521?
+Cost of products sold: $1,943,xxx?
+Cost of services: $...
+Gross profit: maybe $3,758,xxx?
+R&D: $371,xxx?
+SG&A: $1,605,xxx?
+Intangible amortization: $610,xxx?
+Other income/expense: maybe -$15,xxx?
+Earnings before taxes: maybe $1,xxx?
+Taxes: ...
+Net earnings: ...
+
+But I need operating income, which is gross profit minus R&D, SG&A, amortization, maybe other? Actually operating income = gross profit - R&D - SG&A - amortization - other? Let's check typical income statement layout:
+Gross profit
+Operating expenses:
+Research and development
+Selling, general and administrative
+Intangible amortization
+Other income (expense)
+Operating income? Or earnings from operations?
+
+In Stryker's report, they have "Operating income" calculated? Actually they might present "Earnings before income taxes" after other income/expense. But they also present "Adjusted operating income" excluding amortization and other items.
+
+But the question asks "reported operating income margin" - likely they have a line "Operating income" in the report? Or they calculate it?
+
+Wait, in many earnings summaries, they list:
+Operating income of $XXX, margin of X%.
+
+But I need be precise.
+
+Let's recall Q2 2025 figures reported in August 2025:
+Net sales: maybe $5,813,xxx?
+Gross profit: maybe $3,694,xxx?
+Operating income: maybe $977,xxx?
+Operating income margin: 16.8%?
+
+But we need the quarter with lowest adjusted gross profit margin.
+
+Let's recall that in Q3 2025, gross profit margin might have been affected?
+
+Actually, adjusted gross profit margin can vary due to product mix and manufacturing costs.
+
+But perhaps the quarter is Q2 2025 with adjusted gross margin of 63.9? Or Q3?
+
+We need be accurate. Let's recall specific adjusted gross profit margin numbers mentioned in the report text.
+
+In earnings reports, they often say:
+"Gross profit margin on net sales was 64.1 percent (65.0 percent adjusted) in 2025..." Or they present in table.
+
+Let's recall for Q3 2025 report (around late October 2025):
+Perhaps they said:
+Reported gross profit margin was 63.8 percent?
+Adjusted gross profit margin was 64.3 percent?
+
+Actually I think in recent years Stryker's adjusted gross margin is around 64-65%. In 2023 it was around 64.3, in 2024 maybe 64.5.
+
+But we need the quarter with the lowest in 2025.
+
+Let's recall the 10-Q for three months ended Sept 29, 2024? No, that's 2024.
+
+But we need 2025 quarters. Let's recall news in late October 2025 after Q3 earnings. The report might have included comparison:
+Net sales up 10.1 percent?
+Gross profit up?
+Operating income up?
+
+Actually, I recall in late October 2025, Stryker reported Q3 revenue of about $6.06B, beating expectations of $5.97B? Or was that another company?
+
+Wait there was news in late October 2025 for many medical device companies: Stryker, Boston Scientific, etc. For Stryker, maybe revenue was $6.06B, beating $5.97B, up 10.1 percent. Net income was up 38 percent? Or diluted EPS?
+
+Let's check mental news headlines around October 29, 2029? No.
+
+Actually, I think on October 23, 2025? Or October 30? Let's recall: In late October 2025, Stryker announced results for 2025 third quarter. The headline might have said:
+Net earnings of $838 million?
+Net earnings per diluted share of $2.18?
+Adjusted net earnings per diluted share of $3.37?
+Net sales of $6.06B?
+Operating income margin of 18.2? Or 16.3?
+
+But I need be precise.
+
+Let's recall that in Q3 2028? No.
+
+Given the difficulty, but I need provide a specific percentage to two decimal places. Let's try to derive from known figures if possible.
+
+We need the quarter with the lowest adjusted gross profit margin. Let's call it Quarter X.
+
+We need operating income margin = (Operating income / Net sales) * 100.
+
+Thus if we can recall both operating income and net sales for each quarter, we can compute.
+
+Let's recall Q1 2025 figures from 10-Q filed with SEC around early May 2025.
+
+The income statement for three months ended March 30, 2025 (compared to March 31, 2024?) might be in the filing.
+
+We need to recall specific line items.
+
+Actually, I might have seen tables like this for Stryker in 2025 10-Q:
+
+Three Months Ended
+March 31, 2025 March 31, 2024
+Net sales $5,866,521 $5,296,816?
+Cost of products sold $1,788,xxx?
+Cost of services $202,xxx?
+Gross profit $3,788,xxx?
+Research, development... $377,xxx?
+Selling, general... $1,669,xxx?
+Intangible amortization $632,xxx?
+Other income (expense) -$8,xxx?
+Earnings before income taxes $1,100,xxx?
+Taxes on earnings $220,xxx?
+Net earnings $880,xxx?
+
+But this is too speculative.
+
+However, we can try to compute gross profit margin: If net sales $5.87B and gross profit maybe $3.79B => margin about 64.5%. Yes.
+
+But we need adjusted gross profit margin, which might be gross profit plus adjustments divided by net sales.
+
+The adjustments might include inventory step-up and other charges totaling maybe $50M? So adjusted gross profit might be $3.84B => margin 65.4? Hmm not matching mental.
+
+But we just need the lowest among quarters.
+
+Actually, maybe adjusted gross margins for 2025 quarters are:
+Q1: 64.5%
+Q2: 63.9%
+Q3: 64.1%
+
+Thus Q2 is lowest.
+
+Then Q2 reported operating income margin? Let's recall Q2 2025 operating income might be around $1,012M on sales of $5.8B => 17.45? Or maybe 16.89?
+
+But need correct to two decimal places, so likely a round number like 16.89? Or 17.12?
+
+Let's recall in Q2 2024, operating income was around $1.1B on sales $5.4B => about 20%? Wait no, operating income might be higher.
+
+Actually, Stryker's operating margin (reported) is usually in the range of 16-18%. Let's check mental from 2023: Operating income was about $3.5B on sales $20.5B => about 17%. Yes.
+
+So for Q2 2025 with sales around $5.8B, operating income might be around $1.0B => about 17%.
+
+But we need precise.
+
+Let's recall specific Q2 2025 figures that might be in the report:
+Operating income might be $1,055,000 on sales $5,811,000 => 18.15? Or maybe $1,002,000 => 17.24?
+
+We need be closer.
+
+Let's recall the Q3 2028? No.
+
+But wait, the question asks "For Stryker's 2025 quarter with the lowest adjusted gross profit margin, what was its reported operating income margin?"
+
+This sounds like it's asking from a specific chart or table that lists for each quarter of 2025: adjusted gross profit margin and reported operating income margin. The answer might be directly readable: e.g., Q2 had adjusted gross profit margin of 64.1 and operating income margin of 16.5? Or something.
+
+But I need provide the best answer I can.
+
+Let's recall from Stryker's 20235? No.
+
+Actually, I think I should try to recall the actual earnings release text for each quarter in 2025, particularly the part where they discuss margins.
+
+In the earnings release, they often have a paragraph:
+"Gross profit margin on net sales was 64.0 percent (64.8 percent adjusted) for the three months ended..." Or "was 63.5 percent (64.9 percent adjusted)..."
+
+Let's recall Q3 2025 release might have said:
+"Gross profit margin on net sales was 64.2 percent (65.0 percent adjusted) for the three months ended September 29, 2025..." Or maybe for the nine months?
+
+But actually they present both three-month and nine-month figures.
+
+Let's recall in October 2025 report, they might have said:
+For the three months ended September 2025:
+Net sales up 10.1%
+Gross profit up?
+Operating income up?
+
+But I need specifically "reported operating income margin". That might be in the income statement.
+
+Let's try to recall the actual income statement line for "Operating income" for three months ended Sept 2025? Or maybe they don't have operating income but "Earnings from operations"? Wait in Stryker's financials, they have "Operating income" calculated?
+
+Let's check mental layout of Stryker income statement:
+Net sales
+Cost of products sold
+Cost of services
+Gross profit
+Research and development
+Selling, general and administrative
+Amortization of intangibles
+Other income (expense), net
+Earnings before income taxes
+
+Actually there is no explicit "Operating income" line; "Earnings before income taxes" is after other income/expense. But sometimes they present "Operating income" separately excluding other income/expense? Or they include amortization in operating expenses.
+
+But in adjusted metrics, they have "Adjusted operating income" = gross profit - R&D - SG&A + adjustments? Actually they adjust for amortization and other items.
+
+However, the question mentions "reported operating income margin" - this sounds like they calculated operating income (maybe earnings from operations) divided by net sales.
+
+But we need be precise.
+
+Let's try to recall specific numbers from the 10-Q for three months ended March 30, 2025 filed around May 2025.
+
+We can try to reconstruct using known full-year figures? Not precise enough.
+
+But maybe I can recall that in Q1 2025, Stryker's net income was about $842M and operating income was about $1.0B?
+
+Wait, there is also tax rate around 15-16%.
+
+If earnings before income taxes were about $1.0B and taxes about $170M, net earnings about $830M.
+
+Thus operating income (before taxes and other) might be near $1.0B.
+
+But let's try to recall actual headlines: In May 20221? No.
+
+Given all this, I think the quarter is Q2 2025, and the operating income margin might be around 16.85? Or 17.20?
+
+But I need be more accurate. Let's recall in August 2025, Stryker reported net sales of $5,808.9 million? Actually I think net sales for three months ended June 30, 2025 might be $5,811,000? Let's check mental consistency with growth: Q2 2024 sales might have been around $5,422M? So 2025 Q2 might be about $5,999M? Or up 8.4%?
+
+Wait, in 2024 quarterly sales:
+Q1: $5,297M?
+Q2: $5,422M?
+Q3: $5,152M?
+Q4: $6,444M?
+
+That adds up to about $22.3B? Actually full year was $23.0B, so these are wrong.
+
+Let's check mental: Stryker 2024 net sales were $23,002,391. Quarterly breakdown might be:
+Q1: $5,297M
+Q2: $5,422M
+Q3: $5,148M?
+Q4: $7,135M? No that can't be right because then sum >23B.
+
+Wait maybe Q4 was $6.4B and others around $5.3B, $5.5B, $5.5B => sum around $22.6B. Yes.
+
+Specifically, I think in 2024:
+Q1 sales: $5,296.6 million
+Q2 sales: $5,422.1 million
+Q3 sales: $5,151.3 million?
+Q4 sales: $6,441.8 million? Sum = 22,311? Not matching 23B. So maybe Q4 was about $6.9B?
+
+Actually Stryker acquired some companies? No, sales in 2024 were up 8.1 percent. In 2023 sales were $20.5B? Wait yes! In 2023 net sales were $20,498M (~$20.5B). In 2024 they were $23.0B, up about 12.5? Wait the headline said sales up 8.1 percent? Or 10.2?
+
+Let's check mental: In Feb 2025, Stryker reported 2024 sales of $23.0B, up 8.1 percent? Or up 10.2 percent constant currency?
+
+If 2023 was about $20.5B and 2024 was $23B, that's about 12% increase. So maybe 2023 was $20.5B, 2024 was $23.0B (up 10.2 percent). Yes, constant currency up 10.2, reported up 8.1? Or vice versa?
+
+Thus quarterly averages in 2024 were about $5.75B.
+
+But in 2025, they expected sales growth 8-9 percent.
+
+Thus Q1 2025 sales might be around $5.8B or $5.9B.
+
+But we need the quarter with lowest adjusted gross margin, not necessarily the lowest sales
+
+High model
+==========
+The Hard solvers keep only right or wrong, not their reasoning. To see how a solver worked, use View reasoning on an attempt from another step, such as the document check.
+
+Attempt 1 · Right
+-----------------
+Docs: Not kept · Note: —
+
+Final answer: not shown | Your answer (gold): 18.74%
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: Not kept · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): 18.74%
+
+Where it shortcut: Once Q3 is chosen, the answer follows from subtracting quoted headline figures (FY minus H1 minus Q4 net sales and operating income) in documents 1 and 3.Doc 1 Doc 3
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: Not kept · Note: —
+
+Final answer: not shown | Your answer (gold): 18.74%
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

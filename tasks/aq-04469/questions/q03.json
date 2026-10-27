@@ -1,0 +1,76 @@
+{
+  "question": "Other submitters mention submissions the ACCC made to earlier reviews. To how many different reviews were those ACCC submissions made?",
+  "number_of_asks": 1,
+  "gold_answer": "3",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 11, non-compliance penalties): Fresh Markets Australia quotes the Final Report of the earlier Independent Review of the Food and Grocery Code of Conduct, which says \"a number of submissions, including the ACCC's submission, called for the introduction of civil pecuniary penalty provisions\". That is an ACCC submission to that review (first review).\nStep 2. Source input (Doc 10, on the Dairy Code review): eastAUSmilk writes that \"the ACCC noted it would not fully correct the bargaining power imbalance\" and, in the next line, that \"This assessment also underpins their 2021 submission to the review of the dairy code\". \"Their\" is the ACCC's, and the footnote's web address names an \"ACCC submission to Dairy Code of Conduct Review\" (second review).\nStep 3. Source input (Doc 15, compliance and enforcement): Metcash \"notes the ACCC's submission in February 2023 to the review of the Code's dispute resolution provisions\" (third review).\nStep 4. Decoys: the ACCC's review of Coles buying two Saputo dairy plants is a review the ACCC itself ran; eastAUSmilk and Australian Dairy Farmers mention a submission made to it by Australian Dairy Farmers, not one by the ACCC. Reports the ACCC published, such as its perishable goods inquiry report and its dairy inquiry report, are not submissions. The ACCC's own mentions of its submissions are not made by other submitters, and they name only reviews already counted.\nStep 5. Calculation (Doc 11, Doc 10 and Doc 15): 1 + 1 + 1 = 3 different reviews.",
+  "answer_components": [
+    "3"
+  ],
+  "evidence": [
+    {
+      "document_number": 11,
+      "component_number": 1,
+      "quote": "In the 2018 Final Report - Independent Review of the Food and Grocery Code of Conduct"
+    },
+    {
+      "document_number": 11,
+      "component_number": 1,
+      "quote": "a number of submissions, including the ACCC’s submission, called for the introduction of civil pecuniary penalty provisions"
+    },
+    {
+      "document_number": 10,
+      "component_number": 1,
+      "quote": "Even at its making, the ACCC noted it would not fully correct the bargaining power imbalance"
+    },
+    {
+      "document_number": 10,
+      "component_number": 1,
+      "quote": "This assessment also underpins their 2021 submission to the review of the dairy code"
+    },
+    {
+      "document_number": 10,
+      "component_number": 1,
+      "quote": "https://www.accc.gov.au/system/files/ACCC%20submission%20to%20Dairy%20Code%20of%20Conduct%20Review"
+    },
+    {
+      "document_number": 15,
+      "component_number": 1,
+      "quote": "MF&G notes the ACCC’s submission in February 2023 to the review of the Code’s dispute resolution provisions"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        11
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        10
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        15
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Entity resolution",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: in Doc 10 the ACCC's Dairy Code review submission appears only as \"their 2021 submission\", after a sentence naming the ACCC; its footnote address says \"ACCC submission\". Counting only explicit mentions (Doc 11's earlier Code review, Doc 15's dispute review) gives 2; the gold is 3."
+}

@@ -1,0 +1,123 @@
+{
+  "question": "Which witnesses who gave oral evidence remotely in 2022, if any, had also sent the committee written evidence, personally or through their organisation? List them in any order.",
+  "number_of_asks": 1,
+  "gold_answer": "Louise Miles-Payne, Dorothy Yen",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 1, published written evidence): the report lists the written evidence it received. Five entries are a 2022 witness or the body one spoke for: FSB Wales, Fiona Stewart of the Green Man Festival, UK Theatre, the Welsh Sports Association, and Professor Dorothy Yen with two Brunel colleagues.\nStep 2. Source input (Doc 1, witness list): the witnesses for those entries are Gwyneth Sweatman of FSB Wales on 20 April 2022, Fiona Stewart, Louise Miles-Payne (\"Director, Creu Cymru and Board Member, UK Theatre\") and Matthew Williams of the Welsh Sports Association on 25 May 2022, and Dorothy Yen on 20 July 2022. These five are the only candidates.\nStep 3. Source input (Doc 4, Q51): on 25 May 2022 the Chair says the committee is \"joined in the Committee room by Matthew Williams\", is \"also joined by Fiona Stewart\", and is \"joined virtually by\" Graeme Farrow, Camilla King and Louise Miles-Payne. Miles-Payne gave evidence remotely (first component). Williams and Stewart are not among those who joined virtually, so they are left out.\nStep 4. Source input (Doc 6, Q143): on 20 July 2022 the Chair says the committee is \"joined virtually by\" Professor Annette Pritchard and Professor Dorothy Yen. Yen gave evidence remotely (second component). Doc 6's own header lists no written evidence; Doc 1's list shows her paper, and at Q174 Pritchard mentions \"her evidence submission\".\nStep 5. Source input (Doc 3, Q1): on 20 April 2022 the Chair says the panel is \"joined by David Chapman\" and Gwyneth Sweatman and \"joined remotely by Suzy Davies\". Sweatman was not remote, so she is left out, although the transcript carries the line \"[This evidence was taken by video conference]\".\nDecoy: Gwyneth Sweatman, Fiona Stewart and Matthew Williams each sent written evidence, personally or through their body, but none of them gave oral evidence remotely. Annette Pritchard joined virtually beside Dorothy Yen but sent no written evidence.\nStep 6. Final answer (Doc 1, Doc 4 and Doc 6): Louise Miles-Payne, Dorothy Yen.",
+  "answer_components": [
+    "Louise Miles-Payne",
+    "Dorothy Yen"
+  ],
+  "evidence": [
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "UK Theatre (TOU0011)"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Louise Miles-Payne, Director, Creu Cymru and Board Member, UK Theatre"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "We are joined virtually by Graeme Farrow from the Wales Millennium Centre, by Camilla King from the Llangollen International Musical Eisteddfod, and by Louise Miles-Payne, Director of Creu Cymru and a board member of UK Theatre"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Written evidence from witnesses:"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "We are joined in the Committee room by Matthew Williams from the Welsh Sports Association. We are also joined by Fiona Stewart from the Green Man Festival."
+    },
+    {
+      "document_number": 1,
+      "component_number": 2,
+      "quote": "Professor Dorothy Yen, Professor in Marketing, Dr Ana Canhoto, Reader in Marketing, and Dr Liyuan Wei, Senior Lecturer in Marketing, Brunel University London (TOU0005)"
+    },
+    {
+      "document_number": 6,
+      "component_number": 2,
+      "quote": "We are joined virtually by Professor Annette Pritchard, professor of tourism management at Leeds Beckett University and Professor Dorothy Yen"
+    },
+    {
+      "document_number": 6,
+      "component_number": 2,
+      "quote": "what Professor Dorothy has talked about in her evidence submission"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "FSB Wales (TOU0009)"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Fiona Stewart, Managing Director, Green Man Festival (TOU0010)"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Welsh Sports Association (TOU0015)"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "On panel 1 we are joined by David Chapman, who is the Executive Director for Wales for UK Hospitality, and Gwyneth Sweatman, Head of Communications for the Federation of Small Businesses in Wales, and we are joined remotely by Suzy Davies, who is the Chair of the Wales Tourism Alliance."
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "[This evidence was taken by video conference]"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Exclusion / condition source",
+      "reviewer_note": "The Chair's opening words place Gwyneth Sweatman in the room. FSB Wales sent written evidence (Doc 1), so without this she could not be ruled out."
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Document convention",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    },
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Document convention: Doc 3 is headed \"taken by video conference\", yet its Chair places Gwyneth Sweatman in the room; trusting the heading adds her. Linking across documents: Doc 6's header lists no written evidence; only Doc 1's list shows Dorothy Yen's paper. Missing it leaves Louise Miles-Payne alone."
+}

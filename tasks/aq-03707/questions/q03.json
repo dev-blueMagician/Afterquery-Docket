@@ -1,0 +1,117 @@
+{
+  "question": "Which countries, if any, that any submission to the grocery study describes as a four-player supermarket market also appear among the Food and Grocery Council's examples of countries with grocery competition concerns? List them alphabetically.",
+  "number_of_asks": 1,
+  "gold_answer": "Australia, the Netherlands",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 8, the passage on how many supermarket chains other countries support): quoting its economists, the Council says Norway, Finland and Sweden all have four major supermarket chains and that Iceland also has four retailers. Ireland and Denmark are given larger numbers of chains.\n\nStep 2. Source input (Doc 3, the paragraph on the result of the writer's proposed market-share cap): a four player model is described as a long term stable solution in Switzerland, Norway, Finland and the Netherlands, and also in Denver, Orlando, Quebec and Ontario. Those last four are two metropolitan areas in the United States and two Canadian provinces, not countries. The four groups the same passage describes for New Zealand are a proposal, not a description of the market.\n\nStep 3. Source input (Doc 5, the evidence table, in the row about property covenants): one aside says that even \"Aussie\" is a four-player market, so this submission credits Australia with four players. No other document credits Australia with four.\n\nStep 4. Combination (Doc 8, Doc 3 and Doc 5): the countries a submission credits with four main supermarket players are Norway, Finland, Sweden, Iceland, Switzerland, the Netherlands and Australia.\n\nStep 5. Source input (Doc 8, the profitability section's examples of countries where competition concerns have arisen): the Council's lettered list names Australia, United Kingdom, Netherlands, United States, Canada, Portugal, Belgium, Israel and Mexico.\n\nStep 6. Matching (Doc 8, Doc 3 and Doc 5): of the seven credited countries, Australia (component c1) and the Netherlands (component c2) are on the Council's list. Norway, Finland, Sweden, Iceland and Switzerland are not on it.\n\nDecoy: Canada and the United States are on the Council's list, but Doc 3 credits only two Canadian provinces and two United States metropolitan areas with four players, not either country, so neither qualifies.\n\nFinal answer, in alphabetical order (Doc 5, Doc 3 and Doc 8): Australia, the Netherlands.",
+  "answer_components": [
+    "Australia",
+    "the Netherlands"
+  ],
+  "evidence": [
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Even Aussie is a 4-player market."
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "There are numerous examples of competition concerns that have arisen in countries included in the"
+    },
+    {
+      "document_number": 8,
+      "component_number": 2,
+      "quote": "There are numerous examples of competition concerns that have arisen in countries included in the"
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "ACCC Chair Rod Sims identified supermarkets as a market dominated by a small number of providers recently when speaking about market power in Australia."
+    },
+    {
+      "document_number": 3,
+      "component_number": 2,
+      "quote": "for example Switzerland, Norway, Finland, Denver MSA, Orlando MSA, the Netherlands, Quebec, Ontario and elsewhere"
+    },
+    {
+      "document_number": 3,
+      "component_number": 2,
+      "quote": "This four player model also emerges as a long term stable solution across many peer group countries of similar size"
+    },
+    {
+      "document_number": 8,
+      "component_number": 2,
+      "quote": "c. Netherlands"
+    },
+    {
+      "document_number": 8,
+      "component_number": 2,
+      "quote": "market power over competitors (2015+)"
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "Norway, Finland and Sweden which, like New Zealand, have a long thin land mass, all have four major supermarket chains. Iceland, which has a much smaller population, also has four retailers."
+    },
+    {
+      "document_number": 8,
+      "component_number": 2,
+      "quote": "Norway, Finland and Sweden which, like New Zealand, have a long thin land mass, all have four major supermarket chains. Iceland, which has a much smaller population, also has four retailers."
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "d. United States"
+    },
+    {
+      "document_number": 8,
+      "component_number": 2,
+      "quote": "d. United States"
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "competition laws come under scrutiny after grocery business controversies (2021)"
+    },
+    {
+      "document_number": 8,
+      "component_number": 2,
+      "quote": "competition laws come under scrutiny after grocery business controversies (2021)"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        8
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: only Doc 5's aside in its evidence table, \"Even Aussie is a 4-player market\", makes Australia a four-player market; Doc 3's list gives the Netherlands. A solver that never joins Doc 5 to Doc 8's list of countries with competition concerns answers the Netherlands alone."
+}

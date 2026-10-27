@@ -1,0 +1,80 @@
+{
+  "question": "Which submitters, if any, gave a view on every one of Treasury's consultation questions? List them alphabetically.",
+  "number_of_asks": 1,
+  "gold_answer": "AIOFP, Angas Securities",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 8, the AIOFP's answers to the consultation questions): the AIOFP sets out Treasury's questions numbered 1 to 24 and answers every one with a view, including the withdrawal procedure (\"We do not see any need for procedure withdrawal\"), real property (\"Yes, as there are significantly different regulations and scrutiny.\") and the last question on modernising the framework. It qualifies (component c1).\n\nStep 2. Source input (Doc 4 and Doc 8, Angas Securities' answers matched to the wording of Treasury's 24 questions): Angas numbers its answers only 1 to 23, because its answer 3 also holds both consent questions, each with its own question and answer (\"If consent requirements were to be introduced, how could these be designed ...\" and \"Should the same consent requirements be introduced for each wholesale client test ...\"). Matched by wording, its answers cover all 24 questions, and each gives a view, some as short as \"No\" or \"Possibly desirable. Not essential.\" It qualifies (component c2).\n\nStep 3. Exclusions, from the other submissions that set out every question: AIMA answers the real-property question with \"AIMA makes no comments on behalf of its members\"; Allens answers the withdrawal-procedure question with \"No comments.\"; the Joint Associations have no specific comments on board composition, on the four questions about replacing the responsible entity, or on the withdrawal procedure. Each leaves at least one question without a view. The other submissions take up only some of the questions.\n\nDecoy: AIMA and Allens print an answer under every question (Allens misnumbers its last two), so counting numbered answers wrongly keeps them and wrongly drops Angas, whose numbering looks one short.\n\nFinal answer, in alphabetical order (Doc 8 and Doc 4): AIOFP, Angas Securities.",
+  "answer_components": [
+    "AIOFP",
+    "Angas Securities"
+  ],
+  "evidence": [
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "We do not see any need for procedure withdrawal and believe they should be clearly documented in the PDS."
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "Yes, as there are significantly different regulations and scrutiny."
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "24. What opportunities are there to modernise and streamline the regulatory framework for managed investment schemes"
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "For MIS to be available for Advisers to recommend to their clients, many AFSL’s require independent research from a research house."
+    },
+    {
+      "document_number": 4,
+      "component_number": 2,
+      "quote": "Q: If consent requirements were to be introduced, how could these be designed to ensure investors understand the consequences of being considered a wholesale client?"
+    },
+    {
+      "document_number": 4,
+      "component_number": 2,
+      "quote": "Q: Should the same consent requirements be introduced for each wholesale client test (or revised in the case of the sophisticated investor test) in Chapter 7 of the Corporations Act?"
+    },
+    {
+      "document_number": 4,
+      "component_number": 2,
+      "quote": "A: Possibly desirable. Not essential."
+    },
+    {
+      "document_number": 4,
+      "component_number": 2,
+      "quote": "23. Q: What opportunities are there to modernise and streamline the regulatory framework for managed investment schemes"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        8
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Document convention",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Document convention: Doc 4 numbers its answers 1 to 23 because its answer 3 also holds both consent questions, so read by number Angas seems to skip one and the answer becomes AIOFP alone. Matched by wording, Angas answers all 24, giving AIOFP, Angas Securities."
+}

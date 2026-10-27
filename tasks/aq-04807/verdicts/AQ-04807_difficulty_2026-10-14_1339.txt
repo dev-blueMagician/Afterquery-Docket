@@ -1,0 +1,397 @@
+AQ-04807 · Ozone Nonattainment Area Determinations — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-04807
+Saved: 2026-10-14 13:39 (local time)
+Bundle: Ozone Nonattainment Area Determinations · Public policy · 7 documents · 94,468 prompt tokens
+Run read: Run 1, the latest
+Attempts read: 4
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 16 runs left · 15 of 60 runs used in the last 24 h (all tasks)
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 3 attempts right
+
+High model: two solvers try up to 3 times each. Ready when both get it wrong at least once and not every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Avoid mirroring the source phrasing. Ask, for example, which areas saw a jurisdictional split in classification following a voluntary state request, and require the solver to identify both the area and the classification retained by the tribal portions, so the answer requires understanding rather than string matching. Why: The question's wording ('tribal lands remain at a lower classification after a state-requested reclassification') almost paraphrases the exact language of the two answer passages: 'remained classified as Moderate' (document 5) and 'did not reclassify any areas of Indian country' (document 3). A keyword search on 'tribal'/'Indian country' plus 'reclassif' lands directly on the answer sentences, so the phrasing itself acts as a retrieval pointer. From a run (High model · attempt 2): High model again matched the gold answer using the same two verbatim passages; no combination with the design-value or attainment-date material in either document was needed. Doc 3 Doc 5
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 1 (Oct 14, 2026, 1:29 PM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+1 run
+
+------------------------------------------------------------------------
+Run 1 · Too easy · Result the gate uses
+Oct 14, 2026, 1:29 PM · Version 1d2bff (current) · Low — · Medium — · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: first run
+
+Solver summary: Run 1 · Too easy · 3 of 3 right
+Every solver attempt got it (3 of 3).
+
+Your answer: Coachella Valley, Greater Connecticut
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: Note: where it went wrong
+
+Final answer: None qualify. | Your answer (gold): Coachella Valley, Greater Connecticut
+
+Where it went wrong: Without documents, Low model defaulted to 'None qualify,' which is the expected fallback and shows the question's difficulty rests entirely on document access, not on reasoning.
+
+Full answer
+-----------
+
+None qualify.
+
+Reasoning
+---------
+
+We need answer a specific question: "Which nonattainment areas had tribal lands remain at a lower classification after a state-requested reclassification? List the area names alphabetically, or state that none qualify."
+
+Need determine context: likely US Clean Air Act ozone or PM2.5 nonattainment area classifications, state requests bump-up/reclassification, but tribal lands within those areas remain at lower classification.
+
+We need identify areas where state requested higher classification (bump-up) but tribal lands stayed at lower.
+
+Need recall specific EPA designations/reclassifications involving tribal lands. Might relate to 2015 ozone standard? Or 1997/2001? Let's think.
+
+There have been state requests for voluntary reclassification to higher (more severe) for ozone: e.g., California? But tribal lands?
+
+Perhaps it's about the 2015 ozone NAAQS, where several areas were initially designated Moderate, then states requested bump-up to Serious. For some areas with tribal lands, the tribal lands remained Moderate while the rest of area went to Serious?
+
+Specifically, in 2022/2023, EPA finalized bump-up requests for several areas to Serious for 2015 ozone: Chicago-Naperville, IL-IN-WI? No, that was bumped up? Let's recall: In October 2023, EPA bumped up 31 areas from Moderate to Serious for failing to attain 2015 ozone by August 2021 attainment date. Among them, some had tribal lands? Actually the bump-up was mandatory for areas that failed attainment, not state-requested. But some states voluntarily requested bump-up to Serious earlier? Let's parse carefully.
+
+Question wording: "Which nonattainment areas had tribal lands remain at a lower classification after a state-requested reclassification?" This sounds like a state requested reclassification of the area to a higher classification, but within the area, tribal lands were not included in the state's request and therefore remained at the original lower classification.
+
+We need list area names alphabetically, or none.
+
+Let's recall specific instances with tribal lands and state bump-up requests for PM2.5 or ozone.
+
+For PM2.5 2012 standard, there were Moderate nonattainment areas. Some states requested voluntary bump-up to Serious? For example, Utah? Or California?
+
+But the phrase "tribal lands remain at a lower classification after a state-requested reclassification" might come from a specific table in a Federal Register notice listing areas and tribal lands within them with different classifications.
+
+Let's recall 2015 ozone designations in 2018: Many areas designated Marginal or Moderate. Some tribal lands were designated separately. For example, the lands of the Morongo Band of Mission Indians in California were designated separately? Or the lands of the Pechanga Band?
+
+But the question asks "nonattainment areas had tribal lands remain at a lower classification after a state-requested reclassification" - maybe there are two such areas?
+
+We need be precise with area names.
+
+Let's recall in 2022, some states requested that EPA reclassify certain Moderate ozone nonattainment areas to Serious on a voluntary basis before the attainment date. The states included: Connecticut? No, Connecticut parts?
+
+Actually in April 2022, EPA proposed approvals of state requests to voluntarily reclassify several Moderate areas to Serious for 2015 ozone: These included the Baltimore, MD area? Let's check mental list.
+
+States that voluntarily bumped up: Nevada (Las Vegas)? Colorado (Denver)? Utah (Salt Lake City, Provo-Orem)? California (some)? Texas?
+
+Wait, there was a provision allowing a state to voluntarily request bump-up to Serious if they anticipated failing attainment. In 2028? Hmm.
+
+Let's recall news in 2022: EPA proposed to approve requests from several states to reclassify 11 areas? Or was it in 2023?
+
+Let's search mental database: In May 2022, EPA proposed approval of requests from Nevada, Utah, and maybe others? Let's dig.
+
+The 2015 ozone standard attainment date for Moderate areas was August 2, 2021. After that, failure to attain led to mandatory bump-up to Serious effective some date in 2022. Before that date, some states requested voluntary bump-up. Which ones?
+
+I think in 2022, the following areas voluntarily bumped up to Serious: The Denver-Boulder-Greeley-Fort Collins-Loveland, CO area? Or was Colorado bumped mandatory?
+
+Actually Colorado's Front Range was designated Serious initially? Wait no, in 2022, Colorado Front Range was bumped up to Serious because it failed to attain by 2029? No, that's for 2015 standard with Moderate attainment date 2021, then Serious 2023? Let's not confuse.
+
+Perhaps easier: The question might come from a specific exam or quiz about tribal land classifications in the 2015 ozone designations update. But need answer from own knowledge.
+
+Let's think about tribal lands that have separate designations. For the 2015 ozone standard, EPA designated tribal lands separately in some cases. For example:
+
+- Morongo Band of Mission Indians (California) - Moderate?
+- Pechanga Band of Luiseño Indians - Moderate?
+- Bishop Paiute? No.
+
+But the question mentions "state-requested reclassification" causing tribal lands to remain lower. This sounds like the state requested the entire state area be bumped, but tribal lands within that geographic area are not part of the state's jurisdiction and thus not included in the state's request, so they stay at the lower class.
+
+We need identify the specific nonattainment areas where this happened.
+
+Let's recall a Federal Register notice maybe in 2023 listing classifications for tribal lands? Or in 2024?
+
+Actually, in January 2024 or late 2023, EPA finalized designations for the 2015 ozone standard for remaining areas, including tribal lands?
+
+Let's systematically recall the 2015 ozone designations made in 2018 (effective various dates). Many areas were Marginal with attainment date 2021. Those that failed went to Moderate. Then Moderate attainment date 2024? Wait need correct timeline.
+
+The 2015 ozone standard (0.070 ppm). Designations in 2018:
+- 51 areas Marginal, attainment by Aug 1, 2021? Actually for Marginal, attainment date was Aug 1, 2021? Or 2021? Yes.
+- Then in 2022, EPA bumped up 31 areas that failed Marginal to Moderate, with attainment date Aug 2, 2028? No wait, Moderate attainment is within 6 years? Let's check mental: For ozone, Marginal (3 years), Moderate (6 years from designations? Actually attainment dates: Marginal within 3 years of promulgation? Hmm maybe not necessary.
+
+Then Moderate areas had attainment date of Aug 2, 2028? No, 2018 designations for Moderate had attainment date by Aug 2, 2021? I'm mixing.
+
+But there was also a round of bump-ups in October 2023: 31 areas bumped from Moderate to Serious because they failed to attain by Aug 2021? Wait that sounds wrong because Moderate should have later date.
+
+Let's correct: The 2015 standard was promulgated in 2015. Initial designations in 2018 classified areas as Marginal, Moderate, Serious, etc., based on 2015-2017 data. For Marginal, attainment date was Aug 1, 2018? No, need correct.
+
+Actually the CAA sets attainment dates: Marginal - 3 years after designations? If designations were in 2018, then attainment by 2021. Yes. So Marginal areas needed to attain by Aug 1, 2021. Those that failed were bumped to Moderate, with attainment date of Aug 2, 2024? Wait Moderate gets 6 years from promulgation? The law sets specific years: Marginal within 3 years (by 2021), Moderate within 6 years (by 2024), Serious within 9 years (by 2027), Severe within 15 years, Extreme within 20 years. Yes! So Moderate attainment date was Aug 2, 2024? Actually if promulgation was Oct 2015, then 6 years is 2021? Hmm discrepancy. But in practice, EPA set attainment dates: Marginal by Aug 1, 2018? No.
+
+Let's not overanalyze timeline.
+
+But in October 2023, EPA bumped up 31 areas from Moderate to Serious? Or from Marginal to Moderate?
+
+Looking at news headlines in October 2023: EPA bumped 31 areas from Moderate to Serious for 2015 ozone? Or was it bumping up Marginal to Moderate?
+
+I recall in October 2023, EPA finalized bump-up of 31 counties/areas from Marginal to Moderate? Actually there was news that 31 areas failed to meet the 2015 ozone standards by the 2021 deadline and were bumped up from Marginal to Moderate. Yes! That sounds right: Marginal attainment date was August 2028? No.
+
+Wait check mental news: In October 2023, EPA announced that 31 U.S. areas failed to meet the 2015 ozone standards by the Aug 1, 2021 deadline and were being bumped up from "marginal" to "moderate". Yes, that was big news: 31 areas bumped to Moderate, including parts of many states. So those were Marginal -> Moderate mandatory bumps.
+
+Then there was also voluntary bump-ups? Or requests?
+
+But also there were state voluntary requests for bump-up to Serious? Maybe later.
+
+However, the question mentions "state-requested reclassification" - this could be voluntary requests by states to bump up from Moderate to Serious prior to the attainment date? Or maybe requests to be designated to a different category?
+
+But also mentions "tribal lands remain at a lower classification". This sounds like in one of those bump-up actions, tribal lands within the geographic boundary were not included.
+
+Specifically, in the October 2021? No, need correct.
+
+Let's recall specific tribal lands that are in nonattainment areas but have separate designation. For example, in Arizona, there are tribal lands within the Phoenix-Mesa area? Or in New Mexico?
+
+But perhaps the answer is indeed "none qualify". But I need be somewhat sure.
+
+Let's parse the wording precisely: "Which nonattainment areas had tribal lands remain at a lower classification after a state-requested reclassification? List the area names alphabetically, or state that none qualify."
+
+This sounds like it's asking to list specific area names that fit the criteria. If there are some, list alphabetically. If none, say none.
+
+We need determine if there are any.
+
+Consider the state of Utah requested voluntary reclassification of the Salt Lake City and Provo-Orem areas? Or was it mandatory?
+
+Actually Utah's Salt Lake City and Provo-Orem areas were designated Moderate in 2018? Then they failed? Or requested voluntary?
+
+Wait, there's also the Uinta Basin? No, that's for ozone in 2015? In 2026? Not relevant.
+
+Let's recall in 2022, Nevada requested voluntary bump-up of Las Vegas from Moderate to Serious? Or was it Clark County?
+
+In 2022, the state of Nevada requested that the Las Vegas area be bumped from Moderate to Serious? Actually Las Vegas was designated Marginal initially, then bumped to Moderate in 2023? Let's check mental: Las Vegas (Clark County) was designated Marginal in 2018, then in 2023 bumped to Moderate because it failed 2021. So not state-requested.
+
+Another possibility: The question refers to PM2.5 2012 standard designations in 2015, where some states requested attainment date extensions? Hmm.
+
+But let's consider that tribal lands often have separate air quality management. For example, in California, there are tribal lands within the South Coast Air Basin? Or San Joaquin Valley?
+
+But the phrase "remain at a lower classification after a state-requested reclassification" sounds like the state requested that the area be reclassified upward, but the tribal portion was left behind at the old classification because the tribe didn't request or wasn't part.
+
+We need list the area names (the nonattainment areas).
+
+Let's recall specific Federal Register notices that list area classifications including tribal lands separately. For the 2015 ozone standard, in 2023 or 2024, EPA updated designations for tribal lands.
+
+Actually in April 2022, EPA designated tribal lands for the 2015 ozone standard? Or in 2023?
+
+There was a 2023 final rule designating areas for the 2015 ozone standard, including tribal lands that hadn't been designated yet. Let's recall: In March 2023, EPA finalized designations for remaining areas, including tribal lands? Or in December 2023?
+
+Let's try to recall news in March 2023: EPA finalized designations for 2015 ozone for 35 counties? No, that was for the "remaining" areas that had been deferred.
+
+Actually the initial 2018 designations covered most of the US except some parts. Then in 2022/2023, EPA made designations for remaining areas, including tribal lands.
+
+Specifically, in March 2028? No.
+
+But the question might come from a specific table in a document describing these designations, with columns for Area, State-requested classification? Hmm.
+
+Given I need provide an answer. Let's think about known cases where a state requested reclassification and tribal lands stayed.
+
+One prominent case: The "West Central Pinal" area in Arizona? No.
+
+Another: In Wisconsin, there are tribal lands within the Sheboygan County area? Sheboygan was designated Marginal? Or Moderate?
+
+Wait, the October 2023 bump-up included 31 areas across the country. Among them, maybe some included tribal lands?
+
+The list of 31 areas bumped up in Oct 2023 included:
+- Baltimore, MD
+- Binghamton, NY
+- Chicago-Naperville, IL-IN-WI
+- Cincinnati-Wilmington-Maysville, OH-KY-IN
+- Cleveland, OH
+- Dallas-Fort Worth, TX
+- Denver-Aurora, CO
+- Detroit-Warren-Ann Arbor, MI
+- Grand Rapids, MI
+- Houston-Galveston-Brazoria, TX? No that was already serious.
+- Kansas City, MO-KS
+- Louisville, KY-IN
+- Milwaukee-Racine, WI
+- New York City, NY-NJ-CT?
+- Philadelphia-Wilmington, PA-NJ-DE?
+- Pittsburgh, PA
+- St. Louis, MO-IL
+- San Antonio, TX
+- San Diego, CA?
+- Seaford, DE?
+- Sheboygan, WI
+- Washington, DC-MD-VA
+- etc. Actually I'm not precise.
+
+But in that list, tribal lands within those areas? For example, Chicago area includes tribal lands? Not likely. Milwaukee-Racine includes tribal lands of the Menominee? Or Oneida?
+
+But the question says "state-requested reclassification" not mandatory. So it's not the Oct 2023 mandatory bumps. So we need identify voluntary ones.
+
+Let's recall in 2019 or 2020, some states requested voluntary bump-up from Moderate to Serious? Or from Marginal to Moderate?
+
+Wait, there was a provision in the CAA section 181(b)(3) allowing a state to voluntarily request reclassification to a higher category. Some states did this to avoid mandatory sanctions? Or to get more time?
+
+Specifically, in 2022, several states requested voluntary bump-up of certain Moderate areas to Serious? Let's check mental news in April 2022: The EPA proposed to approve requests from eight states? Actually I think there were requests for 12 areas?
+
+Let's recall specific news headlines around April 2022: "EPA proposes approval of California's request to reclassify..." No, that sounds like California requested that the South Coast be classified Extreme? But that was mandatory based on data.
+
+Wait, in 2023, California requested that the Coachella Valley be bumped from Severe-15 to Extreme? Or was that mandatory?
+
+Let's systematically recall voluntary bump-ups that made news:
+1. In 2016, some states requested voluntary bump-up for the 2008 ozone standard?
+2. For 2015 standard, maybe in 2022 Colorado requested voluntary bump-up for Denver?
+
+Actually in December 2029? No.
+
+But there's also the 2021 decision for the Utah Wasatch Front? Hmm.
+
+Given the ambiguity, but we just need list area names or state none. Let's try to recall if in any of these voluntary bump-ups, tribal lands were excepted.
+
+Perhaps in Utah, the state requested that the Salt Lake City Nonattainment Area be bumped up, but the tribal lands of the Ute Indian Tribe within the Uinta Basin? No, Uinta Basin is separate.
+
+Wait, there's an area called "Uinta Basin" in Utah designated nonattainment for ozone in 2021? Actually in 2022, the Uinta Basin was designated nonattainment for ozone? Or was that in 2024?
+
+In 2028? Let's skip.
+
+Another angle: The question might be specifically about the 1997 PM2.5 standard? No, that's old.
+
+But the wording "nonattainment areas had tribal lands remain at a lower classification after a state-requested reclassification" sounds like there might be exactly two areas, and they want them listed alphabetically.
+
+Let's recall in January 2021, EPA made final designations for the 2010 SO2 standard? That involved tribal lands?
+
+Actually, there was a 2015 SO2 designation round where some tribal lands were designated separately.
+
+But I think it's about ozone.
+
+Let's recall that in the 2015 ozone designations updated in 2023, there were tribal lands designated separately within some states. For example:
+- The Fort Berthold Indian Reservation in North Dakota was designated Marginal?
+- The Wind River Reservation in Wyoming?
+- The Flathead Reservation in Montana?
+
+But those are tribal lands with their own designations, not within state-requested reclassification.
+
+However, the question mentions "after a state-requested reclassification" - this sounds like the state requested that its portion be reclassified, but the tribal lands within the same geographic area were not part of that request, so they kept the old classification.
+
+Let's recall specific federal register language: "The State of X requested that the Y area be reclassified to Serious. The tribal lands within the area are not part of the state's request and therefore remain classified as Moderate."
+
+If I recall seeing such language for maybe "Louisville/Jefferson County, KY-IN"? Or "Cincinnati"?
+
+But I need be specific.
+
+Actually, in October 2028? No.
+
+Let's recall in April 2023, there might have been a notice about voluntary reclassifications for several areas, including:
+- The Baltimore, MD area?
+- The New York-Northern New Jersey-Long Island area?
+
+No, those were mandatory.
+
+Wait, there is a specific provision: A state may request that an area be bumped up if they determine they can't meet the attainment date. For example, in 2026, some states might do that for the 2015 ozone Moderate attainment date of 2024?
+
+Specifically, the Moderate attainment date for 2015 ozone is Aug 2, 2024? Or maybe 2025? Actually if designated Moderate in 2022, then attainment date is 6 years after promulgation? No, that's 2021. Hmm, I'm not correct.
+
+But regardless, some states might be requesting voluntary bump-up now (around 2024) for Moderate areas that anticipate failing the 2024 attainment date, to be bumped to Serious with attainment date 2027? Or 2028?
+
+In fact, in 2024, several states may have requested voluntary bump-ups to avoid mandatory sanctions? Let's recall news in late 2023 or 2024: Maybe Arizona requested voluntary bump-up for Phoenix?
+
+Wait, Phoenix-Mesa was designated Moderate in 2023? Actually Phoenix was designated Moderate in 2023? Or in 2028?
+
+This is getting too convoluted. Let's think about the answer format: "List the area names alphabetically, or state that none qualify." This sounds like the answer might indeed be "none qualify" if it's a trick question. But I shouldn't guess blindly.
+
+However, the question asks "Which nonattainment areas..." implying there is at least one. But they allow "or state that none qualify" as fallback.
+
+We need be accurate.
+
+Let's recall specific tribal lands within nonattainment areas that have different classifications listed in tables.
+
+For example, in the 2015 ozone designations, there is a table for tribal lands. Some tribal lands are in "Moderate" while surrounding state is "Serious"?
+
+One well-known case is the "Morongo Band of Mission Indians" in Southern California. The South Coast Air Basin is Extreme for ozone. The Morongo reservation is within Riverside County, but maybe it's designated separately?
+
+Actually in 2016, the Morongo Band requested and received a separate designation for their lands? Let's check mental: In 2015, the Morongo reservation was designated as "Marginal" or "Moderate"? Or maybe "Severe"?
+
+But the question mentions "state-requested reclassification" - California requested that some areas be bumped? The South Coast was bumped to Extreme in 2029? No.
+
+Let's recall in December 2023, California requested that t
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): Coachella Valley, Greater Connecticut
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): Coachella Valley, Greater Connecticut
+
+Where it shortcut: High model again matched the gold answer using the same two verbatim passages; no combination with the design-value or attainment-date material in either document was needed.Doc 3 Doc 5
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): Coachella Valley, Greater Connecticut
+
+Where it shortcut: High model reproduced the gold answer from the same single-sentence evidence in documents 3 and 5, confirming the question is answerable by keyword retrieval on 'tribal'/'Indian country'.Doc 3 Doc 5
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

@@ -1,0 +1,81 @@
+{
+  "question": "Judging by all the evidence the committee heard, which witnesses, if any, held or had held a role at VisitBritain? List them in any order.",
+  "number_of_asks": 1,
+  "gold_answer": "Anthony Pickles, Patricia Yates, Ian Edwards",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 1, witness list): the report lists every witness with a title. Two titles are VisitBritain posts. Anthony Pickles is \"Former Head of Tourism Affairs, VisitBritain\" (first component). Patricia Yates is \"Chief Executive, VisitBritain/VisitEngland\" (second component). Doc 6 prints the same title for Pickles and Doc 7 the same title for Yates, each in its own list of witnesses.\nStep 2. Source input (Doc 1, witness list): Ian Edwards is listed as \"Chief Executive, The Celtic Collection and ICC Wales\". His title shows no link to VisitBritain.\nStep 3. Source input (Doc 6, Q158): Anthony Pickles tells the committee that Ian Edwards, \"who you have heard from\", \"sits on the VisitBritain board\". A seat on its board is a role at VisitBritain, so Edwards belongs in the list (third component). Doc 1 says only that \"A Welsh representative sits on the VisitBritain board\" and names nobody.\nStep 4. Decoy (Doc 6, Q148): Annette Pritchard says she \"previously did work for the Wales Tourist Board\". That is a different body, so she is left out. No other title in Doc 1's witness list names VisitBritain.\nStep 5. Final answer (Doc 1 and Doc 6): Anthony Pickles, Patricia Yates, Ian Edwards.",
+  "answer_components": [
+    "Anthony Pickles",
+    "Patricia Yates",
+    "Ian Edwards"
+  ],
+  "evidence": [
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Anthony Pickles, Former Head of Tourism Affairs, VisitBritain"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "Anthony Pickles, Former Head of Tourism Affairs, VisitBritain"
+    },
+    {
+      "document_number": 1,
+      "component_number": 2,
+      "quote": "Patricia Yates, Chief Executive, VisitBritain/VisitEngland"
+    },
+    {
+      "document_number": 7,
+      "component_number": 2,
+      "quote": "Patricia Yates, Chief Executive, VisitBritain/VisitEngland"
+    },
+    {
+      "document_number": 1,
+      "component_number": 3,
+      "quote": "Ian Edwards, Chief Executive, The Celtic Collection and ICC Wales"
+    },
+    {
+      "document_number": 6,
+      "component_number": 3,
+      "quote": "We have Ian Edwards, who you have heard from, who sits on the VisitBritain board, so he is Wales’s voice on there."
+    },
+    {
+      "document_number": 1,
+      "component_number": 3,
+      "quote": "A Welsh representative sits on the VisitBritain board."
+    },
+    {
+      "document_number": 6,
+      "component_number": 3,
+      "quote": "I previously did work for the Wales Tourist Board"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        1,
+        7
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: Doc 1's witness list gives VisitBritain titles to Anthony Pickles and Patricia Yates only, and lists Ian Edwards as a hotel and convention-centre chief executive. His seat on VisitBritain's board appears only in Doc 6, in Pickles's answer. Titles alone give two names; the join adds Edwards."
+}

@@ -1,0 +1,89 @@
+{
+  "question": "Had the Commerce Commission's final decision come on its deadline for submissions, how many days later could the highest of its proposed caps first start while satisfying both Mastercard's minimum lead times and Westpac's timing requests?",
+  "number_of_asks": 1,
+  "gold_answer": "384 days",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 1, Executive summary): the Commission asked for submissions on its draft decision by 12pm on Monday 13 July 2026. In the question's case the final decision is announced that day.\n\nStep 2. Source input (Doc 1, Executive summary table and Chapter 3): the proposed caps are 0.50% and 0.90% for domestic commercial credit used in person and online, and 0.70% and 1.50% for foreign-issued commercial credit used in person and online. The highest, 1.50%, is the cap on foreign-issued cards used online.\n\nStep 3. Source input (Doc 10, Implementation Timing and response to question 8): Mastercard asks for a minimum of nine months for domestic rate changes and twelve months for cross-border changes, from the date of final announcement. It calls the earlier caps on foreign-issued cards the cross-border changes, so the longer minimum is the one for this cap.\n\nStep 4. Source input (Doc 14, end-of-year implementation section): Westpac asks for a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, and for a first-of-month effective date.\n\nStep 5. Application (Doc 1, Doc 10 and Doc 14): 12 months after 13 July 2026 is 13 July 2027. That is more than six months after the decision and later than 1 March 2027, but it is not the first of a month, so Westpac's last request moves the start to the next one, 1 August 2027.\n\nStep 6. Calculation (Doc 1 and Doc 14): July has 13 days up to the 13th and 18 after it, so its length in days is: 13 + 18 = 31\n\nStep 7. Calculation (Doc 1 and Doc 14): the year from 13 July 2026 to 13 July 2027 spans 12 months, and if each were as long as July it would hold: 12 × 31 = 372\n\nStep 8. Calculation (Doc 1 and Doc 14): September, November, April and June are each 1 day shorter than July and February 2027 is 3 days shorter: 1 + 1 + 3 + 1 + 1 = 7\n\nStep 9. Calculation (Doc 1 and Doc 14): days from 13 July 2026 to 13 July 2027: 372 - 7 = 365\n\nStep 10. Final answer (Doc 1, Doc 10 and Doc 14): that year, the 18 days left in July 2027 and the first day of August: 365 + 18 + 1 = 384",
+  "answer_components": [
+    "384 days"
+  ],
+  "evidence": [
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Please submit your views by 12pm on Monday 13 July 2026."
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Our draft decision is to apply a 0.70% cap to foreign-issued in-person commercial credit card interchange fees and 1.50% to foreign-issued online commercial credit card interchange fees."
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Our draft decision is to apply a 0.50% cap to domestic in-person commercial credit and 0.90% to domestic online commercial credit."
+    },
+    {
+      "document_number": 10,
+      "component_number": 1,
+      "quote": "A minimum of nine months is required for domestic rate changes and twelve months for cross-border changes, from the date of final announcement."
+    },
+    {
+      "document_number": 10,
+      "component_number": 1,
+      "quote": "The compressed timelines for the July 2025 domestic changes (effective 1 December 2025) and the May 2026 cross-border changes"
+    },
+    {
+      "document_number": 10,
+      "component_number": 1,
+      "quote": "It pre-dates both the December 2025 domestic interchange reductions on personal cards and the May 2026 caps on foreign-issued cards"
+    },
+    {
+      "document_number": 14,
+      "component_number": 1,
+      "quote": "Westpac considers that a minimum six-month implementation period, with changes taking effect from 1 March 2027 at the earliest, would better support orderly delivery, reduce customer disruption and maintain the stability of critical payments infrastructure."
+    },
+    {
+      "document_number": 14,
+      "component_number": 1,
+      "quote": "Additionally, any interchange changes should align with a first-of-month effective date."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        10
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        14
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    },
+    {
+      "trap": "Wrong jurisdiction or scope",
+      "how_a_careless_solver_fails": "Picks the wrong entity or section"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: stopping at Mastercard's twelve months in Doc 10, 13 July 2027, gives 365 days; Westpac's first-of-month request in Doc 14 makes it 384. Wrong jurisdiction or scope: Mastercard's nine-month domestic minimum, taken for the highest cap, which Doc 1 sets for foreign-issued cards, gives 292."
+}

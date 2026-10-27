@@ -1,0 +1,260 @@
+# D04 | docs/Financial-Literacy-Financial-Education-and-Cancer-Screening.txt
+
+Financial Literacy, Financial Education, and Cancer Screening Behavior: Evidence from Japan
+
+Although Japan has a well-established cancer screening program and has implemented several initiatives to increase screening rates, levels of cancer screening can be further improved.
+Based on a rational decision-making framework, this study examines the role of financial literacy and financial education, which measure peoples’ knowledge about investment and savings, respectively, in improving cancer screening rates in Japan.
+The main data were extracted from Osaka University’s Preference Parameters Study for 2011.
+The dependent variable was the number of cancer screenings while the two main independent variables were financial literacy and financial education.
+Ordered probit regression models were run to test the association between financial literacy, financial education, and the number of cancer screenings.
+The results showed a positive relationship between financial education and cancer screening behavior in Japan, while no significant association was observed between financial literacy and screening behavior.
+Furthermore, according to findings stratified by three age groups, the positive association between financial education and cancer screening behavior was particularly evident in 50- to 59-year-olds, while the effects of other demographic, socioeconomic, and risky health behavior variables were not consistent.
+It is imperative that implementation of more financial education programs is an effective intervention to encourage cancer screening behavior in Japanese populations.
+
+1. Introduction
+
+Although Japan has a well-established cancer screening program [1,2] with several initiatives to increase screening rates [3,4], the unexpected flattening trend in cancer screenings shows room for improvement [5].
+The mortality rates of the five cancers regulated under the national cancer screening guideline have shown little improvement [6].
+Therefore, ways to increase people’s attendance rates in cancer screening examinations and identifying factors associated with this behavior are worth careful consideration.
+Since the monetary costs of basic cancer screening are widely covered in Japan [7], participation in preventive cancer screening seems to depend more on people’s rational health behavior.
+In this study, we use financial literacy and financial education as proxies to observe cancer screening behavior from the rational decision-making perspective.
+We use financial literacy to measure financial knowledge from the viewpoint of investment while financial education concentrates on savings behavior.
+
+We consider that the lack of participation in preventive cancer screening can be explained from the perspective of an irrational choice framework and offer a solution based on rational decision-making abilities using previous studies that associated financial literacy and financial education with rational health behavior [8,9,10].
+Following Grossman’s health capital model [11,12], preventive cancer screening could be conceived as an investment in health capital, as one in every six deaths is caused by cancer [13].
+Therefore, rational people are likely to participate in cancer screening to reduce the risk of potential illness and to remain productive.
+However, previous studies have found that cognitive limitations might interfere with people’s intention to be screened for cancer [14,15], and the rationality of cancer examination behavior is partly affected by emotions and feelings [16,17].
+Being able to understand the value of health capital, financially literate people are likely to overcome cognitive limitations and become motivated for preventive cancer screening.
+Previous studies also provide evidence that financial literacy aids people in making rational choices about savings, finance, and investment [18,19], planning for retirement [20,21,22,23], and health behavior [8,9,10,24].
+Furthermore, financial literacy is associated with an improved cognitive performance and aids time-consistent decisions about current and future outcomes [25].
+
+Our study examines whether financial literacy and financial education are associated with preventive cancer screening in Japan.
+We hypothesize that financial literacy and financial education, which enable people to make rational decisions, increase the likelihood of participation in preventive cancer screening.
+As many cancers are asymptomatic in their early stages and the symptoms may not be visible until the end stage [26], the decision to not be screened for cancer early and regularly would be regarded as an irrational behavior.
+Previous studies that used financial literacy and financial education as proxies for rational decisions to show that they are associated with positive health behavior, support our hypothesis.
+To the best of our knowledge, no previous study has addressed the relationship between financial literacy, financial education, and cancer screening.
+Most of the articles focus on the cost-effectiveness aspect of cancer screening programs [27,28,29], while others focus on accessibility disparities between people with different levels of education and income [14,30,31,32], or exploring possible links between factors such as psychological distress [33], cancer stigma [15], and cancer screening perceptions.
+To fill this gap, we investigate cancer screening behavior from the perspective of rational decision-making framework using financial literacy and financial education as proxies for rationality and contribute to the literature in at least two ways.
+Firstly, not only is this the first study to examine the relationship between financial literacy, financial education, and cancer screening activity among the Japanese population, but our study also provides incremental evidence on the role of financial literacy and financial education as rational decision-making tools in influencing people’s cancer screening behavior.
+Secondly, our study recommends the development of sustainable and effective cancer screening policies that can ultimately improve cancer screening participation in Japan.
+
+## 2. Data and Methods
+
+2.1. Data
+
+Our study used data from the 2010 and 2011 waves of the Preference Parameters Study (PPS) of the Institute of Social and Economic Research at Osaka University, which was carried out annually over a period of 10 years, collecting prospective information of Japanese individuals on socioeconomic characteristics and preferences. We used the 2010 dataset to extract information on financial literacy and financial education as the main explanatory variables, while the 2011 wave was included to obtain data related to cancer screening behavior as a dependent variable and data on other control variables. Only the PPS survey in 2010 had questions on financial literacy and financial education.
+
+According to the most updated guidelines in Japan [1], those above 40 years of age are the main target participants; therefore, our sample only includes Japanese individuals who are 40 years old or older. The 2 datasets were merged using panel identification information from each respondent, involving 3403 people after the unmatched data were removed. We excluded 710 individuals under 40; thus, our final sample comprised 2693 responses, accounting for 54.58% of the total responses in the 2011 dataset (4943 observations).
+
+2.2. Variables
+
+The dependent variable was the number of cancer screenings; 1 question in the 2011 PPS dataset enquires about cancer screening behavior—“[Over the last 12 months] Have you had any cancer examinations?”—with 6 possible answers including stomach, lung, uterine, breast, colon, and other cancer examinations as well as a seventh response option of not having taken any cancer examination.
+We created the dependent variable of the number of cancer screenings—an ordinal variable that summed data from all types of cancer, other than breast and uterine cancers, which were excluded to prevent any effect of these gender-specific cancer types on the associations between variables.
+However, our data do not specify the type of cancer in “other cancer examinations”, which could include gender-specific cancers such as prostate cancer.
+We believe that this possible inclusion would not significantly affect the results of our study as only 6.05% of the respondents had chosen “other cancer examinations”, of which 4.7% were men.
+
+Our study consisted of two principal explanatory variables: financial literacy and financial education. The 2010 PPS dataset contains 3 questions to measure financial literacy following the methodology of Lusardi and Mitchell [34]. These questions measure respondents’ ability to understand the implications of interest rates, inflation, and risk diversification. Similar to studies that used the same questions [9,10,35,36,37,38,39], we adopted 1 as the score for every correct answer and 0 for an incorrect answer and averaged scores of the total 3 responses to obtain data measuring financial literacy levels.
+
+In terms of financial education, relevant data were extracted from the 2010 PPS question: “Did you receive any compulsory financial education when you were in high school?” We assigned a score of 1 to “yes” and 0 to “no” and “do not know.” In our study, one noticeable difference between the terms financial literacy and financial education study was that while the former tested financial knowledge from an investment point of view, the latter concentrated on savings behavior. Specifically, financial education has become a part of the Japanese primary education curriculum, delivering lessons on savings by organizing a bank campaign targeted at children [40,41]. Financial education has been shown to exert no impact on financial literacy among Japanese populations who had already received this type of teaching [42], rendering it reasonable to evaluate both terms.
+
+Other demographic and socioeconomic variables were gender, age, university degree, marital status, number of household members, having any children, employment status, household income, and household assets. Risky health behaviors included smoking, alcohol consumption, and frequent gambling. Other control variables were a myopic view of the future, happiness level, health anxiety, and poor health status. The definitions of all variables are summarized in Table 1.
+
+2.3. Descriptive Statistics
+
+Table 2 shows the description of main variables.
+The number of cancer screening tests undertaken by an average person was 1.1508 (range: 0–4).
+Average financial literacy was 0.62, while 17.56% of the sample received compulsory financial education during primary school years.
+Around 49.98% of the respondents were males, the average age was 55 (range: 40–77), and 25% respondents attained university education or higher.
+Nearly 87% were married, compared to only a minority of 4% divorced; each household had an average of 3 persons and 88% of the respondents had at least one child.
+The proportion of unemployed respondents was only 2%.
+Annual household income was an average of 6,523,023 Japanese yen, while the figure for household assets was 14,500,000 Japanese yen.
+Regarding risky health behavior, just under 22% of the subjects occasionally smoked or consumed more than one pack of cigarettes, while almost 48% drank alcohol.
+The percentage of people who gambled once a week or more frequently was almost 10%.
+While the majority of respondents (63.8%) felt happy with their current lives, 16.8% had a myopic view of the future.
+Although 43% felt anxious and had a great deal of concern about their health, only 2% self-described their health conditions as poor.
+
+Table 3, Table 4, Table 5 and Table 6 show remarkable differences between cancer screening behavior based on various characteristics. Table 3 highlights the discrepancy of cancer screening participation among three main age categories. Overall, just under half of the surveyed people did not undergo cancer screening in 2011, while the proportion of cancer screening participants increased steadily with age. Thus, age-related factors can exert a substantial impact on cancer screening behavior. The highest percentage of screened respondents were in the 50–59 group with 3 tests, while the lowest were in the age cohort of 40–49 with 4 tests.
+
+Table 4 shows marked differences between cancer screening behavior based on the three main demographic characteristics. The percentage of male respondents taking cancer screening tests was substantially higher than that of their female counterparts, and the highest figures for both genders were seen in those taking 3 cancer tests, at 18.34% for women and 20.73% for men. Likewise, a dramatic gap was observed between people at different educational levels, with higher education levels corresponding to more screening tests taken, except for those getting four tests. Of those who did not undergo cancer screening, more than half (51.43%) obtained lower than university qualifications. A similar and significant difference was observed in the unemployment variable.
+
+ijerph-19-04457-t004_Table 4
+
+Distribution of the number of cancer screenings by demographic characteristics.
+
+|Number of Cancer Screenings|Gender|Education|Unemployed|Total||||
+|---|---|---|---|---|---|---|---|
+|Female|Male|Below University Degree|Above University Degree|No|Yes|||
+|0|723|588|1043|268|1276|35|1311|
+||53.67%|43.68%|51.43%|40.3%|48.37%|63.64%|48.68%|
+|1|173|192|267|98|357|8|365|
+||12.84%|14.26%|13.17%|14.74%|13.53%|14.55%|13.55%|
+|2|187|217|285|119|397|7|404|
+||13.88%|16.12%|14.05%|17.89%|15.05%|12.73%|15%|
+|3|247|279|372|154|523|3|526|
+||18.34%|20.73%|18.34%|23.16%|19.83%|5.45%|19.53%|
+|4|17|70|61|26|85|2|87|
+||1.26%|5.2%|3.01%|3.91%|3.22%|3.64%|3.23%|
+|Total|1347|1346|2028|665|2638|55|2693|
+||100%|100%|100%|100%|100%|100%|100%|
+|Mean difference|t = 5.7938 ***|t = −4.7235 ***|t = 2.5508 **|||||
+
+Note: *** p < 0.01, ** p < 0.05.
+
+Dramatic differences between cancer screening behavior and the two major risky health habits, smoking and alcohol consumption, are illustrated in Table 5. Specifically, the proportion of screened smokers was lower than that of screened nonsmokers at the 1% significance level, regardless of the number of screenings. On the contrary, a higher probability of cancer screening among drinkers was observed in those taking more than two cancer tests. However, we did not find a sizeable disparity from the perspective of frequent gamblers.
+
+ijerph-19-04457-t005_Table 5
+
+Distribution of the number of cancer screenings by risky health behavior.
+
+|Number of Cancer Screenings|Current Smoker|Current Drinker|Frequent Gambler|Total||||
+|---|---|---|---|---|---|---|---|
+|No|Yes|No|Yes|No|Yes|||
+|0|981|330|716|595|1180|131|1311|
+||46.49%|56.6%|50.78%|46.38%|48.58%|49.62%|48.68%|
+|1|289|76|204|161|324|41|365|
+||13.7%|13.04%|14.47%|12.55%|13.34%|15.53%|13.55%|
+|2|327|77|204|200|361|43|404|
+||15.5%|13.21%|14.47%|15.59%|14.86%|16.29%|15%|
+|3|444|82|253|273|488|38|526|
+||21.04%|14.07%|17.94%|21.28%|20.09%|14.39%|19.53%|
+|4|69|18|33|54|76|11|87|
+||3.27%|3.09%|2.34%|4.21%|3.13%|4.17%|3.23%|
+|Total|2110|583|1410|1283|2429|264|2693|
+||100%|100%|100%|100%|100%|100%|100%|
+|Mean difference|t = 4.4427 ***|t = −3.5599 **|t = 0.9381|||||
+
+Note: *** p < 0.01, ** p < 0.05.
+
+Cancer screening behavior varied among people with different financial literacy scores (Table 6). The proportion of those with higher financial literacy (scores greater than 0.5) accessing cancer screening was considerably greater than that of the remaining group at the 1% significance level. Similarly, 22.2% of people who received financial education in primary schools participated in 3 cancer screening tests, which was much higher than the figure for those who were not financially educated.
+
+ijerph-19-04457-t006_Table 6
+
+Distribution of the number of cancer screenings by financial literacy and financial education levels.
+
+|Number of Cancer Screenings|Financial Literacy|Financial Education|Total|||
+|---|---|---|---|---|---|
+|Score < 0.5|Score ≥ 0.5|No|Yes|||
+|0|470|841|1104|207|1311|
+||52.93%|46.59%|49.73%|43.76%|48.68%|
+|1|110|255|305|60|365|
+||12.39%|14.13%|13.74%|12.68%|13.55%|
+|2|132|272|325|79|404|
+||14.86%|15.07%|14.64%|16.7%|15%|
+|3|159|367|421|105|526|
+||17.91%|20.33%|18.96%|22.2%|19.53%|
+|4|17|70|65|22|87|
+||1.91%|3.88%|2.93%|4.65%|3.23%|
+|Total|888|1805|2220|473|2693|
+||100%|100%|100%|100%|100%|
+|Mean difference|t = −3.2526 ***|t = −2.9948 **||||
+
+Note: *** p < 0.01, ** p < 0.05.
+
+2.4. Methodology
+
+The effects of financial literacy and financial education on cancer screening behavior, using the ordered probit regression method, are estimated separately in Equations (1) and (2), respectively. This was to accurately ascertain the sign, significance, and magnitude at which each of these variables was related to preventive cancer screening. Finally, financial literacy and financial education were included in the model to examine the combined effects of the variables in Equation (3).
+
+Y i = f ( F L i , X i , ε i )
+
+Y i = f ( F E i , X i , ε i ) ,
+
+Y i = f ( F L i , F E i , X i , ε i ) ,
+
+where Y i is the preventive cancer screening behavior of the i th respondent, F L represents the score on the financial questions measuring financial literacy, F E is the financial education status received at school, X is a vector of individual respondents’ characteristics, and ε is the error term.
+
+A study by Watanapongvanich et al. [9] suggests that respondents with a higher education status are more likely to have better financial knowledge, higher income, and more assets. Thus, independent variables such as financial literacy, university degree, household income, and household assets might be correlated. Therefore, a variance inflation test (VIF test) was performed to examine the correlation between the variables, the results of which are available upon request. Our VIF value was below 10; therefore, our study did not have multicollinearity issues.
+
+To examine the determinants of cancer screening behavior, the following full specifications were considered, which were derived from Equations (1)–(3), respectively:
+
+N u m b e r o f c a n c e r s c r e e n i n g s i = β 0 + β 1 f i n a n c i a l l i t e r a c y i + β 2 m a l e i + β 3 a g e i + β 4 u n i v e r s i t y d e g r e e i + β 5 m a r r i a g e i + β 6 d i v o r c e i + β 7 h o u s e h o l d s i z e i + β 8 c h i l d r e n i + β 9 u n e m p l o y e d i + β 10 log o f h o u s e h o l d i n c o m e i + β 11 log o f h o u s e h o l d a s s e t s i + β 12 c u r r e n t s m o k e r i + β 13 c u r r e n t d r i n k e r i + β 14 f r e q u e n t g a m b l e r s i + β 15 m y o p i c v i e w o f t h e f u t u r e i + β 16 c u r r e n t l e v e l o f t h e h a p p i n e s s i + β 17 a n x i e t y a b o u t h e a l t h i + β 18 p o o r h e a l t h s t a t u s i + ε i
+
+N u m b e r o f c a n c e r s c r e e n i n g s i = β 0 + β 1 f i n a n c i a l e d u c a t i o n i + β 2 m a l e i + β 3 a g e i + β 4 u n i v e r s i t y d e g r e e i + β 5 m a r r i a g e i + β 6 d i v o r c e i + β 7 h o u s e h o l d s i z e i + β 8 c h i l d r e n i + β 9 u n e m p l o y e d i + β 10 log o f h o u s e h o l d i n c o m e i + β 11 log o f h o u s e h o l d a s s e t s i + β 12 c u r r e n t s m o k e r i + β 13 c u r r e n t d r i n k e r i + β 14 f r e q u e n t g a m b l e r s i + β 15 m y o p i c v i e w o f t h e f u t u r e i + β 16 c u r r e n t l e v e l o f t h e h a p p i n e s s i + β 17 a n x i e t y a b o u t h e a l t h i + β 18 p o o r h e a l t h s t a t u s i + ε i
+
+N u m b e r o f c a n c e r s c r e e n i n g s i = β 0 + β 1 f i n a n c i a l l i t e r a c y i + β 2 f i n a n c i a l e d u c a t i o n i + β 3 m a l e i + β 4 a g e i + β 5 u n i v e r s i t y d e g r e e i + β 6 m a r r i a g e i + β 7 d i v o r c e i + β 8 h o u s e h o l d s i z e i + β 9 c h i l d r e n i + β 10 u n e m p l o y e d i + β 11 log o f h o u s e h o l d i n c o m e i + β 12 log o f h o u s e h o l d a s s e t s i + β 13 c u r r e n t s m o k e r i + β 14 c u r r e n t d r i n k e r i + β 15 f r e q u e n t g a m b l e r s i + β 16 m y o p i c v i e w o f t h e f u t u r e i + β 17 c u r r e n t l e v e l o f t h e h a p p i n e s s i + β 18 a n x i e t y a b o u t h e a l t h i + β 19 p o o r h e a l t h s t a t u s i + ε i
+
+where N u m b e r o f c a n c e r s c r e e n i n g s i is the dependent variable, illustrating the number of cancer screening tests undertaken. It is an ordinal variable within the range of 0 to 4, and its value was assigned by combining a simple count of the number of different cancer-type screening tests (breast and uterine cancers excluded). Therefore, we ran ordered probit models for N u m b e r o f c a n c e r s c r e e n i n g s .
+
+3. Results
+
+The results of regression models showing the association of the number of cancer screenings with financial literacy, financial education, and both are reported in Table 7 and Table 8. Model 1 provides estimates for the relationship between financial literacy, Model 2 for financial education, and Model 3 for both. Model 1.1 comprises the main explanatory variable(s) and demographic characteristics. Model 1.2 includes the variables in Model 1.1 and other risky health behavior variables. Model 1.3 includes Model 1.2 with an additional myopic view of the future. Model 1.4 supplements three more variables to Model 1.3, namely “current level of happiness,” “anxiety about health,” and “poor health status.” The same controlled variables are included in Models 2.1–2.4 and Models 3.1–3.4.
+
+Table 7 shows that financial literacy had a positive but insignificant impact on the number of cancer screenings across all models.
+Financial education had a positive and significant impact on the number of cancer screenings in all models at the 10% significance level.
+Table 8, which included both explanatory variables, shows no differences overall in the significance of the estimated parameters compared to the results in Table 7.
+Thus, respondents with a high level of financial education were more likely to participate in multiple cancer screenings, but we found no such relationship in the case of financial literacy.
+The signs and significance levels of all control variables were relatively consistent among all models and specifications (Table 7 and Table 8).
+We found that being male, older, having at least one child, higher levels of household income and household assets, and higher subjective feelings of happiness had a positive and significant relationship with the number of cancer screenings, while smoking was negatively related.
+
+Table 9 shows the association of the number of cancer screenings with both financial literacy and financial education, according to 3 age groups (40–49, 50–59, and >60). Model 3.4.1 describes the results of the youngest age group (40–49), followed by Model 3.4.2 for those aged 50–59 and Model 3.4.3 for the oldest age group (60 plus).
+
+As shown in Table 9, the effects of other control variables were not robust and consistent among the three age cohorts. Financial education had a statistically significant impact on the number of cancer screenings only in the 50–59 age group. Financial literacy did not have any effect on the behavior of interest, regardless of age category.
+
+4. Discussion
+
+We provide evidence that financial education is positively associated with cancer screening behavior, implying that financially educated people are more likely to participate in cancer screening.
+This is consistent with Grossman’s human capital model [11].
+Specifically, engaging in cancer screening exhibits demand for medical care, a heavy investment in health capital, and a catalyst for productivity enhancement and utility maximization.
+While the role of financial education in savings, investment, and economic growth is already evident [43], we provide incremental evidence that financially educated people would respond rationally to cancer screening, as this action would take them closer to meeting basic demand for health care and achieving good health.
+However, we did not find any significant association between financial literacy and preventive cancer screening.
+This is probably because financial literacy, as measured in our study, focused more on investment aspects, while financial education emphasized saving behavior.
+Many studies have confirmed financial education as a proxy for rationality from the perspective of enhanced saving behavior [42,44,45], which means that financially educated people are less likely to procrastinate their savings plans [46].
+Since procrastination is one of the reasons for the lack of screening [47,48], it is justified that financially educated people are more likely to participate in cancer screening.
+This provides clear evidence on the effect of financial education as a constructive tool to strengthen rational decision-making ability to avoid delaying cancer screening tests.
+Furthermore, Lentz et al. [49] reinforce the view that cancer and its accompanying treatment can result in the depletion of savings, which would also be improved with financial education programs [45].
+Our study also showed that the association between financial education and cancer screening was the strongest in the 50–59 age cohort.
+This phenomenon could be explained by the fact that the influence of financial education is largely observed when it is provided at a teachable moment [50] and that the influence of financial education on specific behavior decays over time [51].
+We would argue that financial education for those at targeted age groups of cancer screening, especially 50- to 59-year-olds, plays a key role in improving preventive cancer screening in Japan.
+
+In terms of demographic variables, our study found that men have a higher tendency to participate in cancer screening and take more cancer screening tests than women.
+The results of our study are similar to those of Davis et al. [52], who concluded that men show a greater willingness toward cancer screening under the condition of being elaborately consulted about the tests.
+Other studies also found that men are more likely to attend cancer screening than women because of their higher privileges of socioeconomic backgrounds and lower barriers to screening facilities [53,54].
+In fact, in the Japanese society, men play a dominant role in the workforce, compared to the opposite sex, which provides Japanese males with the opportunity to easily access cancer screening services during mandatory health-checkup periods at the workplace.
+In this case, the discrepancy in the tendency to reach cancer screening between two genders can be attributed to healthcare accessibility, rather than health consciousness.
+However, a meta-analysis revealed a lower uptake of health screening in men for prostate cancer [55], which is a compelling reason for the mixed evidence on men’s adherence to cancer screening.
+Our study showed that the older people become, the greater the chance they will attend cancer screening tests.
+This is understandable because older people run a higher risk of contracting noncommunicable diseases, especially cancer, which implies the necessity of screening for cancer.
+This result is consistent with findings from Kressin et al. [56] and Starker and Saß [57], which indicate a higher willingness to undergo cancer screening and higher participation rates along with increasing age, respectively.
+Marriage and divorce were not associated with cancer screening behavior.
+Although this insignificant association does not align with other studies that reveal a higher tendency of cancer screening participation among married people [58,59], the difference may be due to measurement differences; thus, a future prospective study to test this association is warranted.
+Regarding the variables “household size” and “child,” while no significant and consistent results were recorded, we found a positive link between having children and cancer screening only among 50- to 59-year-olds.
+This is in contrast to the results of another study [60], which was only applicable to families with children under 18.
+In fact, with the introduction of the 21 National Campaign for Healthy Parents since 2000 [61], Japanese parents may be more willing to spend time and money on their health, particularly for screening for cancer.
+
+Socioeconomic variables included in our study were educational level, unemployment, household income, and household assets.
+Generally, previous studies have shown that individuals with a high SES are more inclined to be screened than those with a low SES [62,63].
+For educational levels, we found that university qualification only had a significantly positive relationship with cancer screening among 40- to 49-year-olds, while a negative association was even seen in those over 60 years of age.
+This inconsistency is supported by other studies by Kim et al. [64] and Son [65], who found no association between educational levels and cancer screening in Korea.
+This is probably because opportunities for screening services are widely available in different health settings in Japan, and each resident can easily take these tests under the coverage of either national health insurance or employment-based insurance systems.
+Consistent with [62], a significant negative relationship between unemployment and cancer screening behavior was seen, particularly among 40- to 49-year-olds.
+In Japan, the issue of cancer screening is closely related to work [66], where screening services are within the reach of workers in medium and large corporations, while accessibility is less for those working in small companies and jobless people.
+Combined with dramatically higher unemployment rates in the age group 40–49 compared to those aged 50 years and older [67], joblessness in this age range undoubtedly has a much larger effect on the relationship with cancer screening behavior.
+For household income and total assets, we find robust and consistent positive significance between these variables and cancer screening in the three main age groups.
+This is in agreement with other studies [58,59,62,68], which showed higher rates of cancer screening among households with higher incomes.
+
+Smoking and alcohol consumption were the two risky health behaviors included in this study. While alcohol consumption was not related to cancer screening, smoking was negatively related. This is consistent with various findings by Kim et al. [69], Kim et al. [64], and Martires et al. [70] that smokers are less likely to participate in screening programs, perhaps because they are not willing to ask for a consultation for health prevention [70] or they are already aware of many adverse health events when smoking and are afraid of receiving negative results [71]. Meanwhile, no significant differences were observed in terms of alcohol consumption reported in another study [69].
+
+Finally, we found no significant effect of frequent gambling, a myopic view of the future, anxiety about health, or poor health status on cancer screening behavior. These findings are consistent with those of previous studies on the inconsistent and insignificant association between cancer screening and health anxiety [72,73] and poor health status [64,74,75]. We reported a positive association between the feeling of happiness and cancer screening behavior, particularly significant among the age group of 40–49-year-olds. This is supported by Goel et al. [76], who claimed that those with less satisfaction with life may be more common among those with lower socioeconomic status, thus being more associated with unwillingness to check for health screening considering the high cost of healthcare utilization later on [77,78].
+
+This study had several limitations.
+Firstly, although we utilized the PPS dataset, which is a panel survey from 2003 to 2013, we could only analyze the 2011 wave, as it provided information on the number of cancer screening tests taken within a year.
+This study does not provide longitudinal evidence on the association between financial education and preventive cancer screening, which means that the causality of the partial relationship reported from our results has room for improvement.
+Therefore, future prospective studies should be conducted to establish this relationship.
+Secondly, our study does not consider breast and uterine cancer screening, as these are gender-specific screening programs, and this factor may have become a confounding factor in the overall association.
+Thus, the evaluation of the relationship between financial literacy, financial education, and cancer screening behavior among women is needed in the future.
+Third, our measurement of financial literacy was restricted to three questions, while financial education was assessed using only one question.
+While alternative measurements of financial literacy and financial education are available, a large body of related studies adopted the same methodology as that used in our study [8,9,10].
+
+5. Conclusions
+
+Despite several initiatives, cancer screening rates are still low in Japan and have scope for improvement.
+We observed cancer screening behavior from the viewpoint of a rational decision-making framework and hypothesized that financial literacy and financial education are positively related to cancer screening.
+While cancer screening was positively associated with financial education, we found no association between financial literacy and cancer screening.
+Our results imply that financial education is likely to enable people to behave rationally and help them to understand the value of preventive cancer screening, which ultimately serves as an investment in health capital.
+The results have important implications for raising awareness of Japanese populations to have cancers screened.
+In addition to conventional approaches to encourage people to participate in cancer screening, such as sending vouchers or organizing health educational programs related to the benefits of health screening, it is worth considering intervening the issue from the perspective of rationality.
+When people acquire the ability to make rational behavioral decisions, there is a greater chance of recognizing the value of cancer screening as a sustainable investment in health capital.
+Thus, policymakers could consider promoting financial education campaigns nationwide as an alternative measure to enhance cancer screening participation.
+Moreover, a financial education program could be implemented at the school level to motivate students to make rational health decisions such as preventive cancer screening at the later stage of their life.
+Future studies in this field should be directed toward providing longitudinal evidence on the relationship between financial education and preventive cancer screening behavior to provide more concrete evidence and policy implications.
+
+-----

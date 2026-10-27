@@ -1,0 +1,50 @@
+{
+  "bundle": "aq-02086",
+  "corpus_sha256": {
+    "docs/A-Decent-Homes-Standard-in-the-private-rented-sector.txt": "ca2a226eba28a01f4ca3aadbcaf4029fb91eccc13cb9c346281f839bb0674a73",
+    "docs/Awaabs-Law-consultation-on-timescales-for-repairs-in-the.txt": "defb89eb233fd487ea9716458a1dd2018c967bafdcf9c27dcc9a80bbf9898d63",
+    "docs/Awaabs-Law-consultation-stage-impact-assessment.txt": "c3c6f068b2e19cf84be4dfac48114cb4472165761e533e74af39f487b8a1ed45",
+    "docs/Awaabs-Law-government-response.txt": "44ed077b301614a8f8599ea5c53c95cb84beff1a64f91c71cb90e967cd3b0c2e",
+    "docs/Response-to-the-consultation-on-a-Decent-Homes-Standard-in.txt": "eac0d865b4243f66c9ece4409ca6c1cb3fd871e8558b267ed6d40c14599a16cc",
+    "text/D01.txt": "95381493be64680662ea5402543b74beefeed200d8ea40c11167d1ecdc25ff03",
+    "text/D02.txt": "06bfa6971a168b5f5ad40eaf9248ef75e8808c7bfe0db88284e64403d9af2045",
+    "text/D03.txt": "1b4913d7c3fdc8c1de4718752fe686b2dbb92c3057417622ff03f1b255e9a37a",
+    "text/D04.txt": "82ad9d9e199d59db0bcef35bf172cd20220b33818e7531fc778abaa745f2e904",
+    "text/D05.txt": "d5a39f70e759af3ea0335b9ccb6fff1971216ed04460ed916ab9f1ea3fb4d77f",
+    "text/manifest.json": "469940ffc2a21ff33866da8985c6df6bf98d5c3aacec2f7653138307df889677"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "8b900c797fad075218d72bb78ff23c8c1b8926c300b3d54f245fc3c45bb1bc51",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "list",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D02, D04",
+    "id": "q04",
+    "levers": "Match, then exclude; Scatter the pieces",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "h3b",
+    "status": "draft",
+    "tags": "Cross-document join; Conditional filter; Aggregation"
+  },
+  "question_id": "q04",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "\"Entry by intruders\", \"Domestic hygiene, pests and refuse\"",
+    "components": "- c1: Entry by intruders\n- c2: Domestic hygiene, pests and refuse",
+    "evidence": "- D02 (L965, annex example of significant risk) [c1]: \"Example of hazard posing a significant risk to residents (entry by intruders)\"\n- D02 (L967, annex example) [c1]: \"A resident has reported that one of their external windows is faulty, and whilst it can be secured for the moment, they suspect the handle will snap off and prevent them from being able to lock the window.\"\n- D04 (L613, Annex A Phase 3 row) [c1]: \"Volatile organic compounds Entry by intruders Lighting Noise Water supply\"\n- D02 (L957, annex example of significant risk) [c2]: \"Example of hazard posing a significant risk to residents(Domestic hygiene, pests and refuse)\"\n- D02 (L959, annex example) [c2]: \"A social housing resident has reported seeing mice or rats in their property that they believe are entering the property from the external wall in their kitchen.\"\n- D04 (L612, Annex A Phase 2 row) [c2]: \"Structural collapse and falling elements Domestic hygiene, pests and refuse Food safety\"\n- D04 (L176, first phase) [c1, c2]: \"From 27 October 2025, social landlords will have to investigate and take action on all emergency hazards as soon as reasonably practicable and within no longer than 24 hours.\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: same evidence relationship as q02 (dropped), asked at the hazard-type level. q02 rev 0 used this unit (\"Which hazards\") and was form-blocked because its gold named scenarios while both form solvers named types; one of them added water supply (the emergency decoy), the other was right in substance. q02 rev 1's instance-level ask was measured too easy. q04 asks for types explicitly, so the type-phrased correct answer matches the gold. One-time test of this framing; if it is too easy, the family is retired. Target medium (user, 2026-10-08). Platform result pending.\n- Dependency plan: Doc 1 Annex B L901-987 (classes in headings, HHSRS type in brackets); Doc 3 L64, L176-180 and Annex A L610-613.\n- Universe: the six annexed emergency or significant-risk examples. Damp and mould: 1.1 emergency, 1.2 significant, both Phase 1 -> type excluded. Entry by intruders: 2.1(a) emergency (Phase 1), 2.2(b) significant (2027) -> included. Water supply: 2.1(b) emergency (Phase 1); 2.3(a) is routine, outside the set -> excluded. Domestic hygiene, pests and refuse: 2.2(a) significant (2026) -> included. Falling on stairs: only 2.3(b), routine -> outside the set. Unannexed examples (Doc 1 L98, L100, L102) are outside \"the consultation's annex\".\n- Necessity: D02 (Doc 1) is the only source of the examples and their classes; Doc 2 L305 only points to the consultation's annex. D04 (Doc 3) is the only source of the phasing; Docs 1 and 2 propose all HHSRS hazards at once. Risk: a strong model may recall Phase 1's scope in the platform's document check.\n- Selected-lever checks: Match, then exclude: mapping types to phases without the all-emergency rule adds water supply (three types, as one q02 rev 0 form solver did); treating entry by intruders as covered because its emergency example was covered drops it (one type). Proposal scope (Doc 1) gives none.\n- Targeted failure modes: Failure mode 1 (Wrong jurisdiction or scope) gives entry by intruders, water supply, and domestic hygiene, pests and refuse (measured once: q02 rev 0 form solver). Failure mode 2 (Superseded date or version: Doc 1 L55/L425 propose all 29 hazards at once) gives none. Considered and not declared: dropping entry by intruders (one type) as a separate mode, to stay within the 50-word reason.\n- Calculation verification: not applicable (classification); universe checked line by line against Doc 1 L901-987 and Doc 3 L610-613 on 2026-10-08.\n- Semantic/ID/overview probes: overviews mention neither the annex examples nor the phase lists by type. Shortest route: annex headings and types (Doc 1), Phase 1 rule and phase lists (Doc 3), per-type check.\n- Precision/readings: \"emergency or significant-risk example in the ... annex\" uses the annex's own classes, so Doc 3's later definitions do not reclassify the window (L971: \"This does not constitute an emergency situation\"). \"Missed\" means not covered when the first phase began (27 October 2025).\n- Completeness: full corpus, no gaps (notes/intake.json).\n- Style/set review: 23 words, no em dashes. Shares its evidence with q02 (dropped, never submitted); no other active question uses Doc 1's annex.\n- Warnings answered: pending preflight.",
+    "necessary documents": "- D02: Answer component\n- D04: Answer component",
+    "platform validation": "",
+    "question": "Which hazard types had an emergency or significant-risk example in the Awaab's Law consultation's annex that the law's first phase missed? Any order.",
+    "reasoning": "Step 1. Source fact (Doc 1, annex of example hazards): the annex classes as emergencies widespread damp and mould with a child struggling to breathe, a broken front door lock that leaves the home insecure (entry by intruders) and a total loss of water supply (water supply). It classes as significant risks damp and mould in two rooms with an immunosuppressed occupant, mice or rats entering through the kitchen's external wall (domestic hygiene, pests and refuse) and a faulty external window whose handle may snap (entry by intruders). Its remaining examples are routine and would not trigger Awaab's Law.\n\nStep 2. Source fact (Doc 3, phasing and Annex A): from 27 October 2025, in the first phase, Awaab's Law covers damp and mould hazards that present a significant risk and all emergency hazards. Significant hazards of the domestic hygiene, pests and refuse type are added in 2026; entry by intruders and water supply are added in 2027.\n\nStep 3. Application (Steps 1 and 2; Doc 1 and Doc 3): damp and mould had no missed example, since both of its examples were covered from the first phase. Decoy: water supply had none either. Its only emergency or significant-risk example, the lost water supply, is an emergency and so was covered from the first phase, although the type joins for significant cases only in 2027.\n\nStep 4. Application (Steps 1 and 2; Doc 1 and Doc 3): entry by intruders had a missed example, the faulty window handle (significant risk, added in 2027), even though its broken front door lock example was an emergency and covered. Domestic hygiene, pests and refuse had a missed example, the rodents (significant risk, added in 2026). These are the two hazard types.",
+    "targeted failure modes": "### Failure mode 1\nTrap: Wrong jurisdiction or scope\nHow a careless solver fails: Wrong members in a list\n\n### Failure mode 2\nTrap: Superseded date or version\nHow a careless solver fails: Misapplies a rule or premise\n\nWhy these are traps: Doc 1's water-supply example is an emergency, which Doc 3's first phase covers, so adding water supply gives three types. Entry by intruders stays: its window example is significant. Doc 1 proposed covering all hazards at once, giving none. Gold: entry by intruders and domestic hygiene."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "ac7582aa7207872459660aa34f55eca91592fc432f6a8a6d968626c49c17bd55"
+}

@@ -1,0 +1,101 @@
+# Feedback index
+
+Keep concise rows linking raw returns, current fixes and status. Raw platform words stay in
+the linked artifacts/feedback notes; this index does not replace exact-content records.
+Never edit submitted/accepted question files to maintain it.
+
+## Active issues
+
+Triage each exact tested version once. Key by bundle/question + platform version + issue;
+record revision/fingerprint when established. Distinguish platform observations from the
+author's inference. Categories: ambiguity, necessity, unsupported gold, form, difficulty,
+identity. One mechanism per row is enough; use short phrases and links, not essays.
+
+| Issue id / bundle / question | Tested platform version / rev / fingerprint | Category / mechanism | Raw feedback links / platform observation | Current version / author comparison or fix link | Status / next action |
+| --- | --- | --- | --- | --- | --- |
+| P1 / aq-02631 / q01 | difficulty Run 1, Version 45cf69, Oct 10, 2026, 10:37 AM; rev 0 (c288004c..., bound by verbatim question and gold; ticks and reasoning not shown in the capture) | difficulty / edition fixed by a procedural event the question names; the wrong version gives zero | [verdicts/AQ-02631_difficulty_2026-10-10_1045.txt](../verdicts/AQ-02631_difficulty_2026-10-10_1045.txt): "Too easy", Low 5/5; closed-book missed. Coach says solvers used whichever list they retrieved first; all five traces dated the event and chose Doc 6 on purpose | none: naming the version makes it easier, removing the event leaves no rule to choose (questions/q01.md Feedback log) | historical: q01 dropped, hooks h1/h2 closed |
+| P2 / aq-02631 / q02 (sketch i11) | form quick test 2026-10-10; wording taken as q02 rev 0 (a6307097..., assumed, panel not pasted) | difficulty / derived cap weight with the method and eligibility test named in the question | user chat: "q02, i02, i03 too easy for quick test" (questions/q02.md Feedback log) | rev 1 (bb40ae5c...): both cues removed, "under the strategy as Nasdaq filed it"; gold and documents unchanged | repaired/platform pending: quick-test rev 1; if too easy again, close h12 |
+| P3 / aq-02631 / i02 | form quick test 2026-10-10; sketch wording as handed over ("... began ..."), answer "2.5 times" (panel not pasted) | difficulty / same edition choice as q01 on the launch minimum | same user message | none | historical: dropped with h2 |
+| P4 / aq-02631 / i03 | form quick test 2026-10-10; sketch wording as handed over, answer "31 days" (panel not pasted) | difficulty / date gap whose date sits in the twin order | same user message | none | historical: dropped, h11 closed |
+| P5 / aq-02631 / q03 (sketch i21) | difficulty Run 2, Version 45cf7c, Oct 10, 2026, 12:05 PM; rev 0 (0bcf30b3..., verbatim question and gold) | difficulty / rule applied to a date printed only in an unrelated filing | [verdicts/AQ-02631_difficulty_2026-10-10_1309.txt](../verdicts/AQ-02631_difficulty_2026-10-10_1309.txt): "In band — Easy tier", Low 2/5; closed-book missed; both documents needed. All five low attempts had the reasoning; three answered March 17, 2025 from memory instead of Doc 6's March 18, 2025 | none: no step in either run defeats an attempt that reads the documents (questions/q03.md Feedback log) | resolved by observed platform result: Easy pass, below target; user reports no Easy slot |
+
+Statuses may be unresolved identity, open, repaired/platform pending, resolved by observed
+platform result, historical, or redesign. A local repair is not a platform pass. Preserve
+prior raw feedback and fixes through links when updating a row.
+
+- Re-sent screenshots of the same version/issue link to the same row, with no new failure or
+  return count. Compare the tested content with the current draft before changing it.
+- Unknown versions get distinct receipt ids and stay unresolved. Do not group unrelated
+  returns under a shared `unknown` key; merge only with evidence of the same tested version
+  and issue, or an identical re-sent artifact. Never infer a current fingerprint from a qNN.
+- Make one focused repair for a mechanism. If the same failure is demonstrated on that
+  repaired exact version, redesign the hook; stale/duplicate/unknown feedback does not show
+  recurrence. No automatic local model validation follows intake or repair.
+
+## Next five newly promoted candidates
+
+Use one owner index for the five-candidate trial, including if it spans bundles; link it from
+other bundle sessions. Add each newly promoted candidate once. Resume/revision keeps its row;
+a genuinely new hook promoted as a new candidate gets a new row. Do not enroll old candidates
+retrospectively or reset the count when changing bundles. Stop enrolling after five.
+
+- Trial owner index / start: [workspace owner](../../../notes/feedback-index.md); start recorded in the shared ledger
+- Candidate rows used: aq-02631 is not enrolled. The workspace trial's five slots were already taken
+  (aq-01960 i01 and i02, aq-02028 i01, aq-01937 i14 and i15) when this bundle started on 2026-10-10.
+- Timing for aq-02631 i01 (unpromoted work in the shared ledger): sketch interval e4ad7f90... ran
+  2026-10-10 08:27-11:55 UTC but spans a cut-off turn and an idle wait, so it overstates active work and
+  cannot be discarded after the stop; treat i01's timing as partial. Draft interval 866a7027... 11:55-11:58 UTC.
+  Token usage: not reported, unknown.
+
+| Slot / bundle / candidate | Promoted date / question link | Actual authoring minutes / timing coverage | Reported tokens / coverage | Distinct platform attempts | Revision rounds | Ambiguity / necessity returns | Observed acceptance / raw link |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+
+Record actual active candidate authoring/revision minutes as work happens, including any
+already timed sketch work; exclude idle/platform waiting. Keep brief dated increments in the
+minutes cell or a linked session note and mark coverage complete or partial/unknown. Never
+estimate missed time afterward. A promotion does not make unrecorded earlier work known.
+Revision rounds count distinct edits after first promotion, not duplicate screenshots or
+resumptions. Count each distinct platform return once per applicable ambiguity/necessity
+category, linked to its issue row; unknown identity stays uncounted/pending until resolved.
+Acceptance records the actual platform observation (accepted, rejected or pending) with its
+raw link; a difficulty pass or local repair is not acceptance. A candidate retired before any
+submission is recorded as not submitted/retired: zero acceptances, no platform verdict claimed.
+Retirement after submission does not settle a pending platform outcome.
+
+- Summary: accepted TODO / enrolled TODO; known authoring minutes TODO; timing complete TODO
+  of TODO; acceptance outcomes pending TODO; revisions TODO; ambiguity/necessity returns TODO.
+- Accepted questions per known authoring hour: pending. Once all five have complete timing
+  and settled outcomes (including retired before submission), compute accepted count / (total recorded minutes / 60), including
+  time spent on unsuccessful candidates. No rate claim while either is incomplete or the
+  denominator is zero; report known counts/minutes without treating partial time as a total.
+
+## Measured events
+
+Use the single workspace `notes/efficiency.json` ledger; this table links its report, rather than
+maintaining a second set of totals. Start/stop timers and promote candidates through
+`python tools/docket_agent.py efficiency` (WORKFLOW section 11). Keep stable candidate IDs across
+work sessions and revisions. Do not enroll pre-existing questions or reconstruct their history.
+
+For `record --event PATH`, save a JSON object with `kind`, a stable `event_id`, the bundle slug in
+`bundle`, the tracked `candidate`, and `source` pointing to the actual trace/return/session evidence.
+Add the fields below. Illustrative field names are a contract, not recorded measurements.
+
+| Kind | Additional fields |
+| --- | --- |
+| `usage` | `total_tokens`: nonnegative integer reported by the runtime/API |
+| `platform_attempt` | `attempt_id`: identified platform run; `stage`: `quality`, `difficulty` or `review`; `revision`: nonnegative integer; `tested_sha256`: verified prepared fingerprint |
+| `revision` | `revision`: actual post-promotion revision number; `tested_sha256`: content fingerprint |
+| `outcome` | `outcome`: `accepted`, `rejected`, `pending` or `retired_before_submission` |
+| `coverage` | `timing` and `tokens`: each `complete`, `partial` or `unknown`; source explains coverage |
+
+One usage event represents one non-overlapping reported usage interval/request; use its stable
+receipt ID and do not record overlapping session and request totals. Missing usage stays unknown;
+zero requires a reported zero. Do not substitute document-token counts or estimates. Repeated event
+IDs with the same data are harmless; conflicting reuse is rejected. Duplicate identified runs or
+revision snapshots do not increase counts. Keep unresolved run identity in feedback notes until known.
+
+The `source` records provenance, not an independent verification of the supplied value. Acceptance
+must be an observed platform outcome, not inferred from a difficulty pass. Confirm timing/token
+coverage only when the measured records cover the relevant work; future work needs reconfirmation.
+Stop timers before waits and turn end; discard an interrupted interval whose active time is unknown.
+Unpromoted work and incomplete coverage remain visible. No metric triggers new model validation.

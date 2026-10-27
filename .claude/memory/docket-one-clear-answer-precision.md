@@ -24,6 +24,11 @@ metadata:
   readings, solvers split, and the platform returns the question.
 - In a blind solve, a reading that uses another stated figure for the same input and lands on
   a different answer at the asked precision is `ambiguous` (gate Q4), not the lever biting (Q11).
+- A gold that depends on reading a deadline word strictly ("received ... before 30 September 2024" -> last day 29
+  September) is judged "Answer not supported" when the gate's final check (high model, every document) takes the
+  stated date as the last day, even when the medium model and the platform's per-attempt notes agree with the strict
+  reading (aq-02360 q02, 2026-10-09). The loose reading then matches the low model, so a deadline-boundary trap
+  cannot place a question in the Medium band. Do not build a gold on "before"/"after" exclusivity.
 - When: every numeric question with a stated precision. Take most care with percentages built
   from figures reported at different scales, within one document or across documents.
 - Rounding order can split a gold too, with no second stated figure (aq-docket-trial-01 q05, local,
@@ -54,6 +59,12 @@ metadata:
   submitting, replace the tie phrase with the concrete scope and re-measure. The reviewer also flagged
   "change" ("percentage points vs percent, absolute vs relative, which line item"): write "percentage
   change in net premiums written ... from a year earlier".
+  The advisory is a count of clustered wrong answers, not a judgment of defensibility. On aq-01543 q04
+  (2026-10-08, Easy pass, "You can submit now") it named 7.20% and 7.04%, the two declared traps. The
+  solvers giving them had themselves noted that they contradicted the printed "23 of which are currently in
+  operation". No tie phrase there, so no rewording was made; review outcome pending. Before submitting,
+  check whether the clustered answer survives a careful reading of the question's own words (aq-01278's
+  did) or contradicts a printed fact (aq-01543's does).
 - A document's own working term creates a defensible reading. aq-docket-trial-06 q02 (local,
   2026-10-06) asked about "all U.S. credit unions without federal deposit insurance", with a gold
   that counted two uninsured credit unions. GAO-03-971 uses "depository institutions lacking federal
@@ -79,6 +90,14 @@ rounding choice. See also [[docket-local-solver-calibration]] (numeric levers an
 solver) and [[docket-form-automated-checks]] (how to write the calculation step).
 
 ## Evidence and history
+
+- 2026-10-09: aq-02360 q02 rev 1 (raw tasks/aq-02360/verdicts/AQ-02360_difficulty_2026-10-09_0825.txt), gold 514 days to
+  29 September 2024 under "before 30 September 2024": Run 2 "Answer not supported" with Low 0/5 (all 515), Medium 3/5;
+  the Document check's three every-document attempts gave 515, an unfinished "4 May 2023" and 515, never weighing
+  "before". Run 1 on the earlier anchor had been "Between levels" (Medium 4/5). Across both runs the medium model read
+  the cutoff strictly 7 times in 10, the low model 0 in 10, the gate's high model 0 in 3.
+  Rev 2 asked for "the last day an opted-out service election could still be received" to steer the high model; its
+  quick test was "too easy" (user, same day): the cue that serves the high model also serves the low one. Dropped.
 
 - 2026-10-06, aq-01321 q02 (form model check, screenshot from the user): a twelve-month (R&D + SG&A) /
   revenue ratio to two decimals, whose exact numerator exists only as a three-release rebuild, while the
@@ -123,3 +142,10 @@ solver) and [[docket-form-automated-checks]] (how to write the calculation step)
 - 2026-10-06, aq-01321 q02 follow-up (user report): the narrowed version passed the difficulty check
   "evaluated as Easy Tier", so narrowing the description to the income-statement lines cleared the
   "too vague" block. Exact tested wording not supplied.
+- 2026-10-10 (aq-02686 q02 rev 0, platform Run 2, Version a9ec06, "Answer not supported"): a condition attached
+  as an opening phrase, "Barring FEOCs, it exports both to ... and one to a Thai buyer [a FEOC]", was read by the
+  gate's high model in all three every-document attempts as "FEOC status aside": the sentence asserts the export,
+  and FEOC status does not change the other regime's notice duty, so the buyer stayed in ($46,026 against the gold
+  $45,920). The intended reading was "except to FEOCs". How to apply: when a scenario's rule comes from one regime
+  and the counted obligation from another, say what the actor does in its own sentence ("It refuses FEOC buyers")
+  and describe the candidates as orders or prospects, not as completed actions.

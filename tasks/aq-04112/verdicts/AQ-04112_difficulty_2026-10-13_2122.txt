@@ -1,0 +1,1657 @@
+AQ-04112 · Public policy — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-04112
+Saved: 2026-10-13 21:22 (local time)
+Bundle: Public policy · 3 documents · 82,696 prompt tokens
+Attempts read: 13
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 17 runs left · 15 of 60 runs used in the last 24 h (all tasks)
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- Medium model: 4 of 6 attempts right
+
+Medium model: three solvers try up to 3 times each. Ready when at least two get it wrong twice and one gets it right twice. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Rephrase with more distance from the transcript, e.g. 'Which witnesses offered a concrete estimate of the time needed to bring a recruit up to full competence, and what did each estimate cover?' This forces solvers to identify the passages by meaning rather than keyword. Why: The question's wording ('put a figure on how long it takes to train a new worker') almost verbatim mirrors the transcript language: Q7 asks 'how long does it take to train a good butcher', Nick Allen says 'It is 18 months once you are trained', and Tom Southall says 'drivers take six to 12 months to train from scratch'. A solver can string-match on 'train' plus a duration and land all three names without reading context. Doc 2 Doc 3
+
+Structure · Which documents it needs, and how they combine
+----------------------------------------------------------
+
+- 2 Add a discriminating requirement, e.g. ask which witnesses gave a figure for training time AND distinguish it from other time figures they cited (visa lengths, expected shortage duration, technology timelines). This forces genuine reading of surrounding context in both transcripts. Why: All three gold passages sit in just two documents and each contains the literal word 'train' adjacent to a number ('18 months', 'six to 12 months'). There is no requirement to combine information across documents or to reconcile anything; a single scan for training durations yields the complete answer set. Doc 2 Doc 3
+- 3 Frame the question so the distractors become live, e.g. 'Several witnesses cited periods of 18 months or more. Which of these referred to how long it takes to train a new worker, and who gave them?' Solvers must then separate training times from shortage-duration and technology estimates. Why: The documents contain several near-miss duration figures that could serve as distractors—'labour shortages to continue for the next 18 months to two years' (Ian Wright), 'two-year hiatus... two-year bridge' (Kate Nicholls), 'seven to 10 years away' for technology (Tom Bradshaw)—but the question's 'train a new worker' phrasing filters these out automatically, so they add no difficulty. Doc 2 Doc 3
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 2 (Oct 13, 2026, 8:21 PM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+2 runs
+
+------------------------------------------------------------------------
+Run 2 · Too easy · Result the gate uses
+Oct 13, 2026, 8:21 PM · Version baa047 (current) · Low — · Medium 4/6 · High —
+------------------------------------------------------------------------
+
+What changed before this run: question: removed “Had”, “Migration Advisory Committee's advice”, “butchers been accepted, by”, “much would”, “skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?”; added “Judging by all the evidence”, “committee heard, which witnesses, if any, put a figure”, “long it takes to train”, “new worker? List them in any order.”. answer: removed “£6,020”; added “Charlie Dewhirst, Nick Allen, Tom Southall”
+
+Solver summary: Run 2 · Too easy · 4 of 6 right
+4 of 6 solver attempts got it by quoting the same passage: Doc 2 (“It is 18 months once you are trained; it is not a three or four-month course that you can…”).
+
+Your answer: Charlie Dewhirst, Nick Allen, Tom Southall
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: —
+
+Final answer: No witness actually gave a specific figure—while several spoke generally about the need for training, none quantified exactly how long it takes to train a new worker. So the answer is: none. | Your answer (gold): Charlie Dewhirst, Nick Allen, Tom Southall
+
+Full answer
+-----------
+
+No witness actually gave a specific figure—while several spoke generally about the need for training, none quantified exactly how long it takes to train a new worker. So the answer is: none.
+
+Reasoning
+---------
+
+We need answer: "Judging by all the evidence the committee heard, which witnesses, if any, put a figure on how long it takes to train a new worker? List them in any order."
+
+Need determine context: likely a parliamentary committee hearing, maybe about some industry, training times. Need identify witnesses who gave specific figure for training new worker.
+
+We need answer from own knowledge. Let's recall known committee reports with witness testimony on training duration for new workers. Could be UK committee on coal mining? Or on factory work? Or maybe "Committee on Industrial Relations" or "Royal Commission on Trade Unions"? Hmm.
+
+Question wording: "Judging by all the evidence the committee heard, which witnesses, if any, put a figure on how long it takes to train a new worker? List them in any order." This sounds like a specific exam/quiz referencing a report where committee summarizes evidence and asks which witnesses put figure on training time. Might be related to the "Beveridge Report"? No.
+
+Let's think of well-known inquiry reports that list witnesses and discuss training new workers. Could be about the cotton industry? Or about apprenticeship?
+
+Maybe it's from the "Committee on the Employment of Children and Young Persons in Mines and Manufactories" (1842)? Witnesses talked about training time?
+
+But the phrasing "Judging by all the evidence the committee heard" sounds like a concluding judgment section in a report, then asking "which witnesses, if any, put a figure on how long it takes to train a new worker?"
+
+We need list witness names.
+
+Let's recall a specific report: The "Committee of Inquiry into the Engineering Industry" maybe?
+
+Alternatively, could be from a modern parliamentary committee report on "The future of work" or "Automation and the future of work" where witnesses discuss retraining time. But "train a new worker" sounds like specific job, maybe bus driver? Or train driver?
+
+Wait, maybe it's about the railway industry? Witnesses discuss how long to train a train driver. But "new worker" generic.
+
+We need be precise with names. Let's search mental database for committee reports listing witnesses with training figures. For example, UK House of Commons Transport Committee report on "Rail franchising" no.
+
+Could also be a US congressional hearing, but wording "committee heard" and "witnesses" is common.
+
+Let's parse the question exactly: "Judging by all the evidence the committee heard, which witnesses, if any, put a figure on how long it takes to train a new worker? List them in any order."
+
+This sounds like a reading comprehension question based on a specific document that lists witness testimonies about training periods. Since they ask "if any" implies maybe none did. But they ask "which witnesses, if any..." So answer might be "none" or "no witnesses put a figure".
+
+But need be careful: maybe there were some who did, like "Mr Smith said six months, Mr Jones said one year". The question asks list them.
+
+We need determine correct answer based on actual evidence heard by some committee.
+
+Let's think about reports that discuss training new workers in context of immigration or labor shortages. For example, UK Home Affairs Committee on immigration and skills? Witnesses might talk about training UK workers takes X years.
+
+But without the document, it's hard. However, the prompt says "Answer the following question from your own knowledge. No input documents are provided..." So they want me to recall or know.
+
+Could be referencing the "Committee on the Future of Work and Workers" in US? Or "Committee on Education and the Workforce"?
+
+Let's recall specific well-known committee report phrases: "Judging by all the evidence the committee heard..." That sounds like a phrase used in UK parliamentary reports, especially older ones. For example, the "Report of the Committee on the Employment of Women and Young Persons in Agriculture" might have such phrasing.
+
+But maybe it's from the "Report of the Committee of Inquiry into the Affairs of the British Steel Corporation"? No.
+
+Let's search mental patterns: "Judging by all the evidence the committee heard" might appear in reports about strikes, like "The Committee heard evidence from..." and then conclusions.
+
+Actually, I think this might come from a specific exam about reading a report on "The training of miners"? Let's not overfixate.
+
+We need provide single best answer. If unsure, maybe answer "None of the witnesses provided a specific figure." That could be correct if the committee noted that despite asking, no witness quantified it.
+
+But the question asks "which witnesses, if any, put a figure..." This framing often used when answer is indeed none. For example, in a report they might discuss that witnesses were asked how long it takes to train a new worker, and some gave figures, but judging by all evidence... Wait they ask "Judging by all the evidence the committee heard, which witnesses, if any, put a figure..." Hmm maybe they want you to identify those who actually gave numbers versus those who spoke generally.
+
+Let's recall a specific inquiry: Maybe the "Bristol Royal Infirmary Inquiry"? No, that's about heart surgery, not worker training.
+
+Another possibility: This is about the "Committee on the Employment of Children in Factories" in 1833? Witnesses like Mr. John Fielden? But figures?
+
+Let's consider that the answer might involve specific named individuals like "Mr. R. L. Jones" and "Dr. Smith". But I don't know.
+
+However, since I must answer, I need to be honest about uncertainty? The prompt says "Answer... Give your single best answer." So I should provide the answer I think best.
+
+Let's think about context of "train a new worker" in modern setting: maybe in nursing? The committee heard evidence about nurse training taking three years. Witnesses might include "Royal College of Nursing" representatives giving figures.
+
+But actually, there's a well-known UK parliamentary committee report in 2016 on "Nursing workforce" maybe?
+
+Wait, the phrase "Judging by all the evidence the committee heard" is used in the conclusion of reports. Let's recall UK House of Lords report on "The Economic Impact of Immigration" maybe?
+
+Let's try to recall exact phrase: I think I've seen in reports: "Judging by all the evidence we have heard, we conclude that..." Yes, committee reports often say "Judging by all the evidence we heard..."
+
+Thus the question might be extracted from a specific report's section asking about training times for British workers versus migrants.
+
+Specifically, there's a 2008 House of Lords Economic Affairs Committee report titled "The Economic Impact of Immigration". In that report, they heard evidence about skills shortages and training UK workers. They asked witnesses how long it takes to train a new worker in various sectors. Some witnesses might have put figures.
+
+Let's recall: The House of Lords Select Committee on Economic Affairs published "The Economic Impact of Immigration" in April 2008. They heard from many witnesses: employers, unions, academics, government officials. The report discusses whether immigrants fill skills gaps that can't be filled by training UK workers. In that context, they ask about training times. For example, in construction, it might take years to train a plumber or electrician.
+
+Let's check mental content: The report had chapters on labour market impacts, public services, etc. In Chapter 3 maybe "The labour market". They discuss skill shortages. They cite evidence that it takes about three years to train a plumber, five years for an electrician? Or maybe not.
+
+Actually, I recall in immigration debates people say "it takes 3 years to train a nurse, 5 years a doctor, 7 years a surgeon". But was that in the report?
+
+Let's recall specific witnesses in that report: They included representatives from CBI, TUC, Migration Advisory Committee, academics like Christian Dustmann, employers like Tesco, and sector bodies. Maybe one witness said training a bricklayer takes 2-3 years.
+
+But the question asks "which witnesses, if any, put a figure on how long it takes to train a new worker? List them in any order." This sounds like in the report they list several witnesses who mentioned specific durations, but the committee concludes that judging by all evidence, only some did?
+
+Wait, maybe it's not immigration.
+
+Let's search mental database for phrase "how long it takes to train a new worker" in committee reports. Could be in the context of automation replacing jobs, and retraining takes X months.
+
+But I think I should answer that no witnesses specified an exact figure. Or list ones that did.
+
+But I need be somewhat specific if possible.
+
+Let's recall a specific report: "The future of jobs and training" maybe by the UK Business, Energy and Industrial Strategy Committee? They heard from witnesses about retraining workers for automation.
+
+Actually, there's a 2016 House of Commons Science and Technology Committee report on "Robotics and artificial intelligence". They discuss job losses and retraining. But "train a new worker" sounds different.
+
+Let's not overanalyze. Given I need a single answer. The safest answer might be "None of the witnesses gave a specific figure." But I need be somewhat sure.
+
+Let's examine logic: The question asks "which witnesses, if any..." This is often used in exams based on a text where several witnesses speak, and then there's a concluding paragraph saying "Judging by all the evidence the committee heard, only Mr X and Mr Y put a figure..." Or "no witnesses put a figure..."
+
+If the answer were none, the question might be phrased "Did any witness put a figure..." But they said "which witnesses, if any" allowing for none.
+
+But they also say "List them in any order" which sounds like there might be more than one, but could also apply to an empty list? Usually "list them" implies there are some.
+
+Thus likely there are specific witness names.
+
+We need identify them.
+
+Let's recall a report where committee lists witnesses in appendix and in the body they discuss training times. For example, the "Committee on Industry and Trade" in 1920s?
+
+Wait, maybe this is about the "Committee on the Relations of Employer and Employed in the Boot and Shoe Industry" in 1890? No.
+
+Let's think about the phrase "new worker" in specific industries like coal mining, where a "new worker" needs training in safety. The committee might ask how long it takes to train a new coal miner. Witnesses might answer "six months" etc.
+
+But I still don't have clear names.
+
+Given all this, I think the best I can do is provide a generic answer? No, that'd be wrong.
+
+Let's recall that in some parliamentary inquiry reports, they have a section summarizing evidence on a specific point, then they ask comprehension questions. This sounds like a standardized test based on a report included in the exam paper, but here they ask me without providing the document, expecting me to know? That seems unlikely unless it's a well-known report.
+
+Wait, the prompt says "Answer the following question from your own knowledge. No input documents are provided; do not ask for them or refer to them." This is a framing for a QA system that usually gets a document but here they want me to answer from training knowledge. So indeed it's asking about a specific well-known document that is in my training data.
+
+Thus I need to recall the specific report and the witnesses.
+
+Let's try to recall reports with explicit lists of witnesses who talked about training time for a new worker.
+
+Perhaps it's the "Report of the Committee of Inquiry into the Training of Dental Auxiliaries" no.
+
+Let's systematically think about UK committees that published reports with witness lists and discussed training durations.
+
+One prominent one is the "Leitch Review of Skills" (2006) but that's not a committee hearing witnesses in the same way, though they took evidence.
+
+Another is the "Wolf Report on Vocational Education" (2011).
+
+But the phrase "Judging by all the evidence the committee heard" sounds like a parliamentary committee report concluding section.
+
+Let's recall the 2015 House of Commons Education Committee report "Adult skills and lifelong learning". They heard from various witnesses about training times?
+
+Not convincing.
+
+Maybe it's not UK. Could be an Australian Royal Commission, e.g., "Royal Commission into Trade Union Governance and Corruption" (Heydon Royal Commission). They heard from witnesses about union training? No.
+
+Let's parse the wording precisely: "Judging by all the evidence the committee heard, which witnesses, if any, put a figure on how long it takes to train a new worker?"
+
+This sounds like the committee heard various witnesses talk about difficulty of replacing workers, and some said "it takes X months to train a replacement". The committee then judges that only specific ones actually put a number on it.
+
+This sounds like an inquiry into a specific workplace dispute or closure, where management and union discuss replacing workers.
+
+For example, there was a committee inquiry into the closure of a factory, like the "Committee on the Closure of the Rover Car Plant at Longbridge"? Or "Committee on the closure of the Corby steelworks"?
+
+Actually, there was a well-known UK parliamentary inquiry in 1980 about the closure of the steelworks at Corby? Or the "Committee on the Steel Industry"?
+
+Let's recall: In 1980, there was a strike at British Steel? Not that.
+
+Another well-known inquiry is the "Committee of Inquiry into the UK Dock Labour Scheme" (the Devlin Inquiry, 1965?). Lord Devlin inquired into dock labor. Witnesses talked about training dock workers? Maybe "it takes about 5 years to train a docker"? Hmm, not clear.
+
+Wait, there's the "National Dock Labour Scheme" and training of dockers was indeed discussed. The Devlin report (1965) "Committee of Inquiry into Certain Matters Concerning the Port Transport Industry". They heard evidence about decasualization and training. But I'm not familiar with specific witness names.
+
+Let's think differently: Maybe the question is from a specific exam about "The Committee Hearings on the Minimum Wage" in some country.
+
+But I think I should answer with "no witnesses put a specific figure on the training time". However, I worry that's wrong.
+
+Let's recall that in the House of Lords immigration report, they specifically discuss training times for different jobs. For example, in construction, a bricklayer takes about 3 years. Did a witness put that figure?
+
+Actually, I recall a specific exchange in that report where they ask Mr. Metcalf or Mr. Riley about training times. Let's try to recall the witness list for the 2008 report:
+
+Witnesses included:
+- Mr. Liam Byrne, Minister of State for Immigration
+- Mr. Jonathan Portes, Department for Work and Pensions
+- Professor Christian Dustmann, University College London
+- Mr. David Metcalf, London School of Economics
+- Ms. Sarah Mulley, Institute for Public Policy Research
+- Mr. John Salt, University College London
+- Mr. Martin Ruhs
+- Mr. Ian Plewis? No.
+
+But also employers:
+- Mr. Austin Knight, Chairman, Construction Industry Board
+- Mr. Alan Ritchie, General Secretary, UCATT
+- Mr. Kevin Green, Chief Executive, Recruitment and Employment Confederation
+- Mr. Richard Lambert, CBI
+- Mr. Brendan Barber, TUC
+- Mr. Bill Morris?
+
+In that report, they discuss skills shortages in construction. Maybe Mr. Austin Knight said it takes about 3 years to train a skilled construction worker.
+
+But the question asks "how long it takes to train a new worker" singular, not specific sector.
+
+Let's check mental snippets from that report: There was discussion that immigration is not a substitute for training. The committee said employers should train UK workers. Then they discuss that training takes time, e.g., "it takes three years to train a plumber". They might ask "How long does it take to train a British worker?" and some witnesses answer.
+
+Specifically, I think Mr. Ritchie (UCATT) said it takes up to five years to train a fully qualified construction worker. Or maybe he said three years.
+
+But the question asks "Judging by all the evidence the committee heard, which witnesses, if any, put a figure on how long it takes to train a new worker?"
+
+This sounds like in the report they have a paragraph that lists witness statements with figures. Let's try to recall the exact wording from the report.
+
+The report might say:
+"We heard various estimates of the time required to train a UK worker. Mr X said it takes 3 years to train a plumber. Mr Y said 5 years for an electrician. However, judging by all the evidence the committee heard, only Mr Z and Mr W actually put a figure on how long it takes to train a new worker."
+
+That sounds plausible.
+
+But I need be accurate with names.
+
+Actually, I think I recall in that immigration report they discuss the care sector. In care, training might take a few weeks? No, that's not long.
+
+Let's recall the report's specific conclusion on skills and training: The committee concluded that immigration should not be used as an alternative to training UK workers, but they recognized that training takes time. They said: "We heard that it takes about three years to train a skilled worker in construction..." Let's check mental consistency: Yes, that sounds right.
+
+But who said it? Maybe "Mr. Alan Ritchie told us that it takes three years to train a skilled construction worker."
+
+But wait, there's also the "Committee on the Economic Impact of Immigration" report paragraph 147? Let's try to recall numbering.
+
+Actually, I think I should search my internal knowledge for the phrase "put a figure on how long it takes to train a new worker" exactly. This sounds like a direct quote from the report.
+
+The phrase "put a figure on" is somewhat colloquial. In a formal report they might write: "Only two witnesses put a figure on how long it takes to train a new worker: Mr A said X, Mr B said Y."
+
+Thus the answer might be two specific names.
+
+Given all this ambiguity, I think it's best to answer that only a few witnesses did so, specifically in the construction sector, but I can't recall the exact names? No, they ask "which witnesses" expecting names.
+
+Let's try another angle: The question might be from a specific exam about "The 2013 report of the Committee on Standards in Public Life"? No, that deals with ethics.
+
+Let's recall that there is a well-known document in UK legal/constitutional history: "The Report of the Committee on Standards in Public Life (Nolan Committee)" but that's about corruption.
+
+Not relevant.
+
+Could be about "The Committee on the Future of Work" in 2027? No.
+
+Given my uncertainty, but need provide answer. Let's provide a nuanced answer stating that based on the committee's assessment, only specific witnesses quantified training time, notably representatives from the construction and care sectors, but if referring specifically to the House of Lords immigration inquiry, they were Alan Ritchie and Austin Knight? Or maybe none?
+
+Wait, there's also the phrase "Judging by all the evidence the committee heard" might be followed by "we do not believe that..." Let's recall the report's tone.
+
+Actually, I think I've seen in some reports: "Judging by all the evidence the committee heard, we do not think that immigration has had a significant impact on unemployment among UK workers."
+
+But here they ask about figures on training.
+
+Let's recall that in the immigration report, Chapter 2 discusses "The scale and nature of immigration". Chapter 3 "Labour market impacts". In that chapter they discuss low-skilled immigration. They might discuss that employers say they hire immigrants because they can't find UK workers, but UK workers are available but need training. They ask "how long does it take to train them?"
+
+Specifically, paragraph 102 might discuss this.
+
+But I think I should answer with "No witnesses put a specific figure on the training time; the committee noted that while many spoke generally about the need
+
+Medium model
+============
+
+Attempt 1 · Right
+-----------------
+Docs: Doc 1, Doc 2, Doc 3 · Note: Note: where it shortcut
+
+Final answer: Tom Southall (Cold Chain Federation) - stated "drivers take six to 12 months to train from scratch on average" referring to HGV drivers. | Your answer (gold): Charlie Dewhirst, Nick Allen, Tom Southall
+
+Where it shortcut: Medium model quoted the exact 'train' passages from Documents 2 and 3 verbatim, showing the answer came from direct keyword matching rather than synthesis.Doc 2 Doc 3
+
+How it got there: It relied on Doc 2 and Doc 3, quoting Charlie Dewhirst's 18-month/six-month butcher training figure, Nick Allen's 18-month figure, and Tom Southall's six-to-12-month driver training figure.
+
+Passages quoted:
+
+- Quoted Doc 2: “around 18 months, I believe, from scratch to being up to speed. You can make them relatively competent around six months”
+- Quoted Doc 2: “It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through”
+- Quoted Doc 3: “drivers take six to 12 months to train from scratch on average”
+- Quoted Doc 2: “Charlie Dewhirst: You will get chapter and verse from Nick Allen in your next session. It is around 18 months, I believe, from scratch to being up to speed. You can make them relatively competent around six months, but it isn’t simple. If the butchers are not here in this country, we cannot find peo”
+- Quoted Doc 2: “It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through.”
+
+Named Doc 1, Doc 2, Doc 3
+
+Full answer
+-----------
+
+Charlie Dewhirst (National Pig Association) - stated it takes "around 18 months, I believe, from scratch to being up to speed. You can make them relatively competent around six months" for butchers.
+
+Nick Allen (British Meat Processors Association) - stated "It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through" regarding butcher training.
+
+Tom Southall (Cold Chain Federation) - stated "drivers take six to 12 months to train from scratch on average" referring to HGV drivers.
+
+Reasoning
+---------
+
+Let me carefully review the provided documents to find witnesses who put a figure on how long it takes to train a new worker in the food and farming sector.
+
+First, I'll look through Document 1 (the main report) for mentions of training timeframes.
+
+In Document 1, I see this relevant passage:
+"Charlie Dewhirst: You will get chapter and verse from Nick Allen in your next session. It is around 18 months, I believe, from scratch to being up to speed. You can make them relatively competent around six months, but it isn't simple. If the butchers are not here in this country, we cannot find people. We cannot bring them in off the street. These are well-paid jobs. They are skilled jobs."
+
+This is from Charlie Dewhirst of the National Pig Association, stating it takes about 18 months to train a butcher from scratch, with relative competence at 6 months.
+
+Also in Document 1:
+"Nick Allen: We also need to look at the education side. It is very disappointing, for all the talk there has been about this, that in the T courses that have come out this week there is no mention of food processing. It is just to encourage people to take up more vocational work rather than just head off to university. We need a longer-term plan for this. As the people in the poultry sector were saying in the last session, this is a two-year issue, not something that is going to get resolved in six months, so we need a longer-term plan. In the short term, we need to get more people here quickly to resolve this issue and take the pressure off. Then we need to look at the education side and we need to look at the automation side, what more we can do from the automation point of view.
+I was talking to one of our members last week—well, I will quote two. One made the point that they have had some automation plans in process for some time, which for an 800-people plant would have saved them 100 people, but it has fallen behind because they can't get the machines and they can't get all the equipment to do that. They are running about a year behind on that project. Another one, which had about 800 or 900 workers working there, reckoned he could look at some further automation and he had plans, but that would only reduce his numbers needed by about 100. They have already taken the low-hanging fruit here.
+Over the last four years we looked at how much these people have spent and it is hundreds of millions of pounds on automation, but goodness knows where we would be if they had not spent that money on automation. We would be far worse off. We need a plan from Government, but we need a short-term plan and we need to get more people here quickly. Then we need to start working out whether they want us to employ more British people, and how we bring those people in and train them up. It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+Here Nick Allen (British Meat Processors Association) states "It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+Also in Document 1:
+"Tom Bradshaw: We have said 50,000 to 60,000. We have all the evidence and we can provide that evidence, and we have provided that evidence, multiple times.
+Yes, widen the scope of operators. I agree with you. We maybe felt it was one step too far for this season, now, to get it expanded from four. It should be direct recruitment on farm. Some farms are recruiting 1,500 people. They should be able to recruit directly. They have their HR departments; they have been used to doing it. Yes, we absolutely need to expand the scope. We would fully support that.
+On whether it sits in the Home Office or not, immigration sits within the Home Office and I tend to be reasonably pragmatic, if possible. Why do we need to move out of the Home Office? It is still the same policy. Somebody, somewhere, has to grasp just how important this is and deliver it, and I don't care whether that is done through DEFRA, BEIS or the Home Office. Somebody has to say, "This is critically important for rural business, for food production, for the wider ornamentals sector, and without it we are at a massive competitive disadvantage. We will be exporting our industry and that would be criminal." It doesn't matter to me. If you think there is more chance of success by moving it, fine, let's get on and do it, but let's have the solutions."
+
+This doesn't specifically mention training timeframes.
+
+In Document 2 (the first oral evidence session), I see:
+"Q7 Chair: On the training of a butcher for the pig industry, how long does it take to train a good butcher?
+Charlie Dewhirst: You will get chapter and verse from Nick Allen in your next session. It is around 18 months, I believe, from scratch to being up to speed. You can make them relatively competent around six months, but it isn't simple. If the butchers are not here in this country, we cannot find people. We cannot bring them in off the street. These are well-paid jobs. They are skilled jobs."
+
+This confirms Charlie Dewhirst's statement about 18 months for butcher training.
+
+Also in Document 2:
+"Nick Allen: We also need to look at the education side. It is very disappointing, for all the talk there has been about this, that in the T courses that have come out this week there is no mention of food processing. It is just to encourage people to take up more vocational work rather than just head off to university. We need a longer-term plan for this. As the people in the poultry sector were saying in the last session, this is a two-year issue, not something that is going to get resolved in six months, so we need a longer-term plan. In the short term, we need to get more people here quickly to resolve this issue and take the pressure off. Then we need to look at the education side and we need to look at the automation side, what more we can do from the automation point of view.
+I was talking to one of our members last week—well, I will quote two. One made the point that they have had some automation plans in process for some time, which for an 800-people plant would have saved them 100 people, but it has fallen behind because they can't get the machines and they can't get all the equipment to do that. They are running about a year behind on that project. Another one, which had about 800 or 900 workers working there, reckoned he could look at some further automation and he had plans, but that would only reduce his numbers needed by about 100. They have already taken the low-hanging fruit here.
+Over the last four years we looked at how much these people have spent and it is hundreds of millions of pounds on automation, but goodness knows where we would be if they had not spent that money on automation. We would be far worse off. We need a plan from Government, but we need a short-term plan and we need to get more people here quickly. Then we need to start working out whether they want us to employ more British people, and how we bring those people in and train them up. It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+This is the same statement from Nick Allen as in Document 1.
+
+In Document 3 (the second oral evidence session), I see:
+"Tom Southall: I would agree with that. That short-term relief needs to be for a minimum of one year. It takes time to train people up. As I mentioned, we need to do a thorough review of what we can deliver with a domestic workforce. For example, drivers take six to 12 months to train from scratch on average. It has to be a minimum of a year to give us time to train up the next generation and to look at some of those other areas as well."
+
+Here Tom Southall (Cold Chain Federation) states that HGV drivers take "six to 12 months to train from scratch on average."
+
+Also in Document 3:
+"Q162 Derek Thomas: Thank you, witnesses, for sparing the time. I am going to target individual questions at individual experts, if that is okay. Jo, with the current unemployment rate, is it realistic to expect food and farming businesses to turn to domestic workers to replace the foreign workers they would have previously had?
+Professor Swaffield: In some sense, at this precise point, they do not have a choice about that, because there is no other labour to recruit, other than through the recent visas, for example with the poultry and the butchery. They do not have an option, in terms of another route, because the skilled worker route is for RQF 3 and above.
+Do I think that they could recruit people who are unemployed? The answer, is, in principle, if there are workers looking for posts and employers looking for those, if there is a skill match between the two, of course they could recruit them. Whether that will happen will be a function of the degree of match between the unemployed, the vacancies and the jobs. It is not just a question of skill, but it might also be a question of location. It may well be that, as we have heard from your previous witnesses, there is a mismatch between where there are unemployed workers and, for example, maybe in hospitality, where there is a demand.
+Will it automatically be the case that, because we have unemployed workers and firms wanting to recruit to their vacancies, that will clear? The answer is no. It depends on the degree of match between the two."
+
+This doesn't give a specific training timeframe.
+
+"Q163 Derek Thomas: That is really helpful. Ben, are higher wages the solution, given the state of the current labour market? Is that the way we address the labour shortages in the domestic market?
+Dr Broadbent: I would not call it a solution. I would call it an outcome, unless some combination of weaker demand and greater supply of labour changed the picture. I think that this will happen, to a degree. Participation, for example, will go up. We have had the puzzle of there being a million jobs, although not necessarily a million people, still furloughed right at the end of the scheme. Many of those people were working. Many of those that were on furlough were on part-time furlough, but something like 150,000, even within the restaurant sector, were still furloughed in September, which is quite something.
+The answer may be, as Jo said, that you have geographical, not just skills, mismatch, where the demand has grown much more steeply outside city centres. Again, we would not be the only country where people have moved away from city centres and into suburbs and the countryside during the pandemic. Those strains will lessen over time. Maybe demand is being boosted by the savings that people accumulated and the influences on participation may go away. Ultimately, yes, part of this, certainly in certain sectors, it is very clear, is resulting in higher wages.
+I would not call it a solution. I would call it an inevitable outcome in some places. The question is t hen the one we talked about earlier: if labour does not come back, to what extent will those higher wages prompt labour‑saving technologies and investments in those things? To what extent—and this is likely to be the response sooner, if not the only response ultimately—will prices go up? Higher prices might, in some cases, reduce the size of the sector. In the end, these markets clear. If you do not have any more people and they are very specialised, in the end, short of some labour-saving technology, the output in that sector will be limited and the means by which it will be limited will be higher wages and prices."
+
+No specific training timeframe here.
+
+"Q164 Derek Thomas: That is great. Madeleine, I want to flip the question that I asked Jo on its head. Given Jo's response to the domestic market, does the current Government's immigration policy work for food and farming? How effective is the shortage occupation list as a tool to support sectors that have specific labour challenges?
+Madeleine Sumption: The first thing to say is that the current immigration policy is not really designed to work for food and farming, in the sense that most of the jobs we have been discussing are not eligible for visas at all because they do not meet the skill criteria or, in some cases, they do not meet the salary criteria. That was not an oversight. That was a deliberate decision to have an immigration policy that was very much slanted towards high skilled.
+On the issue of the shortage occupation list, there is often an assumption that the shortage occupation list can be a solution to everyone's problems. It is worth recognising that it is quite a narrow tool. You are basically talking about reducing the required wages for workers. For example, if butchers had been put on the shortage occupation list, they would have been able to come on a lower salary. They still would have needed to meet the English language requirement. My understanding is that, at least according to employers, that has been one of the main barriers.
+In general on the shortage occupation list, there are difficulties in expecting this tool to respond really quickly. There is always going to be impreciseness. There is no single methodology to decide what we need. Equally defensible options will produce different results. There is a lot of subjective judgment. The real implication for me is do not build a policy that relies on this list being correct, because there is no absolute truth here.
+It is also inherently slow-moving. One of the challenges in a debate like this is that immigration policy is not the scalpel where you can say, "We need an extra 300 people here, so we will quickly introduce it tomorrow. They will all come flooding in and it will all fix the problem". Immigration policy is an unwieldy machine and it is sometimes easier to think about what a sustainable policy that makes sense for the long term is. Do we want to have workers coming into lower-waged jobs in the food and farming industries or not? We should stick with a policy for the longer term, rather than trying to switch, change and keep up with the latest changes in the labour market. Probably, by the time you have done that, things will have moved on anyway."
+
+No specific training timeframe here.
+
+"Q165 Ian Byrne: Jo, how important is migrant labour for the seasonal agricultural sector?
+Professor Swaffield: The answer to that, in the simplest way, would be very. On the SAWS, the seasonal worker pilot, the Migration Advisory Committee advised, as one of our recommendations to the Government in 2018, after the ending of free movement, to have a seasonal workers scheme. The actual recommendation we made was that it should be at a level with wage rates above that of the national minimums, as a way to ensure that the sector was aware of the fact it had been given preferential treatment to access labour in this way. That would hopefully help encourage some degree of innovation in those areas to reduce the need of such workers.
+How important is it? The answer is very. It is an important scheme. One point I tried to make, probably not very clearly, at the start was about the importance of different areas and occupations. For example, when we talk about HGV drivers, that is different from butchers, and butchers are different from seasonal agricultural workers. When we look at, for example, at the moment, the seasonal agricultural workers scheme, I understand that Defra and Home Office have evaluated that pilot. I have understood that that evaluation will be shortly released to Parliament and will be of interest to people. I have not seen it myself on MAC. We have not seen that on the Migration Advisory Committee.
+That pilot is really important for understanding how effective this tool of allowing immigrant labour to come in to work on the seasonal workers pilot has been. That is not just effective in terms of how many people came in, but the working conditions and the experiences those workers had while being here in the UK, working in agriculture.
+Also, on the seasonal workers scheme, I will just note that my understanding is that it is just for edible horticulture. It does not need to be. My understanding is that Defra and the Home Office could have decided that it was appropriate to recruit workers into both edible and ornamental, which is flowers, for example. There is absolutely no reason why, within that existing scheme, it could not potentially meet what I have understood is a demand for workers in what is, by definition, seasonal work in areas that are often remote and do not have appropriate labour force available to work in those posts in that timescale. Understanding that specific nature of seasonal, which is not that it is continuous, is important for understanding special routes into the UK with skill levels that are below RQF 3."
+
+No specific training timeframe here.
+
+"Q166 Ian Byrne: That was a brilliant answer. It has answered a), b) and c). Madeleine, would you like to add anything to that?
+Madeleine Sumption: On the seasonal agricultural workers, one big issue is the numbers that come in under the scheme. There has been a lot of discussion. I know from previous sessions you have had as well that there has been a debate about what those numbers should be.
+One thing that is worth considering when thinking about the numbers is that obviously it makes sense to announce them in advance. Planning is helping for employers and reduces the inefficiencies and losses from not knowing what policy is going to be in advance. There is a question that is worth asking: what is the point of having a cap on the scheme and what are you trying to achieve with it? From an economic perspective, caps generally are not seen as a terribly efficient policy tool, because they introduce some arbitrariness. This employer gets some visas, but then they run out, so the other one does not, even though the circumstances are basically similar. Economists will often say, "If you want to restrict numbers, think about other ways of doing it", so maybe requiring guaranteed hours above the minimum wage or something like that.
+This may be something worth exploring with the Home Office. What is the purpose of the cap? Are there concerns about the programme? For example, is the concern that too many people might come in on the minimum wage? Is the concern about exploitation of workers? Is the goal to drive automation in the sector? There may be other ways of achieving that, rather than having a cap, which can be quite a blunt instrument to manage the programme and creates a bit of unpredictability."
+
+No specific training timeframe here.
+
+"Q167 Chair: The last question is mainly to you, Ben. Are increasing wages in the food and farming sector and the risk of a broader wage-price spiral due to labour shortages the biggest concern to you arising from various cost pressures facing the sector? What is the Bank's view of it? We were asking the previous witnesses to what extent this is going to be inflationary.
+Dr Broadbent: I will speak mainly, as I have done before, about the aggregate economy, which is what concerns us. Our remit asks us to target the CPI inflation overall. There are some things in this sector that are illustrative of wider things going on in the labour market. The answer to your question of whether it affects inflation is, certainly in the short run, yes.
+Let me step back a bit and try to give you a broad description of where the inflation we are getting now is coming from. There is a whole chunk of it, and probably the significant majority of it right now, that is not really to do with the domestic labour market at all. I mentioned earlier that one of the things that happened during the pandemic was that spending by consumers certainly had seen this huge shift, broadly speaking away from services and towards goods. That was clear within our own numbers. Even at the end of last year, we saw very strong growth
+
+Attempt 2 · Right
+-----------------
+Docs: Doc 1, Doc 2, Doc 3 · Note: Note: where it shortcut
+
+Final answer: These were the only witnesses who provided specific training timeframes for their respective sectors (butchers/meat processing and HGV driving). | Your answer (gold): Charlie Dewhirst, Nick Allen, Tom Southall
+
+Where it shortcut: Medium model again relied on the same three verbatim quotes; the '18 months' butcher passages and the 'six to 12 months' driver passage were sufficient without any cross-document reasoning.Doc 2 Doc 3
+
+How it got there: It searched Doc 1 and Doc 2 for training timeframes, identifying Charlie Dewhirst and Nick Allen in Doc 2 giving 18-month figures and Tom Southall in Doc 3 giving six-to-12-month driver training.
+
+Passages quoted:
+
+- Quoted Doc 2: “around 18 months, I believe, from scratch to being up to speed. You can make them relatively competent around six months, but it isn’t simple.”
+- Quoted Doc 2: “It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through.”
+- Quoted Doc 3: “drivers take six to 12 months to train from scratch on average.”
+- Quoted Doc 2: “On the training of a butcher for the pig industry, how long does it take to train a good butcher? Charlie Dewhirst: You will get chapter and verse from Nick Allen in your next session. It is around 18 months, I believe, from scratch to being up to speed. You can make them relatively competent around”
+- Quoted Doc 2: “It is 18 months once you are trained; it is not a three or four-month course”
+
+Named Doc 1, Doc 2, Doc 3
+
+Full answer
+-----------
+
+Based on the evidence presented in the documents, three witnesses put a figure on how long it takes to train a new worker:
+
+1. Charlie Dewhirst (Senior Policy Adviser, National Pig Association) – In response to Q7, he stated that training a butcher takes "around 18 months, I believe, from scratch to being up to speed. You can make them relatively competent around six months, but it isn't simple."
+2. Nick Allen (Chief Executive, British Meat Processors Association) – In his response during the session (Q73), he confirmed that training takes 18 months, stating: "It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+3. Tom Southall (Policy Director, Cold Chain Federation) – In response to Q137, he noted that "drivers take six to 12 months to train from scratch on average."
+
+These were the only witnesses who provided specific training timeframes for their respective sectors (butchers/meat processing and HGV driving).
+
+Reasoning
+---------
+
+The user is asking which witnesses put a figure on how long it takes to train a new worker, based on the evidence presented in the documents.
+
+Let me search through the documents for references to training time for workers.
+
+From Document 1 (the main report):
+- Paragraph 7: "Mr Bradshaw also cautioned that, at a farm level, 'we are probably seven to 10 years away before [technology] is really transformational'." - This is about technology, not training time.
+- Looking through the report, I see references to training but not specific figures for training time.
+
+From Document 2 (Oral evidence 26 October 2021):
+
+1. Charlie Dewhirst (National Pig Association) - Q7: "On the training of a butcher for the pig industry, how long does it take to train a good butcher? Charlie Dewhirst: You will get chapter and verse from Nick Allen in your next session. It is around 18 months, I believe, from scratch to being up to speed. You can make them relatively competent around six months, but it isn't simple."
+
+2. Nick Allen (British Meat Processors Association) - Q73: "We need to look at the education side... we need a longer-term plan for this. As the people in the poultry sector were saying in the last session, this is a two-year issue, not something that is going to get resolved in six months..."
+- Also in Q73: "Once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through." - Wait, this doesn't give a specific figure.
+- Later in Q73: "It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through." - Actually, looking at the document again, I see "It is 18 months once you are trained; it is not a three or four-month course..." - Let me check Q92.
+
+In Q92: "Nick Allen: ...Butchery, in particular, is a life skill and it is a great skill. It is a very satisfying skill. We ought to be able to attract some people into it."
+
+Wait, I need to look more carefully at Q73 and Q92.
+
+From Document 2, Q73: "It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through." - Actually, looking at the text: "It is 18 months once you are trained" - I see this in the text but need to find it.
+
+Let me search again:
+
+From Q92 (Nick Allen): "Butchery, in particular, is a life skill and it is a great skill..."
+And earlier in Q92: "If those sums do not add up, we need to look at our immigration policy and see where else we can get them."
+
+Actually, from the text I can see: In Q73, Nick Allen says: "It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+Wait, I need to look more carefully at the transcript text.
+
+Looking at Q73 more carefully:
+"Once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+Actually, looking at the text: "We need to look at the education side... It is very disappointing, for all the talk there has been about this, that in the T courses that have come out this week there is no mention of food processing... We need a longer-term plan for this. As the people in the poultry sector were saying in the last session, this is a two-year issue, not something that is going to get resolved in six months, so we need a longer-term plan."
+
+And later in Q73: "It is 18 months once you are trained" - I need to find the exact quote.
+
+Looking at the transcript:
+"It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+Actually, the text says: "It is 18 months once you are trained" - I don't see this exact phrase in the document text. Let me look again.
+
+In Q73, Nick Allen says: "Once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+And in Q92: Nick Allen says: "Butchery, in particular, is a life skill..."
+
+But I also see this in Document 1, paragraph 7: references to training but I don't see a specific figure about training time.
+
+Let me look at Document 1 more carefully:
+
+Document 1 mentions:
+- Paragraph 7: "The sector has already invested in technology and automation... Tom Bradshaw... said that 'exciting' new technology would 'supplement labour rather than replace labour'"
+- "Mr Bradshaw also cautioned that, at a farm level, 'we are probably seven to 10 years away before [technology] is really transformational'."
+
+These are about technology, not training time.
+
+In Document 2:
+- Q7 - Charlie Dewhirst: "It is around 18 months, I believe, from scratch to being up to speed. You can make them relatively competent around six months"
+- Q73 - Nick Allen: I see the reference to training but need the specific quote.
+
+Looking at Q73 in Document 2:
+"Nick Allen: ...we need a longer-term plan for this. As the people in the poultry sector were saying in the last session, this is a two-year issue..."
+
+And: "It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+Wait, I'm not sure if that's in the document. Let me check again.
+
+In Document 2, looking at the text of Q73:
+"To pick up on what Ian was saying about the export health certification side and the costs of that, so far we have spent about £50 million to £60 million just on export health certificates alone..."
+
+And earlier: "The English test is a real barrier..."
+"We also need to look at the education side. It is very disappointing, for all the talk there has been about this, that in the T courses that have come out this week there is no mention of food processing. It is just to encourage people to take up more vocational work rather than just head off to university. We need a longer-term plan for this. As the people in the poultry sector were saying in the last session, this is a two-year issue, not something that is going to get resolved in six months, so we need a longer-term plan."
+
+And later in Q73: "It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+Wait, I need to actually find the exact quote in the document. Let me scan Document 2 more carefully.
+
+Looking at Q73:
+"It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+Actually, I'm not finding that exact quote. Let me check the index in my mind.
+
+Wait, looking at Q92 (Derek Thomas questions):
+"It is incredibly challenging now. That said, we have now moved into a different financial climate; more pay is being made. Butchers now can get close to £40,000. That might alter things considerably and that has not been there in the past. It may encourage people into it. We need to make it more attractive and try to explain to people what they are getting. Butchery, in particular, is a life skill and it is a great skill."
+
+And earlier in Q73:
+"It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+Hmm, I'm still not finding the exact phrase. Let me look at the text again.
+
+Actually, I see in Q73:
+"It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+I think the document might have this. But to be safe, let me focus on what I can confirm.
+
+From Charlie Dewhirst (Q7): "It is around 18 months, I believe, from scratch to being up to speed. You can make them relatively competent around six months, but it isn't simple."
+
+From Nick Allen (I need to check if he gives a figure):
+In Q73, Nick Allen says: "It is 18 months once you are trained" - I need to check if this is actually in the text.
+
+Looking at the text of Q73:
+"It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+Wait, I'm making this up. Let me actually read the document carefully.
+
+Actually, looking at Q73 in Document 2, I see:
+"We also need to look at the education side... We need a longer-term plan for this..."
+
+I see: "Once you are trained; it is not a three or four-month course..."
+
+But I need to check for specific figures.
+
+In Q92, Nick Allen says: "It is 18 months" - let me check.
+
+Actually, I think the key witnesses are:
+1. Charlie Dewhirst - who said it takes about 18 months to train a butcher from scratch to being up to speed, and about 6 months to make them relatively competent.
+2. Nick Allen - who may have given a figure.
+
+Let me search for "18 months" in the documents.
+
+In Document 2, Q7:
+"You will get chapter and verse from Nick Allen in your next session. It is around 18 months, I believe, from scratch to being up to speed. You can make them relatively competent around six months, but it isn't simple."
+
+This is Charlie Dewhirst.
+
+In Q73, Nick Allen discusses training but I'm checking for specific figures.
+
+Actually, in Q73, Nick Allen says: "It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+Wait, I'm looking at the text:
+"Ian Wright: ...One of my members... he has had some automation plans in process for some time... They are running about a year behind on that project. Another one, which had about 800 or 900 workers working there, reckoned he could look at some further automation and he had plans, but that would only reduce his numbers needed by about 100. They have already taken the low-hanging fruit here."
+
+Hmm, that's not helpful.
+
+Let me look at the Nick Allen quote in Q73 about training:
+"Nick Allen: ...It is 18 months once you are trained..."
+
+Actually, I found it. In Q73, Nick Allen says:
+"It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+Wait, I need to check Document 2 more carefully. Let me look at the text of Q73 again.
+
+In Document 2, Q73 (Nick Allen):
+"To pick up on a couple of things Ian said there, I completely agree with him..."
+
+No, that doesn't have it.
+
+Let me look at this passage in Q73:
+"It is very disappointing... in the T courses that have come out this week there is no mention of food processing... We need a longer-term plan for this. As the people in the poultry sector were saying in the last session, this is a two-year issue, not something that is going to get resolved in six months, so we need a longer-term plan."
+
+And: "It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+I'm not finding this. Let me try searching the text differently.
+
+Actually, I think in Q92, Nick Allen says:
+"It is 18 months" - but I need to check.
+
+Wait, in Q92, Nick Allen is talking about making jobs more attractive. The relevant quote might be elsewhere.
+
+Let me search for "18 months" in the documents.
+
+From Q7: Charlie Dewhirst says 18 months.
+From Q73: Nick Allen discusses training - let me find the exact passage.
+
+In Q73:
+"Once you are trained; it is not a three or four-month course..."
+
+But I need the 18 months figure.
+
+Actually, I see in Document 1, paragraph 7 doesn't have it.
+
+Looking at Q73 more carefully:
+"It is very disappointing... We need a longer-term plan for this. As the people in the poultry sector were saying in the last session, this is a two-year issue, not something that is going to get resolved in six months, so we need a longer-term plan. In the short term, we need to get more people here quickly to resolve this issue and take the pressure off. Then we need to start working out whether they want us to employ more British people, and how we bring those people in and train them up. It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+Actually, looking at the text:
+"It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+Hmm, I'm not sure if this is in the document or if I'm misremembering.
+
+Let me try to be systematic. I'll search the documents for "18 months" and "training".
+
+In Document 2:
+- Q7: Charlie Dewhirst: "It is around 18 months, I believe, from scratch to being up to speed. You can make them relatively competent around six months, but it isn't simple."
+- Q73: Nick Allen mentions training but I need to check for the specific quote.
+
+Actually, looking at Q73 in Document 2:
+"I was talking to one of our members last week—well, I will quote two. One made the point that they have had some automation plans in process for some time, which for an 800-people plant would have saved them 100 people, but it has fallen behind because they can't get the machines and they can't get all the equipment to do that. They are running about a year behind on that project. Another one, which had about 800 or 900 workers working there, reckoned he could look at some further automation and he had plans, but that would only reduce his numbers needed by about 100. They have already taken the low-hanging fruit here."
+
+And earlier in Q73:
+"We also need to look at the education side. It is very disappointing, for all the talk there has been about this, that in the T courses that have come out this week there is no mention of food processing. It is just to encourage people to take up more vocational work rather than just head off to university. We need a longer-term plan for this. As the people in the poultry sector were saying in the last session, this is a two-year issue, not something that is going to get resolved in six months, so we need a longer-term plan. In the short term, we need to get more people here quickly to resolve this issue and take the pressure off. Then we need to start working out whether they want us to employ more British people, and how we bring those people in and train them up. It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+I think this is the quote. Let me check if it's in the document.
+
+Looking at the document text:
+"It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+This seems to be what Nick Allen said in Q73.
+
+Also, in Document 3, I don't see specific training time figures.
+
+So the witnesses who put a figure on training time are:
+1. Charlie Dewhirst (Q7) - 18 months from scratch to up to speed, 6 months to be relatively competent.
+2. Nick Allen (Q73) - 18 months to be trained (not a 3-4 month course).
+
+Wait, I need to double check. In Q73, does Nick Allen actually say "18 months"?
+
+Looking at the passage:
+"In the short term, we need to get more people here quickly to resolve this issue and take the pressure off. Then we need to start working out whether they want us to employ more British people, and how we bring those people in and train them up. It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+I think this is the quote. Let me check if Nick Allen says this.
+
+Actually, looking at Q73, Nick Allen says:
+"It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+Yes, this appears to be what he said.
+
+Also, is there anyone else?
+
+In Document 3, Tom Southall (Cold Chain Federation) says in Q137: "For example, drivers take six to 12 months to train from scratch on average."
+
+So Tom Southall also gives a figure: 6 to 12 months for HGV drivers.
+
+Also, I should check if there are other witnesses who gave training time figures.
+
+Looking through the documents:
+- Document 1 (the report) - doesn't seem to have specific training time quotes, though it summarizes the evidence.
+- Document 2 - Charlie Dewhirst (18 months for butchers), Nick Allen (18 months for training).
+- Document 3 - Tom Southall (6-12 months for drivers).
+
+Are there any other figures?
+
+Let me check Document 2 again. In the earlier session:
+Q73 has Nick Allen talking about 18 months.
+
+Document 3:
+Q137: Tom Southall: "As I mentioned, we need to do a thorough review of what we can deliver with a domestic workforce. For example, drivers take six to 12 months to train from scratch on average."
+
+So the witnesses who gave training time figures are:
+1. Charlie Dewhirst - 18 months (or 6 months for basic competence)
+2. Nick Allen - 18 months
+3. Tom Southall - 6-12 months for HGV drivers
+
+Let me also check James Russell (BVA) - he mentions training new vets but doesn't give a specific time.
+
+Ian Wright (FDF) - doesn't give a specific training time.
+
+Graeme Dear (British Poultry Council) - doesn't give a specific training time.
+
+Derek Jarman - doesn't give a specific time.
+
+Tom Bradshaw - doesn't give a specific time.
+
+So the answer is: Charlie Dewhirst, Nick Allen, and Tom Southall.
+
+Wait, I should verify the Nick Allen quote. Let me look at Q73 again.
+
+In Document 2, Q73 (Nick Allen):
+"It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+Actually, I want to make sure. The text says:
+"In the short term, we need to get more people here quickly to resolve this issue and take the pressure off. Then we need to start working out whether they want us to employ more British people, and how we bring those people in and train them up. It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+Yes, this is Nick Allen.
+
+So the witnesses are:
+1. Charlie Dewhirst (National Pig Association) - said 18 months for a butcher to be up to speed from scratch, or 6 months to be relatively competent.
+2. Nick Allen (British Meat Processors Association) - said training takes 18 months.
+3. Tom Southall (Cold Chain Federation) - said 6 to 12 months for HGV drivers.
+
+Let me format the answer.
+
+Attempt 3 · Wrong
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): Charlie Dewhirst, Nick Allen, Tom Southall
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 4 · Right
+-----------------
+Docs: Doc 1, Doc 2, Doc 3 · Note: Note: where it shortcut
+
+Final answer: Tom Southall (Cold Chain Federation) - stated "drivers take six to 12 months to train from scratch on average" for HGV drivers | Your answer (gold): Charlie Dewhirst, Nick Allen, Tom Southall
+
+Where it shortcut: Medium model's answer reproduces the Tom Southall quote word-for-word, confirming the string-match shortcut on 'train'.Doc 3
+
+How it got there: It reviewed Doc 1 and Doc 2 for training timeframes, quoting Dewhirst's and Allen's 18-month butcher figures from Doc 2 and Southall's six-to-12-month driver figure from Doc 3.
+
+Passages quoted:
+
+- Quoted Doc 2: “around 18 months, I believe, from scratch to being up to speed”
+- Quoted Doc 2: “relatively competent around six months”
+- Quoted Doc 2: “It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through”
+- Quoted Doc 3: “drivers take six to 12 months to train from scratch on average”
+- Quoted Doc 2: “Charlie Dewhirst: You will get chapter and verse from Nick Allen in your next session. It is around 18 months, I believe, from scratch to being up to speed. You can make them relatively competent around six months, but it isn’t simple.”
+
+Named Doc 1, Doc 2, Doc 3
+
+Full answer
+-----------
+
+Charlie Dewhirst (National Pig Association) - stated it takes "around 18 months, I believe, from scratch to being up to speed" for butchers, with "relatively competent around six months"
+
+Nick Allen (British Meat Processors Association) - confirmed "It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through" for butchers
+
+Tom Southall (Cold Chain Federation) - stated "drivers take six to 12 months to train from scratch on average" for HGV drivers
+
+Reasoning
+---------
+
+Let me carefully review the documents to find witnesses who put a figure on how long it takes to train a new worker in the food and farming sector.
+
+First, I'll look through Document 1 (the main report) for mentions of training timeframes.
+
+In Document 1, paragraph 7:
+"Charlie Dewhirst: You will get chapter and verse from Nick Allen in your next session. It is around 18 months, I believe, from scratch to being up to speed. You can make them relatively competent around six months, but it isn't simple."
+
+This is from the pig sector representative (Charlie Dewhirst from National Pig Association) talking about training butchers.
+
+Also in Document 1, paragraph 73:
+"Tom Bradshaw, National Farmers' Union (NFU), said that "exciting" new technology would "supplement labour rather than replace labour" and Graeme Dear, British Poultry Council, said that investment in automation would mean "we have new skills to train people in" to operate the machinery. However, Mr Bradshaw also cautioned that, at a farm level, "we are probably seven to 10 years away before [technology] is really transformational"."
+
+This mentions a timeframe for technology adoption (7-10 years) but not specifically for training workers.
+
+In Document 1, paragraph 198:
+"Cranswick plc telling us that it had invested over £100 million in the past 10 years, so "reducing the labour need and the skills required for some of our cutting operations"."
+
+This mentions investment over 10 years but not training time.
+
+Now let me check Document 2 (oral evidence from first session).
+
+In Document 2, Q7:
+"Chair: On the training of a butcher for the pig industry, how long does it take to train a good butcher?
+Charlie Dewhirst: You will get chapter and verse from Nick Allen in your next session. It is around 18 months, I believe, from scratch to being up to speed. You can make them relatively competent around six months, but it isn't simple."
+
+This confirms Charlie Dewhirst (National Pig Association) stating 18 months to be fully up to speed, 6 months for relative competence.
+
+Later in Document 2, Q73:
+"Nick Allen: [...] It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+
+Nick Allen (British Meat Processors Association) confirms the 18-month figure for butcher training.
+
+Also in Document 2, Q137:
+"Tom Southall: I would agree with that. That short-term relief needs to be for a minimum of one year. It takes time to train people up. As I mentioned, we need to do a thorough review of what we can deliver with a domestic workforce. For example, drivers take six to 12 months to train from scratch on average."
+
+Tom Southall (Cold Chain Federation) states 6-12 months to train HGV drivers from scratch.
+
+Let me check Document 3 (second oral evidence session) for any additional mentions.
+
+In Document 3, Q161:
+"Professor Swaffield: [...] If you look at that sector over time, there has been a very interesting short, very detailed and helpful summary from ONS just recently produced about HGV drivers, the numbers of people working in the sector, the changes and the UK nationals versus EU. When you look at that, you can see a pattern of change that has been coming for quite some time. It may have been exacerbated by Covid and Brexit, but it is not something that has surprised the sector.
+There is the idea of the comment just made about bringing inactive people back into the labour force. If you are looking at the number of relatively young workers that are leaving the HGV drivers, so the 46-to-55, which is not a particularly old age group, and the fact that it is not encouraging younger drivers coming into it, that is the problem, in some sense, with that sector, or the shape of the problem. It is not necessarily a question of immigration in the way that, if you look at seasonal agricultural workers, the vast majority of workers in that sector are foreign born. It is a different question. That is worth considering."
+
+This discusses HGV drivers but doesn't give a specific training timeframe.
+
+Let me check if there are any other mentions...
+
+In Document 1, paragraph 192:
+"Mr Wright said that the sector's "own schemes and careers in business" also had a role to play, such as apprenticeships and vocational training."
+
+But no specific timeframe given.
+
+In Document 1, paragraph 196:
+"Q40 Q93 196 Q40 197 Q265"
+
+This appears to be reference markers, not content.
+
+In Document 2, Q92:
+"Nick Allen: [...] Butchery, in particular, is a life skill and it is a great skill. It is a very satisfying skill. We ought to be able to attract some people into it.
+It starts with how many jobs we have in this country and how many people we have. I think Ian said, "Do we know that?" Do we understand what we have here? If we do not know those answers—we need to look at automation, but automation is a long way down the track. It will get rid of labour, certainly in our field and certainly a lot in food production areas, because a lot of it is very manual."
+
+No specific training timeframe here.
+
+In Document 2, Q93:
+"Ian Wright: [...] We have to make the careers more attractive. We have to provide much better training. We have to help the DfE to understand why it needs to provide qualifications. Food barely appears in the national curriculum. It barely appears in the T-levels and you have to fight to get it in there. However, we have to have that fight. If we cannot do it through the formal education system, we have to do it through our own schemes and careers in business. Once they do come into the food industry, at any point, they tend to stay. They like it. It is exciting. It is interesting. It is very much in touch with the consumer, with the shopper, and therefore it is a very lively career."
+
+Mentions training but no specific timeframe.
+
+So from my review, the witnesses who put specific figures on training timeframes are:
+
+1. Charlie Dewhirst (National Pig Association) - 18 months to be fully up to speed for butchers, 6 months for relative competence
+2. Nick Allen (British Meat Processors Association) - confirmed 18 months for butcher training
+3. Tom Southall (Cold Chain Federation) - 6-12 months to train HGV drivers from scratch
+
+Let me double-check if there are any others I missed.
+
+In Document 1, paragraph 72:
+"The Association of Independent Meat Suppliers highlighted that there was an "educational void" between GCSEs and degree level, and the recent report of the independent National Food Strategy said that "without an A-level to go on to, the number of children taking the food GCSE has also declined". Mr Wright said that the sector's "own schemes and careers in business" also had a role to play, such as apprenticeships and vocational training."
+
+This mentions apprenticeships and vocational training but no specific duration.
+
+In Document 1, paragraph 197:
+"The Secretary of State said that "getting the right kind of apprenticeships and skills in place to support a new generation is going to be really important" in order to address longstanding negative perceptions of working in the sector."
+
+Again, mentions apprenticeships but no duration.
+
+I think I've found all the specific timeframes mentioned by witnesses.
+
+So the witnesses who put figures on training time are:
+1. Charlie Dewhirst (National Pig Association) - 18 months for butchers (6 months for relative competence)
+2. Nick Allen (British Meat Processors Association) - 18 months for butchers
+3. Tom Southall (Cold Chain Federation) - 6-12 months for HGV drivers
+
+Let me make sure these are all explicitly stated as training timeframes for new workers.
+
+Yes:
+- Charlie Dewhirst: "It is around 18 months, I believe, from scratch to being up to speed. You can make them relatively competent around six months, but it isn't simple."
+- Nick Allen: "It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through."
+- Tom Southall: "For example, drivers take six to 12 months to train from scratch on average."
+
+These are all clear statements about training duration for specific roles.
+
+Attempt 5 · Right
+-----------------
+Docs: Doc 1, Doc 2, Doc 3 · Note: Note: where it shortcut
+
+Final answer: These witnesses are listed in no particular order. | Your answer (gold): Charlie Dewhirst, Nick Allen, Tom Southall
+
+Where it shortcut: Medium model quoted the Southall training passage alongside an unrelated seasonal-visa quote, yet still reached the gold set, showing the training passages alone carry the answer.Doc 3
+
+How it got there: It scanned Doc 1, Doc 2 and Doc 3 for training-time figures, finding Dewhirst and Allen in Doc 2 citing 18 months and Southall in Doc 3 citing six to 12 months for drivers.
+
+Passages quoted:
+
+- Quoted Doc 2: “It is around 18 months, I believe, from scratch to being up to speed.”
+- Quoted Doc 2: “It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through.”
+- Quoted Doc 3: “One thing that is worth considering when thinking about the numbers is that obviously it makes sense to announce them in advance.”
+- Quoted Doc 3: “It takes time to train people up. As I mentioned, we need to do a thorough review of what we can deliver with a domestic workforce. For example, drivers take six to 12 months to train from scratch on average.”
+
+Named Doc 1, Doc 2, Doc 3
+
+Full answer
+-----------
+
+Based on the evidence presented to the committee, the following witnesses provided figures for the time required to train new workers:
+
+- Charlie Dewhirst (Senior Policy Adviser, National Pig Association) stated that it takes around 18 months to train a butcher from scratch to become up to speed (Document 1, paragraph 7; Document 2, Q7).
+- Nick Allen (Chief Executive Officer, British Meat Processors Association) also mentioned that training a butcher takes 18 months (Document 1, paragraph 50; Document 2, Q73).
+- Tom Southall (Policy Director, Cold Chain Federation) indicated that training HGV drivers takes 6 to 12 months from scratch on average (Document 3, Q137).
+
+These witnesses are listed in no particular order.
+
+Reasoning
+---------
+
+Alright, I need to go through the documents and find any witnesses who mentioned how long it takes to train a new worker. The question is asking for witnesses who put a figure on training time, and I should list them in any order.
+
+Starting with Document 1, which is the main report. I recall there was a section about training times. Let me skim through it. In Chapter 4, under the Skilled Worker Visa section, there's mention of training but not specific figures. Wait, looking at the pig sector part, there's a mention about butchers requiring 18 months of training. Yes, in paragraph 7, it says: "It is around 18 months, I believe, from scratch to being up to speed." That's from Charlie Dewhirst of the National Pig Association. Also, Nick Allen from the British Meat Processors Association mentioned in paragraph 50 that training takes 18 months. So that's one witness.
+
+Moving to Document 2, which is the oral evidence from October 26, 2021. In the first panel, Charlie Dewhirst says: "It is around 18 months, I believe, from scratch to being up to speed." That's in Q7. Later, Nick Allen in Q73 mentions: "It is 18 months once you are trained; it is not a three or four-month course that you can just pull people off the street and put them through." So both Charlie Dewhirst and Nick Allen gave figures here.
+
+In the second panel of Document 2, there's no specific training figure mentioned. Moving to Document 3, the oral evidence from November 9, 2021. I don't see any specific training time figures mentioned here. There's talk about HGV drivers taking six to 12 months to train, but that's in Tom Southall's testimony. Let me check Q137: "One thing that is worth considering when thinking about the numbers is that obviously it makes sense to announce them in advance." Wait, that's not about training time. Earlier, in Q137, Tom Southall says: "It takes time to train people up. As I mentioned, we need to do a thorough review of what we can deliver with a domestic workforce. For example, drivers take six to 12 months to train from scratch on average." Yes, that's in Q137. So Tom Southall gave a figure for HGV drivers.
+
+Also, in Document 3, Professor Jo Swaffield from the University of York, who is a member of the Migration Advisory Committee, doesn't give a specific training time. Madeleine Sumption doesn't either. Ben Broadbent from the Bank of England doesn't mention training times.
+
+So, summarizing the witnesses who put a figure on training time:
+
+1. Charlie Dewhirst (National Pig Association) - mentioned 18 months for butchers.
+2. Nick Allen (British Meat Processors Association) - mentioned 18 months for butchers.
+3. Tom Southall (Cold Chain Federation) - mentioned 6 to 12 months for HGV drivers.
+
+I should list them in any order, as per the question. So, I'll list Charlie Dewhirst, Nick Allen, and Tom Southall.
+
+Attempt 6 · Wrong
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): Charlie Dewhirst, Nick Allen, Tom Southall
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+------------------------------------------------------------------------
+Run 1 · Too easy · Earlier version — does not count
+Oct 13, 2026, 4:05 PM · Version 402a46 · Low 4/5 · Medium — · High —
+------------------------------------------------------------------------
+
+What changed before this run: first run
+
+Your answer: £6,020
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: —
+
+Final answer: £1,300 (a quoted £40,000 starting salary versus the £38,700 threshold). | Your answer (gold): £6,020
+
+Full answer
+-----------
+
+£1,300 (a quoted £40,000 starting salary versus the £38,700 threshold).
+
+Reasoning
+---------
+
+We need answer: "Had the Migration Advisory Committee's advice on butchers been accepted, by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?" Need knowledge about UK Migration Advisory Committee (MAC) advice on butchers, quoted starting salary, and Skilled Worker Visa salary threshold. Need determine difference.
+
+Recall context: In 2023/2024 MAC reviewed shortage occupation list. They recommended adding some occupations including butchers? Or they advised against? Let's recall precisely.
+
+The UK government in December 2023 announced measures to reduce net migration, including removing shortage occupation list discount and raising salary threshold for skilled worker visa to £38,700. The MAC had conducted a review of the shortage occupation list and made recommendations in October 2023. Among recommendations, they suggested retaining some occupations on the list but removing the 20% discount on going rate. They also recommended adding some occupations: e.g., bricklayers, roofers, carpenters, and possibly butchers? Wait need check mental.
+
+Actually in October 2023 MAC published review recommending 8 occupations be added to shortage occupation list for 2024: including bricklayers, masons, roofers, roof tilers and slaters, carpenters and joiners, plasterers, and possibly others like construction trades and fishing. Did they include butchers? I think butchers were not added? Or there was a specific mention of butchers in the context of salary threshold?
+
+Let's parse the question: "Had the Migration Advisory Committee's advice on butchers been accepted, by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?" This sounds like MAC advised that butchers should be on shortage list with a specific going-rate salary that was above the new threshold? Or they quoted a starting salary for butchers that exceeded the threshold by some amount, highlighting irony that butchers wouldn't qualify despite being in shortage?
+
+Need recall news articles around December 2023 discussing the new £38,700 salary threshold and how it affects various jobs. There was mention that butchers, chefs, etc., have starting salaries lower than threshold, but MAC had recommended they be added? Or maybe MAC advised that butchers should have a salary threshold of £38,960? Hmm.
+
+Let's recall details of Skilled Worker Visa salary threshold changes: General threshold raised from £26,200 to £38,700 in April 2024. There are going rates for specific occupations based on Standard Occupational Classification codes. For butchers (SOC code 5431?), the going rate might be around £30,000? Or the "quoted starting salary" might be £38,000? Need be precise with "by how much... exceeded" implying a specific number, probably £10,000? Or £1,000? Let's think.
+
+The question asks "Had the Migration Advisory Committee's advice on butchers been accepted..." This sounds like MAC made a recommendation specifically about butchers being included on the Immigration Salary List (the replacement for shortage occupation list) with a specific going rate. The government did not accept that advice? Actually in December 2025? No, need correct timeline.
+
+In December 2023 government announced interim measures: retaining shortage occupation list but removing 20% discount, and asking MAC to review the list to become the Immigration Salary List. The MAC reported back in? Maybe in 2024? Let's recall: In February 2024? Or later? Actually the MAC was commissioned in December 2023 to review which occupations should be on the temporary shortage list and also to review the graduate visa route. They published their report in May 2024? Yes, in May 2024 MAC published a report recommending 21 occupations be placed on the Immigration Salary List, including some care workers, etc. Wait need correct.
+
+Let's recall news headlines in May 2024: MAC recommended 21 jobs should be on UK shortage list, including plumbers, welders, and also? The report said only 21 occupations should qualify for lower salary threshold of £30,960? Or was it £23,200? Let's recall: The Immigration Salary List allows a 20% discount on the general threshold, so £30,960 (80% of £38,700). The MAC recommended retaining 21 occupations on this list. Among them were perhaps: chemical scientists, biological scientists, graphic designers, etc.? Hmm no, that sounds like the old list.
+
+Actually there were two lists: the Shortage Occupation List (SOL) with about 53 occupations, then in 2024 replaced by Immigration Salary List (ISL) with 23? Let's check mental: In April 2024, the government replaced the SOL with ISL containing 23 occupations, including care workers, senior care workers, and some construction and fishing jobs. Then they asked MAC to review whether more should be added. The MAC reported in October 2024? Or in 2025?
+
+Wait the question mentions "skilled butcher's quoted starting salary" exceeding the Skilled Worker Visa salary threshold. This sounds like an example used in a news article explaining that despite butchers being in shortage, the salary threshold is too high. Maybe the article said butchers typically start at £26,000? No, that'd be below £38,700.
+
+But the wording "Had the Migration Advisory Committee's advice on butchers been accepted..." suggests MAC advised including butchers on the list with a specific going rate salary. Let's recall that in the October 2025? Hmm.
+
+Perhaps it's from a specific exam or quiz about UK immigration policy figures. The figures might be: MAC advised that the going rate for a butcher should be £38,700? Or they quoted a starting salary of £37,000? Wait need examine logic.
+
+The question asks "by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?" So there is a quoted starting salary for a skilled butcher, and there is the visa salary threshold (probably £38,700). If the advice had been accepted, then butchers would be on the list and have a specific going-rate salary? Actually the salary threshold for skilled worker is either the general threshold (£38,700) or the going rate for the occupation, whichever is higher. For some occupations, the going rate is higher. If MAC advised that the going rate for butchers should be set at a certain level, say £39,000, then that exceeds the general threshold by £... but they ask "skilled butcher's quoted starting salary have exceeded..." Hmm maybe MAC quoted a specific starting salary figure in their report, like £40,000? Or £41,000?
+
+Let's recall news in late 2023/early 2024 about butchers being in demand. There was a story about British butchers and the shortage of skilled butchers due to Brexit and COVID. The government was urged to add butchers to the shortage list. The industry said they need to recruit from abroad, but the salary threshold of £38,700 was too high because butchers earn around £26,000-£30,000. Wait that sounds right: butchers earn about £25k-£32k, below the threshold, so they can't recruit overseas.
+
+But then there was also the MAC review in October 2023 that did NOT recommend adding butchers? Or did they?
+
+Let's search mental database for "Migration Advisory Committee butchers salary £38,700 exceeded by" Maybe in the MAC report they listed going rates for various occupations if added. For butchers, the 25th percentile salary might be £27,000? Not exceeding.
+
+Wait, maybe the question is referencing a specific figure mentioned in a parliamentary debate or news article: The MAC advised that butchers should be added with a salary of £39,000? No, that'd be high for a butcher.
+
+Let's systematically recall the MAC report published in October 2023 titled "Review of the Shortage Occupation List". In that report, they evaluated requests for adding occupations. One request was for butchers (SOC 5431?). They might have said that butchers meet the criteria for being in shortage? Actually I think they did recommend adding butchers? Let's check mental consistency: The 2023 review added 8 construction and fishing jobs. I don't recall butchers being among them. The eight were: 5315 Carpenters and joiners; 5316 Glaziers, window fabricators... wait no.
+
+Let's list the ones added in 2024 to ISL initially (April 2024): The list included:
+- 1212 Managers and proprietors in forestry, fishing and related services
+- 2112 Biological scientists and biochemists
+- 2115 Social and humanities scientists
+- 2142 Graphic and multimedia designers
+- 3111 Laboratory technicians
+- 3212 Pharmaceutical technicians
+- 3411 Artists
+- 3414 Dancers and choreographers
+- 3417 Photographers, audio-visual and broadcasting equipment operators
+- 3422 Clothing, fashion and accessories designers
+- 5113 Horticultural trades
+- 5213 Welding trades
+- 5232 Vehicle body builders and repairers
+- 5245 Boat and ship builders and repairers? Hmm not correct.
+
+Actually that's too many. Let's not confuse.
+
+But there was also a temporary list for 2021 post-Brexit including butchers? Yes! In 2021, the government added butchers, meat processors, and poultry workers to the shortage occupation list temporarily? Let's recall: In October 2021, the UK added 5,000 temporary visas for poultry workers and 5,500 for HGV drivers, and also added butchers? Wait there was a scheme for pork butchers: In October 2021, the government announced up to 800 temporary visas for pork butchers for up to 6 months. Yes! That was a specific scheme for pork butchers, not the general SOL. They allowed temporary visas for pork butchers with a salary? The salary threshold was not applied? Or they had to meet £25,600? Hmm.
+
+Then in 2023, the MAC was asked to review the SOL. The industry wanted butchers on the permanent list. The MAC might have evaluated and said no, they don't meet the criteria, or they quoted salary figures.
+
+But the question specifically mentions "skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold" with "Had the MAC's advice... been accepted". This sounds like MAC said butchers should be on the list and the going rate should be £X, which is actually higher than £38,700, so it's ironic.
+
+Wait, maybe it's about the "going rate" for butchers being £30,960? No that's the discounted threshold.
+
+Let's parse the wording precisely: "Had the Migration Advisory Committee's advice on butchers been accepted, by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?"
+
+This sounds like: MAC advised that a skilled butcher should be paid a starting salary of £X. The Skilled Worker Visa salary threshold is £Y. The difference X - Y = ?
+
+We need identify X and Y.
+
+The Skilled Worker Visa salary threshold (general) is £38,700 (from April 2024). So Y = £38,700.
+
+What is X? "a skilled butcher's quoted starting salary" Maybe in the MAC report they quoted the going rate for butchers as £39,700? Or £41,000?
+
+Actually I think I recall a news story in December 2023 listing jobs that pay less than £38,700 and thus won't qualify. For butchers, the average salary was around £28,000? Or maybe £32,000? Not exceeding.
+
+But wait, they ask "have exceeded the... threshold" which means X > Y. So the butcher's salary is higher than £38,700. How much higher?
+
+Could be that MAC advised that butchers should be paid £41,700? No that sounds high.
+
+Let's recall that in the SOL, there are "going rates" specific to each occupation, usually set at the 25th percentile of earnings. For butchers, maybe the going rate is around £27,000? That's below.
+
+But the phrase "quoted starting salary" might come from a specific job advertisement mentioned in the report? Or maybe it's from a government document listing example salaries?
+
+Actually, there might be a specific figure in the MAC's October 2023 report where they discuss butchers and cite a "quoted starting salary of £37,500"? No, that's below £38,700 by £1,200.
+
+Let's think differently. The question might be from a quiz about UK immigration figures in 2024. The answer might be a round number like £10,000. But need be precise.
+
+We need recall the exact news headline: Maybe in December 2023, after announcing the £38,700 threshold, people pointed out that the salary for a skilled butcher in the UK is about £28,000, falling short by £10,000. But the question says "Had the Migration Advisory Committee's advice on butchers been accepted, by how much would a skilled butcher's quoted starting salary have exceeded..." That sounds opposite: if MAC advice had been accepted, then the salary quoted for butchers (perhaps in the job listing for visa sponsorship) would be high enough.
+
+Wait, there's also the concept that for jobs on the shortage occupation list, the salary threshold is lower: £30,960 (80% of £38,700) but also must meet 80% of the going rate. If butchers were on the list, employers could pay 80% of the going rate. But the question mentions "skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold" - maybe they mean the going rate for butchers (the full rate, not discounted) is higher than £38,700.
+
+Let's check mental data on UK going rates for butchers (SOC 5431). The going rate might be based on ASHE data. For butchers, median earnings might be around £28,000? Or £32,000? Not over £38k.
+
+But there is also "skilled butcher" maybe in a specific region like London?
+
+Alternatively, maybe the salary threshold referred to is not the general £38,700 but the old one of £26,200. But the question mentions "Skilled Worker Visa salary threshold" which was updated. Depending on the time of the question, it might be £26,200? No, that's outdated now but was in place until April 2024.
+
+However, the phrase "Had the Migration Advisory Committee's advice on butchers been accepted..." could refer to a specific recommendation in the MAC's 2024 report (published in October 2024?). Let's recall in October 2024 MAC published a report on net migration and also maybe on the Immigration Salary List? Actually in October 2024 they published "Annual Report" and also in December 2024 they published a report on family and work visas? Hmm.
+
+Wait, there was a report in May 2024: "Migration Advisory Committee report on the Immigration Salary List". In that report, they recommended 21 occupations be included. Among them were not butchers? Let's recall the 21 occupations on ISL after that report? Actually the government initially put 23 occupations on ISL in April 2024. Then MAC was asked to review. In their report (published in October 2024? Or in 2025?), they recommended retaining 23? Or reducing?
+
+Specifically, in December 2024? Let's recall news in late 2024: The MAC said that the government should not extend the list and that only certain jobs should remain. Or they said 21 jobs should stay?
+
+Actually I recall in October 2024, MAC published a report saying that the care sector should be able to recruit overseas but with conditions. That was about care workers.
+
+But also there was a report in 2025? Let's not overfixate.
+
+The question sounds specific: "Had the Migration Advisory Committee's advice on butchers been accepted, by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?"
+
+This sounds like there was a specific "quoted starting salary" mentioned in the MAC report for butchers, maybe £41,000? And the threshold is £38,700, so the excess is £2,300? Or maybe £29,000 vs £26,200?
+
+We need be accurate.
+
+Let's recall news coverage in December 2023 listing jobs affected by the new £38,700 threshold. Many news outlets listed jobs with average salaries below the threshold: care workers (£21,000), nurses (£28,000?), chefs (£26,000?), butchers? Let's check mental news headlines: In December 2023, The Guardian or BBC might have listed jobs that wouldn't qualify, including "butchers with average salary of £26,000"? Or was it "plumbers earning £32,000"?
+
+But the question frames it positively: "skilled butcher's quoted starting salary have exceeded..." So maybe in the MAC report they said butchers should be paid £41,000? That'd be surprising.
+
+Let's recall that in October 2021, temporary visas for butchers required them to be paid at least £25,600 and be skilled (have experience?). The salary was not high.
+
+However, there is also a specific job title "skilled butcher" in the pork industry with salary maybe £35,000?
+
+We need examine logic: The question asks "Had the Migration Advisory Committee's advice on butchers been accepted..." This sounds like the MAC advised NOT accepting butchers? Or advised accepting?
+
+Actually, there was a news story in late 2023 that the government rejected MAC's advice to add certain jobs, including butchers? Let's check mental news: In December 2023, the government announced immigration changes. They said they would ask MAC to review the shortage list. At that time, there was already a list. Did they reject some of MAC's prior recommendations?
+
+In October 2023, MAC published its review recommending that 8 occupations be added to the SOL. The government accepted all eight? Or did they reject some? Let's check: The eight recommended were:
+1. Bricklayers and masons
+2. Roofers, roof tilers and slaters
+3. Carpenters and joiners
+4. Plasterers
+5. Construction and building trades not elsewhere classified?
+Wait that's 5. Maybe also:
+6. Fishing industry jobs?
+Actually I think they recommended adding 5 construction jobs and 2 fishing jobs? Or 8 total.
+
+Specifically, in October 2023 MAC recommended adding:
+- 5315 Carpenters and joiners
+- 5319 Construction and building trades n.e.c.
+- 5322 Floorers and wall tilers? No.
+- 5323 Painters and decorators? No.
+
+Let's not list precisely. But I think butchers were NOT among them. So "the MAC's advice on butchers" might have been "do not add butchers" or "add them"?
+
+Wait, there was also a separate request about butchers? Maybe the meat industry asked for butchers to be added, but MAC said no, they don't meet the criteria because salaries are adequate? Or they said yes?
+
+Let's recall in 2021 there was temporary scheme for pork butchers. By 2023, that scheme ended. The industry wanted a permanent addition. The MAC might have evaluated butchers in their 2023 review and said they shouldn't be on the list because the pay is too low? Or they said they should?
+
+Actually, in the 2023 review, they received requests for 26 occupations. They recommended 8 be added. Among the ones they rejected might have been butchers, chefs, etc. Yes, that sounds right: Many industries requested, but MAC only recommended 8. The rejected ones included butchers, chefs, and others.
+
+But the question says "Had the Migration Advisory Committee's advice on butchers been accepted..." Wait if MAC advised NOT to add them, then "had their advice been accepted" means butchers are NOT on the list. Then "by how much would a skilled butcher's quoted starting salary have exceeded..." That doesn't flow.
+
+Alternatively, MAC might have advised that butchers SHOULD be added, and quoted a specific starting salary that is high. If that advice had been accepted, then that salary (the going rate) would be the required salary, and it exceeds the general threshold by some amount.
+
+But wait, if they're on the shortage list, the salary required is 80% of going rate, but also must be at least £30,960. So the "quoted starting salary" might be the going rate multiplied? No.
+
+Let's recall specific figures in the 2021 temporary scheme for pork butchers: They needed to pay at least £25,600? Or maybe £26,200? Actually the skilled worker visa required £25,600 at that time, but they could apply for temporary visas with lower?
+
+This is too ambiguous. Let's try to recall if there was a specific figure mentioned in news about butchers and £38,700. Maybe there was a headline: "Butchers start on £37,500, but need £38,700 for visa" - then the difference is £1,200? Or "Butchers earn £28,
+
+Low model
+=========
+
+Attempt 1 · Right
+-----------------
+Docs: Doc 1, Doc 2 · Note: —
+
+Final answer: - £25,600 threshold and 20% SOL reduction: Report paragraphs on Skilled Worker Visa and SOL operation – Document 1 (paras 39, 53–58). | Your answer (gold): £6,020
+
+Passages quoted:
+
+- Quoted Doc 1: “meet the earnings threshold of £25,600”
+- Quoted Doc 1: “Talking specifically about butchers, Mr Foster said that putting the role on the SOL would not help as the pay being offered by recruiting firms was above £25,600 in any case.”
+
+Named Doc 2, Doc 1
+
+Full answer
+-----------
+
+Based on the documents:
+
+- A skilled butcher’s quoted starting salary is £26,500 (rising to £35,000–£40,000) – stated in the oral evidence (Charlie Dewhirst, 26 Oct 2021).
+- The general Skilled Worker Visa salary threshold is £25,600 – referenced in the report (e.g., Cranswick plc notes butcher vacancies “meet the earnings threshold of £25,600”).
+- Being on the Shortage Occupation List reduces the required salary by 20%, so the applicable threshold would be £20,480 (80% of £25,600) – as explained in the immigration policy section and implied by the Minister’s comment that SOL status “would not help as the pay … was above £25,600 in any case.”
+
+So, had butchers been placed on the SOL:
+
+£26,500 − £20,480 = £6,020
+
+The quoted starting salary would have exceeded the (reduced) Skilled Worker Visa salary threshold by £6,020.
+
+(For comparison, it exceeds the standard £25,600 threshold by only £900, which is why the Minister argued SOL listing would make little practical difference.)
+
+Sources:
+
+- Salary figure: Oral evidence, 26 Oct 2021 (Charlie Dewhirst) – Document 2.
+- £25,600 threshold and 20% SOL reduction: Report paragraphs on Skilled Worker Visa and SOL operation – Document 1 (paras 39, 53–58).
+
+Reasoning
+---------
+
+We need answer based on input docs. Need identify MAC advice on butchers being added to SOL, which reduces salary threshold by 20%. Need determine by how much quoted starting salary exceeded threshold. From document: Cranswick plc? Actually in document 1: "Cranswick plc ... said that while 'the skilled vacancies for butchers meet the earnings threshold of £25,600', the English language requirements 'remain a hurdle ...'" Also Nick Allen? Let's check precisely. Need "Had the Migration Advisory Committee's advice on butchers been accepted, by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?"
+
+Need understand SOL listing allows salary threshold reduced by 20% from £25,600 => £20,480? Wait threshold for skilled worker visa is £25,600 general, but occupation-specific may differ. For butchers maybe £26,200? Need check docs.
+
+Let's search mental: In doc 1 paragraph 58: "Talking specifically about butchers, Mr Foster said that putting the role on the SOL would not help as the pay being offered by recruiting firms was above £25,600 in any case." So salary offered is above £25,600. But we need "quoted starting salary" for skilled butcher mentioned elsewhere: In doc 2 Q8? Actually in doc 2 Charlie Dewhirst? No, in doc 1 paragraph 45? Let's recall: In doc 1 paragraph 45? Let's scan mental of doc 1: "Cranswick plc ... said that while 'the skilled vacancies for butchers meet the earnings threshold of £25,600', ..." Another place: "We have been increasing the wages... butcher can get close to £40,000... butchers now can get close to £40,000..." That's Nick Allen in doc 2? Wait need precise "quoted starting salary" "skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold"
+
+Let's examine doc 2 transcript: Q7? Actually in doc 2 Q7 Chair asks "how long does it take to train a good butcher?" Charlie Dewhirst? No, then Q8? Let's search mental precisely: In doc 2, Charlie Dewhirst said? Not that. Maybe in doc 1 paragraph 50? Let's read mental sections: Paragraph 50 in doc 1 lists costs. Not salary.
+
+But there is explicit: "These are people who are paid probably £500 to £600 a week, a skilled butcher, I suspect." That's Chair in doc 2? Actually in doc 2 Q8 Chair says "These are people who are paid probably £500 to £600 a week..." That equals £26,000-£31,200. Not precise.
+
+But the question asks "Had the Migration Advisory Committee's advice on butchers been accepted, by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?"
+
+We need determine the SOL-reduced threshold and subtract from quoted starting salary. Need identify quoted starting salary figure in docs. Let's search mental for "starting salary" phrase. In doc 1 paragraph 45? No. In doc 2 Q73? Nick Allen said "Butchers now can get close to £40,000..." Not starting.
+
+Wait in doc 1 paragraph 16? No.
+
+Let's parse doc 1 carefully mental: There is section "The cost of using the immigration system" paragraph 50 with table. Not relevant.
+
+In doc 1 paragraph 58: "Talking specifically about butchers, Mr Foster said that putting the role on the SOL would not help as the pay being offered by recruiting firms was above £25,600 in any case."
+
+But also earlier in doc 1 paragraph 45? Let's recall paragraph numbering in doc 1: Paragraphs 39-... Let's list mental up to 59.
+
+Para 39 immigration policy.
+40 Government high wage etc.
+41 Sumption said immigration policy not designed for food and farming.
+42 BRC warned.
+43 Skilled Worker Visa.
+44 English language.
+45? Actually para 44 ends with B1. Then para 45 maybe about exact level? Let's check mental: After para 44, para 45 starts "However, witnesses told us..." Yes para 45 Nick Allen said requirement tremendous barrier... Then para 46 NPA noted language requirement same regardless... para 47 exact level B1... para 48 Mr Foster initially contended B1 equivalent to GCSE... para 49 we recommend lowering... para 50 cost... para 51 previous recommendation... para 52 reiterate... para 53 SOL... para 54 MAC proposed adding... para 55 MAC said unfortunate... para 56 MAC recommendations still not accepted... para 57 Provision Trade... para 58 Mr Foster downplayed... "Talking specifically about butchers..." Yes para 58 mentions pay being offered above £25,600. So not specific number.
+
+But question mentions "skilled butcher's quoted starting salary" maybe in doc 2? Let's check doc 2 transcript mental: In Q73? Actually in doc 2 Nick Allen said "We have been increasing the wages... butcher now can get close to £40,000..." Not starting salary.
+
+Wait there might be explicit figure in doc 1 paragraph 50? No.
+
+Let's search mental for "£26,500" which was mentioned: In doc 1 paragraph 45? Actually I recall seeing "£26,500 starting salary up to £35,000 to £40,000 once they are..." Yes! In doc 2 Q7? Let's check: In doc 2, Charlie Dewhirst said? Let's recall doc 2 Q6? Actually in doc 2, Chair asks about training butcher and Charlie? Let's scroll mental doc 2: After Q6 about poultry on farm, Q7 Chair asks "how long does it take to train a good butcher?" Charlie Dewhirst answers maybe "around 18 months... You can make them relatively competent around six months..." Then Chair says "Yes, I think this is the message... These are people who are paid probably £500 to £600 a week..." Then Charlie maybe responds "Yes, £26,500 starting salary up to £35,000 to £40,000 once they are—" Yes! That sounds right. So the quoted starting salary is £26,500. The general salary threshold is £25,600. So if MAC advice accepted, SOL reduces threshold by 20% to £20,480. Then £26,500 - £20,480 = £6,020. But question asks "by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?" If they mean the reduced threshold? Let's parse precisely: "Had the Migration Advisory Committee's advice on butchers been accepted, by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?"
+
+If MAC advice accepted, butchers on SOL => salary threshold is 80% of £25,600 = £20,480 (or maybe occupation-specific threshold?). The quoted starting salary is £26,500. Difference = £6,020. But need confirm correct figures.
+
+But wait, in doc 1 para 58 Mr Foster said pay being offered was above £25,600 in any case, implying that even with 20% reduction it wouldn't matter because they already exceed £25,600. But they said "putting the role on the SOL would not help as the pay being offered by recruiting firms was above £25,600 in any case." Actually if SOL reduces threshold to £20,480, and pay is £26,500, then indeed they exceed both, but the point was that lowering threshold wouldn't help because they already meet the higher one. So the difference to the standard threshold £25,600 is £900 (£26,500 - £25,600 = £900). But the question specifically asks "Had the Migration Advisory Committee's advice... been accepted..." That implies the threshold would have been the SOL one (lower). So they ask by how much would the salary have exceeded the (now lower) threshold. That seems like £6,020. But need check if there's an occupation-specific going rate for butchers. Let's check mental: In UK skilled worker visa, there is a going rate for specific occupations. For butchers (SOC 5431?), the going rate might be £26,200? Actually I think for butchers the going rate is £26,200 per year or £10.10 per hour? Let's check mental knowledge: In UK immigration rules, shortage occupation list for butchers? Not currently on SOL. The going rate for butchers might be £26,200? Wait need be precise from document? The document mentions earnings threshold of £25,600 for skilled vacancies for butchers in Cranswick? Actually they said "skilled vacancies for butchers meet the earnings threshold of £25,600". So they use general threshold.
+
+But also in doc 2, Charlie said "£26,500 starting salary up to £35,000 to £40,000..." So that's £26,500.
+
+Thus if SOL accepted, threshold is 80% of £25,600 = £20,480. Difference = £6,020.
+
+However the question might be simpler: They ask "by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?" Maybe they want to show that even with SOL reduction, it's still exceeded, but they ask "had the advice been accepted" meaning the threshold is lowered, but they ask "exceeded the Skilled Worker Visa salary threshold" — which threshold? The one that applies if on SOL? Yes, that's the Skilled Worker Visa salary threshold for that role (the reduced one). So compute £26,500 - £20,480 = £6,020.
+
+But need verify if reduction is 20% of general threshold or of going rate. For SOL, the salary threshold is 80% of the usual rate for the occupation, but if the going rate is higher than £25,600, then it's 80% of going rate. But for butchers, going rate might be £26,200? Actually in immigration rules, for butchers (SOC 5431) the going rate is £26,200? Let's check mental: The going rates table lists "Butchers" with going rate £26,200? Or maybe £23,000? I'm not fully sure. But the document mentions £25,600 earnings threshold. So likely they apply general threshold because going rate might be lower? Wait skilled worker visa requires salary to be higher of £25,600 and going rate. If going rate for butchers is maybe £21,000? Then the threshold is £25,600. The SOL allows 80% of going rate, but if going rate is £21,000 then 80% is £16,800, but there is also a minimum of £20,480? Actually rules: For SOL jobs, the salary must be at least 80% of the going rate, but not less than £20,480. So need going rate.
+
+But in the document, they discuss English language and cost, but not going rate details. So likely they intend using general £25,600 reduced by 20% = £20,480.
+
+But wait, Mr Foster said putting on SOL wouldn't help as pay was above £25,600 in any case. That suggests that with SOL the required salary might be £20,480, but since they pay above £25,600 they still qualify. So he argued it's moot. So indeed the reduced threshold is £20,480.
+
+Thus answer £6,020. Let's present clearly: Starting salary £26,500; SOL threshold £20,480 (80% of £25,600); exceeds by £6,020.
+
+Need cite sources: Doc 2 for salary quote? Actually in doc 2 Q7? Let's cite doc 2 where Charlie Dewhirst said £26,500 starting salary. And doc 1 paragraph 58 and paragraph 39? Actually doc 1 paragraph 54? Let's cite doc 1 for 20% reduction and £25,600 threshold.
+
+Thus answer.
+
+Attempt 2 · Right
+-----------------
+Docs: Doc 1, Doc 2, Doc 3 · Note: —
+
+Final answer: Therefore, the starting salary would have exceeded the (reduced) threshold by: | Your answer (gold): £6,020
+
+Passages quoted:
+
+- Quoted Doc 2: “Yes, £26,500 starting salary up to £35,000 to £40,000 once they are—”
+
+Named Doc 1, Doc 2, Doc 3
+
+Full answer
+-----------
+
+Based on the documents:
+
+- The Skilled Worker Visa general salary threshold is £25,600 (Report, para 53).
+- Being on the Shortage Occupation List reduces that threshold by 20% (Report, para 53), so for butchers it would have been:
+
+£25,600 × 0.8 = £20,480.
+
+- The quoted starting salary for a skilled butcher is £26,500 (Oral evidence, 26 Oct, Q7).
+
+Therefore, the starting salary would have exceeded the (reduced) threshold by:
+
+£26,500 − £20,480 = £6,020.
+
+Reasoning
+---------
+
+We need answer based on input documents. Need find references about Migration Advisory Committee advice on butchers being added to Shortage Occupation List reducing salary threshold by 20%, and skilled butcher quoted starting salary. Let's locate in docs.
+
+In Document 1 (Report) paragraph 58 mentions MAC proposed adding butchers etc. Paragraph 50 mentions costs? Actually paragraph 50 is about cost of recruiting. Let's search mental: In Document 2 (Oral evidence 26 Oct) Nick Allen? Or in Document 3? Actually in Document 2 Q7 Chair asks about training butcher, Nick? Wait need precise figure "quoted starting salary" for skilled butcher.
+
+Looking at Document 2 transcript near Q7: Chair asks "That is £500 to £600 a week, a skilled butcher, I suspect." Charlie Dewhirst? Let's check context: Q6 Chair asks about butchers... Q7 Chair: "Yes, I think this is the message... You are talking about people who are paid probably £500 to £600 a week, a skilled butcher, I suspect." Charlie Dewhirst: "Yes, £26,500 starting salary up to £35,000 to £40,000 once they are—"
+
+Thus starting salary £26,500. The Skilled Worker Visa salary threshold mentioned elsewhere? In Document 1 paragraph 58? Actually paragraph 53 mentions general salary threshold of £25,600. Yes paragraph 53: "some roles listed...can be placed on the SOL, which can make it easier...by reducing the general salary threshold of £25,600...by 20%." So threshold is £25,600. If MAC advice accepted, butchers on SOL => threshold reduced by 20% => £20,480. Need by how much would starting salary £26,500 exceed that reduced threshold? £26,500 - £20,480 = £6,020.
+
+But wait question asks "Had the Migration Advisory Committee's advice on butchers been accepted, by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?" Need determine the salary threshold that would apply if on SOL. The general threshold is £25,600, reduced by 20% => £20,480. Starting salary £26,500. Difference = £6,020.
+
+Need cite sources. Let's provide answer with explanation.
+
+Attempt 3 · Right
+-----------------
+Docs: Doc 1, Doc 2 · Note: —
+
+Final answer: The butcher’s quoted starting salary would have exceeded the (reduced) Skilled Worker Visa salary threshold by £6,020. (For comparison, it already exceeded the unreduced £25,600 threshold by £900.) | Your answer (gold): £6,020
+
+Passages quoted:
+
+- Quoted Doc 2: “These are people who are paid probably £500 to £600 a week, a skilled butcher, I suspect.”
+- Quoted Doc 2: “Yes, £26,500 starting salary up to £35,000 to £40,000 once they are—”
+- Quoted Doc 1: “all the other eligibility criteria remain the same”
+
+Named Doc 2, Doc 1
+
+Full answer
+-----------
+
+The documents quote a skilled butcher’s starting salary of £26,500 (rising to £35,000–£40,000) (Document 2, Q7).
+
+The general Skilled Worker Visa salary threshold is £25,600 (Document 1, paras 53, 58). Being placed on the Shortage Occupation List— which is what the Migration Advisory Committee recommended for butchers—would reduce that threshold by 20%:
+
+- Reduced threshold: £25,600 × 0.8 = £20,480
+
+So, had the MAC’s advice been accepted and butchers put on the SOL:
+
+£26,500 − £20,480 = £6,020
+
+The butcher’s quoted starting salary would have exceeded the (reduced) Skilled Worker Visa salary threshold by £6,020. (For comparison, it already exceeded the unreduced £25,600 threshold by £900.)
+
+Reasoning
+---------
+
+We need answer based on input documents. Need determine Migration Advisory Committee's advice on butchers being added to Shortage Occupation List (SOL). Need understand impact on salary threshold for Skilled Worker Visa: being on SOL reduces required salary threshold by 20% from general £25,600 or occupation-specific threshold. Need determine butcher's quoted starting salary and compare to threshold if SOL applied? Let's parse documents carefully.
+
+Question: "Had the Migration Advisory Committee's advice on butchers been accepted, by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?"
+
+We need identify quoted starting salary for skilled butcher and the applicable salary threshold if on SOL.
+
+From Document 1 or 2? Let's recall details.
+
+In Document 1 paragraph 58 mentions MAC proposed adding butchers etc. But salary specifics?
+
+In Document 2 oral evidence, Nick Allen? Or Charlie? Let's check.
+
+In Document 2 Q7 Chair asks about training butcher and mentions "These are people who are paid probably £500 to £600 a week, a skilled butcher, I suspect." Then Charlie Dewhirst answers? Actually Q7: Chair: "Yes, I think this is the message... This is not labour that is on the cheap... probably £500 to £600 a week..." Charlie Dewhirst: "Yes, £26,500 starting salary up to £35,000 to £40,000 once they are—"
+
+So starting salary quoted £26,500.
+
+Now Skilled Worker Visa salary threshold general is £25,600, but for SOL it's 20% lower: £20,480? Wait need check rules. In Document 1 paragraph 53: "all the other eligibility criteria remain the same" except reducing general salary threshold of £25,600 (or occupation-specific threshold if applicable) by 20%. So for butchers if on SOL, threshold might be £20,480 if using general threshold, but there may be occupation-specific going rate. Need determine which applies.
+
+But the question asks "by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?" This sounds compute difference between £26,500 and the reduced threshold? Or the normal threshold?
+
+We need understand context: In Document 2 Q49 or elsewhere they discuss English language being barrier and pay being no longer problem. Let's search mental.
+
+In Document 2 Q49 Charlie Dewhirst mentions butchers on skilled worker visa list, but English language same regardless. Not salary.
+
+In Document 1 paragraph 58 Minister downplays importance of SOL for food sector, highlighting only impact is lower salary threshold (compared to previous situation). Talking specifically about butchers, Mr Foster said putting role on SOL would not help as pay being offered by recruiting firms was above £25,600 in any case.
+
+Thus the salary threshold for butchers without SOL is £25,600 (general). With SOL it would be £20,480 (20% reduction). The quoted starting salary is £26,500. So exceeding threshold without SOL by £900 (£26,500 - £25,600). But with SOL accepted, the threshold would be £20,480, then exceed by £6,020. Which one does question ask?
+
+Read precisely: "Had the Migration Advisory Committee's advice on butchers been accepted, by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?"
+
+The phrase "had the MAC's advice ... been accepted" means butchers would be on SOL, thus salary threshold reduced by 20%. They ask by how much would the quoted starting salary have exceeded the (now reduced) salary threshold.
+
+But need verify if there's an occupation-specific threshold for butchers that might be different. Let's check Document 1 paragraph 53 mentions "general salary threshold of £25,600 (or the occupation specific threshold if applicable) by 20%". Do we have occupation-specific threshold for butchers? Not in text. So likely they apply general £25,600 reduced to £20,480.
+
+But wait the Minister said pay being offered was above £25,600 in any case, implying that even with SOL reduction it's moot because already above general threshold. The question asks "by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?" If they wanted to show it was already above even without SOL, they'd ask by how much it exceeded the general threshold (£900). But they specifically tie to MAC advice being accepted—meaning SOL applies—so threshold is lower.
+
+However need check consistency: If salary is £26,500 and SOL threshold £20,480, difference is £6,020. That seems large and not particularly meaningful. But maybe they want £6,020? Or maybe occupation-specific going rate for butchers is £26,200? Let's investigate.
+
+We need examine if there's mention of salary threshold being £25,600 and butcher salary £26,500, so exceeds by £900. The MAC advice being accepted wouldn't change the fact that salary exceeds threshold, but they ask "had the MAC's advice... been accepted, by how much..." Hmm maybe they ask: Even with the lowered threshold (because of SOL), the salary still exceeds it by X. But why mention MAC advice then? Because without MAC advice, butchers aren't on SOL, so the relevant threshold is £25,600, and salary exceeds by £900. But then "had the MAC's advice been accepted" is counterfactual that puts them on SOL with lower threshold £20,480. So the phrase "the Skilled Worker Visa salary threshold" in that counterfactual world is £20,480.
+
+But let's read the question wording carefully: "Had the Migration Advisory Committee's advice on butchers been accepted, by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?"
+
+This can be parsed as: MAC advised adding butchers to SOL. If that had been accepted, then butchers would be on SOL, which means the salary threshold for the visa is reduced. Given the quoted starting salary for a butcher, calculate the excess over that (reduced) threshold.
+
+But also there is mention in Document 1 paragraph 58: "Mr Foster said... putting the role on the SOL would not help as the pay being offered by recruiting firms was above £25,600 in any case." So he references the general threshold £25,600, not the reduced one. He says it's already above, so SOL lowering doesn't matter. That suggests that the relevant comparison for butchers is against £25,600, regardless of SOL. Wait he says "putting the role on the SOL would not help as the pay being offered... was above £25,600 in any case". Actually if on SOL, the threshold is 80% of £25,600 = £20,480, or 80% of occupation-specific rate. He might be simplifying and comparing to the general rate pre-reduction? Or he might be saying that even the reduced rate is below £26,500? Let's parse: The only impact of SOL is lowering salary threshold by 20%. So if pay is already above £25,600 (the unreduced threshold), then lowering the threshold further won't change eligibility since they already meet the higher one. So he uses £25,600 as the benchmark to show they already clear it, hence SOL unnecessary for salary reasons. So in that context, the quoted salary £26,500 exceeds £25,600 by £900. That is likely the figure they want.
+
+But the question specifically asks "Had the Migration Advisory Committee's advice on butchers been accepted..." That introduces the SOL reduction. But then they ask "by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?" If MAC advice accepted, threshold is lower (£20,480). But Mr Foster's argument is that since salary is above £25,600, it doesn't matter if threshold is lowered. So they might ask: Assuming MAC advice accepted (so SOL applies, threshold reduced), but still compare to the threshold (now £20,480)? Or do they ask "had the advice been accepted" meaning butchers are on the list, but what's the salary excess over the threshold (which is now lower)? That'd be £6,020.
+
+We need determine precisely from text. Let's search mental for "£26,500" and "threshold" together. In Document 2 Q49? Actually Q49 Charlie Dewhirst mentions "The skilled vacancies for butchers meet the earnings threshold of £25,600..." Yes! Let's locate precisely: In Document 1 paragraph 45? No, in Document 2 maybe. Let's recall Document 2 Q49 is about English language. But in Document 1 paragraph 50? Let's check mental copy.
+
+Looking back at Document 1 text near paragraph 45-50: "Cranswick plc... said that while 'the skilled vacancies for butchers meet the earnings threshold of £25,600', the English language requirements 'remain a hurdle...'" Yes! So they mention earnings threshold £25,600 for butchers.
+
+Then in paragraph 58 Minister Foster said putting role on SOL wouldn't help as pay offered above £25,600 in any case.
+
+Thus the quoted salary might be in the range up to £40,000 but starting is £26,500 (from Charlie in Document 2). So salary exceeds £25,600 by £900.
+
+But wait the question says "skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold". The phrase "Skilled Worker Visa salary threshold" without specifying reduced might be £25,600 (the general threshold). Even if on SOL, the threshold for that specific role might still be calculated based on going rate, but they cite £25,600 specifically for butchers. So difference = £26,500 - £25,600 = £900.
+
+But they include "Had the Migration Advisory Committee's advice on butchers been accepted..." This might just be framing that butchers would be on SOL, but then asking about the salary threshold that applies to Skilled Worker Visa for butchers (which might still be £25,600? No, SOL lowers it). However Cranswick said skilled vacancies meet earnings threshold of £25,600—this is the threshold without SOL? Or with? Actually if butchers are on SOL, the threshold is 80% of going rate or £20,480. But Cranswick says they meet earnings threshold of £25,600, implying that's the applicable threshold (without SOL). So they are discussing the situation where butchers are NOT on SOL, hence threshold is £25,600, and they meet it. The MAC advised putting them on SOL, which would lower the threshold, but Cranswick says they already meet the higher one.
+
+Thus the question "Had the Migration Advisory Committee's advice on butchers been accepted..." Wait if accepted, they'd be on SOL, threshold lower. But Cranswick's point is moot then? Hmm need understand logic of question.
+
+Let's read the question exactly again: "Had the Migration Advisory Committee's advice on butchers been accepted, by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?"
+
+This sounds like a computation: Start salary - (threshold with SOL applied?). But need be precise.
+
+Let's gather all numbers in documents:
+- General salary threshold: £25,600 (Document 1 para 53, also Document 2?).
+- SOL reduction: 20%, so £20,480 (implied).
+- Quoted starting salary for butcher: £26,500 (Document 2 Q7 Charlie Dewhirst).
+- Minister Foster said pay above £25,600 (Document 1 para 58).
+- Cranswick said skilled vacancies for butchers meet earnings threshold of £25,600 (Document 1 para 50? actually in paragraph near 50).
+
+So there are two possible answers: £900 (vs £25,600) or £6,020 (vs £20,480).
+
+We need determine which one the question expects. The wording "the Skilled Worker Visa salary threshold" singular, not "the reduced salary threshold" or "the Shortage Occupation List salary threshold". But they mention MAC advice being accepted, which only affects being on SOL, which only affects the salary threshold (lowering it). So they want you to apply the reduction and then compare.
+
+But wait: If MAC advice accepted, butchers are on SOL. The salary threshold for Skilled Worker Visa for a SOL occupation is 80% of the going rate or £20,480, whichever is higher? Actually rules: For SOL jobs, you can be paid 80% of the going rate for the occupation, but must still be at least £20,480 per year and £10.10 per hour. So if going rate for butchers is maybe £26,000? But they cite general threshold £25,600. Let's check actual going rate for butchers (SOC 7511?) Maybe £26,200? Not in document. But they specifically cite £25,600 earnings threshold in Cranswick statement, so likely they apply general threshold.
+
+Therefore if on SOL, threshold is 80% of £25,600 = £20,480. Difference to £26,500 is £6,020.
+
+But is £26,500 "quoted starting salary" correct? Yes Charlie said £26,500 starting salary up to £35,000-£40,000. So £26,500 - £20,480 = £6,020.
+
+However, there might be another figure: In Document 2 Q7 Chair mentions £500-£600 per week, which is £26,000-£31,200 per year. Charlie corrects: £26,500 starting salary up to £35,000-£40,000. So yes £26,500.
+
+But wait the question asks "Had the Migration Advisory Committee's advice on butchers been accepted..." This could also be interpreted as "If the government had followed MAC's advice and added butchers to the SOL, then the salary threshold for butchers under the skilled worker visa would have been reduced. Given the quoted starting salary, by how much would it have exceeded that (reduced) threshold?" Yes that sounds right.
+
+But there's also the Minister's argument that it wouldn't matter because salary is already above £25,600, which is the unreduced threshold. That argument implicitly uses £25,600 as the comparison point, not £20,480. He says "putting the role on the SOL would not help as the pay being offered... was above £25,600 in any case"—meaning they already meet the threshold even without the 20% discount. So he compares to the unreduced threshold. This suggests that for butchers, the relevant threshold is £25,600 regardless? No, he just says it's already above the normal one, so lowering it further is moot. So the salary exceeds even the higher threshold by £900.
+
+The question might be testing knowledge of the minister's statement combined with salary figure.
+
+Let's read the question wording precisely: "Had the Migration Advisory Committee's advice on butchers been accepted, by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?"
+
+If they wanted £900, why mention MAC advice being accepted? Because if not accepted, butchers aren't on SOL and the salary threshold is £25,600, and salary exceeds by £900. But they say "Had the advice... been accepted"—that changes the threshold. So it's not £900 because that comparison holds regardless of acceptance (since salary > £25,600 either way). Actually if advice not accepted, threshold is £25,600, excess £900. If advice accepted, threshold is £20,480, excess £6,020. So the condition "had the advice been accepted" specifically determines which threshold applies. Therefore they want the excess relative to the SOL-reduced threshold: £6,020.
+
+But wait, there's also the possibility that the going-rate threshold for butchers is different, maybe £26,200? Without document specifying, we should use general threshold reduction.
+
+However, need check consistency with document wording on SOL reduction: "reduce the general salary threshold of £25,600 (or the occupation specific threshold if applicable) by 20%". So yes, 20% off £25,600 = £20,480.
+
+Thus answer likely £6,020.
+
+But I want to be sure. Let's check if there's any other quoted salary figure for butchers in document. In Document 2 Q7 they said £26,500 starting. In Document 1 paragraph 50 Cranswick said skilled vacancies meet earnings threshold of £25,600. So they reference £25,600. The question asks "skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold". If they wanted £900 they'd likely phrase "by how much did the salary exceed the general Skilled Worker Visa salary threshold of £25,600?" But they specifically tie to MAC advice being accepted, which only impacts the SOL reduction. So I think £6,020.
+
+But wait, could the salary threshold for SOL jobs be calculated as 80% of the going rate for butchers, which might be £26,200? Actually going rate for butchers (SOC 7511 Butchers) in UK immigration rules might be £26,200? Let's check mental: The going rate for butchers is £26,200? Or £23,600? I think for butchers the going rate is £26,200? Not sure. But the document mentions general threshold £25,600, not going rate. So likely they want using general.
+
+Let's formulate answer clearly, citing figures: Starting salary £26,500 (Document 2). General Skilled Worker threshold £25,600, but being on SOL (had MAC advice accepted) reduces it by 20% to £20,480. Difference £26,500 - £20,480 = £6,020.
+
+Need provide answer concisely but with reasoning.
+
+Double-check math: 25,600 * 0.8 = 20,480. 26,500 - 20,480 = 6,020. Yes.
+
+Thus answer: £6,020.
+
+But I should also mention that even without reduction it exceeds by £900, but specifically with SOL it's £6,020. Let's provide that.
+
+Attempt 4 · Wrong
+-----------------
+Docs: Doc 1, Doc 2 · Note: —
+
+Final answer: £26,500 − £25,600 = £900 | Your answer (gold): £6,020
+
+Passages quoted:
+
+- Quoted Doc 1: “around 70 entire occupations”
+- Quoted Doc 2: “Yes, £26,500 starting salary up to £35,000 to £40,000 once they are”
+
+Named Doc 1, Doc 2
+
+Full answer
+-----------
+
+The documents show that a skilled butcher’s quoted starting salary was £26,500 (rising to £35,000–£40,000), while the general Skilled Worker Visa salary threshold was £25,600.
+
+So the salary would have exceeded the threshold by:
+
+£26,500 − £25,600 = £900
+
+Reasoning
+---------
+
+We need answer using documents. Need find information about Migration Advisory Committee advice on butchers, Skilled Worker Visa salary threshold, and skilled butcher's quoted starting salary. Let's locate in documents.
+
+Document 1 mentions MAC recommended adding roles including butchers? Let's search mental. Document 1 paragraph 53-58 discuss MAC recommendations. In paragraph 54: MAC proposed adding "around 70 entire occupations..." including "butchers". Then paragraph 58 mentions Minister said putting butchers on SOL wouldn't help as pay being offered was above £25,600 in any case. But also in Document 2 Q7 or Q8? Let's check Document 2 transcript: Charlie Dewhirst? Actually Nick Allen? Let's recall precisely.
+
+In Document 2, Q8? Let's scan mental: At Q7 Chair asks about training butcher, Charlie? No, Q7 was about training butcher, Charlie said 18 months? Actually Q7: "On the training of a butcher... how long does it take..." Charlie Dewhirst? Wait need correct. But there is mention of salary: "We are talking about people paid probably £500 to £600 a week..." No that's chair guess. Later in Q50? Not that.
+
+But Document 2 Q49? Let's search mental for "£26,500" mentioned in Document 1 paragraph 55? Actually in Document 1 paragraph 55? No, in Document 1 paragraph 54? Wait there's mention in Document 1 paragraph 55? Let's check mental precisely: In Document 1, paragraph about Cranswick plc said "the skilled vacancies for butchers meet the earnings threshold of £25,600" but English language remain hurdle. That gives salary maybe above £25,600.
+
+But the question asks: "Had the Migration Advisory Committee's advice on butchers been accepted, by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?"
+
+We need identify the quoted starting salary and the threshold, then compute difference.
+
+From Document 2, Q49? Actually in Document 2, Charlie Dewhirst said: "These particular roles... well-paid jobs... £26,500 starting salary up to £35,000 to £40,000..." Let's verify. In Document 2 near Q49? Let's locate: Around Q49 Derek Thomas? No. Let's search mental transcript: At some point Charlie Dewhirst said "Yes, £26,500 starting salary up to £35,000 to £40,000 once they are..." That's in response to Chair asking about salary? Let's check context: In Document 2, after Q6? Actually Q6 was about poultry, Q7 about butcher training, Q8 maybe about salary? Let's recall: Q8 Chair said "Yes, I think this is the message... These are people who are paid probably £500 to £600 a week, a skilled butcher, I suspect." Charlie Dewhirst: "Yes, £26,500 starting salary up to £35,000 to £40,000 once they are—" Yes that's the quote.
+
+So starting salary quoted is £26,500. The Skilled Worker Visa salary threshold mentioned is £25,600 (general salary threshold). Difference = £26,500 - £25,600 = £900.
+
+But wait the question mentions "Had the Migration Advisory Committee's advice on butchers been accepted..." The MAC recommended putting butchers on Shortage Occupation List (SOL), which allows salary threshold reduced by 20%? Actually SOL allows the applicable minimum salary requirement for a Skilled Worker Visa to be reduced by 20%. But the question asks "by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?" That sounds they compare the butcher's salary (£26,500) to the threshold (£25,600) regardless of SOL reduction? Or maybe they ask if on SOL the threshold is 80% of £25,600 = £20,480, then exceed by £6,020? Let's parse carefully.
+
+Question wording: "Had the Migration Advisory Committee's advice on butchers been accepted, by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?"
+
+We need understand context: The Minister argued that putting butchers on SOL wouldn't help because pay being offered was above £25,600 anyway. So they discuss that butchers already exceed the threshold, hence SOL listing (which lowers threshold) wouldn't matter. Specifically in Document 1 paragraph 58: "Talking specifically about butchers, Mr Foster said that putting the role on the SOL would not help as the pay being offered by recruiting firms was above £25,600 in any case."
+
+But then there's quote of £26,500 starting salary. So they ask: had MAC advice been accepted (i.e., butchers on SOL), by how much would the quoted starting salary have exceeded the threshold? Wait if SOL lowers threshold by 20% to £20,480, then £26,500 exceeds that by £6,020. But the Minister's argument was that even without SOL reduction, the salary exceeds £25,600. Let's examine wording precisely: "Had the Migration Advisory Committee's advice on butchers been accepted, by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?"
+
+The phrase "the Skilled Worker Visa salary threshold" typically refers to £25,600 (the general threshold). The SOL allows reduction of 20% of that threshold, but the threshold itself is still £25,600, with a reduced rate for SOL jobs. However, if asking "by how much would the salary have exceeded the threshold" they likely mean compare £26,500 to £25,600 = £900.
+
+But we need check consistency with "Had the MAC's advice... been accepted". If accepted, butchers would be on SOL. For SOL jobs, the salary threshold is lower: 80% of £25,600 = £20,480, but also there is occupation-specific threshold? For butchers, the going rate might be different. But the question specifically asks "the Skilled Worker Visa salary threshold" singular. In Document 1 paragraph 39 lists eligibility criteria including salary requirement. The general threshold mentioned in paragraph 43? Actually paragraph 53 mentions SOL allows applicable minimum salary requirement to be reduced by 20%. So the "salary threshold" for SWV is £25,600, and for SOL it's £20,480 (80%). But they ask "by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?" If butchers are on SOL, the applicable threshold for them is £20,480. Then £26,500 - £20,480 = £6,020.
+
+But let's examine the wording "Had the Migration Advisory Committee's advice on butchers been accepted..." In Document 1, the MAC recommended adding butchers to SOL. The Government refused. The Minister said it wouldn't help because pay is above £25,600. That argument addresses the general threshold, not the reduced one. Wait he said putting role on SOL wouldn't help because pay being offered was above £25,600 in any case. That means even the reduced threshold (80% = £20,480) is moot because they already meet the higher one. So he compares to £25,600, not to reduced. So the salary of £26,500 exceeds £25,600 by £900. Thus the answer likely £900.
+
+But the question asks "Had the Migration Advisory Committee's advice on butchers been accepted..." That sets the condition that they are on SOL. But then they ask "by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?" If they are on SOL, the threshold applicable is reduced, but they still ask "the Skilled Worker Visa salary threshold" which might still be £25,600, with SOL being an exception. Actually the SOL is part of the Skilled Worker Visa scheme; the salary threshold for SOL jobs is 80% of the usual £25,600, but it's still within the scheme. The phrase "the Skilled Worker Visa salary threshold" could be interpreted as the threshold that applies to that visa for that occupation. If on SOL, the threshold is £20,480. But then why mention MAC advice being accepted? Because that puts them on SOL, changing the applicable threshold.
+
+We need determine correct interpretation based on document context. Let's read Document 1 paragraph 58 precisely: "Talking specifically about butchers, Mr Foster said that putting the role on the SOL would not help as the pay being offered by recruiting firms was above £25,600 in any case.159 However, for other roles that MAC proposed adding to the SOL that the Minister did not raise..." So he uses £25,600 as the benchmark, not the reduced one. He says even with SOL reduction, they already meet the full threshold, so SOL doesn't help them qualify (since they already qualify). Thus the relevant comparison is £26,500 vs £25,600 = £900.
+
+But wait, the quoted starting salary is £26,500 from Document 2. So answer £900.
+
+However, check if there's any other salary quote. In Document 2 Q8 Chair guesses £500-£600 per week, which is £26,000-£31,200 per year. But Charlie gives specific £26,500. So yes.
+
+Thus answer: £900. Let's present with reasoning.
+
+Attempt 5 · Right
+-----------------
+Docs: Doc 1, Doc 2, Doc 3 · Note: —
+
+Final answer: (For reference, it also exceeds the standard £25,600 threshold by £900, but with the MAC’s SOL recommendation accepted the relevant comparison is to the £20,480 figure.) | Your answer (gold): £6,020
+
+Passages quoted:
+
+- Quoted Doc 1: “the pay being offered by recruiting firms was above £25,600 in any case”
+
+Named Doc 1, Doc 3, Doc 2
+
+Full answer
+-----------
+
+Based on the documents:
+
+- The Migration Advisory Committee recommended adding butchers to the Shortage Occupation List (SOL). Being on the SOL reduces the Skilled Worker Visa salary threshold by 20% (Document 1).
+- The general Skilled Worker Visa salary threshold is £25,600 (Document 3).
+- With the SOL reduction, the applicable threshold would be:
+
+£25,600 × 80% = £20,480.
+
+- The quoted starting salary for a skilled butcher is £26,500 (Document 2).
+
+So the starting salary would exceed the (reduced) Skilled Worker Visa threshold by:
+
+£26,500 − £20,480 = £6,020 (i.e., by £6,020).
+
+(For reference, it also exceeds the standard £25,600 threshold by £900, but with the MAC’s SOL recommendation accepted the relevant comparison is to the £20,480 figure.)
+
+Reasoning
+---------
+
+We need answer based on input documents. Need find reference to butchers salary and Skilled Worker Visa salary threshold and MAC advice.
+
+In Document 2 (oral evidence 26 Oct 2021) Nick Allen? Actually in Document 2 Q8 or Q50? Let's search mental. In Document 2, Charlie Dewhirst said? Or in Document 3? Let's inspect mental excerpts.
+
+Document 2 includes Q7 Chair: "That is paid probably £500 to £600 a week, a skilled butcher, I suspect." Charlie Dewhirst? Actually Q7 Chair asks about training butcher and then Q8? Wait need precise quote about salary.
+
+In Document 2 near Q45? No that's in Document 3? Let's search mental text.
+
+We have in Document 2:
+"Q7 Chair: ... How long does it take to train a good butcher?
+Charlie Dewhirst: ... around 18 months... six months...
+Q8 Chair: Yes, I think this is the message... These are people who are paid probably £500 to £600 a week, a skilled butcher..."
+
+Then later in Document 3? Actually in Document 3 there is mention of salary threshold £25,600 and butchers being on skilled worker list but language barrier. Also in Document 2 there might be mention of £26,500. Let's check Document 2 near Q48? Actually in Document 2 Q46? Let's recall precisely.
+
+In Document 2, near end of first panel? Wait need "quoted starting salary" and "Skilled Worker Visa salary threshold". In Document 2 there is a part where Charlie Dewhirst or Nick Allen mentions "These particular roles are numbered in the hundreds... well-paid jobs... £26,500 starting salary up to £35,000 to £40,000..." Let's find context.
+
+Looking at Document 2 text around Q49? Let's scan mental: After Q48 Derek Thomas asks about SAWS etc. Then Q49? Actually Q49 is Julian Sturdy asking about timescales etc. Then Q50? Hmm not clear.
+
+But there is explicit statement in Document 2:
+"Charlie Dewhirst: ... The pay is no longer a problem. We are paying people more, but ... The English test is a real barrier... These are well-paid jobs. They are skilled jobs.
+Q48 ...?
+Then maybe in Q49? Let's search mental for "26,500".
+
+Actually in Document 1 there is mention? No.
+
+Let's parse Document 2 near the exchange about butchers salary:
+In the section with Charlie Dewhirst (first panel), there is:
+"Q7 Chair: Yes, I think this is the message... These are people who are paid probably £500 to £600 a week, a skilled butcher, I suspect.
+Charlie Dewhirst: Yes, £26,500 starting salary up to £35,000 to £40,000 once they are—"
+
+Thus starting salary quoted is £26,500.
+
+The Skilled Worker Visa salary threshold mentioned elsewhere is £25,600 (general) or occupation-specific. For butchers? In Document 3 Q58? Actually in Document 3, Mr Foster said "the pay being offered by recruiting firms was above £25,600 in any case" regarding butchers. So threshold is £25,600.
+
+Question: "Had the Migration Advisory Committee's advice on butchers been accepted, by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?"
+
+If salary is £26,500 and threshold £25,600, difference is £900.
+
+But need check if MAC acceptance would put them on Shortage Occupation List allowing 20% reduction in salary threshold? Wait question asks "by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?" This sounds they ask calculate excess over the standard threshold (£25,600). The MAC advice was to add butchers to SOL, but the salary offered was already above threshold. However they ask "Had the Migration Advisory Committee's advice on butchers been accepted..." Maybe they refer to the reduced threshold? Let's read carefully.
+
+We need understand context: The MAC recommended adding butchers to SOL, which allows salary threshold reduced by 20% (from £25,600 to £20,480). But the quoted starting salary for butchers was £26,500, which exceeds even the standard threshold by £900, and exceeds the reduced threshold by £6,020. Which one is correct?
+
+Question wording: "Had the Migration Advisory Committee's advice on butchers been accepted, by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?"
+
+If MAC advice accepted, butchers would be on SOL, and the applicable salary threshold for them would be 80% of £25,600 = £20,480 (the "going rate" might differ but they talk about salary threshold). But they ask "the Skilled Worker Visa salary threshold" singular, maybe meaning the reduced one? Or the standard one?
+
+We need determine precisely from document context. Let's examine Document 3 where Mr Foster discusses butchers and SOL.
+
+In Document 3, Q58? Actually in Document 3 around Q294 onward? Let's recall Document 3 includes exchange:
+"Q294 ... Mr Foster said ... putting the role on the SOL would not help as the pay being offered by recruiting firms was above £25,600 in any case."
+Then Q310? Let's check mental: In Document 3, the Migration Minister is questioned. He said for butchers putting on SOL wouldn't help because pay offered was above £25,600. So he references the standard threshold £25,600, not the reduced one, to argue it's moot because salary already exceeds it. So the "Skilled Worker Visa salary threshold" in that context is £25,600. Then they might ask: had MAC advice been accepted (i.e., butchers on SOL), what is the salary? Still £26,500, exceeding threshold by £900. But that seems trivial and not related to SOL acceptance, since SOL lowers threshold, but salary still exceeds original. However the question frames "Had the MAC's advice... been accepted" maybe just setting scenario that butchers are recognized, but then ask by how much salary exceeds threshold. But why mention MAC acceptance then?
+
+Let's parse exactly: "Had the Migration Advisory Committee's advice on butchers been accepted, by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?"
+
+If MAC advice accepted, butchers are on SOL. The salary threshold for SOL roles is 80% of £25,600 = £20,480, but there is also "going rate" for occupation? Actually for SOL, the salary threshold is reduced by 20%, but must still meet going rate for occupation if higher. For butchers, the going rate might be £26,200? Not in docs. But they quote starting salary £26,500. If the threshold is £20,480, then excess is £6,020. That sounds like a meaningful figure. But is there any mention of £20,480 in documents? In Document 1 maybe? Actually Document 1 mentions SOL allows minimum salary requirement reduced by 20%. The general threshold is £25,600, so 20% reduction is £20,480. But do they state that number? Not in excerpts I recall, but it's calculable.
+
+However the question asks "the Skilled Worker Visa salary threshold" not "the reduced Shortage Occupation List salary threshold". But if MAC advice accepted, then the relevant threshold for butchers is the SOL one. So they ask by how much the salary (£26,500) exceeds that threshold (£20,480). That equals £6,020.
+
+But wait, there's also mention in Document 3 that the English language is the barrier, not salary. The salary is already above £25,600. So if they ask "by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?" using standard £25,600, answer £900. That highlights that salary wasn't the issue, since it's already £900 over. But then why mention MAC acceptance? Because MAC advised adding to SOL, which is about salary threshold being lowered, but since salary already exceeds even the higher threshold, the MAC acceptance wouldn't have changed the salary issue; but they ask specifically "Had the MAC's advice... been accepted..." Hmm maybe they want you to apply the 20% reduction to find the threshold that would apply, then compare.
+
+We need determine correct interpretation based on available data in documents.
+
+Let's locate all mentions of £26,500 and £25,600 together.
+
+In Document 2, Charlie Dewhirst said: "We are paying people more... These particular roles are numbered in the hundreds... well-paid jobs... £26,500 starting salary up to £35,000 to £40,000..." Then Chair might ask about visa.
+
+In Document 3, Mr Foster said: "we do not see that the case is made out... given that the level is a G at GCSE... putting the role on the SOL would not help as the pay being offered by recruiting firms was above £25,600 in any case."
+
+Thus in Document 3 they discuss SOL and salary threshold £25,600. They say salary is above £25,600, so SOL (which lowers threshold) wouldn't matter. So if MAC advice had been accepted and butchers put on SOL, the threshold for them would be £20,480, but they are paid £26,500, exceeding by £6,020. But Mr Foster's argument was that even without SOL reduction, they already meet £25,600, so SOL doesn't help. He doesn't mention the reduced figure, but implies it's not about salary.
+
+The question asks specifically "Had the Migration Advisory Committee's advice on butchers been accepted, by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?"
+
+This sounds like: MAC advised putting butchers on SOL. If that happened, then the salary threshold applicable is lower (80%). The butcher's salary is £26,500. How much does that exceed the (reduced) threshold?
+
+But they say "the Skilled Worker Visa salary threshold"—for SOL roles it's still part of the Skilled Worker Visa scheme, but with a reduced threshold. So yes, it's £20,480.
+
+However, do the documents provide the 20% reduction figure? Yes, Document 1 paragraph about SOL: "Entry onto the SOL allows the applicable minimum salary requirement for a SWV to be reduced by 20%." And in Document 3 maybe mentioned.
+
+But also in Document 3 Q58? Actually they discuss "going rate" maybe not.
+
+Let's check if there's any other salary figure. Could the starting salary be £26,500 and the threshold for skilled worker visa for butchers (going rate) might be £26,200? Not in docs.
+
+Thus we need compute difference using figures present: salary £26,500, general threshold £25,600, reduction 20% => £20,480. Difference to reduced: £6,020. Difference to general: £900.
+
+Which answer is expected? Let's examine wording precisely: "Had the Migration Advisory Committee's advice on butchers been accepted..." This refers to MAC's recommendation to add butchers to SOL (Document 1 and Document 3). "by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?"
+
+If they are on SOL, the salary threshold is 80% of £25,600 = £20,480. So salary exceeds that by £6,020.
+
+But wait, there's also the "going rate" for butchers which might be £26,200? Actually in UK immigration rules, butchers have a going rate of £26,200? Let's check mental real-world: In 2021, butcher going rate was £26,200? Or maybe £23,100? But the document mentions £25,600 general threshold, and that pay offered was above £25,600. So they compare to general threshold, not going rate.
+
+But the question says "the Skilled Worker Visa salary threshold" singular. In Document 3 they call £25,600 "the salary threshold". So likely they refer to £25,600. But then why mention MAC acceptance? Maybe because if MAC advice had been accepted, butchers would be on SOL, but the salary is still £26,500, which exceeds even the normal threshold of £25,600 by £900, highlighting that salary wasn't the barrier—language was. But the wording "Had the MAC's advice... been accepted, by how much..." Hmm that framing sounds like "Assume butchers are on the SOL, so the threshold is lowered. Given the quoted salary, by how much does it exceed that lowered threshold?" But that doesn't highlight language barrier; it just calculates excess over lowered bar.
+
+Let's read the question again exactly: "Had the Migration Advisory Committee's advice on butchers been accepted, by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?"
+
+If I replace with figures: MAC advice -> butchers on SOL -> salary threshold is £20,480. Quoted salary £26,500. Exceeds by £6,020.
+
+But maybe they want to show that even with the reduced threshold, it's exceeded, but actually they want to show that it's exceeded regardless? The phrase "the Skilled Worker Visa salary threshold" without specifying reduced might still be £25,600 because that's the scheme's general salary threshold, and being on SOL modifies it but it's still part of the scheme. However typically one says "the salary threshold for the Skilled Worker Visa is £25,600 (or £20,480 for shortage occupations)". So ambiguity.
+
+We need check if document mentions 20% reduction figure numerically? Document 1 says "reduced by 20%" but not calculated. The question asks "by how much" requiring computation. If using 20%, need compute £25,600 *0.8 = £20,480, then subtract from £26,500 = £6,020. That involves computation using the 20% mentioned in Document 1. This sounds like the intended answer, because it requires using both the salary quote and the threshold with the SOL reduction mentioned in the document. If they just wanted £900, there's no computation involving MAC acceptance other than knowing salary > £25,600, which is mentioned in Document 3 regardless of MAC. So the inclusion of MAC acceptance points to applying the SOL reduction.
+
+Thus answer: £6,020.
+
+But need be precise: "by £6,020" and mention figures.
+
+Let's verify salary quote is indeed £26,500. Yes in Document 2: "£26,500 starting salary up to £35,000...".
+
+Thus answer: The salary was £26,500; with MAC acceptance butchers would be on SOL, reducing the £25,600 threshold by 20% to £20,480; so it exceeds by £6,020. Even against the standard £25,600 threshold it exceeds by £900, but the relevant SOL threshold gives £6,020.
+
+We should present clearly, maybe noting both? But question singular "the Skilled Worker Visa salary threshold" with MAC accepted -> SOL applies -> £20,480. So answer £6,020.
+
+Let's provide concise answer with reasoning.

@@ -1,0 +1,414 @@
+AQ-03570 · Public policy — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-03570
+Saved: 2026-10-14 09:38 (local time)
+Bundle: Public policy · 12 documents · 107,198 prompt tokens
+Run read: Run 8, the latest of 8
+Attempts read: 4
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+11 of 18 runs left · 13 of 60 runs used in the last 24 h (all tasks)
+
+Your last 3 runs all came back Too easy. Ask the Coach before running again.
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 3 attempts right
+
+High model: two solvers try up to 3 times each. Ready when both get it wrong at least once and not every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Rephrase so the commenting must be established from what an organization argued, e.g., 'Which signers of the April 2022 joint letter on short comment periods submitted their own views on the fund ESG disclosure proposal, and what position did each take on the Integration Fund category?' This forces reading the letters' content rather than matching citations. Why: The phrase 'these letters show commenting' points straight at the passages that give the answer away: the documents do not merely 'show' commenting, they explicitly cite the Chamber's and ICI's August 2022 comment letters on File No. S7-17-22 (Document 8, footnote 15) and name SIFMA AMG among commenters (Document 12). A solver scanning for 'S7-17-22' plus organization names finds the four gold organizations without engaging with any letter's substance. From a run (High model · attempt 2): Same shortcut path: the signer list and the evidence of commenting on S7-17-22 are both given as explicit citations in footnotes of Documents 5, 8 and 12, so the answer is a name-matching exercise. Doc 8 Doc 12
+
+Structure · Which documents it needs, and how they combine
+----------------------------------------------------------
+
+- 2 Include documents where other April 2022 signers (e.g., the Investment Adviser Association, American Bankers Association, SIFMA itself) appear — commenting on different rulemakings, being quoted, or signing other joint letters — so the solver must check each signer's actual relationship to S7-17-22 rather than assume any reappearance equals commenting. Why: The distractor set is empty in practice: of the roughly 25 signers listed in Document 5's footnote, only ICI, MFA, SIFMA AMG and the Chamber ever surface again in the twelve documents, and each surfaces exactly where their commenting is explicitly stated. There is no near-miss signer (e.g., SIFMA itself, IAA, ABA) that appears in a plausible but non-commenting role, so no discrimination is required once the footnote is found. From a run (High model · attempt 2): Same shortcut path: the signer list and the evidence of commenting on S7-17-22 are both given as explicit citations in footnotes of Documents 5, 8 and 12, so the answer is a name-matching exercise. Doc 5
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 8 (Oct 14, 2026, 9:33 AM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+8 runs
+
+Only the latest run, Run 8, is in this file; 7 earlier runs are left out.
+
+------------------------------------------------------------------------
+Run 8 · Too easy · Result the gate uses
+Oct 14, 2026, 9:33 AM · Version 2858b2 (current) · Low — · Medium — · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: no change to the question or answer
+
+Solver summary: Run 8 · Too easy · 3 of 3 right
+Every solver attempt got it (3 of 3).
+
+Your answer: Investment Company Institute, Managed Funds Association, SIFMA AMG, U.S. Chamber of Commerce
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: —
+
+Final answer: - Securities Industry and Financial Markets Association | Your answer (gold): Investment Company Institute, Managed Funds Association, SIFMA AMG, U.S. Chamber of Commerce
+
+Full answer
+-----------
+
+The April 2022 joint letter was signed by groups including the Investment Adviser Association, Investment Company Institute, and Securities Industry and Financial Markets Association (among others). Among those signers, the ones shown submitting comments on the SEC’s fund ESG disclosure proposal are:
+
+- Investment Adviser Association
+- Investment Company Institute
+- Securities Industry and Financial Markets Association
+
+Reasoning
+---------
+
+We need answer: "Which signers of the April 2022 joint trade-association letter about short comment periods, if any, do these letters show commenting on the SEC's fund ESG disclosure proposal? List them alphabetically."
+
+Need determine signers of April 2022 joint trade-association letter about short comment periods, then check which of them commented on SEC fund ESG disclosure proposal based on "these letters" but no docs provided. Must answer from own knowledge.
+
+We need identify the joint letter in April 2022 from trade associations complaining about short SEC comment periods. Then identify which of those signers also submitted comment letters on SEC's fund ESG disclosure proposal (proposed rules on ESG disclosures for investment funds, proposed in 2022, comment period ended?).
+
+Need list alphabetically those that did, or "none" if any.
+
+Let's recall: In April 2022, several trade groups sent a joint letter to SEC Chair Gensler complaining about inadequate comment periods for proposed rules, listing many proposals with short periods. Signatories included American Bankers Association (ABA), Bank Policy Institute (BPI), Consumer Bankers Association (CBA), Financial Services Forum, Institute of International Bankers (IIB), Investment Adviser Association (IAA), Investment Company Institute (ICI), Managed Funds Association (MFA), National Association of Private Fund Managers? Maybe also U.S. Chamber of Commerce? Let's recall precisely.
+
+The letter dated April 5, 2022? Signed by trade associations representing financial services industry. The signers:
+- American Bankers Association
+- Bank Policy Institute
+- Consumer Bankers Association
+- Financial Services Forum
+- Institute of International Bankers
+- Investment Adviser Association
+- Investment Company Institute
+- Managed Funds Association
+- Securities Industry and Financial Markets Association (SIFMA)?
+- U.S. Chamber of Commerce Center for Capital Markets Competitiveness?
+Maybe also National Venture Capital Association?
+
+But need specifically "signers of the April 2022 joint trade-association letter about short comment periods" and then "do these letters show commenting on the SEC's fund ESG disclosure proposal?"
+
+We need determine among those signers, which ones filed comment letters on the ESG fund disclosure proposal (SEC proposed amendments to rules and forms for ESG disclosures by investment advisers and investment companies, proposed May 2022? Actually SEC proposed ESG disclosure rules for funds and advisers in May 2022, with 60-day comment period ending August 2022? Let's check mental: On May 25, 2022 SEC proposed rules to enhance disclosures by certain investment advisers and investment companies about ESG investment practices. Comment period was initially 60 days, ending August 16, 2022, then extended? Many groups commented.
+
+Which trade associations commented? ICI definitely commented. SIFMA commented? ABA? BPI? Let's recall comment letters submitted.
+
+The proposal had many commenters: Investment Company Institute (ICI) submitted a long comment letter. American Bankers Association? Maybe not, since it's about funds, not banks. Bank Policy Institute? Unlikely. Consumer Bankers Association? Unlikely. Financial Services Forum? Maybe. Institute of International Bankers? Maybe not. Investment Adviser Association (IAA) likely commented because it covers advisers. Managed Funds Association (MFA) maybe commented on adviser part? Securities Industry and Financial Markets Association (SIFMA) likely commented, especially asset management group. U.S. Chamber of Commerce may have commented.
+
+But the question asks "Which signers... do these letters show commenting... List them alphabetically." The phrase "these letters" might refer to some specific set of letters being discussed in a context, but since no input, need derive.
+
+Maybe the answer is "Investment Adviser Association and Investment Company Institute" alphabetically: Investment Adviser Association, Investment Company Institute. Or include others.
+
+Let's recall the April 2022 letter signatories exactly. The letter was sent April 5, 2022, signed by:
+American Bankers Association
+Bank Policy Institute
+Consumer Bankers Association
+Financial Services Forum
+Institute of International Bankers
+Investment Adviser Association
+Investment Company Institute
+Managed Funds Association
+Securities Industry and Financial Markets Association
+U.S. Chamber of Commerce
+
+Wait I think SIFMA and Chamber were signers too? Let's check mental news coverage in April 2022: Trade groups sent letter to Gensler saying SEC isn't allowing enough time for public comment on proposed rules. The groups included American Bankers Association, Bank Policy Institute, Consumer Bankers Association, Financial Services Forum, Institute of International Bankers, Investment Adviser Association, Investment Company Institute, Managed Funds Association, Securities Industry and Financial Markets Association, and U.S. Chamber of Commerce. Yes, that sounds right—10 groups.
+
+Now, among these, who commented on the fund ESG disclosure proposal?
+
+We need check "these letters" might show that some of them commented. Actually the question might come from an exam or analysis comparing signers of the short-comment-period letter with those who later commented on ESG proposal, showing hypocrisy? They complained about short periods but then some of them still commented? Or maybe asking which ones are shown in the letters (the comment letters) as having commented?
+
+Let's recall the ESG fund disclosure proposal received comment letters from:
+- Investment Company Institute (ICI) – yes, on Aug 2021? No on this one in Aug 2022.
+- Investment Adviser Association (IAA) – yes, likely.
+- Managed Funds Association – maybe.
+- SIFMA – yes, SIFMA Asset Management Group submitted comments.
+- American Bankers Association – maybe not.
+- Bank Policy Institute – maybe not.
+- Consumer Bankers Association – no.
+- Financial Services Forum – maybe.
+- Institute of International Bankers – maybe not.
+- U.S. Chamber of Commerce – yes, Chamber's Center for Capital Markets Competitiveness often comments.
+
+But need be precise based on actual letters shown.
+
+Let's recall specific comment letters for ESG disclosure proposal (Release Nos. 33-11068, 34-94985, IA-6034, IC-34594?). Many organizations submitted:
+BlackRock
+State Street
+Vanguard
+ICI
+SIFMA
+IAA
+MFA?
+Chamber of Commerce?
+Consumer Federation?
+Environmental groups.
+
+Perhaps only ICI and IAA among the signers? Or ICI, IAA, SIFMA, Chamber?
+
+We need alphabetically list them. Let's try determine correct ones.
+
+The question wording: "Which signers of the April 2022 joint trade-association letter about short comment periods, if any, do these letters show commenting on the SEC's fund ESG disclosure proposal? List them alphabetically."
+
+The phrase "do these letters show" suggests there is a set of letters being examined (the comment letters on the ESG proposal), and among them, we can identify which ones come from the signers of the April 2022 letter. So we need list the ones that appear as commenters and were also signatories.
+
+Thus need correct list of commenters that are in the signer list.
+
+Let's list all signers alphabetically:
+1. American Bankers Association (ABA)
+2. Bank Policy Institute (BPI)
+3. Consumer Bankers Association (CBA)
+4. Financial Services Forum
+5. Institute of International Bankers (IIB)
+6. Investment Adviser Association (IAA)
+7. Investment Company Institute (ICI)
+8. Managed Funds Association (MFA)
+9. Securities Industry and Financial Markets Association (SIFMA)
+10. U.S. Chamber of Commerce
+
+Now, check each for ESG fund disclosure comment:
+- ABA: Did ABA comment on fund ESG disclosures? ABA focuses on banks. The proposal applies to investment advisers and investment companies. ABA might have commented on the adviser ESG proposal? Actually there was a separate proposal for adviser ESG? Wait the May 2021? Let's not overanalyze. Maybe ABA did not.
+- BPI: Probably not.
+- CBA: No.
+- Financial Services Forum: This is a forum of CEOs of large financial institutions. They might submit comments on major rules, but did they on this one? Unlikely; they usually weigh in on big issues but maybe not.
+- IIB: Represents international banks. Might comment if affects them? Unlikely.
+- IAA: Yes, Investment Adviser Association represents investment advisers. The proposal included amendments to Form ADV for ESG strategies. So IAA almost certainly commented.
+- ICI: Yes, Investment Company Institute represents funds. The proposal included amendments to fund prospectuses and annual reports. So ICI definitely commented.
+- MFA: Managed Funds Association represents hedge funds and private funds. The adviser disclosure part might affect private fund advisers? The proposal applied to registered advisers, including some private fund advisers. MFA might have commented, especially on the "ESG-Focused" and "ESG-Integrated" categories for advisers. Did they? Possibly yes. But need check mental: MFA submitted a comment letter on the climate disclosure proposal, but on ESG fund disclosure? Not sure.
+- SIFMA: Yes, SIFMA's Asset Management Group represents asset managers. They likely commented on the fund disclosure part.
+- U.S. Chamber of Commerce: They comment on many rules, including ESG-related ones. They might have submitted a comment letter criticizing the ESG disclosure rules. Actually I think the Chamber did comment, perhaps jointly?
+
+But we need "these letters show" - maybe only specific ones are visible in the documents being referenced.
+
+Since I need a single best answer, maybe list all that did: Investment Adviser Association, Investment Company Institute, Managed Funds Association, Securities Industry and Financial Markets Association, and U.S. Chamber of Commerce? Or maybe just ICI and IAA?
+
+Let's recall news in August 2025? No.
+
+Let's try to recall actual comment letter lists published. For the ESG disclosure proposal, the SEC received over 600 comment letters? Actually maybe over 600? Many were form letters. Among institutional ones:
+- AllianceBernstein
+- American Bankers Association? Hmm maybe ABA commented on the climate disclosure proposal, not this one.
+- Better Markets
+- BlackRock
+- CalPERS
+- CalSTRS
+- Center for American Progress
+- Consumer Federation of America
+- Earthjustice
+- Environmental Defense Fund
+- Fidelity Investments
+- Financial Services Forum? Not recall.
+- IAA
+- ICI
+- Institute for Agriculture and Trade Policy?
+- Investment Management Consultants Association?
+- Morningstar
+- National Association of Manufacturers
+- Natural Resources Defense Council
+- New York City Comptroller
+- Public Citizen
+- SIFMA
+- State Street
+- The Forum for Sustainable and Responsible Investment
+- U.S. Chamber of Commerce?
+- Vanguard
+- Wellington Management
+
+Thus likely signers present: IAA, ICI, SIFMA, and maybe Chamber.
+
+But need alphabetically. Let's list alphabetically those likely:
+Investment Adviser Association
+Investment Company Institute
+Securities Industry and Financial Markets Association
+U.S. Chamber of Commerce
+Maybe Managed Funds Association?
+
+However, need be accurate about being signers of the April letter. Yes, all five are signers except maybe Chamber was a signer.
+
+But wait, the question asks "Which signers... if any..." This framing could imply that none of them did, highlighting hypocrisy? Actually they complained about short comment periods, but then for the ESG proposal they might have requested extension? No, that's different.
+
+Let's parse the question precisely: "Which signers of the April 2022 joint trade-association letter about short comment periods, if any, do these letters show commenting on the SEC's fund ESG disclosure proposal? List them alphabetically."
+
+This sounds like: There is a set of letters (probably the comment letters on the ESG proposal). Among those letters, some are from organizations that also signed the April 2022 letter. Which ones are they?
+
+Thus we need identify the intersection.
+
+Given typical exam about regulatory comment processes, they might present several comment letters and ask to identify which authors were also signatories to the earlier letter complaining about short comment periods.
+
+But since I don't have the letters, I need answer based on knowledge of who commented.
+
+Let's recall that in August 2026? No.
+
+Actually, I think the answer might indeed be "Investment Company Institute" only? Or "Investment Adviser Association and Investment Company Institute"?
+
+Let's examine the proposal's scope: "Enhancing Disclosures by Certain Investment Advisers and Investment Companies about Environmental, Social, and Governance Investment Practices" - applies to registered investment companies and registered investment advisers. So the primary trade groups are ICI (for funds) and IAA (for advisers). These two are the main ones. SIFMA also represents asset managers that include both funds and advisers, but ICI and IAA are the direct ones. MFA represents private funds, but the proposal applied mainly to registered ones, though private fund advisers registered might be included in adviser part. Still, IAA and ICI are the big ones.
+
+Thus likely the answer includes Investment Adviser Association and Investment Company Institute.
+
+But also the U.S. Chamber of Commerce often files generic comments. Did they file on this proposal? I think yes, in August 2020? No.
+
+Let's check mental consistency: The Chamber sent a comment letter on the climate disclosure proposal (March 2022?). For the ESG fund proposal, maybe not.
+
+Thus I will answer with Investment Adviser Association and Investment Company Institute. Alphabetically:
+Investment Adviser Association
+Investment Company Institute
+
+But I want to be somewhat inclusive if SIFMA also. Let's think about SIFMA: They have an Asset Management Group (SIFMA AMG). Did SIFMA AMG comment on ESG disclosure? Yes, I believe SIFMA AMG submitted a comment letter on the ESG disclosure proposal in August 2028? No, in 2022. Actually I recall SIFMA commented on the SEC's proposed rules on ESG disclosures for investment funds and advisers, arguing that the categories were too prescriptive. Yes, that sounds right. So SIFMA may be included.
+
+Also Managed Funds Association might have commented because the adviser rules affect private fund advisers. Let's recall: MFA sent a comment letter on the SEC's proposed private fund adviser rules in 2022, but that was a separate proposal (private fund adviser rules proposed in Feb 2024?). No, in 2022 there was a proposal for private fund advisers? Actually in Feb 2022 the SEC proposed rules for private fund advisers. MFA commented on that. So MFA was active in 2022 on adviser rules. The ESG disclosure proposal in May 2022 also applied to advisers, but MFA might have commented too. However, I'm not sure.
+
+But the question asks "Which signers... do these letters show..." If "these letters" are specifically the ones shown in some context, maybe only ICI and IAA letters are shown.
+
+Thus I need provide the best answer I can. Let's list alphabetically all signers that plausibly commented: Investment Adviser Association, Investment Company Institute, Managed Funds Association, Securities Industry and Financial Markets Association, U.S. Chamber of Commerce. But I want to be somewhat conservative.
+
+Wait, there's also the "Financial Services Forum" - they sent a letter? Unlikely.
+
+Given typical answer format "List them alphabetically" might be a list of several.
+
+But I need "if any" - so maybe there are none. Let's examine that possibility. Could it be that none of the signers of the April 2022 letter commented on the ESG fund disclosure proposal? That seems unlikely because ICI and IAA definitely did, and they were signers.
+
+Unless ICI and IAA were NOT signers? Let's verify the signers list precisely. Maybe the April 2022 letter was signed only by banking groups, not including ICI and IAA? Let's recall news articles: In April 2022, banking and financial trade groups sent letter complaining about short comment periods. The groups listed might have been:
+- American Bankers Association
+- Bank Policy Institute
+- Consumer Bankers Association
+- Financial Services Forum
+- Institute of International Bankers
+- Investment Company Institute?
+- Managed Funds Association?
+- Securities Industry and Financial Markets Association?
+- U.S. Chamber of Commerce?
+
+Actually I need correct list. Let's recall the news headline around April 2025? No, in 2022.
+
+On April 5, 2022, a coalition of trade groups sent a letter to SEC Chair Gensler. The news coverage said the groups included the American Bankers Association, Bank Policy Institute, Consumer Bankers Association, Financial Services Forum, Institute of International Bankers, Investment Adviser Association, Investment Company Institute, Managed Funds Association, Securities Industry and Financial Markets Association, and the U.S. Chamber of Commerce's Center for Capital Markets Competitiveness.
+
+But was IAA there? Yes, I think so.
+
+However, maybe ICI was not a signatory? Let's check mental news: The letter was about rulemaking pace affecting financial markets. Many groups signed. I think ICI was indeed a signatory because they care about fund rules. Yes.
+
+Thus it's not "none".
+
+But wait, the ESG fund disclosure proposal was released in May 2025? No 2022. The comment period was initially 60 days. Some groups might have requested an extension. Actually I recall that in June 2022, several groups requested an extension of the comment period for the ESG disclosure proposal. Which groups requested extension? Maybe ICI and others? Actually for the climate disclosure proposal, there was an extension request. For the ESG proposal, maybe also.
+
+But the question is specifically "commenting on the SEC's fund ESG disclosure proposal" - that means they submitted a comment letter on the merits.
+
+Given all this, my answer will include Investment Adviser Association and Investment Company Institute. To be safe, I might include Securities Industry and Financial Markets Association and U.S. Chamber of Commerce? Let's think about alphabetically ordering if I include four:
+Investment Adviser Association
+Investment Company Institute
+Securities Industry and Financial Markets Association
+U.S. Chamber of Commerce
+
+That sounds reasonable.
+
+But I want not include ones I'm unsure about. Let's recall specific comment letters that were prominently mentioned in news summaries. Many news articles summarized comments from:
+- ICI
+- SIFMA
+- BlackRock
+- State Street
+- Fidelity
+- Morningstar
+
+So SIFMA was definitely prominent.
+
+Thus I will list: Investment Adviser Association, Investment Company Institute, and Securities Industry and Financial Markets Association? Did IAA get prominent coverage? Maybe less prominent but they commented.
+
+Actually, the proposal had two parts: one for funds, one for advisers. ICI commented on fund part. IAA commented on adviser part. SIFMA might have commented on both. So all three are correct.
+
+What about Managed Funds Association? They might have commented on adviser part for private funds. But I don't recall seeing them in news summaries.
+
+Thus my answer: Investment Adviser Association, Investment Company Institute, and Securities Industry and Financial Markets Association.
+
+But wait, was SIFMA a signer of the April letter? Yes, likely.
+
+Thus alphabetically:
+Investment Adviser Association
+Investment Company Institute
+Securities Industry and Financial Markets Association
+
+If I include U.S. Chamber, then:
+...
+Securities Industry and Financial Markets Association
+U.S. Chamber of Commerce
+
+But I'm not fully sure about Chamber. Let's leave them out to be safe? Or include? The question asks "Which signers... do these letters show..." If the letters shown don't include Chamber, then I shouldn't.
+
+Given I need "single best answer". I think listing IAA, ICI, and SIFMA is good. But I want check alphabetically:
+Investment Adviser Association
+Investment Company Instit
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): Investment Company Institute, Managed Funds Association, SIFMA AMG, U.S. Chamber of Commerce
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): Investment Company Institute, Managed Funds Association, SIFMA AMG, U.S. Chamber of Commerce
+
+Where it shortcut: Same shortcut path: the signer list and the evidence of commenting on S7-17-22 are both given as explicit citations in footnotes of Documents 5, 8 and 12, so the answer is a name-matching exercise.Doc 5 Doc 8 Doc 12
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): Investment Company Institute, Managed Funds Association, SIFMA AMG, U.S. Chamber of Commerce
+
+Where it shortcut: Again matched the enumerated signer list in Document 5 note 4 against organizations explicitly cited as S7-17-22 commenters in Documents 8 and 12, plus ICI/MFA as letter authors, yielding the gold list directly.Doc 5 Doc 8 Doc 12
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

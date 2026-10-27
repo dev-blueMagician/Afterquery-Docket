@@ -1,0 +1,136 @@
+{
+  "question": "Which unions accepted the 2016 Civil Service compensation offer and were engaged during the 2023 Civil Service McCloud consultation without written replies, if any? Any order.",
+  "number_of_asks": 1,
+  "gold_answer": "FDA, GMB, Unite, NCOA, Prison Governors' Association",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 5, paragraph 1.3): the government's offer of 26 September 2016 on the Civil Service Compensation Scheme was agreed by eight of the ten unions: FDA, Prospect, GMB, UNISON, Unite, NCOA, the Defence Police Federation and PGA.\n\nStep 2. Source fact (Doc 5, paragraph 1.4): the other two, the Prison Officers Association (POA) and the Public and Commercial Services Union (PCS), did not agree it.\n\nStep 3. Source fact (Doc 4, paragraph 2.11): the unions engaged during the 2023 consultation were the NTUC unions PCS, Prospect, FDA, GMB, POA UK (Prison Officers' Association) and Unite, and the non-affiliated DPF (Defence Police Federation), the ISU, NCOA and the Prison Governors' Association.\n\nStep 4. Source fact (Doc 4, paragraph 3.9, Table 2 and Annex A): only three unions sent written responses: Prospect, PCS and the Defence Police Federation. The other two responding organisations were the Civil Service Pensioners Alliance and Pen-gage, which are not unions.\n\nStep 5. Matching (Doc 4 and Doc 5): of the ten engaged unions, seven had accepted the 2016 offer: FDA, Prospect, GMB, Unite, NCOA, the Defence Police Federation and the Prison Governors' Association, which is Doc 5's PGA (Doc 5's POA is the Prison Officers Association). PCS and POA UK refused it, and the ISU was not one of the ten unions party to it. UNISON accepted but was not engaged in 2023.\n\nStep 6. Exclusion (Doc 4): Prospect and the Defence Police Federation responded in writing, so the unions left are FDA, GMB, Unite, NCOA and the Prison Governors' Association.\n\nDecoy: POA UK, the Prison Officers' Association, was engaged and sent no written reply, but it refused the 2016 offer; it is not Doc 5's PGA. Prospect and the Defence Police Federation accepted the offer and were engaged, but replied in writing.",
+  "answer_components": [
+    "FDA",
+    "GMB",
+    "Unite",
+    "NCOA",
+    "Prison Governors' Association"
+  ],
+  "evidence": [
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "The offer was ultimately agreed with eight out of ten unions (FDA, Prospect, GMB, UNISON, Unite, NCOA, the Defence Police Federation and PGA)."
+    },
+    {
+      "document_number": 5,
+      "component_number": 2,
+      "quote": "The offer was ultimately agreed with eight out of ten unions (FDA, Prospect, GMB, UNISON, Unite, NCOA, the Defence Police Federation and PGA)."
+    },
+    {
+      "document_number": 5,
+      "component_number": 3,
+      "quote": "The offer was ultimately agreed with eight out of ten unions (FDA, Prospect, GMB, UNISON, Unite, NCOA, the Defence Police Federation and PGA)."
+    },
+    {
+      "document_number": 5,
+      "component_number": 4,
+      "quote": "The offer was ultimately agreed with eight out of ten unions (FDA, Prospect, GMB, UNISON, Unite, NCOA, the Defence Police Federation and PGA)."
+    },
+    {
+      "document_number": 5,
+      "component_number": 5,
+      "quote": "The offer was ultimately agreed with eight out of ten unions (FDA, Prospect, GMB, UNISON, Unite, NCOA, the Defence Police Federation and PGA)."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Unions engaged during the consultation process are listed below:"
+    },
+    {
+      "document_number": 4,
+      "component_number": 2,
+      "quote": "Unions engaged during the consultation process are listed below:"
+    },
+    {
+      "document_number": 4,
+      "component_number": 3,
+      "quote": "Unions engaged during the consultation process are listed below:"
+    },
+    {
+      "document_number": 4,
+      "component_number": 4,
+      "quote": "Unions engaged during the consultation process are listed below:"
+    },
+    {
+      "document_number": 4,
+      "component_number": 5,
+      "quote": "Unions engaged during the consultation process are listed below:"
+    },
+    {
+      "document_number": 4,
+      "component_number": 4,
+      "quote": "NCOA (National Crime Officers Association)"
+    },
+    {
+      "document_number": 4,
+      "component_number": 5,
+      "quote": "Prison Governors’ Association"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Unions and other representative bodies: Prospect PCS Defence Police Federation"
+    },
+    {
+      "document_number": 4,
+      "component_number": 2,
+      "quote": "Unions and other representative bodies: Prospect PCS Defence Police Federation"
+    },
+    {
+      "document_number": 4,
+      "component_number": 3,
+      "quote": "Unions and other representative bodies: Prospect PCS Defence Police Federation"
+    },
+    {
+      "document_number": 4,
+      "component_number": 4,
+      "quote": "Unions and other representative bodies: Prospect PCS Defence Police Federation"
+    },
+    {
+      "document_number": 4,
+      "component_number": 5,
+      "quote": "Unions and other representative bodies: Prospect PCS Defence Police Federation"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    },
+    {
+      "trap": "Look-alike company",
+      "how_a_careless_solver_fails": "Picks the wrong entity or section"
+    },
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Doc 5 lists \"PGA\" only by acronym. Doc 4's Prison Governors' Association is that union, so dropping it leaves four. Doc 4's POA UK is the Prison Officers' Association, which refused (Doc 5). Prospect and DPF were engaged but wrote (Doc 4 Table 2), so including them gives seven."
+}

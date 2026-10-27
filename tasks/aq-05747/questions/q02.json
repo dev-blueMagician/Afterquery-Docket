@@ -1,0 +1,54 @@
+{
+  "question": "By how many percentage points, to one decimal place, was the midpoint of the 2026 growth in comparable currency neutral EPS implied by Coca-Cola's July 2026 outlook below the 2025 growth in comparable currency neutral EPS it expected in July 2025?",
+  "number_of_asks": 1,
+  "gold_answer": "1.5 percentage points",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 1, Outlook for full year 2025, release of July 22, 2025): \"The company expects to deliver comparable currency neutral EPS (non-GAAP) growth of approximately 8%.\"\nStep 2. Source input (Doc 5, Full Year 2026 Guidance table, Current column, release of July 28, 2026): comparable EPS (non-GAAP) growth of 9% to 10%, which includes an approximate 3% currency tailwind. The table's other EPS row, 7% to 8%, is for comparable currency neutral EPS excluding acquisitions and divestitures, a separate measure.\nStep 3. Source input (Doc 5 and Doc 1, definitions): comparable currency neutral EPS is adjusted for currency only, while the measure excluding acquisitions and divestitures is also adjusted for acquisitions and divestitures. Doc 1's 2025 figure is for the measure adjusted for currency only, so the 2026 figure for the same measure is comparable EPS growth less the currency tailwind.\nStep 4. Calculation (Doc 1 and Doc 5): low end of the implied 2026 growth in comparable currency neutral EPS: 9 - 3 = 6 (percent).\nStep 5. Calculation (Doc 1 and Doc 5): high end: 10 - 3 = 7 (percent).\nStep 6. Calculation (Doc 1 and Doc 5): sum of the two ends: 6 + 7 = 13.\nStep 7. Calculation (Doc 1 and Doc 5): midpoint of the range: 13 / 2 = 6.5 (percent).\nStep 8. Final answer (Doc 1 and Doc 5): 2025 expectation less the 2026 midpoint: 8 - 6.5 = 1.5 percentage points.",
+  "answer_components": [
+    "1.5 percentage points"
+  ],
+  "evidence": [
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "The company expects to deliver comparable currency neutral EPS (non-GAAP) growth of approximately 8%."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "9% to 10% growth, which includes: •Approx. 3% currency tailwind"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Comparable currency neutral EPS (non-GAAP) has been adjusted for the impact of fluctuations in foreign currency exchange rates, and comparable currency neutral EPS excluding acquisitions and divestitures (non-GAAP) has been adjusted for the impact of fluctuations in foreign currency exchange rates and the impact of acquisitions and divestitures"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Unit normalization"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Look-alike measure: Doc 5's July 2026 table prints 7% to 8% for comparable currency neutral EPS excluding acquisitions and divestitures; using it gives 8 - 7.5 = 0.5. The asked measure, as in Doc 1's 2025 guidance (about 8%), removes only currency: 9-10% less 3% is 6-7%, so 1.5."
+}

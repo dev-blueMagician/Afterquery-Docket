@@ -1,0 +1,60 @@
+- Family and target: h15 (notes/hooks.md), sketch i08. Medium target, Hard welcome (user 2026-10-10). Rev 0 (one
+  county, 350 days) measured "In band — Easy tier", Low 3/5, below the open tiers by the user's statement (##
+  Platform validation). Rev 1 applies the same rules to one county in each of the four tier combinations and asks
+  the total. Not quick-tested; no difficulty run on rev 1.
+- Dependency plan: Doc 3 L25, L28: 50,000 or more, April 24, 2026 -> April 26, 2027; under 50,000, April 26, 2027 ->
+  April 26, 2028; effective April 20, 2026. Doc 4 L26-27, L59, L30: fifteen or more employees, May 11, 2026 -> May
+  11, 2027; fewer, May 10, 2027 -> May 10, 2028; effective May 7, 2026. Doc 4 L143: both rules bind a public entity
+  that receives HHS assistance. First requirement = earlier of the two dates, before and after HHS's change, with
+  DOJ's dates already extended. Gains: 350 (May 11, 2026 -> April 26, 2027), none (April 26, 2027 both times), 365
+  (May 11, 2026 -> May 11, 2027), 352 (May 10, 2027 -> April 26, 2028). Total 1,067.
+- Universe: the four combinations of two population tiers and two staff tiers, one county each; all four computed.
+  Counties are not special district governments, so Doc 3's population tiers decide their dates.
+- Necessity: Doc 3 is the only place that prints April 26, 2027 and April 26, 2028; Doc 4 prints no DOJ date.
+  Measured on rev 0 (Run 1 Document check): without Doc 3 the high model rebuilt DOJ's larger-tier date as April
+  24, 2027 from Doc 4's "by one year" (348 days) or answered 365, and without Doc 4 it answered 367 twice. For rev
+  1 the rebuilt date gives 348 for the first county and a total of 1,065, not the gold. Doc 4 alone carries every
+  HHS date. Closed-book on rev 0 recalled both 2024 dates and answered 17; the 2026 dates were not recalled.
+- Selected-lever checks: not a which-items question; no rounding or exclusion lever is claimed. Wrong totals
+  recomputed (Python datetime, 2026-10-11): HHS's own four extensions 1,462; the extended dates compared only
+  (DOJ's date "controls" wherever it is now earlier) 365; DOJ's rule credited to HHS as well (2024 dates as the
+  start) 1,465; the second county given HHS's 366 days 1,433; the leap day in the fourth gain dropped 1,066;
+  DOJ's larger-tier date rebuilt as April 24, 2027, 1,065. None equals 1,067.
+- Targeted failure modes: mode 1 (Superseded date or version, uses the wrong period or date) -> 365: the route two
+  of five low attempts took on rev 0 (Run 1, attempts 2 and 5: "the DOJ rule ... determines when 'any federal rule'
+  requires" it, so HHS's rule "does not change the binding federal deadline", 0 days). Applied to rev 1 it gives no
+  gain to the three counties whose DOJ date is now the earlier one and 365 to the fourth. Mode 2 (Linking across
+  documents, picks the wrong entity or section) -> 1,462: HHS's own extensions read from Doc 4's SUMMARY (365, 366,
+  365 and 366 days); unobserved on rev 0, kept because the question is framed around HHS's rule. If a run on rev 1
+  arrives before Submit, offer to re-declare from its observed wrong answers.
+- Calculation verification: Python datetime 2026-10-11, per county min(DOJ extended, HHS old) -> min(DOJ extended,
+  HHS new): 350, 0, 365, 352; sum 1,067. Convention: elapsed days. February 29, 2028 lies inside May 10, 2027 ->
+  April 26, 2028 (352 = 366 - 14); no leap day inside the other spans.
+- Semantic/ID/overview probes: no document prints 1,067 or any of the four gains as a day count (grep, all seven
+  texts). Shortest route: both SUMMARY and DATES blocks, eight earlier-of comparisons, three date gaps, one sum.
+- Precision/readings: "before any federal rule required each" makes each county's asked date the earliest among
+  the rules binding it. "Did HHS's interim rule give" is that rule's own effect: with DOJ's extension already in
+  force (Doc 3 L28), which is also the reading "with and without HHS's extension, all else as it stands" that three
+  low attempts and the high model used on rev 0; both give the same four gains. Counting from the 2024 position
+  (1,465) credits DOJ's rule to HHS. The second county's answer is no gain, so the total has three addends.
+- Completeness: full corpus, no gaps (notes/intake.json; notes/doc-map.md).
+- Style/set review: 52 words (four counties' facts have to be stated; under the form's 60-word warning). Shares
+  q02's document pair and mechanism: submit at most one of q02 and q03. Words a paraphrase must keep: HHS funds;
+  four counties; 50,000 or more people; 15 or more employees; "in each pair"; "in total"; "HHS's interim rule";
+  "before any federal rule required each"; WCAG 2.1.
+- Revision history: rev 1 (2026-10-11) answers difficulty Run 1 on rev 0 (Version 90fd80, "In band — Easy tier",
+  Low 3/5; Feedback log, index P5). Traces: three low attempts tabulated the earlier-of date before and after
+  HHS's rule and were right; two concluded DOJ's date controls throughout and answered 0. The declared traps (365,
+  367) caught no one. Rev 1 keeps the documents, rules and asked quantity (days gained from HHS's rule before any
+  federal rule bound the body) and widens the scenario to the four tier combinations, whose gains follow four
+  different patterns (switch, none, HHS's own year, switch across a leap day), asked as one total so each wrong
+  cell has its own magnitude. Question, answer (350 days -> 1,067 days), reasoning, evidence (three rows added),
+  tags (adds Aggregation) and failure modes changed. One focused repair; if rev 1 is also below Medium the family is
+  retired. Rev 0 (2026-10-10, d0212279...): one county with 50,000 or more people and 15 or more employees.
+- Warnings answered (rev 0): rev 0 floor 2026-10-10: 0 FAIL, 2 WARN (origin; sibling words shared with q02).
+- Warnings answered (rev 1): floor 2026-10-11: 0 FAIL, 2 WARN. WARN origin: origin: claude is the actual writer; the
+  export sheet takes origin user only, reported as is. WARN sibling (six words shared with q02, "50 000 or more
+  people and"): q02 and q03 are alternates on one document pair and at most one is submitted. The emulated form
+  number check raised nothing: every date and threshold in Steps 1 to 8 is printed in its cited document before
+  character 17,500 (14 at character 11,055 of Doc 4), and Steps 9 to 15 are single two-operand calculations with
+  exact results that name both documents. Fifteen steps is long for this workspace; read the form after pasting.

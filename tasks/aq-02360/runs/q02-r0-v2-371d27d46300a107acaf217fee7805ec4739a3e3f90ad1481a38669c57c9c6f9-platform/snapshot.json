@@ -1,0 +1,50 @@
+{
+  "bundle": "aq-02360",
+  "corpus_sha256": {
+    "docs/Civil-Service-Pension-Scheme-2015-remedy-and-civil-service-2.txt": "77077ea6f8ea88f449c0b0cc29c25ed9be40e75e37fc5bc12c5ad011cbfd7653",
+    "docs/Civil-Service-Pension-Scheme-2015-remedy-and-civil-service.txt": "5d065d3a55fb28bc30ed24ba73f3d29886a46685d3990fe500b82f5cbabfc94c",
+    "docs/Civil-Service-Pensions-2015-Remedy-McCloud-consultation.txt": "a29c7636e381d669d1b806244270af39596192eb53ff97b0414e8abe0919a325",
+    "docs/Civil-Service-Pensions-2015-Remedy-consultation-response.txt": "7784dcaeed591256458468493c5b74ce2341ef09e18d9f54a55d0f1c5282aa72",
+    "docs/Consultation-on-reform-of-the-Civil-Service-Compensation.txt": "19937e7bfaea3ab81b3408d2d572636b2604ac29a603b1ce543f6dacbf1b4e58",
+    "text/D01.txt": "6be1416fd849264289e92b5dedee7f43d2945f7883eb6c855b7b07c637f2ebe0",
+    "text/D02.txt": "cb73b0912bee590e31eeba791e1fc0d97cff00d764b0bb73acab52ab3b23a954",
+    "text/D03.txt": "4830a14da3ddb9bb3b2e65fac5c53bddceb8f05571c4b2817040d4fc5c6ad5a1",
+    "text/D04.txt": "3a72e0037df6ec80a4943f8ac6857fa1bf5c3fab706ac8499b6fdab218a7383d",
+    "text/D05.txt": "d1917ebc5f489ecb2803c593f24d694390169e45ed890d61d464d859e8141df9",
+    "text/manifest.json": "312e2de1658e76874f7ae10986d7f67f9815bd61c3f8f67b1ff686b2828e1c6e"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "32ce876cf21b6278e3c8f0a0e78d17730c68e64a0b1e9bba30a5d33d68454846",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D04, D03",
+    "id": "q02",
+    "levers": "Calculate across documents; Scatter the pieces",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i02",
+    "status": "draft",
+    "tags": "Cross-document join; Temporal alignment"
+  },
+  "question_id": "q02",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "573 days",
+    "components": "- c1: 573 days",
+    "evidence": "- D03 (Introduction and contact details) [c1]: \"which began on 6 March 2023 and closed on 14 May 2023\"\n- D04 (paragraph 6.5(c)) [c1]: \"received by the scheme manager after 1st October 2023 but before 30 September 2024, or later if the scheme manager considers there are reasonable circumstances to extend the deadline\"",
+    "feedback log": "- 2026-10-09 | sketch i02 (same question and answer as rev 0) | quick test | user report: \"both of i01 and i02 survived quick test\" (no screenshot; low-model answer not captured).",
+    "lever checks": "- Family and target: rule application with an exclusive end date across documents; target medium. Quick test (one low-model attempt) survived (user report, 2026-10-09, sketch i02 wording, no screenshot); difficulty pending.\n- Dependency plan: Doc 4 gives the consultation's opening date (6 March 2023); Doc 3 §6.5(c) gives the opted-out election window (\"after 1st October 2023 but before 30 September 2024\", extension discretionary); last receivable day 29 September 2024 (derived); elapsed days 573.\n- Universe: not applicable (single value). Dates searched: \"6 March\", \"30 September\", \"September 2024\", \"opted\", \"opt-in\" in all five texts.\n- Necessity: Doc 3 -> only statement of the election window (D04 L358); Doc 4 discusses opted-out elections (D03 L445-473) without dates (\"has not yet been finalised\") -> without Doc 3 the end date is unknowable. Doc 4 -> only printing of the opening date (D03 L28, L87, L109); Doc 3 prints only the 14 May 2023 deadline (D04 L1220) -> without Doc 4 a solver must count from the close or guess. Docs 1, 2, 5 irrelevant. Both remain needed after wording.\n- Selected-lever checks: Calculate across documents: one date from each document. Boundary (Rounding and sign): 30 September 2024 read as inclusive -> 574 (changes the answer). Scatter the pieces: opening date and window in different documents.\n- Targeted failure modes: Mode 1 wrong answer 574 (6 March 2023 -> 30 September 2024), recomputed by script. Considered and not declared until a measured attempt shows them: counting from the 14 May 2023 close (504, or 505 to 30 September; Linking across documents / Uses the wrong period or date); Doc 4 L441's look-alike \"30 September 2023\" (208); the February 2023 advance notice (D03 L99, month only).\n- Calculation verification: Python date difference 6 March 2023 -> 29 September 2024 = 573; decomposition 18 monthly steps of lengths 31 x 11, 30 x 6, 29 x 1 = 550 days to 6 September 2024, plus 23 = 573. Convention: elapsed days (\"how many days after\"), not inclusive. 2024 is a leap year.\n- Semantic/ID/overview probes: the bundle overview lists Doc 4's \"6 March 2023 to 14 May 2023\" and Doc 3's \"1 October 2023\", not 30 September 2024. \"opted out\" in Doc 4 leads to policy text without dates. Shortest complete route: Doc 4 introduction plus Doc 3 §6.5(c), then one date difference.\n- Precision/readings: \"opened\" excludes the 14 May close and the February 2023 advance notice; \"its proposed\" pins Doc 3's draft rule (Doc 4 does not change the window); \"barring extensions\" excludes the discretionary later date; \"last day for receiving\" with \"before\" gives 29 September 2024.\n- Completeness: no source gaps (capture complete; notes/intake.json).\n- Style/set review: 21 words; own wording. Sibling q01 shares no document, fact or answer path. Form emulator (aq-02157 form_check_v10.py) clean; every calculation is a bare \"a op b = r\" with printed or earlier operands.\n- Warnings answered: see the floor output at preflight.",
+    "necessary documents": "",
+    "platform validation": "",
+    "question": "How many days after the 2023 remedy consultation opened was its proposed last day for receiving opted-out service elections, barring extensions?",
+    "reasoning": "Step 1. Source fact (Doc 4, Introduction): the consultation on the draft remediable service regulations \"began on 6 March 2023 and closed on 14 May 2023\".\nStep 2. Source fact (Doc 3, paragraph 6.5(c)): an opted-out service election must be \"received by the scheme manager after 1st October 2023 but before 30 September 2024, or later if the scheme manager considers there are reasonable circumstances to extend the deadline\".\nStep 3. Rule applied (Doc 3): \"before 30 September 2024\" excludes that day, so without an extension the last day for receiving an election is 29 September 2024.\nStep 4. Calculation (Doc 4 and Doc 3): 6 March 2023 to 6 September 2024 is 18 whole months: eleven months of 31 days, six of 30 days and February 2024 with 29 days. 11 * 31 = 341\nStep 5. Calculation (Doc 4 and Doc 3): 6 * 30 = 180\nStep 6. Calculation (Doc 4 and Doc 3): 341 + 180 = 521\nStep 7. Calculation (Doc 4 and Doc 3): 521 + 29 = 550 days from 6 March 2023 to 6 September 2024.\nStep 8. Calculation (Doc 4 and Doc 3): 6 September to 29 September 2024 adds 23 days. 550 + 23 = 573 days.",
+    "targeted failure modes": "### Failure mode 1\nTrap: Document convention\nHow a careless solver fails: Misapplies a rule or premise\n\nWhy these are traps: Document convention: Doc 3 paragraph 6.5(c) sets the window as received \"before 30 September 2024\", an exclusive end date. A careless solver counts to 30 September and answers 574 days. The last receivable day is 29 September 2024, giving 573 days from Doc 4's 6 March 2023 opening."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "371d27d46300a107acaf217fee7805ec4739a3e3f90ad1481a38669c57c9c6f9"
+}

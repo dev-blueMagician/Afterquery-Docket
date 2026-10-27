@@ -1,0 +1,78 @@
+{
+  "question": "Had the Migration Advisory Committee's advice on butchers been accepted, by how much would a skilled butcher's quoted starting salary have exceeded the Skilled Worker Visa salary threshold?",
+  "number_of_asks": 1,
+  "gold_answer": "£6,020",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 2, Charlie Dewhirst of the National Pig Association, answering the Chair on what a skilled butcher is paid): the pay is a \"£26,500 starting salary\", rising with experience.\nStep 2. Source input (Doc 1, section on the operation of the Shortage Occupation List): the Migration Advisory Committee proposed adding butchers, among other jobs, to the Shortage Occupation List, and the report says its recommendations had still not been accepted. Accepting the advice would therefore have put butchers on that list.\nStep 3. Source input and calculation (Doc 1, key features of the immigration policy and the section on the list): entry on the list reduces the salary requirement for a Skilled Worker Visa by 20%, which leaves 80% of the general salary threshold. That threshold, the one the report sets against butchers' pay, is £25,600: 25,600 × 80% = 20,480 pounds.\nStep 4. Calculation (Doc 1 and Doc 2): the starting salary less the threshold butchers would have faced on the list: 26,500 - 20,480 = 6,020 pounds.\nStep 5. Wrong route, for comparison (Doc 1 and Doc 2): set against the threshold as printed, with butchers off the list, the margin is 26,500 - 25,600 = 900 pounds. That is the position the Government kept, not the one the Committee advised.\nStep 6. Final answer (Doc 1 and Doc 2): the starting salary would have exceeded the threshold by £6,020.",
+  "answer_components": [
+    "£6,020"
+  ],
+  "evidence": [
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "These are people who are paid probably £500 to £600 a week, a skilled butcher, I suspect."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Yes, £26,500 starting salary up to £35,000 to £40,000 once they are"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "on to the SOL, including: veterinary nurses; meat hygiene inspectors; jobs in the fishing industry; and butchers."
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "The MAC’s recommendations still have not been accepted some 20 months later."
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "The Shortage Occupation List (SOL)—a subset of the occupations that are eligible for a Skilled Worker Visa. Entry onto the SOL allows the applicable minimum salary requirement for a SWV to be reduced by 20%."
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "can make it easier to recruit to those roles by reducing the general salary threshold of £25,600"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "the skilled vacancies for butchers meet the earnings threshold of £25,600"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "putting the role on the SOL would not help as the pay being offered by recruiting firms was above £25,600 in any case"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Unit normalization"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Look-alike measure: Doc 1 prints the general threshold, £25,600, as the figure butchers' pay clears, so a careless solver subtracts it from Doc 2's £26,500 and answers £900. The advice would have put butchers on the Shortage Occupation List, whose threshold is 20% lower, £20,480: £6,020."
+}

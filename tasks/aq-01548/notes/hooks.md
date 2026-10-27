@@ -1,0 +1,44 @@
+# aq-01548 - cross-document hooks
+
+Find facts that combine into a world answer before drafting wording. Record sources/locations,
+input quantities and units/periods, the relationship, a possible ask and one or two selected levers.
+Explore forecast/actual, proposal/final dates, changed/conflicting tables, amendments, hedge scope,
+mentions/actions, entity/edition joins, ordered/late items, exclusions and ordinary cross-document
+calculations. Find more viable hooks than questions requested without inventing a quota.
+
+Bundle: nine opinions in one case (Mattiaccio v. DHA Group, D.D.C. 12-1249), Dec 2012 - Jul 2020.
+Caller's own full read (2026-10-08). Necessity constraint for every hook: each ticked document must
+carry a fact no other document repeats (background facts such as the July 2011 hire, the July 30,
+2012 filing, the May 16 leave, the Feb 26, 2014 dismissals, the Sept 16, 2013 leave to amend and the
+Oct 11, 2013 / May 27, 2013 scheduling dates recur in 2-6 opinions and cannot carry necessity).
+Unique-fact pools: D02 (TRO dates Mar 4/5/6/12, 2013; subpoena Jan 30 / Feb 28 / Jun 18, 2013; report's
+three misdemeanor convictions incl. disorderly conduct; 11 VA charges + 1 federal, 3 felonies; resume
+RGI 1992-2005, Medical Credit Services 2007-2010); D03 (claims (a)-(k); EEOC letter Jun 28, 2013;
+depositions Jul 9/10; Fisher email "perjury in 2004"; David Fisher at January 2012 party); D04 (Jan 14,
+2013 amended complaint; Oct 3, 2013 SAC; May 13, 2013 protective order; struck paragraphs); D05 (Blitz's
+three arguments; authorization text; s.1681i); D06 (Fischer counts Five-Seven; Oct 8 service deadline;
+Sept 30 / Oct 21 / Nov 1 dates; Dec 31, 2013 discovery; Fredericksburg); D07 (Feb 2012 party; May 4
+conversation; May 17 U.S. Search; May 21 laptop; Mar 28, 2005 A&B; NCMEC Feb 15, 2013; four statements;
+ten malice areas; FBI 90%; 25,000 checks at RGI); D08 (SSA Feb 5, 2013 application, onset May 31 ->
+amended Mar 19, 2013 to May 16; benefits from Nov 2012; VA unemployable as of Apr 18, 2011; five
+convictions 2003/2006/2017x3 and Rule 609 rulings; $450,000 lost earnings; juror); D09 ($2,000 statutory
+for "two separate violations"; standing outcome per FCRA theory; employment-application clause (E)).
+
+| Hook | Source inputs and locations | World fact/possible ask | Selected lever(s) | Applicable decoy/counterfactual | Source risks | Decision |
+| --- | --- | --- | --- | --- | --- | --- |
+| h1 | D02 p6 TRO filed Mar 4, 2013 (denied Mar 12); D08 p10 SSA application Feb 5, 2013 onset May 31, 2012, amended Mar 19, 2013 to May 16, 2012 | SSA onset date on file when the TRO was filed/denied = May 31, 2012 (or a derived day count) | Temporal alignment; same-label later value as decoy | Decoy May 16, 2012 (amended, the SSA's final finding and the date D08 stresses); recompute any count with both | Amendment date printed in the same D08 sentence as the decoy (tied); answer guessable 1-of-2 | screen |
+| h2 | D07 p5 fn7 NCMEC call "on or about February 15, 2013"; D02 p6/p10 TRO filed Mar 4, 2013, court: Defendants "have not indicated any intent to disclose ... to any third party" (Mar 12) | Days the third-party report preceded the TRO filing (17) or ruling (25) | Calculate across documents; reconcile | Mar 5 (notice) / Mar 6 / Mar 12 dates; Jan 30 subpoena | "on or about" date; two lookups + subtraction (measured Too easy family) | park |
+| h3 | D02 p3 report's three misdemeanor convictions (disorderly conduct, A&B, FBI seals); D08 p17 five convictions sought (2003 FBI seals, 2006 false pretenses, 2017x3), p31 2003 allowed only "in general terms" for context | Report convictions the defense never sought to use (disorderly conduct, A&B); or report convictions usable to impeach (none) | Match then exclude; mentions vs does | FBI seals is in both lists; "four of five" allowed | D08 p29 says the 2006 conviction was a termination ground although D02's report lists only misdemeanors (conflict to keep out of scope); set difference is a lookup path | park |
+| h4 | D09 fn5 $2,000 for "two separate violations"; D08 p9 $450,000 lost earnings "from date of termination to the present" | Shrink in non-punitive demand after estoppel (ratio 225 / 0.44%) | Calculate across documents | Statutory range $100-$1,000; D07 $500,000 judgment (unrelated) | Numbers the opinions never combine (guide's "answers no document states"); itemization may hold other items | reject unless reframed |
+| h5 | D05 p4-5/11 provisions invoked against Blitz (s.1681b(b)(2)(A), (b)(3)(A), s.1681i(a)(1)(A)); D09 p14-28 standing per theory; D07 fn17 / D09 fn7 no s.1681i vs employer defendants | Provisions still supporting a claim with standing vs employer defendants after 2020 | Mentions vs does ((b)(2)(A) both fails and survives) | Without D09 the 2015 state gives the same two provisions, so D09 is replaceable | Necessity fails for D09 | reject |
+| h6 | State-at-date counts (pending counts/defendants at an anchor date from D08) | e.g., counts pending on Oct 21, 2013 = 8 (I-VII + Blitz), never printed | Temporal alignment; aggregation | D08's own "remaining claims" (3) and D07's Counts I-IV | State reconstructable from D03/D04/D05/D06/D07 redundantly: only the anchor document is indispensable | reject (necessity) |
+| h7 | D07 p16 "25,000 background checks per month" at "RGI"; D02 p3 resume: Richmond Group International 1992-2005 | Year the resume said that job ended (2005) | Entity resolution (acronym) | Medical Credit Services 2007-2010; "Founder and CEO" versions | Lookup + acronym; trivia risk | park |
+| h8 | D04 p3 SAC filed Oct 3, 2013; D06 p4 Blitz served with Fischer's summons/SAC Sept 30, 2013; service deadline Oct 8 | Service preceded filing by 3 days | Calculate across documents | none | Small integer, arbitrary link | reject |
+| h9 | D03 p7 putative SAC "count five" = retaliation; D06 p3 filed SAC Count Five = civil conspiracy vs Fischer | Same label, different claim across complaint versions | Who belongs where | either reading | Each answer is single-document | reject |
+| h10 | Conflicts: party month (D03 Jan 2012 vs D07 Feb 2012), perjury court (D03 Prince William vs D06 Fredericksburg), FBI-seal court (D07 E.D. Va. vs D08 fn6 Prince William; fn6/fn7 look swapped), motion dates (D04 Jul 18 vs Jul 28), D09's "SSA and VA" vs D08's SSA-only estoppel basis | Source discrepancies | (avoid) | n/a | Two defensible answers | reject as answers; keep as decoy awareness |
+| h11 | D05 p1-2/p17 Blitz FCRA claim dismissed on a Rule 12(b)(6) motion (attorney-agent); D06 p16 Counts Five and Seven dismissed with prejudice for failure to state a claim, Count Six dismissed without prejudice for failure to serve after the merits motion was denied (p14-16); D07 p8 summary "granted the motions to dismiss of Defendants Blitz and Fischer"; universe of four added claims in D04 p3 / D05 p1 + D06 p1 | Of the four claims added after Sept 2013, how many were dismissed for failure to state a claim (3) | Mentions vs does (Count Six: merits motion denied, still dismissed); untied summary decoy | D07 summary read at face value gives 4; Fischer-only gives 2 | D05 replaceable: without it a model may assume Blitz's dismissal was 12(b)(6) by default (D07 says granted); D09 p18 misdescribes D05 as "denying motion to dismiss as to that claim" | screen; probe D05 early |
+| h12 | Author A (2026-10-08): D08 p9-10 "Mattiaccio III" = Jan 6, 2016 in-limine ruling (lost-employment evidence only with causation to s.1681b(b)(3)(A)); D09 p1 "Mattiaccio III" = Dec 3, 2019 estoppel ruling; D09 date Jul 21, 2020 | Days from the 2016 conditional ruling to the standing ruling (1,658) | Who belongs where (one short name, two rulings); calculate across documents | Decoy Dec 3, 2019 gives 231 | D08 prints the dated full citation beside the holding; arbitrary interval | park (author: Medium ~8%) |
+| h13 | Author A: D07 fn7 NCMEC call "on or about February 15, 2013"; D02 p10 "no intent to disclose ... to any third party" (Mar 12, 2013) | Days from the call to the remark (25) | Calculate across documents | TRO filing 17, notice 18, opposition 19 | Two lookups + subtraction | park (Medium ~5%) |
+| h14 | Author A: D03 p6-7 Getu deposition July 10 (Hale July 9), where Blitz's role was learned; D04 p3 SAC filed Oct 3, 2013 | Days from learning to the court-permitted SAC (85) | Calculate across documents; entity (Getu vs Hale) | 86 (Hale), 82 (Sept 30 service), 68 (Sept 16 order) | Two lookups | park (Medium ~5%) |
+| h15 | Author A: D04 SAC Oct 3; D06 Fischer MTD Oct 21 (Sept 30 service beside it) | 18 days | Calculate across documents | 21 (Sept 30) | Too easy | reject |
+| h16-h19 | Author A rejections: discovery deadline (two defensible answers, necessity); "eight years" (single doc); amended complaint to SSA application (Feb 1 vs Feb 5 conflict); EEOC-letter anchor for h1 (gold = salient amended value, weaker) | n/a | n/a | n/a | n/a | reject |

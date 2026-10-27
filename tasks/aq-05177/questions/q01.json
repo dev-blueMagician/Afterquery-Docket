@@ -1,0 +1,64 @@
+{
+  "question": "Judging by RadNet's 2024 earnings calls together, which health systems, if any, were RadNet's partners in the seven-center joint venture it formed when the first quarter of 2024 closed? List them alphabetically.",
+  "number_of_asks": 1,
+  "gold_answer": "Cedars-Sinai, Providence Health System",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 5, the CEO's remarks on health-system joint ventures in the first-quarter 2024 call): \"upon quarter close, we formed a new seven-center joint venture with Providence Health System in the northern and eastern San Fernando Valley of Los Angeles.\" This is the venture the question describes. Decoy: the same sentence says seven centers were added during the quarter to the existing Dignity Health venture in Arizona; that venture was enlarged, not formed, so Dignity Health is not a partner in the venture asked about.\nStep 2. Source input (Doc 7, the CEO's remarks on health-system partnerships in the third-quarter 2024 call): the partnership count includes a center \"inside our three-way joint venture in the San Fernando Valley and Los Angeles with Cedars Sinai and the Providence Health system\"; in the Q&A the CFO repeats that a site went into a venture \"here in Los Angeles with Cedars and the Providence Health system.\"\nStep 3. Identification (Doc 5 and Doc 7): taking the 2024 calls together, Providence is named only in these passages. Both place RadNet's venture with Providence in the San Fernando Valley, no other venture with Providence is mentioned, and no call reports a partner joining it later, so the three-way venture in Doc 7 is the venture formed in Doc 5. Its health-system partners are Cedars-Sinai and Providence Health System.\nStep 4. Final answer (Doc 5 and Doc 7): in alphabetical order, Cedars-Sinai, Providence Health System.",
+  "answer_components": [
+    "Cedars-Sinai",
+    "Providence Health System"
+  ],
+  "evidence": [
+    {
+      "document_number": 5,
+      "component_number": 2,
+      "quote": "upon quarter close, we formed a new seven-center joint venture with Providence Health System in the northern and eastern San Fernando Valley of Los Angeles"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "one inside our three-way joint venture in the San Fernando Valley and Los Angeles with Cedars Sinai and the Providence Health system"
+    },
+    {
+      "document_number": 7,
+      "component_number": 2,
+      "quote": "one inside our three-way joint venture in the San Fernando Valley and Los Angeles with Cedars Sinai and the Providence Health system"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "one here in Los Angeles with Cedars and the Providence Health system"
+    },
+    {
+      "document_number": 7,
+      "component_number": 2,
+      "quote": "one here in Los Angeles with Cedars and the Providence Health system"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        7
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: Doc 5 says the seven-center venture was formed \"with Providence Health System\", so careless solvers answer Providence alone. Doc 7 calls RadNet's only Providence venture \"three-way ... with Cedars Sinai and the Providence Health system\", so the partners are Cedars-Sinai and Providence."
+}
