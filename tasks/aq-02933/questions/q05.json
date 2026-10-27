@@ -1,0 +1,111 @@
+{
+  "question": "CMS cites fraud cases in support of its three 2026 enrollment moratoria. In how many of those cases was a prison sentence handed down in 2024 or 2025?",
+  "number_of_asks": 1,
+  "gold_answer": "13 cases",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 3, section II.B, the medical supply company cases): three cases have a prison sentence dated 2024: a California father and son (March 2024), a Texas man (February 2024) and a South Carolina man (March 2024). None is dated 2025. The other prison sentences in the list are dated 2023 or 2022, and the rest are a civil judgment and settlements. That makes 3.\n\nStep 2. Source input (Doc 5, section II.A.2, the hospice cases): five cases have a prison sentence dated 2024 or 2025: a former Louisiana resident (June 2024), several California residents (2025), the owner of a Louisiana hospice (May 2024), the owner of two California hospice companies with his biller (March 2024) and a California physician (December 2024). Not counted: two California residents found guilty in December 2024 and a California man convicted in February 2024, for whom no sentence is stated, a prison sentence dated 2023, and the settlements. That makes 5.\n\nStep 3. Source input (Doc 6, section II.B, the home health cases): five cases have a prison sentence dated in those two years: the owner of a Pennsylvania home care agency (June 2025), a part-owner of a Massachusetts provider (January 2025), the owner of home health care businesses in Ohio (April 2025), a Michigan HHA owner and operator (November of the earlier year) and a Texas man (August 2025). Not counted: a prison sentence from an earlier year, two convictions, a guilty plea and the settlements. That makes 5.\n\nStep 4. Calculation (Doc 3 and Doc 5): medical supply and hospice cases: 3 + 5 = 8.\n\nStep 5. Final answer (Doc 3, Doc 5 and Doc 6): adding the home health cases: 8 + 5 = 13.",
+  "answer_components": [
+    "13 cases"
+  ],
+  "evidence": [
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "A California father and son in March 2024 were sentenced to prison"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "A Texas man was sentenced to prison in February 2024"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "A South Carolina man was sentenced to 9 years in prison in March 2024"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "A former Louisiana resident in June 2024 was sentenced to"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Several California residents were sentenced to prison in 2025"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "was sentenced to 20 years in prison in May 2024"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "were sentenced to prison in March 2024"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "A California physician who worked for two hospices was sentenced to Federal prison in December 2024"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "The owner of a Pennsylvania home care agency was sentenced to prison in June 2025"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "A part-owner of a Massachusetts home health provider in January 2025 was sentenced in Federal court to 12 years in prison"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "A home health care owner was sentenced in April 2025 to 42 months in prison"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "In November 2024, a Michigan HHA owner and operator was sentenced to prison"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "A Texas man in August 2025 was sentenced to 75 months in Federal prison"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Look-alike measure: Doc 5 dates a guilty verdict to December 2024 and a conviction to February 2024 with no sentence; counting those outcomes as sentences gives 15. The gold counts only prison sentences dated 2024 or 2025: 3 in Doc 3, 5 in Doc 5, 5 in Doc 6."
+}

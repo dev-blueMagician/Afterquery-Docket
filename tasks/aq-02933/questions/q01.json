@@ -1,0 +1,68 @@
+{
+  "question": "Where CMS reports both enrolled-hospice counts and home health agencies sharing one address, by what percentage did those States' combined hospice count grow from 2019 to 2023? One decimal place.",
+  "number_of_asks": 1,
+  "gold_answer": "57.7%",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 5, Table 1, \"Number of Enrolled Hospices in CY 2019 and CY 2023\"): CMS gives enrolled-hospice counts for both years for Arizona, California, Nevada and Texas only. Nevada had 55 in CY 2019 and 138 in CY 2023. Texas had 718 and 1,081.\n\nStep 2. Source input (Doc 6, section II.B): CMS found numerous HHAs operating out of a single, common practice location in Ohio, and adds that similar situations have been seen in Texas, Michigan, North Carolina and Nevada.\n\nStep 3. Matching (Doc 5 and Doc 6): of the States in Step 1, only Nevada and Texas are among those in Step 2. Doc 6 names neither Arizona nor California there: it discusses Los Angeles County for the rise in its HHA numbers, not for shared addresses, and Doc 5's remark about a single building in Los Angeles County concerns hospices. Ohio, Michigan and North Carolina have no hospice counts for these years.\n\nStep 4. Calculation (Doc 5 and Doc 6): combined CY 2019 count for Nevada and Texas: 55 + 718 = 773.\n\nStep 5. Calculation (Doc 5 and Doc 6): combined CY 2023 count: 138 + 1,081 = 1,219.\n\nStep 6. Calculation (Doc 5 and Doc 6): hospices added between the two years: 1,219 - 773 = 446.\n\nStep 7. Final answer (Doc 5 and Doc 6): growth as a share of the CY 2019 count, to one decimal place: 446 / 773 = 57.7%.",
+  "answer_components": [
+    "57.7%"
+  ],
+  "evidence": [
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Table 1--Number of Enrolled Hospices in CY 2019 and CY 2023"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Nevada.......................................................... 55 138 151"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Texas........................................................... 718 1,081 51"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "CMS has recently detected several situations in Ohio where numerous HHAs are operating out of a single, common practice location"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "Similar situations have been seen in Texas, Michigan, North Carolina, and Nevada."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Used to identify",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Picks the wrong entity or section"
+    },
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Linking: Doc 6 names Nevada only in its 'Similar situations' sentence; its later co-located-HHAs passage names Michigan and Texas, so Texas alone gives 50.6%. Look-alike measure: Doc 5's Table 1 prints per-State increases of 151 and 51; averaging gives 101.0%. Combined counts give 57.7%."
+}

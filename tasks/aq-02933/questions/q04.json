@@ -1,0 +1,74 @@
+{
+  "question": "Across every State whose 2019 hospice total appears in CMS's hospice notice, leaving California out, what percentage of those hospices were in States CMS names for home health agencies sharing an address? Two decimal places.",
+  "number_of_asks": 1,
+  "gold_answer": "67.45%",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 5, Table 1, \"Number of Enrolled Hospices in CY 2019 and CY 2023\"): leaving California out as the question says, the table's CY 2019 totals are Arizona 152, Nevada 55 and Texas 718.\n\nStep 2. Source input (Doc 5, section II.C): outside the table, CMS gives one more State's total for that year: Georgia had 221 hospices in CY 2019. No other State has a 2019 hospice total. Nevada's other 2019 figure counts new enrollments.\n\nStep 3. Source input (Doc 6, section II.B): CMS found numerous HHAs operating out of a single, common practice location in Ohio, and adds that similar situations have been seen in Texas, Michigan, North Carolina and Nevada.\n\nStep 4. Matching (Doc 5 and Doc 6): of the States in Steps 1 and 2, Doc 6 names Texas and Nevada. Arizona and Georgia do not appear in Doc 6. Ohio, Michigan and North Carolina have no hospice total.\n\nStep 5. Calculation (Doc 5 and Doc 6): hospices in the named States, Texas and Nevada: 718 + 55 = 773.\n\nStep 6. Calculation (Doc 5 and Doc 6): hospices in the other States, Arizona and Georgia: 152 + 221 = 373.\n\nStep 7. Calculation (Doc 5 and Doc 6): all the hospices counted: 773 + 373 = 1,146.\n\nStep 8. Final answer (Doc 5 and Doc 6): share in the named States, to two decimal places: 773 / 1,146 = 67.45%.",
+  "answer_components": [
+    "67.45%"
+  ],
+  "evidence": [
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Table 1--Number of Enrolled Hospices in CY 2019 and CY 2023"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Arizona......................................................... 152 311 105"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Nevada.......................................................... 55 138 151"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Texas........................................................... 718 1,081 51"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "In Georgia, there have been sharp increases in the number of hospices there--from 221 in CY 2019 to 273 in CY 2025, or a 24 percent rise"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "CMS has recently detected several situations in Ohio where numerous HHAs are operating out of a single, common practice location"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "Similar situations have been seen in Texas, Michigan, North Carolina, and Nevada."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Used to identify",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Part vs total: Doc 5's Table 1 holds only part of the States with a 2019 total; Georgia's 221 is in the text of section II.C. Taking the table's three non-California States as the whole base gives 773 of 925, 83.57%. The gold's base is 1,146: 67.45%."
+}
