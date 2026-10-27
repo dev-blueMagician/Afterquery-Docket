@@ -82,3 +82,40 @@ Recommended:
 The reasons for both are in q01.md Lever checks (Revision 5).
 
 Resubmission and any new difficulty result: pending (user).
+
+## 2026-10-08, the same panel sent again (screenshot, no message)
+
+The user sent a new screenshot of the Edit Task AQ-01333 page, saved as
+runs/q01-r4-v2-d148e751.../results/platform-review-revision-requested-2026-10-08.png. Its "Revision requested"
+panel is word for word the one transcribed above: both bullets, the summary paragraph and both reviewer issues.
+This capture also shows a line below the panel that the cropped 2026-10-07 capture does not:
+
+> Still open on this set: Hard, Medium, Easy.
+
+It is a standing line of the task page. The 2026-10-06 capture already had it (AQ-01333_2026-10-06_1150.txt
+L172), above "Question slots" and "Hard 0/2 · Medium 0/3 · Easy 0/1" (L174-177).
+
+Reading:
+- The page still shows the rev 4 return. No newer review result is visible.
+- Each tier still has at least one open slot. Easy has a single slot, so it is unfilled while q01 is returned.
+  The line does not show whether any Hard or Medium slot is taken.
+
+Response:
+- Rev 5's local fields were checked again against the panel, field by field. Doc 5 is not a listed document, and
+  no note is written. No Doc 5 evidence row remains (five Doc 4/Doc 6 rows). Step 2 is the reviewer's sentence,
+  character for character. The question and gold are unchanged, as the reviewer asked. The form must be set to
+  match; its current state is not visible here.
+- Two items were still open, and both are now done:
+  - The form's Targeted failure modes. The section existed at the 2026-10-07 hand-over and two traps were
+    recommended in chat, but nothing had been written into q01.md. It is now written with one trap: Wrong year or
+    edition (Doc 5's June range, 11.8%). The December trap is withdrawn (q01.md Lever checks).
+  - The removal probes the user required on 2026-10-08, run on the rev 5 fingerprint, one per ticked document
+    (results under Blind solve in q01.md). Both miss.
+- An independent review of these additions (fresh question-review agent, raw:
+  runs/q01-r5-v2-f6b3318d.../results/review-additions-2026-10-08.md) gave these verdicts: probes pass, hand-over
+  matches, failure mode "revise" for one overclaim, records "not accurate" (minor). The overclaim was that the
+  boxes called Doc 5 "the release that reports the sale", when Doc 6 reports it too. The overclaim and the record
+  errors were fixed the same day.
+- The whole form was handed over again from `check_questions.py --handover` (notes/handover-q01.md).
+- The platform needs a new difficulty result before resubmission. Rev 5 unticks Doc 5, and the run history says
+  "any edit to the question, answer or necessary documents needs a new result".
