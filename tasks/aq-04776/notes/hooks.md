@@ -1,0 +1,55 @@
+# aq-04776 - cross-document hooks
+
+Target: medium (user, 2026-10-14: "there is no slot for Easy Tier for this bundle, we should target medium and high"). Page at capture 2026-10-14 09:54: Hard 0/5 · Medium 0/1 · Easy 2/0; quick tests 0 of 15 used; difficulty runs 15 of 15 left; 7 submissions left. Medium has one slot, so a run may start at the High level.
+
+Repeat check (2026-10-14): none of the seven file names occurs in any earlier bundle in 10.6, 10.7 or 10.8, and content searches for SSVF, apportionment, SSR 26-2p, disparate impact and ACUS found nothing (one unrelated CMS notice mentions telemedicine). New bundle.
+
+Bundle shape: one real document pair (D01/D03, consecutive editions of the SSVF funding notice, mostly identical text). The other five texts do not cite each other or the pair. Every hook below was audited for steps no word in the question points at (the medium solver clears pointed steps) and by delete-and-guess.
+
+| Hook | Source inputs and locations | World fact/possible ask | Selected lever(s) | Applicable decoy/counterfactual | Source risks | Decision |
+| --- | --- | --- | --- | --- | --- | --- |
+| h1 | D01 l.38 ($799M, $118,000-$22,942,240), D03 l.37 ($855M, $262,981-$23,153,846) | change in total, floor, ceiling, spread ($66,625 wider) between rounds | Same series, right edition; Calculate across documents | other round's same-label figure | none | weak: two lookups plus one operation, every step pointed |
+| h2 | D01 II.C.5 (Q1 Dec 31, 2025 less than 15%; Q2 Mar 31, 2026 less than 40%), VII.B caps 35/60/80/100; D03 dates (published Jan 6, 2026; due Feb 19, 2026; history measured to Mar 3, 2026) | least a FY2026 grantee must have requested by an FY2027-round date to leave VA no basis to recoup | Temporal alignment | 40% (quarter containing the date), 35% cap, FY2027 award | D03 deadline and Mar 3 date guessable by analogy with FY2026's Mar 3 (same quarter): D03 fails delete-and-guess; only the Jan 6 publication date (FY2026 analogue Dec 26, other quarter) keeps D03 needed | weak: date bridge into a dated schedule (aq-02028 family), zero unpointed steps |
+| h3 | D03 III.C P3 "Renewal applications can request funding that is equal to or less than their current annualized award"; D01 l.38 floor $118,000; D03 floor $262,981 | most an FY2026 smallest-award grantee may request in FY2027, against FY2027's floor ($144,981 short) | Same series; rule applied to other edition's figure | FY2027 floor taken as available | D01 II.B states the same renewal rule for its own round, so the rule is not D03-unique; the gold for "most it may request" equals a printed figure the lazy route also gives | weak |
+| h4 | D01 I.D / II.C.6 90% CoC cap (FY2026 only); D03 CoC letters only "strongly encouraged" | two-round funding of a P3 grantee without CoC letters | Match then exclude (rule absent in newer edition) | 81% (cap applied twice) | FY2027 award unbounded ("VA may provide an increase"); a request-vs-award distinction would be needed | dropped: no single answer |
+| h5 | D01 l.74-78 prints 38 CFR 62.11(b)-(c) (90-day institution rule); D03 cites 62.11(b) without text | which households count toward FY2027's 60% homeless minimum | Definition applied to instance | (b)(1)(iii) over-90-day stay | public CFR text (recalled closed-book); (b)/(c) cited inconsistently; posed counts would be invented | dropped |
+| h6 | D02 VI ($23.11 median, 45.3% load, $33.58 loaded); D04 PRA ($32.66 mean, 82 h, $2,678.12) | difference in hourly time values; apportionment cost at DEA's rate | Look-alike measure | $9.55 (unloaded pair) | contrived join of unconnected analyses; "$23.11 as a proxy for the hourly average opportunity cost" vs "$33.58 ... represents" gives two readings | weak |
+| h7 | D02 NPRM Mar 1-31, 2023; D04 60-day period ended Dec 13, 2021; D05 June 26 - July 27, 2026 | rank comment periods (60, 31, 30) | Ordered answers | 30/31 near tie | date counts; ordering guessable | weak |
+| h8 | D01 SOAR "Substance Abuse and Mental Health Services Administration's ... program" (D03 drops the agency); D02 SAMHSA co-issuer, HHS signer Miriam E. Delphin-Rittmon | signer for the SOAR agency | Who belongs where | Anne Milgram, Heather Achbach | signer recallable closed-book; trivia | dropped |
+| h9 | D02 "significant" per DEA/HHS, not sent to OMB; D04 OIRA not significant; D05 OIRA significant | which rule OIRA itself found significant | Who belongs where | D02 (significance found by the agencies) | one of three, guessable; close to asking about the documents | weak |
+| h10 | D03 VII item 6 history measured to Mar 3, 2026 (12 days after the Feb 19 deadline); D01 VI.C.6 Mar 3, 2025 (= its deadline) | days between deadline and history cutoff in the round where they differ | Same series | 0 (FY2026 pattern) | single-document answer once the round is fixed | weak |
+| h11 | D05 Appendix A (14 provisions) vs preamble (9 updated); D01/D03 SSVF under 38 U.S.C. 2044 | whether SSVF's statute is listed; how many listed provisions are unchanged (5) | Match then exclude | 14 | yes/no part guessable; the count is one document; 14 - 9 = 5 reached lazily | dropped |
+| h12 | D07 fn 47 insured status 24-31; D04 3.455 DIC child under 18 | age-based posed case | Definition applied to instance | - | no document links the two; 38 CFR 3.57 needed (public, not printed) | dropped |
+
+No fact in D02, D04, D05, D06 or D07 corrects, extends or completes a figure in another document, so the measured Medium mechanisms that need a second document's clause (a hidden member or amount, a gold between printed pairs, an unprinted remainder) have no material here outside the SSVF pair, and the pair's rules differ only where the FY2027 notice is silent.
+
+Independent authors (2026-10-14): two question-author agents dispatched to search the whole bundle, one starting from the SSVF pair, one from the other five texts.
+
+Author A (SSVF pair first; read D01, D03-D07 in full and D02 lines 1-259 plus keyword hits; scripts for shared numeric tokens, every full date and a numeric-sentence diff of D01/D03): no sketch clears the bar. Findings:
+
+- No document outside the pair joins it. D05 line 220 (FY25: eight programs, 621 awards, $1,055,770,349) names neither SSVF nor any program and is neither round's grant year; shares or remainders against $799M/$855M would combine numbers the documents never connect. Shared dates are coincidences (Dec 31, 2025 in D01 and D02; Oct 1, 2026 in D03 and D07; Sept 30, 2025 in D01 and D04).
+- Inside the pair: D01 alone holds the quantified grantee rules (90% CoC cap, 15/40/65% milestones, 35/60/80/100% caps, 5% training, accreditation schedule, unspent-funds limit, Sept 30, 2025 discontinuation); D03 alone holds figures and dates and only non-numeric new rules (P4, no application limit, pre-award costs, E.O. 14332). So a D03 figure in a D01 rule either applies an FY2026-only rule to FY2027 (no determinate gold) or is a date bridge (every D03 date except the Dec 12, 2025 approval falls in grant-year Q2, recoverable by assuming "early 2026").
+- None of the six measured mechanisms has material: no complete-looking total with a member elsewhere; no FY2027 cell with a determinate amount; no gold between printed pairs; no part-period/whole-period series; near-identical lists are word-identical; definition gates are public CFR (62.11), printed in both (rural) or decide nothing numeric (Indian Tribe).
+- Closest misses, dropped: M1 operating-test date 12 days after the D03 deadline (named test leads to the sentence; only start date separating the dates puts a yes/no on the one-year boundary); M2 new-applicant access by round (categorical, guessable); M3 D05 FY25 total (unconnected); M4 FY2026 caps on an FY2027 award (FY2026 rule on FY2027) or on the FY2026 award (D01 only); M5 three-year award tail to Sept 30, 2028 (D01 only, guessable).
+- Fairness hazards for any later SSVF design: D01 line 146 CoC-letter exception sits in the LOI paragraph (scope for P3 renewals open); D03 line 68 describes FY2026 P1 as "to expand services to rural communities" while D01 line 49 says Tribal, rural and territories; D03 line 164 "fourth quarter of FY 2027 with grants beginning October 1, 2026" is self-contradictory; D03 line 189 says grantees are paid per the NOFO's timeframes but sets none.
+- Map additions: D03 l.65 "VA established SSVF in 2011"; D03 l.38 Pub. L. 110-387 sec. 604; D01 l.137 non-renewed grants discontinued Sept 30, 2025; D01 l.138 unspent-funds limit; D01 l.172 contiguous proposals combined.
+
+Author B (non-SSVF texts first; read all seven in full; searched apportion/fiduciary/payee/incarcerated, Title VI/civil rights/504/racial preference, territories, every "age NN" form, totals/awards/grant programs, compensation/community care/mental health/telehealth, every E.O. number): no sketch clears the bar. The five non-SSVF texts share no figure, period or person; the only numeric link among them is the BLS wage (h6). Candidates checked and failed (unpointed steps 0 unless noted):
+
+- D02 in-scope veteran comments 233 - 87 = 146 vs D04's 46 (difference 100; lazy 187): the 87 sits in the next sentence; the two rulemakings never connect.
+- D04's Feb 9, 2026 effective date choosing D01's FY2026 award ($22,942,240 vs D03 $23,153,846): date placed into a dated schedule (h2 family).
+- D07 fn 47 insured-status rule fed with ages from other texts: no other text gives anyone an age; scenario invented.
+- D05 FY25 grant totals vs SSVF rounds: unconnected numbers, different fiscal years.
+- D02 VA prescribers (15,148 + 5,351 + 1,513 = 22,012) vs D07 acceptable medical sources: all three types qualify, no exclusion, D02 alone answers.
+- D02 $18 monthly deductible cap: one document; trips or miles would be invented.
+- D06 recurring-benefit examples vs D07 program list (SSDI, retirement in both; survivors, SSI not): name check, about the documents.
+- Bakke 1978 vs DHS v. Regents 2020 (42 years): recallable, about citations.
+- D04 DIC under 18 / 3.57 vs D07 "before age 22": 3.57 not printed.
+- D02 "VA patient" vs D07 active-duty young adults: needs unprinted title 38 law.
+- D02 "significant" but not submitted to OMB vs D06's E.O. 12866 description: h9 family.
+- D04 removal of 21.330 vs D05 Appendix A item 4: what 21.330 provided is not printed.
+- D06 four NPRM contents vs D05 plain-language summary: yes/no lookup.
+- Payment integrity (D01 risk review; D06 31 U.S.C. 3351(4)): no quantity.
+- Single-document oddities (decoy material only): D02 fn 66 formula gives 11.37%, stated 16% fits 351.9/2,260 = 15.57%; D02's DEA text requires noting "no PDMP", the HHS twin does not; D04's 328 = 320 + 8 omits incarcerated surviving spouses the rule still covers; D02's comment categories (45 + 39 + 28 plus the unnumbered largest) exceed 146 in scope, so they overlap.
+
+Conclusion after the caller and two independent authors (2026-10-14): no design has a step the medium solver is known to miss. The only fair cross-document numeric joins are the SSVF pair (h1-h3, h10) and the BLS wage pair (h6), and every sketch built on them counts zero unpointed steps.
