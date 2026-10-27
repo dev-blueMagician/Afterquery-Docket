@@ -1,0 +1,63 @@
+{
+  "question": "The SBA's Office of Advocacy said the OCC's 2024 merger proposal could affect every small entity the OCC supervised. On the count the OCC had published by then, how many more entities is that than the final rule's estimate of small institutions affected in a year?",
+  "number_of_asks": 1,
+  "gold_answer": "583 entities",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 2, Regulatory Flexibility Act section): the SBA's Office of Advocacy noted that all of the OCC's small entities may have been affected by the proposed rule. The final rule restates that point with its own later count of small entities, which a footnote dates to data accessed in August 2024, so that count had not been published when the comment was made.\n\nStep 2. Source input (Doc 1, DATES line and Regulatory Flexibility Act section): comments on the proposal were due by April 15, 2024. The count the OCC had published by then is the proposal's own: 661 small entities.\n\nStep 3. Source input (Doc 2, Regulatory Flexibility Act section): the OCC's estimate for the final rule is 78 small institutions affected in a given year.\n\nStep 4. Calculation (Doc 1 and Doc 2): the small entities in the count published by then less the final rule's yearly estimate: 661 - 78 = 583 entities.",
+  "answer_components": [
+    "583 entities"
+  ],
+  "evidence": [
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "As the SBA's Office of Advocacy noted, all of the 636 small entities may have been impacted by the proposed rule to the extent that they elected to submit applications to the OCC for approval of business combination activities."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Based on data accessed using FINDRS on August 18, 2024."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "the agency expects the annual impact of the final rulemaking could be 78 OCC-supervised small institutions in a given year, assuming that all merger applications are submitted by small banks"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Comments must be received by April 15, 2024."
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "The OCC currently supervises 1,057 institutions (commercial banks, trust companies, federal savings associations, and branches or agencies of foreign banks) of which approximately 661 are small entities."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Wrong year or edition",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Wrong year or edition: Doc 2 restates the Office of Advocacy's point with its own count, 636, from data accessed August 18, 2024, after comments closed on April 15, 2024 (Doc 1). Using it gives 558. The count when the comment was made is Doc 1's 661, so 583."
+}
