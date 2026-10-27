@@ -1,0 +1,50 @@
+{
+  "bundle": "aq-02147",
+  "corpus_sha256": {
+    "docs/Equality-Analysis-for-Statutory-Sick-Pay-Reform-Measures-in.txt": "9013a369099a897cb39e77998923bde617c5f444022cedbbd5443bc40cfd872b",
+    "docs/Government-response-Health-is-everyones-business.txt": "aa81f35a008874836870d25ac16f40ae07e11c1e93d70ca09441bf9868006812",
+    "docs/Government-response-Making-Work-Pay-Strengthening-Statutory.txt": "99994b4b3c6786d2485e5ce423dde0c58957aaf69bf9b4b538a8d58d0b164273",
+    "docs/Health-is-everyones-business-proposals-to-reduce-ill.txt": "f205d38d847e6ff83c3dd404c3224844ff5a95991edf76117afb624ca39ad538",
+    "docs/Making-Work-Pay-Strengthening-Statutory-Sick-Pay.txt": "2871925cdbcd5b544e45d55a88f009cf8c7f596d69e88dc011d6c521c407d5f8",
+    "text/D01.txt": "46a44fee087231ecdc8788296829309a0a6bf8a8407c79b2c44c987db7cd59fa",
+    "text/D02.txt": "7073049cfbdf5bebd75d6fc4d1e0e7f17f7f1184006cf961eb6dfba898f0ca93",
+    "text/D03.txt": "5e251238c9a2c2f154c01af6075970e28f3bc20a3b4f06dfbbe6b9b69079c59f",
+    "text/D04.txt": "27cc66cc891d0564653804bd4d3f8b5f571e685d5e872516626988040a261ee6",
+    "text/D05.txt": "d80a956be570c73e08c16b88c887cfd9852b337904782c597f65e485bf3e7086",
+    "text/manifest.json": "eb938525d4060d20a025ec3551170b8f87290ded929d81525755ce8a10e54461"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "9c14d2a4bd8cdfbcf0f716c2d03f21aade9ade3aedcf1a48cef9f94d17444c7a",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D01, D03",
+    "id": "q02",
+    "levers": "Scatter the pieces; Calculate across documents",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i02",
+    "status": "draft",
+    "tags": "Cross-document join; Aggregation"
+  },
+  "question_id": "q02",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "Week 3",
+    "components": "- c1: Week 3",
+    "evidence": "- D03 (L105, Impact on Employers) [c1]: \"The median percentage put forward across all employers was 50%\"\n- D03 (L103, Impact on Employers) [c1]: \"the distribution of the 275 responses received from employers and employer representative groups\"\n- D01 (L428, Appendix, case study 2) [c1]: \"Case study 2: Employee works 5 days per week, and earns £175 per week\"\n- D01 (L45, paragraph 1.2) [c1]: \"Currently SSP is paid at a flat rate (currently £116.75 per week).\"\n- D01 (L45, paragraph 1.2) [c1]: \"SSP is not payable for the first 3 Qualifying Days of sickness absence (Waiting Days)\"\n- D01 (L67, paragraph 1.7) [c1]: \"removing the existing requirements to serve waiting days\"\n- D01 (L87, paragraph 1.11) [c1]: \"employees receive either a percentage of their earnings or the flat rate of SSP (currently £116.75) whichever is lower\"\n- D01 (L435, case study 2 table, week 3) [c1]: \"|3|£350|£280|\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: h2, the employers' median (printed only in Doc 5) applied to the equality analysis's £175 five-day case study (printed only in Doc 4), whose own conclusion is for 80%. Same family as q01 and offered as its easier sibling. Medium target; measured platform result pending.\n- Dependency plan: Doc 5 L105 gives 50% (L103: the 275 employer and representative responses). Doc 4 L428 gives £175 and five days; L45 the £116.75 flat rate and three waiting days; L87 the lower-of rule; L67 the removal of waiting days; L433-L435 the old cumulative column (£47, £163, £280). 175 * 50% = 87.50 a week (below the flat rate); current cumulative 46.70, 163.45, 280.20; new 87.50, 175.00, 262.50: ahead after weeks 1 and 2, behind in week 3.\n- Universe: not applicable (single value).\n- Necessity: Doc 4 is the only document with a £175 example or with a working pattern for it (Doc 3's examples are £100, £125, £150, £250 and two £125 jobs without days; Doc 5's are a £110 earner and a two-day £125 earner; \"£175\" occurs only at Doc 4 L428 and L444). Doc 5 is the only source of the employers' median (\"median\" elsewhere only in Doc 2's cost annex). The flat rate and waiting days are also in Docs 3 and 5, but neither replaces the case study. The question gives none of 50%, £175 or five days.\n- Selected-lever checks: Scatter the pieces: the rate in Doc 5, the employee in Doc 4. Calculate across documents: no document prints a result for 50%. Wrong routes (scratchpad breakeven.py, Decimal): Doc 4 L444's 80% conclusion gives never; the employees' 90% gives £157.50, above the flat rate, so never; the 60% illustration gives week 6; a weekly instead of cumulative reading gives week 2 (excluded by \"overall\", not declared).\n- Targeted failure modes: mode 1 (Figure that must be computed) is the printed 80% conclusion (\"always notionally better off\") standing in for the 50% computation: never. Mode 2 (Look-alike measure) is Doc 5 L151's employees' median, 90%: 175 * 90% = 157.50 is above £116.75, so the flat rate applies and the employee is never worse off. Both recomputed.\n- Calculation verification: Python Decimal 2026-10-08 (scratchpad breakeven.py): week 1 87.50 vs 46.70, week 2 175.00 vs 163.45 (+11.55), week 3 262.50 vs 280.20 (-17.70); continuous crossing 70.05 / 29.25 = 2.39 weeks; at the April 2025 £118.75 the comparison is 175.00 vs 166.25 and 262.50 vs 285.00, still week 3, so the flat-rate version does not change the gold. Float check of each reasoning expression: all exact.\n- Form number check: tasks/aq-02102/notes/helpers/form_check_v6.py (Doc3=D05, Doc4=D01, Doc5=D03) reports no flag.\n- Semantic/ID/overview probes: the page overview for Doc 4 lists the 80% illustrative rate and LEL figures, not the case studies; for Doc 5, the 80% decision and response counts, not the medians. Shortest complete route: Doc 5's employers' median, Doc 4's case study 2 and its old cumulative column, then the comparison.\n- Precision/readings: the answer is a whole week. \"3 weeks\" is also printed as Doc 3 Table 1's 70% break-even (L150): weekly SSP of £87.50 is close to 70% of £123 (£86.10), and the crossing depends only on weekly SSP against the flat rate, so that route reaches the same week legitimately. Not a different defensible answer.\n- Completeness: full corpus, no gaps (notes/intake.json; mapper read all five documents).\n- Style/set review: 22 words; no em dashes. Shares the q01 family (a Doc 5 median applied to a DWP illustrative employee); different median, employee and second document.\n- Warnings answered: pending preflight.",
+    "necessary documents": "- D01: Answer component\n- D03: Answer component",
+    "platform validation": "",
+    "question": "In which week of absence would the equality analysis's higher-paid case-study employee first be worse off overall at employers' median suggested rate?",
+    "reasoning": "Step 1. Source fact (Doc 5, Impact on Employers): across the 275 responses from employers and employer representative groups, the median percentage rate put forward was 50%.\n\nStep 2. Source fact (Doc 4, Appendix, case study 2): the higher-paid case-study employee works 5 days per week and earns £175 per week. The analysis compares cumulative SSP under the new percentage rate with the old entitlement, and at 80% finds this employee always better off.\n\nStep 3. Source fact (Doc 4, paragraphs 1.2, 1.7 and 1.11): SSP is currently a flat £116.75 a week and is not paid for the first 3 qualifying days (waiting days). The reform removes the waiting days and pays the lower of a percentage of earnings and the flat rate.\n\nStep 4. Calculation (from Steps 1 and 2; Doc 4 and Doc 5): weekly SSP at the employers' median rate: 175 * 50% = 87.5 pounds. This is below the £116.75 flat rate, so the percentage rate applies.\n\nStep 5. Calculation (from Step 3; Doc 4 and Doc 5): current SSP per qualifying day in a five-day week: 116.75 / 5 = 23.35 pounds.\n\nStep 6. Calculation (from Steps 3 and 5; Doc 4 and Doc 5): current entitlement in week 1, when 2 of the 5 qualifying days are paid after the 3 waiting days: 23.35 * 2 = 46.7 pounds (the table shows £47).\n\nStep 7. Calculation (from Steps 3 and 6; Doc 4 and Doc 5): current cumulative entitlement after week 2: 46.7 + 116.75 = 163.45 pounds (the table shows £163).\n\nStep 8. Calculation (from Step 4; Doc 4 and Doc 5): cumulative SSP at the median rate after week 2: 87.5 * 2 = 175 pounds. This is more than 163.45, so the employee is still ahead after week 2.\n\nStep 9. Calculation (from Steps 3 and 7; Doc 4 and Doc 5): current cumulative entitlement after week 3: 163.45 + 116.75 = 280.2 pounds (the table shows £280).\n\nStep 10. Calculation (from Step 4; Doc 4 and Doc 5): cumulative SSP at the median rate after week 3: 87.5 * 3 = 262.5 pounds. This is less than 280.2, so the employee is first worse off overall in week 3.",
+    "targeted failure modes": "### Failure mode 1\nTrap: Figure that must be computed\nHow a careless solver fails: Misapplies a rule or premise\n\n### Failure mode 2\nTrap: Look-alike measure\nHow a careless solver fails: Takes the wrong line item\n\nWhy these are traps: Doc 4 says this £175 employee is always better off at 80%, so a careless solver answers never. Doc 5's employees' median, 90%, also leaves the flat rate (never). The gold uses employers' 50%: £87.50 a week, cumulatively £262.50 against £280.20 by week 3."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "5d4e969fb216302d2d738e0f9e338572014a9d294426cf781fc5e0e67b7552ff"
+}

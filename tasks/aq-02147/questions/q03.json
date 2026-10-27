@@ -1,0 +1,77 @@
+{
+  "question": "At the median saving per retained employee, how many retentions a year would offset an 80% rate's rise over current SSP costs?",
+  "number_of_asks": 1,
+  "gold_answer": "52,500 employees",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 2, Annex A, Table 3): the 2021 response estimates what employers gain for each individual retained in work, as productivity plus replacement costs avoided. The total is £4,700 (lower), £8,000 (median) and £11,000 (upper) per employee.\n\nStep 2. Source fact (Doc 3, paragraph 32 and Table 2): employers' total annual SSP costs are £0.65 billion under the current system and £1.07 billion under the 80% earnings illustration.\n\nStep 3. Calculation (from Step 2; Doc 2 and Doc 3): rise over current SSP costs at an 80% rate, in billions of pounds: 1.07 - 0.65 = 0.42.\n\nStep 4. Calculation (from Steps 1 and 3; Doc 2 and Doc 3): retentions a year needed to offset that rise, dividing billions of pounds by the median saving in thousands of pounds, so the result is in millions of employees: 0.42 / 8 = 0.0525 million retained employees a year.",
+  "answer_components": [
+    "52,500"
+  ],
+  "evidence": [
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "could save employers between £5,000 and £11,000, on average, for each employee they prevent from falling out of work"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Table 3: Societal benefits of retaining an individual in work (£)"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "|Employer benefits|Lower|Median|Upper|"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "|Total|£4,700|£8,000|£11,000|"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Table 2 – Comparison of Illustrations on Impact on Business"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "||Current system|60% earnings|70% earnings|80% earnings|"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "|Total costs|£0.65 billion|£1.04 billion|£1.06 billion|£1.07 billion|"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Unit normalization"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    },
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Doc 3's own retention figure, an average £30,614 per lost employee, gives 13,719; Doc 2's Table 3 median is £8,000. Dividing the 80% rate's full £1.07 billion instead of its £0.42 billion rise over the current £0.65 billion gives 133,750."
+}
