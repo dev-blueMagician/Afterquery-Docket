@@ -1,0 +1,456 @@
+AQ-02220 · Public policy — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-02220
+Saved: 2026-10-09 01:27 (local time)
+Bundle: Public policy · 4 documents · 98,042 prompt tokens
+Attempts read: 6
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+7 of 8 runs left · 7 of 40 runs used in the last 24 h (all tasks)
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- Low model: 5 of 5 attempts right
+
+Ready when 1–3 attempts at a level are right, out of up to 5. A level can settle early, for example at 1 right out of 3.
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 1 (Oct 9, 2026, 1:18 AM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+1 run
+
+------------------------------------------------------------------------
+Run 1 · Too easy · Result the gate uses
+Oct 9, 2026, 1:18 AM · Version 60c6a9 (current) · Low 5/5 · Medium — · High —
+------------------------------------------------------------------------
+
+What changed before this run: first run
+
+Solver summary: Run 1 · Too easy · 5 of 5 right
+5 of 5 solver attempts got it by quoting the same passage: Doc 4 (“In the Warm Homes Plan we are setting a target to more than double the amount of heat dem…”).
+
+Your answer: 87.8 TWh
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: —
+
+Final answer: Heat networks are now expected to supply 71.0 TWh of England’s projected 2050 heat demand. | Your answer (gold): 87.8 TWh
+
+Full answer
+-----------
+
+Heat networks are now expected to supply 71.0 TWh of England’s projected 2050 heat demand.
+
+Reasoning
+---------
+
+We need answer: "How many TWh of England's projected 2050 heat demand are heat networks now expected to supply, to one decimal place?" Need knowledge about England projected 2050 heat demand and heat networks expected supply in TWh.
+
+We need determine the figure. Let's recall UK heat network projections. In England, heat networks are expected to supply around 20%? Or specific TWh? Let's recall data: UK total heat demand in 2050 projected maybe around 300 TWh? Or England's projected 2050 heat demand maybe around 200 TWh? Heat networks now expected to supply maybe 20 TWh? Or 32 TWh?
+
+We need be precise to one decimal place, likely a specific number like 71.0? No that sounds high.
+
+Let's recall recent UK government heat network zoning or heat strategy. The UK Heat and Buildings Strategy 2021 said heat networks could provide 18% of heat by 2050, up from 2% now. For UK? If UK heat demand is around 600 TWh? Wait let's check mental data: UK annual heat demand is about 570 TWh? Actually UK final energy consumption for heat is around 600 TWh? Let's recall: In 2029? Hmm.
+
+But the question specifically asks "How many TWh of England's projected 2050 heat demand are heat networks now expected to supply..." This sounds like a specific figure mentioned in a report, maybe "71.2 TWh"? Or "18.0 TWh"? Let's think carefully.
+
+There was a report by Department for Energy Security and Net Zero in 2023? Or a consultation on heat network zoning in England? They might have said heat networks could supply up to 20% of England's heat demand by 2050, equivalent to around 71 TWh? Let's check mental consistency: If England's 2050 heat demand projected is maybe 350 TWh? 20% of 350 is 70 TWh. So 71 TWh could be correct, but they ask "How many TWh... are heat networks now expected to supply, to one decimal place?" That sounds like the answer might be 71.0? Or maybe 20.0?
+
+Let's recall specific news in 2023: Government announced plans for heat network zones, expected to deliver 20% of heating? Actually in October 2023, UK government published response to consultation on heat network zoning. They said heat networks expected to supply around a fifth of all heat by 2050, about 64 TWh? Let's search mental database: In 2023, DESNZ said heat networks could provide heating for 20% of homes and businesses by 2050, supplying up to 60 TWh? Hmm.
+
+Another possibility: The Climate Change Committee (CCC) Sixth Carbon Budget suggested heat networks supply about 90 TWh by 2050 UK-wide? Or 80 TWh?
+
+But the question mentions "England's projected 2050 heat demand" singular figure and then "how many TWh... are heat networks now expected to supply". This sounds like they ask for the supply figure, not the percentage. The answer likely round number with one decimal, maybe "20.0 TWh"? Let's examine context: Maybe there is a chart showing England's heat demand in 2050 projected at about 300 TWh, with heat networks supplying 71.1 TWh?
+
+We need be accurate.
+
+Let's recall specific report: "The future of heat networks in the UK" maybe said by 2050 heat networks could meet 17% of UK heat demand, around 100 TWh? No.
+
+Let's break down mental statistics: UK has about 28 million homes. Average heat demand per home maybe 12,000 kWh/year = 12 MWh. Times 28m = 336 TWh domestic. Plus commercial/industrial maybe another 200 TWh, total UK heat demand around 550 TWh currently. By 2050 with efficiency and electrification, demand might drop to around 400 TWh? For England alone (population ~56m, households ~24m), domestic heat demand maybe 250 TWh now, falling to maybe 180 TWh by 2050, plus other sectors maybe 150 TWh, total England 2050 heat demand maybe 300-350 TWh.
+
+If heat networks supply 20%, that's 60-70 TWh. So 71 TWh plausible.
+
+But I need "to one decimal place" which suggests the figure is not round, like 71.3 TWh, derived from percentage of total demand that is also given with one decimal? Or maybe the total demand is given, e.g., 357.1 TWh, and networks supply 71.4 TWh (20%). But they ask specifically "How many TWh... are heat networks now expected to supply" so answer might indeed be 71.4? But I need one best answer.
+
+Let's recall a specific government publication in October 2024? Maybe "Heat Network Zoning: Policy Overview" stating "In England, heat networks are expected to supply 71.4 TWh of heat by 2050, meeting around 20% of demand"? Or "expected to supply 20.0 TWh"?
+
+We need determine correct figure from known knowledge.
+
+Let's recall news headlines in late 2023/early 2024 about heat network zones in England. The government said there are 20 zones? No, they designated pilot zones?
+
+Actually in 2024, the government introduced the Energy Act 2023 provisions for heat network zoning. The zoning authority will identify areas where heat networks are the lowest-cost decarbonisation solution. The government estimated that heat networks could provide up to 20 percent of the UK's heat demand by 2050.
+
+But there might be a specific figure in a 2022 study by Element Energy for BEIS: "Heat network market framework" projecting heat network supply in England reaching 71 TWh by 2050?
+
+Let's try to recall figures from the UK Heat Roadmap? The UK Heat Roadmap (2016) said heat networks could supply 43 TWh by 2050, about 17% of heat demand.
+
+But the phrase "now expected to supply" suggests an updated expectation, maybe higher due to zoning policy.
+
+Wait, there's also a 2024 report by the National Infrastructure Commission? They said heat networks should supply about 18% of heat by 2050, about 80 TWh?
+
+We need be precise. Let's think about the wording "England's projected 2050 heat demand are heat networks now expected to supply..." This sounds like filling in a blank: "___ TWh of England's projected 2050 heat demand are heat networks now expected to supply..." Maybe in an article they said "Heat networks are now expected to supply 71 TWh of England's projected 2050 heat demand of 350 TWh..." But they ask "How many TWh... are heat networks now expected to supply" So answer is that blank number.
+
+Could also be "20 TWh"? No, that'd be small.
+
+Let's search mental news from 2025? Maybe in January 2025, government announced heat network targets? They said heat networks will supply 7%? No.
+
+Let's recall specific numbers in the 2023 Heat Network Zoning consultation document. It might have included an impact assessment with figures: By 2050, heat networks in zones could supply 32 TWh? Or save X?
+
+Actually, I think the consultation said zoning could unlock up to 8 TWh? Not sure.
+
+But the question asks "How many TWh of England's projected 2050 heat demand are heat networks now expected to supply..." This sounds like it's asking for a share expressed in TWh, and they want one decimal place, maybe "71.0 TWh". Let's go with 71? But need one decimal, so "71.0".
+
+However, I want more confidence. Let's try to recall from a specific source: The Department for Energy Security and Net Zero published "Future homes and buildings standards: 2023 consultation" but not this.
+
+Another mental data point: In 2028? No.
+
+Let's consider the possibility that England's 2050 heat demand is projected to be 357 TWh and heat networks supply 71.4 TWh (20%). Or maybe demand is 536 TWh?
+
+Actually, I recall seeing a figure that UK heat demand in 2050 will be around 600 TWh? No, that sounds like current.
+
+Let's do mental calculation for England households: About 24 million homes. If average heat demand after efficiency is 8,000 kWh/year = 8 MWh. Times 24m = 192 TWh. Non-domestic buildings maybe similar? So total England heat demand maybe 350 TWh indeed. So 20% is about 70 TWh.
+
+But maybe the updated expectation is 18%, which of 350 TWh is 63 TWh.
+
+Let's recall in October 2024, the UK government announced £3.4 billion for heat networks? They said this could help heat networks supply heating to equivalent of 500,000 homes? Not TWh.
+
+Let's recall a specific phrase "heat networks are now expected to supply 27 TWh"? Hmm no.
+
+We need answer from own knowledge. Let's provide a figure that sounds right with one decimal: 71.0? Or 64.0?
+
+Wait, there's also the Climate Change Committee's progress report 2023 saying that by 2035, 300,000 homes should be on heat networks, supplying 20 TWh? By 2050 maybe 5 million homes?
+
+Let's recall: In the UK, there are currently about 500,000 homes on heat networks, supplying about 12 TWh? Actually total heat supplied by networks in UK is about 12 TWh per year (around 2% of demand). Yes, I think currently heat networks supply about 12 TWh, which is about 2% of UK heat demand (~600 TWh?). So UK heat demand is about 600 TWh currently (12/600 = 2%). That sounds correct: UK heat demand is about 600 TWh/year, networks supply ~14 TWh (~2%). So UK heat demand is indeed around 600 TWh. By 2050, UK heat demand might fall to around 400 TWh due to efficiency and heat pumps. For England, maybe around 320 TWh?
+
+If networks are expected to supply 18% of UK demand in 2050, that's about 72 TWh UK-wide. For England alone maybe about 60 TWh? But the question specifically mentions England's projected 2050 heat demand.
+
+Let's recall the UK Heat Strategy said heat networks could provide 18% of heat demand by 2050, up from 2% now. That'd be about 70-80 TWh across UK.
+
+But there was a 2021 study "Opportunity areas for district heating networks in Great Britain" that mapped potential. They found potential for heat networks to supply up to 100 TWh? Or 20%?
+
+Let's check mental consistency: If UK demand now ~600 TWh and networks supply ~14 TWh (2%). The strategy said increase to 18% by 2050. If 2050 demand is ~450 TWh, 18% is ~81 TWh.
+
+But the question mentions "England's projected 2050 heat demand are heat networks now expected to supply..." Maybe in England the share is 20%, and demand is 357 TWh, yielding 71.4 TWh? Or demand 340 TWh, 20% = 68 TWh?
+
+We need be precise with one decimal. Let's think if there's a specific report listing England's 2050 heat demand at 317.5 TWh and networks at 63.5? Unlikely.
+
+Perhaps the answer is indeed 71.4, but I need one best answer. Actually, I think I saw a figure: "By 2050, heat networks are expected to supply 71 TWh of heat in England, accounting for about 20 per cent of demand." That sounds familiar.
+
+But wait, they ask "How many TWh... are heat networks now expected to supply, to one decimal place?" If the figure is 71 TWh, then to one decimal it's 71.0.
+
+However, there might be a figure like "18.0 TWh" but that'd be too round.
+
+Let's recall in September 2024, the government released "Heat network zoning: pilot evaluation"? Not that.
+
+Actually, there is a specific figure in the 2023 Impact Assessment for the Energy Act 2023 (heat network zoning). The IA might have said "We estimate that by 2050 heat networks in zones could supply 32.3 TWh of heat per year in England..." Hmm, 32.3 sounds like a precise figure with one decimal! Yes! Impact assessments often have figures like 32.3 TWh. Let's think: The zoning policy applies only in designated zones, not all potential areas. So they might have calculated that within zones, heat networks will supply, say, 32.3 TWh by 2050. Meanwhile, outside zones there may also be networks. But the phrase "now expected to supply" could relate to the zoning policy's expected contribution.
+
+But wait, they ask "How many TWh of England's projected 2050 heat demand are heat networks now expected to supply..." This could be interpreted as "Heat networks are now expected to supply X TWh, which is part of England's projected 2050 heat demand of Y TWh." So they want X.
+
+If the zoning IA said within zones they supply 32 TWh, but total heat networks in England might supply more like 71 TWh.
+
+Let's recall seeing news in October 2023: Government said heat networks could provide heating for 20 percent of homes? Or "up to 20 percent of heat"?
+
+Actually, I recall a specific line from a 2022 report: "Heat networks could supply up to 20 per cent of UK heat demand by 2050, equivalent to around 100 TWh per year." Wait that'd be 20% of 500 TWh.
+
+But we need England specifically.
+
+Let's recall that in England there are about 24 million households. By 2050, maybe 5 million on heat networks? If each home uses 10 MWh/year, that's 50 TWh. Plus non-domestic, maybe 20 TWh, totaling 70 TWh. So 70 TWh sounds right.
+
+But I want more precision. Maybe the figure is exactly 71.3 TWh? Or 71.4?
+
+Let's try to recall any chart with 2050 heat demand broken down by technology: heat pumps supply maybe 100 TWh, direct electric 80 TWh, hydrogen maybe 50 TWh, heat networks 70 TWh, biomass 30 TWh, totaling about 330 TWh.
+
+Actually, I think I've seen a chart for England's 2050 heat supply mix: Heat pumps (air/ground) ~150 TWh, direct electric ~50 TWh, hydrogen ~30 TWh, district heat ~70 TWh, biomass ~20 TWh, total ~320 TWh.
+
+Thus 70 TWh is plausible.
+
+But the question asks "How many TWh... to one decimal place?" That sounds like they want you to read a specific number from a chart or table that has one decimal place, maybe 71.2 TWh.
+
+However, since I don't have the document, I need to answer from knowledge. Let's provide 71.0? Or maybe 20.0?
+
+Let's examine wording precisely: "How many TWh of England's projected 2050 heat demand are heat networks now expected to supply, to one decimal place?"
+
+If they ask "How many TWh... are heat networks now expected to supply" then they want a number with unit TWh. The phrase "of England's projected 2050 heat demand" modifies "How many TWh" - i.e., they ask what portion (in TWh) of the total demand will be supplied. So yes, they want the supply figure.
+
+Given typical rounding in reports, they might say "around 71 TWh". But they ask "to one decimal place" which might be used because the answer is an integer but they want "71.0". Or maybe it's "18.4"?
+
+Let's recall a specific 2024 report by the UK government titled "Clean Heat Market Mechanism"? No.
+
+Actually, there's a 2025 article? Let's not overanalyze.
+
+Given all this, my best answer is 71.0 TWh. But I'm not fully sure. Let's also consider 64.0 TWh.
+
+Wait, there's a figure in the "Future of heating in buildings" report? Or in National Grid's Future Energy Scenarios?
+
+National Grid's FES 2024 has scenarios for UK heat demand in 2050. In "Electric Heating" scenario? They show heat supplied by heat networks in 2050 being about 60 TWh? Or in "System Transformation" scenario?
+
+Specifically, National Grid ESO publishes Future Energy Scenarios (FES) every year. In FES 2023, they had four pathways: Falling Short, Consumer Transformation, System Transformation, Leading the Way. For heat, they show heat network supply in 2050. Let's recall figures: In Leading the Way, heat networks supply around 80 TWh? In Consumer Transformation maybe 60? But these are UK-wide.
+
+But the question mentions England specifically, not UK. So it's likely not FES since FES is GB.
+
+Let's recall that in October 2024, DESNZ published "Heat Network Zoning: 2025-2035 delivery plan"? Not sure.
+
+Actually, there is a specific figure mentioned in parliamentary debates? Maybe "Heat networks are expected to supply 20 TWh by 2035 and 71 TWh by 2050"?
+
+Given all that, I think 71.0 is reasonable. But I want to check consistency with 2% now being ~12 TWh. If in 2050 it's 71 TWh, that's about 6x growth, reaching about 18-20% share if demand falls somewhat. That sounds correct with government ambitions.
+
+Thus I will answer 71.0 TWh.
+
+Low model
+=========
+
+Attempt 1 · Right
+-----------------
+Docs: Doc 1, Doc 2, Doc 4 · Note: —
+
+Final answer: 439 TWh × 0.20 = 87.8 TWh. | Your answer (gold): 87.8 TWh
+
+How it got there: It used Doc 4's statement that heat networks will supply a fifth of heat by 2050 and Doc 2's figure of 439 TWh total England 2050 heat demand, calculating one fifth of 439.
+
+Passages quoted:
+
+- Quoted Doc 4: “In the Warm Homes Plan we are setting a target to more than double the amount of heat demand met via heat networks in England to 7% (27TWh) by 2035 with them expected to provide a fifth of all heat by 2050.”
+- Quoted Doc 2: “The total heat demand for England, presented in Opportunity Areas for District Heating Networks in the UK3, is estimated to be 439 TWh in 2050.”
+- Quoted Doc 4: “a fifth of all heat by 2050”
+- Quoted Doc 4: “expected to provide a fifth of all heat by 2050”
+
+Named Doc 2, Doc 4, Doc 1
+
+Full answer
+-----------
+
+According to the documents, England’s projected 2050 heat demand is 439 TWh (Document 2), and heat networks are now expected to provide a fifth (20%) of that (Document 4).
+
+439 TWh × 0.20 = 87.8 TWh.
+
+Reasoning
+---------
+
+We need answer based on input documents. Need find projected 2050 heat demand in England and expected supply from heat networks, or direct statement. Let's scan docs.
+
+Document 4 (2026/2024?) mentions: "In the Warm Homes Plan we are setting a target to more than double the amount of heat demand met via heat networks in England to 7% (27TWh) by 2035 with them expected to provide a fifth of all heat by 2050." A fifth = 20%. But need "How many TWh of England's projected 2050 heat demand are heat networks now expected to supply, to one decimal place?" Need compute 20% of projected 2050 heat demand in England? Or maybe they ask "How many TWh... are heat networks now expected to supply" and need value in TWh to one decimal place. Let's find projected 2050 heat demand for England.
+
+In Document 2 (IA) there is mention: "The total heat demand for England, presented in Opportunity Areas for District Heating Networks in the UK3, is estimated to be 439 TWh in 2050." And in Document 4 they say expected to provide a fifth of all heat by 2050. One fifth of 439 TWh = 87.8 TWh. But check consistency: 27 TWh by 2035 is 7%, so 7% of total heat demand in 2035? If 439 TWh in 2050, 27 TWh is about 6.15%, but they said 7% (27TWh) by 2035, implying total heat demand in 2035 around 385 TWh. But for 2050, "a fifth of all heat by 2050" with 439 TWh demand => 87.8 TWh. Need to one decimal place: 87.8.
+
+But need verify if there is explicit figure in docs. Let's search mental: Document 4 says "expected to provide a fifth of all heat by 2050". No explicit TWh figure for 2050 supply except maybe implied. The question asks "How many TWh of England's projected 2050 heat demand are heat networks now expected to supply, to one decimal place?" This sounds compute 1/5 of 439 TWh = 87.8 TWh.
+
+Check Document 1 mentions CCC estimated 18% of UK heat demand by 2050, but that's UK and older. Document 4 updates to fifth (20%) for England? Actually "expected to provide a fifth of all heat by 2050" in England? The context is England heat networks target. So yes 20% of England's projected 2050 heat demand. The projected demand is 439 TWh (Document 2). 439/5 = 87.8.
+
+Need answer concise.
+
+Attempt 2 · Right
+-----------------
+Docs: Doc 1, Doc 2, Doc 4 · Note: —
+
+Final answer: So heat networks are now expected to supply 87.8 TWh of England's projected 2050 heat demand. | Your answer (gold): 87.8 TWh
+
+How it got there: Quoted Doc 4 (“In the Warm Homes Plan we are setting a target to more than double the amount of heat dem…”), and 2 more passages.
+
+Passages quoted:
+
+- Quoted Doc 4: “In the Warm Homes Plan we are setting a target to more than double the amount of heat demand met via heat networks in England to 7% (27TWh) by 2035 with them expected to provide a fifth of all heat by 2050.”
+- Quoted Doc 2: “The total heat demand for England, presented in Opportunity Areas for District Heating Networks in the UK3, is estimated to be 439 TWh in 2050.”
+- Quoted Doc 4: “expected to provide a fifth of all heat by 2050”
+
+Named Doc 4, Doc 2, Doc 1
+
+Full answer
+-----------
+
+According to Document 4, heat networks are expected to provide a fifth (20%) of all heat in England by 2050. Document 2 states that England’s total projected heat demand in 2050 is 439 TWh.
+
+Calculation: 439 TWh × 0.20 = 87.8 TWh.
+
+So heat networks are now expected to supply 87.8 TWh of England's projected 2050 heat demand.
+
+Reasoning
+---------
+
+We need answer based on input documents. Need find projected 2050 heat demand share/amount for heat networks in England now expected. Let's examine docs.
+
+Document 4 (2026 summary) says: "In the Warm Homes Plan we are setting a target to more than double the amount of heat demand met via heat networks in England to 7% (27TWh) by 2035 with them expected to provide a fifth of all heat by 2050."
+
+A fifth = 20%. Need TWh of England's projected 2050 heat demand? Let's check if they provide total heat demand figure. In doc 4 maybe not explicit TWh for 2050 total. But doc 1 or 2 might have total UK heat demand 486 TWh/year current, and 439 TWh in 2050 for England? Let's check doc 2: "The total heat demand for England, presented in Opportunity Areas for District Heating Networks in the UK3, is estimated to be 439 TWh in 2050." Then a fifth of 439 TWh = 87.8 TWh. But question asks "How many TWh of England's projected 2050 heat demand are heat networks now expected to supply, to one decimal place?" Might be asking for the amount (TWh) corresponding to a fifth of 439? Or maybe they state "expected to provide a fifth of all heat by 2050" and need convert using 439 TWh? Let's verify consistency: 439/5 = 87.8. Yes to one decimal 87.8.
+
+But check doc 4 mentions 27 TWh by 2035 (7%). If 7% corresponds to 27 TWh, then total heat demand in 2035? 27/0.07 ≈ 385.7 TWh, not matching. For 2050, 20% => if total demand maybe around 439? 439*0.2 = 87.8. So answer likely 87.8 TWh.
+
+Need cite source: Document 4 says fifth by 2050; Document 2 gives England 2050 total heat demand 439 TWh. So compute. We'll answer 87.8 TWh.
+
+Attempt 3 · Right
+-----------------
+Docs: Doc 1, Doc 2, Doc 3, Doc 4 · Note: —
+
+Final answer: 20% of 439 TWh = 87.8 TWh. | Your answer (gold): 87.8 TWh
+
+How it got there: It took Doc 4's fifth-of-heat-by-2050 target and applied it to Doc 2's 439 TWh projected England 2050 heat demand to get 87.8 TWh.
+
+Passages quoted:
+
+- Quoted Doc 4: “In the Warm Homes Plan we are setting a target to more than double the amount of heat demand met via heat networks in England to 7% (27TWh) by 2035 with them expected to provide a fifth of all heat by 2050.”
+- Quoted Doc 2: “The total heat demand for England, presented in Opportunity Areas for District Heating Networks in the UK3, is estimated to be 439 TWh in 2050.”
+- Quoted Doc 4: “we are setting a target to more than double the amount of heat demand met via heat networks in England to 7% (27TWh) by 2035 with them expected to provide a fifth of all heat by 2050.”
+- Quoted Doc 4: “a fifth of all heat by 2050”
+
+Named Doc 2, Doc 4, Doc 3, Doc 1
+
+Full answer
+-----------
+
+Based on the documents, England’s total heat demand in 2050 is projected to be 439 TWh (Document 2, Impact Assessment). The 2026 government response states that heat networks are expected to provide a fifth (20%) of all heat by 2050 (Document 4).
+
+20% of 439 TWh = 87.8 TWh.
+
+Reasoning
+---------
+
+We need answer using input docs. Need projected 2050 heat demand in England and expected supply by heat networks now. Let's locate in docs.
+
+Doc 4 (2026 response) says: "In the Warm Homes Plan we are setting a target to more than double the amount of heat demand met via heat networks in England to 7% (27TWh) by 2035 with them expected to provide a fifth of all heat by 2050." A fifth = 20%. Need TWh of England's projected 2050 heat demand they supply. Need projected total heat demand in 2050? Maybe in doc 3 or 2. Let's search mental.
+
+Doc 2 IA mentions Opportunity Areas report: "The total heat demand for England, presented in Opportunity Areas for District Heating Networks in the UK3, is estimated to be 439 TWh in 2050." Actually in doc 2 paragraph 89: "The total heat demand for England, presented in Opportunity Areas for District Heating Networks in the UK3, is estimated to be 439 TWh in 2050." Then table 12 shows deployment in 2050 for high option 31.2 TWh, which is about 7%? Wait 31.2/439 ≈ 7.1%. But doc 4 says expected to provide a fifth of all heat by 2050. That'd be ~87.8 TWh if total 439. But need "How many TWh of England's projected 2050 heat demand are heat networks now expected to supply, to one decimal place?" Let's parse precisely.
+
+Doc 4: "we are setting a target to more than double the amount of heat demand met via heat networks in England to 7% (27TWh) by 2035 with them expected to provide a fifth of all heat by 2050." So they say "a fifth of all heat by 2050". But they ask "How many TWh... are heat networks now expected to supply". If total heat demand is 439 TWh, one fifth = 87.8 TWh. But need verify if doc gives explicit TWh figure for 2050 supply expectation. Let's check doc 4 further maybe lists 2050 figure in TWh? It only says "a fifth of all heat by 2050" without TWh. But maybe elsewhere in docs there's explicit 2050 expected supply figure like 86 TWh? Let's check doc 1? No. Doc 3? Maybe mentions 18% UK heat demand by 2050 in CCC estimate. But that's UK, not England only, and old. The question asks "How many TWh of England's projected 2050 heat demand are heat networks now expected to supply" using input documents. This sounds like compute one fifth of 439 TWh = 87.8. But need "to one decimal place" -> 87.8 TWh.
+
+But wait doc 4 says 7% (27TWh) by 2035. If 27 TWh is 7%, then total heat demand in 2035 is about 385.7 TWh. Not same as 439 in 2050. For 2050, one-fifth of projected heat demand. Need projected 2050 heat demand figure from docs. Doc 2 gives 439 TWh in 2050 for England. So 1/5 of 439 = 87.8. Let's verify consistency: 27 TWh is 7% => total ≈ 385.7 in 2035. By 2050 total 439, 20% => 87.8. Yes that sounds right.
+
+But need check if there's any other figure. In doc 4 they mention "expected to provide a fifth of all heat by 2050" but not TWh. The question asks "How many TWh..." So need derive.
+
+Let's provide answer 87.8 TWh.
+
+Attempt 4 · Right
+-----------------
+Docs: Doc 1, Doc 2, Doc 4 · Note: —
+
+Final answer: 20% of 439 TWh = 87.8 TWh. | Your answer (gold): 87.8 TWh
+
+How it got there: Quoted Doc 4 (“In the Warm Homes Plan we are setting a target to more than double the amount of heat dem…”), and 3 more passages.
+
+Passages quoted:
+
+- Quoted Doc 4: “In the Warm Homes Plan we are setting a target to more than double the amount of heat demand met via heat networks in England to 7% (27TWh) by 2035 with them expected to provide a fifth of all heat by 2050.”
+- Quoted Doc 4: “a fifth of all heat by 2050”
+- Quoted Doc 4: “expected to provide a fifth of all heat by 2050.”
+- Quoted Doc 2: “The total heat demand for England, presented in Opportunity Areas for District Heating Networks in the UK3, is estimated to be 439 TWh in 2050.”
+
+Named Doc 2, Doc 4, Doc 1
+
+Full answer
+-----------
+
+Based on the documents, England’s total heat demand in 2050 is projected to be 439 TWh (Document 2), and heat networks are now expected to provide a fifth (20%) of that demand by 2050 (Document 4).
+
+20% of 439 TWh = 87.8 TWh.
+
+Reasoning
+---------
+
+We need answer based on input documents. Need find projected 2050 heat demand in England and expected supply by heat networks now.
+
+Looking at Document 4: "In the Warm Homes Plan we are setting a target to more than double the amount of heat demand met via heat networks in England to 7% (27TWh) by 2035 with them expected to provide a fifth of all heat by 2050." A fifth = 20%. Need TWh of England's projected 2050 heat demand? Need actual number? Let's check if total heat demand projected for 2050 mentioned elsewhere.
+
+Document 4 mentions 7% (27 TWh) by 2035. That implies total heat demand around 27/0.07 ≈ 385.7 TWh? But they ask "How many TWh of England's projected 2050 heat demand are heat networks now expected to supply, to one decimal place?" Wait "a fifth of all heat by 2050" -> need compute 1/5 of projected 2050 heat demand? Or maybe they ask the amount in TWh?
+
+We need precise figure from document. Let's search mental: Document 4 says "expected to provide a fifth of all heat by 2050." But doesn't give total demand in 2050 in TWh? Maybe in Document 1 or 2 there is 439 TWh? Let's recall Document 2 paragraph 89: "The total heat demand for England, presented in Opportunity Areas for District Heating Networks in the UK3, is estimated to be 439 TWh in 2050." Yes! So a fifth of 439 TWh = 87.8 TWh. But need check consistency: 7% is 27 TWh => total ~385 TWh for 2035, not same as 2050 439. So for 2050, total demand 439 TWh, one fifth = 87.8 TWh.
+
+But question wording: "How many TWh of England's projected 2050 heat demand are heat networks now expected to supply, to one decimal place?" This sounds asking for the share in TWh, calculated as one fifth of 439 TWh. Let's verify if document 4 mentions 27 TWh by 2035 and a fifth by 2050, but not explicit 87.8. However they ask "How many TWh... are heat networks now expected to supply" -> answer likely 87.8 TWh.
+
+Let's check if there's any other figure in docs. Document 1 mentions CCC estimated 18% by 2050 up from 2% today, but that's UK not England and old. Document 4 updates to a fifth (20%) by 2050 for England. Combined with Document 2's 439 TWh total demand for England in 2050, compute 20% of 439 = 87.8.
+
+Need answer to one decimal place: 87.8 TWh.
+
+Attempt 5 · Right
+-----------------
+Docs: Doc 1, Doc 2, Doc 4 · Note: —
+
+Final answer: 439 TWh × 0.20 = 87.8 TWh | Your answer (gold): 87.8 TWh
+
+How it got there: It combined Doc 4's fifth-of-heat-by-2050 expectation with Doc 2's 439 TWh England 2050 heat demand, computing 439 × 0.20.
+
+Passages quoted:
+
+- Quoted Doc 4: “In the Warm Homes Plan we are setting a target to more than double the amount of heat demand met via heat networks in England to 7% (27TWh) by 2035 with them expected to provide a fifth of all heat by 2050.”
+- Quoted Doc 2: “The total heat demand for England, presented in Opportunity Areas for District Heating Networks in the UK3, is estimated to be 439 TWh in 2050.”
+- Quoted Doc 4: “expected to provide a fifth of all heat by 2050.”
+- Quoted Doc 4: “provide a fifth of all heat by 2050”
+
+Named Doc 2, Doc 4, Doc 1
+
+Full answer
+-----------
+
+Based on the documents, England’s projected 2050 heat demand is 439 TWh (Document 2, paragraph 89), and heat networks are now expected to provide a fifth (20%) of all heat by 2050 (Document 4).
+
+439 TWh × 0.20 = 87.8 TWh
+
+Reasoning
+---------
+
+We need answer based on input docs. Need find projected 2050 heat demand and expected supply % or TWh. Document 4 says: "In the Warm Homes Plan we are setting a target to more than double the amount of heat demand met via heat networks in England to 7% (27TWh) by 2035 with them expected to provide a fifth of all heat by 2050." A fifth = 20%. Need "How many TWh of England's projected 2050 heat demand are heat networks now expected to supply, to one decimal place?" Need determine England's projected 2050 heat demand? Or maybe they ask supply amount in TWh? Let's parse carefully.
+
+Question: "How many TWh of England's projected 2050 heat demand are heat networks now expected to supply, to one decimal place?"
+
+This sounds like they want the share expressed in TWh? Actually "How many TWh ... are heat networks now expected to supply" -> need the TWh figure expected by 2050. Document 4 says expected to provide a fifth of all heat by 2050, and earlier mentions 7% (27 TWh) by 2035. But need 2050 TWh. Let's find projected 2050 heat demand for England.
+
+In Document 2 (IA) paragraph 89: "The total heat demand for England, presented in Opportunity Areas for District Heating Networks in the UK3, is estimated to be 439 TWh in 2050." Then a fifth of 439 = 87.8 TWh. But need "How many TWh of England's projected 2050 heat demand are heat networks now expected to supply" -> 87.8 TWh? Let's verify consistency: 439 * 0.2 = 87.8. Yes to one decimal place 87.8.
+
+But check if document 4 mentions specific TWh for 2050? It says "expected to provide a fifth of all heat by 2050." Without explicit TWh. But using 439 TWh total demand gives 87.8. Need ensure correct interpretation.
+
+Let's check Document 1 mentions CCC estimate 18% of UK heat demand by 2050. But Document 4 updates to 20% (a fifth) for England? Actually "provide a fifth of all heat by 2050" likely UK? Let's check context: "In the Warm Homes Plan we are setting a target... in England... expected to provide a fifth of all heat by 2050." Might be England's heat. So 20% of England's 2050 heat demand. Need the TWh value corresponding to that fifth? Might be calculated from 27 TWh being 7%, then 20% ≈ 77 TWh? Wait 27 TWh is 7% => total ≈ 385.7 TWh. That differs from 439 TWh. Let's examine.
+
+Document 4: "target to more than double the amount of heat demand met via heat networks in England to 7% (27TWh) by 2035 with them expected to provide a fifth of all heat by 2050." So 7% equals 27 TWh => total heat demand in England in 2035? Or current? Let's compute implied total heat demand if 27 TWh is 7% => total = 27/0.07 ≈ 385.7 TWh. That might be England's heat demand in 2035? Or maybe current? But question specifically asks "How many TWh of England's projected 2050 heat demand..." So need apply 1/5 to 2050 projected demand. What's England's projected 2050 heat demand? Document 2 says 439 TWh in 2050. But if using 27/0.07 = 385.7, that might be 2035? Not clear.
+
+But the wording "How many TWh of England's projected 2050 heat demand are heat networks now expected to supply" likely expects computing one-fifth of the 439 TWh figure mentioned in Document 2. However need check if Document 4 gives 2050 figure elsewhere? Let's search mental: Document 4 mentions 7% (27TWh) by 2035, then a fifth by 2050. If total heat demand in 2050 is around 439 TWh, then fifth is ~87.8 TWh. But if they use same total demand baseline (maybe 385.7) then fifth is ~77.1 TWh. Which one is correct?
+
+We need determine precisely from input docs. Let's inspect Document 2 paragraph 89 exactly: "The total heat demand for England, presented in Opportunity Areas for District Heating Networks in the UK3, is estimated to be 439 TWh in 2050. Table 12 presents the proportion of total heat demand in England that could be delivered by the policy options." So yes 439 TWh is England's 2050 heat demand per that source.
+
+But Document 4 states 7% = 27 TWh. That might be based on a different total (maybe UK? Or England current?). Actually if England's 2050 heat demand is 439 TWh, then 7% is about 30.7 TWh, not 27. So 27 TWh corresponds to about 6.1% of 439. So the 27 TWh figure likely refers to a different baseline year or total. But the question combines "England's projected 2050 heat demand" with "now expected to supply" referencing Document 4's "a fifth of all heat by 2050". So they want 439/5 = 87.8? Or do they want to use the implied total from 27 TWh being 7%? Let's parse wording precisely: "How many TWh of England's projected 2050 heat demand are heat networks now expected to supply, to one decimal place?"
+
+This sounds like: There is a projected 2050 heat demand figure for England. Heat networks are expected to supply a certain fraction (a fifth). Multiply to get TWh. They ask "How many TWh... are heat networks now expected to supply". So indeed need the product.
+
+We need identify the correct projected 2050 heat demand figure used in the documents. Document 2 gives 439 TWh in 2050 for England. Document 4 mentions "a fifth of all heat by 2050" in context of England targets. So likely 439 * 0.2 = 87.8.
+
+But wait Document 1 mentions CCC estimated heat networks could provide 18% of UK heat demand by 2050, up from 2% today, with over 14,000 networks providing approx 480,000 consumers. That's UK-wide, not England specifically, and 18% is old estimate. Document 4 updates to "a fifth of all heat by 2050" in England, aligning with Warm Homes Plan target. So they want 20% of England's 2050 demand. The only explicit 2050 demand number in docs is 439 TWh. So answer 87.8.
+
+Double-check: 439 /5 = 87.8 exactly. Yes one decimal place.
+
+But could there be another figure? Let's check Document 4 mentions "more than double... to 7% (27TWh) by 2035... expected to provide a fifth of all heat by 2050." If 7% is 27 TWh, then 100% is about 385.7 TWh, and one-fifth is about 77.1 TWh. But that 385.7 is not explicitly mentioned as 2050 demand; it's just derived. However the question says "England's projected 2050 heat demand" not "the baseline implied by the 2035 figure". Since Document 2 explicitly lists 439 TWh in 2050, that is the projected demand. So 87.8 is correct using that explicit figure.
+
+Therefore answer: 87.8 TWh.
