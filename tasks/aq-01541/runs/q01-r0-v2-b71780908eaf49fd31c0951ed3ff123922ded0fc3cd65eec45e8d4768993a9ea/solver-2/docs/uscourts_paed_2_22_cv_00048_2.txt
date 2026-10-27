@@ -1,0 +1,204 @@
+IN THE UNITED STATES DISTRICT COURT
+FOR THE EASTERN DISTRICT OF PENNSYLVANIA
+CIVIL ACTION NO. 22-48-KSM MEMORANDUM
+MARSTON, J. August 1, 2024
+Plaintiff William Norman Brooks, III, individually and on behalf of all others similarly situated, alleges that Trans Union violated section 1681e(b) of the Fair Credit Reporting Act when it sold third party creditors consumer reports that erroneously showed the consumers had filed for bankruptcy. Plaintiff seeks to certify a class of individuals about whom Trans Union allegedly sold similarly erroneous reports. Trans Union opposes Plaintiff’s motion and in support of its opposition, Trans Union seeks to use Corinne Wodzinski, a 20-year employee of the company, as an expert in Trans Union’s algorithms for matching data and public records to consumer files. (See Doc. No. 111-4 (Wodzinski’s expert report).) Plaintiff has moved to preclude Wodzinski’s expert report and testimony as inadmissible under the standard outlined in Federal Rule of Evidence 702 and Daubert v. Merrell Dow Pharmaceuticals, Inc., 509 U.S. 579 (1993). (See Doc. No. 109.) Also, Plaintiff has moved to strike Trans Union’s supplemental exhibit, (Doc. Nos. 111-5 at 8–80, 111-6, 52-4–52-7), to Wodzinski’s expert report. For the reasons discussed below, Plaintiff’s motion is granted in part and denied in part.
+WILLIAM NORMAN BROOKS, III,
+Plaintiff,
+v.
+
+TRANS UNION LLC,
+Defendant.
+
+Case 2:22-cv-00048-KSM Document 114 Filed 08/01/24 Page 1 of 18
+
+2
+I. BACKGROUND
+The facts underlying this case are set out more fully in the contemporaneously filed Memorandum ruling on Plaintiff’s motion for class certification. Because the Court writes primarily for the parties, we do not repeat those facts at length in this Memorandum, and instead, include only a brief overview of Plaintiff’s claims and proposed class definition and the contents of Wodzinski’s expert report and testimony.
+
+A. Plaintiff’s Claims and Proposed Class Definition
+In January 2022, Plaintiff brought a putative class action complaint against Trans Union, which he amended the following month. (Doc. Nos. 1, 13.) The amended complaint purported to bring claims under the FCRA and its California analogue on behalf of eight discrete classes of individuals. (Doc. No. 13 ¶¶ 49, 56–65.) After two years of class discovery, Plaintiff now seeks to certify a single class of individuals seeking relief under § 1681e of the FCRA:
+All natural persons with an address in the United States and its Territories about whom Defendant sold a consumer report to a third party from January 6, 2020 to January 31, 2023 which included a bankruptcy remark on a tradeline, but with no reference to a bankruptcy record in the public record section of the same report, and for whom there is no government-held public record of a bankruptcy filing within ten (10) years prior to the date of the report.
+
+(Doc. No. 107 at 10.) Plaintiff contends that membership in this class can be determined through a two-step process. (See generally id. at 16–20.) The first step involves reviewing Trans Union’s internal files to determine which files were sold to a third party between January 6, 2020 and January 31, 2023, included a tradeline with a bankruptcy remark, and failed to include a reference to a bankruptcy docket in the public record section. (See id. at 17–19.) The second step involves reviewing the public record to determine whether individuals identified in the first step have in fact filed for bankruptcy. (See id. at 19–20.) Specifically, Plaintiff proposes crosschecking the nine-digit social security number associated with a consumer’s Trans Union credit Case 2:22-cv-00048-KSM Document 114 Filed 08/01/24 Page 2 of 18
+
+3 report against the Public Access to Court Electronic Records system (“PACER”) to determine whether someone with the same nine-digit social security number filed for bankruptcy in the ten years prior to the date Trans Union sold the file to a third party. (Id.)
+
+B. Wodzinski’s Expert Report and Testimony
+Trans Union opposes class certification. (See Doc. No. 111.) In support of its opposition to class certification, Trans Union has produced the expert report of Corinne Wodzinski, a 20- year employee of Trans Union. (See Doc. No. 111-4.) Wodzinski is an Advisor on Trans Union’s Subject Selection team, which is responsible for developing and implementing the subject selection (“match logic”) algorithms and processes used to match credit accounts furnished to Trans Union by creditors and public records of bankruptcy actions to credit files maintained by Trans Union. (See id. ¶ 1.) These algorithms also determine which consumer files to provide in response to a request for a consumer’s credit report. (Id.)
+Wodzinski’s report begins by providing an overview of Trans Union’s internal file keeping system. (See id. ¶¶ 11–29.) She explains that Trans Union aspires to maintain only one internal file for each consumer, and, to that end, it has developed sophisticated algorithms that match new consumer information—which Trans Union receives from data furnishers and a thirdparty vendor’s compilation of the public record—to the information already contained within a consumer’s file. (Id. ¶¶ 11–13, 16–17.) That said, Trans Union’s algorithms err on the side of not adding new consumer information to a file if the match is uncertain, at which point Trans Union creates a “secondary” file containing the new consumer information. (Id. ¶¶ 23–24; see also Doc. No. 107-4 at 96:20–97:5 (Deposition of Corinne Wodzinski) (“[I]f we have to err on one side or the other when we’re not sure, we are going to choose to not, when it’s questionable, erroneously put a public record on a file. We would prefer to put a public record on a different file. And if information at a later time combines those two files . . . that’s great; but until we Case 2:22-cv-00048-KSM Document 114 Filed 08/01/24 Page 3 of 18
+
+4 know that, we’d prefer to keep that information separate.”).) Nonetheless, when Trans Union possesses multiple files that may belong to a single consumer, it endeavors to aggregate those files into one credit report whenever a third party requests a consumer’s credit report. (See Doc.
+No. 111-4 ¶ 25; July 9, 2024 Hrg. Tr. at 38:16–41:9.) A tension therefore exists between, on the one hand, Trans Union’s goal of unifying all information about each consumer into one primary file, and, on the other hand, the need to create and maintain a secondary file when Trans Union receives new consumer information that does not sufficiently match the primary file to satisfy its objective algorithm.
+
+Trans Union seeks to use Wodzinski’s expert testimony to rebut Plaintiff’s assertion that the proposed class is ascertainable. (See Doc. No. 111 at 18–22.) At the time Wodzinski submitted her report, which is dated December 13, 2023, Wodzinski appears to have incorrectly believed that the proposed class would only be determined by looking to Trans Union’s internal files to determine whether they contained a bankruptcy remark in a tradeline without any corresponding public record of a bankruptcy in that Trans Union file. (See Doc. No. 111-4 ¶ 2.)
+Wodzinski did not realize that Plaintiff would propose turning to the public record to determine whether class members had in fact filed for bankruptcy. (See Doc. No. 107 at 10 (proposed class definition).) With this erroneous definition in mind, Wodzinski attempted to establish that, even if a consumer’s internal Trans Union credit file contained a bankruptcy remark in a tradeline without a corresponding public record of a bankruptcy, that did not mean the consumer did not file for bankruptcy because Trans Union could possess a second file that did contain the missing public record of a bankruptcy. (See Doc. No. 111-4 ¶ 3.) Wodzinski provided the following four opinions:
+
+(1) There are multiple reasons why an individual Trans Union credit file may contain bankruptcy remarks relating to credit accounts because Case 2:22-cv-00048-KSM Document 114 Filed 08/01/24 Page 4 of 18
+
+5 the consumer filed for bankruptcy but the file does not include a corresponding bankruptcy public record.
+
+(2) The mere fact that an individual Trans Union credit file does not contain a bankruptcy public record does not definitively establish that Trans Union does not have a record of a bankruptcy filing by that consumer. Nor does it mean that the consumer did not file for bankruptcy.
+
+(3) Examining the files of some possible class members demonstrates that many of them have multiple files, only one of which contains a bankruptcy public record. Thus, the absence of a public record from one of the multiple files associated with a single consumer does not definitively establish that the consumer did not file for bankruptcy.
+
+(4) Based on my review of the files of possible class members, as well as my experience with Trans Union’s subject selection algorithms and processes, Trans Union likely has multiple files for a significant number of possible class members, only one of which would contain a bankruptcy public record.
+
+(Id.)
+
+The Court held a Rule 702 hearing on July 9, 2024, at which Wodzinski testified, and during that hearing, Trans Union conceded that, given Plaintiff’s actual proposed class definition, some of Wodzinski’s opinions are moot. (July 9, 2024 Hrg. Tr. at 5:14–6:13.)1 But Trans Union maintained it still intended to use Wodzinski as an expert in its opposition to class certification. (See id. at 6:6–23.)
+
+II. LEGAL STANDARD
+Expert testimony “in the form of an opinion” may only be offered by “[a] witness who is qualified as an expert by knowledge, skill, experience, training, or education,” and where the proponent of the expert evidence demonstrates by a preponderance of the evidence that:
+(a) the expert’s scientific, technical, or other specialized knowledge will help the trier of fact to understand the evidence or determine a
+1 Although Trans Union’s counsel conceded some of Wodzinski’s opinions are moot, he did not state which of Wodzinski’s four opinions were no longer relevant. (See July 9, 2024 Hrg. Tr. at 5:14–6:23.)
+Case 2:22-cv-00048-KSM Document 114 Filed 08/01/24 Page 5 of 18
+
+6 fact in issue;
+
+(b) the testimony is based on sufficient facts or data;
+
+(c) the testimony is the product of reliable principles and methods;
+
+and
+(d) the expert’s opinion reflects a reliable application of the principles and methods to the facts of the case.
+
+Fed. R. Evid. 702. Rule 702 requires the trial judge to act as a “gatekeeper,” ensuring that “any and all expert testimony or evidence is not only relevant, but also reliable.” Pineda v. Ford Motor Co., 520 F.3d 237, 243 (3d Cir. 2008) (quoting Kannankeril v. Terminix Int’l, Inc., 128 F.3d 802, 806 (3d Cir. 1997)). Because “expert evidence can be both powerful and quite misleading,” the Court “exercises more control over experts than over lay witnesses.” Sikkelee v.
+Precision Airmotive Corp., No. 4:07-CV-00886, 2021 WL 392101, at *2 (M.D. Pa. Feb. 4, 2021) (quoting Daubert, 509 U.S. at 595). “Daubert’s general holding—setting forth the trial judge’s general ‘gatekeeping’ obligation—applies not only to testimony based on ‘scientific’ knowledge, but also to testimony based on ‘technical’ and ‘other specialized’ knowledge.” Kumho Tire Co., Ltd. v. Carmichael, 526 U.S. 137, 141 (1999).
+
+Expert testimony must satisfy “three major requirements: (1) the proffered witness must be an expert, i.e., must be qualified; (2) the expert must testify about matters requiring scientific, technical or specialized knowledge; and (3) the expert’s testimony must assist the trier of fact.”
+Pineda, 520 F.3d at 244 (citing Kannankeril, 128 F.3d at 806). These factors are frequently referred to as “qualification,” “reliability,” and “fit.” See Schneider ex rel. Estate of Schneider v.
+Fried, 320 F.3d 396, 404 (3d Cir. 2003). “Qualification requires that the witness possess specialized expertise,” and the Third Circuit has explained that “a broad range of knowledge, skills, and training qualify an expert.” Pineda, 520 F.3d at 244 (internal quotation marks and Case 2:22-cv-00048-KSM Document 114 Filed 08/01/24 Page 6 of 18
+
+7 citations omitted). Reliability means that “an expert’s testimony is admissible so long as the process or technique the expert used in formulating the opinion is reliable.” Id. at 247 (quoting In re Paoli R.R. Yard PCB Litig., 35 F.3d 717, 742 (3d Cir. 1994)). The proffered testimony “must be based on the methods and procedures of science rather than on subjective belief or unsupported speculation,” and the “expert must have good grounds for his or her belief.”
+Schneider ex rel. Schneider, 320 F.3d at 404 (cleaned up). “The test of admissibility is not whether a particular scientific opinion has the best foundation or whether it is demonstrably correct,” but instead, “whether the ‘particular opinion is based on valid reasoning and reliable methodology.’” Oddi v. Ford Motor Co., 234 F.3d 136, 145–46 (3d Cir. 2000) (quoting Kannankeril, 128 F.3d at 806); see also In re Paoli, 35 F.3d at 744 (“The grounds for the expert’s opinion merely have to be good, they do not have to be perfect.”). Finally, “the expert testimony must fit the issues in the case,” meaning the “expert’s testimony must be relevant for the purposes of the case and must assist the trier of fact.” Schneider ex rel. Schneider, 320 F.3d at 404; see also Daubert, 509 U.S. at 591 (“Fit is not always obvious, and scientific validity for one purpose is not necessarily scientific validity for other, unrelated purposes.” (cleaned up)).
+Every prong—qualification, reliability, and fit—must be satisfied by a preponderance of the evidence.2 Oddi, 234 F.3d at 144 (citing Daubert, 509 U.S. at 593 n.10).
+
+III. DISCUSSION
+Plaintiff’s motion presents the Court with two issues: whether to strike Wodzinski’s expert report and whether to strike the supplemental exhibit to her report. The Court first
+2 The Court notes that Rule 702 was recently amended to emphasize the importance of this preponderance-of-the evidence standard because “many courts have [incorrectly] held that the critical questions of the sufficiency of an expert’s basis, and the application of the expert’s methodology, are questions of weight and not admissibility.” Fed. R. Evid. 702 advisory committee’s note to 2023 amendment.
+
+Case 2:22-cv-00048-KSM Document 114 Filed 08/01/24 Page 7 of 18
+
+8 outlines Wodzinski’s opinions and analysis before addressing whether Wodzinski’s opinions are admissible under the framework outlined in Rule 702 and Daubert. Finally, the Court turns to the admissibility of the supplemental exhibit.
+
+A. Wodzinski’s Report
+In this case, the methodology used by Wodzinski to form her expert opinions involved second-guessing Trans Union’s algorithm by manually comparing a given consumer’s primary file, which contained only a bankruptcy remark in a tradeline, to that same consumer’s secondary files, which contained a bankruptcy in the public record section, to determine whether the two files could be combined into a single file. (See Doc. No. 111-4 ¶¶ 33–42.) This in turn would allegedly establish that the given consumer’s primary file containing only the bankruptcy remark in the tradeline was not inaccurate because the consumer in fact filed for bankruptcy as noted in the secondary file. (See id. ¶¶ 3c, 42–43.)
+
+Wodzinski was supplied with 22,141 primary files from June 2022 that included at least one tradeline with a bankruptcy remark but did not include a corresponding public record of a bankruptcy filing. (Id. ¶ 33.) Wodzinski directed her associate to select 30 of these primary files and query Trans Union’s database for corresponding secondary files that contained either the same four-digit social security number3 or similar (but not identical) names and addresses as are contained in the 30 primary files. (Id. ¶¶ 37–38a.) Wodzinski and her associate then examined whether, for each primary file, there was a potentially corresponding secondary file
+3 Wodzinski’s report does not specify whether her associate searched for matches to four- or nine-digit social security numbers. (See Doc. No. 111-4 ¶ 38.) However, during her deposition, Wodzinski explained that bankruptcy records, as she receives them, contain only four-digit social security numbers.
+(Doc. No. 107-4 at 296:9–12.) And her deposition testimony regarding how individual cases were analyzed repeatedly referred to comparisons of four-digit social security numbers. (See, e.g., id. at 112:9– 16, 259:20–260:14, 296:13–18.) Thus, the Court infers that Wodzinski’s associate searched for matches to four-digit social security numbers.
+
+Case 2:22-cv-00048-KSM Document 114 Filed 08/01/24 Page 8 of 18
+
+9 containing a public record of a bankruptcy. (Id. ¶ 40.) They concluded that 17 of the 30 primary files “had a corresponding bankruptcy public record on a [secondary file] within Trans Union’s database.” (Id. ¶ 42.) Based on this analysis, Wodzinski opined:
+
+(1) There are multiple reasons why an individual Trans Union credit file may contain bankruptcy remarks relating to credit accounts because the consumer filed for bankruptcy but the file does not include a corresponding bankruptcy public record.
+
+(2) The mere fact that an individual Trans Union credit file does not contain a bankruptcy public record does not definitively establish that Trans Union does not have a record of a bankruptcy filing by that consumer. Nor does it mean that the consumer did not file for bankruptcy.
+
+(3) Examining the files of some possible class members demonstrates that many of them have multiple files, only one of which contains a bankruptcy public record. Thus, the absence of a public record from one of the multiple files associated with a single consumer does not definitively establish that the consumer did not file for bankruptcy.
+
+(4) Based on my review of the files of possible class members, as well as my experience with Trans Union’s subject selection algorithms and processes, Trans Union likely has multiple files for a significant number of possible class members, only one of which would contain a bankruptcy public record.
+
+(Id. ¶ 3.)
+
+Here, while Wodzinski ably completed the task that Trans Union assigned to her, and her knowledge and experience with Trans Union’s internal data make her a valuable fact witness, the Court finds that Trans Union fails to show that her expert report satisfies the reliability and fit prongs of Rule 702 by a preponderance of evidence. Oddi, 234 F.3d at 144 (citing Daubert, 509 U.S. at 593 n.10); see also In re Paoli, 35 F.3d at 743, 744 n.11 (explaining that the proponent must make more than a prima facie showing that a technique is reliable); Ellison v. United States, 753 F. Supp. 2d 468, 476 (E.D. Pa. 2010) (“The burden is on the proponent of the Case 2:22-cv-00048-KSM Document 114 Filed 08/01/24 Page 9 of 18
+
+10 evidence — here the plaintiff — to establish admissibility by a preponderance of the evidence.”
+(citing Padillas v. Stork-Gamco, Inc., 186 F.3d 412, 417–18 (3d Cir. 1999))). The Court will address each of Rule 702’s three requirements—qualification, reliability and fit—in turn.
+B. Motion to Strike Wodzinski’s Report
+Plaintiff argues that Wodzinski’s expert opinions are inadmissible under Federal Rule of Evidence 702 and the Supreme Court’s holding in Daubert. (See Doc. No. 109.) He asserts that Wodzinski failed to apply reliable statistical methods and that her opinions do not “fit” under Rule 702 chiefly because her analysis fails to account for two features of the proposed class: that Trans Union sold a credit report to a third party about each class member and that no public record of a bankruptcy within ten years exists on PACER. (Id. at 6–12.) Trans Union opposes the motion, arguing that Wodzinski did not offer opinions about statistical sampling and her opinions are a proper fit. (See Doc. No. 113.)
+
+1. Qualification
+As an initial matter, the Court finds Wodzinski is generally qualified to opine about Trans Union’s matching logic. Through her education and 20 years’ experience at Trans Union, Wodzinski has gained specialized expertise about Trans Union’s internal system for matching consumer files. In 2002, immediately after earning a Bachelor of Science in Mathematics and a Master of Science in Applied Probability and Statistics from Northern Illinois University, Wodzinski began working for Trans Union as an Associate Algorithm Specialist. (Doc. No.
+111-4 ¶¶ 5–7; Doc. No. 107-4 at 89:5–8.) With the exception of short stints in 2004 as a Statistician/Research Lead at Information Resources, Inc., and as an instructor at Elgin Community College, Wodzinski has worked at Trans Union for her entire career up to the present. (See Doc. No. 111-4 ¶ 7.) Wodzinski has been actively developing, analyzing, and Case 2:22-cv-00048-KSM Document 114 Filed 08/01/24 Page 10 of 18
+
+11 updating Trans Union’s internal “subject selection algorithms” since 2002. (Id. ¶ 8a.) Since 2005, Wodzinski has been Trans Union’s most senior employee administering its subject selection algorithms. (Id. ¶ 8c.) In 2007, Wodzinski created the basic match logic currently used by Trans Union, and she has overseen all changes to that match logic since then. (July 9, 2024 Hrg. Tr. at 8:23–9:2, 9:13–21.) She has not authored any publications. (Doc. No. 111-4 ¶ 10.)
+Plaintiff does not directly attack Wodzinski’s qualifications. Instead, Plaintiff emphasizes that her qualifications are limited in an important respect: while she has specialized knowledge of Trans Union’s internal procedures, she does not have specialized knowledge of public record systems for publishing bankruptcy filings. (See Doc. No. 107-4 at 31:8–9 (“I am not an expert of all the details of a public record.”).) This argument, however, is better addressed through the “fit” prong of Rule 702, and is not an attack on Wodzinski’s qualifications per se.
+In sum, Trans Union has established by a preponderance of the evidence that Wodzinski is qualified to be an expert in Trans Union’s matching logic.
+
+2. Reliability
+Plaintiff argues that the methodology that Wodzinski and her associate used was not “based on the methods and procedures of science rather than on subjective belief.” Schneider ex rel. Schneider, 320 F.3d at 404 (cleaned up). Wodzinski’s standardless, subjective methodology is not reliable and cannot withstand Rule 702 scrutiny.
+
+First, by Wodzinski’s own account, her methodology lacked an objective standard. (Doc.
+No. 107-4 at 218:4–9 (“I don’t think there’s necessarily a standard . . . I think after you start to see the data as a pattern, that’s when the standard is kind of post applied.”); id. at 178:11–17 (“This is something that occurs based on just looking at so many files, you start to get a feeling of what appears to be relevant or right or – to be able to make that determination, but it’s not Case 2:22-cv-00048-KSM Document 114 Filed 08/01/24 Page 11 of 18
+
+12 something that you go into with a set of criteria before you do the analysis.”).) She also testified that the results of her analysis could not be reproduced. (See id. at 221:23–222:16 (explaining that, in Wodzinski’s opinion, it is “very possible” that the comparisons would come out differently if they were “re-reviewed”).)
+
+Next, Wodzinski failed to apply reliable statistical methods. Plaintiff’s uncontested expert, Jonathan Jaffe, criticizes Wodzinski’s expert report for three reasons. Jaffe claims that Wodzinski (1) used a skewed sample that did not actually reflect the characteristics of the proposed class; (2) used too small of a sample to be of statistical significance; and (3) failed to calculate a confidence interval. (Doc. No. 109 at 7–9.) The Court finds Jaffe’s first claim—that Wodzinski’s sample was skewed—to fit more comfortably within the ambit of Rule 702’s “fit” requirement, discussed below. However, Jaffe’s second and third claims convincingly undermine the reliability of Wodzinski’s report.
+
+Wodzinski’s sample size was very small.4 At first, she only examined 30 of roughly 22,000 files from June 2022. (Doc. No. 111-4 ¶¶ 33, 37.) Echoing the subjectivity of the standard used for her analysis, when asked why she chose to use a sample size of 30, Wodzinski said that, in her experience, “usually the number 30 is enough to understand what’s going on.”
+(Doc. No. 107-4 at 151:6–21.) However, in this case, 30 did not ultimately appear to be enough, so she added 20 more records to her sample. (Id. 204:19–205:4.) As Jaffe explained, as compared to the original 30 records, the 20 additional records selected by Wodzinski were less
+4 Wodzinski explained that her approach of selecting 30 files to analyze is “usually . . . enough to understand what’s going on” when she is asked to analyze features of Trans Union’s data. (Doc. No. 107-
+4 at 151:6–10.) But, as she also explained, while analyzing “30 or 50 test cases to try to describe a problem is definitely something [she does] often,” preparing an expert report containing opinions is not normally part of her “normal duties and responsibilities” as an employee at Trans Union. (Id. at 68:5– 69:4.) So, while Wodzinski’s 30 to 50 test case method may be a sufficient preliminary analysis of data patterns for Trans Union’s day-to-day data management, it is not clear to what uses these analyses are put or what degree of rigor is required of them.
+
+Case 2:22-cv-00048-KSM Document 114 Filed 08/01/24 Page 12 of 18
+
+13 supportive of her opinion that “Trans Union likely has multiple files for a significant number of possible class members, only one of which would contain a bankruptcy public record.” (See Doc. No. 107-26 at 142:11–143:17.) In light of the less supportive nature of her additional data and the smaller size of the second sample set, Jaffe expressed concern that Wodzinski may have engaged in “peeking”—the disapproved process of looking ahead at data, finding that it is less supportive of a conclusion, and deciding not to include it in a data set. (Id.) Whether or not Wodzinski was “peeking,” her small sample size undermines the reliability of her methodology.
+Finally, the unreliability of Wodzinski’s report is further underscored by the fact that she failed to calculate either a confidence interval or margin of error. (Doc. No. 107-4 at 206:12– 15.) The Court cannot conclude that Wodzinski’s fourth opinion is “based on the methods and procedures of science rather than on subjective belief or unsupported speculation.” Schneider ex rel. Schneider, 320 F.3d at 404 (cleaned up). And, at the same time, Wodzinski’s first three opinions are not probabilistic or statistical in nature. (See Doc. No. 111-4 ¶¶ 3a, 3b, 3c.)
+Although Wodzinski’s questionable statistical analysis does not necessarily impugn the reliability of non-statistical opinions about qualitative features of Trans Union’s internal files, her subjective, non-replicable methodology for developing those opinions renders them noncompliant with the requirements of Rule 702. The Court as the “gatekeeper” must strike the unreliable “opinions” contained in Wodzinski’s expert report, as Trans Union fails to demonstrate by a preponderance of evidence that Wodzinski applied reliable methods in preparation of her expert report. Pineda, 520 F.3d at 243.
+
+3. Fit
+Because the Court finds Wodzinski’s report fails to satisfy the reliability requirement of Rule 702, the Court need not address “fit,” but the Court will in order to explain why the Court Case 2:22-cv-00048-KSM Document 114 Filed 08/01/24 Page 13 of 18
+
+14 will allow Wodzinski to be a fact witness in this case.
+
+Plaintiff argues that Wodzinski’s opinions do not fit the issues of the case, highlighting that Wodzinski herself admits that she has no expertise in publicly held records, but Plaintiff seeks to certify a class partly with reference to such records.5(See Doc. No. 109 at 10–12.) But Plaintiff still seeks to certify a class of individuals with a claim that centrally involves the state of Trans Union’s internal files. (See Doc. No. 107 at 10.) Proving a violation of § 1681e of the FCRA requires a showing that Trans Union’s procedures for handling its internal files were unreasonable, see 15 U.S.C. § 1681e(b), and Wodzinski indisputably has a wealth of insight into Trans Union’s internal file keeping practices, (see Doc. No. 111-4 ¶¶ 5–9). As creator and longtime overseer of Trans Union’s matching logic, her intimate knowledge of Trans Union’s internal file keeping practices is distinctly relevant to the present action.
+That said, the analysis Wodzinski performed to produce her report does not fit the issues surrounding the class Plaintiff asks the Court to certify. Jaffe concluded that Wodzinski used a “skewed” sample, (Doc. No. 107-26 at 122:24–123:8), and there appears to be no dispute that Wodzinski’s sample did not screen for every aspect of the proposed class definition, (see Doc.
+No. 113 at 6–8). Specifically, two features of the class definition were not considered during Wodzinski’s original analysis: (1) whether a “government-held public record of a bankruptcy filing within ten (10) years” exists, and (2) whether Trans Union “sold a consumer report to a third party.” (Doc. No. 107 at 10.) Wodzinski exclusively consulted Trans Union’s internal records to perform her analysis, not government-held records. (Doc. No. 107-4 at 247:7–10.)
+And Wodzinski did not consider whether Trans Union had actually sold the primary files she
+5 Following two years of class discovery, Plaintiff revised his class definition to include reference to records that are publicly held. (See generally Doc. No. 107.)
+
+Case 2:22-cv-00048-KSM Document 114 Filed 08/01/24 Page 14 of 18
+
+15 examined to any third party. (Id. at 240:23–241:7.)
+
+Accordingly, Wodzinski’s opinions do not apply to the class Plaintiff seeks to certify.
+The power of this argument was amplified during the Rule 702 hearing when Wodzinski testified that, when a potential creditor requests a credit report about a consumer, multiple files held by Trans Union about that consumer are often aggregated in real time to create the credit report.
+(July 9, 2024 Hrg. Tr. at 38:16–41:9.) In fact, Wodzinski testified that none of the files she reviewed may have ever been sold as a credit report. (Id. at 42:6–17.) This is because credit reports that are actually sold by Trans Union could always reflect an aggregation of Trans Union’s primary, secondary, and/or tertiary internal consumer files, which are combined in realtime whenever a credit report is requested. (See id. at 38:16–41:9.)6 The Court thus agrees with Plaintiff and finds that the skewed sample used by Wodzinski caused her analysis not to “fit the issues in the case.” Schneider ex rel. Schneider, 320 F.3d at 404.
+
+Nonetheless, one fact in issue in the present action involves how reasonable it was for Trans Union’s internal files to contain reports with a bankruptcy remark on a tradeline but lack a corresponding public record of a bankruptcy filing. See 15 U.S.C. § 1681e(b) (requiring
+6 Specifically, Wodzinski explained that the so-called “primary files” of her analysis were simply “the anchor point for this analysis”—“the file with the account that had the bankruptcy remarks code.” (July 9, 2024 Hrg. Tr. at 38:18–24.) In other words, Trans Union’s system had not pre-categorized files as primary, secondary, and tertiary before she started her analysis. Instead, Wodzinski marked files with a tradeline remark indicating bankruptcy (but without a corresponding public record of a bankruptcy action) as “primary files” because such files were the “anchor point” for the particular analysis she was asked to perform. It would therefore be misleading to say that the “primary file” is the file that Trans Union sells as a credit report when a third-party requests one: as Wodzinski explained, if a credit report is requested regarding an individual for whom Trans Union potentially has multiple files, Trans Union works to aggregate those files into one credit report in “real time.” (Id. at 39:10–41:9.) At the same time, if such aggregation does not take place, and only one of Trans Union’s files will constitute the credit report Trans Union ultimately sells despite the existence of multiple files that potentially pertain to the consumer, Wodzinski clarified that the selected file will most likely be the one containing the highest number of associated consumer credit accounts. (See id. at 54:1–8.) In any case, because Trans Union’s data is stored in a “dynamic database” that is constantly digesting new consumer information, aggregations of files into credit reports can vary from day to day. (See id. at 39:17–24.)
+
+Case 2:22-cv-00048-KSM Document 114 Filed 08/01/24 Page 15 of 18
+
+16 consumer reporting agencies to “follow reasonable procedures to assure maximum possible accuracy”). The factual content of Wodzinski’s report speaks directly to this issue. (See, e.g., Doc. No. 111-4 ¶¶ 11–29 (providing overview of Trans Union’s internal file keeping practices).)
+Although the analysis leading to her now-struck opinions does not fit the needs of this case, her report contains facts that will help the factfinder determine whether Trans Union violated § 1681e(b). Thus, while the Court precludes Wodzinski from testifying as an expert, the Court allows her to testify as a factual witness.
+
+* * *
+As gatekeeper, the Court must preclude Wodzinski’s expert report and testimony as Trans Union fails to show her opinions will more likely than not satisfy the requirements of Rule
+702. But the Court declines to strike the factual content contained within Wodzinski’s report and will permit her to be a fact witness in this case.
+
+7
+C. Supplemental Exhibit
+Plaintiff also objects to the supplemental exhibit to Wodzinski’s expert report, produced by Trans Union on January 12, 2024. (See Doc. No. 109 at 13.) Plaintiff argues the exhibit is untimely and is inadmissible as a supplement to Wodzinski’s report because it is not her work.
+(Id. at 13–14.) During her deposition, Wodzinski admitted that she did not create the exhibit and did not consider it to be part of her report. (Doc. No. 107-4 at 32:10–37:16.) Trans Union objects to striking the supplemental exhibit, arguing that Plaintiff is not prejudiced by the timing of the disclosure. (See Doc. No. 113 at 18.)
+
+After Wodzinski submitted her expert report, but before she was deposed by Plaintiff,
+7 Plaintiff concedes in its briefing that Wodzinski is “likely a capable percipient fact witness” under Rule
+26 and ultimately agreed during oral argument to withdraw his objection to Wodzinski being called as a fact witness. (Doc. No. 109 at 12; July 9, 2024 Hrg. Tr. at 59:16–60:2.)
+
+Case 2:22-cv-00048-KSM Document 114 Filed 08/01/24 Page 16 of 18
+
+17
+Trans Union’s counsel prepared a “supplemental exhibit” to her report, which sought to substantiate one of Wodzinski’s opinions. (See Doc. No. 111-5 ¶¶ 3–7.) For 24 of the 50 primary files that Wodzinski reviewed, she did not locate any secondary files within Trans Union’s databases that contained what she believed to be an associated public record of a bankruptcy filing. (Id. ¶ 4.) Nonetheless, Wodzinski stated, “it is possible that additional research—including using data not contained within Trans Union’s systems—would reveal that some of these consumers had filed for bankruptcy.” (Doc. No. 111-4 ¶ 43c.) But, because Wodzinski has no experience with bankruptcy data in the public record, (see Doc. No. 107-4 at 36:19–20 (“I have never directly accessed the public record database myself[.]”)), this statement is purely speculative, as she appeared to acknowledge during her testimony. (See July 9, 2024 Hrg. Tr. at 31:4–32:5.)
+
+Defense counsel sought to substantiate Wodzinski’s speculation. A paralegal in the office of Trans Union’s counsel found public bankruptcy filings that matched the names, addresses, and last-four social security number digits for 19 of the 24 primary files for which Wodzinski had not found a potentially corresponding secondary file among Trans Union’s internal files. (Doc. No. 111-5 ¶ 5.) The paralegal’s research was compiled into a chart and filed as a supplemental exhibit to Wodzinski’s report. (Id. ¶ 6.) Wodzinski was not involved with the retrieval of the data contained within this supplemental exhibit, and she never reviewed it. (Doc.
+No. 107-4 at 32:10–14, 34:21–35:19 (“[T]here would be no reason for me to have to review—rereview all of these hundreds of pages of documents when they appended that into the report for us. There would be no reason for me to think that they did that incorrectly.”).)
+8 Thus, this
+8 Although Wodzinski stated that she had reviewed the supplemental exhibit by the time of the July 9 hearing, she confirmed during her testimony that she never conducted or reviewed any of the analysis that was done by defense counsel. (July 9, 2024 Hrg. Tr. at 50:7–51:2.)
+
+Case 2:22-cv-00048-KSM Document 114 Filed 08/01/24 Page 17 of 18
+
+18 document bears no legally cognizable relationship to Wodzinski’s report. While Trans Union’s counsel sought to confirm Wodzinski’s speculations, this is not a proper supplement of Wodzinski’s report. At most, it is merely additional evidence relevant to class certification.
+Even if the Court had not struck Wodzinski as an expert witness, this exhibit would not be permitted as a supplement to her report. But to the extent this exhibit contains facts relevant for class certification, the Court will consider it.
+
+IV. CONCLUSION
+For the reasons discussed above, Plaintiff’s motion to strike is granted in part and denied in part. The Court strikes Wodzinski’s expert report and testimony as inadmissible under the standard outlined in Federal Rule of Evidence 702 and Daubert. Wodzinski may, however, testify as a factual witness as to her knowledge of Trans Union’s subject selection algorithms and processes. Trans Union’s supplemental exhibit will not be considered as a supplement to Wodzinski’s report but is permitted for any admissible, factual evidence it may contain.
+An appropriate Order follows.
+
+Case 2:22-cv-00048-KSM Document 114 Filed 08/01/24 Page 18 of 18
+
+
+-----
