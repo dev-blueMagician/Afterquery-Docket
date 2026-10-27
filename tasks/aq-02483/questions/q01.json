@@ -1,0 +1,58 @@
+{
+  "question": "The newest federal CCR amendments reflected in Wyoming's and Wisconsin's rules were published how many days apart?",
+  "number_of_asks": 1,
+  "gold_answer": "76 days",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 2, Wyoming Partial Program): Wyoming's rules \"adopt the Federal CCR regulations promulgated through December 14, 2020\". That date is the cutoff of the federal version Wyoming adopted.\nStep 2. Source input (Doc 2, Background): EPA lists its amendments to 40 CFR part 257, subpart D as August 5, 2016 (81 FR 51802), July 30, 2018 (83 FR 36435), August 28, 2020 (85 FR 53516), November 12, 2020 (85 FR 72506), May 8, 2024 (89 FR 38950) and November 8, 2024 (89 FR 88650). None is dated December 14, 2020.\nStep 3. Derived (Doc 2): the newest amendment promulgated on or before the December 14, 2020 cutoff is the one published November 12, 2020 (85 FR 72506); the next, May 8, 2024, came after it. So the newest federal CCR amendment reflected in Wyoming's rules was published November 12, 2020.\nStep 4. Source input (Doc 6, Wisconsin Partial Program and Background): Wisconsin's CCR regulations \"reflect 40 CFR part 257, subpart D, as amended through August 28, 2020, for CCR landfills\", and EPA's list in Doc 6 dates an amendment August 28, 2020 (85 FR 53516). So the newest federal CCR amendment reflected in Wisconsin's rules was published August 28, 2020.\nStep 5. Calculation (Doc 2 and Doc 6): counting 60 days on from August 28, 2020 reaches October 27, 2020 (3 days to the end of August, 30 in September and 27 in October).\nStep 6. Calculation (Doc 2 and Doc 6): from October 27 to November 12, 2020, the 4 remaining days of October and 12 of November: 4 + 12 = 16\nStep 7. Calculation (Doc 2 and Doc 6): 60 + 16 = 76 days between the two publication dates.\nStep 8. Look-alike check (Doc 2): December 14, 2020 is a cutoff for Wyoming's adopted version, not the date of any amendment, so measuring from it would overstate the gap.",
+  "answer_components": [
+    "76"
+  ],
+  "evidence": [
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "The WDEQ's rules adopt the Federal CCR regulations promulgated through December 14, 2020."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "August 28, 2020 (85 FR 53516), November 12, 2020 (85 FR 72506), May 8, 2024 (89 FR 38950)"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "Wisconsin's CCR regulations reflect 40 CFR part 257, subpart D, as amended through August 28, 2020, for CCR landfills"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "August 28, 2020 (85 FR 53516), November 12, 2020 (85 FR 72506)"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Look-alike measure: Doc 2 says Wyoming adopted federal CCR rules promulgated through December 14, 2020; using that cutoff as an amendment date gives 108 days. Doc 2's dated list shows the newest amendment by then was November 12, 2020, 76 days after Wisconsin's August 28, 2020."
+}

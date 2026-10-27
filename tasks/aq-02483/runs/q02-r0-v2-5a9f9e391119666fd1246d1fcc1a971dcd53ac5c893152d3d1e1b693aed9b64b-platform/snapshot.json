@@ -1,0 +1,52 @@
+{
+  "bundle": "aq-02483",
+  "corpus_sha256": {
+    "docs/fr_2025_11907.txt": "a49ee191e051c260908f6aa55c0c02c0bb3a12e2530b88fb6afec5627502e77d",
+    "docs/fr_2025_16801.txt": "63e2b2c3c7a0aee826a9e544a4f38f0a05379896a150e134559e5472fa665290",
+    "docs/fr_2026_08662.txt": "9125ec900694a12c3b1c75f1f69f1b4fa87340b24447a6c1ef73efb37e8a17c8",
+    "docs/fr_2026_11312.txt": "a4d2788dd5bd38c23e1836ef07118a0108dd3210ec67f033925badb96373a091",
+    "docs/fr_2026_14118.txt": "c7e9f17ac48dda5d7d73a356304135396ad663fb612810e8ea0c260cc94ca2ee",
+    "docs/fr_2026_18552.txt": "56e32345ff72728e20ca85bf4f9691458d0aa8ae97c60dbf3bc6a9a212529dc8",
+    "text/D01.txt": "6fb99f063f1e3261c129606e47ae931207738f7d345f7d735d89625a24a1d4e9",
+    "text/D02.txt": "f268a3b20c14dcb28f54a47f647202eed1788b3a156bed8ea96791f5d0efdf05",
+    "text/D03.txt": "3cc5f13a77684dcb26bae20a976e6037733157e985334fd48fed6b85e3402954",
+    "text/D04.txt": "f307f1ef8cac1f6b0ad416b80064833c5e46b776c96cd3ed9a265576da6ae2b4",
+    "text/D05.txt": "c1f09108f8b49995cfbf37e2a62d9c0ba5882239e0cd9ec96f97407d3075875d",
+    "text/D06.txt": "9014006d625c454efded975e3d26a810f993e75699a15a397e66bff7544622ac",
+    "text/manifest.json": "84e55f321b55d281717751243362c37a2967e31176732c895bed64723ea5d03c"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "bf48e3a44b587aab69a23a8eab4e572eb3aac09f9b6e848283ae79c2e5d466a8",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D02, D06",
+    "id": "q02",
+    "levers": "Scatter the pieces; Calculate across documents; State the rounding",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i04",
+    "status": "draft",
+    "tags": "Cross-document join; Temporal alignment; Unit normalization"
+  },
+  "question_id": "q02",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "28 weeks",
+    "components": "- c1: 28",
+    "evidence": "- D02 (Permit Requirements and Permitting Process, L202) [c1]: \"Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule.\"\n- D02 (Permit Required, L198) [c1]: \"required to comply with State CCR rules found at Wyoming Administrative Rules, Environmental Quality, Solid Waste Rules (SWR) chapter 18\"\n- D02 (Wyoming CCR Regulations, L278) [c1]: \"chapter 18 became effective on August 19, 2022\"\n- D06 (Wisconsin CCR Permits, L456) [c1]: \"the six CCR landfills were required to submit a plan of operation modification for initial permitting by February 1, 2023\"",
+    "feedback log": "- 2026-10-09 | sketch i04 wording (notes/sketches/i04.md; identical to this question) | source: user report in chat (\"q01, i03 too easy. i04 survived\") | stage: form quick test (easier solver), preliminary screen, not a difficulty-check tier | words: \"survived\" | action: promoted to q02 rev 0 with the tested wording unchanged; difficulty check next.",
+    "lever checks": "- Family and target: a date-anchored rule split across two sections of the Wyoming notice, joined to a printed Wisconsin deadline (found independently by author A, i13, and author B, i03; caller wording i04). Target medium (user 2026-10-09: no Easy slot, \"target medium and high\"). Platform quick test of this exact wording (user report 2026-10-09, \"i04 survived\", no panel text): survived; rev 0 adopts it word for word. Difficulty result pending.\n- Dependency plan: Doc 2 L202 sets existing impoundments' deadline at \"within 12 months of the effective date of the State rule\"; Doc 2 L198 names the State CCR rules as SWR chapter 18; Doc 2 L278 dates chapter 18's effect to August 19, 2022 -> deadline August 19, 2023. Doc 6 L456 prints Wisconsin's February 1, 2023. Gap 199 days = 28 weeks 3 days -> 28 weeks.\n- Universe: not applicable (one deadline per state). Wyoming's other deadlines in L202 have no fixed date (landfill renewals 12 months before each permit's expiry; closure applications tied to each facility's expiry or cessation date), and the question names impoundments' permit applications. Wisconsin's only dated initial-permitting deadline is L456 (L209's \"at least 60 days notification\" is a lead time, not a date).\n- Necessity: Doc 2 is the only source of the 12-month rule and of August 19, 2022 (grep \"12 months\", \"August 19, 2022\": D02 only). Doc 6 is the only source of February 1, 2023 (grep: D06 L456 only). No other document gives a deadline for either state; nothing is reprinted elsewhere.\n- Selected-lever checks: Scatter the pieces: rule (L202, permitting section) and effective date (L278, regulations section) are 76 lines apart in Doc 2; the deadline is in Doc 6. State the rounding: \"to the nearest week\" makes 198 or 199 days (whether the 12 months end August 18 or 19) both 28 weeks, and calendar weeks (ISO week 5 to week 33) also give 28. Calculate across documents: one date from each document, then a day count.\n- Targeted failure modes: mode 1 (Look-alike measure / Uses the wrong period or date): Wyoming's effective date August 19, 2022 taken as its deadline -> 166 days = 23.7 -> 24 weeks (Wyoming earlier). Recomputed by python 2026-10-09. Considered and not declared: Wisconsin's rule date August 1, 2022 (printed in the same sentence as its deadline, so tied) with Wyoming's correct deadline -> 383 days = 55 weeks, or with Wyoming's effective date -> 18 days = 3 weeks; Wyoming's December 14, 2020 federal cutoff plus 12 months -> 414 days = 59 weeks; Wyoming's application date February 6, 2023 plus 12 months -> 370 days = 53 weeks; month-length approximations (6 months 18 days ~ 28.6 weeks -> 29) are not a count of the dates.\n- Calculation verification: python (scratchpad caller, 2026-10-09): 2023-08-19 - 2023-02-01 = 199 days = 28.43 weeks; 2023-08-18 gives 198 = 28.29; 2023-02-01 + 196 days = 2023-08-16 (Wednesday to Wednesday); decoys 166, 383, 18, 414, 370 days. Form-number emulator (tasks/aq-02157/notes/helpers/form_check_v10.py, Doc2=D02 Doc6=D06, default 60,000-character truncation and untruncated): no flags. Doc 6's only \"2023\" sits at character 85,151, beyond what the platform's number check was seen to read (aq-02157), so the Wisconsin date first appears in a step citing both documents (Step 4); Doc 2 prints 2023 at character 10,564.\n- Semantic/ID/overview probes: no document prints 199, 28 weeks or a comparison of the two states. The overview lists Doc 2's August 19, 2022 (the decoy's input) and Doc 6's August 1, 2022, not February 1, 2023 or the 12-month rule. Shortest route: Doc 6 L456; Doc 2 L202 then L278; add 12 months; count days; round.\n- Precision/readings: \"how far apart\" is an unsigned gap; \"to the nearest week\" fixes the unit and rounding (28.43 -> 28). \"The State rule\" in L202 is SWR chapter 18 (L198, L202's own citations \"SWR chapter 18, section 4(d)/(b)\"). The alternate-schedule clause (\"for good cause\") is a per-facility exception, not the rule's deadline.\n- Completeness: full corpus, no gaps (intake: incomplete false, gap 0 for all six documents).\n- Style/set review: 23 words, one ask, wording as quick-tested. q01 (dropped, quick test too easy) used Doc 2 L278's December 14, 2020; q02 uses the same sentence's August 19, 2022, so they were never to be submitted together; q01 is dropped. No other live question.\n- Warnings answered: pending the mechanical preflight.",
+    "necessary documents": "- D02: Answer component\n- D06: Answer component",
+    "platform validation": "",
+    "question": "To the nearest week, how far apart were Wisconsin's deadline for CCR landfills' initial-permitting submittals and Wyoming's for existing CCR impoundments' permit applications?",
+    "reasoning": "Step 1. Source input (Doc 2, Permit Requirements and Permitting Process): \"Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule.\" Doc 2 places Wyoming's State CCR rules in Solid Waste Rules chapter 18.\nStep 2. Source input (Doc 2, Wyoming CCR Regulations): \"chapter 18 became effective on August 19, 2022\".\nStep 3. Derived (Doc 2): 12 months after August 19, 2022 is August 19, 2023, Wyoming's deadline for existing CCR impoundments' permit applications.\nStep 4. Source input (Doc 6 and Doc 2, deadlines compared): Doc 6 (Wisconsin CCR Permits) states that under Wisconsin's revised CCR landfill regulations \"the six CCR landfills were required to submit a plan of operation modification for initial permitting by February 1, 2023\". That Wisconsin deadline falls before Wyoming's August 19, 2023 deadline from Step 3.\nStep 5. Calculation (Doc 2 and Doc 6): 7 * 28 = 196 days, so 28 weeks after February 1, 2023 is August 16, 2023.\nStep 6. Calculation (Doc 2 and Doc 6): from August 16 to August 19, 2023: 19 - 16 = 3 days.\nStep 7. Calculation (Doc 2 and Doc 6): 196 + 3 = 199 days between February 1 and August 19, 2023, that is 28 weeks and 3 days.\nStep 8. Final answer (Doc 2 and Doc 6): 3 days is less than half a week, so to the nearest week the two deadlines are 28 weeks apart.",
+    "targeted failure modes": "### Failure mode 1\nTrap: Look-alike measure\nHow a careless solver fails: Uses the wrong period or date\n\nWhy these are traps: Look-alike measure: Doc 2 dates Wyoming's chapter 18 to August 19, 2022; taking that as the impoundments' deadline puts it 24 weeks before Wisconsin's February 1, 2023 (Doc 6). Doc 2's rule allows 12 months, to August 19, 2023: 199 days, 28 weeks after."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "5a9f9e391119666fd1246d1fcc1a971dcd53ac5c893152d3d1e1b693aed9b64b"
+}

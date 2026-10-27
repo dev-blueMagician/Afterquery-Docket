@@ -1,0 +1,59 @@
+{
+  "question": "To the nearest week, how far apart were Wisconsin's deadline for CCR landfills' initial-permitting submittals and Wyoming's for existing CCR impoundments' permit applications?",
+  "number_of_asks": 1,
+  "gold_answer": "28 weeks",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 2, Permit Requirements and Permitting Process): \"Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule.\" Doc 2 places Wyoming's State CCR rules in Solid Waste Rules chapter 18.\nStep 2. Source input (Doc 2, Wyoming CCR Regulations): \"chapter 18 became effective on August 19, 2022\".\nStep 3. Derived (Doc 2): 12 months after August 19, 2022 is August 19, 2023, Wyoming's deadline for existing CCR impoundments' permit applications.\nStep 4. Source input (Doc 6 and Doc 2, deadlines compared): Doc 6 (Wisconsin CCR Permits) states that under Wisconsin's revised CCR landfill regulations \"the six CCR landfills were required to submit a plan of operation modification for initial permitting by February 1, 2023\". That Wisconsin deadline falls before Wyoming's August 19, 2023 deadline from Step 3.\nStep 5. Calculation (Doc 2 and Doc 6): 7 * 28 = 196 days, so 28 weeks after February 1, 2023 is August 16, 2023.\nStep 6. Calculation (Doc 2 and Doc 6): from August 16 to August 19, 2023: 19 - 16 = 3 days.\nStep 7. Calculation (Doc 2 and Doc 6): 196 + 3 = 199 days between February 1 and August 19, 2023, that is 28 weeks and 3 days.\nStep 8. Final answer (Doc 2 and Doc 6): 3 days is less than half a week, so to the nearest week the two deadlines are 28 weeks apart.",
+  "answer_components": [
+    "28"
+  ],
+  "evidence": [
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Existing CCR surface impoundments must submit a new permit application within 12 months of the effective date of the State rule."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "required to comply with State CCR rules found at Wyoming Administrative Rules, Environmental Quality, Solid Waste Rules (SWR) chapter 18"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "chapter 18 became effective on August 19, 2022"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "the six CCR landfills were required to submit a plan of operation modification for initial permitting by February 1, 2023"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Unit normalization"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Look-alike measure: Doc 2 dates Wyoming's chapter 18 to August 19, 2022; taking that as the impoundments' deadline puts it 24 weeks before Wisconsin's February 1, 2023 (Doc 6). Doc 2's rule allows 12 months, to August 19, 2023: 199 days, 28 weeks after."
+}
