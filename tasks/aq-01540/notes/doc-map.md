@@ -1,0 +1,874 @@
+# aq-01540 - document map
+
+Written once by `bundle-mapper` from `text/` (and `docs/` for flattened tables and scans).
+It is for navigation, like the form's bundle overview: where things are, not what to ask.
+Questions quote the documents, never this map.
+
+Line numbers below are `text/Dnn.txt` line numbers (written `Lnnn`). Every `text/Dnn.txt` is the
+`docs/` original plus a two-line header (`# Dnn | docs/<file>` and a blank line), so line N in text
+is line N-2 in the original.
+
+## Local id to task-page Doc number (from notes/intake.json "number")
+
+| Local | Task page | Source file | Case |
+|---|---|---|---|
+| D01 | Doc 6 | docs/uscourts_ca5_23_20570_0.txt | Megalomedia Inc. et al. v. Philadelphia Indemnity Ins. Co., 5th Cir. No. 23-20570 |
+| D02 | Doc 8 | docs/uscourts_dcd_1_24_cv_00206_0.txt | Hazim Nada et al. v. United Arab Emirates et al., D.D.C. No. 24-0206 (ABJ) |
+| D03 | Doc 7 | docs/uscourts_dcd_1_25_cv_02880_0.txt | 4chan Community Support LLC et al. v. UK Office of Communications (Ofcom), D.D.C. No. 25-2880 (RC) |
+| D04 | Doc 5 | docs/uscourts_flsd_1_26_cv_20364_0.txt | Rahul Bagga v. Royal Caribbean Cruises Ltd., S.D. Fla. No. 26-cv-20364 |
+| D05 | Doc 2 | docs/uscourts_gamd_7_25_cv_00193_0.txt | Shenzhen En De Chuang Technology Co. et al. v. Lewis Machining and Engineering, Inc., M.D. Ga. No. 7:25-CV-193 (LAG) |
+| D06 | Doc 4 | docs/uscourts_ksd_2_26_cv_02326_0.txt | Sethmar Transportation, LLC v. DUAL North America, Inc. et al., D. Kan. No. 2:26-CV-02326-JAR-ADM |
+| D07 | Doc 1 | docs/uscourts_ohsd_2_25_cv_01239_1.txt | Advanced Technology Products, Inc. v. Oriental Export Corp. et al., S.D. Ohio No. 2:25-cv-1239 |
+| D08 | Doc 3 | docs/uscourts_txnd_4_23_cv_00415_2.txt | John Deaton et al. v. Steven Johnson et al., N.D. Tex. No. 4:23-CV-00415-O |
+
+## Bundle
+
+- What it is: eight unrelated U.S. federal court decisions dated or filed 11-15 September 2026: one
+  Fifth Circuit appellate opinion with a concurrence and a dissent (D01) and seven district-court
+  opinions or orders (D02-D08). Subjects: insurance-policy exclusion and forfeiture/party presentation
+  (D01); FSIA immunity, personal jurisdiction and RICO conspiracy (D02); FSIA immunity of a British
+  regulator (D03); cruise-ticket forum-selection clause and forum non conveniens (D04); patent consent
+  judgment and permanent injunction (D05); insurance-policy forum-selection clause, venue transfer and
+  a 12(b)(6) motion (D06); personal jurisdiction, forum non conveniens and contract/warranty/fraud
+  claims about tubing products (D07); Anti-Injunction Act relitigation exception and All Writs Act (D08).
+- Documents: 8; ids D01-D08 from `text/manifest.json` (method "text", pages null for all).
+- Gaps: none in readable text. All eight documents were read completely, line by line, in chunks (ledger
+  under each document). Not-applicable features: no PDFs, no page images, no charts, no tables in any
+  document. Features the plain text cannot show are listed per document under Notes: underline, bold,
+  "emphasis added" and "emphasis in original" formatting; footnote text interleaved with body text at
+  page breaks; detached footnote-marker numerals; `<pageID>` placeholders in D07/D08 footers. Material
+  that the documents name but do not contain (not an extraction gap): D05 Schedule 1 (Doc. 19-1 at
+  6-14), the full text of D07's seven-sentence Section 11, D06's Declarations Page, and the exhibits,
+  briefs and complaints each opinion cites.
+- Extraction spot-checks (2026-10-08). For each document the `text/` file has exactly two more lines
+  than the `docs/` original (717/715, 569/567, 254/252, 135/133, 174/172, 269/267, 462/460, 179/177).
+  Three Grep probes per document matched at original line = text line - 2, with identical content:
+  D01 Exclusion L65 / fn13 L222 / fn18 continuation L295; D02 L171 / fn17 L555 / date L568; D03 statute
+  L59 / fn3 L218 / date L252; D04 clause L45 / fn3 L81 / disposition L125; D05 fn1 L92 / ¶8 L136 /
+  date L169; D06 Section 32 L65 / fn35 L163 / date L264; D07 fn2 L47 / Section 13 L58 / signature L459;
+  D08 fn2 L47 / heading L89 / date L177. No line is 2,000 characters or longer, so the chunked reads
+  were not truncated. The two longest lines (D01 L283, D02 L257) were checked by their endings. PDF
+  page count: not applicable. Printed slip-page stamps in the text: D01 51, D02 51, D03 24, D04 12,
+  D05 11, D06 12, D07 44, D08 12. Table check: not applicable, since no document has a table.
+  Footnote check: done for every document as above.
+- Provenance: `notes/intake.json` (schema 1, capture_sha256 77c81c32...fed10). Every document has
+  incomplete false, gap_characters 0 and matches_capture true. Every manifest sha256 equals intake
+  source_sha256 and captured_sha256 (D01 9883...5d09ce, D02 6f71...ec98af, D03 f0f2...35689e,
+  D04 fcf0...5bd886, D05 4fa3...b86084, D06 6653...21f69f, D07 1946...202d20, D08 9e76...eca29d4). No
+  recovered-source history is recorded. Manifest character counts: D01 103,839; D02 109,345;
+  D03 48,781; D04 26,047; D05 20,873; D06 26,096; D07 78,889; D08 24,364.
+
+## D01 - Megalomedia v. Philadelphia Indemnity (5th Cir., majority + concurrence + dissent)
+
+- Source: docs/uscourts_ca5_23_20570_0.txt | task page Doc 6 | 51 slip pages ("Case: 23-20570 Document: 136-1 Page: N Date Filed: 09/14/2026")
+- Written or submitted by: United States Court of Appeals for the Fifth Circuit; panel Ho, Duncan, Oldham (L16). Majority by Stuart Kyle Duncan, Circuit Judge (L18), slip pp. 1-20, L3-307. Concurrence by James C. Ho (L311), slip pp. 21-23, L310-355. Dissent by Andrew S. Oldham (L358), slip pp. 24-51, L357-717. Clerk Lyle W. Cayce (L26). Philadelphia, Megalomedia and the networks and other insurers are parties or mentioned entities, not authors.
+- Type, date, edition: published appellate opinion; FILED September 14, 2026 (L22-25). Appeal from S.D. Tex., USDC No. 4:20-CV-1644 (L13-14). Earlier panel decision: Megalomedia Inc. v. Phila. Indem. Ins. Co., 115 F.4th 657, 660 (5th Cir. 2024), which remanded for jurisdictional discovery (L99). Supplemental findings on remand: No. 4:20-CV-01644 (S.D. Tex. Jun. 6, 2025), ECF No. 164 (L99-100). Oral argument Nov. 3, 2025 (fn3 L145).
+- Period covered: policy relationship since 2010 (L49); Exclusion effective June 3, 2011 (L56); show production began 2012 (L139); emails and cost submissions in 2015, 2016 and 2017 (L176, L183, L185); Bonner suit 2020 (L76) and Bolton suit Feb. 10, 2020 (fn4 L147); remand findings June 6, 2025; argument Nov. 3, 2025; decision Sept. 14, 2026. No fiscal-year convention.
+- Entities and aliases:
+  - "Megalomedia" = Megalomedia, Inc., Megalomedia Studios, L.L.C., Mansfield Films, L.L.C. and DBA Holdings, L.L.C. (fn1 L21; caption L7-8). Television production company in Austin, Texas (L48).
+  - "Philadelphia" = Philadelphia Indemnity Insurance Company (L9, L20).
+  - Show: "My 600-lb Life" (L20), also printed "My 600-Lb Life" (fn4 L147, fn9 L188).
+  - "Bonner suit" = Karen Sue Bonner et al. v. Megalomedia, Inc. et al., No. 2020-03929 (55th Jud. Dist., Harris Cnty., Tex.) (L77-78). David Bolton suit (fn4 L147).
+  - Other Megalomedia shows named by the dissent: Cartel City, Fugitive Recovery, Heavy, Half Ton Teen, Half Ton Mom (L622-623).
+  - Examples in the "reality show" debate: Monday Night Football and Fox News (L37, L302); Jimmy Fallon and Jeopardy! (L293, L647, L656).
+  - Judge-named citations, which are not authors here: Posner (L270, L461), Easterbrook (L444-445, L507, L615), Sentelle (L462), Arnold (L380), Kozinski (L461), Bork (L508, L579), Costa (fn18 L283), Katsas (fn15 L244), Alito (L289, L487), Gorsuch (L487), Harlan (fn14 L242, fn5 L538).
+- Tables: none.
+- Lists:
+  - Policy coverages: general liability, commercial property, commercial auto, inland marine (L52).
+  - General liability in three parts, majority version: Coverage A (bodily injury/property damage), Coverage B (personal and advertising injury), "Film Production Additional Coverages Endorsement" (L54). Dissent version: "Coverage A, Coverage B, and Coverage C" (L621).
+  - Exclusion Schedule, three items: pornographic materials; "any/all reality shows"; rental/loan of equipment (L64-65).
+  - Counterclaims (4): breach of contract, fraudulent inducement, Texas Insurance Code, DTPA (L80). The dissent says "As relevant here, Megalomedia brought one claim: breach of contract" (L675-676).
+  - District-court fraud findings (2) (L94-95).
+  - Bullet quotes from the summary-judgment opposition (4) (L137-143). Footnote 10 gives further cites at 1, 2, 6, 10 and 12 (L216-218).
+  - Years in which reality-show costs were removed: 2015, 2016, 2017 (L183); "three years in a row" (L303).
+  - Footnote 16 forfeiture cases: 18 cases, BRFHH Shreveport through Hoyt (L252-254, continued L264-265).
+  - Footnote 18 contract-ambiguity forfeiture cases: eight, plus "see also" Learmonth, Herremans and 19 Wright & Miller (L283-284, continued L295-296).
+  - Dissent's six cases "decided on grounds not raised by the parties": Erie, Mapp, Washington v. Davis, Younger, Batson, Blonder-Tongue (L360; L532, L544-545; footnotes 4-9 L534-556).
+  - Dissent's three considerations: constitutional structure, first principles, judicial hierarchy (L395-396; parts 1-3 at L401, L417, L475).
+  - Dissent's four hypotheticals: AEDPA de novo; qualified immunity / § 1983; longer statute of limitations; trial by coin flip (L449-459).
+  - Dissent's "five principal arguments against my view" (L564): First L565, Second L579, Third L589, Fourth L600, Fifth L605.
+  - Dissent's three Supreme Court reversals: Sineneng-Smith, Margolin, Clark v. Sweeney (L565-573).
+  - Dissent's amicus-win cases: Terry, Beckles, Setser (L520-521).
+  - Dissent's sua sponte doctrines: ripeness, abstention, state sovereign immunity, then sanctions, contempt, inherent powers, forum non conveniens (Gulf Oil), consolidation (L513).
+  - Dissent's three arguments made below (L663): (1) exclusion did not apply; (2) provision "may be ambiguous"; (3) estoppel from renewals.
+  - Dissent's four Merriam-Webster definitions: Reality, Documentary, Docuseries, Docudrama (fn11 L648-650).
+- Forecasts, guidance, deadlines, effective dates: Exclusion effective June 3, 2011 (L56). No forecasts or deadlines.
+- Dates (all): 2010 (L49); 2011 notice and June 3, 2011 effective date (L56); 2012 production start (L139, fn10 L216); 2015 email and later-2015 request (L176, L183); 2016 and 2017 repeats (L183, L185); 2020 suits (L76) and Feb. 10, 2020 Bolton suit (fn4 L147); 2024 remand decision (L99); Jun. 6, 2025 supplemental findings (L100); Nov. 3, 2025 oral argument (fn3 L145); Aug. 26, 2026 "last visited" for the dictionaries (fn11 L648-651); Sept. 14, 2026 filing (L25).
+- Amounts and figures: no dollar amounts. Oral-argument timestamps: 0:50-2:06 (fn3 L145), 4:00-4:15 (fn5 L155), 2:10-4:00 (fn6 L157), 12:00-16:00 (L647). Proverbs 28:13 (L354). "100% realityTV" (fn10 L218).
+- Legal tests and frameworks (verbatim; applied or mentioned):
+  - Standards of review, applied: summary judgments "de novo"; bench trial "fact findings for clear error and its legal conclusions de novo" (L111-113).
+  - Texas law in a diversity case, applied (L115, citing Erie).
+  - Eight-corners rule, mentioned as the district court's basis (L85, Pine Oak Builders).
+  - Ambiguity rule: "the construction that most favors the insured" (Nassar, L118). Not applied by the majority because the argument was forfeited; the dissent would apply it (L633-637: Tex. Ins. Code § 554.002; Gulf Ins. Co. v. Parker Prods. "reasonable interpretation under the rule of construction which favors the insured and which strictly construes policy exclusions against the insurer"; J.M. Davidson "may conclude a contract is ambiguous even in the absence of a pleading of ambiguity"; Hudson Energy "resolve the uncertainty by adopting the construction that most favors the insured").
+  - Forfeiture rule, applied: "[a] party forfeits an argument by failing to raise it in the first instance in the district court." (Rollins, L240). Keelan: "[i]f a party fails to assert a legal reason why summary judgment should not be granted, that ground is waived and cannot be considered or raised on appeal." (fn6 L159).
+  - Forfeiture exception, stated in the concurrence; the court declines to use its discretion: "an issue will not be addressed when raised for the first time on appeal unless it is a purely legal matter and failure to consider the issue will result in a miscarriage of justice." (Rollins, 8 F.4th at 398, L333-334).
+  - Party presentation (majority): "we rely on the parties to frame the issues for decision and assign to courts the role of neutral arbiter of matters the parties present." (Sineneng-Smith quoting Greenlaw, L229); "supple, not ironclad" (L229, also L391, L703, L706).
+  - Party presentation (dissent): Kamen, "[W]hen an issue or claim is properly before the court, the court is not limited to the particular legal theories advanced by the parties, but rather retains the independent power to identify and apply the proper construction of governing law." (L361, L393). Yee, if a "claim is properly presented, a party can make any argument in support of that claim; parties are not limited to the precise arguments they made below." (L484, L672). Claims-versus-arguments distinction (L396, L675-676).
+  - Texas fraud elements, footnote 7 (L177-178): "(1) the defendant makes a material, false representation; (2) the defendant knows the representation is false (or makes it recklessly); (3) the defendant means to induce the plaintiff's reliance on it; and (4) the plaintiff justifiably relies on it and is injured." Fraudulent inducement is "a promise of future performance made with no intention of performing at the time it was made." The court applies element (4), reliance (L174-186). The representation element is not reached (fn8 L179).
+  - Insurance Code § 541.151 and DTPA § 17.50 "require reliance", applied (fn9 L187-188).
+  - Clear-error formulation: "implausible in light of the record considered as a whole" (Hess, L186).
+  - Cross-appeal rule, dissent: "with a view either to enlarging [its] own rights thereunder or of lessening the rights of [its] adversary" (Am. Ry. Express, L680-681).
+  - Judicial estoppel, dissent: "strike[s] a blow at the integrity of the judicial process" (Maiz v. Virani, L686). The concurrence names "party presentation and judicial estoppel, to name just two" (L320).
+  - Waiver versus forfeiture, dissent: "knowingly relinquishing a claim (waiver) or failing to press a claim properly (forfeiture)" (L388).
+- Policy clauses quoted verbatim:
+  - Exclusion (L58-65): "EXCLUSION – DESIGNATED ONGOING OPERATIONS / This endorsement modifies insurance provided under the following: / COMMERCIAL GENERAL LIABILITY COVERAGE PART / SCHEDULE / Description of Designated Ongoing Operation(s): / Excludes the production of, filming or distribution of pornographic materials. / Excludes any/all reality shows. Excludes rental/loan of insureds [sic] equipment or equipment leased by the insured to 3rd party".
+  - Effect clause (L67): "This insurance does not apply to ‘bodily injury’ or ‘property damage’ arising out of the ongoing operations described in the Schedule of this endorsement, regardless of whether such operations are conducted by you or on your behalf or whether the operations are conducted for yourself or for others."
+  - Readings. District court: the policy "unambiguously excluded coverage for bodily injuries arising from the production of reality shows like My 600-lb Life" (L85). Megalomedia below: the clause "excluded" reality shows from the Exclusion itself (L144; fn11 L219). Dissent: "reality show" is "defined nowhere in the insurance contracts. Nor is it defined anywhere in Philadelphia's underwriting guidelines" (L643), and the policy covers documentaries, docuseries and docudramas (L645).
+- Disposition: district court judgment AFFIRMED (L44, L306). The concurrence agrees (L338): "We simply affirm on forfeiture grounds alone" (L336). The dissent would reverse the summary judgment (L197; "I respectfully dissent" L364, L715).
+- Hedged claims (hedge word and what it attaches to):
+  - L169 "(assuming one was made)": the representation.
+  - L186 "Whether true or not": Megalomedia's "susceptible to more than one reasonable interpretation" point.
+  - L292 "That argument is not nearly as strong as the dissent suggests": the majority's merits commentary. The majority says "we have not addressed that argument".
+  - L302 "probably": staff speaking modern American English.
+  - L304 "one begins to suspect ... might have avoided": Megalomedia's motive.
+  - L315 Ho "I'm not so sure": whether the question is genuinely contestable.
+  - Dissent L482 "it appears the answer is no"; L486 "Apparently not, for better or worse"; L496 "apparently per se plain error" and "would almost certainly be the same"; L502 "Courts, it seems"; L568 "it is unclear how ... can be reconciled"; L592 "at best unclear".
+  - Dissent L623 "apparently distinguished" and "apparently covered": Philadelphia's treatment of shows.
+  - Dissent L645 "at best unclear whether My 600-lb Life is a documentary ... or a reality show"; L647 "including, apparently, Jeopardy! and Fox News"; L656 "presumably have some basis in reality".
+  - Dissent L661 "I am less sure that there was a change or that a change would be fatal".
+  - Dissent L663 "may be ambiguous": attaches to the provision, quoting the argument below.
+- Alternative holdings and issues not reached:
+  - Main holding: forfeiture of the ambiguity argument (L132). Separate holding: no clear error in the reliance finding (L174-186). Insurance Code and DTPA claims fall for the same reason (fn9).
+  - Not reached: the representation finding (fn8 L179); estoppel and waiver arguments, not appealed (fn2 L104-105); the meaning of "reality show" ("We decline to enter this debate", L37; "we have not addressed that argument", L292). Concurrence: "We announce no substantive ruling on contract interpretation or insurance law today" (L336).
+- Footnotes:
+  - Majority 1-18:
+    - fn1 L21: "Megalomedia" includes four entities.
+    - fn2 L104-105: estoppel and waiver rulings not appealed and not considered.
+    - fn3 L145: oral-argument record, Nov. 3, 2025.
+    - fn4 L147: Bolton suit, Feb. 10, 2020.
+    - fn5 L154-155: says the reply brief's "ambiguity argument" differs from the one made at summary judgment. This qualifies footnote 11's "Alternatively, the Exclusion is ambiguous" quote.
+    - fn6 L157-159: Little v. Liquid Air point raised first at oral argument and rejected.
+    - fn7 L177-178: Texas fraud elements.
+    - fn8 L179: representation finding not reached.
+    - fn9 L187-188: Insurance Code and DTPA require reliance.
+    - fn10 L216-218: Megalomedia's "reality TV-show" admissions below.
+    - fn11 L219: Megalomedia's position below that the Exclusion does not exclude reality shows, including "Alternatively, the Exclusion is ambiguous, and Megalomedia has a reasonable interpretation that the policy does not exclude reality shows." (id. at 9).
+    - fn12 L221: appellate positions.
+    - fn13 L222: Shyamalan films.
+    - fn14 L241-242: answers the dissent's Supreme Court examples ("hardly an example to follow"; "no court can overturn the Supreme Court").
+    - fn15 L244: Naz v. Wright (D.C. Cir. 2026).
+    - fn16 L252-254 continued L264-265: 18 forfeiture cases, some with Oldham concurrences (Dubin is in the body at L229; Collins v. Mnuchin is in fn16).
+    - fn17 L274: Yee overread; cites "Margolin, 146 U.S. at 1288".
+    - fn18 L283-284 continued L295-296: contract-ambiguity forfeiture cases.
+  - Concurrence fn1 L322-324: hot dog, cereal and Die Hard sources.
+  - Dissent 1-12:
+    - fn1 L382: term dates to the 1920s; Smitherman (forthcoming 2027).
+    - fn2 L409 continued L421: affirmative defenses; Fed. R. Civ. P. 8(c), 12(b).
+    - fn3 L423-425: Black's (12th ed. 2024) definitions of "claim" and "argument".
+    - fn4 L534-535: Erie and Swift v. Tyson.
+    - fn5 L536-538: Mapp and Wolf.
+    - fn6 L550: Washington v. Davis.
+    - fn7 L551-553: Younger v. Harris; 28 U.S.C. § 1253.
+    - fn8 L554: Batson.
+    - fn9 L556: Blonder-Tongue and Triplett.
+    - fn10 L582-584 continued L592-593: academic versions; Dodson; Rhee.
+    - fn11 L648-652: dictionary definitions, last visited Aug. 26, 2026; MCI v. AT&T.
+    - fn12 L666: "reality based" covers nearly all shows.
+- Rounded prose beside exact figures: none (no figures).
+- Notes (layout and extraction):
+  - Footnote text continues after body text at page breaks: fn16 (L252-254, then L264-265), fn18 (L283-284, then L295-296; the "19" at the end of L284 is the Wright & Miller volume number), dissent fn2 (L409 to L421), dissent fn10 (L584 to L592-593).
+  - Standalone numerals at L82 "1", L89 "2" and L98 "3" are subsection numbers within Part I.B (by sequence). L167 "7", L251 "16" and L544-545 "9" are footnote markers.
+  - Slip page numbers merge into the first body line (for example L52 "3 policy").
+- Operative definitions, rules and scope exceptions: the Exclusion applies only to Coverage A (L65, L56). "Megalomedia" definition (fn1). Dissent dictionary definitions (fn11). Black's "claim" and "argument" (dissent fn3).
+- Amendments or contradictions (neutral; both locations):
+  - Third part of the general-liability coverage: "Film Production Additional Coverages Endorsement" (majority L54) versus "Coverage C" (dissent L621).
+  - Number of claims: four counterclaims (L80) versus "As relevant here, Megalomedia brought one claim: breach of contract" (dissent L675-676).
+  - Majority fn14 L241 says "no court can overturn the Supreme Court"; the dissent quotes the majority as "no one can overturn the Supreme Court" (L560).
+  - The dissent's pin cites to the majority do not match the extracted footnote numbers. "Ante, at 14 n.16" (L549) refers to the phrase that sits in majority fn14 at L242. "ante, at 14 n.16, 17 n.20" (L569): the majority has no note 20. "supra, at 10" (L569). "ante, at 15 n.18" (L695): the case list is fn16 at L252-254 on slip p.15. "supra, at 4 n.2" (L701): dissent fn2 is at L409.
+  - Citation forms: Margolin "146 S. Ct. 1285, 1288" (L230), "146 S. Ct. at 1288–89" (L242), "146 U.S. at 1288" (fn17 L274), "146 S. Ct. 1285, 1288–89 (2026) (per curiam)" (dissent L377). Josefik "753 F 2d 585, 588" (L271) versus "753 F.2d 585, 588" (L461). del Carpio Frescas "932 F.3d 324" (L493) versus "del Capio Frescas, 937 F.3d at 334–44" (L496). Molina-Martinez "578 at 198" (L496). Sineneng-Smith pin 375 (L229) versus 376 (L391).
+  - Texas Insurance Code sections: § 541.151 (majority fn9, reliance) and § 554.002 (dissent L634, burden). These are different sections, not a conflict.
+  - No stated precedence beyond majority versus dissent.
+- Statutes, rules and other authorities in D01 that appear elsewhere in the bundle: see Shared ground. D01-only authorities include Fed. R. App. P. 28(a)(8) (fn6 L158); Fed. R. Civ. P. 8(c), 12(b) (fn2 L421), 15(a)(1), 41 (L434); U.S. Const. art. III §§ 1-2 (L402); 9 U.S.C. §§ 1-16 (L598); 28 U.S.C. § 1253 (fn7 L552); Tex. Ins. Code §§ 541.151, 554.002; and Tex. Bus. & Com. Code § 17.50.
+- Coverage: FULL. Read ledger: L1-60, L60-169, L170-279, L279-378, L379-468, L468-557, L557-646, L646-717. Nothing unread.
+
+## D02 - Hazim Nada v. United Arab Emirates (D.D.C. memorandum opinion)
+
+- Source: docs/uscourts_dcd_1_24_cv_00206_0.txt | task page Doc 8 | 51 slip pages ("Case 1:24-cv-00206-ABJ Document 108 Filed 09/15/26 Page N of 51")
+- Written or submitted by: U.S. District Court for the District of Columbia, Amy Berman Jackson, United States District Judge (L566-567). The parties, their briefs and the press quoted in the opinion are not authors.
+- Type, date, edition: Memorandum Opinion (L29), DATE: September 15, 2026 (L568); a separate order will issue (L564).
+- Period covered: alleged campaign from 2017 ("beginning in 2017" L53; "Beginning in late 2017" in Am. Compl. ¶1 quoted at L371) through 2019 (L61); hack disclosure April 2021 (L77); suit filed Jan. 24, 2024 (L84); amended complaint Aug. 6, 2024 (L92); press articles 2023 (L537, fn17).
+- Entities and aliases:
+  - Plaintiffs: Hazim Nada (dual U.S.-Italian citizen domiciled in Como, Italy, L53) and Lord Energy SA ("Lord Energy"; Lugano, Switzerland, L30, L53; "Lord Energy, SA" L317). U.S. subsidiary "Americas Lord Energy" (L31, L317, L339), also "Americas Lord Energy Inc." (L79, L450), in Houston (L447, L482).
+  - Defendants:
+    - UAE (L21, L30).
+    - "Alp" = Alp Services S.A.; "Diligence" = Diligence SARL (L53-54).
+    - Mario Brero (Italian citizen domiciled in Switzerland), Muriel Cavin (Swiss) and Lionel Badal (Luxembourg citizen and resident), all fn5 L87. Collectively, with Alp and Diligence, the "Alp defendants" (L55; the motion list at L36 and L564 is "Alp, Diligence, Brero, Badal, and Cavin").
+    - Sylvain Besson, Swiss journalist (L36, L55; fn15 L484).
+    - Lorenzo Vidino, called "American academic" (L30, L55, L84, L105), "American journalist" (L36, L406, L515), "U.S. based journalist" (L450), "academic expert" (quote L531) and "Italian American scholar" (Der Spiegel quote L537).
+    - John Doe Nos. 1-25 (L84).
+  - Former defendants and nonparties: H.H. Sheikh Mohamed bin Zayed Al Nahyan (president; "M.B.Z." L249), Matar Humaid al-Neyadi ("Matar"; "liaison" L246), ADNOC (Abu Dhabi National Oil Company, L58-61). These three were omitted from the amended complaint (L92-93). Fn6 (L107) lists them and Ali Saeed al-Neyadi ("Ali", fn11 L266) as "[n]onpart[ies]". Ariaf Studies and Research LLC is the Abu Dhabi "shell" (L55, L84, L246 "[defendant] Ariaf" in a quote of Am. Compl. ¶16). The opinion does not state Ariaf's status in the amended complaint, and Ariaf appears in no count list or motion.
+  - Non-party institutions: Crédit Suisse (L314, L394; "Credit Suisse" L540; email media.relations@creditswiss.com L314), Swiss Card (L317), UBS (L317), Macquarie Bank (L337), J.P. Morgan Chase (L344), Platts (L72, L336), Sonatrach (L72), Castleton Commodities Merchant Trading LP ("CCI", L336), Le Temps (L72, L257, L435), Africa Intelligence (L257), G5 Integritas International and Mariela Geier (Florida, L450), Buzzfeed (L450), The Times (L531), Der Spiegel (L537), The New Yorker (L542; fn17), George Soros (L455).
+- Tables: none.
+- Lists:
+  - Motions to dismiss (4): UAE [Dkt. # 80], Alp defendants [Dkt. # 81], Besson [Dkt. # 85], Vidino [Dkt. # 84] (L36).
+  - Briefing (fn1 L42-44): Pls.' Opp. [Dkt. # 87], UAE Reply [# 90], Alp Defs.' Reply [# 91], Besson Reply [# 92], Vidino Reply [# 93].
+  - Initial-complaint motions [Dkt. ## 66, 69, 70, 71] (L92).
+  - Counts (5), L98-115:
+    - Count One: Lanham Act 15 U.S.C. § 1125(a)(1)(B), against UAE, Alp, Brero, Cavin, Badal and some John Does; Am. Compl. ¶¶283-303.
+    - Count Two: RICO § 1962(c), same defendants, no Diligence; ¶¶304-18.
+    - Count Three: RICO conspiracy § 1962(d), against UAE, Alp, Diligence, Brero, Cavin, Badal, Besson, some John Does and Vidino; ¶¶319-23.
+    - Count Four: Sherman Act § 1, against UAE, Alp, Diligence, Brero, Cavin, Badal and John Does; ¶¶324-29.
+    - Count Five: Sherman Act § 2, same defendants as Count Four; ¶¶330-36.
+    - Vidino and Besson appear only in Count Three. "the sole count against him" (L39); "charged in only one count" (L515).
+  - FSIA exceptions: "nine" (L171); plaintiffs invoke one (L171).
+  - Commercial-activity clauses: three (L172); "all 3 prongs" (L357).
+  - Agency elements: three (L243-244).
+  - Cases plaintiffs relied on, distinguished: MINE (L190-271), Virtual Defense, Bankers Trust, BP Chemicals, Reiss, Siderman de Blake (L272-281); Azima (L320-321); Exxon and EIG (L329-332); Missouri ex rel. Bailey (L349); Rodriguez v. PAHO (L409-410); Galloway, Sotloff, Flag Co., Rudersdal (L497-500); Bayshore (L506).
+  - Wikipedia languages: English, French, Italian (L437); French-language entry in June 2018 (L436).
+  - Amended-complaint paragraph counts: "49 paragraphs" (¶¶90-138, fn14 L402); "only 15 paragraphs in the 336-paragraph amended complaint" relate to Vidino (L454).
+- Forecasts, guidance, deadlines, effective dates: none.
+- Dates (all):
+  - 2017: May 2017 Alp "pitched" the UAE (L257); Sept. 13, 2017 Alp memorandum (L62); Oct. 6, 2017 "first official report" (L62).
+  - 2018: Jan. 3, 2018 Badal-Vidino emails (L549), arranging a Jan. 12, 2018 Geneva meeting with Badal, Brero and Cavin (L549); January 2018 Besson article (L494); Jan. 24, 2018 Vidino-Alp contract (L535); "January 2018" Geneva dinner (L539); May 3, 2018 Badal instruction to G5 (L450); May 7, 2018 Alp "confidential internal report" (L407); June 2018 email to Crédit Suisse (L314); June 2018 French Wikipedia entry (L436); June 8, 2018 Platts email (L336); July 4, 2018 Brero-Matar call (L261); end of December 2018 Crédit Suisse withdrawal, "six months later" (L314).
+  - 2019: Jan. 16, 2019 Swiss Card (L317); late January 2019 UBS declined funding and February 2019 closed Nada's account (L317); April 2019 Americas Lord Energy dissolved and Lord Energy SA bankruptcy "later that month" (L317).
+  - Later: April 2021 hacked documents shared (L77); 2023 Der Spiegel (L537); Mar. 27, 2023 New Yorker article (fn17 L555), which the body calls "in 2024" (L542); Jan. 24, 2024 complaint (L84); Aug. 5, 2024 Minute Order (fn6 L107); Aug. 6, 2024 amended complaint (L92); Sept. 15, 2026 decision (L568).
+- Amounts and figures:
+  - "more than a billion dollars in damages" (L30).
+  - ADNOC competition costing "tens, if not hundreds, of millions of dollars annually" (L61).
+  - "costing Nada hundreds of millions of dollars" (L79).
+  - Lord Energy "valued at approximately $150 million" (fn4 L85).
+  - Vidino "typically was paid between $2,000–$4,000 for each discreet assignment" (L528); "Alp agreed to pay Vidino 3,000 Euros" (L535).
+  - Alp memo "page-and-a-half" (L62).
+- Legal tests and frameworks (verbatim; applied or mentioned):
+  - Rule 12(b)(1)/(6): accept factual allegations; need not accept unsupported inferences or legal conclusions (L120). Rule 12(b)(1) burden "by a preponderance of the evidence" (L123). Court may look outside the pleadings (L129-131). Personal-jurisdiction prima facie showing (L134-146). Rule 12(b)(6) Iqbal/Twombly plausibility (L152-157). All applied.
+  - FSIA, applied:
+    - Sole basis: "provides the sole basis for obtaining jurisdiction over a foreign state in federal court." (Amerada Hess, 488 U.S. at 439, L169). Foreign states are "presumptively immune" (Nelson, 507 U.S. at 355).
+    - Burden: "by producing evidence that an exception applies, . . . and once shown, the sovereign bears the ultimate burden of persuasion to show the exception does not apply[.]" (Bell Helicopter, L169).
+    - § 1605(a)(2) text (L172): "the action is based upon a commercial activity carried on in the United States by the foreign state; or upon an act performed in the United States in connection with a commercial activity of the foreign state elsewhere; or upon an act outside the territory of the United States in connection with a commercial activity of the foreign state elsewhere and that act causes a direct effect in the United States."
+    - § 1603(d) (L177): "either a regular course of commercial conduct or a particular commercial transaction or act" and "[t]he commercial character of an activity shall be determined by reference to the nature of the course of conduct or particular transaction or act, rather than by reference to its purpose."
+    - § 1603(e) "having substantial contact with the United States" (L179); "isolated or transitory" contacts excluded (Zedan).
+    - "Based upon" and "gravamen of the complaint" (Sachs, L180, L355-365); Nassif, "based upon" applies to all three clauses (L361-365).
+    - Direct effect: "immediate consequence" (Weltover, L297); "no intervening element" (Princz, L298); "flows in a straight line without deviation or interruption" (L323); "purely trivial" effects excluded (Bell Helicopter, L311).
+  - Agency test, applied (control element found conclusory, L259-262) (L243-244): "(1) the principal must manifest a desire for the agent to act on the principal’s behalf; (2) the agent must consent to act on the principal’s behalf; and (3) the principal must have the right to exercise control over the agent with respect to matters entrusted to the agent."
+  - Personal jurisdiction, applied:
+    - Rule 4(k)(2) (L418). General jurisdiction "essentially at home" versus specific "case-linked" (L419).
+    - Specific jurisdiction requires purposeful direction and arising-out-of, and a "substantial connection" (L425-426).
+    - Calder effects test (L442-444). Bernhardt: "The plaintiff must show that the foreign defendant has purposefully directed his activities at residents of the forum, and that the alleged injuries arise out of or relate to those activities." (L453-454). Asahi "significant weight" for foreign defendants (L454).
+    - Rule 4(k)(1)(C) (L462) and 18 U.S.C. § 1965(a)-(b) text (L463).
+    - Conspiracy jurisdiction requires knowledge of co-conspirators' forum acts (EIG 246 F. Supp. 3d at 91; Cockrum; Youming Jin, L491-495).
+  - RICO conspiracy, applied to Vidino (L519): "the complaint must allege that (1) two or more people agreed to commit a [RICO] subsection (c) offense, and (2) a defendant agreed to further that endeavor." Salinas: "adopt[ed] the goal of furthering or facilitating the criminal endeavor" (L524-525).
+- Contract or policy clauses: none; this is not a contract case. The Vidino-Alp contract terms are quoted only from the complaint (¶129, L535).
+- Disposition (L564; also L39): UAE motion GRANTED (lack of subject-matter jurisdiction, FSIA). Alp defendants (Alp, Diligence, Brero, Badal, Cavin) and Besson GRANTED (lack of personal jurisdiction). Vidino GRANTED (failure to state a claim; the only count against him, Count Three). The opinion states no with- or without-prejudice designation. A separate order will issue.
+- Hedged claims:
+  - L49 disclaimer: "Nothing in this opinion is meant to suggest" that false accusations "could not cause real harm".
+  - L186 "As far as the Court can discern"; "which the Court doubts": whether plaintiffs can rely on an agent's acts.
+  - L194 "does not appear to have survived": attaches to the MINE dicta.
+  - L246 "not quite what is alleged".
+  - L252 "At most": the contractor characterization.
+  - fn11 L266 "suggest": whether the proposed meeting took place.
+  - fn13 L305 "it is not at all clear to the Court": whether a profit motive makes the UAE's sponsorship "commercial activity". Not decided.
+  - "on information and belief" allegations (L62, L314, L336).
+  - L537 "they may say something about Alp's state of mind, but they do not reveal anything about Vidino's".
+  - L516 "whatever alleged conspiracy there may have been".
+- Alternative holdings, layered (L182-414):
+  - (A) Circuit law requires the sovereign's own conduct (L188-224).
+  - (B) Even if agency could count, the agency allegations are thin and conclusory (L226-283).
+  - (C) No commercial activity or act by Alp in the United States (L285-294).
+  - (D) No direct effect: "would be unavailable even if Alp's activities as the UAE's agent could supply grounds" (L295-351).
+  - (E) Gravamen abroad: "even if the Court could find that the UAE engaged in commercial conduct" (L353-414).
+  - Personal jurisdiction over Badal under § 1965 is rejected separately (L461-475). For Besson, the conspiracy theory "fails at the outset" plus a "Moreover" knowledge ground (L481-495).
+- Issues not reached: merits of the Lanham Act, RICO and Sherman Act claims (L39); commercial character of sponsoring defamation (fn13 L305); defamation and predicate-act arguments, "Putting aside" (L516); Vidino's First Amendment objection (fn16 L520).
+- Footnotes 1-18:
+  - fn1 L42-44: briefing docket numbers.
+  - fn2 L63-64: other targets, ¶¶14, 110-11, 244-82.
+  - fn3 L66: statements about Nada's father are not alleged to be false.
+  - fn4 L85: approximately $150 million valuation.
+  - fn5 L87: ownership and citizenship of the Alp defendants.
+  - fn6 L96 and L107: suggestion of immunity [Dkt. # 75]; Minute Order Aug. 5, 2024; four nonparties.
+  - fn7 L197-201: MINE limits and legislative history.
+  - fn8 L219-220: Atlantica Holdings.
+  - fn9 L228-238: plaintiffs' Wye Oak quotation "misleading".
+  - fn10 L253-254: claimed agency concessions "misstates defendants' positions".
+  - fn11 L266: ¶197 meetings.
+  - fn12 L275-276: MINE direct-effects finding.
+  - fn13 L299-305: Weltover nature versus purpose; issue left undecided.
+  - fn14 L402: 49 paragraphs before the U.S. subsidiary existed.
+  - fn15 L484-485: Besson's Swiss citizenship.
+  - fn16 L520: First Amendment objection not reached.
+  - fn17 L553-555: New Yorker context ("it wasn't clear cut whether it was the Emiratis, the Saudis, the Israelis, or some private entity in the States"). This qualifies the body claim at L542-544 that the quote was "lifted ... out of context".
+  - fn18 L557-558: text of ¶¶321-322.
+- Rounded prose beside exact figures: none.
+- Notes (layout): fn9 runs from L228 to L238 at the bottom of slip p.17. fn13 continues from L299 to L305 at the bottom of slip p.25 (the body resumes at L310). Detached footnote markers appear at L38, L95, L251, L393, L518 and L548.
+- Operative definitions, rules and scope exceptions: FSIA definitions (§ 1603(d), (e)); Restatement (Third) of Agency §§ 1.01, 2.01 (L245, L252).
+- Amendments or contradictions (neutral):
+  - Original versus amended complaint: defendants dropped (L92-93; fn6).
+  - Vidino descriptors vary (see Entities).
+  - New Yorker statement year: "in 2024" (L542) versus article dated Mar. 27, 2023 (fn17 L555).
+  - fn13 L305 says "and that the gravamen of the claims is in the United States". Heading E (L353) says "The gravamen of plaintiffs’ suit concerns conduct and effects outside of the United States". L367, L395 and L400 also place the gravamen abroad.
+  - Peters v. Qadhafi is cited as "2024 WL 4603907 ... (D.D.C. Aug. 28, 2004)" (L502).
+  - Quoted ¶322 reads "18 U.S.C. § 962(c)" (fn18 L557).
+  - "Alps defendants" typo (L454).
+  - The court calls the plaintiffs' Wye Oak characterization contrary to the opinion (fn9).
+- Coverage: FULL. Read ledger: L1-80, L80-159, L159-233, L233-302, L302-366, L366-425, L425-474, L475-524, L524-569.
+
+## D03 - 4chan Community Support LLC and Lolcow LLC v. Ofcom (D.D.C. memorandum opinion)
+
+- Source: docs/uscourts_dcd_1_25_cv_02880_0.txt | task page Doc 7 | 24 slip pages ("Case 1:25-cv-02880-RC Document 15 Filed 09/15/26 Page N of 24"); "Re Document No.: 8" (L13)
+- Written or submitted by: U.S. District Court for the District of Columbia, Rudolph Contreras, United States District Judge (L252-253). Ofcom's General Counsel Martin Ralph Ballantyne is a declarant (L39), not an author.
+- Type, date, edition: "MEMORANDUM OPINION GRANTING DEFENDANT’S MOTION TO DISMISS FOR LACK OF JURISDICTION" (L23-24); Dated September 15, 2026 (L252); order issued "separately and contemporaneously" (L250).
+- Period covered: March 2025 to Dec. 1, 2025 events; suit filed Aug. 27, 2025.
+- Entities and aliases:
+  - "4chan" = 4chan Community Support LLC, which "runs an Internet imageboard website" (L26, L30).
+  - "Lolcow" = Lolcow LLC, which administers Kiwi Farms (L26, L30).
+  - "Ofcom" = The UK Office of Communications (L16-17, L26), a statutory corporation (L37). The UK Government is distinct ("separate legal personality", L39, L160). The Secretary of State, Department of Science, Innovation, and Technology appoints and removes members (L37).
+  - Global Alliance for Responsible Media (L204). Inter-American Development Bank (Rosenkrantz, L197-206).
+  - The U.S. Federal Communications Commission appears only in citations (L182-185).
+- Tables: none.
+- Lists:
+  - FSIA issues (4): (1) foreign state; (2) commercial-activity exception; (3) jurisdictional discovery; (4) whether applying the FSIA would be untenable (L118, L127). Analysis Parts A-D at L139, L170, L208, L226.
+  - Ofcom powers "particularly relevant" (2): investigatory powers (L49-54) and enforcement tools (L55-59).
+  - Enforcement tools (2): provisional notices of contravention; confirmation decisions (L55).
+  - Ofcom grounds: FSIA immunity, Lolcow standing (Def.'s Mot. at 10, 26-27), forum non conveniens and international comity (Id. at 23, 25) (L97). Only the first is addressed.
+  - Plaintiffs' theories (L95): First, Fourth and Fifth Amendments; Section 230 of the Communications Decency Act; due process; U.S. public policy; improper service (Compl. ¶¶117-131, 132-47). Fn4 says "listing four counts" (¶¶117-47) (L243).
+  - Duties under investigation (4), Compl. ¶79 (L179): "illegal content risk assessment duties", "safety duties about illegal content", "record keeping and review duties", "Section 102(8) duties about information notices".
+  - Plaintiffs' argument fails for two flaws (L189-195); the purpose argument has two problems (L228-235).
+- Forecasts, guidance, deadlines, effective dates: none. Statutory penalty levels are under Amounts.
+- Dates (all): March 2025 Ofcom letter to Lolcow (L80); April 14, 2025 information notice to 4chan (L66); late April 2025 Ofcom decision not to issue a notice to Lolcow (L87); June 2025 formal investigation of 4chan (L70); July 2025 Lolcow maintenance and a later-July Ofcom letter (L89); Aug. 12, 2025 "Provisional Decision" / provisional notice of contravention (L73); Aug. 27, 2025 suit filed, ECF No. 1 (L78; "In August 2025" L95); October 2025 confirmation decision to 4chan (L78); Dec. 1, 2025 Ofcom's status statement on Lolcow (L90-92); Sept. 15, 2026 decision (L252). Lolcow's "243 years ago" (L85).
+- Amounts and figures:
+  - Statute: "Fines can reach up to the greater of £18 million or 10% of the recipient’s qualifying worldwide revenue." (Online Safety Act sch. 13 ¶4(1), L59); "daily rate penalty" (§ 137, L58).
+  - Notice as alleged: "may result in a fine of £18 million or 10% of 4chan’s worldwide turnover, arrest, and/or ‘imprisonment for a term of up to two years, or a fine (or both).’" (Compl. ¶74, L66).
+  - L179 paraphrase: "a fine of £18 million and imprisonment" (Compl. ¶¶73-74).
+  - Provisional notice: "a fine of £20,000 . . . as well as daily fines of £100 . . . for up to a maximum of sixty days." (Compl. ¶89; Ballantyne ¶48; L73-76).
+  - 4chan: "over 20 million unique visitors per month" and "over 7% of 4chan’s user base [was] UK users", "the second largest percentage behind the United States" (Ballantyne ¶¶40-41, L64-65).
+  - Illustration: "$50" (L194).
+- Legal tests and frameworks (verbatim; applied or mentioned):
+  - Burden: "The party invoking federal sovereign immunity under the FSIA bears the burden of establishing the defense." (EIG 894 F.3d at 345, L100), including showing "that the plaintiff’s asserted statutory exception to immunity does not apply" (Zhongshan Fucheng). Contrast: "But cf. Wye Oak ... (suggesting that the plaintiff bears a burden of production ...)" (L105).
+  - Facial versus factual challenge (Phoenix Consulting, L107-111), applied: "If the defendant challenges only the legal sufficiency of the plaintiff’s jurisdictional allegations, then the district court should take the plaintiff’s factual allegations as true ..."
+  - FSIA "the sole basis for obtaining jurisdiction over a foreign state in our courts" (CC/Devas quoting Amerada Hess, 488 U.S. at 434, L116); 28 U.S.C. § 1604.
+  - Categorical approach, applied: "whether the core functions of the foreign entity are predominantly governmental or commercial." (Transaero, L129; "core functions" at 153, L147, L162).
+  - Commercial-activity exception, applied: action "must be ‘based upon’ some ‘commercial activity’ by [the defendant] that had ‘substantial contact’ with the United States." (Nelson, 507 U.S. at 356, L130). Gravamen (Sachs, 577 U.S. at 35, L170, L224). § 1603(d) (L170). Weltover's regulator versus "private player" (L177). Nelson, "peculiarly sovereign in nature" (L189).
+  - Forfeiture of an undeveloped argument, applied: Al-Tamimi; Schneider v. Kissinger; Bronner, "Arguments in favor of subject matter jurisdiction can be waived by inattention or deliberate choice." (L140-143).
+  - Jurisdictional discovery (Phoenix Consulting, L214-216), applied: denied as futile.
+- Statutory scheme quoted (UK; not a contract):
+  - Office of Communications Act 2002, c. 11, § 1(1), (3), (6), (9), sch. 2(4), sch. 22-23 (L37). Text: not "treated for any purposes as a body exercising functions on behalf of the Crown".
+  - Communications Act 2003, c. 11, §§ 2-3, § 3(1) "principal duty" (L41-44, L148).
+  - Online Safety Act 2023, c. 50: §§ 1(1)-(2), 41, 84-88, 85 (L45-47); §§ 100(1), 102, 105(1), 109(1), 113(1) (L50-54); §§ 130(1), 131, 132(3), (5), 133(8)-(9), 137, 138(1), (4), 168, sch. 13 ¶4(1) (L55-59). Section 102(8) is the provision 4chan was found to have violated (L73).
+  - U.S. statutes: SPEECH Act 28 U.S.C. §§ 4101(1), 4102(a), 4104(a)(1) (L240, fn4 L243); 28 U.S.C. §§ 1602-1611, 1603(a), (d), (e), 1604, 1605(a)(2).
+- Disposition: Ofcom's motion to dismiss granted; complaint dismissed for lack of subject-matter jurisdiction (L26, L250). Jurisdictional discovery declined (L214). The opinion states no prejudice designation.
+- Hedged claims:
+  - L80 "likely to fall within the scope": Ofcom's determination about Lolcow.
+  - L90 "in all probability": Lolcow counsel on restoring the block.
+  - fn1 L123 "appears to fall on the side of resolving relevant factual disputes": the weight of authority.
+  - L142 "may not have intended to contest".
+  - L166 "It is perhaps possible that a private entity ... would not qualify".
+  - fn2 L171 "seem relevant".
+  - L176 "may be unclear": the contours of commercial activity.
+  - L181 "perhaps prosecuting".
+  - L189 "would presumably violate".
+  - L233 "no doubt motivated in part by a desire for reciprocity".
+  - L234-235 "that likely means enforcing any judgment in the United States".
+  - L240 "may find a receptive audience" and "not necessarily required".
+  - fn4 L242-243 "appear to recognize" and "do not appear to assert".
+- Alternative holdings and issues not reached:
+  - Foreign-state status: forfeited (L140-143) "In any event" correct on the merits (L145-168).
+  - Commercial activity: two flaws, the second "even assuming" (L189-195).
+  - Discovery: futile, "At any rate" (L217-224).
+  - Not reached: Lolcow standing, forum non conveniens and comity (L97; fn3 L218 notes forum non conveniens would precede discovery); whether Ofcom's conduct would be unlawful from a U.S. regulator (L189); "The Court expresses no view on whether Ofcom has violated the rights of any American citizens" (L228); a SPEECH Act § 4104(a)(1) claim (fn4).
+- Footnotes 1-4:
+  - fn1 L119-123: D.C. Circuit tension on Rule 12(b)(1) factual disputes; need not resolve.
+  - fn2 L163, continued L171: Transaero's state-versus-instrumentality frame used "a fortiori".
+  - fn3 L218: forum non conveniens and other non-merits grounds would have to precede jurisdictional discovery.
+  - fn4 L242-244: SPEECH Act § 4104(a)(1); complaint counts; Exxon v. Cimex (S. Ct. 2026) on Helms-Burton.
+- Rounded prose beside exact figures: the fine is stated three ways (statute L59; complaint's notice wording L66; L179 paraphrase); see Amounts.
+- Notes (layout): fn2 is split at the page break (L163 to L171). Section B's heading runs into the body text on L170.
+- Operative definitions, rules and scope exceptions: § 1603(a) "foreign state" includes political subdivisions and agencies or instrumentalities (L129). SPEECH Act defamation definition, § 4101(1) (L240). Restatement (Third) of Foreign Relations Law § 483 (L241).
+- Amendments or contradictions (neutral):
+  - Lolcow notices: Compl. ¶¶107, 109 as summarized at L179 ("Ofcom issued analogous information notices against Lolcow as well") versus Ofcom's account (L87: decided not to issue; L90-92: as of Dec. 1, 2025, no information notices, investigations or enforcement against Lolcow). The court notes the "slightly different accounts" (L62, L89) and does not resolve them (fn1 L123).
+  - OSA § 168 described as judicial review by British courts (L59) and as permitting appeal of a confirmation decision (L234).
+  - EIG cited "894 F.3d 339, 345" (L100) and "984 F.3d at 345" (L108-109).
+  - "Defendants move" (L97) for a single defendant.
+- Coverage: FULL. Read ledger: L1-70, L70-129, L130-179, L180-254.
+
+## D04 - Bagga v. Royal Caribbean Cruises Ltd. (S.D. Fla. order)
+
+- Source: docs/uscourts_flsd_1_26_cv_20364_0.txt | task page Doc 5 | 12 slip pages ("Case 1:26-cv-20364-RKA Document 30 Entered on FLSD Docket 09/14/2026 Page N of 12"); caption "CASE NO. 26-cv-20364-ALTMAN" (L5)
+- Written or submitted by: U.S. District Court, Southern District of Florida, Roy K. Altman, United States District Judge (L132-133). English solicitor Milena Iyer is a declarant for RCCL (L72), not an author.
+- Type, date, edition: "ORDER GRANTING MOTION TO DISMISS" (L14); "DONE AND ORDERED ... on September 14, 2026" (L129).
+- Period covered: incident January 22, 2025 (L18) to order Sept. 14, 2026.
+- Entities and aliases:
+  - Plaintiff Rahul Bagga, "a resident and citizen of Canada" (L18).
+  - "RCCL" = Royal Caribbean Cruises Ltd. (L15).
+  - Vessel "ICON" (L18), also "Icon of the Seas", "a Bahamas-flagged vessel owned by a Liberian entity" (L106).
+  - "Crazy Quest Adult Scavenger Hunt" in the "Absolute Zero Ice Rink on Deck 3" (L18).
+  - "Ticket Contract" = "Canada Cruise Ticket Contract" (L35).
+  - "Courts of England and Wales" (L15, L45).
+  - Athens Convention (L80).
+- Tables: none.
+- Lists:
+  - Claims (3): negligent maintenance, negligent failure to warn, negligent design (L15).
+  - Typical forum non conveniens test (3) (L25).
+  - Forum-selection-clause modifications (3) (L27-29).
+  - Ways to defeat a forum-selection clause (4); Bagga invokes only (2) and (3) (L58; fn2 L63).
+  - Modified forum non conveniens factors (3) (L96).
+  - Public-interest factors (5) (L100), applied First-Fifth (L107-112).
+  - Two falls (L22). Injuries: "torn anterior cruciate ligament and meniscus" (L22).
+- Forecasts, guidance, deadlines, effective dates: "the Ticket Contract’s one-year suit-filing deadline". RCCL agreed to waive any statute-of-limitations defense from it "provided Plaintiff refiles his action in the Courts of England and Wales within six months of any order of dismissal" (Reply at 7-8, L113).
+- Dates: Jan. 22, 2025 incident (L18); Sept. 14, 2026 order (L129). Cited cases' dates only otherwise.
+- Amounts and figures: Lebedinsky plaintiff claimed "$750,000 in damages" but "would be limited to a recovery of $64,000 under the Athens Convention" (L89). Bagga gives no damages figure (L87).
+- Legal tests and frameworks (verbatim; applied or mentioned):
+  - Forum non conveniens definition (Esfeld, L25).
+  - Typical test, mentioned (Leon v. Millon Air, L25): "(1) an adequate alternative forum is available, (2) the public and private interest factors weigh in favor of dismissal, and (3) the plaintiff can reinstate his suit in the alternative forum without undue inconvenience or prejudice."
+  - Forum-selection-clause modifications (Usme, L27-29), applied: "First, the plaintiff’s choice of forum merits no weight. ... Second, a court should not consider arguments about the parties’ private interests and must deem the private-interest factors to weigh entirely in favor of the preselected forum. Third, a court in the contractually selected venue should not apply the law of the transferor venue to which the parties waived their right, and this in turn may affect the publicinterest considerations." A valid clause is "essentially dispositive" (Usme citing Atl. Marine, L30-31; L116). "near-determinative weight" (GDG Acquisitions, L31).
+  - Exhibits control over contrary allegations (Hoefling, L33; fn1 L52), applied.
+  - Forum-selection clause enforceability (Turner quoting Rucker, L58), applied: "presumptively valid and enforceable unless the plaintiff makes a strong showing that enforcement would be unfair or unreasonable under the circumstances." Exceptions: "(1) the clause was induced by fraud or overreaching; (2) the plaintiff would be deprived of its day in court because of inconvenience or unfairness; (3) the chosen law would deprive the plaintiff of a remedy; or (4) enforcement of the clause would contravene public policy." Only (2) and (3) are applied.
+  - Inconvenience standard (Turner, L62): "heavy burden of proof"; "so gravely difficult and inconvenient that he will for all practical purposes be deprived of his day in court."
+  - Remedy standard (Lebedinsky, L85): "Only remedies that are so inadequate that enforcement would be fundamentally unfair render a chosen forum inadequate."
+  - Modified forum non conveniens (Boyd, L96), applied: "(1) whether an adequate alternative forum is available, (2) whether the public factors weigh in favor of dismissal, and (3) whether the plaintiff can reinstate his suit in the alternative forum without undue inconvenience or prejudice." "All three of these modified factors favor RCCL."
+  - Public-interest factors (Boyd citing Piper, 454 U.S. at 241 n.6, L100), applied in order at L107-112: "(1) the administrative difficulties flowing from court congestion; (2) the local interest in having localized controversies decided at home; (3) the interest in having the trial . . . in a forum that is at home with the law that must govern the action; (4) the avoidance of unnecessary problems in conflict of laws, or in the application of foreign law; and (5) the unfairness of burdening citizens in an unrelated forum with jury duty."
+    - First: congestion ("unlikely" Bagga would face more in England).
+    - Second: local interest "at best neutral".
+    - Third: English law.
+    - Fourth: "the Courts of England and Wales have a strong public interest in hearing cases the parties have agreed to litigate in those courts".
+    - Fifth: no jury in English civil trials (Iyer Decl. ¶18).
+  - Burden on the plaintiff (Pappas, L103, L116).
+- Contract clauses quoted verbatim:
+  - Forum-selection clause (Ticket Contract [ECF No. 13-2] at 4, L37-46): "ALL DISPUTES, CLAIMS OR OTHER MATTER OF ANY DESCRIPTION ARISING OUT OF, IN CONNECTION WITH OR IN ANY WAY RELATED OR INCIDENT TO THIS AGREEMENT, THE CRUISE, CRUISETOUR, LAND TOUR OR TRANSPORT (INCLUDING A CLAIM FOR PERSONAL INJURY, ILLNESS OR DEATH OF A GUEST) MUST BE LITIGATED, IF AT ALL, IN AND BEFORE THE COURTS OF ENGLAND AND WALES, TO THE EXCLUSION OF ALL OTHER COURTS OR TRIBUNALS."
+  - Choice-of-law clause: described, not quoted, as designating English law (Motion at 7; Iyer Decl. ¶¶10-11, L106). The suit-filing deadline is one year (L113).
+  - The court reads the clause as valid and enforceable; Bagga did not dispute it (L50).
+- Disposition (L121-127): Motion [ECF No. 13] GRANTED. Complaint [ECF No. 1] "DISMISSED without prejudice" under forum non conveniens. Case closed; pending deadlines terminated; pending motions denied as moot. RCCL consented to remote proceedings (Reply at 5, L72) and gave the limitations waiver at L113.
+- Hedged claims:
+  - fn1 L52 "Bagga appears to concede that he was mistaken" about the forum term in his complaint.
+  - L107 "unlikely": congestion comparison. "at best neutral": local interest.
+  - L85 "might be different": recovery under the Athens Convention, as Bagga suggested.
+  - Usme L29 "may affect": public-interest considerations.
+- Alternative holdings: on inconvenience, "Even if Bagga couldn't proceed remotely, however, he’d still have failed to show ..." (L76).
+- Issues not reached: forum-selection-clause exceptions (1) fraud/overreaching and (4) public policy (fn2 L63).
+- Footnotes 1-3:
+  - fn1 L52: complaint (at 7) alleged the contract required suit "in this federal judicial district". The Ticket Contract shows England and Wales; the exhibit controls; Bagga abandoned the point. This qualifies and reverses the complaint allegation.
+  - fn2 L63: exceptions not argued.
+  - fn3 L81: Greco v. Nat'l Football League (N.D. Tex. Mar. 30, 2017), described as an "unpublished, magistrate judge’s decision from the Northern District of Texas" with "no precedential value".
+- Rounded prose beside exact figures: none.
+- Notes (layout): the clause is broken across a page footer (L37-38, L42-46).
+- Operative definitions, rules and scope exceptions: see the tests above. Bagga's response mentions "forum non conveniens" only once (Response at 2, L118).
+- Amendments or contradictions (neutral):
+  - Complaint at 7 (forum in this district) versus Ticket Contract at 4 (England and Wales), with the stated precedence rule "the exhibit controls" (fn1 L52; L33).
+  - Typical test element (2) "public and private interest factors" (L25) versus modified element (2) "public factors" (L96), explained by the second Usme modification (L27).
+  - Listed public-interest factor (4) (conflict of laws, L100) versus the court's "Fourth" point (England's interest in agreed cases, L111).
+  - Vessel named "ICON" (L18) and "Icon of the Seas" (L106).
+- Coverage: FULL. Read ledger: L1-135 in one read.
+
+## D05 - Shenzhen En De Chuang Technology Co. v. Lewis Machining and Engineering (M.D. Ga. order and consent judgment)
+
+- Source: docs/uscourts_gamd_7_25_cv_00193_0.txt | task page Doc 2 | 11 slip pages ("Case 7:25-cv-00193-LAG Document 23 Filed 09/11/26 Page N of 11")
+- Written or submitted by: U.S. District Court, Middle District of Georgia, Valdosta Division; "/s/ Leslie A. Gardner, LESLIE A. GARDNER, CHIEF JUDGE" (L171-172). The embedded "CONSENT JUDGMENT AND PERMANENT INJUNCTION" (L117-167) is text the Parties "hereby stipulate to" (L118) and the court enters (L112). Defendant's counsel Armon Shahdadi emailed the Courtroom Deputy (L45).
+- Type, date, edition: ORDER (L30) with the entered Consent Judgment; "SO ORDERED, this 11th day of September, 2026" (L169).
+- Period covered: patents issued Aug. 19, 2025 and Oct. 7, 2025; complaint Dec. 12, 2025; order Sept. 11, 2026.
+- Entities and aliases:
+  - Plaintiffs (4, L118): Shenzhen En de chuang Technology Co., Ltd. d/b/a EDCREATY; Shenzhen Zhou li chuang Technology Co., Ltd. d/b/a Downoop; Shenzhen Annaro Technology Co., Ltd. d/b/a AUKCLAX; Shenzhen Pingzhisheng E-commerce Co., Ltd. d/b/a KLBWWA. Caption "SHENZHEN EN DE CHUANG TECHNOLOGY CO., LTD., et al." (L6-8).
+  - Defendant/Counterclaimant: "LEWIS MACHINING AND ENGINEERING, INC." (caption L20-22) = "Lewis Machining & Engineering, Inc. (Lewis Machining)" (L118).
+  - Patents: '016 Patent = U.S. Patent No. 12,390,016; '419 Patent = U.S. Patent No. 12,433,419 (L34-35, L121-124).
+  - Marks: ZLUMBER, ZLUMBER LOCK, ZLUMBERLOCK, LEWIS PRODUCTS (L150-151). Copyright: U.S. Copyright Reg. No. VA 2-439-098 (L146).
+  - Platform: Amazon.com and Amazon Marketplace (L32, L54, L145, L153).
+  - Courtroom Deputy Marcia Alvarez Benavidez (L45).
+- Tables: none. Schedule 1 (product list, Doc. 19-1 at 6-14) is referenced but not reproduced in the document.
+- Lists:
+  - Plaintiffs' claims (Counts I-III, L68): declaratory judgment of noninfringement of the '016 Patent; declaratory judgment of invalidity of the '016 Patent; tortious interference with business relationships (¶9 L156; L34-35).
+  - Counterclaims (Counts I-IV): I and II are infringement of the '016 and '419 Patents (L68, ¶10 L158); III and IV are not described.
+  - Findings (4) (L80-87).
+  - Injunction prohibitions a-f (¶8, L136-153).
+  - Retaliation exhibits (4): Exhibit V Doc. 10-22, W Doc. 10-23, X Doc. 10-24, Y Doc. 10-25 (L91).
+  - Consent Judgment paragraphs 1-13 (L119-167).
+  - Conclusion orders 1-5 (L104-112).
+  - False claims barred: "Made in USA," "Patent Pending," "Original USA Patents" (L146-150).
+- Forecasts, guidance, deadlines, effective dates: injunction "Effective as of May 18, 2026" (¶8 L136). The court retains jurisdiction (L110; ¶11 L161).
+- Dates (all): Aug. 19, 2025 '016 issued (L122); Oct. 7, 2025 '419 issued (L124); Dec. 12, 2025 complaint (L34); Feb. 23, 2026 answer and counterclaims (L35); Mar. 16, 2026 counterclaim answer (L38); Mar. 27, 2026 joint motion for protective order (L38); May 4, 2026 stay granted (L39); May 18, 2026 injunction effective date (L136); May 29, 2026 joint motion filed (L39); June 29, 2026 motion to enforce (L54); July 23, 2026 at 3:47 PM counsel's email (L45); Sept. 11, 2026 order (L169).
+- Docket items: Doc. 1 complaint; Doc. 10 answer and counterclaims (¶35 accused items; ¶¶50-73 retaliation; ¶¶74-93 counterclaims); Doc. 10-1 to 10-3 license and patent exhibits; Doc. 14; Doc. 15; Doc. 17; Doc. 18; Doc. 19 joint motion and Doc. 19-1 proposed judgment; Doc. 21 motion to enforce; Doc. 22 reply.
+- Amounts and figures: no monetary figures. Each party bears its own costs and fees (¶¶9-10). Enforcement may include "recovery of reasonable attorneys’ fees and costs incurred in enforcing" (¶12 L165).
+- Legal tests and frameworks (verbatim; applied):
+  - Consent-decree approval: "District courts should approve consent decrees so long as they are not unconstitutional, unlawful, unreasonable, or contrary to public policy." (Stovall, 117 F.3d at 1240, L59, applied L91). Closer scrutiny for injunctive decrees and "a reasonable factual and legal determination based on the facts of record" (L59, City of Miami). Effect on third parties must be "neither unreasonable nor proscribed" (L59).
+  - Rule 65(d)(1): reasons, specific terms, "in reasonable detail ... the act or acts restrained or required" (L62, L98). Rule 65(d)(2) binds parties, their officers, agents, servants, employees and attorneys, and persons in active concert with actual notice (L62, L99). Applied.
+  - Trump v. CASA, "complete relief between the parties" (L62). Combs on specificity (L65). Spallone on contempt power (L65).
+  - Patent infringement statute quoted as "35 U.S.C. § 217" (a)-(c) (L68-75). Elsewhere the document cites § 271 (L48, L81-82, L87, L126).
+- Consent Judgment clauses (verbatim excerpts):
+  - ¶1 subject-matter jurisdiction under 28 U.S.C. §§ 1331, 1338(a), 1367 (L119).
+  - ¶¶2-3 exclusive licensee "with the right to sue for infringement and collect damages" (L121-124).
+  - ¶4 "valid and enforceable" (L125).
+  - ¶5 consent acknowledgment (L126).
+  - ¶¶6-7 "IT IS HEREBY ADJUDGED" infringement of each patent (L128-130).
+  - ¶8 permanently enjoined persons: "Plaintiffs and their respective officers, agents, servants, employees, attorneys, affiliates, subsidiaries, successors, assigns, and all persons acting in active concert or participation with any of them, and all entities owned by or under common ownership with them" (L136).
+  - ¶9 claims DISMISSED WITH PREJUDICE (L156).
+  - ¶10 Counterclaim Counts I and II "resolved by this Consent Judgment"; "All remaining counterclaims, including Counterclaim Counts III and IV, are hereby DISMISSED WITH PREJUDICE" (L158).
+  - ¶12: Plaintiffs "waive any defense of lack of personal jurisdiction, improper venue, or forum non conveniens" (L165).
+  - ¶13 binding on the listed persons "who have actual notice" (L167).
+  - Counsel's correction to Schedule 1 terminology (L41-45): "The term ‘Accused Products’ also includes any products made, used, sold, offered for sale, or imported by Plaintiffs that are substantially similar to or colorable imitations of the products identified above, including but not limited to products sold under different platforms, ASINs, brand names, or product names that embody the same or substantially similar bed sheet retention system design and functionality." The terms were "intended by the Parties to apply specifically to Plaintiffs in this case," not other unrepresented third parties.
+- Disposition (L104-112):
+  1. Joint Motion (Doc. 19) GRANTED.
+  2. Pending motions DENIED as moot; deadlines terminated; case closed.
+  3. Final judgment for Defendant and against Plaintiffs.
+  4. Jurisdiction retained.
+  5. Consent Judgment and Permanent Injunction entered with Schedule 1 attached.
+  - Doc. 21 (motion to enforce) receives no separate ruling beyond item 2.
+- Hedged claims: none of substance. Defendant "avers" it cannot enforce on Amazon without a ruling (L32).
+- Alternative holdings and issues not reached: none stated.
+- Footnotes: fn1 L89 (marker) and L92: "(See Doc. 19-1 ¶ 5)", attached to Finding 4.
+- Rounded prose beside exact figures: none.
+- Notes (layout and visual):
+  - The "underlined correction" (L41) cannot be seen in plain text, so which words are underlined is unresolved.
+  - Schedule 1 is absent from this document (the source ends at slip p.11 with the signature, L171-174). This is a source gap, not an extraction gap.
+- Operative definitions, rules and scope exceptions: "Accused Products" (¶5 L126 and the correction L43); enjoined-persons list (¶8) versus bound-persons list (¶13).
+- Amendments or contradictions (neutral):
+  - "35 U.S.C. § 217" (L68) versus § 271 (L48 and elsewhere).
+  - "Stovall, 117 F.3d at 1142" (L68) versus 117 F.3d 1238, 1240, 1242 (L59, L91).
+  - Order L68 says Counterclaim Counts I and II "are validated"; ¶10 L158 says "resolved by this Consent Judgment".
+  - ¶8 enjoined list includes "all entities owned by or under common ownership with them"; ¶13 binding list omits it and adds "who have actual notice".
+  - Injunction effective date May 18, 2026 precedes the May 29, 2026 motion and the Sept. 11, 2026 order. The document gives no explanation.
+  - L31 "against Plaintiff" (singular) and L53 "all claims by Plaintiff" versus four Plaintiffs.
+  - Caption "Lewis Machining and Engineering, Inc." versus ¶ text "Lewis Machining & Engineering, Inc.".
+  - Counsel's email correction (July 23, 2026) amends the Schedule 1 terminology of the filed proposal (Doc. 19-1 at 14). Precedence: the court reviewed the "filed Proposed Consent Judgment" with the correction offered (L41-45).
+- Coverage: FULL. Read ledger: L1-174 in one read.
+
+## D06 - Sethmar Transportation v. DUAL North America (D. Kan. memorandum and order)
+
+- Source: docs/uscourts_ksd_2_26_cv_02326_0.txt | task page Doc 4 | 12 slip pages ("Case 2:26-cv-02326-JAR-ADM Document 21 Filed 09/14/26 Page N of 12")
+- Written or submitted by: U.S. District Court for the District of Kansas, "S/ Julie A. Robinson, JULIE A. ROBINSON, UNITED STATES DISTRICT JUDGE" (L265-267).
+- Type, date, edition: MEMORANDUM AND ORDER (L13); "Dated: September 11, 2026" (L264); every footer reads "Filed 09/14/26".
+- Period covered: Policy period "February 23, 2025 to February 23, 2026" (L20-26); purchase February 2025 (L20); shipments December 2025 (L32).
+- Entities and aliases:
+  - Plaintiff Sethmar Transportation, LLC, "a full-service logistics solutions provider" with an office at 6330 Sprint Parkway, Suite 100, Overland Park, KS 66211 (L20; fn3 L38).
+  - Defendants (3): DUAL North America, Inc. ("DUAL"), Chaucer Syndicate 1084 of Lloyd's ("Chaucer"), Houston Casualty Company ("Houston") (L14). The Policy text calls the insurer "DUAL Commercial" (L201, L231-235, L268). DUAL's principal place of business is San Diego, California (L132).
+  - "carrier defendants" = Houston and Chaucer (L211).
+  - DEO Logistics, Inc. is the motor carrier (L32). Pequod Associates, Inc. is DUAL's third-party administrator (L35).
+- Tables: none.
+- Lists:
+  - Motions (3), all denied: Motion to Transfer Venue under 28 U.S.C. § 1404(a) (Doc. 13); DUAL's Rule 12(b)(6) Motion to Dismiss (Doc. 10); DUAL's Request for Hearing (Doc. 19) (L14, L260).
+  - Claims (2): declaratory judgment; breach of contract (L14, L56).
+  - Shipments (2) (L32).
+  - Section 32 forums (2): S.D.N.Y. or "the district in which this policy was issued" (L65, L162).
+  - Taggert's two places of issuance: "delivered and accepted" or "prepared and signed" (L110, L135).
+  - Breach-of-contract elements: federal maritime 3 (L208); New York 4 and Kansas 5 (fn51 L223).
+- Forecasts, guidance, deadlines, effective dates: policy period above.
+- Dates (all): February 2025 purchase; Feb. 23, 2025 to Feb. 23, 2026 policy period; December 2025 shipments; Sept. 11, 2026 order dated; Sept. 14, 2026 filed.
+- Amounts and figures:
+  - Section 46 Contingent Motor Truck Cargo "policy limits of $300,000 per truck" (L30; fn55 L245: "300,000 Contingent Motor Truck Cargo per truck").
+  - Fraud and Deceit Extension "$50,000 per occurrence sublimit" (L30, L35).
+  - Cargo "valued at $245,721.72 (‘the Losses’)" (L35).
+- Legal tests and frameworks (verbatim; applied or mentioned):
+  - § 1404(a) (fn12 L73): "For the convenience of parties and witnesses, in the interest of justice, a district court may transfer any civil action to any other district or division where it might have been brought or to any district or division to which all parties have consented."
+  - Atl. Marine (fn12 L74): "[Section] 1406(a) and Rule 12(b)(3) are not proper mechanisms to enforce a forum-selection clause and . . . § 1404(a) and the forum non conveniens doctrine provide appropriate enforcement mechanisms." With a mandatory clause, "the plaintiff’s choice of forum merits no weight" and public-interest factors "will rarely defeat a transfer motion, [and] the practical result is that forum-selection clauses should control except in unusual cases." (L80). Mentioned; the transfer is denied on contract construction.
+  - Kansas choice-of-law rule (diversity) (L86, fn17-18), applied.
+  - New York interpretation rules, applied (L88-L110): "[i]nsurance policies are interpreted according to general rules of contract interpretation"; "read in light of common speech and the reasonable expectations of a businessperson"; "[T]he Court’s analysis properly starts with the four corners of the [p]olicy"; ambiguity is "a question of law"; "The test for ambiguity is whether the provision is ‘susceptible of two reasonable interpretations.’"; plain and ordinary meaning; "ambiguities in an insurance policy must be construed against the insurer in favor of the insured." The exception for "a contest between two insurance companies" does not apply (L162).
+  - Meaning of "issued": Taggert, "is delivered and accepted, whereby it comes into full effect and operation as a binding mutual obligation, or when it is prepared and signed, as distinguished from its delivery to the insured" (L110). Rosner, "[t]o send out or distribute officially" (L131). Dictionary, "[t]he act of circulating, distributing, or publishing" (L131). Applied, and found ambiguous (L133).
+  - Rule 12(b)(6) standard (Twombly, Ridge at Red Hawk, Iqbal, Kan. Penn Gaming, L178-187), applied.
+  - Federal maritime common law breach elements, applied (L208): "[1] the existence of a contract, [2] material breach, and [3] damages."
+  - K.S.A. § 40-239 "agent" definition, offered by DUAL, held inapplicable (fn53 L226).
+- Policy clauses quoted verbatim:
+  - Section 32 forum-selection clause (Doc. 1-1 at 18, L65): "Any suit, action or proceeding arising out of or based upon this policy shall be instituted in the United States District Court for the Southern District of New York or the United States District Court in the district in which this policy was issued. Each party to this contract submits to the exclusive jurisdiction of such courts in any suit, action or proceeding and waives any objection to venue of any suit, action or proceeding in the said courts." The parties agree it is "an enforceable mandatory forum-selection clause" (L81). The court finds "issued" ambiguous and construes it for the insured (L162, L173).
+  - Choice-of-law provision (Doc. 1-1 at 18, fn47 L201), placed by the court in Section 32 (L191): "This contract of marine insurance and the rights and obligations of DUAL Commercial and the Insured hereunder shall be governed and construed in accordance with federal maritime common law of the United States. In the absence of controlling federal maritime common law . . . , the law of the state of New York shall apply, irrespective of any principles of choice of law."
+  - Section 5 POLICY LIMITS (Doc. 1-1 at 4, L231-237): "Unless otherwise agreed DUAL Commercial shall not be liable under this policy for more than: “As Per Declarations Page” per any one conveyance, connecting conveyance, craft or at any place at any time. If the total value at risk exceeds the applicable limit of liability provided by this policy, the Insured shall nevertheless report to DUAL Commercial the full amount at risk and shall pay full premium thereon. The acceptance by DUAL Commercial of such reports and premium shall not alter or increase the limits of DUAL Commercial’s liability, but DUAL Commercial shall be liable for the full amount of loss up to but not exceeding the applicable limit of liability. If a claim arises from more than one risk, the limits will be applied to the highest limit per risk, unless an aggregate applies, the overall limit will be a combined single limit." The court reads it as making DUAL liable (L238).
+  - Further Policy quotes at 18, 26 and 27 (fn58 L268). The Policy mentions the carrier defendants once (fn57; Doc. 1-1 at 1).
+  - Policy "issued in consideration of Annual Deposit Premium[s]" (L26).
+- Disposition (L260): Motion to Change Venue (Doc. 13), DUAL's Motion to Dismiss (Doc. 10) and DUAL's Motion for Hearing (Doc. 19) all denied. The hearing was denied because it "would not materially assist" (L176).
+- Hedged claims:
+  - L238 "This would include the Losses under Section 46 if Plaintiff prevails on the merits of its suit": conditional, and the merits are not decided.
+  - L110 "have not expressly resolved"; L135 "not conclusive"; L158 "it is unclear why"; L173 "could reasonably be interpreted".
+  - L187 standard: may not dismiss because "it appears unlikely the allegations can be proven".
+- Issues not reached: whether the Losses fall under Section 46 or the Fraud and Deceit Extension (L35, L56, L238); whether DUAL took part in claims handling, since facts are not weighed at this stage (fn56 L247).
+- Footnotes 1-58 (mostly citations):
+  - fn1 L21 Fed. R. Civ. P. 10(c). fn2 L36. fn3-4 L38-39 (merged). fn5 L41. fn6 L43. fn7 L45-46. fn8 L48-49. fn9 L51-52. fn10 L69.
+  - fn11 L71 (emphasis added). fn12 L73-74. fn13 L76. fn14 L89. fn15 L91. fn16 L93. fn17 L95. fn18 L96. fn19 L98. fn20 L100. fn21 L101-102.
+  - fn22 L114. fn23 L116. fn24 L118. fn25 L120. fn26 L122. fn27 L124 (N.Y. Ins. Law § 3420). fn28 L126 (emphasis added). fn29 L145-146 (Black's 7th ed. 1999). fn30 L148. fn31 L149. fn32 L151. fn33 L153.
+  - fn34 L155, continued at the end of L162: Defendants' California-acceptance argument (Doc. 20 at 2-3) rejected. "DUAL’s signature alone cannot bind Plaintiff"; acceptance is shown by paying premiums from Overland Park.
+  - fn35 L163: Rosner "as of". fn36 L163-164. fn37 L166 (Robles). fn38 L168.
+  - fn39-44 L179-195: pleading standard; fn39 cites 5C Wright & Miller § 1216 (3d ed. 2004).
+  - fn45 L197: parties applied Kansas law (Doc. 11 at 2; Doc. 17 at 2). fn46 L199. fn47 L201: choice-of-law text. fn48 L203-204: a court may analyze choice of law sua sponte.
+  - fn49 L219-220. fn50 L221-222. fn51 L223: New York 4 versus Kansas 5 elements. fn52 L224. fn53 L226: K.S.A. § 40-239 inapplicable. fn54 L243 (emphasis added). fn55 L245. fn56 L247-248. fn57 L250. fn58 L268.
+- Rounded prose beside exact figures: none; the Losses figure is exact ($245,721.72).
+- Notes (layout):
+  - fn34's continuation is spliced into the body paragraph at L162 ("If Defendants intended for Section 32 to prior promise of performance, ..."). The body sentence resumes at L171 ("permit suits only in their two preferred districts").
+  - fn3 and fn4 are merged on L38 (missing closing quote and parenthesis).
+  - Many footnote markers sit on separate lines (L19, L28, L58, L68, L82, L88, L109, L112, L134, L137, L140, L143, L160, L190, L210, L213, L239, L241, L256).
+  - "Emphasis added" (fn11, fn28, fn54) is not visible.
+- Operative definitions, rules and scope exceptions: "the Policy" (L26); "Section 46" (L30); "the Losses" (L35); "issued" is undefined in the Policy (L110).
+- Amendments or contradictions (neutral):
+  - Governing law is stated three ways. L86: "The parties agree that New York law governs this contract dispute under the choice-of-law provision in the Policy" (used to construe Section 32). L188 and fn45: both parties assert Kansas substantive law applies to the breach claim. L191 and fn47: the court applies federal maritime common law, with New York supplementing, per the Policy. Fn53: the Policy "is not governed by Kansas law".
+  - Breach elements: 3 under maritime law, 4 under New York, 5 under Kansas. The court says they "mirror" one another (L211).
+  - Motion names: "Motion to Transfer Venue" (L14) versus "Motion to Change Venue" (L260); "Request for Hearing" (L14) versus "Motion for Hearing" (L260).
+  - Dated Sept. 11, 2026 (L264) versus filed 09/14/26 (footers).
+  - Rosner: "754 N.E.2d 760, 764" (fn29) versus "754 N.E.2d at 480" (fn35).
+  - Defendants' position (signature block in San Diego) versus the court's finding (delivered and accepted in Overland Park) (L132, L141; fn34).
+- Coverage: FULL. Read ledger: L1-90, L90-184, L185-269.
+
+## D07 - Advanced Technology Products v. Oriental Export Corp. (S.D. Ohio opinion and order)
+
+- Source: docs/uscourts_ohsd_2_25_cv_01239_1.txt | task page Doc 1 | 44 slip pages ("Case: 2:25-cv-01239-SDM-CMV Doc #: 58 Filed: 09/11/26 Page: N of 44 PAGEID #: <pageID>")
+- Written or submitted by: U.S. District Court, Southern District of Ohio, Eastern Division; "/s/ Sarah D. Morrison, SARAH D. MORRISON, CHIEF JUDGE" (L459-460). The caption also lists Magistrate Judge Chelsey M. Vascura (L21-23). Declarants (not authors): Duane Campbell for ATP; Shudra, Mendes and Ram for the defendants; Chilumuri for ATP.
+- Type, date, edition: OPINION AND ORDER (L24); filed 09/11/26. There is no separate date line.
+- Period covered: business dealings from 2017 and contract from 2019 (L43, L138); defects reported September 2024; suit filed October 2025; Indian dismissal early July 2026.
+- Entities and aliases:
+  - "ATP" = Advanced Technology Products, Inc., an Ohio company with its principal place of business in Milford Center, Ohio (L41, L230).
+  - "OEC India" = Oriental Export Corporation, Mumbai, India (L25, L43).
+  - "OEC USA" = OEC USA, Inc., "a Delaware corporation with operations in New Jersey" and OEC India's "wholly owned subsidiary" (L184, L190).
+  - The complaint uses "OEC" collectively, which the court calls group pleading (fn5).
+  - People: Mahesh Khedekar of OEC India (L66, L138); Duane Campbell, ATP Senior Vice President of Sales and Marketing (L138).
+  - Bodies: NHTSA (L69); SAE International; FMVSS (L80); SAE J844; 49 C.F.R. § 571.106; FMVSS 106 (L391, L398).
+  - Forums: civil court in Mumbai; Indian High Court (L71, L237, L252).
+- Tables: none.
+- Lists:
+  - Claims (9) (L80-81):
+    - Counts I and II: breach of contract (Delaware and Ohio).
+    - Counts III and IV: express warranty (Delaware and Ohio).
+    - Counts V and VI: implied warranty of merchantability (Delaware and Ohio).
+    - Counts VII and VIII: implied warranty of fitness for a particular purpose (Delaware and Ohio).
+    - Count IX: fraud in the inducement.
+    - The complaint's own numbering repeats "Count IV" and "Count V"; the court renumbers (fn4 L85).
+  - Order Confirmations: ATP alleges seven contain the Terms and Conditions, but only six are attached (fn2 L47). Six PAGEIDs are listed (22, 25, 28, 31, 37, 40; L56). "five Order Confirmations reflecting an Ohio shipping address" (L146).
+  - Three courses for Rule 12(b)(2) (L97-98); Ohio long-arm "nine bases" (L109); Southern Machine three prongs (L114-115); forum non conveniens three steps (L217-223); public-interest factors (5) (L246); private-interest factors (4) (L263).
+  - Elements: Ohio breach of contract 4 (L353); Ohio UCC warranty 4 (L356-357); fitness for purpose 3 (L396); fraudulent inducement 6 (L424-425).
+  - Section 11 is "a paragraph composed of seven sentences" (L410).
+- Forecasts, guidance, deadlines, effective dates: none.
+- Dates (all): 2017 Khedekar's first contact (L138); March 2019 Ohio visit and March 2019 email (L139, L160); 2019 contract (L43); first shipment "a few months later" (L142); August 2022 email about creating OEC USA (L200); April 2023 "long standing partnership" email (L146); early September 2024 customer notice (L61); September 2024 Wisconsin meeting (L66); December 2024 Ohio meeting (L66); October 2025 suit filed (L80); early July 2026 Indian dismissal, appeal pending (L71); Sept. 11, 2026 filing.
+- Amounts and figures: "approximately $5.8 million worth of tubing products ... since 2019" (L46); "millions of dollars worth" (L145); "approximately $370,000" shipped to the Ohio address under five Order Confirmations (L146).
+- Legal tests and frameworks (verbatim; applied or mentioned):
+  - Rule 12(b)(2), applied. Plaintiff's burden (Theunissen); "relatively slight" prima facie burden (Air Prods.); courts do "not weigh the controverting assertions" (L94-105).
+  - Ohio long-arm statute, applied: § 2307.382(A), (C); "transacting any business" read broadly; solicitation alone is not enough (L109-146).
+  - Due process (Int'l Shoe, L112). Southern Machine (L114-115), applied: "First, the defendant must purposefully avail himself of the privilege of acting in the forum state or causing a consequence in the forum state. Second, the cause of action must arise from the defendant’s activities there. Finally, the acts of the defendant or consequences caused by the defendant must have a substantial enough connection with the forum state to make the exercise of jurisdiction over the defendant reasonable." "Failure to meet any one of the three prongs means that personal jurisdiction may not be invoked." (Maclin, L117).
+  - Reasonableness factors (CompuServe, L176): "including the burden on the defendant, the interest of the forum state, [and] the plaintiff’s interest in obtaining relief."
+  - Alter ego (Estate of Thomson, L186-189), applied: OEC USA is not an alter ego.
+  - Forum non conveniens (Hefferan, L217-223), applied: "First, courts determine ‘the degree of deference owed’ to the plaintiff’s choice of forum. ... Second, the defendant bears the burden of ‘establishing an adequate alternative forum.’ ... Third, the defendant must show that the plaintiff’s chosen forum is ‘unnecessarily burdensome based on public and private interests.’" The text is split across L218 and L223.
+    - "virtually unflagging obligation" and "rather rare cases" (L215).
+    - Home-forum choice "entitled great deference" (L228).
+    - Alternative forum "prerequisite for dismissal, not a factor to be balanced" (L234).
+    - Gulf Oil: "[U]nless the balance is strongly in favor of the defendant, the plaintiff’s choice of forum should rarely be disturbed." (L243).
+    - Public-interest factors (Piper quoting Gulf Oil, L246): "administrative difficulties flowing from court congestion; the ‘local interest in having localized controversies decided at home’; the interest in having the trial of a diversity case in a forum that is at home with the law that must govern the action; the avoidance of unnecessary problems in conflict of laws, or in the application of foreign law; and the unfairness of burdening citizens in an unrelated forum with jury duty."
+    - Private-interest factors (Gulf Oil, L263): "the relative ease of access to sources of proof; availability of compulsory process for attendance of unwilling, and the cost of obtaining attendance of willing, witnesses; possibility of view of premises, if view would be appropriate to the action; and all other practical problems that make trial of a case easy, expeditious and inexpensive."
+  - Rule 12(b)(6) (Twombly, Iqbal, L287-295) and Rule 9(b) "who, what, when, where, and how" (L296-297), applied.
+  - Ohio choice of law: analysis needed only for an actual conflict, "even where, as here, the contract at issue contains a choice-of-law clause" (L344-346). Ohio law applied (L352, L386).
+  - Ohio breach of contract (L353): "the existence of a contract, performance by the plaintiff, breach by the defendant, and damage or loss to the plaintiff."
+  - Ohio UCC warranty (L356-357): "(1) a warranty existed; (2) the product failed to perform as warranted; (3) plaintiff provided defendant with reasonable notice of the defect; and (4) plaintiff suffered injury as a result of the defect."
+  - Merchantability, § 1302.27 (L388-389). Fitness for purpose, § 1302.28, elements (L396): "(1) the seller had reason to know the buyer’s particular purpose; (2) the seller had reason to know that the buyer was relying on the seller’s skill or judgment to furnish appropriate goods; and (3) the buyer in fact relied upon the seller’s skill or judgment."
+  - Conspicuous disclaimer, § 1302.29(B) and § 1301.201(B)(10) (L405): "so written, displayed, or presented that a reasonable person against which it is to operate ought to have noticed it."
+  - Fraudulent inducement (Delphi, L424-425): "(1) a representation, (2) material to the transaction, (3) which is made falsely, with knowledge of its falsity or with utter disregard and recklessness as to its falsity, (4) intent to mislead, (5) justifiable reliance on the representation, and (6) a resulting injury."
+- Contract clauses quoted verbatim (Terms and Conditions of Sale, ECF No. 1-1):
+  - Section 11 "Warranty" (L54): "Seller warrants that the Products will perform substantially in accordance with Seller’s published specifications (or other applicable specifications as agreed upon in writing by Seller) and will be free from defects in material and workmanship, when subject to normal, proper and intended usage by properly trained personnel. No other warranty, whether expressed or implied, shall exist in connection with the sale or use of any OEC products." Also (L56): "Seller will, at its option, either repair or replace nonconforming products for which it is responsible, or issue a credit note for the purchase price to the buyer."
+    - Reading (L309-311): not expressly an exclusive remedy; failure of essential purpose is a fact question.
+    - Reading (L379): the disclaimer does not negate the express warranty.
+    - Reading (L410): the disclaimer is not conspicuous for fitness; the "Warranty" heading is bold, but the paragraph has seven sentences in the same type, color and font, and the disclaimer is the second sentence.
+  - Section 13 "Limitation of Liability" (L58): "Notwithstanding anything to the contrary contained herein, Seller’s aggregate liability for any claim of any kind shall not exceed the price paid by Buyer for the products giving rise to such claim. In no event shall Seller be liable for special, incidental, liquidated, or consequential damages howsoever arising out of Seller’s performance (or non-performance) of the contract and notwithstanding whether Buyer may have been advised or is advised of the possibility of such damages." Reading (L313-317): "clearly and broadly limits OEC India’s liability". It is enforced for claims based on the six Order Confirmations, but not for Order Confirmations without the Terms (L319).
+  - Section 15 "Miscellaneous" (L60): "[a]ny legal claim shall be controlled under the laws of the state of Delaware."
+- Disposition (L446-455):
+  - Motion GRANTED in part and DENIED in part.
+  - Rule 12(b)(2): DENIED as to OEC India; GRANTED as to OEC USA, which is "DISMISSED without prejudice".
+  - Forum non conveniens: DENIED.
+  - Count IX: GRANTED and DISMISSED (no prejudice designation).
+  - "GRANTED as to ATP’s remaining claims based on the six Order Confirmations containing Section 13 (Counts I, III, V, and VII)", which are dismissed only "insofar as they seek damages or remedies beyond that provision’s scope" (L453; L317 lists "Counts I, III, V, VII, and IX").
+  - DENIED as to Counts I-II, III-IV and V-VIII.
+  - Oral-argument request DENIED (fn1). Jurisdictional discovery DENIED (fn6).
+- Hedged claims:
+  - L146 "It appears that the parties contemplated an ongoing distributor and inventory partnership".
+  - L160 "may be sufficient ... under certain circumstances" and "may not have made these misrepresentations while physically in Ohio".
+  - L190 "may support the existence of a parent-subsidiary relationship".
+  - L200 "may support the argument that OEC India contemplated using OEC USA".
+  - L225 "Although India may be an alternative forum".
+  - L232 "may reduce the deference".
+  - L250 "it is far from clear that an Indian court would provide a more efficient means".
+  - L252 "may resume".
+  - fn8 L327-328: Delaware-law and Ohio-law claims "appear to correspond" to the Order Confirmations with and without the Delaware clause.
+  - L346 "the Court’s research indicates".
+- Alternative holdings: L309 "Even assuming so" (Section 11 as exclusive remedy); L256 "Even if Indian law applies here"; L271 "Even assuming ... more burdensome"; L130 "In any event" (long-arm statute not meaningfully challenged).
+- Issues not reached: merits against OEC USA (L284); Section 13's essential-purpose argument, raised only in the brief (fn7); Indian law on the merits, which OEC India analyzed only under Ohio and Delaware law (fn10).
+- Footnotes 1-11:
+  - fn1 L33-34: oral argument denied.
+  - fn2 L47: seven alleged versus six attached.
+  - fn3 L72-74: judicial notice of foreign proceedings.
+  - fn4 L85: count renumbering.
+  - fn5 L192-193: group pleading.
+  - fn6 L206, continued L218-219: jurisdictional discovery denied.
+  - fn7 L325: Section 13 essential-purpose argument not alleged.
+  - fn8 L327-328: claim-to-Order-Confirmation correspondence.
+  - fn9 L329, continued L337: only six Order Confirmations contain the Terms; neither party addresses the others.
+  - fn10 L347: Indian-law assertion limited to forum non conveniens.
+  - fn11 L359: express-warranty claims construed under the UCC.
+- Rounded prose beside exact figures: "approximately $5.8 million" and "approximately $370,000" are the only figures, both prose.
+- Notes (layout):
+  - Footnote continuations are spliced into body text. At L218, Hefferan step two "establishing an adequate" breaks into fn6's continuation, and the body resumes at L223 "alternative forum." At L337 the body is cut mid-quote ("We generally do not consider") by fn9's continuation; the body resumes at L341. At L359, fn11 starts mid-word ("non11"), and the body resumes at L362 "compliant products".
+  - Footers carry "PAGEID #: <pageID>" placeholders.
+  - The bold "Warranty" heading (L410) is not visible.
+- Operative definitions, rules and scope exceptions: "Order Confirmation" and "Terms and Conditions of Sale" (L46); "Conspicuous" (§ 1301.201(B)(10)); a "particular purpose" "envisages a specific use by the buyer which is peculiar to the nature of his business" (L395).
+- Amendments or contradictions (neutral):
+  - Seven alleged versus six attached Order Confirmations (fn2).
+  - Complaint numbering versus the court's (fn4).
+  - The Section 15 Delaware clause versus the court's application of Ohio law (no actual conflict, L344-352).
+  - OEC India's position that Indian law governs (L255) versus ATP's position for Ohio or Delaware law (L256).
+  - L317 "(Counts I, III, V, VII, and IX)" versus conclusion L453 "(Counts I, III, V, and VII)".
+  - Typo "wight" for weight (L273).
+- Coverage: FULL. Read ledger: L1-60, L60-129, L129-187, L188-246, L247-300, L301-355, L355-408, L409-462.
+
+## D08 - Deaton v. Johnson (N.D. Tex. opinion and order)
+
+- Source: docs/uscourts_txnd_4_23_cv_00415_2.txt | task page Doc 3 | 12 slip pages ("Case 4:23-cv-00415-O Document 110 Filed 09/14/26 Page N of 12 PageID <pageID>")
+- Written or submitted by: U.S. District Court, Northern District of Texas, Fort Worth Division. The judge's name is not printed (the text ends "SO ORDERED on this 14th day of September, 2026", L177; it refers to "the undersigned", L42; case suffix "-O").
+- Type, date, edition: OPINION AND ORDER (L16); Sept. 14, 2026 (L177). Prior orders in the same case: Memorandum Opinion and Order, ECF No. 94, and Final Judgment, ECF No. 95 (L44). These are cited as Deaton v. Johnson, No. 4:23-CV-00415-O, 2024 WL 920082 (N.D. Tex. Mar. 4, 2024) (L128, L132), dated "March 4, 2024" (L176) and also "March 3, 2024" (L172).
+- Period covered: 2008 agreement through the June 21, 2025 Motion to Disburse and the Sept. 14, 2026 order. The dispute arose "over ten years ago" (L21).
+- Entities and aliases:
+  - Plaintiffs: "John Deaton, a Rhode Island attorney, and his law firm", defined collectively as "Plaintiff" in the singular (L21).
+  - Defendants: "Steven Johnson and his Law firm", the "JLF Defendants" (L21); "Law Offices of Steven M. Johnson, P.C." (L39); Defendant Blake Norvell ("Norvell"), a Texas attorney (L30).
+  - Others: Margaret Moreno ("Moreno") (L30); Justice Alice Gibney (Ret.) (L27).
+  - Fund administrator: "Garretson Resolution Group (‘GRG’)" (L27) = "Epiq Global (formerly, Garretson Resolution Group, ‘GRG’)" (L59), also "Equip Global" (fn5 L113, fn10 L133) and "Eqip Global" (L124-125), a "nominal party" (L124).
+  - Courts and tribunals: Rhode Island Superior Court (L27, L42, L59); Tarrant County district court and the 48th Judicial District (L29-30, L127); JAMS arbitration (fn2 L47); Texas Court of Appeals (L39); U.S. District Court for the District of Rhode Island (L42).
+  - Kugel Mesh cases (L21, L27).
+- Tables: none.
+- Lists:
+  - Anti-Injunction Act exceptions (3) (L73-74).
+  - Relitigation-exception elements (4) (L76-80, L109). Elements 1, 2 and 4 are met (L111-140); element 3 is not (L142-152).
+  - JLF requests (3), all denied:
+    - (1) Enjoin the Rhode Island Superior Court from deciding the Motion to Disburse, under the Anti-Injunction Act (L59, L104-152).
+    - (2) Enjoin the Plaintiff: require him to "withdraw his Motion to Disburse with prejudice", bar contrary positions, and deem him a vexatious litigant, under the All Writs Act (L59, L154-168).
+    - (3) Order arbitration of any remaining disputes (L59, L170-172).
+  - Docket: ECF Nos. 94, 95, 96-97, 100, 102-103, 107-108 (L17-18, L44).
+- Forecasts, guidance, deadlines, effective dates: warning that further duplicative suits in the Fort Worth Division "SHALL result in either a monetary sanction ..., or an injunction restraining his capacity to file ... without the preclearance of the District Court, or both" (L176).
+- Dates (all):
+  - 2008 agreement (L21). 2016 fee dispute and Rhode Island suit (L27). March 11, 2016 "Lein" (fn5 L113, fn10 L133).
+  - 2017 Tarrant County matter; Deaton v. Johnson, 2017 WL 2991939 (Tex. App. Ct. July 14, 2017) (L29-30).
+  - Arbitration began 2018 and concluded March 29, 2022 with the Final Arbitration Award (L32). July 5, 2022 Tarrant County final judgment confirming it (L37). Texas Court of Appeals affirmance at 697 S.W.3d 676 (Tex. App. 2024) (L39-40).
+  - May 22, 2022 new Rhode Island Superior Court suit (L42). Assigned to "the undersigned" May 3, 2023 (L42).
+  - This Court's order "March 4, 2024" (L128, L132, L176) and "March 3, 2024" (L172).
+  - June 21, 2025 Motion to Disburse (L59; "June 2025" L104).
+  - Historical: Judiciary Act of 1793 (Act of Mar. 2, 1793) (L66); 1948 codification (L66); Jud. Act 1789 § 14 (L92). Sept. 14, 2026 order (L177).
+- Amounts and figures: "$1,000,000 in fees" claimed (L27); "$1,000,000 be segregated in an escrow account" (Segregation Order) and GRG "segregated $1,000,000" (L27); "$135,000 for his quantum meruit claim, while all his other claims were denied" (L37).
+- Legal tests and frameworks (verbatim; applied or mentioned):
+  - Anti-Injunction Act, 28 U.S.C. § 2283 (L72): "A court of the United States may not grant an injunction to stay proceedings in a State court." Exceptions (L73-74): "(1) if it is expressly authorized by Act of Congress, (2) where necessary in aid of its jurisdiction, and (3) to protect or effectuate a federal court’s judgments". The exceptions are construed narrowly; "any doubts ... should be resolved in favor of permitting the state courts to proceed." (L74). Only the third (relitigation) exception is applied (L76).
+  - Relitigation exception (Gillispie quoting Shanbaum, L76-80): "(1) the parties in the state action must be identical (or at least in privity with) the parties in the previous federal action, (2) the judgment in the prior action must have been rendered by a court of competent jurisdiction, (3) the prior action must have concluded with a final judgment on the merits, and (4) the same claim or cause of action must be involved in both suits." Actually-decided requirement: Smith v. Bayer at 302; Texas Com. Bank, "an issue must be ‘actually litigated’" (L81).
+  - Chick Kam Choo, 486 U.S. at 148 (L146): "an essential prerequisite for applying the relitigation exception is that the claims or issues which the federal injunction insulates from litigation in state proceedings actually have been decided by the federal court". The relitigation exception did not apply where the federal order rested on forum non conveniens (Chick Kam Choo at 150, L81). Preclusion rulings likewise leave "the state court [to] decide the preclusion question" (Smith at 318, L85).
+  - All Writs Act, 28 U.S.C. § 1651 (L91-99), mentioned and found unwarranted: "The Supreme Court and all courts established by Act of Congress may issue all writs necessary or appropriate in aid of their respective jurisdictions and agreeable to the usage and principles of law." Barton: "directed at conduct which, left unchecked, would have had the practical effect of diminishing the court’s power to bring the litigation to its natural conclusion".
+  - Vexatious-litigant standard (Bryant quoting Procter & Gamble, L159), applied and not met: clear and convincing evidence that "every facet of [this] litigation was patently meritless" and of "bad faith, improper motive, or reckless disregard of the duty owed to the court."
+  - Privity through a nominal party (Southern Cnty. Mut. v. Ochoa, L124-125).
+- Contract clauses: none quoted. The engagement agreement with Moreno has "certain provisions" on which venue transfer was based (L42). The fee-sharing agreement is mentioned (L30, L127).
+- Disposition: Motion to Reopen and for Injunctive Relief, "or Alternatively, Application for Arbitration" (ECF No. 96) DENIED (L17, L175). All other motions DENIED as moot (ECF No. 100) (L18). The motion to enjoin the Rhode Island court is denied (L148-152), the request to enjoin the Plaintiff is denied (L157, L168), and arbitration is denied (L172). The Deaton warning is repeated (L176). The prior dismissal "with prejudice on the grounds of res judicata" (L44, L144) is recited.
+- Hedged claims: L157 "calls into question the validity, perhaps, of the Final Arbitration Award"; L172 "may be warranted" (arbitration, for the Rhode Island court to decide).
+- Issues not reached: merits of the underlying claims ("The claims on the merits was not addressed", L144; L46). Preclusion and arbitrability are left to the Rhode Island Superior Court (L157, L172). Full faith and credit is for JLF to urge in Rhode Island (L148).
+- Footnotes 1-13:
+  - fn1 L22: facts are from JLF's motion.
+  - fn2 L47: Ex. F (JAMS Arbitration), App. 3-25, ECF No. 97-6.
+  - fn3 L48-49: Ex. G (Order and Final Judgment), ECF No. 97-7.
+  - fn4 L51: Final Judgment, ECF No. 95.
+  - fn5 L113 and fn10 L133: Ex. A, Motion to Order "Equip Global, As Successor to Garretson Resolution Group to Disburse the March 11, 2016 Lein", ECF No. 97-1.
+  - fn6 L114. fn7 L116. fn8 L118-119.
+  - fn9 L132: 2024 WL 920082 (N.D. Tex. Mar. 4, 2024).
+  - fn11 L134: "nominal party" at Defs.' Mot. 18. fn12 L161: vexatious-litigant claim at Defs.' Mot. 27. fn13 L163.
+- Rounded prose beside exact figures: none.
+- Notes (layout): footers carry "PageID <pageID>" placeholders; page numbers print as "- N -".
+- Operative definitions, rules and scope exceptions: "Segregation Order" (L27); "Final Arbitration Award" (L32-35); "JLF Defendants" (L21).
+- Amendments or contradictions (neutral):
+  - This Court's prior order is dated March 4, 2024 (L128, L132, L176) and March 3, 2024 (L172).
+  - The arbitration concluded March 29, 2022 (L32), but the opinion also refers to the "Texas arbitration of 2024" (L59), "Texas Final Arbitration Award of 2024" (L146) and "Texas Arbitration Order of 2024" (L148).
+  - L42 says the May 22, 2022 suit came "After all of Plaintiff’s claims had been arbitrated and adjudicated by the Texas state courts". The appellate affirmance is reported as 2024 (L39-40).
+  - "brought claims ... in this Court in 2022" (L107, L124) versus the removed and transferred case being assigned May 3, 2023 (L42; case number 4:23-CV).
+  - "a year after this Court entered Final Judgment" (L59), with the Motion to Disburse dated June 21, 2025.
+  - The All Writs Act heading cites "28 U.S.C. § 1561" (L89); the body cites § 1651 (L65-66, L91-92).
+  - Atlantic Coast Line is cited "389 U.S. 281, 287 (1970)" (L74) and "398 U.S." (L74, L144, L146).
+  - Element 2 is phrased "the Arbitration Award was issued by a court of competent jurisdiction" (L127).
+  - Fund-administrator name variants (see Entities). "res judiciata" spelling at L107, L131, L144, L157.
+- Coverage: FULL. Read ledger: L1-179 in one read.
+
+## Shared ground (navigation only)
+
+- Entities that appear in more than one document, and where:
+  - No party or authoring judge appears in more than one document. Names that recur with different referents:
+    - "Houston": the city of Lord Energy's U.S. subsidiary in D02 (L447, L482) versus defendant Houston Casualty Company ("Houston") in D06 (L14, L211).
+    - "Exxon" cases: D01 L346 ExxonMobil Rsch. & Eng'g Co. v. NLRB (5th Cir. 2025); D02 L329-331, L396 Exxon Mobil Corp. v. Corporación CIMEX, 111 F.4th 12 (D.C. Cir. 2024); D03 fn4 L243-244 Exxon Mobil Corp. v. Corporación Cimex, 146 S. Ct. 1909 (2026) (Helms-Burton abrogates immunity of Cuban agencies); D08 L65 Chick Kam Choo v. Exxon Corp. The documents do not state any relation between the D.C. Circuit 2024 and Supreme Court 2026 citations.
+    - "Trump" cases: D01 Trump v. Illinois (L288-289, L487, L568-569); D02 Cockrum v. Donald J. Trump for President (L493); D05 Trump v. CASA (L62).
+    - "Smith" cases: D06 fn56 Smith v. United States (10th Cir.); D07 L436 Smith v. Gen. Motors; D08 Smith v. Bayer (L69, L74, L81, L85).
+    - "Schneider": D03 L142 Schneider v. Kissinger versus D07 L107 Schneider v. Hardesty.
+    - "Johnson": D08 defendant Steven Johnson versus D01 L389 Johnson v. Zerbst.
+    - "Jackson": D02 Judge Amy Berman Jackson versus D01 Jackson v. Gautreaux (fn16) and United States v. Jackson (L672).
+    - Costa Crociere is a party in two D04 cases (Esfeld L25; Turner L33 and after).
+  - Geography shared across documents:
+    - United Kingdom / England: D03 (Ofcom, British law and courts; Matusevitch British judgment L235) and D04 (Courts of England and Wales; English law; London L76).
+    - Italy: D02 (Nada domiciled in Como; Brero Italian) and D04 (Turner's Italian clause L70; Lebedinsky's Italy forum L89).
+    - Texas: D01 (Texas law; Austin; Harris County), D08 (Tarrant County; Texas arbitration and courts) and D04 fn3 (N.D. Tex. magistrate decision Greco, L81).
+    - Florida: D02 (G5 Integritas L450; Sotloff S.D. Fla. L497), D04 (S.D. Fla.; Miami), D06 fn37 (Robles, Fla. Dist. Ct. App.) and D07 (Burger King, Florida, L156).
+    - California: D02 (Calder, L444), D06 (San Diego, DUAL) and D01 dissent fn7 (Whitney v. California).
+- Courts, judges and dates:
+  - Same court: D02 and D03 are both D.D.C. (Judges Amy Berman Jackson "ABJ" and Rudolph Contreras "RC"), both dated and filed September 15, 2026 (D02 L568; D03 L252). No judge authors two documents. Chief Judges: D05 Leslie A. Gardner (L172) and D07 Sarah D. Morrison (L460).
+  - September 11, 2026: D05 signed and filed (L169); D06 dated (L264); D07 filed (footer).
+  - September 14, 2026: D01 filed (L25); D04 ordered and entered (L129); D06 filed (footer); D08 ordered and filed (L177).
+  - Circuits relied on: D01 is itself the Fifth Circuit; D08 relies on Fifth Circuit precedent (L76-L159). D04 and D05 rely on the Eleventh Circuit (D05 also on former Fifth Circuit City of Miami, 1981, L59); D06 on the Tenth; D07 on the Sixth; D02 and D03 on the D.C. Circuit.
+  - Judges citing their own earlier decisions: D04 Boyd (Altman, J., L25); D07 Safelite, Antero and NexTech (Morrison, J., L111, L401, L434); D03 Ryzhov (No. CV 23-2794 (RC), L190); D08 its own 2024 WL 920082 (L128).
+- Doctrines shared, and outcomes (locations only):
+  - Forum non conveniens is mentioned in all eight:
+    - D04 is the main analysis: dismissal granted with a forum-selection clause (L25-118).
+    - D07 is the main analysis: dismissal denied for a home-forum plaintiff (L209-278).
+    - D01 L513: Gulf Oil listed as a doctrine courts take up sua sponte.
+    - D02 L321: Azima "reversed on forum non conveniens grounds".
+    - D03 L97 and fn3 L218: raised by Ofcom, not reached.
+    - D05 L53 and ¶12 L165: Plaintiffs waive a forum non conveniens defense.
+    - D06 fn12 L74: forum non conveniens as an enforcement mechanism for forum-selection clauses (Atl. Marine quote).
+    - D08 L81: no relitigation injunction where the federal order rested on forum non conveniens (Chick Kam Choo).
+  - Forum non conveniens test wording differs. D04 typical test (Leon, L25), modified test (Boyd, L96) and Usme modifications (L27-29) versus D07 three steps (Hefferan, L217-223). Both list the same five public-interest factors citing Piper 241 n.6 (D04 L100; D07 L246); the wording of factor 3 differs ("the trial . . . in a forum" versus "the trial of a diversity case in a forum"). Plaintiff's forum choice: "merits no weight" with a forum-selection clause (D04 L27; D06 L80) versus "entitled great deference" for a home forum (D07 L228).
+  - Forum-selection clauses: D04 Ticket Contract enforced (L37-46; dismissal without prejudice); D06 Section 32 found ambiguous and transfer denied (L65-173); D08 venue transfer to N.D. Tex. under the Moreno engagement agreement (L42); D05 ¶12 consent to the court's jurisdiction and waiver of venue and forum non conveniens defenses (L165).
+  - FSIA: D02 and D03 both reject the commercial-activity exception and dismiss for lack of subject-matter jurisdiction. Each states the burden differently: D02 L169 (Bell Helicopter, production then persuasion) and D03 L100 (EIG, invoking party bears the burden; but cf. Wye Oak production burden L105).
+  - Personal jurisdiction: D02 (no jurisdiction over the Alp defendants and Besson; Rule 4(k)(2)); D07 (jurisdiction over OEC India, none over OEC USA; Ohio long-arm and Southern Machine); D05 finding 1 and ¶12 waiver.
+  - Insurance-policy interpretation and ambiguity against the insurer: D01 (Texas; majority treats the ambiguity argument as forfeited, L118-159; dissent would construe against the insurer, L633-658) and D06 (New York; applied for the insured, L110-L173). Both policies leave a key term undefined: "reality show" (D01 dissent L643) and "issued" (D06 L110).
+  - Forfeiture and waiver of arguments: D01 (main holding); D03 L140-143 (plaintiffs forfeited the not-a-foreign-state argument); D07 L337-341 (argument first raised in a reply brief; Marshall v. Caudill) and fn7 L325 (new allegations in a brief). Jurisdictional-argument waiver lines: D01 fn16 L264 (Ctr. for Biological Diversity: "Arguments in favor of standing, like all arguments in favor of jurisdiction, can be forfeited or waived.") and D03 L143 (Bronner: "Arguments in favor of subject matter jurisdiction can be waived by inattention or deliberate choice.").
+  - Fraud and fraudulent inducement: D01 (Texas, four elements, fn7 L177-178; reliance finding affirmed); D07 (six elements, L424-425; Count IX dismissed under Rule 9(b)); D08 L30 (arbitration crossclaims included fraud).
+  - Breach-of-contract elements: D06 L208 (maritime, 3) and fn51 L223 (New York 4, Kansas 5); D07 L353 (Ohio, 4).
+  - Choice of law: D01 L115 (Texas law, Erie); D04 L106 (English law clause); D06 L86 and L188-208 (Kansas rules; Policy clause selects federal maritime law and New York); D07 L60 and L344-352 (Delaware clause; Ohio law applied absent conflict; Klaxon).
+  - Federal maritime law: D04 L58, L80-87 (clause validity; remedies) and D06 L191-208 ("contract of marine insurance").
+  - Diversity jurisdiction: D01 L99 (remand for jurisdictional discovery), L115; D06 L14, L86, L188; D07 L107, L344; D08 L42 (removal). D01 fn16 L264 "Diversity" is part of a party name (Ctr. for Biological Diversity).
+  - Jurisdictional discovery: D01 L99 (remanded for it); D03 L208-224 (denied as futile); D07 fn6 (denied).
+  - Requests for hearing or argument denied: D06 L176 (Doc. 19) and D07 fn1 L33-34.
+  - Preclusion and estoppel: D08 res judicata and collateral estoppel (L44, L76, L84-85); D01 judicial estoppel (concurrence L320; dissent L685-687).
+  - Arbitration: D08 (Texas JAMS arbitration; arbitration order refused, L172); D01 dissent (FAA, 9 U.S.C. §§ 1-16, L598; L592, L601).
+  - Injunctions: D05 permanent injunction entered (Rule 65(d)); D08 injunction against state proceedings refused (Anti-Injunction Act, All Writs Act); D03 plaintiffs sought one against Ofcom and the suit was dismissed (L95).
+  - Constitutional amendments: First Amendment in D02 fn16 L520 (not reached) and D03 L77, L89, L95, L188, L235, L240. In D01 it appears only in a Bork article title (L579). Fifth Amendment in D02 L421, L448 (due process for personal jurisdiction) and D03 L95 (claims).
+- Precedents and secondary authorities cited in more than one document, with locations:
+  - Atl. Marine Constr. Co. v. U.S. Dist. Ct., 571 U.S. 49 (2013): D04 L31 (62-64) and D06 fn12-15 L73-80 (59, 61, 63).
+  - Piper Aircraft Co. v. Reyno, 454 U.S. 235 (1981): D04 L100-101 (241 n.6) and D07 L235 (254 n.22; 247), L246 (241 n.6), L256 (251; 260 n.29).
+  - Gulf Oil Corp. v. Gilbert, 330 U.S. 501 (1947): D01 L513 (502) and D07 L243 (508), L246 (509), L263 (508), L278 (508).
+  - Walden v. Fiore, 571 U.S. 277 (2014): D02 L426, L435, L442, L444, L448, L489 and D07 L120 (284-86).
+  - Daimler AG v. Bauman, 571 U.S. 117 (2014): D02 L419 (137) and D07 L107 (126-27).
+  - Bell Atl. Corp. v. Twombly, 550 U.S. 544 (2007), and Ashcroft v. Iqbal, 556 U.S. 662 (2009): D02 L152-154; D06 fn39-44 L179-195; D07 L287-290.
+  - Lujan v. Defs. of Wildlife, 504 U.S. 555 (1992): D01 L419 (559-61) and D02 L123 (561).
+  - Ins. Corp. of Ir. v. Compagnie des Bauxites de Guinee, 456 U.S. 694, 702 (1982): D01 L430 and D02 L126-127.
+  - Argentine Republic v. Amerada Hess, 488 U.S. 428 (1989): D02 L169 (439) and D03 L116 (434).
+  - Saudi Arabia v. Nelson, 507 U.S. 349 (1993): D02 L169 (355), L180 (357), L355 and D03 L130-134 (356), L170, L189-190 (361-62).
+  - OBB Personenverkehr AG v. Sachs, 577 U.S. 27 (2015): D02 L180, L355, L396, L400 and D03 L170, L224 (35).
+  - Republic of Argentina v. Weltover, 504 U.S. 607 (1992): D02 L297-298, fn13 L299-303, L344-345 and D03 L177, L182, L205 (614).
+  - Wye Oak Tech. v. Republic of Iraq, 24 F.4th 686 (D.C. Cir. 2022): D02 L180-L238 (700-02) and D03 L105 (696).
+  - EIG Energy Fund XIV v. Petróleo Brasileiro: 894 F.3d 339 in D02 L330-332 (345) and L492-493 (affirming 246 F. Supp. 3d 52) and in D03 L100 (345), also printed "984 F.3d at 345" at L108-109.
+  - Mwani v. bin Laden, 417 F.3d 1 (D.C. Cir. 2005): D02 L143, L418, L421, L428, L440, L481 and D03 L205, L224 (17).
+  - Jerome Stevens Pharms. v. FDA, 402 F.3d 1249, 1253 (D.C. Cir. 2005): D02 L131 and D03 fn1 L119-120.
+  - Black's Law Dictionary: D01 dissent fn3 L424 (12th ed. 2024) and D06 fn29 L145 (7th ed. 1999).
+  - Wright & Miller's Federal Practice and Procedure: D01 fn18 L295-296 (vol. 19, § 4511.1 n.59, 3d ed. 2026) and D06 fn39 L179 (vol. 5C, § 1216, 3d ed. 2004).
+  - Restatements: (Third) of Agency in D02 L245, L252; (Third) of Foreign Relations Law § 483 in D03 L241.
+  - Federal Rules: Rule 12(b)(6) in D02, D06 and D07; Rule 12(b)(1) in D02 and D03; Rule 12(b)(2) in D07; Rule 12(b)(3) in D06 fn12; Rule 65(d) in D05 only; Rules 8(a) and 9(b) in D07; Rules 4(k)(1)(C) and 4(k)(2) in D02; Rule 10(c) in D06; Rules 8(c), 12(b), 15(a)(1) and 41 in D01 dissent.
+  - Statutes, each in one document only: 28 U.S.C. § 1404(a) and § 1406(a) (D06); § 2283 and § 1651 (D08); FSIA 28 U.S.C. §§ 1330, 1602-1611 (D02 and D03); §§ 1331, 1338(a), 1367 (D05); 35 U.S.C. § 271 (D05); 18 U.S.C. §§ 1961-1968 and 15 U.S.C. §§ 1-2, 1125 (D02).
+- Periods or series that more than one document covers: no shared reporting series. Overlapping 2025-2026 event windows:
+  - Litigation-start dates: D02 suit filed Jan. 24, 2024; D03 suit Aug. 27, 2025; D05 complaint Dec. 12, 2025; D07 suit October 2025.
+  - Alleged injury events: D04 Jan. 22, 2025; D06 shipments December 2025 under a Feb. 23, 2025 to Feb. 23, 2026 policy.
+  - D08 Motion to Disburse June 21, 2025.
+  - All decisions were issued Sept. 11-15, 2026.
+  - Numbered-item vocabulary recurs with different meanings: "Section 32/46/5" (D06 Policy), "Section 11/13/15" (D07 Terms), "Section 102(8)" (D03 Online Safety Act), "Section 230" (D03 CDA), "section 1965" (D02 RICO), "Section 1/2" (D02 Sherman Act); "Count One-Five" (D02), "Counts I-IX" (D07), "Counts I-III" and "Counterclaim Counts I-IV" (D05), "four counts" (D03 fn4).
+- Documents that cite, amend or respond to another document in the bundle: none. No document cites another bundle case. Within D01 the majority, concurrence and dissent respond to one another (cross-reference mismatches are listed under D01). D08 recites its own earlier orders (ECF Nos. 94-95, 2024 WL 920082). D05's order and the stipulated Consent Judgment differ in places (listed under D05).
+- Forecast/actual pairs, repeated/changed tables, same-period conflicts and scope relationships (locations only):
+  - No forecasts and no tables.
+  - Amounts sought versus awarded or limited:
+    - D08: $1,000,000 claimed and segregated (L27) versus $135,000 awarded (L37).
+    - D04: Lebedinsky $750,000 claimed versus $64,000 Athens limit (L89).
+    - D06: $245,721.72 Losses versus the $300,000 per-truck limit and $50,000 per-occurrence sublimit (L30-35).
+    - D02: "more than a billion dollars" sought (L30) versus "approximately $150 million" valuation (fn4).
+    - D07: about $5.8 million total purchases (L46) versus about $370,000 in Ohio-addressed Order Confirmations (L146).
+  - D03 fine stated three ways: L59, L66, L179.
+  - Same-document date or label conflicts: D02 L542 versus fn17; D08 March 3 versus March 4, 2024 and "arbitration of 2024" versus March 29, 2022; D06 dated Sept. 11 versus filed Sept. 14; D05 effective May 18 versus motion May 29.
+  - Order of a document's own amendments: D02 original complaint (Jan. 24, 2024; L84) then amended complaint (Aug. 6, 2024; L92-93, fn6). D05 filed proposal (Doc. 19-1) then counsel's July 23, 2026 terminology correction (L41-45) then the entered Consent Judgment (L117-167). D07 complaint numbering then the court's corrected numbering (fn4).
+  - Exclusion and limitation facts:
+    - D01 Exclusion limited to Coverage A (L65).
+    - D07 Section 13 limitation reaches only the six Order Confirmations with the Terms (L317-319); the Section 11 disclaimer is not conspicuous for fitness (L410).
+    - D05 ¶13 binds only persons "who have actual notice" (L167).
+    - D04 limitations waiver conditioned on refiling within six months (L113).
+    - D02 Vidino named only in Count Three (L105, L515).
+    - D06 Policy mentions the carrier defendants once (fn57).
+  - Action versus mention:
+    - D02: the only commercial activity tied to the UAE directly is its oil business through ADNOC (L182, L287). The reputational campaign is alleged only through Alp and intermediaries such as Ariaf and Matar (L184, L246, L287).
+    - D03: Ofcom's Lolcow notices are alleged by the plaintiffs versus Ofcom's declaration that none issued (L87, L90-92, L179).
+    - D01: Philadelphia's "reminder" emails (L176, L185) versus no specific representation found (L94).
+  - Hedge-scope locations are collected under each document's "Hedged claims".
+  - Overview passages that repeat holdings stated in full later:
+    - D01 L34-44 (repeated at L132, L174-186, L306).
+    - D02 L39-49 (repeated at L414, L475, L511, L551, L564).
+    - D03 L26 (repeated at L250).
+    - D04 L15 (repeated at L121-127).
+    - D05 L31-32 (repeated at L104-112).
+    - D06 L14 (repeated at L173, L176, L258, L260).
+    - D07 L29 (repeated at L446-455).
+    - D08 L17-18 (repeated at L175).
