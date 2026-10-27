@@ -1,0 +1,99 @@
+{
+  "question": "To the nearest 10 MW, how much Calpine-owned capacity must be divested under DOJ's Constellation-Calpine settlement in relevant markets holding a coal plant covered by EPA's coal-ash deadline proposal?",
+  "number_of_asks": 1,
+  "gold_answer": "660 MW",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 5, complaint paragraphs 31 and 33): the relevant geographic markets for Constellation's purchase of Calpine are the region covered by ERCOT and the PJM Coastal Mid-Atlantic area, which includes southeastern Pennsylvania, New Jersey, Delaware, and the eastern shores of Maryland and Virginia.\n\nStep 2. Source fact (Doc 4, section III.B, the ERCOT entry): Coleto Creek, one of the plants EPA's proposed deadline extension covers, falls in the ERCOT market and has a 650 MW coal-fired steam generating unit.\n\nStep 3. Source fact (Doc 4, sections II.A and III.B): the covered plants are in Illinois, Louisiana, Texas, Utah, Ohio, Wyoming and Indiana, and the only ones in PJM are Kincaid, located in Illinois, and Miami Fort, located in Ohio, so no covered plant lies in the PJM Coastal Mid-Atlantic area.\n\nStep 4. Determination (from Steps 1 to 3; Doc 4 and Doc 5): of the two relevant markets, only ERCOT contains a coal plant covered by EPA's proposal, so only the ERCOT divestitures count and the PJM divestitures drop out.\n\nStep 5. Source fact (Doc 5, Competitive Impact Statement, divestiture assets): the ERCOT divestitures are Calpine's Jack A. Fusco plant, a 557 MW combined-cycle natural gas facility, and Calpine's interest in Gregory, a 365 MW combined-cycle natural gas facility of which Calpine owns approximately 28.5%.\n\nStep 6. Calculation (from Step 5; Doc 5 and Doc 4): Calpine-owned capacity at Gregory: 365 * 28.5% = 104.025 MW.\n\nStep 7. Calculation (from Steps 5 and 6; Doc 5 and Doc 4): Calpine-owned capacity divested in ERCOT: 557 + 104.025 = 661.025 MW.\n\nStep 8. Answer (from Step 7; Doc 5 and Doc 4): rounded to the nearest 10 MW, as the question asks, 661.025 MW is six hundred sixty megawatts.",
+  "answer_components": [
+    "660 MW"
+  ],
+  "evidence": [
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "The region covered by ERCOT is a relevant geographic market for evaluating the potential competitive impact of Constellation's purchase of Calpine"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "The PJM Coastal Mid-Atlantic geographic area is a distinct area within the PJM region that includes southeastern Pennsylvania, New Jersey, Delaware, and the eastern shores of Maryland and Virginia."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "3. Electric Reliability Council of Texas (ERCOT) Coleto Creek Power Plant (Coleto Creek) located in Texas."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "associated with the 650 MW coal-fired steam generating unit"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Baldwin Power Station (IL), Big Cajun II Power Plant (LA), Brame Energy Center (LA), Coleto Creek Power Plant (TX), Intermountain Generating Facility (UT), Kincaid Power Station (IL), Miami Fort Power Station (OH), Naughton Power Plant (WY), Newton Power Station (IL), R.M."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Schahfer Generating Station (IN), and Welsh Power Plant (TX)."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Kincaid Power Station (Kincaid) located in Illinois."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Miami Fort Power Station (Miami Fort) located in Ohio."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Calpine's two ERCOT plants to be divested as part of the ERCOT Divestiture Assets are Jack A. Fusco and Gregory."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "557 MW combined-cycle natural gas facility located in Richmond, Texas."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Gregory is a 365 MW combined-cycle natural gas facility located in Gregory, Texas. Calpine owns approximately 28.5% of Gregory."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Exclusion / condition source",
+      "reviewer_note": "Doc 4 puts EPA's covered coal plants by market: Coleto Creek in ERCOT, the PJM plants in Illinois and Ohio, outside the PJM Coastal Mid-Atlantic market, so PJM divestitures drop out."
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Unit normalization",
+    "Conditional filter",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Wrong jurisdiction or scope",
+      "how_a_careless_solver_fails": "Picks the wrong entity or section"
+    },
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Wrong jurisdiction or scope: Doc 4's PJM coal plants are in Illinois and Ohio, outside Doc 5's PJM Coastal Mid-Atlantic market; adding PJM divestitures gives 5,040 MW. Part vs total: Doc 5's Gregory is 365 MW, Calpine owns 28.5%; the whole plant gives 920 MW. Gold: 660 MW."
+}

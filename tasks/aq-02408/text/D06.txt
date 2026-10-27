@@ -1,0 +1,423 @@
+# D06 | docs/fr_2026_03659.txt
+
+Federal Register, Volume 91 Issue 36 (Tuesday, February 24, 2026)
+
+[Federal Register Volume 91, Number 36 (Tuesday, February 24, 2026)] [Notices]
+[Pages 8864-8872]
+From the Federal Register Online via the Government Publishing Office [www.gpo.gov] [FR Doc No: 2026-03659]
+
+-----------------------------------------------------------------------
+
+DEPARTMENT OF ENERGY
+
+Federal Energy Regulatory Commission
+
+[Docket Nos. RD26-1-000, RD26-2-000, RD26-3-000 (not consolidated)]
+
+Before Commissioners: Laura V. Swett, Chairman; David Rosner, Lindsay S. See, Judy W. Chang, and David LaCerte; North American Electric Reliability Corporation; Order Approving Inverter-Based Resources and Generators Modeling Reliability Standards
+
+1. In Order No. 901, the Commission directed the North American Electric Reliability Corporation (NERC), the Commission-certified Electric Reliability Organization (ERO), to develop new or modified Reliability Standards that address specific matters pertaining to the impacts of inverter-based resources (IBR) on the reliable operation of the Bulk-Power System.\1\ Due to the significant scope of the work, the Commission required NERC to submit responsive Reliability Standards in three tranches.\2\ On November 4, 2025, NERC submitted three petitions seeking approval of five proposed Reliability Standards and related definitions, representing the second tranche of Reliability Standards directed by the Commission in Order No. 901.
+---------------------------------------------------------------------------
+
+\1\ Reliability Standards to Address Inverter-Based Res., Order No. 901, 185 FERC ] 61,042 (2023).
+\2\ Id. P 7.
+---------------------------------------------------------------------------
+
+2. Specifically, in the first petition (RD26-1-000), NERC seeks approval of: (1) a proposed definition of the term distributed energy resource (DER) for inclusion in the NERC Glossary of Terms Used in NERC Reliability Standards (NERC Glossary); and (2) proposed Reliability Standards MOD-032-2 (Data for Power System Modeling and Analysis), IRO- 010-6 (Reliability Coordinator Data and Information Specification and Collection), and TOP-003-8 (Transmission Operator and Balancing Authority Data and Information Specification and Collection).\3\ The second petition (RD26-2-000) seeks approval of Reliability Standard MOD-033-3 (Steady-State and Dynamic System Model Validation).\4\ The third petition
+
+[[Page 8865]]
+
+(RD26-3-000) seeks approval of: (1) proposed definitions of model validation and model verification in the NERC Glossary; and (2) proposed Reliability Standard MOD-026-2 (Verification and Validation of Dynamic Models and Data).\5\ NERC also seeks approval of the associated implementation plans, violation risk factors, and violation severity levels for Reliability Standards MOD-032-2, IRO-010-6, TOP-003-8, MOD- 033-3, and MOD-026-2. In addition, the first petition seeks the retirement of currently effective Reliability Standards MOD-032-1, IRO- 010-5, and TOP-003-7; the second petition seeks retirement of currently effective Reliability Standard MOD-033-2; and the third petition seeks retirement of currently effective Reliability Standards MOD-026-1 and MOD-027-1.
+---------------------------------------------------------------------------
+
+\3\ NERC Petition, Docket No. RD26-1-000 (filed Nov. 4, 2025) (NERC MOD-032-2, IRO-010-6, and TOP-003-8 Petition).
+\4\ NERC Petition, Docket No. RD26-2-000 (filed Nov. 4, 2025) (NERC MOD-033-3 Petition).
+\5\ NERC Petition, Docket No. RD26-3-000 (filed Nov. 4, 2025) (NERC MOD-026-2 Petition).
+---------------------------------------------------------------------------
+
+3. For the reasons discussed below, pursuant to section 215(d)(2) of the Federal Power Act (FPA),\6\ we grant the requested approvals.
+Our action approving the three petitions and the associated Reliability Standards should ensure that Bulk-Power System planners and operators will have the data and models needed to plan for, operate, and reliably integrate IBRs on the Bulk-Power System.
+---------------------------------------------------------------------------
+
+\6\ 16 U.S.C. 824o(d)(2).
+---------------------------------------------------------------------------
+
+I. Background
+
+A. Section 215 and Mandatory Reliability Standards
+
+4. Section 215 of the FPA provides that the Commission may certify an ERO, the purpose of which is to establish and enforce Reliability Standards, subject to Commission review and approval.\7\ Once approved, the Reliability Standards may be enforced by the ERO, subject to Commission oversight, or by the Commission independently.\8\ Pursuant to section 215 of the FPA, the Commission established a process to select and certify an ERO \9\ and subsequently certified NERC as the ERO.\10\
+---------------------------------------------------------------------------
+
+\7\ Id. Sec. 824o.
+\8\ Id. Sec. 824o(e).
+\9\ Rules Concerning Certification of the Elec. Reliability Org.; & Procs. for the Establishment, Approval, and Enf't of Elec.
+Reliability Standards, Order No. 672, 114 FERC ] 61,104, order on reh'g, Order No. 672-A, 114 FERC ] 61,328 (2006).
+\10\ N. Am. Elec. Reliability Corp., 116 FERC ] 61,062, order on reh'g and compliance, 117 FERC ] 61,126 (2006), aff'd sub nom. Alcoa Inc. v. FERC, 564 F.3d 1342 (D.C. Cir. 2009) (certifying NERC as the ERO responsible for the development and enforcement of mandatory Reliability Standards).
+---------------------------------------------------------------------------
+
+B. Order No. 901
+
+5. In Order No. 901, the Commission explained, among other things, that the majority of installed IBRs use grid-following inverters, which can track grid state parameters (e.g., voltage angle) in milliseconds and react nearly instantaneously to changing grid conditions.\11\ The Commission then explained that, as found by multiple NERC reports,\12\ some IBRs, as non-synchronous resources, ``are not configured or programmed to support grid voltage and frequency in the event of a system disturbance, and, as a result, will reduce power output, exhibit momentary cessation, or trip in response to variations in system voltage or frequency.'' \13\
+---------------------------------------------------------------------------
+
+\11\ Order No. 901, 185 FERC ] 61,042 at P 12.
+\12\ Id. P 26 n.53 (listing 12 NERC reports describing IBR behavior during disturbances).
+\13\ Id. P 12 (footnotes omitted).
+---------------------------------------------------------------------------
+
+6. Therefore, the Commission directed NERC to develop new or modified Reliability Standards pertaining to IBRs in four areas: (1) data sharing; (2) model validation; (3) planning and operational studies; and (4) performance requirements.\14\ The Commission required NERC to submit, by November 4, 2025, new or modified Reliability Standards in the first and second areas to, among other things, address data sharing for registered IBRs,\15\ unregistered IBRs, and IBR-DERs in the aggregate; \16\ and data and model validation for registered IBRs, unregistered IBRs, and IBRs connected to the distribution system that in the aggregate have a material impact on the Bulk-Power System (IBR-DER).\17\ The first and second areas also contained directives that can be broadly categorized as requiring the development of Reliability Standards in the following areas: (1) modeling frameworks for IBRs; (2) validation and verification of IBR models; and (3) inclusion of IBRs in system-level models.
+---------------------------------------------------------------------------
+
+\14\ E.g., id. PP 1, 5, 53.
+\15\ Registered IBRs include generator owners and generator operators. Under the NERC Glossary, category 1 generator owners are entities that own and maintain generating bulk electric system (BES) facilities; category 2 generator owners are entities that own and maintain non-BES IBRs that either have or contribute to an aggregate nameplate capacity of greater than or equal to 20 MVA, connected through a system designed primarily for delivering such capacity to a common point of connection at a voltage greater than or equal to
+60 kV. Category 1 generator operators are entities that operate generating BES facilities and perform the functions of supplying energy and interconnected operations services; category 2 generator owners are entities that operate non-BES IBRs that either have or contribute to an aggregate nameplate capacity of greater than or equal to 20 MVA, connected through a system designed primarily for delivering such capacity to a common point of connection at a voltage greater than or equal to 60 kV. NERC, Glossary of Terms Used in NERC Reliability Standards (updated Oct. 1, 2025) (NERC Glossary).
+\16\ Order No. 901, however, is clear that unregistered IBRs and IBR-DERs that do not have a material impact on the Bulk-Power System ``will not be subject to the mandatory and enforceable Reliability Standards set forth herein.'' Order No. 901, 185 FERC ] 61,042 at P
+4 n.14.
+\17\ Id. P 229.
+---------------------------------------------------------------------------
+
+1. Modeling Frameworks for IBRs
+7. In Order No. 901, the Commission directed NERC to develop new or modified Reliability Standards to support accurate modeling of IBRs, including requirements for IBR-specific modeling data; the use of industry generic library IBR models; the provision of dynamic models of dynamic performance of IBRs; the use of DER_A model; \18\ and the development of a uniform modeling framework of IBRs.
+---------------------------------------------------------------------------
+
+\18\ The DER_A model is the approved steady state and dynamic model that industry has validated and maintained to model IBR-DERs in the aggregate and used to study the potential impacts of IBR-DERs in the aggregate on the Bulk-Power System. Id. P 31 n.67.
+---------------------------------------------------------------------------
+
+2. Validation and Verification of IBR Models
+8. The Commission directed NERC to include in the new or modified Reliability Standards provisions to require registered IBR generator owners ``to install disturbance monitoring equipment at their buses and elements . . . [and] to provide disturbance monitoring data to Bulk- Power System planners and operators for analyzing disturbances on the Bulk-Power System.'' \19\ Further, the Commission directed NERC to include in the new or modified Reliability Standards technical criteria that require Bulk-Power System planners and operators to validate registered IBR models using disturbance monitoring data from the installed registered IBR generator owners' disturbance monitoring equipment.\20\
+---------------------------------------------------------------------------
+
+\19\ Id. P 85.
+\20\ Id.
+---------------------------------------------------------------------------
+
+9. Additionally, the Commission directed NERC to develop new or modified Reliability Standards that require the generator owners of registered IBRs, transmission owners that have unregistered IBRs on their system, and distribution providers that have IBR-DERs on their system to provide models that represent the dynamic behavior of these IBRs at a sufficient level of fidelity to Bulk-Power System planners and operators to ``perform valid interconnection-wide, planning, and operational studies on a basis comparable to synchronous generation resources.'' \21\
+---------------------------------------------------------------------------
+
+\21\ Id. P 140.
+
+---------------------------------------------------------------------------
+
+[[Page 8866]]
+
+10. Further, the Commission directed NERC to establish a standard uniform modeling verification process. The Commission instructed that a uniform modeling verification process will ensure that all entities use the same set of minimum requirements to verify that both synchronous and non-synchronous models are complete and that the models ``accurately represent the dynamic behavior of all generation resources at a sufficient level of fidelity for Bulk-Power System planners and operators to perform valid interconnection-wide, planning, and operational studies.'' \22\ The Commission directed NERC to define the model verification process and to require consistency among the model verification processes for existing Reliability Standards and any new or modified Reliability Standards.\23\
+---------------------------------------------------------------------------
+
+\22\ Id. P 143.
+\23\ Id.
+---------------------------------------------------------------------------
+
+11. The Commission acknowledged that the new or modified Reliability Standards pertaining to the standard uniform modeling verification process would apply to a different, but overlapping, set of entities than those required to comply with the requirements of Order No. 2023.\24\ Consequently, the Commission directed NERC to ``include in the new or modified Reliability Standards a similar model verification process timeline consistent with Order No. 2023 modeling deadline requirements.'' \25\
+---------------------------------------------------------------------------
+
+\24\ See Improvements to Generator Interconnection Procs. & Agreements, Order No. 2023, 184 FERC ] 61,054, order on reh'g, 185 FERC ] 61,063 (2023), order on reh'g, Order No. 2023-A, 186 FERC ] 61,199, errata notice, 188 FERC ] 61,134 (2024).
+\25\ Order No. 901, 185 FERC ] 61,042 at P 149.
+---------------------------------------------------------------------------
+
+3. Inclusion of IBRs in System Models
+12. The Commission directed NERC to submit new or modified Reliability Standards that require Bulk-Power System planners and operators to validate, coordinate, and update in a timely manner the system models of registered IBRs, unregistered IBRs, and IBR-DERs that in the aggregate have a material impact on the Bulk-Power System against actual system operational behavior.\26\ ---------------------------------------------------------------------------
+
+\26\ Id. P 156.
+---------------------------------------------------------------------------
+
+13. Moreover, the Commission directed NERC ``to determine the appropriate registered entity responsible for the data and parameters of IBR-DERs in the aggregate and to establish a process that requires identified registered entities to coordinate, validate, and keep up to date the system models'' for those areas with IBR-DERs in the aggregate that materially impact the reliable operation of the Bulk-Power System but lack an associated registered distribution provider.\27\ ---------------------------------------------------------------------------
+
+\27\ Id. P 157.
+---------------------------------------------------------------------------
+
+14. The Commission also directed NERC to develop new or modified Reliability Standards that require Bulk-Power System planners and operators to establish for each interconnection: ``a uniform framework with modeling criteria, a registered modeling designee, and necessary data exchange requirements both between themselves and with the generator owners, transmission owners, and distribution providers to coordinate the creation of transmission planning, operations, and interconnection-wide models (i.e., system models) and the validation of each respective system model.'' \28\
+---------------------------------------------------------------------------
+
+\28\ Id. P 161.
+---------------------------------------------------------------------------
+
+II. NERC Petitions
+
+A. MOD-032-2, IRO-010-6, and TOP-003-8 Petition
+
+1. DER Definition
+15. NERC proposes to define DER as: ``A generator or energy storage technology connected to a distribution system that is capable of providing Real Power in non-isolated parallel operation with the Bulk- Power System, including one connected behind the meter of an end-use customer that is supplied from a distribution system.'' \29\ ---------------------------------------------------------------------------
+
+\29\ NERC MOD-032-2, IRO-010-6, and TOP-003-8 Petition at 29.
+---------------------------------------------------------------------------
+
+2. Proposed Reliability Standard MOD-032-2
+16. NERC states that the purpose of proposed Reliability Standard MOD-032-2 is ``to establish consistent modeling data requirements and reporting procedures for development of planning horizon cases necessary to support analysis of the reliability of the interconnected transmission system.'' \30\
+---------------------------------------------------------------------------
+
+\30\ Id. at 27.
+---------------------------------------------------------------------------
+
+17. The proposed Standard requires planning coordinators, working jointly with their associated transmission planner(s), to develop steady-state, dynamic, and short circuit modeling data requirements and reporting procedures.\31\ Proposed Attachment 1 of the Standard indicates the data that is required to effectively model the interconnected transmission system for the near-term transmission planning horizon and long-term transmission planning horizon.\32\ The proposed Standard requires balancing authorities, distribution providers, generator owners, resource planners, transmission owners, and transmission service providers to provide IBR and IBR-DER data.\33\ ---------------------------------------------------------------------------
+
+\31\ Id. at 31.
+\32\ Id., Ex. A-1 (Proposed Reliability Standard MOD-032-2 Redline to Last Approved (MOD-032-1)) at 16.
+\33\ NERC MOD-032-2, IRO-010-6, and TOP-003-8 Petition at 43-44.
+---------------------------------------------------------------------------
+
+18. The proposed Standard requires the submission of ``standard library models incorporated within the software(s) utilized to create the interconnection-wide case(s); user-defined models; or both standard library models and user-defined models'' \34\ and requires each planning coordinator and transmission planner that accepts user-defined models to provide the user-defined model requirements to other planning coordinators and transmission planners within the interconnection when requested.\35\
+---------------------------------------------------------------------------
+
+\34\ Id. at 32.
+\35\ Id.
+---------------------------------------------------------------------------
+
+3. Proposed Reliability Standards IRO-010-6 and TOP-003-8
+19. NERC states that the purpose of proposed Reliability Standard IRO-010-6 is ``to prevent instability, uncontrolled separation, or [c]ascading outages that adversely impact reliability, by ensuring each [r]eliability [c]oordinator has the data and information it needs to plan, monitor and assess the operation of its [r]eliability [c]oordinator [a]rea.'' \36\ NERC states that the purpose of proposed Reliability Standard TOP-003-8 is ``to ensure that each [t]ransmission [o]perator and [b]alancing [a]uthority has the data and information it needs to plan, monitor, and assess the operation of its [t]ransmission [o]perator [a]rea or [b]alancing [a]uthority [a]rea.'' \37\ ---------------------------------------------------------------------------
+
+\36\ Id. at 59-60.
+\37\ Id. at 60.
+---------------------------------------------------------------------------
+
+20. NERC proposes minor modifications to proposed Reliability Standards IRO-010-6 and TOP-003-8 to add ``Inverter-based Resource (IBR)-specific data and parameters'' to the list of information reliability coordinators, transmission operators, and balancing authorities must address in their documented data specifications.\38\ Additionally, both proposed Reliability Standards include a new proposed Requirement that specifies that requirements for model submission for reliability coordinators, transmission operators, and balancing authorities are to be consistent with ``the model submitted for planning purposes, subject to modifications for operations purposes, as applicable.'' \39\
+---------------------------------------------------------------------------
+
+\38\ Id. at 60-61.
+\39\ Id. at 62.
+
+---------------------------------------------------------------------------
+
+[[Page 8867]]
+
+B. MOD-033-3 Petition
+
+21. NERC states that the purpose of proposed Reliability Standard MOD-033-3 is ``to establish a process for system model validation to facilitate achieving and maintaining model accuracy.'' \40\ ---------------------------------------------------------------------------
+
+\40\ NERC MOD-033-3 Petition at 23.
+---------------------------------------------------------------------------
+
+22. The proposed Standard requires each planning coordinator to develop and implement a model validation process for the planning system models developed in accordance with Reliability Standard MOD- 032, representing its portion of the existing system.\41\ The model validation process includes the comparison of power flow simulation performance of the steady-state planning system model to actual system behavior at least once every 24 calendar months. The model validation process also includes the comparison of dynamic local event simulation performance of the dynamic planning system model to actual system behavior at least once every 24 calendar months under proposed Requirement R1.2.\42\ Further, the proposed Standard requires each reliability coordinator and transmission operator to provide actual system behavior data to any planning coordinator performing model validation under Requirement R1.\43\
+---------------------------------------------------------------------------
+
+\41\ Id. at 24.
+\42\ Id.
+\43\ Id. at 27.
+---------------------------------------------------------------------------
+
+23. NERC claims that proposed Reliability Standard MOD-033-3 is responsive to the Commission's directive in Order No. 901 to validate models of registered IBRs, unregistered IBRs, and IBR-DERs that in the aggregate have a material impact on the Bulk-Power System by comparing resulting system models against system operational behavior establishing a process to require identified registered entities to coordinate, validate, and keep up to date system models. NERC further claims that proposed Reliability Standard MOD-033-3 is responsive to the directive that the new or modified Reliability Standards require Bulk-Power System planners and operators to validate registered IBR models using disturbance monitoring data from the installed registered IBR generator owners' disturbance monitoring equipment.\44\ ---------------------------------------------------------------------------
+
+\44\ Id. at 29-31.
+---------------------------------------------------------------------------
+
+C. MOD-026-2 Petition
+
+1. Proposed Definitions of Model Verification and Model Validation
+24. In response to the directive in Order No. 901 to develop new or modified Reliability Standards related to model validation for IBRs, NERC proposes to define model validation as ``[t]he process of comparing simulation results with measurements to assess how closely a model's behavior matches the measured behavior,'' and to define model verification as ``[t]he process of confirming that model structure and parameter values are representative of the equipment or facility design and settings by reviewing equipment or facility design and settings documentation.'' \45\
+---------------------------------------------------------------------------
+
+\45\ NERC MOD-026-2 Petition at 25.
+---------------------------------------------------------------------------
+
+2. Proposed Reliability Standard MOD-026-2
+25. NERC states that the purpose of proposed Reliability Standard MOD-026-2 is ``to verify and validate that the dynamic models and associated parameters used to assess Bulk Electric System (BES) reliability represent the in-service equipment of Bulk Power System . .
+. facilities including generating facilities, transmission connected dynamic reactive resources, and high-voltage direct current (HVDC) systems.'' \46\ Reliability Standard MOD-026-2 consolidates the currently effective Reliability Standards MOD-026-1 and MOD-027-1.\47\ ---------------------------------------------------------------------------
+
+\46\ Id. at 26.
+\47\ Id. at 23.
+---------------------------------------------------------------------------
+
+26. The proposed Standard requires each generator owner or transmission owner to provide its transmission planner ``positive sequence dynamic model(s) with associated parameters, any information pertaining to changes to the model(s) or its parameters, and accompanying documentation in accordance with the periodicity requirements of Attachment 2.'' \48\ Requirement R3 of the proposed Standard requires each generator owner or transmission owner to provide EMT models for flexible alternating current transmission system (FACTS) devices, HVDC systems, and registered IBRs to its transmission planner.
+Legacy facilities are excluded from this requirement where the original equipment manufacturer no longer supports EMT model(s) for the facility as well as legacy facilities not identified by the transmission planner.\49\ NERC argues that the positive sequence model and EMT model provisions in proposed Reliability Standard MOD-026-2 are responsive to a series of directives in Order No. 901.\50\ ---------------------------------------------------------------------------
+
+\48\ Id. at 32; Ex. A-1 (Proposed Reliability Standard MOD-026- 2--Clean) at 5.
+\49\ NERC MOD-026-2 Petition at 36. A legacy facility is defined as ``any facility with a commercial operation date prior to the effective date of MOD-026-2.'' Id. at 29.
+\50\ Id. at 44 (citing Order No. 901, 185 FERC ] 61,042 at PP 85, 126, 140-141, 143, 149, 161).
+---------------------------------------------------------------------------
+
+III. Notice of Filing and Responsive Pleadings
+
+27. Notice of NERC's November 4, 2025, filings was published in the Federal Register, 90 FR 53320 (Nov. 25, 2026), with comments and interventions due on or before December 8, 2025. Calpine Corporation filed motions to intervene in Docket Nos. RD26-1-000, RD26-2-000, and RD26-3-000. The Electric Reliability Council of Texas, Inc., ISO New England Inc., Midcontinent Independent System Operator Inc., New York System Operator Inc., PJM Interconnection, L.L.C., and Southwest Power Pool, Inc. (collectively, the ISO) submitted comments in Docket No.
+RD26-3-000. On December 19, 2025, NERC submitted reply comments to the ISOs' comments.
+28. The ISOs support proposed Reliability Standard MOD-026-2 because it advances the reliability of the Bulk-Power System in improving the accuracy and dependability of models used in planning and interconnection analyses through model verification and validation requirements.\51\ However, the ISOs disagree with the provision that excludes generator owners or transmission owners of legacy facilities with no original equipment manufacturer support for EMT models from the requirement to provide EMT models to their transmission planners.\52\ The ISOs express concern that the definition of legacy facilities include both IBRs that are already in-service and those that are currently going through the interconnection process.\53\ The ISOs maintain that the exclusion ``inappropriately shifts the burden'' of obtaining EMT models for legacy facilities from generator owners and transmission owners to transmission planners, which lack the knowledge and access to the facilities.\54\ The ISOs claim that without EMT models from the owners of legacy facilities, transmission planners would be unable to accurately assess the reliability of their systems due to the inadequacy of the ISOs' purely positive sequencing modeling when analyzing systems with significant levels of IBRs and IBR- DERs.\55\ Further, the ISOs assert that the exclusion eliminates incentives for original equipment manufacturers to maintain EMT models for the life of a legacy
+
+[[Page 8868]]
+
+facility and reduces the ability of owners of legacy facilities to require the continued maintenance of EMT models for the facility's life.\56\ The ISOs request that the Commission direct NERC to revise proposed Requirement R3 to remove the legacy facility exclusion language.
+---------------------------------------------------------------------------
+
+\51\ ISOs Comments at 1.
+\52\ Id. at 4.
+\53\ Id.
+\54\ Id. at 5.
+\55\ Id.
+\56\ Id. at 7.
+---------------------------------------------------------------------------
+
+29. In its reply comments, NERC states that the standard drafting team recognized the practical limitations associated with requiring EMT models for legacy facilities where the original equipment manufacturer no longer supports EMT models for those facilities and so adopted a limited and narrowly tailored exclusion for such facilities. NERC notes that the standard drafting team concluded that requiring owners of legacy facilities to develop their own EMT models would be burdensome and costly as they have to rely on extensive testing to approximate EMT behavior of the facilities. Further, the drafting team determined that mandating legacy facilities to develop their own models would pose a risk to reliability as it would require intentionally stressing the facilities to determine how and when large signal disturbances might occur. Moreover, NERC states that the drafting team considered that alternatives to costly and burdensome testing are available; for example, transmission planners and planning coordinators could rely on generic EMT models with parameters from similarly situated facilities for legacy facilities that lack original equipment manufacturer support.\57\ Lastly, NERC disagrees with the ISOs' assertion that the exclusion eliminates the incentives for original equipment manufacturers to require the continued maintenance of EMT models for the life of the facility because the exclusion is limited to where original equipment manufacturer support is no longer available and NERC anticipates that the number of facilities eligible for exclusion will shrink as new resources are developed for which EMT models will be available.\58\
+---------------------------------------------------------------------------
+
+\57\ NERC Reply Comments at 4-5.
+\58\ Id. at 5-6.
+---------------------------------------------------------------------------
+
+IV. Determination
+
+A. Procedural Matters
+
+30. Pursuant to Rule 214 of the Commission's Rules of Practice and Procedure, 18 CFR 385.214 (2025), the timely, unopposed motion to intervene serves to make Calpine a party to this proceeding.
+31. Rule 213(a)(2) of the Commission's Rules of Practice and Procedure, 18 CFR 385.213(a)(2) (2025), prohibits an answer to a protest unless otherwise ordered by the decisional authority. We accept NERC's reply comment filed in this proceeding because it provides information that assisted us in our decision-making process.
+
+B. Substantive Matters
+
+1. MOD-032-2, IRO-010-06, and TOP-003-8 Petition
+32. Pursuant to section 215(d)(2) of the FPA, we approve the proposed DER definition for inclusion in the NERC Glossary, as well as proposed Reliability Standards MOD-032-2, IRO-010-6 and TOP-003-8, as just, reasonable, not unduly discriminatory or preferential, and in the public interest. We find that the proposed DER definition is sufficient for defining requirements in Reliability Standards, excluding load resources (e.g., energy efficiency and demand response) that are typically reflected in base case load level assumptions, capturing both synchronous resources and IBRs, and conveying that a DER is a resource that is connected to the distribution system and not the Bulk-Power System. We further find that proposed Reliability Standards MOD-032-2, IRO-010-06, and TOP-003-8 are responsive to the relevant directives in Order No. 901 and improve upon the existing standards by supporting accurate modeling of IBRs, which will advance the reliability of the Bulk-Power System.
+33. We also approve the proposed Reliability Standards' associated violation risk factors and violation severity levels, as well as the implementation plans. Finally, we approve the retirement of Reliability Standards MOD-032-1, IRO-010-5, and TOP-003-7 immediately prior to the effective date of proposed Reliability Standards MOD-032-2, IRO-010-6, and TOP-003-8, respectively.
+2. MOD-033-3 Petition
+34. Pursuant to section 215(d)(2) of the FPA, we approve proposed Reliability Standard MOD-033-3, as just, reasonable, not unduly discriminatory or preferential, and in the public interest. We determine that proposed Reliability Standard MOD-033-3 is responsive to relevant directives in Order No. 901 and improves upon the existing standard by requiring the inclusion of IBRs in system-wide models, which will help system planners and operators ensure the reliability of the Bulk-Power System.
+35. We also approve the proposed Reliability Standard's associated violation risk factors and violation severity levels, as well as the proposed implementation plan. Finally, we approve the retirement of Reliability Standard MOD-033-2 immediately prior to the effective date of proposed Reliability Standard MOD-033-3.
+3. MOD-026-2 Petition
+36. Pursuant to section 215(d)(2) of the FPA, we approve the proposed model verification and model validation definitions for inclusion in the NERC Glossary, as well as proposed Reliability Standard MOD-026-2, as just, reasonable, not unduly discriminatory or preferential, and in the public interest. We find that the proposed model validation and model verification definitions establish a consistent understanding of the meaning of the defined terms across all Reliability Standards going forward and establish clear expectations for model verification and model validation. We further determine that proposed Reliability Standard MOD-026-2 is responsive to the relevant directives in Order No. 901 and improves upon existing Reliability Standards MOD-026-1 and MOD-027-1 by establishing a process for the model validation and model verification of IBRs, which will advance the reliability of the Bulk-Power System.
+37. We decline the ISOs' request to direct NERC to remove the legacy facility exclusion language from proposed Requirement R3 of proposed Reliability Standard MOD-026-2. As NERC observes, developing a non-generic EMT model for equipment that is no longer supported by the original equipment manufacturer will pose a significant financial, technical, and time burden on the owners of legacy facilities to develop their own EMT models through stress testing that could pose a risk to the reliability of the Bulk-Power System.\59\ Giving due weight to NERC as the ERO, we are not persuaded that the ISOs have stated a significant reliability risk that merits removing the exclusion.
+Additionally, we are persuaded by NERC that the impact of the exclusion will be limited: all facilities (including legacy facilities) that have original equipment manufacturer support will be required to provide EMT models when needed.\60\ Further, owners of legacy facilities who claim that the facilities have no original equipment manufacturer support will have to substantiate that claim through ---------------------------------------------------------------------------
+
+\59\ Id. at 4-5.
+\60\ Id. at 5-6.
+
+---------------------------------------------------------------------------
+
+[[Page 8869]]
+
+documentation.\61\ We also note that, while such legacy facilities verified to have no original equipment manufacturer support will be excluded from Requirement R3, such facilities may still use generic EMT modeling and, as NERC describes, alternatives approximating EMT modeling exist, too. Consequently, we find that it is reasonable to allow legacy facilities where the original equipment manufacturer no longer supports EMT model(s) for the facility to be excluded from Requirement R3 and decline to direct NERC to remove the language.
+---------------------------------------------------------------------------
+
+\61\ See NERC MOD-026-2 Petition at 36, Ex. F (Analysis of Violation Risk Factors and Violation Severity Levels) at 12 (listing the failure to provide accompanying documentation for EMT models-- i.e., documentation of the original equipment manufacturer no longer supporting EMT models--as a violation of Requirement R3).
+---------------------------------------------------------------------------
+
+38. We find that the proposed Standard is consistent with the Commission's directive in Order No. 901 to ensure that the model verification process timeline is consistent with Order No. 2023 modeling deadline requirements. We clarify that nothing in Reliability Standard MOD-026-2 relieves an interconnection customer requesting to interconnect a non-synchronous generating facility of its obligation under a transmission provider's tariff to provide a validated EMT model to a transmission provider (including a regional transmission organization/independent system operator) if the transmission provider performs an EMT study as part of the interconnection study process.\62\ We also approve the proposed Reliability Standard's associated violation risk factors and violation severity levels, as well as the proposed implementation plans. Finally, we approve the retirement of Reliability Standards MOD-026-1 and MOD-027-1 immediately prior to the effective date of proposed Reliability Standard MOD-026-2.
+---------------------------------------------------------------------------
+
+\62\ Order No. 2023, 184 FERC ] 61,054 at P 1659; see pro forma Large Generator Interconnection Procedures, app. 1, attach. A; see also pro forma Small Generator Interconnection Procedures, attach.
+2.
+---------------------------------------------------------------------------
+
+V. Information Collection Statement
+
+39. The FERC-725A, FERC-725L, and FERC-725Z information collections requirements are subject to review by the Office of Management and Budget (OMB) under section 3507(d) of the Paperwork Reduction Act of 1995. OMB's regulations require approval of certain information collection requirements imposed by agency rules. Upon approval of a collection of information, OMB will assign an OMB control number and expiration date. Respondents subject to the filing requirements will not be penalized for failing to respond to these collections of information unless the collections of information display a valid OMB control number. The Commission solicits comments on the need for this information, whether the information will have practical utility, the accuracy of the burden estimates, ways to enhance the quality, utility, and clarity of the information to be collected or retained, and any suggested methods for minimizing respondents' burden, including the use of automated information techniques.
+40. The Commission bases its paperwork burden estimates on the additional paperwork burden for balancing authorities, generator owners, planning coordinators, reliability coordinators, transmission planners, transmission owners, and transmission operators presented by Reliability Standards MOD-032-2, IRO-010-6, TOP-003-8, MOD-033-3, and MOD-026-2, as modified, and the NERC Glossary definitions of DER, model validation, and model verification. Reliability Standards are objective-based and allow entities to choose compliance approaches best tailored to their systems. The new or modified NERC Glossary definitions are not expected to produce any new burden. The number of respondents that are subject to mandatory compliance with Reliability Standards MOD-032-2, IRO-010-6, TOP-003-8, MOD-033-3, and MOD-026-2, in the tables below, are based on the NERC Compliance Registry as of December 3, 2025, and good faith estimates provided by NERC to Commission staff, in August 2025. NERC estimates that there are 491 category 2 generator owners and 310 category 2 generator operators, which will be added to the respective category 1 generator owners and generator operators in the NERC Compliance Registry to reach an estimate of the total number of generator owners and generator operators.
+Based on these assumptions, we estimate the following reporting burden:
+---------------------------------------------------------------------------
+
+\63\ The ``Number of Entity'' data is compiled from the December 3, 2025, edition of the NERC Compliance Registry. ``BA'' means balancing authority; ``DP'' means distribution provider; ``GO'' means generator owner; ``PC'' means planning coordinator; ``RP'' means resource planner; ``TO'' means transmission owner; ``TP'' means transmission planner; ``TSP'' means transmission service provider; ``GOP'' means generator operator; ``RC'' means reliability coordinator; and ``TOP'' means transmission operator.''
+\64\ The estimated hourly cost (salary plus benefits) is a combination of the following categories from the BLS website, http://www.bls.gov/oes/current/naics2_22.htm: 75% of the average of an Electrical Engineer (17-2071) $71.19/hr., x .75 = 53.3925 ($53.39- rounded) ($53.39/hour); and 25% of an Information and Record Clerk (43-4199) $40.51/hr., $40.51 x .25 = 10.1275 ($10.13 rounded) ($10.13/hour), for a total ($53.39 + $10.13 = $63.52/hour).
+\65\ For this collection the GO will include category 1 entities (1,343 entities) from the December 3, 2025, NERC Compliance Registry; and NERC's estimate to Commission staff in August 2025 of category 2 generator owners registered entities in the United States (491 entities) for a total of (1,343 + 491) = 1,834. The estimate for category 2 generator owner entities is subject to change according to NERC due to: (1) facility cancellations or facilities with an expected commercial operation date delayed past May 15, 2026; (2) identification of type 1 and type 2 wind facilities that do not qualify as category 2 resources; (3) identification of facilities as category 1 resources; and (4) facilities can be inaccurately reported and subsequently removed from the list. NERC, Inverter-Based Resources Work Plan Progress Update, Docket No. RD22- 4-001, at 2 n.7 (filed Oct. 31, 2025) (NERC October 2025 Work Plan Update).
+
+Proposed Changes in Burden MOD-032-2 Docket No. RD26-1 -------------------------------------------------------------------------------------------------------------------------------------------------------- Number of
+Type and number of entity annual Total number of Average number of burden Reliability standard \63\ responses responses hours per response \64\ Total burden hours per entity
+(1)........................ (2) (1) * (2) = (3) (4)...................... (3) * (4) = (5) -------------------------------------------------------------------------------------------------------------------------------------------------------- Annual Collection MOD-032-2 FERC-725 L
+-------------------------------------------------------------------------------------------------------------------------------------------------------- Annual review and record 97 (BA).................... 1 97 8 hrs. $ 508.16/hr....... 776 hrs. $49,291.52.
+retention.
+299 (DP)................... 1 299 8 hrs. $508.16/hr........ 2,392 hrs. $151,939.84.
+1,834 (GO) \65\............ 1 1,834 8 hrs. $508.16/hr........ 14,672 hrs. $931,965.44.
+62 (PC).................... 1 62 16 hrs. $1016.32/hr...... 992 hrs. $63,011.84.
+157 (RP)................... 1 157 8 hrs. $508.16/hr........ 1,256 hrs. $79,781.12.
+341 (TO)................... 1 341 8 hrs. $508.16/hr........ 2,728 hrs. $173,282.56.
+208 (TP)................... 1 208 16 hrs. $1016.32/hr...... 3,328 hrs. $211,394.56.
+
+[[Page 8870]]
+
+70 (TSP)................... 1 70 8 hrs. $508.16/hr........ 560 hrs. $35,571.20.
+--------------------------------------------------------------------------------------------- Total for MOD-032-2...... ........................... ........... 3,068 ......................... 26,704 hrs. $1,696,238.08.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Proposed Changes in Burden IRO-010-6 Docket No. RD26-1 -------------------------------------------------------------------------------------------------------------------------------------------------------- Number of
+Type and number of entity annual Total number of Average number of burden Reliability standard \66\ responses responses hours per response \67\ Total burden hours per entity
+(1)........................ (2) (1) * (2) = (3) (4)...................... (3) * (4) = (5) -------------------------------------------------------------------------------------------------------------------------------------------------------- Annual Collection IRO-010-6 FERC-725 Z
+-------------------------------------------------------------------------------------------------------------------------------------------------------- Annual review and record 12 (RC).................... 1 12 8 hrs. $508.16/hr........ 96 hrs. $6,097.92.
+retention.
+97 (BA).................... 1 97 8 hrs. $508.16/hr........ 776 hrs. $49,291.52.
+1,834 (GO)................. 1 1,834 8 hrs. $508.16/hr........ 14,672 hrs. $931,965.44.
+1,333 (GOP) \68\........... 1 1,333 8 hrs. $508.16/hr........ 10,664 hrs. $677,377.28.
+170 (TOP).................. 1 170 8 hrs. $508.16/hr........ 1,360 hrs. $86,387.20.
+341 (TO)................... 1 341 8 hrs. $508.16/hr........ 2,728 hrs. $173,282.56.
+299 (DP)................... 1 299 8 hrs. $508.16/hr........ 2,392 hrs. $151,939.84.
+--------------------------------------------------------------------------------------------- Total for IRO-010-6...... ........................... ........... 4,086 ......................... 32,688 hrs. $2,076,341.76.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Proposed Changes in Burden TOP-003-8 Docket No. RD26-1 -------------------------------------------------------------------------------------------------------------------------------------------------------- Number of
+Type and number of entity annual Total number of Average number of burden Reliability standard \69\ responses responses hours per response \70\ Total burden hours per entity
+(1)........................ (2) (1) * (2) = (3) (4)...................... (3) * (4) = (5) -------------------------------------------------------------------------------------------------------------------------------------------------------- Annual Collection TOP-003-8 FERC-725 A
+-------------------------------------------------------------------------------------------------------------------------------------------------------- Annual review and record 170 (TOP).................. 1 170 8 hrs. $508.16/hr........ 1,360 hrs. $86,387.20.
+retention.
+97 (BA).................... 1 97 8 hrs. $508.16/hr........ 776 hrs. $49,291.52.
+1,834 (GO)................. 1 1,834 8 hrs. $508.16/hr........ 14,672 hrs. $931,965.44.
+1,333 (GOP)................ 1 1,333 8 hrs. $565.36/hr........ 10,664 hrs. $677,377.28.
+341 (TO)................... 1 341 8 hrs. $508.16/hr........ 2,728 hrs. $173,282.56.
+299 (DP)................... 1 299 8 hrs. $508.16/hr........ 2,392 hrs. $151,939.84.
+--------------------------------------------------------------------------------------------- Total for TOP-003-8...... ........................... ........... 4,074 ......................... 32,592 hrs. $2,070,243.84.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------
+
+\66\ The ``Number of Entity'' data is compiled from the December 3, 2025, edition of the NERC Compliance Registry.
+\67\ The estimated hourly cost (salary plus benefits) is a combination of the following categories from the BLS website, http://www.bls.gov/oes/current/naics2_22.htm: 75% of the average of an Electrical Engineer (17-2071) $71.19/hr., x .75 = 53.3925 ($53.39- rounded) ($53.39/hour); and 25% of an Information and Record Clerk (43-4199) $40.51/hr., $40.51 x .25 = 10.1275 ($10.13 rounded) ($10.13/hour), for a total ($53.39 + $10.13 = $63.52/hour).
+\68\ For this collection the generator operators (GOP) will include category 1 entities (1,023 entities) from the December 3, 2025, NERC Compliance Registry; and NERC's estimate to Commission staff in August 2025 of category 2 generator operators registered entities in the United States (310 entities) for a total of (1,023 +
+310) = 1,333. The estimate for category 2 generator operator entities is subject to change according to NERC due to: (1) facility cancellations or facilities with an expected commercial operation date delayed past May 15, 2026; (2) identification of type 1 and type 2 wind facilities that do not qualify as category 2 resources;
+(3) identification of facilities as category 1 resources; and (4) facilities can be inaccurately reported and subsequently removed from the list. NERC October 2025 Work Plan Update at 2 n.7.
+\69\ The ``Number of Entity'' data is compiled from the December 3, 2025, edition of the NERC Compliance Registry.
+\70\ The estimated hourly cost (salary plus benefits) is a combination of the following categories from the BLS website, http://www.bls.gov/oes/current/naics2_22.htm: 75% of the average of an Electrical Engineer (17-2071) $71.19/hr., x .75 = 53.3925 ($53.39- rounded) ($53.39/hour); and 25% of an Information and Record Clerk (43-199) $40.51/hr., $40.51 x .25 = 10.1275 ($10.13 rounded) ($10.13/hour), for a total ($53.39 + $10.13 = $63.52/hour).
+
+[[Page 8871]]
+
+Proposed Burden MOD-033-3 Docket No. RD26-2 -------------------------------------------------------------------------------------------------------------------------------------------------------- Number of
+Type and number of entity annual Total number of Average number of burden Reliability standard \71\ responses responses hours per response \72\ Total burden hours per entity
+(1)........................ (2) (1) * (2) = (3) (4)...................... (3) * (4) = (5) -------------------------------------------------------------------------------------------------------------------------------------------------------- Annual Collection MOD-033-3 FERC-725 L
+-------------------------------------------------------------------------------------------------------------------------------------------------------- Annual review and record 62 (PC).................... 1 62 8 hrs. $508.16 hr........ 496 hrs. $31,505.92.
+retention.
+12 (RC).................... 1 12 8 hrs. $508.16/hr........ 96 hrs. $6,097.92.
+170 (TOP).................. 1 170 8 hrs. $508.16/hr........ 1,360 hrs. $86,387.20.
+--------------------------------------------------------------------------------------------- Total for MOD-033-3...... ........................... ........... 244 ......................... 1,952 hrs. $123,991.04.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Proposed Changes in Burden MOD-26-2 Docket No. RD26-3 -------------------------------------------------------------------------------------------------------------------------------------------------------- Number of
+Type and number of entity annual Total number of Average number of burden Reliability standard \73\ responses responses hours per response \74\ Total burden hours per entity
+(1)........................ (2) (1) * (2) = (3) (4)...................... (3) * (4) = (5) -------------------------------------------------------------------------------------------------------------------------------------------------------- Annual Collection MOD-026-2 FERC-725 L
+-------------------------------------------------------------------------------------------------------------------------------------------------------- Annual review and record 1,834 (GO)................. 1 1834 12 hrs. $762.24/hr....... 22,008 hrs. $1,397,948.16.
+retention.
+62 (PC).................... 1 62 8 hrs. $508.16/hr........ 496 hrs. $31,505.92.
+341 (TO)................... 1 341 8 hrs. $508.16/hr........ 2,728 hrs. $173,282.56.
+208 (TP)................... 1 208 10 hrs. $635.20/hr....... 2,080 hrs. $132,121.60.
+--------------------------------------------------------------------------------------------- Total for MOD-026-2...... ........................... ........... 2,445 ......................... 27,312 hrs. $1,734,858.24.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Titles: Mandatory Reliability Standards within Interconnection Reliability Operations and Coordination (IRO); Reliability Coordinator Data and information Specification and Collection (IRO-010-6) (RD26-1- 000), Bulk-Power System Transmission Operations (TOP); Transmission Operator and Balancing Authority Data and Information Specification and Collection (TOP-003-8) (RD26-1-000), Modeling, Data, and Analysis (MOD); Data for Power System Modeling and Analysis (MOD-032-2) (RD26-1- 000), Steady-State and Dynamic System Model Validation (MOD-033-3) (RD26-2-000),Verification and Validation of Dynamic Models and Data (MOD-026-2) (RD26-3-000).
+---------------------------------------------------------------------------
+
+\71\ The ``Number of Entity'' data is compiled from the December 3, 2025, edition of the NERC Compliance Registry.
+\72\ The estimated hourly cost (salary plus benefits) is a combination of the following categories from the BLS website, http://www.bls.gov/oes/current/naics2_22.htm: 75% of the average of an Electrical Engineer (17-2071) $71.19/hr., x .75 = 53.3925 ($53.39- rounded) ($53.39/hour); and 25% of an Information and Record Clerk (43-4199) $40.51/hr., $40.51 x .25 = 10.1275 ($10.13 rounded) ($10.13/hour), for a total ($53.39 + $10.13 = $63.52/hour).
+\73\ The ``Number of Entity'' data is compiled from the December 3, 2025, edition of the NERC Compliance Registry.
+\74\ The estimated hourly cost (salary plus benefits) is a combination of the following categories from the BLS website, http://www.bls.gov/oes/current/naics2_22.htm: 75% of the average of an Electrical Engineer (17-2071) $71.19/hr., x .75 = 53.3925 ($53.39- rounded) ($53.39/hour); and 25% of an Information and Record Clerk (43-4199) $40.51/hr., $40.51 x .25 = 10.1275 ($10.13 rounded) ($10.13/hour), for a total ($53.39 + $10.13 = $63.52/hour).
+---------------------------------------------------------------------------
+
+Action: Revisions to Existing Collections of Information in FERC- 725A (TOP-003-8), FERC-725L (MOD-026-2, MOD-032-2, MOD-033-3), FERC- 725Z (IRO-010-6).
+OMB Control Nos: Bulk-Power System Transmission Operations (TOP) FERC-725A (1902-0244), Modeling, Data, and Analysis (MOD) FERC-725L (1902-0261), and Interconnection Reliability Operations and Coordination (IRO) FERC-725Z (1902-0276).
+Respondents: Business or other for profit institutions, and not for profit institutions.
+Frequency of Responses: On occasion.
+Necessity of the Information: This order approves the requested modifications to Reliability Standards related to IBR-specific modeling data and analysis; interconnection reliability operations and coordination; and transmission operations. The order also approves the proposed definitions in the NERC Glossary of distributed energy resources, model validation, and verification. As discussed above, the Commission approves proposed Reliability Standards MOD-032-2, IRO-010- 6, TOP-003-8, MOD-033-3, and MOD-026-2 and the proposed definitions, pursuant to section 215(d)(2), because they establish data and model requirements that ensure that Bulk-Power System planners and operators will have the data and models needed to plan for, operate, and reliably integrate IBRs on the Bulk-Power System.
+Internal review: The Commission has reviewed the proposed Reliability Standards and made a determination that its action is necessary to implement section 215 of the FPA. The Commission has assured itself, by means of its internal review, that there is specific, objective support for the burden estimates associated with the information requirements.
+41. Interested persons may obtain information on the reporting requirements by contacting the Federal Energy Regulatory Commission, Office of the Executive Director, 888 First Street, NE, Washington, DC 20426 [Attention: Kayla Williams, email: [email protected], phone:
+(202) 502-6468].
+42. Comments concerning the information collections and requirements approved for retirement in this order and the associated burden estimates, should be sent to the Commission (identified by Docket Nos. RD26-1-000, RD26-2-000, and RD26-3-000 as appropriate), using the following methods. Electronic filing through https://www.ferc.gov is preferred. Electronic Filing should be filed in acceptable native applications and print-to-PDF, but not in scanned or picture format. For those unable to file electronically, comments may be filed by U.S. Postal Service mail or by hand
+
+[[Page 8872]]
+
+(including courier) delivery: Mail via U.S. Postal Service Only:
+Addressed to: Federal Energy Regulatory Commission, Secretary of the Commission, 888 First Street NE, Washington, DC 20426. Hand (including courier) delivery: Deliver to: Federal Energy Regulatory Commission, 12225 Wilkins Avenue, Rockville, MD 20852.
+
+VI. Document Availability
+
+43. In addition to publishing the full text of this document in the Federal Register, the Commission provides all interested persons an opportunity to view and/or print the contents of this document via the internet through the Commission's Home Page (http://www.ferc.gov).
+44. From the Commission's Home Page on the internet, this information is available on eLibrary. The full text of this document is available on eLibrary in PDF and Microsoft Word format for viewing, printing, and/or downloading. To access this document in eLibrary, type the docket number excluding the last three digits of this document in the docket number field.
+45. User assistance is available for eLibrary and the Commission's website during normal business hours from the Commission's Online Support at (202) 502-6652 (toll free at 1-866-208-3676) or email at [email protected], or the Public Reference Room at (202) 502- 8371, TTY (202) 502-8659. Email the Public Reference Room at [email protected].
+The Commission orders:
+(A) Proposed Reliability Standards MOD-032-2, IRO-010-6, and TOP- 003-8, their associated implementation plan, violation risk factors, and violation severity levels, the defined term distributed energy resource, and the proposed retirements of Reliability Standard MOD-032- 1, IRO-010-5, and TOP-003-7 immediately prior to the effective date of the successor reliability standards are hereby approved, as discussed in the body of this order.
+(B) Proposed Reliability Standard MOD-033-3, its associated implementation plan, violation risk factors, and violation severity levels and the proposed retirement of Reliability Standard MOD-033-2 immediately prior to the effective date of proposed Reliability Standard MOD-033-3 are hereby approved, as discussed in the body of this order.
+(C) Proposed Reliability Standard MOD-026-2, its associated implementation plan, violation risk factors, and violation severity levels, the defined terms model validation and model verification, and the proposed retirements of Reliability Standards MOD-026-1 and MOD- 027-1 immediately prior to the effective date of proposed Reliability Standard MOD-026-2 are hereby approved, as discussed in the body of this order.
+
+By the Commission.
+
+Issued: February 19, 2026.
+Debbie-Anne A. Reese,
+Secretary.
+[FR Doc. 2026-03659 Filed 2-23-26; 8:45 am]
+BILLING CODE 6717-01-P

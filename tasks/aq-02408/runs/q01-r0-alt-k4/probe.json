@@ -1,0 +1,29 @@
+{
+  "purpose": "removal probes (author diagnostic; user standing request 2026-10-08 to check the Document check before hand-over; concrete concern: Doc 4 market facts may be inferred or recalled)",
+  "packets": [
+    {
+      "packet": "solver-1",
+      "question": "q01",
+      "removed_local": "D04 (Doc 4)",
+      "renumbered": {
+        "D01": "D01",
+        "D02": "D02",
+        "D03": "D03",
+        "D05": "D04",
+        "D06": "D05"
+      }
+    },
+    {
+      "packet": "solver-2",
+      "question": "q01",
+      "removed_local": "D05 (Doc 5)",
+      "renumbered": {
+        "D01": "D01",
+        "D02": "D02",
+        "D03": "D03",
+        "D04": "D04",
+        "D06": "D05"
+      }
+    }
+  ]
+}
