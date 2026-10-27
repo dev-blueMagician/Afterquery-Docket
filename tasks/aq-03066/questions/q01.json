@@ -1,0 +1,77 @@
+{
+  "question": "At Crown Fibre Holdings' mid-point WACC for Enable, by what percentage does the opening loss asset in the Commerce Commission's illustrative calculation fall, to the nearest whole percent?",
+  "number_of_asks": 1,
+  "gold_answer": "6%",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 2, method slides and appendix table): the Commerce Commission's worked example of past losses has one rate input, WACC 10%, and uses it twice. Each year's return on capital is the WACC times that year's qualifying RAB, and each year's loss is carried to the end of 2021 at a discount rate equal to the WACC. On those inputs the opening loss asset is 1,542.\nStep 2. Source input (Doc 6, cost of capital paragraph): CCHL reports that Crown Fibre Holdings used a mid-point WACC of 9% when it set Enable's wholesale pricing.\nStep 3. Calculation (Doc 2 and Doc 6): gap between the two rates in percentage points, 10 - 9 = 1\nStep 4. Calculation (Doc 2 and Doc 6): the same gap as a fraction of the qualifying RAB, 1 / 100 = 0.01\nStep 5. Calculation (Doc 2 and Doc 6): one year of growth on a base of 100 at the lower rate, 100 + 9 = 109\nStep 6. Calculation (Doc 2 and Doc 6): that growth as a multiplier, 109 / 100 = 1.09\nStep 7. Calculation (Doc 2 and Doc 6): cut in the 2013 return on capital, 20 × 0.01 = 0.2\nStep 8. Calculation (Doc 2 and Doc 6): loss for 2013 at the lower rate, 55 - 0.2 = 54.8\nStep 9. Calculation (Doc 2 and Doc 6): the first loss carried one year, 50 × 1.09 = 54.5\nStep 10. Calculation (Doc 2 and Doc 6): balance at the end of 2013, 54.5 + 54.8 = 109.3\nStep 11. Calculation (Doc 2 and Doc 6): cut in the 2014 return on capital, 68 × 0.01 = 0.68\nStep 12. Calculation (Doc 2 and Doc 6): loss for 2014 at the lower rate, 64 - 0.68 = 63.32\nStep 13. Calculation (Doc 2 and Doc 6): balance carried from 2013 to 2014, 109.3 × 1.09 = 119.137\nStep 14. Calculation (Doc 2 and Doc 6): balance at the end of 2014, 119.137 + 63.32 = 182.457\nStep 15. Calculation (Doc 2 and Doc 6): cut in the 2015 return on capital, 140 × 0.01 = 1.4\nStep 16. Calculation (Doc 2 and Doc 6): loss for 2015 at the lower rate, 79 - 1.4 = 77.6\nStep 17. Calculation (Doc 2 and Doc 6): balance carried from 2014 to 2015, 182.457 × 1.09 = 198.87813\nStep 18. Calculation (Doc 2 and Doc 6): balance at the end of 2015, 198.87813 + 77.6 = 276.47813\nStep 19. Calculation (Doc 2 and Doc 6): cut in the 2016 return on capital, 226 × 0.01 = 2.26\nStep 20. Calculation (Doc 2 and Doc 6): loss for 2016 at the lower rate, 96 - 2.26 = 93.74\nStep 21. Calculation (Doc 2 and Doc 6): balance carried from 2015 to 2016, 276.47813 × 1.09 = 301.3611617\nStep 22. Calculation (Doc 2 and Doc 6): balance at the end of 2016, 301.3611617 + 93.74 = 395.1011617\nStep 23. Calculation (Doc 2 and Doc 6): cut in the 2017 return on capital, 302 × 0.01 = 3.02\nStep 24. Calculation (Doc 2 and Doc 6): loss for 2017 at the lower rate, 138 - 3.02 = 134.98\nStep 25. Calculation (Doc 2 and Doc 6): balance carried from 2016 to 2017, 395.1011617 × 1.09 = 430.660266253\nStep 26. Calculation (Doc 2 and Doc 6): balance at the end of 2017, 430.660266253 + 134.98 = 565.640266253\nStep 27. Calculation (Doc 2 and Doc 6): cut in the 2018 return on capital, 369 × 0.01 = 3.69\nStep 28. Calculation (Doc 2 and Doc 6): loss for 2018 at the lower rate, 148 - 3.69 = 144.31\nStep 29. Calculation (Doc 2 and Doc 6): balance carried from 2017 to 2018, 565.640266253 × 1.09 = 616.54789021577\nStep 30. Calculation (Doc 2 and Doc 6): balance at the end of 2018, 616.54789021577 + 144.31 = 760.85789021577\nStep 31. Calculation (Doc 2 and Doc 6): cut in the 2019 return on capital, 428 × 0.01 = 4.28\nStep 32. Calculation (Doc 2 and Doc 6): loss for 2019 at the lower rate, 152 - 4.28 = 147.72\nStep 33. Calculation (Doc 2 and Doc 6): balance carried from 2018 to 2019, 760.85789021577 × 1.09 = 829.3351003351893\nStep 34. Calculation (Doc 2 and Doc 6): balance at the end of 2019, 829.3351003351893 + 147.72 = 977.0551003351893\nStep 35. Calculation (Doc 2 and Doc 6): cut in the 2020 return on capital, 579 × 0.01 = 5.79\nStep 36. Calculation (Doc 2 and Doc 6): loss for 2020 at the lower rate, 154 - 5.79 = 148.21\nStep 37. Calculation (Doc 2 and Doc 6): balance carried from 2019 to 2020, 977.0551003351893 × 1.09 = 1064.990059365356337\nStep 38. Calculation (Doc 2 and Doc 6): balance at the end of 2020, 1064.990059365356337 + 148.21 = 1213.200059365356337\nStep 39. Calculation (Doc 2 and Doc 6): cut in the 2021 return on capital, 723 × 0.01 = 7.23\nStep 40. Calculation (Doc 2 and Doc 6): loss for 2021 at the lower rate, 136 - 7.23 = 128.77\nStep 41. Calculation (Doc 2 and Doc 6): balance carried from 2020 to 2021, 1213.200059365356337 × 1.09 = 1322.38806470823840733\nStep 42. Calculation (Doc 2 and Doc 6): balance at the end of 2021, 1322.38806470823840733 + 128.77 = 1451.15806470823840733\nStep 43. Calculation (Doc 2 and Doc 6): fall in the opening loss asset, 1,542 - 1451.15806470823840733 = 90.84193529176159267\nStep 44. Calculation (Doc 2 and Doc 6): the fall as a share of the printed opening loss asset, 90.84193529176159267 / 1,542 = 6%",
+  "answer_components": [
+    "6%"
+  ],
+  "evidence": [
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Inputs WACC 10%"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "20 68 140 226 302 369 428 579 723 Return on capital (WACC x Qualifying RAB)"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Losses (ie, shortfall) (50) (55) (64) (79) (96) (138) (148) (152) (154) (136) (1,071)"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "PV losses forward to 2021 (118) (117) (125) (139) (155) (202) (197) (184) (170) (136) (1,542)"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Any annual losses are adjusted to present value at the end of 2021 and summed to calculate the opening value of the loss asset at implementation date."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "The discount rate we propose to apply is the same as the WACC value"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "mid-point WACC of 9%, utilised by Crown Fibre Holdings Limited in establishing Enable"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Document convention",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    },
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Document convention: Doc 2's method slide sets the discount rate equal to the WACC, so 9% changes both the return on qualifying RAB and the compounding; changing one alone gives 2% or 4%, not 6%. Look-alike measure: Doc 6's same sentence prints the Commission's 5.56% copper mid-point, giving 24%."
+}

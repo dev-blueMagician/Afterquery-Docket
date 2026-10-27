@@ -1,0 +1,724 @@
+New regulatory framework for fibre: proposed approach
+Submission | Commerce Commission
+21 December 2018
+
+Contents
+Executive Summary .............................................................................................................. 1 Introduction........................................................................................................................... 3 Context within which utility regulation will be applied............................................................. 3 Process for developing the fibre input methodologies........................................................ 3 Purpose statements and relevance of Part 4 to IMs, s174 purpose ................................... 4 Practical application of s166(2)(b) ..................................................................................... 9 Approach to Input Methodologies: Part 4 as a starting point for fibre IMs ........................ 10 Key issues for implementing Part 6 in our context............................................................... 10 Economic principles potentially relevant to our new regime................................................. 11 Whether Part 6 requires a BBM model ............................................................................ 11 Economic principles in decision making........................................................................... 12 The proposed economic principles .................................................................................. 13 Cross-cutting features of input methodologies .................................................................... 14 Scope of regulated services ............................................................................................ 14 Matters for which input methodologies are determined.................................................... 16 Asset Valuation................................................................................................................... 16 Scope of the regulated asset based and its valuation...................................................... 16 Calculation of initial losses and Crown financing ............................................................. 17 Other................................................................................................................................... 21 Allocating common costs................................................................................................. 21 Using Part 4/FPP approach to WACC ............................................................................. 23 Scope of the quality dimensions input methodology ........................................................ 24 Input methodologies that support the setting of price quality paths .................................. 25
+
+Part 6 Implementation Public Version 1
+Executive Summary
+Our key interest is that the Commission’s proposed approach to implementing the new fibre regulatory framework gives best effect to the purpose of the new Part 6 and does not result in outcomes that might create distortions to competition in downstream and adjacent markets The Commission has significant recent experience with the implementation and design of utility regulatory frameworks designed to balance the needs of end-users (which benefit from competition, innovation, and lower prices) and utility infrastructure owners (which benefit from investment certainty). Under Part 4 of the Commerce Act 1986 (Part 4) it has implemented such schemes for electricity distribution businesses, gas pipeline operators and airport owners.
+Part 6 of the Telecommunications Act 2001 (the Act) now directs the Commission to implement utilitystyle regulation to UFB fibre networks. As with Part 4, these networks have been regulated because the regulated providers who operate these networks have substantial market power. As a starting point, that means:
+
+1. There are no meaningful competitive constraints on the FFLAS which providers offer;
+2. FFLAS providers have the power to set prices, terms and conditions that are substantially different to those that would prevail in competitive markets; and
+3. FFLAS providers have the incentive and the ability to both prevent the emergence of new competitive constraints and to distort competition in downstream and adjacent markets.
+Fibre services are a key input into downstream markets, and are used, for example, to support wireless networks that have the future potential to become credible competitive constraints on fibre network operators in broadband markets.
+
+The competitive landscape in telecommunications is much more dynamic than that of the Part 4 sectors, and the Act recognises this by directing the Commission to have regard to, and to promote, actual competition. In contrast, Part 4 asked the Commission to promote outcomes that were consistent with competition. The decisions the Commission makes in implementing the Part 6 regulatory framework will affect real competition as opposed to hypothetical competition, and in our view this must be at the centre of the Commission’s decision-making process throughout the Part 6 process.
+
+So while the Commission has experience in applying utility regulation to other sectors under Part 4 of the Commerce Act 1986, we believe there are important differences in both the legislative framework and the market dynamics that the Commission will need to have regard to in designing the regulatory regime under Part 6.
+
+Many of these are recognised by the Commission in its approach paper, which recognises the differences in legislative frameworks and competition structures and seeks feedback on what other differences it should be cognisant of.
+
+In our view, the list of differences will include:
+
+-  Pricing Principles IM;
+
+-  FCM;
+
+-  Asymmetric social consequences;
+
+-  Cost allocation.
+
+Finally, we note also that Part 6 provides greater direction to the Commission on the starting value of the RAB and directs the Commission to include “actual losses” from the period preceding 2020 in that RAB. This raises another unique issue for the Commission to consider: how to account correctly for the overlap between the pre-2020 regulatory framework, designed to ensure Chorus received a normal return on a hypothetical efficient fibre network, and the post-2020 regulatory framework,
+
+Part 6 Implementation Public Version 2
+designed to ensure Chorus receives a normal return on its actual fibre network. It will be important for the Commission to ensure there is no double recovery during this period. The High Court observed that there is little or no impact to beneficial consumer outcomes from increasing the value of the initial RAB, but "what initial RAB values do have a direct impact on is the extent to which suppliers are limited in their ability to extract excessive profits." Accordingly, "an initial RAB value would, in our view therefore, be fundamentally flawed if it generated prices that were inconsistent with the achievement of the s 52A(1) purpose and outcomes, in particular if it failed to limit suppliers' ability to extract excessive profits over time.”
+
+1
+Other key issues that the Commission will likely face
+There are important differences in both the legislative framework and the market context and the Commission will need to find an approach that promotes the Part 6 purposes. This will likely require first principle consideration of key IM parameters, for example:
+
+-  To define IMs and Price/Quality paths that do not unduly affect competition from potential rivals – these should support the complementary s162 and s166(2)(b) aims;
+
+-  To determine efficient incentives and allocation of risks in this markedly different context - these are key utility regulation regime settings designed to achieve specific outcomes;
+
+-  Given the importance of pricing efficiency and competition concerns, setting out key pricing principles; and
+
+-  Erring towards more prescriptive IMs - particularly for core methodology such as asset valuation, cost allocation, the cost of capital and any pricing principles – to promote competition over time.
+
+1 Wellington International Airport Limited v Commerce Commission [2013] NZHC 3289 at [758] to [760].
+
+Part 6 Implementation Public Version 3
+Introduction
+1. Thank you for the opportunity to comment on the Commission’s proposed approach for developing and implementing the fibre regulatory regime set out in Part 6 of Act (the approach paper).
+
+2. The Commission has been tasked with regulating access to, or interconnection with, UFB fibre networks. In applying utility regulation, regulators typically seek to promote affordability of services, investment, and efficiency.
+
+3. The implementation of traditional utility-style regulation can deliver above normal returns for regulated entities and poor services for end-users, undermining public confidence in utility regulation.
+
+2 The Commission should be mindful to guard against that. Accordingly, understanding the interests of end users will remain an important precursor to decisions that best give effect to
+Part 6 of the Act.
+
+4. In this case, the Commission has also been asked to put a particular focus on promoting workable competition for the long-term benefits of end users of telecommunications services. This is no small task. Chorus is both a wholesaler of an essential input and competitor of its wholesale customers. The interconnected nature of the telecommunications system means that Commission Part 6 decisions will, accordingly, have implications for competition and innovation across the sector. This is the key issue developed in this submission.
+
+5. This submission generally follows the structure of the approach paper:
+
+a. The context within which utility regulation will be applied, including purpose statements and the importance of promotion of competition;
+
+b. Key issues the Commission will likely need to address early in the IMs process. This section draws on the Axiom Economics report attached;
+
+c. The economic principles and cross cutting technical features of input methodologies; and
+d. Comments on specific Part 6 issues raised in the approach paper, including asset valuation, allocation of common costs and WACC.
+
+6. An Axiom Economics (Axiom) expert report is attached. We asked Axiom to set out its thinking on the issues the Commission should consider through the early phases of the IMs process.
+Context within which utility regulation will be applied
+Process for developing the fibre input methodologies
+Q1 What changes to our process (if any) would you suggest to enhance the opportunity for you, and other stakeholders, to provide input and views to us as we develop the fibre input methodologies?
+
+7. We suggest the Commission consider further how it can engage end users to better understand preferences and may also want to devote more time at the start of the process considering key utility model settings (eg incentives, risk, promotion of competition).
+
+2 For example, Oxera note declining public confidence in UK utility regulatory brought about by the outcomes from these models. See Legitimacy and renationalisation: where next for utility regulation?
+March 2018 https://www.oxera.com/agenda/legitimacy-renationalisation-utility-regulation/
+
+Part 6 Implementation Public Version 4
+8. First, the approach paper does not appear to canvas in substantive detail what is important to end-users. However, end user’s interests is the key Part 6 concern. The interests of Part 6 endusers are further likely to be different to Part 4 consumers because end user outcomes, in this case, are multi-dimensional and include efficient use of fibre infrastructure as InternetNZ reminded us at the December 2018 workshop.
+
+9. The Commission set out the importance of the consumer voice in its earlier IM funding paper, and the contribution of consumer groups at the workshop reinforced the importance of the consumer voice. If end user interests are not front of mind, we risk undermining confidence in the regulatory framework and the outcomes set out in the Oxera article.3
+10. We note that the Commission has appointed an advisory panel which we think could help to strengthen the consumer voice in the process. Accordingly, we encourage the Commission to consider:
+
+a. Adding a consumer expert to that panel to advise on consumer issues; and/or
+b. Asking the advisory panel to apply a specific end-user interest lens to their advice.
+11. Second, the paper highlights that there are key approach decisions that apply across the specific IMs, eg the overall approach to incentives, risk allocation and promotion of competition will have implications across the IMs. We recommend that the Commission consider spending more time considering these matters earlier in the process, potentially lengthening the emerging views phase of the process to do this.
+
+12. This could be done within the proposed timetable by pushing the emerging views and Draft IMs papers out to January 2019, resolving matters earlier de-risks process and provides certainty earlier.
+
+Purpose statements and relevance of Part 4 to IMs, s174 purpose Q3 What are your views on our proposed interpretation of 'end-users of telecommunications services' in s 162 and s 166(2)(b)?
+
+Q4 What are your views on our preliminary views on how s 162 and s 166(2)(b) interact?
+Similarities with Part 4
+13. The Part 6 purpose statement (Section 162 of the Telecommunications Act) is modelled on the Part 4 purpose statement (section 52A of the Commerce Act). The Part 4 purpose therefore informs interpretation of the Part 6 purpose. The focus of both is on promoting outcomes consistent with workably competitive markets.
+
+14. The High Court in Wellington International Airport Limited v Commerce Commission (Wellington Airport) stated that4:
+
+A workably competitive market is one that provides outcomes that are reasonably close to those found in strongly competitive markets. Such outcomes are summarised in economic terminology by the term "economic efficiency" with its familiar components: technical efficiency, allocative efficiency and dynamic efficiency. Closely associated with the idea of efficiency is the conditions that prices reflect efficient costs (including the cost of capital, and thus a reasonable level of profit).
+
+3 Oxera article referred above.
+
+4 Wellington International Airport Limited v Commerce Commission [2013] NZHC 3289 at [14], [15], [18] and [21].
+
+Part 6 Implementation Public Version 5
+There is a large body of theoretical literature about the relationship between prices, incentives, efficiency and market outcomes. But the practical context is the existence of sufficient rivalry between firms (sellers) to push prices close to efficient costs. […] In our view, what matters is that workably competitive markets have a tendency towards generating certain outcomes. These outcomes include the earning by firms of normal rates of return, and the existence of prices that reflect such normal rates of return, after covering the firms' efficient costs. …
+The same tendencies towards prices based on efficient costs and reasonable rates of return will lead to improved efficiency, provision of services reflecting consumer demands, sharing of the benefits of efficiency gains with consumers, and limited ability to extract excessive profits.
+
+[emphasis added]
+
+15. It is therefore clear that, under section 162, a key requirement is for the Commission to set regulatory rules than ensure that prices charged by the regulated entities only recover efficiently incurred costs and reasonable rates of return. As emphasised by the High Court: 5 A key output of Part 4 regulation is prices, the prices that regulated businesses charge for their services. In workably competitive markets, prices are the manifestation of market outcomes:
+that is, the outcomes of the process of competitive rivalry and of the interaction between supply and demand. It is prices that determine profits. In each case, prices interact with demand and expected demand. Markets where there is little or no competition do not produce price outcomes that are consistent with the outcomes to be promoted in the s52A(1) purpose. It is the difficult role of Part 4 regulation to produce prices that generate the s 52A(1)(a) to (d) outcomes, consistent with the outcomes produced in workably competitive markets.
+Prices are, therefore, at the heart of Part 4 regulation.
+
+[emphasis added]
+
+16. The input methodologies are key to the control of prices charged by regulated suppliers, as they produce the estimate of efficient costs and reasonable return.
+
+17. In summary, based on Part 4 precedent, section 162 requires the Commission to set input methodologies that only allow regulated suppliers to set prices that recover efficiently incurred costs and a reasonable return (or, in the case of ID regulation only, allow the Commission to monitor whether prices recover efficiently incurred costs).
+
+Section 166
+18. Section 166 explicitly links the section 162 purpose to how the Commission is required to make any determination under Part 6 for fibre fixed line access services (FFLAS). Section 166 provides:
+
+166 Matters to be considered by Commission and Minister
+(1) This section applies if the Commission or the Minister is required under this Part to make a recommendation, determination, or decision.
+
+(2) The Commission or Minister must make the recommendation, determination, or decision that the Commission or Minister considers best gives, or is likely to best give, effect-
+(a) to the purpose in section 162; and
+
+5 Wellington International Airport Limited v Commerce Commission [2013] NZHC 3289 at [29].
+
+Part 6 Implementation Public Version 6
+(b) to the extent that the Commission or Minister considers it relevant, to the promotion of workable competition in telecommunications markets for the long-term benefit of endusers of telecommunications services.
+[emphasis added]
+
+19. The High Court in Wellington Airport confirmed that the Commission must give effect to the Part 4 purpose statement when setting input methodologies (IMs).6 Section 166 reinforces that the Commission must ensure the section 162 objectives are achieved. This is because:
+a. With the insertion of section 166, the Act explicitly directs the Commission to give effect to the section 162 purpose statement. This language is not present in Part 4.
+b. The Commission must therefore be able to demonstrate how the input methodology it determines will give effect to the requirement that regulated suppliers can only recover efficient costs and a reasonable return.
+
+Section 166(2)(b)
+
+20. A key difference between Part 4 and Part 6 is that section 166(2) requires the Commission to best give effect, to the extent it considers it relevant, to the promotion of actual workable competition for the benefit of end-users in all telecommunications markets. Part 4, on the basis that the regulated entities are natural monopolies, is only concerned with promoting outcomes "consistent with" outcomes in workably competitive markets for the benefit of consumers of the regulated services.
+
+21. The question is what this adds to the requirement, discussed above, to ensure regulated prices only recover efficient costs. In our view:
+
+a. Unlike Part 4, where the focus is on controlling the regulated service for the benefits of consumers of that service, under Part 6 there is a clear legislative direction for the Commission to also consider how its control of the regulated service will impact on competition for the benefit of end users of other (non-FFLS) services.
+
+b. It follows that limiting prices to recover the efficient costs of providing FFLS may not be sufficient to comply with section 166(2). The Commission must also consider whether further steps are required to promote competition in other markets (or prevent distortion of competition). This could include promoting or preventing distortion of existing and likely future competition:
+
+i. at the wholesale level (eg fixed wireless, 5G); and
+ii. at the retail level (eg services provided to end-users that use relevant wholesale services as inputs).
+
+c. That is, while Part 6 (like Part 4) regulation is predicated on the regulated service being a natural monopoly, section 166(2) necessarily involves consideration of whether the regulated supplier in fact competes (or could compete in the future) at
+
+6 The High Court referred to the Supreme Court's statement in Unison Networks Ltd v Commerce Commission [2007] NZSC 74 and noted at [228]: "The various purpose statements perform a quite different role. The Commission must be guided by them and must give effect to them. As the Supreme Court has explained: '[a statutory body] must act within the scope of the authority conferred by Parliament and for the purposes for which those powers were conferred.' The Supreme Court also noted there that “a power granted for a particular purpose must be used for that purpose” and that even a 'broadly framed discretion should always be exercised to promote the policy and objects of the Act.'"
+
+Part 6 Implementation Public Version 7
+the wholesale level to some degree. Any increase in competition at the wholesale level will benefit end users of FFLAS-services and of non-FFLAS services.
+
+22. The Commission suggests that particular areas where section 166(2) will be relevant include:
+a. Wireless services that may be a substitute, or may become a closer substitute, for FFLAS in certain market segments (eg for end-users with relatively low bandwidth requirements).
+
+b. The potential for access-based in the competition in the future:7 Access-based competition is where a competitor purchases a wholesale input from a network operator, and uses that input to supply downstream products and services.
+[…]
+
+The relative prices for wholesale services will affect RSPs' decisions on how to deliver retail services to end-users. For example, an RSP has the choice between purchasing layer 2 bitstream services and investing in unbundled fibre services.
+23. This approach is consistent with Parliament's intent. The Economic Development, Science and Innovation Committee's (Select Committee) Report on the Telecommunications (New Regulatory Framework) Amendment Bill explained the inclusion of section 166(2)(b) as follows:8 We recommend amending section 166 to permit the Commission to consider all end users' interests, not just the interests of fibre users. This would give the Commission the necessary flexibility to respond to technological change.
+
+24. In our view:
+
+a. Section 166(2) is a clear direction that the Commission should be concerned with the possibility of the regulated supplier using its market power to distort competition in other markets through the price and non-price terms it offers to retailers. Further, given the building blocks will inform prescribed maximum prices, which are excluded by section 205 from Part 2 of the Commerce Act, it is important that the Commission considers the potential impact on competition in accordance with s 166(2).
+b. Compared to Part 4, section 166(2)(b) will likely require the Commission to pay closer attention to the rules that determine how services are priced, as relativities between FFLS service prices and non-regulated prices will be important to the promotion of competition for all end-users. In particular:
+
+i. cost allocation rules and disclosure should be at the service level (eg not at the aggregate FFLS level); and
+ii. pricing methodologies may be desirable.
+
+25. The Commission correctly notes that section 166(2)(b) is a mandatory relevant consideration, and that:9
+
+7 Approach paper at [5.34].
+
+8 Economic Development, Science and Innovation Committee Report on Telecommunications (New Regulatory Framework) Amendment Bill (4 May 2018) ("Select Committee Report") at 4.
+
+9 Approach paper at [5.39.3].
+
+Part 6 Implementation Public Version 8
+In assessing whether the promotion of workable competition is relevant, we will have to consider whether a decision has the potential to affect the level of competition in one or more telecommunications markets.
+
+26. However, we disagree that section 166(2)(b) is only mandatory "in cases where we consider that it is relevant".10 Instead:
+
+a. For every decision, the Commission must consider whether section 166(2)(b) is relevant; and
+b. Its decision on relevance must be objectively reasonable, eg supported by evidence.
+27. Given that regulation is forward looking and section 166(2)(b) was inserted in recognition of the changing telecommunications landscape, we expect that the Commission will need to be very cautious before determining that a particular decision can have no possible relevancy to the longterm benefit of end users in other telecommunications markets.
+Consumers v end-users
+28. The Commission notes that Part 4 is focussed on the long-term benefit of "consumers", which includes acquirers, while Part 6 is concerned with "end-users". Although the Commission states that this is an "important" difference, it is not clear how it could have a practical impact on the determination of input methodologies in accordance with the purpose statements (and the Commission does not seek to draw a distinction).
+
+29. Under Part 4, it is not apparent that the inclusion of "acquirers" in the definition of consumer has made a difference to the way input methodologies are set, such that the Commission should consider whether different approaches are required under Part 6.
+
+Q5 What are your views on our preliminary view on how s174 applies when we set the input methodologies?
+
+30. The purpose of IMs is to promote certainty relating to how regulation will apply to Chorus, access seekers and end users.
+
+31. We agree that promoting certainty does not mean that IMs are static and cannot be changed,11 they must continue to deliver the s166 outcomes over time. Section 181 provides a framework for considering amendments. Increasing certainty will be provided by the fact of the IMs (which can be reviewed by the Courts), the quality of the decision-making and reasoning that underpins the IMs.
+
+32. However, in terms of s174 and the IMs that fall out of this, there will likely need to be more emphasis on access seeker and end user requirements than was necessary under Part 4 considerations. Access seekers and end users (or verticals) are both making significant longterm irreversible architecture and investment decisions that will be promoted by certainty on the rules that apply to FFLAS providers.
+
+33. For example, these investments will be promoted by:
+
+a. Increased certainty over how the BBM will apply, which functions will be included in the regulatory scope and the pricing of input services; and
+
+10 Approach paper at [5.39.3].
+
+11
+Approach paper at [5.69]
+
+Part 6 Implementation Public Version 9
+b. How the model will evolve over time. How pricing will change and how the Commission will consider issues that will have an impact on competition.
+
+34. In other words, access seekers and end users need confidence that the treatment of monopoly aspects of the network will develop in a predictable way. The Electricity Authority stressed in its 2017 consultation:12
+3.5 Not only does an open or equal access regime have to be effective, but actual and potential users of the network must have confidence the regime is effective. Otherwise, they will not invest or join in activities to provide services and products that will provide long-term benefits to consumers.
+
+35. We appreciate that the Commission is considering the level of prescription versus principlesbased IMs. We believe that while a mix of both is likely, there will also likely need to be a significant increase in the prescription applied to some IMs as set out in the Axiom report. In general, a high level of prescription will ideally need to be provided where the regulated suppliers' interests could harm potential competition.
+
+36. An additional aspect in this case, is that the Commission can enhance certainty by setting out how it will address issues that may emerge over time.
+
+Practical application of s166(2)(b)
+
+Q12 Do you agree with our application of s 166(2)(b) in practice as illustrated in the example?
+Where else may s 166(2)(b) be relevant in setting input methodologies?
+
+37. The approach paper sets out a practical implementation of the s166(2)(b) purpose statement.
+38. The worked example could suggest an additive approach or that the competition consideration might be incidental. While this may be appropriate in some cases, we think that in practice it will require an assessment of both considerations to make a decision that meets both objectives.
+39. The Commission’s obligation to consider the promotion of competition is required immediately and on every decision. In practice, we believe that s166(2)(b) considerations will likely be key to almost all parameter decisions, for example:
+
+a. Exercising discretion in the FFLAS and fibre network assets admitted in to the RAB and recovered from the revenue cap, the methodology for identifying these assets will likely need to be efficient and promote competition. Unnecessarily admitting assets from competitive areas potentially distorts competition;
+
+b. Determining the RAB approach to deregulation in a geographic area in light of potential competitive distortions. For example, permitting the automatic recovery of the cost of those assets where the provider is subject to competition will potentially distort competition;
+
+c. As discussed in the approach paper, determining the degree of specification of allocation rules to be applied by the regulated firms. The competition issues noted by Axiom will be a key part of this consideration; and
+
+12 Electricity Authority Enabling mass participation: Response and next steps decision 4 October 2017. Available here: https://www.ea.govt.nz/development/work-programme/evolving-tech-business/enabling-massparticipation/consultations/#c16454
+
+Part 6 Implementation Public Version 10
+d. Determining whether to develop prescriptive pricing principles methodologies. Again, the degree of specificity will be determined by s166(2)(b) considerations.
+40. We further consider that a plausible interpretation of section 162 is that it is focused on markets for fixed fibre line services only and that section 166(2)(b) provides the route to consider the effect of fibre regulation on downstream markets that rely on fibre inputs. While we would support an interpretation of section 166 which recognise the interdependence of fibre markets and downstream services that rely on fibre as fibre services, we consider that such an interpretation is not clear cut and 166(2)(b) makes clear the scope to consider the effect on competition in downstream and adjacent communications markets.
+
+41. As discussed above, we also consider that the specific ouster of Part 2 of the Commerce Act under section 205 requires particular attention be paid to the scope for anti-competitive outcomes which particular decisions could give effect to or facilitate. Section 166(2)(b) is a clear signal to the Commission to be mindful of the broader competition dynamic.
+
+Approach to Input Methodologies: Part 4 as a starting point for fibre IMs
+42. The Commission proposes to use its Part 4 approach as a starting point for fibre IMs. We agree that the general approach under Part 4 can inform the approach to Part 6, and that re-litigation of established principles should be avoided.
+
+43. However, the "starting point" must not be equated to a presumption that the Part 4 approach is correct. For each IM, the Commission must consider, and be genuinely open to adopting, different approaches if required by:
+
+a. Section 166(2)(b) (as discussed above); and
+b. Differences between the sectors, including greater potential for competition.
+13
+44. As discussed in the Axiom report, there are good reasons to recognise that the starting point for the Part 6 framework is materially different to that or Part 4.
+
+Key issues for implementing Part 6 in our context
+45. We asked Axiom Economics to advise on the key issues that the Commission should consider as it sets about determining IMs for fibre fixed line access services.
+
+46. Axiom note that while the Commission's Part 4 experience will serve as a useful point of reference, there are several crucial differences between FFLAS and the sectors regulated under Part 4. For example, there is more potential for the Commission's decisions to impact upon actual competition, the unique circumstance whereby customers are transitioning from copper to a new fibre network and higher probability that the scope and structure of the regulatory framework will need to change in the future. Pricing efficiency is also likely to assume greater significance over time within the Part 6 regulatory framework for efficiency gains and competition reasons.
+47. These differences mean the Commission should not simply import its approach from Part 4.
+Although the Part 4 arrangements can be a useful 'starting point', it should not be the 'end point'.
+Axiom notes that these contextual matters give rise to several principles or 'themes' that cut across many of the IMs:
+
+a. The importance of ensuring that IMs and price/quality paths do not unduly affect potential competition. Axiom advise it should, in principle, be possible to arrive at IMs
+
+13 As per [6.45] of the approach paper.
+
+Part 6 Implementation Public Version 11
+and price-quality paths that achieve that goal without compromising the objective in s.166(2). In practical terms, whenever there is uncertainty surrounding the competing merits of different approaches the question that should be foremost in the Commission's thinking is: "how might this affect actual competition?";
+
+b. Given the importance of pricing efficiency, the Commission should avail itself of its broad power to determine IMs to prepare a methodology articulating some key pricing principles; namely: how the maximum 'cost-based' prices for particular services will be defined and expanding upon the principles set out in the fibre deeds (eg nondiscrimination obligations);
+c. That the Commission should err towards more prescriptive (as opposed to 'principlebased') IMs - particularly for core methodologies such as asset valuation, cost allocation, the cost of capital, and for any pricing principles. The level of prescription reflecting Chorus understandable incentives to engage in strategies to foreclose competition, preventing the emergence of effective rivalry over the longer-term (eg, in some geographic areas);
+
+d. Reflecting a reduced concern about the relative adverse consequences of underversus over-investment and, consequently, weaker justification for applying a 'WACC uplift.
+
+48. Axiom conclude that, if the Commission remains cognisant of these matters as it sets about designing and implementing the new regulations, it is more likely to deliver a robust and durable regime. Most notably, it will improve the prospects of it promoting the fundamental objectives set out in s.162 and s.166(2)(b) of the Act.
+
+49. Axiom touch on two specific implications of the contextual matters discussed above. First, the Commission would need to allocate a portion of the costs of assets that are used to provide services in addition to FFLAS to those other services. Chorus would almost certainly overrecover its costs without this step. Second, related cost allocation and pricing efficiency concepts are vital within the context of the fibre regime. Chorus has likely strong incentives to allocate those common costs in ways that reduce or foreclose potential competition when setting prices.
+Therefore, the cost allocation IM should seek to provide clear guidance about how all allocations should be done and similarly prescriptive pricing principles methodology prepared.
+50. Overall, the Axiom advice reinforces the principle that the Commission can’t assume Part 4 methodologies will achieve the desirable Part 6 outcomes. At every point, the Commission may reference Part 4 where appropriate, but it should be concerned and put its mind to the differences and similarities.
+
+Economic principles potentially relevant to our new regime Whether Part 6 requires a BBM model
+Q6 What are your views on our preliminary view that a BBM approach similar to that adopted under Part 4 would best give or be likely to best give effect to the objectives in s 166?
+51. The Commission has been tasked with regulating specified fibre services. The Commission is right to question whether Part 6 objectives are best met through a BBM model.
+52. The Act does not require a specific model and there are many options available to the Commission. In the past, cost-based approaches such as a rate of return methodology were widely used for utility pricing purposes. However, cost-based approaches have significant
+
+Part 6 Implementation Public Version 12
+drawbacks – eg they do not provide incentives to reduce cost – and incentive-based approaches are now commonly applied. Incentive based regulation uses financial rewards and penalties to induce regulated firms to achieve desired goals.
+
+14
+The regulatory regime is a package of different decisions which need to form a coherent whole, eg reflecting a coherent allocation of incentives and risks.
+
+53. We agree that, in practice, Part 6 regulation is likely to be a building block model approach in its broadest sense - eg setting prices or revenues with the objective of efficient prices and to provide incentive regulation – and it can be informed by general approaches under Part 4. However, BBM implementations vary depending on the statutory and market context. In the case of Part 6:
+a. The Commission is also required to make decisions that promote competition in all telecommunications markets; and
+b. The approach to incentives and risk allocation must reflect the practical context within which regulation is being applied and specific and specific Part 6 requirements, eg to apply a revenue cap and wash-up mechanism.
+
+54. Accordingly, applying Part 6 to the New Zealand fibre network will inevitably result in BBM implementation that differs from Part 4 approach and that applied in other jurisdictions, including Australia.
+
+55. Nonetheless, we believe there are insights to be gained from other jurisdictions, in the same manner that economic principles can inform meeting the purpose statement, and the Commission can look to Part 4 and recent overseas regulatory decisions to make better decisions. Regulators have taken different approaches to applying utility regulation and the results of recent regulatory consultations are available to the Commission.
+
+Economic principles in decision making
+Q7 How relevant to the fibre input methodologies are the three key economic principles used under Part 4?
+
+Q8 How does the prospect of infrastructure-based and access-based competition affect the application of the three economic principles in the fibre input methodologies?
+Q9 What other economic principles should we have regard to when developing the fibre input methodologies? For example, should we include pricing efficiency as an economic principle for fibre?
+
+56. At a high level we expect that economic principles may be used to give effect to the purpose statement, but they do not replace the purpose statement. Nor can it be assumed that the application of economic principles will necessarily be consistent with the purpose. Of course, if that could be assumed, the purpose statement would have been framed to simply require the Commission give effect to the stated economic principles.
+
+57. We agree that the relevant economic principles can be helpful for understanding how the s166 promotion of competition and end user interests can be served. They also promote joined up
+
+14 For example, Ernst and Young summarise the different European approaches to applying utility regulation and the Council of European Energy Regulators summarise the range of measures applied to those markets:
+https://www.ey.com/Publication/vwLUAssets/Mapping_Power_and_Utilities_Report_2013/%24FILE/EY%20Europ ean%20Power%20regulatory%20report%20FINAL%200513.pdf and https://www.ceer.eu/documents/104400/-/-/44a08bad-efe7-01da-8b37-a3dd7edccfd5
+
+Part 6 Implementation Public Version 13
+thinking across the different parts of the regulatory regime (that get bundled up in to IMs), and allow issues to be addressed in a consistent way.
+
+58. Economic principles are implicit to, or underly, many statutory decisions:
+a. The approach paper discusses the three key principles applied to Part 4 regulation, but also helpfully discussed several additional principles that inform the Part 6 considerations. For example, a preference for actual workable competition over theoretical replication of workable competition, and that dynamic efficiency is more important than static efficiency.
+
+b. The High Court also found it helpful in Wellington Airports to develop and apply economic concepts when considering Part 4 matters, applying economic principles to issues relating to the revaluation of existing assets and allocation of common costs.
+59. So there is support for considering applying economic principles to help with determining what is in end user interests, with the proviso that they should be used cautiously as a tool to help make better decisions required by the Act, and not as a complete answer to the statutory requirements.
+The proposed economic principles
+60. The Commission has asked about its proposed economic principles.
+
+61. As above, principles are helpful to understand incentives and outcomes relating to the prescribed outcomes; they are no more than that. Therefore, the key principles in this process should follow the issue being addressed by the Commission. This is because any other approach risks elevating these principles beyond being simply helpful to taking a life of their own. In practice, we believe the helpful principles will become apparent through the Part 6 process:
+a. First define or focus on the key issues it will need to resolve in setting incentive regulation; and
+b. As a second step look at how economic principles will help understand more about how these issues or outcomes can be solved.
+
+62. The approach paper also helpfully sets out some key Part 4 and Part 6 differences15 and - together with key framework and implementation decision differences- this means the key economic concepts will also differ. For example, a key difference is that the Commission must also promote competition which will require additional and different considerations.
+63. While the Part 4 principles are widely accepted economic concepts, the differences between Part
+4 and 6 regimes and context mean the proposed principles are unlikely to apply in the same manner:
+
+a. Financial Capital Maintenance (FCM) relates to the ex ante expectation that a regulated firm will have an opportunity to earn a normal return over the life of an asset. This is qualified in that no regulatory framework is required to guarantee a return.
+
+As the Commission notes the principle is widely accepted: firms expect to make a normal return over time (and end-users expect that provider returns will likewise not exceed that). However, again as noted by the paper, the principle will likely be difficult to apply in this context. The regulatory framework anticipates that competition may emerge and Chorus’ expected return sits across multiple related businesses.
+
+15 Approach paper at [6.45]
+
+Part 6 Implementation Public Version 14
+Applying FCM to the Part 6 financial model in isolation is unlikely to deliver the desirable end user outcomes.
+
+b. The Commission should look to allocate risk to where it is best addressed. We suspect this will likely be largely an empirical exercise based on the nature of risks in the context of s166 purposes. For example, risks relating to telecommunications services are different and a natural hedge likely exists for key uncertainties such as fibre volumes. Accordingly, the efficient allocation of telecommunication risks will likely differ significantly from that seen in existing IMs.
+
+c. Asymmetric consequences of over and under-investment. As set out in the Axiom paper we don’t see the same investment consequences in the fibre network setting, and it is in access seeker and end user investment consequences that we are more likely to see concerns.
+
+64. Further, relevant key principles are starting to emerge through the conversation, for example the preference for promoting actual workable competition over replicating workable competition in regulatory settings and incentives and that dynamic is more important that static efficiency.
+These will likely have as significant an influence as those considered relevant for Part 4 decisions.
+65. We agree that pricing efficiency is also an important consideration. If the regulatory settings enable the regulated fibre provider to price well above the efficient level, that could:
+a. Send signals to RSPs that it is more efficient to over-build and invest in competitive infrastructure; but
+b. Enable the regulated fibre provider to then drop the prices it charges in a targeted way so as to undermine the investment in such competitive infrastructure.
+
+66. That would not give effect to the purpose statement. It would result in prices that are first above the competitive level and subsequently promote conduct by the regulated firm that undermines the prospects of emerging competition. It would accordingly be detrimental to the interests of end users and inconsistent with the objective of replicating competitive conditions.
+Cross-cutting features of input methodologies
+Scope of regulated services
+Q10 What are your views on our approach to determining the activities and/or services that fall within the scope of FFLAS (including the treatment of copper-based services, POIs, and services provided above layer 2)?
+
+Q11 Are there any further key implications of the scope of regulated services for the setting of input methodologies for price-quality or information disclosure regulation?
+67. We agree the scope of regulated services is important as this affects a number of aspects of the financial model - including RAB assets and how costs are allocated to activities – and potential foreclosure of competitive markets.
+
+68. Fibre fixed line access services are telecommunications services that enable access to, or interconnection with, a regulated provider’s fibre network. The fibre network is a network structure used to deliver telecommunications services over fibre media that connects an end users’ premises or other access point to a specified point of interconnection (UFB handover).
+
+Part 6 Implementation Public Version 15
+69. The regulatory scope appears to be defined by both the technical extent of the Fibre Network and FFLAS which defines the set of current and future services and uses of the Fibre Network.
+Accordingly, FFLAS potentially captures a wide range of services that enable access to the fibre network:
+
+a. Some of which are familiar “codified” access services such as a wholesale broadband access, DFAS and unbundled fibre access;
+
+b. Some of which are less distinct: there may be some input activities which meet FFLAS criteria but are not currently identifiable or currently codified as a product or expected to be developed in the future. For example, Chorus provides the 2Degrees national backhaul network and is trialling a wi-fi access service. While it is unclear what fibre network inputs might be used for these services, it illustrates the likely evolving nature of relevant FFLAS services; and
+c. Some of which will become apparent over time. The Commission found in the 9A Fibre Study that LFCs offer a range of products with considerable spread in specifications and that new or revised product offerings are likely to be introduced in the future.16
+70. Accordingly, the regulated services may change over time, but they still need to be defined/assessed by reference to the defined physical infrastructure.
+
+71. Further, the relationship between Fibre Network and FFLAS will likely need to be considered more fully, for example:
+
+a. Fibre Network assets are more likely to straddle regulated FFLAS and non-FFLAS services than seen in other sectors. For example, the Ethernet Aggregation Switch is a key component of layer 2 services and is – therefore - used for regulated fibre broadband services, copper bitstream services, and other national transport and access services; and
+b. Chorus should be expected to act on incentives, if left unchecked, to design services in a way that maximises the scope of RAB or allocation of costs. For example, by defining a new FFLAS with the substantive purpose of expanding the RAB to capture competitive elements of the market.
+
+72. Therefore, in practice the Commission will likely need to consider:
+
+a. Taking a more prescriptive approach to defining FFLAS than the principles set out in the approach paper and to better promote the s166 requirements. We expect that related company principles will have a key role in the regime; and
+b. Ensuring that the framework provides a ready mechanism to provide transparency of where Chorus is using the fibre network outside of codified services, and a process by which access seekers can request new access and interconnection services.
+73. The FFLAS relates to telecommunications services over fibre media between the user access point and UFB POI access. We believe that the FFLAS service description does not extend to wireless or layer 3 elements of the networks, irrespective of LOB restrictions.
+17
+These services
+
+16 Commission Study in to fibre services 17 December 2018 [23].
+
+17 While unclear, the approach paper could be interpreted as suggesting this was a possibility. See [7.26], footnote 149.
+
+Part 6 Implementation Public Version 16
+are not directly related to access to the fibre network - eg could include CDNs and switching – and are not required.
+
+Matters for which input methodologies are determined
+Q13 What are your views on our proposal to determine only those input methodologies listed in s 175(1) by the implementation date? What additional matters should be determined as input methodologies by the implementation date?
+
+74. Axiom lists the issues that will need to be addressed. The one additional, but important IM we would suggest the Commission commits to developing, is a pricing principles IM. Given the likelihood of Chorus offering multiple substitutive services, whether layer 2 access products of differing speeds, or layer 1 access products that support competitive layer 2 services, there is a need for more prescription (compared to Part 4) of the pricing methodologies and principles Chorus will be expected to comply with when pricing services that use its RAB.
+75. A more prescriptive pricing principles IM will be important to help guard against the incentive to price in a way that undermines the competitive outcomes the regime strives to emulate.
+Q14 Which of the fibre input methodologies (if any) do you consider most appropriate for us to consider the use of a more 'principle-based' specification?
+
+76. The IMs will likely be a mix of principles and specific requirements. As Axiom advise, the Commission should err towards a more prescriptive approach for core methodologies such as asset valuation, cost allocation, the cost of capital, and for any pricing principles.
+Asset Valuation
+Scope of the regulated asset based and its valuation
+Q15 What are your views on our proposal to use a high-level approach consistent with Part 4 for the asset valuation IM? Please note that we have not yet set out our views on the treatment of depreciation or asset revaluations.
+
+Assets that can be included in the regulated asset base (RAB)
+
+77. Section 177 provides direction on how the initial value of fibre assets must be determined. For the purpose of section 177, "fibre asset" is defined to mean an asset that is:
+a. Constructed or acquired by a regulated fibre service provider; and
+b. Employed in the provision of FFLAS (whether or not the asset is also employed in the provision of other services).
+
+78. The statutory provisions relating to the starting RAB are also more prescriptive than they are under Part 4.
+
+79. However, it does not follow that the Commission has little or no discretion to set rules to determine what assets can be included in the RAB, or whether further rules need to be applied to determine value of assets in the RAB. For example:
+
+a. Specific rules may be required to determine whether an asset is in fact employed in the provision of FFLAS; and
+b. Cost allocation methodologies will need to be applied to determine the value of assets that are also employed in the provision of other services.
+
+Part 6 Implementation Public Version 17
+80. To give effect to section 166(2)(b) it may be relevant to take a more prescriptive approach to the asset valuation methodology than its Part 4 counterpart in determining what assets can be included in the RAB. That is because in order to promote actual competition in telecommunications services more broadly is likely to require greater to ensure that assets used to provide services in competition with other providers are not unduly allocated to the RAB in a way that could distort competition.
+
+81. In that respect, it is also relevant that Part 6 does not include an equivalent to section 52T(3) of Part 4, which states that the cost allocation methodology must not unduly deter investment in in the provision of other goods or services. This suggests that, compared to Part 4 entities, Parliament is more concerned about the ability for FFLAS providers to leverage their assets into non-regulated markets - which is a signal to the Commission that it should apply more careful scrutiny to the values allocated to the RAB.
+
+Q16 What are your views on our proposed approach to adopt cost as the measure of asset value for assets constructed or acquired after implementation date?
+
+Q17 What specific rules or approaches (if any) are needed for the treatment of particular types of assets, or to deal with practical aspects of asset valuation?
+
+82. The Commission proposes to adopt cost as the measure of asset value for assets constructed or acquired after implementation date. However, it’s unclear whether other approaches are available to the Commission in any case. The Act defines the initial value as of the asset as being the cost incurred.
+
+83. We expect that the Commission will need to:
+
+a. Focus on related party and complex third party transactions, and on measures to ensure that legacy copper assets do not inefficiently transition in to the regulated fibre business. For example, Chorus has complex commercial arrangements with service companies for input services to FFLAS and non-FFLAS services. The Commission would need to ensure these input prices were efficient and didn’t, for example, have the effect of inefficiently loading service company costs on to input services used for the fibre network; and
+b. As noted in the Axiom report and above, consider whether assets should be included in the fibre RAB. The Commission should allocate the cost of assets used to provide services in addition to FFLAS to those other services and consider the efficiency of the costs incurred on the UFB build between now and implementation day.
+
+Calculation of initial losses and Crown financing
+Q18 What are your views on our interpretation and proposed application of ss 176(2) and (2AA) for the calculation of financial losses? In particular:
+
+Q18a What is your view on any simplifying assumptions for the allocation of common capital and operating expenditure costs that should be applied? and Q18b What are your views on how the rate of return on investment and discount rate for the loss period should be calculated?
+
+Q19 What preference do you have regarding the two methods outlined above for reflecting the actual costs of Crown financing, and why? What other methods could be used?
+Q20 How should we consider the involvement of related parties to the funding arrangements (eg, LFC parent companies)?
+
+Part 6 Implementation Public Version 18
+84. At a high level there are two key factors we consider are missing from the Commission’s proposed approach:
+
+a. The time period for assessing “accumulated unrecovered returns,” in particular the Commission will recognise that it cannot have been expected that material costs components will have been recovered prior to the commencement of the initial regulatory period.
+
+b. The total revenue received by the regulated provider. In particular, we consider that copper revenues were always designed as a means to cross-subsidise the costs of the fibre roll-out. Accordingly, fibre investments that were not recovered by direct fibre revenues may well have been compensated for by copper revenues.
+
+85. We therefore think that determining accumulated unrecovered costs cannot be done without considering preferential funding terms and copper revenues. And the period over which any costs are to be recovered should be spread over the same period applied to other like costs (under the IMs).
+
+86. Under section 177(2), each regulated fibre service provider is considered to own a fibre asset "with an initial value equal to the financial losses" incurred in providing fibre services between 1 December 2011 and the implementation date under the UFB initiative. "Financial loss" is not defined and must be determined by the Commission.
+
+87. The value of this "financial loss" asset is determined separately to the value of other fibre assets (under subsection (1)). In particular, this means that financial losses asset need not be determined on a “cost incurred " basis.
+
+88. Accordingly, as discussed in the purpose statement section above, any estimate of past financial loss should be based on an estimate of efficiently incurred costs - otherwise the Commission will be at risk of establishing rules that allow FFLAS providers to over-recover, inconsistently with the purpose statements. The only proviso to this is under section 177(5), which allows costs to be recovered if it can be shown they were a direct result of meeting specific requirements of the UFB initiative.
+
+89. Section 177(3) further constrains the Commission's discretion to determine the value of financial losses by specifying that it:
+
+a. Must take into account any accumulated unrecovered returns on investments made by the provider under the UFB initiative; and
+b. In respect of any crown financing, must refer to the actual financing costs incurred by the provider.
+
+90. The Select Committee explained these constraints as follows:18 We consider it reasonable that asset valuations should give UFB providers the opportunity to recover, through future revenues or prices, the actual financing costs they have incurred.
+However, we emphasise that recovery should be limited to actual costs. That is, the Commission should take into account the concessional element, and should not assume that commercial financing rates were applied to the whole of the asset base.
+To ensure this, we recommend inserting new section 176(3A). This would require the Commission to prevent over-recovery of financing costs by ensuring that revenues set would be no higher than necessary to meet the actual financing costs incurred in respect of the
+
+18 Select Committee Report at 4.
+
+Part 6 Implementation Public Version 19
+Crown's debt/equity investment. We note that, under this treatment, the principal amount of the debt/equity investment would remain reflected in the value of assets in the asset base.
+[Emphasis added].
+
+91. It appears to us that the provisions governing past financial losses are designed to achieve a balance between:
+
+a. Providing FFLAS provides with an opportunity to recover a return on, and of, their investment over the life of the assets; and
+b. Ensuring that past financial losses are not over-estimated, including by ensuring that only the actual (low) financing costs are taken into account when calculating losses.
+92. The Commission's preliminary view is that:19
+We interpret the direction to calculate "accumulated unrecovered returns" on investment to require the use of a building blocks approach. The building block approach would be broadly similar to that applied after the implementation date to calculate profitability for information disclosure and maximum prices or revenues for price-quality regulation.
+
+93. However, the use of a building blocks methodology to calculate past losses is not required by the Act. We think that the Commission is required to adopt a method that enables it to estimate financial losses under section 177 in a manner that best gives effect to the purpose statement.
+94. This is likely to be a highly contended issue in the IMs process. The added difficulties in applying s177(2) in light of the purpose statement include that:
+
+a. Boosting the RAB through the identification of past losses which are, by their nature and in this instance sunk, has little or no impact on beneficial end user outcomes;
+b. The Commission is considering the issue as the framework is transitioning from the current regulatory framework to a future framework, where the expectation of the frameworks is that Chorus will remain whole overall; and
+c. The Commission must avoid double recovery, otherwise this will result in an outcome that exceeds a normal return which is not in end user interests.
+
+95. Past losses has no benefit for end users of the Fibre Network where these losses have not occurred in practice or are inflated by, for example, double counting.
+
+96. The High Court set out in Wellington Airport further economic principles relevant for the setting of initial asset values20:
+
+[758] We have already explained why we agree with the Commission that initial RAB values have:
+
+(a) little or no impact on incentives for suppliers to invest in new or replacement assets;
+
+(b) little or no impact on incentives for suppliers to improve efficiency and provide services at a quality that reflects consumer demands; and
+(c) little or no impact on suppliers sharing with consumers the benefits of efficiency gains.
+
+19 Approach paper at [7.66].
+
+20 Wellington International Airport Limited v Commerce Commission [2013] NZHC 3289 at [758] to [760].
+
+Part 6 Implementation Public Version 20
+[759] What initial RAB values do have a direct impact on is the extent to which suppliers are limited in their ability to extract excessive profits. We also recognise that initial RAB values do have some impact on the general investment environment for regulated industries and, more especially, industries subject to the possibility of regulation. This is a question of reasonable investor expectations. In our view, reasonable investor expectations should be met by the Commission following a carefully considered approach when setting a RAB, subject to there being no evidence that suppliers would be unable to recover the costs of their past prudent and efficient investments.
+
+[760] An initial RAB value would, in our view therefore, be fundamentally flawed if it generated prices that were inconsistent with the achievement of the s 52A(1) purpose and outcomes, in particular if it failed to limit suppliers’ ability to extract excessive profits over time.
+[footnotes omitted]
+
+97. The High Court further observed that high prices (eg beyond the cost to the community of keeping the assets in production) would result in assets being under-utilised.21 There is an inescapable inefficiency from higher than necessary prices.
+
+98. A further principle developed through Part 4 implementation is that expected returns over the life of an investment exceeding normal returns is inconsistent with the Part 4 (s162) purpose.22 Therefore, excess returns through windfall gains or double counting of costs are not consistent with the purpose statements.
+
+99. The Commission summarised this underlying principle in considering cost allocation principles23 The application of ACAM in this manner would result in the consumers of electricity distribution services sharing in none of the efficiency gains (i.e. the economies of scope) that arise from supplying electricity distribution services and gas pipeline services in combination. Using ACAM would therefore be inconsistent with s 52A(1)(c). The current application of ACAM in this manner can result in the double or triple counting of shared costs. This occurs if the EDB supplies all three types of regulated services, and applies ACAM to each type of service individually. To the extent that prices were set to recover those costs under price-quality regulation, this is likely to result in excessive profits, which would be inconsistent with s 52A(1)(d) … EDB submissions generally agreed that the double counting of cost that arises in such situations through the use of ACAM is not consistent with outcomes in workably competitive markets in the long-run.
+
+[emphasis added – footnotes omitted]
+
+100. Accordingly, section 177(2) would require a carefully considered approach with evidence that Chorus would be unable to recover its costs and that there was no double counting.
+101. In this case, the current regulatory framework – comprising, for example, regulated broadband and voice access price caps, UFB agreements and Crown funding - was expected to leave Chorus whole and to fund it as if it was achieving a normal return on a modern efficient fibre network already. In other words, the expectation was that Chorus would overall recover its costs within the current framework.
+
+102. While we accept that this network was a hypothetical one, and that the Act requires the Commission enquire into Chorus’ actual fibre network during this period, it is clear that there is an overlap between the two regulatory frameworks, and the Commission will be required to ensure
+
+21 Wellington Airports at [605]
+
+22 For example, see discussion relating to cost allocation in Wellington Airports and Input Methodologies electricity distribution services Draft Reasons Paper June 2010
+23 Input Methodologies electricity distribution services Draft Reasons Paper June 2010 at [3.3.21]
+
+Part 6 Implementation Public Version 21
+no double recovery of returns is provided for. The Commission identified a fibre network as the most future proof technology available for providing fixed access and, accordingly, set copper service prices on the basis of a fibre network cost.24 The s9A fibre study further highlighted that Chorus considers that it operates one network that includes two technologies, copper and fibre, across different areas of New Zealand.25 It is artificial to consider fibre financial outcomes in isolation from Chorus’ other business activities.
+
+103. The Select Committee received submissions on past losses supporting specific provision for the Commission to consider any possible losses, and submissions from those concerned that there was no evidence that past losses existed and raising the possibility of unearned profits.
+104. Section 177(3) guides the Commission to consider only accumulated unrecovered returns.
+We believe that, compared to the proposed high level BBM approach, an equally plausible approach that better supports the Part 6 purposes is to focus the analysis solely on required returns investment, setting aside operating costs, tax and depreciation. This would mean:
+a. Chorus is provided with an opportunity to recover a reasonable return over the life of its FFLAS assets, which is the focus of section 177;
+
+b. Other "non-capital" costs are not included in the assessment of past losses, on the basis that section 177 does not anticipate their inclusion and / or it is unreasonable to include such costs in calculation of "losses" given that copper service prices had been set at a generous level that allowed for substantial recovery of fibre costs; and
+c. There would be greater confidence that end users of telecommunications services are not required to pay Chorus for losses that were not actually incurred.
+105. This focuses the analysis on where any unrecovered costs may lie, recognising that existing regulated broadband prices provided for Chorus operating costs and depreciation over the transition period.
+
+Other
+Allocating common costs
+Q21 Are there other approaches to allocating costs between regulated FFLAS services and other services that could be used? Are there features of suppliers or services that require particular consideration (eg, business structure, presence of other forms of economic regulation, accounting systems etc)?
+
+Cost allocation input methodology
+106. The Commission’s approach to costs allocation will be critical to the outcomes it’s process produces. The Commission has indicated that:26
+We propose adopting the approach to cost allocation we have used for information disclosure regulation, customised price paths and individual price path regulation under Part 4 when allocating costs between regulated FFLAS and other services.
+
+107. Although the general principles of cost allocation under Part 4 are likely to be appropriate under Part 6, we consider that the difference in purpose statements discussed above, and the
+
+24 Commerce Commission Final pricing review determination for Chorus’ unbundled copper local loop service [2015] NZCC 37 at [B66] to [B70].
+
+25 s9A Fibre Study at [44.1]
+
+26 Approach paper at [7.80].
+
+Part 6 Implementation Public Version 22
+nature of the telecommunications markets, will be particularly relevant to the cost allocation input methodology. Axiom reinforces that the way costs are allocated can materially influence a regulated suppliers' ability to distort non-regulated markets. It will also be important to understand how costs are allocation between regulated services, to ensure pricing for those services is efficient.
+
+108. The Commission has appropriately recognised these risks. The flexibility provided by the cost allocation methodology has been raised as an issue in the Part 4 context, particularly as electricity lines companies have sought to expand the use of assets used for both regulated and non-regulated services (eg batteries, solar and meters).
+
+109. Under Part 6, to demonstrate that the cost allocation methodologies best give effect to the purpose statement, it will be important that:
+
+a. Where possible, the asset valuation methodology includes appropriate prescription on whether assets are employed for FFLAS (or not);
+
+b. Where possible, the cost allocation methodology prescribes appropriate allocation approaches for particular assets; and
+c. Disclosures of cost allocation are carefully monitored by the Commission to ensure allocation choices are appropriate.
+
+110. In summary, the Commission will be open to legal challenge if it simply adopts the Part 4 input methodology without consideration of whether further allocation rules are required to best give effect to section 166(2)(b), taking into account the different characteristics of telecommunications markets.
+
+Allocation of common costs must not exceed standalone cost
+111. The Commission may also need to consider the standalone cost of FFLAS services, applying a cross check to common costs allocated to these services.
+
+112. A key economic principle discussed in the Wellington Airports case is that the allocation of costs should fall between incremental cost (IC) and standalone cost (SAC).
+27
+113. There are likely significant more common costs that will need to be allocated between the Part 6 and other networks and services. Further, a fibre network service and business infrastructure is likely to be significantly less complex than would be required for the copper broadband and integrated services in adjacent markets. Chorus is further looking to build a complex service business, whereas fibre network services are less complex infrastructure services.
+
+114. Accordingly, the Commission should ensure that common costs allocated to the fibre network do not exceed the level that would be required by a standalone wholesale only business of this nature. Therefore, the Commission may wish to consider whether a standalone cross check should be applied and how it will be derived. For example, the Commission could apply a cross check and cap based on benchmark fibre and wholesale infrastructure providers.
+Q22 What views do you have on whether an input methodology for allocating costs between different FFLAS services should be set for information disclosure and/or price-quality regulation?
+
+27 For example, see Wellington Airports at [1809]
+
+Part 6 Implementation Public Version 23
+115. The Act contains a scheme for determining prices for anchor products, and section 201 requires Chorus to set geographically consistent prices. The non-discrimination provisions in the Fibre Deeds will also continue to apply. Further, the Commission has noted that the list of input methodologies that it must determine, when compared to Part 4, excludes pricing methodologies.28 It also states that it only proposes to determine the mandatory input methodologies.29
+116. Nevertheless, we think the Commission must consider whether further pricing methodologies are required to be in effect at the implementation date. In particular, pricing methodologies are relevant to the requirement to give effect to the promotion of competition in telecommunications markets. The way Chorus sets prices for FFLAS in practice - including through offering incentives
+- can affect competition in other markets. That is, specifying a maximum price for a service may be insufficient to achieve the purpose statements.
+
+117. We agree with the Commission's statement that:30
+The amended Act will give us sole responsibility for both revenue allowances and pricing methodologies. This is in contrast to electricity lines services, where another industry regulator (the Electricity Authority) has the power to set pricing methodologies.
+
+118. We also agree that the Commission should be concerned with pricing efficiency - and that this may be more relevant for fibre than other sectors it regulates:31 Ideally, prices should promote efficient investment from fibre service providers, RSPs, and alternative network operators, to the extent this promotes the long-term benefit of end-users.
+We would be concerned about pricing which clearly led to outcomes in favour of particular technologies or access services, where this is not in the long-term benefit of end-users.
+119. The Commission notes that it consideration of pricing efficiency under Part 4 has resulted in a principled-based approach to pricing methodologies for gas businesses (the only entities for which it can set pricing methodologies). The same type of approach could be considered under Part 6. That is, the IMs could include pricing principles that promote efficiency and competition between services, and Chorus and LFCs would be required to disclose how their pricing is consistent with those principles.
+
+Using Part 4/FPP approach to WACC
+Q23 What is your view on our proposal to use the Part 4 and UCLL/UBA FPP approach as the starting point when determining the cost of capital input methodologies for FFLAS?
+Q24 What matters do you think will differ from the Part 4 approach, are novel for the regulated fibre sector, or will require re-estimation/a different approach? Should we re-estimate parameters that apply across sectors, such as the TAMRP?
+
+120. We agree with the Commission that the WACC methodology commonly applied to utility regulation and Part 4 IMs can serve as a starting point for Part 6. However, the Commission would need to confirm that the underlying principles and parameters remain valid for this instance.
+Appropriate industry specific parameters (eg asset beta, leverage and credit rating) – likely using the methods established under Part 4 and the FPP process – would need to be established.
+
+28 Approach paper at footnote [162].
+
+29 Approach paper at [7.43].
+
+30 Approach paper at [6.45.3].
+
+31 Approach paper at [6.52].
+
+Part 6 Implementation Public Version 24
+121. We expect that it will be argued that the Commission should apply an uplift to the WACC IM mid-point. The matters that it will need to carefully consider include:
+
+a. Differences between price control and information disclosure only. The Commission's approach under Part 4 (for airports) is that an uplift is not required when the regulated entity is subject to information disclosure only (as each supplier establishes its own target return for pricing purposes);
+
+b. The relevance of the section 166(2) requirement to give effect to the promotion of competition in telecommunications markets for the long-term benefit of end-users. In the Part 4 context, the Commission was solely focused on asymmetric consequences for consumers of the regulated service. Under Part 6, the Commission will need to consider how section 166(2) should change the analytical approach adopted under Part 4 (in addition to considering how that analytical framework applies to FFLAS).
+122. Axiom also addresses some differences in its report.
+
+Scope of the quality dimensions input methodology
+Q25 What are your views on CEPA's advice on the approach to setting the quality dimensions input methodology?
+
+Q26 What specific factors of the telecommunications environment do you think are relevant to setting input methodologies for quality dimensions?
+
+123. The CEPA paper helpfully sets out the dimensions of quality and how they might be expressed. The input methodologies must include quality dimensions relating to fibre fixed line access services.
+
+124. Quality is a key component of incentive regulation and is increasingly seen as means to drive beneficial regulatory outcomes.
+
+32
+Sections 194(3) and (4) reinforce that the Commission may apply quality incentives to maintain or improve quality of supply and this suggests greater reliance can be put on quality incentives driving outcomes (relative to implementations that rely on the price path alone achieving this outcome).
+
+125. Accordingly, the Commission may wish to consider the outcomes it seeks to achieve from quality standards early in the process, and therefore how much reliance should be made of other IMs and model parameters to achieve these incentive outcomes.
+
+126. In terms of assessing quality standard requirements, the Commission may wish to focus on the purpose and desired outcomes of the quality standards. In practice, these are likely to occur at a principle level for the IM but would need to be specific in the PQ determination. While quality dimensions should address the full lifecycle dimensions set out in the CEPA report, there will likely be key quality elements in our context, eg:
+
+Domain/Purpose Examples of possible quality standards
+Establish high level expected outcomes relating to the regime and anticipated network level incentives
+
+-  Required aggregate innovation, revenue, costs, volume and service dimensions, including:
+
+-  Network wide quality - avoiding systemic outages in geographic areas or nationwide, aiming to maximise overall network uptime and quality.
+
+32 For example, see EY report at page [18] and CEER summarise a variety of approaches applied across Europe referenced above.
+
+Part 6 Implementation Public Version 25
+Domain/Purpose Examples of possible quality standards
+
+-  Fit for purpose quality – identify what a fit for purpose service is and how it evolves over time (eg minimum speeds, maximum latency).
+
+-  Network fault rates.
+
+-  Investment and improvement in service quality.
+
+Chorus operating efficiency and approach
+Including how regulated providers interact with access seekers.
+
+-  Responsiveness to access seeker requests for new services.
+
+-  Commitments relating to:
+
+o making new FFLAS variants available at the same time as to itself.
+
+o consultation and development.
+
+-  Installation of technical capability, eg handover links.
+
+-  B2B/portal/system to system:
+
+o Interactions (transactional response, system uptime/availability/ performance/throughput).
+
+o Ability to increase and improve task/interaction automation (end user self test results).
+
+-  Person to person interactions (call answer times/dropped calls, query to completion response times, right first-time resolve %).
+
+-  Commitments around outages – eg API for RSP to handle data relationship with customer directly
+
+-  Accuracy and integrity of service level reporting.
+
+Directly impacting end user service quality
+Including how end users interact with Chorus.
+
+-  Engaging with end users:
+
+o Meeting appointment commitments;
+
+o Completing jobs within agreed SLA (eg rapid fault resolution) etc.
+
+o Professional standards when on site – how they deal with our customer, the quality of workmanship when onsite.
+
+-  Minimising complaints and compensation incentives.
+
+-  Agreed service variant performance metrics (eg speed performance, individual line quality, watching for repeat faults.
+
+-  Provisioning connection commitments.
+
+127. The two latter categories would need to reflect access seeker capabilities, eg must be relevant so that RSPs can deliver appropriate service commitments to end users. Therefore, the Commission could ask the TCF to report back on these latter quality elements, setting out where proposed commitments are agreed and where not agreed.
+
+Input methodologies that support the setting of price quality paths Q27 What views do you have on the approach or processes that should be adopted for setting price-quality paths? For example:
+
+Q27a Should a supplier be required to present a price-quality path proposal? What role would the Commission have in evaluating the proposal?
+
+Part 6 Implementation Public Version 26
+Q27b What historical or forecast information should be required and where should this information be sourced from? Should the information be subject to customer consultation and/or independent scrutiny or other verification?
+
+Q27c Is there a role for a forecast total expenditure (totex) approach instead of requiring building blocks to be set with reference to capital and operating expenditure?
+Q28 Do you have any views on additional incentive mechanisms (such as IRIS) that would be beneficial to consider including? (Note that the scope to include any additional mechanisms may be limited, given the time constraints we are under.)
+
+128. We suspect that the Commission will need to take a proactive and specific role to developing the price-quality path and forecasts.
+
+Q29 For any additional input methodology-related issues you wish to raise, please explain:
+Q29a the nature of the issue;
+
+Q29b the likely significance of the issue, when it will be likely to arise in practice, band whom would it affect;
+
+Q29c what further information or analysis would be required to understand the issue; and
+Q29d what potential solutions can be identified to resolve the issue?
+
+129. Suggestions are set out in the Axiom report and above.
+
+[END]
+
+
+-----
