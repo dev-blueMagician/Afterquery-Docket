@@ -1,0 +1,716 @@
+# D01 | docs/do-housing-investors-pass-through-changes-in-their-interest-costs-to-rents-bulletin-october-2024.txt
+
+Do Housing Investors Pass-through Changes in Their Interest Costs to Rents?
+Declan Twohig, Anirudh Yadav and Jonathan Hambur*
+
+Photo: Isabel Pavia – Getty Images
+
+Abstract
+Interest rates and rents often move together. Some have argued that this positive relationship is evidence that higher interest rates have been a key driver of increases in rents over the past few years, due to leveraged housing investors passing through increases in their interest costs to their tenants. This article uses anonymised tax return data covering 2006/07–2018/19 to estimate the direct pass-through of interest cost changes to housing investors’ rental income. It finds small pass-through on average, even when interest rates are rising. The largest estimate suggests that direct pass-through results in rents increasing by $25 per month when interest payments increase by $850 per month (the median monthly increase in interest payments for leveraged investors between April 2022 and January 2024). Overall, the results are consistent with the view that the level of housing demand relative to the housing stock is the key driver of rents.
+
+Introduction
+Understanding the impact of interest rates on rents is important for the RBA. Rent is the second largest component of the Consumer Price Index (CPI), and so how rents respond when interest rates change will have a large mechanical bearing on the overall inflation response. Around one-third of Australian households rent their home. In 2022, the median
+
+renter spent 25 per cent of their disposable income on rent, with low-income households tending to have the highest rent-to-income ratios (Agarwal, Gao and Garner 2023). As such, changes in rents have significant implications for households’ spending power and financial wellbeing.
+
+-----
+
+A view that is often put forward is that higher interest rates push up rents in the short term by raising costs for indebted housing investors, which they, in turn, will pass on to tenants.1 This is intuitive, and at first glance, appears consistent with the aggregate data – interest rates and growth in rents often move together (Graph 1).
+
+Graph 1
+Rent Growth and the Cash Rate
+
+Cash rate
+
+CPI rents*
+
+%
+
+6
+
+3
+
+0
+
+%
+
+6
+
+3
+
+0
+
+-3
+1994
+*
+Sources: ABS; RBA.
+
+1999
+Year-ended growth.
+
+2004
+
+2009
+
+2014
+
+2019
+
+-3
+2024
+
+By contrast, standard economic theory suggests that rents reflect the balance of demand for, and supply of, available housing. This standard view is embedded in models of the housing market that the RBA uses, such as the Saunders and Tulip (2018) model. In these models, the balance of demand and supply of housing is typically summarised by the vacancy rate, which also tracks movements in rent growth (Graph 2). In this framework, higher interest rates have little immediate direct effect on rents as the overall supply of housing in the economy is essentially fixed in the short run. But higher rates should reduce rents indirectly by lowering incomes and therefore housing demand.2
+Pinning down the relationship between interest rates and rents is tricky because both will tend to move together with the economic cycle. For example, a strong economy, with a pick-up in income growth, will see increased demand for rental properties.
+This will put upward pressure on rents. At the same time, interest rates may be raised to reduce inflationary pressures. So the observation that rates and rents move together may be a case of correlation, rather than higher rates causing higher rents.
+
+One way researchers have tried to better understand this relationship is to trace out the response of rents to higher interest rates but strip out the effect of the economic cycle on both. In principle, this approach
+
+2         R E S E R V E   B A N K   O F   AU S T R A L I A
+
+should capture any direct pass-through of higher rates to rents, alongside indirect effects higher rates may have on rents by affecting incomes and, over the medium term, housing construction.3 Overseas work taking this approach finds mixed results from changes in monetary policy on rent inflation (Liu and Pepper 2023; Albuquerque and Lenney 2023; Dias and Duarte 2019). Similar work in Australia finds higher rates have little effect on rents (Moore 2023).
+
+In this article, we take a different approach to specifically study the direct pass-through of interest costs to rents in the short term. To do so, we use detailed anonymised tax microdata. These data are well suited to study this question because we can compare rental outcomes for investors who have different levels of debt, while controlling for economic conditions that might influence rents and interest payments for all investors. The downside is that our approach implicitly assumes that there is limited spillover from highly indebted investors’ rents to other less-indebted investors’ rents. We think this is a reasonable assumption, as discussed later, but if such spillovers do exist, we may understate the pass-through of rates to rents.
+
+Data
+Our dataset covers every investor that filed a personal income tax return in Australia from 2006/07 to 2018/19. The data are annual. We observe an investor’s rental income and their mortgage interest deductions, along with their location, total income, age and other demographic characteristics.
+
+Graph 2
+Vacancy Rate and Rent Growth
+
+Vacancy rate
+(inverted – RHS)
+
+CPI rents*(LHS)
+
+%
+
+2
+
+3
+
+4
+
+2004
+*
+Year-ended growth.
+Sources: ABS; RBA; REIA.
+
+2009
+
+2014
+
+2019
+
+5
+2024
+
+%
+
+6
+
+3
+
+0
+
+-3
+
+-----
+
+The rental incomes and interest payments coming out of the dataset follow sensible patterns. Median growth in rental income in our dataset closely tracks the trend in CPI rent inflation (Graph 3). And median growth in interest payments closely tracks percentage changes in the indicator lending rate for investors.4
+
+Graph 3
+Growth in Rents and Interest Payments By financial year
+Rent growth
+
+CPI rent growth
+
+Median change in rental income (tax data)
+
+Interest payment growth
+
+Per cent change in rate*
+
+Median change in interest payment (tax data)
+
+%
+
+6
+
+3
+
+%
+
+20
+
+0
+
+2010
+
+2016
+Per cent change in indicator lending rate for investors.
+
+2013
+
+2007
+*
+Sources: ABS; RBA.
+
+-20
+
+2019
+
+%
+
+6
+
+3
+
+%
+
+20
+
+0
+
+-20
+
+Nevertheless, there is a huge amount of variation in both annual rental income growth and changes in interest payments at the individual level (Graph 4).
+Much of this variation likely reflects investor-specific factors. For example, if an investor sells their property halfway through the year and pays off their mortgage, both rent and interest costs will halve, even though interest rates may not have changed. These kind of housing transactions introduce a spurious positive correlation between investors’ interest costs and rental income: it looks like interest costs and rents move together, but this is not because of pass-through of interest costs to rents.
+
+As such, we try to remove these observations when estimating the pass-through of interest costs to rents.
+Specifically, we remove observations with very large changes in rental income and, for levered investors, we remove observations where the change in interest payment does not broadly line up with the change in the indicator lending rate (Graph A.2; see Appendix A for details). The idea is that by removing these observations we are isolating cases where an investor retains their existing rental properties from one year to the next, and makes regular mortgage repayments that move in line with the interest rate they face.
+
+Graph 4
+Distribution of Annual Changes in Rental Income and Interest Payments* Selected financial years
+
+Rent – 2007/08
+
+Interest – 2007/08
+
+Rent – 2018/19
+
+Interest – 2018/19
+
+0
+-20
+Share of leveraged investors.
+
+20
+
+*
+Sources: ABS; RBA.
+
+-20
+
+0
+
+20
+
+%
+
+10
+
+5
+
+%
+
+10
+
+5
+
+0
+
+%
+
+10
+
+5
+
+%
+
+10
+
+5
+
+0
+
+Method
+To test whether investors pass-through changes in their interest costs to their rents, we compare changes in rental incomes for investors with different levels of debt. Ideally, we would be able to observe rental growth for two identical properties with different levels of associated debt. Then when interest rates changed, we could compare rental growth for the more indebted property to the less indebted one and confidently learn something about pass-through.
+For example, suppose there are two fictional investors, A and B, that own identical investment properties next door to each other – the only difference being that A has a large mortgage on their investment property and B owns the property outright. If A increases their rent by more than B when interest rates increase, we would conclude that the difference reflects the pass-through of A’s higher interest costs to the rent that they charge. However, if A and B’s rental incomes grow similarly after a change in interest rates, then we would conclude that there is limited pass-through.
+
+In reality, we do not observe identical properties with different levels of debt. Instead, we compare rental income growth for investors in the same local area, and investigate whether this varies across investors depending on the change in their interest costs.
+In doing so, we control for other factors that may drive both rates and rents for all investors, such as local economic conditions.
+
+-----
+
+As mentioned above, we remove observations with very large changes in rental income and/or interest costs because they likely reflect property transactions that would bias our results if left in. We explore different thresholds for classifying movements as large enough to be removed. We show results for a ‘narrow window’, as well as a slightly wider ‘medium window’, which removes fewer observations. The extent of data trimming does not affect our conclusions. Appendix A provides more detail about our approach.
+
+Results
+We find little evidence of direct pass-through from interest costs to rents. On average, we find that for every dollar increase in their mortgage interest costs, investors increase their rents by one cent (see Appendix A for detailed results). To put this effect in context, the median monthly interest payment for leveraged investors increased by around $850 between April 2022 and January 2024.5 Our estimate suggests that this $850 increase in interest costs would have raised rents by less than $10 per month, or just over $2 per week (Graph 5, left panel).
+This increase in rent equates to around 0.4 per cent of the median monthly rent in January 2024.
+
+$
+
+20
+
+10
+
+0
+
+-10
+
+*
+
+Graph 5
+Effect of an $850 Increase in Monthly Interest Costs on Monthly Rent*
+By extent of data trimming
+Rising rates
+
+Average effect
+
+Stable or declining rates
+
+Narrow window Medium window
+
+These figures multiply our point estimates in Table A.2 by 850.
+The ‘narrow window’ excludes observations if annual rental income growth is above 30 per cent or below 10 per cent, or if interest payment growth lies outside a +/- 5 percentage point range around the per cent change in the indicator lending rate over the corresponding financial year. The medium window uses a lower bottom threshold for interest payment growth. See Tabl e A.1 for details. In our sample period, interest rates for investors were rising in 2008/09, 2011/12, 2017/18 and 2018/19. Interest rates were not rising in 2009/10 and 2012/13-2016/17.
+
+$
+
+20
+
+10
+
+0
+
+-10
+
+Sources: ABS; RBA.
+
+One natural question could be, do these results differ when interest rates are rising, compared with when they are falling? In our sample period, the indicator lending rate for investors increased in 2008/09 and
+
+4         R E S E R V E   B A N K   O F   AU S T R A L I A
+
+2011/12, in line with the cash rate. There were also small increases in 2017/18 and 2018/19, reflecting increases in lending spreads. We can use our regression approach to test whether pass-through is higher in these years compared with other years in our sample period.
+
+We find some slight evidence of asymmetry, with pass-through tending to be more positive when interest rates are rising (Graph 5, middle and right panels), but the effects are small. Our biggest estimate suggests that investors increase their rent by 3 cents when their interest costs increase by one dollar. To put this in context, this estimate implies that in response to the $850 increase in their interest costs between April 2022 and January 2024, the median leveraged investor would have increased their rent by around $25 per month. This increase in rent equates to around 1 per cent of the median monthly rent as at January 2024. In most of our regressions, we cannot detect any statistically significant pass-through in years when interest rates are flat or falling, which is consistent with rents tending not to fall outside of sharp downturns.
+
+Limitations and future work
+There are a few limitations of our approach that are important to acknowledge. As described above, our regression tries to infer the extent of pass-through by looking at whether, following a change in interest rates, investors with higher debt change their rent by more than investors with less debt. In doing so, we are effectively ruling out the possibility of ‘spillovers’ between the rent-setting decisions of highly indebted investors and the rent-setting decisions of less-indebted investors. If investors with big mortgages increase their rents due to an increase in interest costs, and less-indebted investors observe this and follow suit, then our approach would incorrectly infer limited pass-through of interest costs to rents.
+Given the nature of Australian housing markets, with lots of individual landlords all competing for renters, this ‘no spillovers’ assumption may be reasonable. But others may believe it is a strong assumption, and we cannot verify it.
+
+Our sample period, from 2006/07 to 2018/19, does not include a period where interest rates rose as much as they have in the current cycle. It is plausible that pass-through could be higher when interest costs rise sharply. This will be easier to test when data covering the last couple of years becomes available.
+
+-----
+
+Another limitation is that to date we have not been able to incorporate information on how tight local rental markets are. It seems plausible that pass-through may be higher when the supply of vacant properties is especially low, as is currently the case. Future work will look to incorporate local vacancy rate data and to test whether the pass-through of rate rises is stronger when vacancy rates are low.
+
+Conclusion
+Overall, we find limited evidence that investors pass-through changes in their interest costs to their rents. This is consistent with the standard view that the level of housing demand relative to the stock of properties available is the key driver of rents (Hunter 2024). Indeed, the RBA’s assessment is that high rent growth in recent years reflects this fundamental force.
+Housing demand has been strong, supported by high population growth and increased preference for more space, while supply has been hampered by ongoing capacity constraints and increases in construction costs.
+
+Appendix A: Regression specifications and data trimming
+Regression approach and specification Our regression approach exploits variation in the indebtedness of investors within the same local area to estimate the pass-through of interest costs to rents.
+We start with a hypothetical rental pricing model and build up to our regression specification. Suppose a leveraged investor i sets their rent in year t according to:
+Rentit = pit + βInterestit
+Here p is the (unobserved) ‘competitive’ annual rental price for i ’s property, Interest is their annual mortgage interest payment, and β is the pass-through parameter that we want to estimate. The per cent change in i ’s rent from year t−1 to t is then:
+ΔInterestit
+Δpit
+Rentit − 1
+Rentit − 1
+
+Δ%Rentit =
+
++ β
+
+Two identical properties should have the same value for the first term on the right-hand side, which is (close to) the per cent change in the unobserved competitive rental price. Since we cannot observe identical properties, our approach is to soak up this term using location-by-time fixed effects,
+
+which should account for the effects of local housing market conditions. In other words, we assume all investors in the same local housing market (SA4) experience the same per cent change in the competitive rental price for their property each year.
+This assumption allows us to learn about β by comparing rental growth for investors in the same SA4 but who experience different changes in their interest costs. More indebted investors should experience larger changes in their interest costs when interest rates change. Putting this all together, we arrive at our regression:
+
+Δ%Rentit = αSA4, t + β
+
+ΔInterestit
+Rentit − 1
+
++ Γ'Xit + eit
+
+Rent is investor i ’s annual rental income, ΔInterest is the dollar change in their interest payment from year t−1 to t, and α is a SA 4-year fixed effect. β is the pass-through parameter of interest. A coefficient of one indicates that a one dollar increase in interest costs is passed on one-to-one to rental income.
+
+To account for other differences in the properties and landlords, we include two types of additional controls in X. First, we include a control for lagged quintile of Interest /Rent. This is to account for the fact that investors with higher debt (as measured by their reported interest costs) tend to have systematically higher rental income growth over our sample period, potentially reflecting the different nature of the properties they hold (Graph A.1).6 All regressions also include age-group and income quintile dummies.
+These auxiliary controls are not needed for identifying β, but may help with precision by absorbing residual variation in rental income growth.
+
+Graph A.1
+Median Growth in Rental Income
+Financial year; by interest payment quintiles
+
+%
+
+10
+
+5
+
+0
+
+5
+
+1
+
+3
+
+2
+
+0
+
+4
+
+2009
+Sources: ABS; RBA.
+
+2011
+
+2013
+
+2015
+
+2017
+
+2019
+
+%
+
+10
+
+5
+
+0
+
+-----
+
+Table A.1: Data Trimming Levels Used when Estimating Pass-through
+
+Range for annual interest payment growth around the per cent change in the indicator lending rate(a)
+(ppt)
+[–5, 5]
+
+Range for annual rental income growth (per cent)
+[–10, 30]
+
+Window
+Narrow window
+(most restrictive)
+Medium window
+Wide window
+(least restrictive)
+(a)  We include non-mortgagors in our main regressions even if they fall outside these windows. But our results are robust to
+
+[–10, 30]
+[–50, 50]
+
+[–15, 5]
+[–50, 50]
+
+excluding non-mortgagors.
+
+Source: RBA.
+
+Data trimming
+As noted earlier, housing transactions could create a significant positive bias in our estimate of β because they mechanically move rents and interest payments in the same direction. We try two approaches to dealing with them. First, we exclude observations with large changes in rental income and/or interest payments by trimming them. Second, we also try an instrumental variables (IV) approach.
+
+We try three different levels of trimming: narrow, medium and wide (Table A.1). The ‘narrow window’ excludes observations if annual rental income growth is above 30 per cent or below –10 per cent, or if interest payment growth lies outside a ± 5 percentage point range around the per cent change in the indicator lending rate over the corresponding financial year. Graph A.2 gives a visual representation of how this range for interest payment growth works.
+This window should remove most observations where there is a transaction, but may exclude investors who are well into their mortgage term. These more seasoned mortgagors tend to have rapidly declining mortgage principals, meaning that interest payments will decline quickly. The ‘medium window’ tries to capture more of these seasoned mortgagors by lowering the bottom threshold for interest payment growth. Finally, the ‘wide window’, includes observations with rental income growth and interest payment growth below 50 per cent in absolute terms.
+The wide window undoubtedly includes many property purchases/sales, so we use it mostly for illustrative purposes when looking at the estimates.
+
+6         R E S E R V E   B A N K   O F   AU S T R A L I A
+
+Graph A.2
+Narrow Window Around
+Changes in the Indicator Lending Rate Financial year; year-ended
+
+%
+
+15
+
+0
+
+-15
+
+-30
+
+2010
+
+2016
+Grey shaded area shows a +/-5 percentage point range.
+
+2013
+
+2007
+*
+Source: RBA.
+
+%
+
+15
+
+0
+
+-15
+
+-30
+
+2019
+
+Instrumental variables approach
+We also try an IV approach, which tries to isolate changes in interest payments that are due solely to changes in aggregate lending rates, and not due to mortgage transactions or other factors. To construct the instrument, we first impute an investor’s level of debt in year t−1 by dividing their reported interest payment in that year by the indicator lending rate.
+Our instrument then multiplies this lagged imputed debt level by the observed change in the indicator lending rate over year t−1 to t:
+
+Zit =
+
+~
+Dit − 1
+Rentit − 1
+
+× Δrt, where
+
+~
+Dit − 1 =
+
+Interestit − 1 rt − 1
+
+-----
+
+Here Z is our instrument, r is the indicator lending rate, ~
+D is the investor’s imputed level of debt.
+and
+Table A.2 shows pass-through coefficient estimates for both OLS and IV specifications, and for different levels of data trimming shown in Table A.1. Table A.3 shows the first-stage and reduced-form estimates for the IV
+
+specification. Table A.4 shows pass-through estimates from OLS and IV specifications where the main regressor is interacted with a dummy variable equal to one in years where the indicator lending rates was rising.
+
+Table A.2: Effect of Change in Interest Payment on Change in Rental Income
+
+Effects
+Panel A: OLS
+ΔInterest / Rentt − 1
+
+Panel B: IV
+ΔInterest / Rentt − 1
+
+Fixed effects
+Controls
+Observations
+
+Narrow window
+(most restrictive)
+
+Medium window
+
+Wide window
+(least restrictive)
+
+0.009+
+(0.004)
+
+0.005
+(0.006)
+Yes
+Yes
+2,795,198
+
+0.01**
+(0.002)
+
+0.006
+(0.004)
+Yes
+Yes
+3,683,960
+
+0.316***
+(0.027)
+
+0.019+
+(0.01)
+Yes
+Yes
+6,785,979
+
+Notes: This table reports OLS and IV estimates of the effect on changes in interest payments on changes in rental income for different levels of data trimming as defined in Table A.1. All regressions include non-mortgagors. They also include control variables and year-SA
+4 fixed effects as discussed earlier in the article. Year-clustered standard errors are in parentheses. ***, **, *, and + denote statistical significance at the 0.1, 1, 5 and 10 per cent levels, respectively.
+Sources: ABS; Authors’ calculations.
+
+Table A.3: Reduced-form and First-stage Effects of Imputed Debt Times Change in Indicator Lending Rate
+
+Effects
+Panel A: Reduced-form
+D it − 1 × Δrt / Rentt − 1
+~
+Panel B: First-stage
+D it − 1 × Δrt / Rentt − 1
+~
+First-stage F -Stat.
+Fixed effects
+Controls
+Observations
+
+Narrow window
+
+0.005
+
+(0.006)
+
+1.009***
+
+(0.036)
+796.80
+Yes
+Yes
+2,795,198
+
+Medium window
+%ΔRentt
+
+0.006
+
+(0.004)
+
+ΔInterestt / Rentt − 1
+
+Wide window
+
+0.013+
+
+(0.007)
+
+0.988***
+
+0.720***
+
+(0.043)
+532.29
+Yes
+Yes
+3,683,960
+
+(0.078)
+85.47
+Yes
+Yes
+6,785,979
+
+D it − 1 × Δrt / Rentit − 1 where ~
+
+Notes: This table reports the reduced-form and first-stage estimates of the effect of our instrument for interest cost changes D it − 1 = Interestit − 1 / rt − 1, for different levels of data trimming as defined in Table A.1. All ~
+Zit = regressions include non-mortgagors. They also include control variables and year-SA 4 fixed effects as discussed earlier in the article.
+Year-clustered standard errors are in parentheses. ***, **, *, and + denote statistical significance at the 0.1, 1, 5 and 10 per cent levels, respectively.
+Sources: ABS; Authors’ calculations.
+
+-----
+
+Table A.4: Asymmetric Effects of Change in Interest Payment on Change in Rental Income Effects
+Medium window
+Panel A: OLS
+ΔInterest / Rentt − 1
+
+Narrow window
+
+ΔInterest / Rentt − 1 × 1[Δrt > 0]
+
+Panel B: IV
+ΔInterest / Rentt − 1
+
+ΔInterest / Rentt − 1 × 1[Δrt > 0]
+
+Fixed effects
+Controls
+Observations
+
+−0.002
+(0.003)
+0.029*
+(0.011)
+
+0.005+
+(0.003)
+0.016+
+(0.008)
+
+−0.013*
+(0.004)
+0.046**
+(0.012)
+Yes
+Yes
+2,795,198
+
+−0.007
+(0.005)
+0.041*
+(0.014)
+Yes
+Yes
+3,683,960
+
+Notes: This table reports OLS and IV estimates of the effect on changes in interest payments on changes in rental income for different levels of data trimming as defined in Table A.1. All regressions include non-mortgagors. They also include control variables and year-SA
+4 fixed effects as discussed earlier in the article. Year-clustered standard errors are in parentheses. ***, **, *, and + denote statistical significance at the 0.1, 1, 5 and 10 per cent levels, respectively.
+Sources: ABS; Authors’ calculations.
+
+Endnotes
+*
+
+1
+
+2
+
+3
+
+Declan Twohig is from Economic Analysis Department.
+Anirudh Yadav and Jonathan Hambur are from Economic Research Department.
+Examples where this view has been expressed are Malo (2023) and Kelly (2023).
+In the medium term, lower dwelling investment may offset some of this decline.
+A drawback of this approach is that it can be sensitive to the exact approach used. It can also be hard to test for asymmetries, such as whether the effects differ when rates are rising or falling, due to short sample periods.
+
+4
+
+5
+
+6
+
+We use the standard variable rate for investors from Statistical Table F5, splice it backwards using the standard variable owner-occupier rate, and then compute the average rate for each financial year. The resulting series closely tracks movements in the cash rate.
+This statistic is from the RBA’s Securitisation Dataset.
+For detail on this dataset, see Hughes (2024) and Fernandes and Jones (2018).
+Excluding this control does not substantially change the results.
+
+8         R E S E R V E   B A N K   O F   AU S T R A L I A
+
+-----
+
+References
+Agarwal N, R Gao and M Garner (2023), ‘Renters, Rent Inflation and Renter Stress’, RBA Bulletin, March.
+
+Albuquerque D and J Lenney (2023), ‘Is UK Monetary Policy Driving Private Housing Rents?’, Bank Underground,
+20 December.
+
+Dias D and J Duarte (2019), ‘Monetary Policy, Housing Rents, and Inflation Dynamics’, Journal of Applied Economics, 34, pp 673–687.
+
+Fernandes K and D Jones (2018), ‘The Reserve Bank’s Securitisation Dataset’, RBA Bulletin, December.
+
+Hughes A (2024), ‘How the RBA Uses the Securitisation Dataset to Assess Financial Stability Risks from Mortgage Lending’, RBA Bulletin, July.
+
+Hunter S (2024), ‘Housing Market Cycles and Fundamentals’, Speech at the REIA Centennial Congress, Hobart,
+16 May.
+
+Kelly C (2023), ‘From Interest Rates to the Race for Space: What is Fuelling Australia’s Rental Nightmare’, The Guardian, 20 January.
+
+Liu Z and M Pepper (2023), ‘Can Monetary Policy Tame Rent Inflation?’, FRBSF Economic Letter No 2023-04.
+
+Malo J (2023), ‘Interest Rate Rises Do Affect Rents, but Not in the Way You Think’, The Sydney Morning Herald,
+7 March.
+
+Moore A (2023), ‘Why Higher Interest Rates Aren’t to Blame for the Rental Crisis’, Realestate.com.au, 22 March.
+
+Saunders T and P Tulip (2019), ‘A Model of the Australian Housing Market’, RBA Research Discussion Paper No 2019-01.
+
+BLADE Disclaimer
+
+HILDA Disclaimer
+
+-----
