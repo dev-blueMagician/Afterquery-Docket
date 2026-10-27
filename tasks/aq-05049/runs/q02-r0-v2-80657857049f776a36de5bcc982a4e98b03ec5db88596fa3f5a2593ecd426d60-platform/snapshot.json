@@ -1,0 +1,53 @@
+{
+  "bundle": "aq-05049",
+  "corpus_sha256": {
+    "docs/Docusign-Q1-FY2026-Earnings-Release.txt": "820d47fe61e093793aee6a76343202cc0f4ba91e2c0a9bd85217ca1880618039",
+    "docs/Docusign-Q3-FY2025-Earnings-Release.txt": "9eb7f3b9fd3181540ac92a2236e5e99f4fdef4d08f9d0d5b77acb9264007b524",
+    "docs/Docusign-Q3-FY2025-Quarterly-Report.txt": "d790ceeca6d6e2657e833e6f7fa3cf25f8dcb3dbd7961d7d86acb05f2c26d1da",
+    "docs/Docusign-Q4-FY2025-Earnings-Release.txt": "ef50493a8c711f6d374cb52b586d14334c9e2b803558fb21debc65b237c4251e",
+    "docs/Paylocity-Holding-Q1-FY2025-Earnings-Release.txt": "91b2a2efd923cfc0ef28a7e9e70c9b631a488007262d058babdfa729e94252bb",
+    "docs/Paylocity-Holding-Q2-FY2025-Earnings-Release.txt": "2af4f60ed8913095ebfa6462eee474cb58d7f31de78056569161cddad1f15547",
+    "docs/Paylocity-Holding-Q3-FY2025-Earnings-Release.txt": "64007a34ecc8f691668561f0ec09cc0b364c60d8d065325e5f6e63bc8cae9bf1",
+    "text/D01.txt": "b3a9b9d96d2dcf856e972109d0894bb3473dd14cd3fc86f2878439f4242b4660",
+    "text/D02.txt": "93e230246a32d26c99c72cd3dd037fca7664a260cb30e5cee2fc7a172cecf5b6",
+    "text/D03.txt": "405053788991f314a448943003f5a98101f3a72b09875f87b3cdeb75e2a38b2f",
+    "text/D04.txt": "dff88f97ce4539eb83cdf2f5c16c9f30b6822f162bb71d57f7e610f2c4836d9f",
+    "text/D05.txt": "afdeee23f2173a74ea68846ecc8c16f57ed5eba5dad44653e9b370531e69e1c2",
+    "text/D06.txt": "c32b02e8225b772562bab12ac9ac513d400418628b34fd28e87f3c8526669bc0",
+    "text/D07.txt": "ce0877b1fc9280c87fd09005145244497b101986b61178dc6a720faf2f2dd1ca",
+    "text/manifest.json": "5d95e0e92ee47ef185d980ee6bef2b2648dc9947d58836758b3f5b8e48277e26"
+  },
+  "difficulty_target": "hard",
+  "form_sha256": "3ba7bb44687bc6909008759e80ddf26966428dc51b135f41421028dfab784d29",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "hard",
+    "documents": "D03, D04",
+    "id": "q02",
+    "levers": "Scatter the pieces; Calculate across documents",
+    "origin": "claude",
+    "revision": "0",
+    "status": "draft",
+    "tags": "Cross-document join; Temporal alignment"
+  },
+  "question_id": "q02",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "$892 million",
+    "components": "- c1: $892 million",
+    "evidence": "- D03 (Note 10, Stock Repurchase Program) [c1]: \"In March 2022, our board of directors authorized a stock repurchase program of up to $200.0 million of our outstanding common stock\"\n- D03 (Note 10) [c1]: \"Subsequently, in September 2023, our board of directors authorized an increase to our existing stock repurchase program for an additional amount of up to $300.0 million\"\n- D03 (Note 10) [c1]: \"In May 2024, our board of directors authorized an increase to our existing stock repurchase program for an additional amount of up to $1.0 billion\"\n- D03 (MD&A, Liquidity and Capital Resources) [c1]: \"which commenced in March 2022 and does not have an expiration date\"\n- D03 (Part II, Item 2 table header) [c1]: \"Approximate Dollar Value of Shares that May Yet Be Purchased Under the Plans or Programs (in thousands) (3)\"\n- D03 (Part II, Item 2 table) [c1]: \"October 1 - October 31|1,014,980|$64.16|1,014,980|$769,641\"\n- D03 (Part II, Item 2 footnote 3) [c1]: \"Amounts presented exclude the 1% excise tax as a result of the IRA\"\n- D04 (statements of cash flows, column header) [c1]: \"||Three Months Ended January 31,||Year Ended January 31,||\"\n- D04 (statements of cash flows, units and years) [c1]: \"|(in thousands)|2025|2024|2025|2024|\"\n- D04 (statements of cash flows) [c1]: \"|Repurchases of common stock|(161,725)|—|(683,528)|(145,515)|\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: hook h1, a complete-looking account over an incidental fact (an absence); target hard. Sentence and answer carried word for word from sketch i02 (caller; i01 reworded with \"Altogether\" because all three i01 solvers named \"fiscal 2025 only\" as a second reading of \"By January 31, 2025\"). i01's local strong-solver screen: 3/3 right; i02's own screen recorded in notes/sketches/i02.md. User quick test 2026-10-14: survived (\"1 2 failed, 3 4 survived\"; this was item 4). Platform difficulty result pending.\n- Dependency plan: authorizations $200.0M + $300.0M + $1.0B (D03) less the $769,641K unused at Oct 31, 2024 (D03 Part II) = 730,359K paid through Oct 31; plus Q4 FY2025 cash 161,725K (D04) = 892,084K -> $892 million.\n- Universe: not applicable (single derived amount).\n- Necessity: D03 is the sole source of the authorizations, the March 2022 start and the remaining authorization (no release prints them; D01 gives only a rounded June 5, 2025 figure after a further $1.0B). D04 is the sole source of Q4 FY2025 cash (161,725; \"$161.7 million\" in its highlights); D01/D02 do not print it and the accumulated-deficit roll would need Q4 net income, also only in D04. Delete-and-guess: without D03 a solver sums D04's two years (829) or gives 683.5; without D04, 730.4 through Oct 31, or about 917 from D01's June 5 figure. Not the gold either way. Recall of cumulative program purchases is not a headline figure.\n- Selected-lever checks: lure 829 (145,515 + 683,528 = 829,043K) differs from 892; 730 (through Oct 31), 684 (fiscal 2025 only), 894 (adding the 1,943K excise accrual) and about 1,100/917 (D01's June 5 route) all differ at whole millions.\n- Targeted failure modes: declared Part vs total -> $829 million (the releases' two-year account taken as the program's history), recomputed above. Not declared: the \"fiscal 2025 only\" reading (684), which \"Altogether\" now rejects.\n- Calculation verification: script (scratchpad calc_aq05049.py): 1,500,000 - 769,641 = 730,359; 730,359 + 161,725 = 892,084; 892,084 - 683,528 - 145,515 = 63,041 (> 0). Q3 consistency: Sep + Oct table usage (1,861,255 x $57.78 + 1,014,980 x $64.16 = 172,664K) equals Q3 cash repurchases (172,665K, D02), so authorization use and cash agree; the 10-Q's excise-inclusive amounts ($523.7M nine months) are not cash (\"Excise tax payable on net stock repurchase 1,943\", non-cash).\n- Semantic/ID/overview probes: \"repurchase program\", \"remaining authorization\", \"May Yet Be Purchased\", \"commenced\", \"excise\", \"buyback\" across all seven texts; D01's \"up to $1.4 billion\" (June 5, 2025, after a further $1.0B) is the only other remaining-authorization figure. The bundle overview lists repurchases by period only.\n- Precision/readings: \"Altogether ... by January 31, 2025\" = cumulative from the program's start; \"fiscal 2025 only\" (684) rejected by \"Altogether\"; \"two printed years\" (829) rejected by \"under its stock repurchase program\" (commenced March 2022); excise-inclusive (894) rejected by \"cash\"; RSU tax withholding not under the program. The table column is \"Approximate\"; the answer is asked to the nearest million.\n- Completeness: capture complete, no gaps.\n- Style/set review: one ask, 25 words; with q01 (Docusign Q2 tax) no shared inputs or answer path.\n- Warnings answered: expected form false alarms for D03 figures printed past character 20,000 (200.0, 300.0, 1.0, 769,641, and the thousands-scaled 200,000/300,000/1,000,000 if the form reads them as such); origin claude.",
+    "necessary documents": "- D03: Answer component\n- D04: Answer component",
+    "platform validation": "",
+    "question": "Altogether, how much cash had Docusign paid for share buybacks under its stock repurchase program by January 31, 2025, to the nearest million dollars?",
+    "reasoning": "Step 1. Source input (Doc 4, Note 10 \"Stock Repurchase Program\" and Part II Item 2 footnote 1): the board authorized a repurchase program of up to $200.0 million in March 2022, an increase of up to $300.0 million in September 2023 and an increase of up to $1.0 billion in May 2024; the MD&A adds that the program \"commenced in March 2022\", before the two fiscal years the earnings releases cover.\nStep 2. Calculation (Doc 4): the three authorizations in thousands of dollars: 200,000 + 300,000 + 1,000,000 = 1,500,000 thousand dollars authorized by January 31, 2025 (derived).\nStep 3. Source input (Doc 4, Part II Item 2 table, \"October 1 - October 31\" row, column \"Approximate Dollar Value of Shares that May Yet Be Purchased Under the Plans or Programs (in thousands)\"): 769,641 thousand dollars of authorization still unused at October 31, 2024; footnote 3 says these amounts exclude the 1% excise tax, as cash repurchase payments do.\nStep 4. Source input (Doc 2, Condensed Consolidated Statements of Cash Flows, \"Three Months Ended January 31,\" 2025 column, row \"Repurchases of common stock\"): (161,725) thousand dollars paid in the quarter from November 1, 2024 to January 31, 2025.\nStep 5. Calculation (Doc 4 and Doc 2): 769,641 - 161,725 = 607,916 thousand dollars of authorization still unused at January 31, 2025 (derived).\nStep 6. Calculation (Doc 4 and Doc 2): 1,500,000 - 607,916 = 892,084 thousand dollars of cash paid for buybacks under the program from its start through January 31, 2025 (derived).\nStep 7. Final answer (Doc 4 and Doc 2): 892,084 / 1,000 = 892.084 million dollars, which is the gold answer to the nearest million.\nStep 8. Check (Doc 4 and Doc 2): the fiscal 2025 and fiscal 2024 repurchases Doc 2 prints add to 683,528 + 145,515 = 829,043 thousand dollars, less than the program total in Step 6 because purchases in the program's first year from March 2022 appear in no document's cash flow statement.",
+    "targeted failure modes": "### Failure mode 1\nTrap: Part vs total\nHow a careless solver fails: Uses the wrong period or date\n\nWhy these are traps: Part vs total: Doc 2's cash flow statement shows only fiscal 2025 (683,528) and fiscal 2024 (145,515) repurchases; adding them gives $829 million. Doc 4 shows the program began in March 2022; its remaining-authorization table recovers the earlier purchases, giving $892 million."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "80657857049f776a36de5bcc982a4e98b03ec5db88596fa3f5a2593ecd426d60"
+}
