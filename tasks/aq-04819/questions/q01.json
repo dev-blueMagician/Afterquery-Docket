@@ -1,0 +1,95 @@
+{
+  "question": "How many children and teenagers took part in the studies included in the systematic review of Internet gambling marketing in which their parents were also participants?",
+  "number_of_asks": 1,
+  "gold_answer": "213",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 5, results): the systematic review analyses the 21 studies that met its inclusion criteria and summarises each one in its tables of articles.\nStep 2. Source input (Doc 5, table of articles on gambling marketing and sport): two of these studies took parents as participants alongside their children. The first surveyed 152 parent/child dyads at Australian football, rugby league and soccer sites, so it had one child with each parent.\nStep 3. Source input (Doc 5 and Doc 9): Doc 5 describes the second only as 59 family groups with \"at least 1 parent and 1 adolescent\" aged 14 to 18, which does not say how many teenagers took part. Doc 9 is this study: the same 59 family groups, each with a parent and adolescents aged 14 to 18, and the same three themes of initiation, influence and impact. It allowed more than one adolescent per family, and its results count \"59 parents and 61 adolescents\".\nStep 4. Not counted (Doc 5): the review's other studies with young participants list no parents among them, namely the survey of young basketball fans and the online panel of adolescents and adults.\nStep 5. Calculation (Doc 5 and Doc 9): 152 + 61 = 213.\nStep 6. Final answer (Doc 5 and Doc 9): 213 children and teenagers.",
+  "answer_components": [
+    "213"
+  ],
+  "evidence": [
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "All 21 studies that met the inclusion criteria were analyzed."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Mixed method study of 152 parent/child dyads (children 8 to 16-years old) conducted on Australian football League, national Rugby League, and soccer sporting sites in Australia"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "304 participants were included"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Qualitative study conducted with 59 family groups (at least 1 parent and 1 adolescent 14 to 18-years-old) in Australia"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Three main themes emerged Initiation - the use of sport as a platform for the promotion of gambling"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Mixed method Influence of online gambling advertising on young people (11 to 16-years-old) who were basket-ball fans"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Online panel survey to explore the attitudes of 500 Australian residents (16 to 88-years-old)"
+    },
+    {
+      "document_number": 9,
+      "component_number": 1,
+      "quote": "A qualitative study was conducted with 59 family groups comprising of at least one parent and one adolescent (14–18 years old) in Victoria, Australia."
+    },
+    {
+      "document_number": 9,
+      "component_number": 1,
+      "quote": "Three main themes emerged. First, was initiation of sport as a platform for the promotion of gambling."
+    },
+    {
+      "document_number": 9,
+      "component_number": 1,
+      "quote": "More than one adolescent child was able to participate in the family."
+    },
+    {
+      "document_number": 9,
+      "component_number": 1,
+      "quote": "A total of 59 parents and 61 adolescents were interviewed across 59 family groups."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        9
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Entity resolution",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: Doc 5 describes one study only as \"59 family groups (at least 1 parent and 1 adolescent)\". A careless solver counts 59 teenagers and answers 211. Doc 9 is that study; its results count 61 adolescents, so 152 + 61 = 213."
+}
