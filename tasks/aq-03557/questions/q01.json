@@ -1,0 +1,78 @@
+{
+  "question": "With the number of stores Woolworths provides, how many supermarkets trade under banners that any retailer's submission says have no loyalty programme?",
+  "number_of_asks": 1,
+  "gold_answer": "376 supermarkets",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 7, answer on loyalty programmes): Woolworths says Foodstuffs' PAK'nSAVE and Four Square banners do not offer loyalty programmes, and that SuperValue stores have no banner-wide programme. It says the same of Chemist Warehouse, but it describes that chain as a pharmacy retailer, not a supermarket, so Chemist Warehouse stores are left out.\n\nStep 2. Source input (Doc 3, answer on loyalty programmes): Foodstuffs South Island says PAK'nSAVE has no loyalty scheme, that Four Square and Raeward Fresh do not operate loyalty schemes, and that by its understanding FreshChoice and SuperValue do not either. Taking both submissions, the supermarket banners said to have no programme are PAK'nSAVE, Four Square, SuperValue, FreshChoice and Raeward Fresh.\n\nStep 3. Source input (Doc 7, executive summary): Woolworths counts 56 PAK'nSAVE supermarkets and 245 Four Square supermarkets. It gives SuperValue and FreshChoice together as 71 supermarkets.\n\nStep 4. Source input (Doc 7, list of other supermarkets): Raeward Fresh is listed with four retail stores, written as a word. That is 4 stores.\n\nStep 5. Calculation (Doc 3 and Doc 7): 56 + 245 = 301 for PAK'nSAVE and Four Square.\n\nStep 6. Calculation (Doc 3 and Doc 7): 301 + 71 = 372 with SuperValue and FreshChoice. The 71 is added whole because Doc 3 says neither of those banners runs a scheme.\n\nStep 7. Calculation (Doc 3 and Doc 7): 372 + 4 = 376 supermarkets with Raeward Fresh. This is the answer.",
+  "answer_components": [
+    "376 supermarkets"
+  ],
+  "evidence": [
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "56 PAK’nSAVE, 138 New World, and 245 Four Square individually owner-operated supermarkets"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "We are also the franchisor for 71 SuperValue and FreshChoice supermarkets"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "Raeward Fresh (with four retail stores across Christchurch, Nelson, and Queenstown)"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "Four Square banners do not offer loyalty programmes, nor does Chemist Warehouse"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "There are not any banner-wide loyalty programmes at SuperValue stores"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Four Square and Raeward Fresh also do not operate loyalty schemes."
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "It is our understanding that FreshChoice and SuperValue do not operate loyalty schemes."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        7
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    },
+    {
+      "trap": "Wrong kind of entity",
+      "how_a_careless_solver_fails": "Picks the wrong entity or section"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: Raeward Fresh's lack of a scheme is only in Doc 3, its four stores only in Doc 7; omitting it gives 372. Wrong kind of entity: Doc 7 also names Chemist Warehouse, a pharmacy chain with 16 stores; adding it gives 392. Gold: 376."
+}
