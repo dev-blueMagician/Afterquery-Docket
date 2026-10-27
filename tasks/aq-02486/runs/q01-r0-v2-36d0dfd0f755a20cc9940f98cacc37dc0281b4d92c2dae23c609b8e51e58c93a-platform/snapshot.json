@@ -1,0 +1,52 @@
+{
+  "bundle": "aq-02486",
+  "corpus_sha256": {
+    "docs/fr_2023_20909.txt": "4649cc1b653fc89f202043e29717e62472d31324168de4001f0121f5cbed4f61",
+    "docs/fr_2024_06800.txt": "0bb96d071d218ab6e98742f22e915c7af39482c7285028c46ae26f4c583f55c5",
+    "docs/fr_2026_04475.txt": "629f57272af67d290c8c695d15b95f498eff18847e62f3a6ca4a2f460268c766",
+    "docs/fr_2026_05529.txt": "fccca899b7d9f9f50b933da04e3c97af4b823d4a29badea913ce98d19e39238c",
+    "docs/fr_2026_06195.txt": "6dfc4c86520699d7b314c72812f3376ff74d9b37d811377872b3b64ad74972be",
+    "docs/fr_2026_09007.txt": "91190780f2c4d8eefe97839302ef3f5ea4a8482e7081e716d4382b83283e844d",
+    "docs/fr_2026_15782.txt": "b5df280d96bbe5c97e7673b412eba0e6be28816045cf1e3860513e1d71b8d1df",
+    "text/D01.txt": "95782c3b3242b43b40c2a14de05ab9d89fbde64d75746a61492b3366cc636be6",
+    "text/D02.txt": "95171f0c1acf660efef667d2f388e61e513b812991417a658599465324d91a4a",
+    "text/D03.txt": "99fcaf0e380c6eebf1b4451f89b223d1275ff08b49268e986081662fdecf061d",
+    "text/D04.txt": "85b8dad09d51101e111f017299dbd91995ce5add5ce73d595e991f7f6e2109d4",
+    "text/D05.txt": "37235054059de539df74cf009dddd5054fe7c41cace1e233652042f939bc2518",
+    "text/D06.txt": "3059af247374a6f26070d2b28ce1e5438ea0500b219ee4393ba4d6de5367c889",
+    "text/D07.txt": "212a4c230308ca2472d1064de75803e4c21c072316638b1df109243ece5ea21a",
+    "text/manifest.json": "27fe8dcaa6101c1c4746b2a3cb3f63e9e0a650179e934d5c8097c8f2b3df8866"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "4412d8fe38344ba45cc54a22c68e3659c0e97ba8cde43e9d6faa3b44428d2c67",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D05, D07",
+    "id": "q01",
+    "levers": "Mentions it vs does it; Calculate across documents",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i01",
+    "status": "draft",
+    "tags": "Cross-document join; Conditional filter"
+  },
+  "question_id": "q01",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "$12.50",
+    "components": "- c1: $12.50",
+    "evidence": "- D05 (2200.9(b)(3), line 284) [c1]: \"Records will be photocopied at a rate of ten cents ($0.10) per page.\"\n- D05 (2200.9(b)(3), line 284) [c1]: \"Duplication fees shall not be charged for the first 100 pages of copies unless the copies are requested for a commercial use.\"\n- D05 (2200.9(d), line 286) [c1]: \"If total fee charges are likely to exceed $25, ONCD shall notify the requester of the estimated amount to be charged.\"\n- D07 (1120.10(c)(2), line 298) [c1]: \"Where photocopies are supplied, the agency will provide one copy per request at a cost of $0.20 per page.\"\n- D07 (1120.10(d)(3), line 311) [c1]: \"The first 100 pages of duplication (or the cost equivalent for other media)\"\n- D07 (1120.10(d)(4), line 313) [c1]: \"a total fee calculated under paragraph (c) of this section is $25.00 or less for any request, no fee will be charged.\"",
+    "lever checks": "- Family and target: h1 (notes/hooks.md), the two 2026 FOIA proposals' charges for one news reporter's 225 photocopied pages. Medium target (no Easy slot, user 2026-10-09). Platform result pending.\n- Dependency plan: Doc 5 L284: $0.10 per page, first 100 pages free unless commercial; L286: over $25 only triggers notice. Doc 7 L298: $0.20 per page; L311: first 100 pages free except commercial use; L313: total of $25.00 or less, no fee. ONCD (225 - 100) x 0.10 = 12.50; Access Board (225 - 100) x 0.20 = 25.00 -> 0. Difference +12.50.\n- Universe: not applicable (single value).\n- Necessity: Doc 5 is the only source of ONCD's rules (searched \"ONCD\", \"National Cyber\"). Doc 7 is the only source of the Access Board's rules (searched \"Access Board\", \"1120\"). Without Doc 5, ONCD's rate and the absence of a waiver are unknown; a DOJ-template assumption (waiver of $25 or less) gives $0. Without Doc 7, the Access Board's rate and waiver are unknown. Stated risk: the waiver is DOJ-template wording, also in Doc 2 L482-483, so a solver missing Doc 7 who assumes it at any rate up to $0.20 reaches the gold; removal probe planned for this concrete issue.\n- Selected-lever checks: Mentions it vs does it: both rules mention $25 (Doc 5 L286 notice; Doc 7 L313 no fee), only Doc 7 forgoes the fee. Wrong routes (scratchpad i01_i02_calc.py, Fractions): Access Board waiver missed, -12.50; waiver read as strictly below $25, -12.50; waiver also applied to ONCD, 0.00; no free pages, -22.50; ONCD Privacy Act rule (Doc 5 L435, all pages once 4 or more), +22.50.\n- Targeted failure modes: mode 1 (Wrong jurisdiction or scope) -> 0.00 (ONCD waived) or -12.50 (Access Board charged); mode 2 (Look-alike measure) -> +22.50 (Doc 5 part 2201 copying rule). Considered and not declared: no free pages (-22.50), the question's \"news reporter\" and both documents' 100-page rule rule it out for careful readers but a careless one may still drop it.\n- Calculation verification: Python Fractions 2026-10-09: 125 x 1/10 = 25/2 = 12.50; 125 x 1/5 = 25 -> 0 under L313; 12.50 - 0 = 12.50. Exact; no rounding.\n- Semantic/ID/overview probes: no document states either agency's charge for any page count or compares agencies. The page overview lists Doc 5's \"$25.00 fee notification threshold\" and Doc 7's \"$0.20 per page duplication fee\", not the no-fee rule. Shortest route: find each agency's rate and free pages, notice Doc 7 L313 and its absence from Doc 5, compute.\n- Precision/readings: \"To the nearest cent\" fixes the form; the gold is exact. Inclusive \"$25.00 or less\" (L313) decides the Access Board's $25.00; Doc 7 L315-316's \"in excess of $25.00\" notice agrees. \"News reporter\" = representative of the news media in both documents (Doc 5 L153; Doc 7 L285); no search fees in either (Doc 5 L281; Doc 7 L291, L305). Public-interest fee waivers need a written request (Doc 5 L312; Doc 7 L334, L346); none is stated, so neither applies. Missed time limits would bar news-media duplication fees (Doc 5 L314; Doc 7 L306); no delay is stated. Doc 7 L314's collection-cost rule is moot (fee already 0); Doc 5 part 2200 has none.\n- Completeness: full corpus, no gaps (notes/intake.json).\n- Style/set review: 22 words, \"minus\" keeps the sign direction-neutral. Single question so far.\n- Warnings answered: pending preflight.",
+    "necessary documents": "- D05: Answer component\n- D07: Answer component",
+    "question": "To the nearest cent, what is ONCD's proposed FOIA charge minus the Access Board's for sending a news reporter 225 photocopied pages?",
+    "reasoning": "Step 1. The request in the question: one news reporter receives 225 photocopied pages from each agency.\n\nStep 2. Source fact (Doc 5, proposed duplication fees): ONCD photocopies records at a rate of ten cents ($0.10) per page and charges no duplication fee for the first 100 pages of copies unless they are requested for a commercial use. A news reporter's request is not commercial, and the news media pay no search fee.\n\nStep 3. Source fact (Doc 5, fees likely to exceed $25): ONCD's only 25-dollar rule is a notice. If total fee charges are likely to exceed $25, ONCD notifies the requester. ONCD's proposed FOIA fee section sets no amount below which it forgoes a fee.\n\nStep 4. Source fact (Doc 7, proposed duplication fees and restrictions): where photocopies are supplied, the Access Board charges $0.20 per page, and it provides the first 100 pages of duplication without charge to any requester not seeking records for a commercial use. The news media are not subject to search fees.\n\nStep 5. Source fact (Doc 7, restrictions on charging fees): when, after deducting the 100 free pages and the first two hours of search, a total fee is $25.00 or less for any request, no fee will be charged.\n\nStep 6. Calculation (from Steps 1, 2 and 4; Doc 5 and Doc 7): pages charged beyond the 100 free pages at either agency: 225 - 100 = 125 pages.\n\nStep 7. Calculation (from Steps 2 and 6; Doc 5 and Doc 7): ONCD's charge: 125 * 0.10 = 12.50 dollars.\n\nStep 8. Calculation (from Steps 4 and 6; Doc 7 and Doc 5): the Access Board's computed fee: 125 * 0.20 = 25.00 dollars.\n\nStep 9. Rule (from Steps 5 and 8; Doc 7): 25.00 dollars is $25.00 or less, so the Access Board charges nothing, 0 dollars.\n\nStep 10. Calculation (from Steps 3, 7 and 9; Doc 5 and Doc 7): ONCD's charge minus the Access Board's charge: 12.50 - 0 = 12.50 dollars, already exact to the nearest cent.",
+    "targeted failure modes": "### Failure mode 1\nTrap: Wrong jurisdiction or scope\nHow a careless solver fails: Misapplies a rule or premise\n\n### Failure mode 2\nTrap: Look-alike measure\nHow a careless solver fails: Takes the wrong line item\n\nWhy these are traps: Only Doc 7's Access Board rule forgoes totals of $25.00 or less; Doc 5's $25 is a notice. Waiving ONCD's $12.50 too gives $0; charging the Access Board's $25.00 gives -$12.50. Doc 5's Privacy Act copying rule charges all pages: $22.50. FOIA's 100 free pages give $12.50."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "36d0dfd0f755a20cc9940f98cacc37dc0281b4d92c2dae23c609b8e51e58c93a"
+}
