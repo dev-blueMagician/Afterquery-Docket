@@ -1,0 +1,50 @@
+{
+  "bundle": "aq-02157",
+  "corpus_sha256": {
+    "docs/Creating-a-smokefree-generation-and-tackling-youth-vaping-2.txt": "98d8da77c6d9b0a1f162fd83e7049a2354e8db076d930565f06e9bc697eebb6a",
+    "docs/Creating-a-smokefree-generation-and-tackling-youth-vaping.txt": "de5445b690c20aaf656d1ea82f71a918f3e8bdc991c10e19dc5927d57bf90192",
+    "docs/Mandating-quit-information-messages-inside-tobacco-packs-2.txt": "288f18891bbcf6a4eceaf22b860ff75f42752357e85f7dd956a799651661482a",
+    "docs/Mandating-quit-information-messages-inside-tobacco-packs-3.txt": "13de19de4a80a0faffcafe4f17fe30b374356ba2253f60775a4fb76683ca0c88",
+    "docs/Mandating-quit-information-messages-inside-tobacco-packs.txt": "f8461fd393f34f800aad2019ff556a3c35343bd3a92171a3672f54e1dabc8529",
+    "text/D01.txt": "c7d79854371a6b7131cb1100b9cbaaf45e00b48203899285e2869aca4565438c",
+    "text/D02.txt": "77c77de1a4e9f80c4cf6b86f056bb2badf1fe87ea43c33704d7b8fd33aac76e5",
+    "text/D03.txt": "7db548dcb9ef3d3ec140760a2057ab52ffb65ddc020aeec485a6c3133dbcba4b",
+    "text/D04.txt": "af057a2bfb7c170dd9706f9d8d3f9478256ffffcb93474581cc99e398e491015",
+    "text/D05.txt": "e412d13aa668669842e4c4e66b0b9664bd67a119e52d19ef4d8cdb2ddd78dc73",
+    "text/manifest.json": "61d1ef4863604f10d78b02aa675e63bd49e6163c51a6e2b31feb0fe85907fa5b"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "f27b8f7a120bb182b81ee8d3c1c28ca4cec243befc6b99cde4cdf758d5b23179",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D02, D01",
+    "id": "q02",
+    "levers": "Match, then exclude; Scatter the pieces",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i02",
+    "status": "draft",
+    "tags": "Cross-document join; Conditional filter; Aggregation"
+  },
+  "question_id": "q02",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "6.1%",
+    "components": "- c1: 6.1%",
+    "evidence": "- D02 (L326, Option 2) [c1]: \"In the Netherlands, for example, there is a specified list of ingredients that can be used in vapes\"\n- D02 (L324) [c1]: \"Option 2: limiting the ingredients in vapes.\"\n- D02 (L330, Option 3) [c1]: \"Finland, for example, has restricted all characterising flavours for vapes, apart from the flavour of tobacco.\"\n- D01 (L547) [c1]: \"For this question, respondents could select more than one answer.\"\n- D01 (L554, Table 4) [c1]: \"Option 1, Option 2|2.6%\"\n- D01 (L557, Table 4) [c1]: \"Option 1, Option 2, Don’t know|0.0%\"\n- D01 (L561, Table 4) [c1]: \"Option 2: limiting the ingredients in vapes only|3.4%\"\n- D01 (L564, Table 4) [c1]: \"Option 2, Don’t know|0.1%\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: h2, a country-to-method mapping printed only in the consultation (Doc 1) applied to the response's combination table (Doc 2), with an exclusion. Medium target (no Easy slot); measured platform result pending.\n- Dependency plan: Doc 1 L320-330: Option 1 descriptions (New Zealand), Option 2 ingredients (the Netherlands), Option 3 characterising flavours (UK 2020 menthol ban, Finland). Doc 2 L547 multiple selection allowed; Table 4 L549-567. Included rows: 1+2 2.6, 1+2+DK 0.0, 2 only 3.4, 2+DK 0.1; sum 6.1.\n- Universe: all 15 rows of Table 4 (total 100.0). Option 2 rows excluded because they contain Option 3: 1+2+3 23.1, 1+2+3+DK 0.1, 2+3 3.9, 2+3+DK 0.0. Rows without Option 2 are out by the first condition.\n- Necessity: Doc 1 is the only source tying the Netherlands to the ingredients option and Finland to the characterising-flavour option (searched \"Netherlands\", \"Finland\", \"ingredient\", \"characterising\"); Doc 2 L473 names both countries only as having \"prohibited certain flavours of e-liquids\", which points a reader without Doc 1 to the flavour lists or to Option 3 for both. Doc 2 is the only source of the combination shares (Table 17 shows individuals' singles and all three only, \"not all option combinations are shown\"; Docs 3-5 have no vaping results). Recall risk: a strong model may know the Dutch ingredient list and Finland's characterising-flavour ban; a removal probe without Doc 1 is the concrete check (see Blind solve).\n- Selected-lever checks: Match then exclude: without the exclusion, 33.2%; with it, 6.1%. Scatter the pieces: mapping in Doc 1, shares in Doc 2.\n- Targeted failure modes: mode 1 (Part vs total) the \"Option 2 ... only\" row alone: 3.4%. Mode 2 (Linking across documents) the mapping swapped (Option 3 rows without Option 2): 15.9%. Mode 3 (Figure that must be computed) every Option 2 row, no exclusion: 33.2%. All recomputed (scratchpad aq02157_calc.py). Considered and not declared: dropping the two Don't know rows, 6.0% (a slip, not a document trap); Option 2 and Option 3 together, 27.1%; New Zealand exclusion instead of Finland, 7.4%; Table 17's individuals \"Option 2\" 3.4 (UK column).\n- Calculation verification: Python Decimal 2026-10-08: 2.6 + 0.0 + 3.4 + 0.1 = 6.1; Table 4 sums to 100.0. Each printed row is rounded to 0.1, so the unrounded share lies between 5.9 and 6.3; the gold is the sum of the printed shares at the asked precision.\n- Semantic/ID/overview probes: the page overview mentions flavour restrictions for Docs 1 and 2 but no option shares or countries' methods. No document prints 6.1 for this question (searched \"6.1\": the only hit is D01 L1767, Table 38, organisations answering \"No\" on regulating other nicotine products). Shortest complete route: Doc 1 option examples, then Table 4 rows.\n- Precision/readings: \"method of restricting vape flavours\" matches the \"how to restrict\" question (Options 1-3), not the \"which flavours\" question (Options A-C), where both countries would be tobacco-only and the exclusion would leave nothing. \"Respondents\" are Table 4's all respondents who answered; Table 17 (individuals) cannot give combinations.\n- Completeness: full corpus, no gaps.\n- Style/set review: 21 words, no em dashes. q01 uses Doc 3 and Doc 1 (smoking-rate editions); q02 uses Doc 1's flavour section and Doc 2's Table 4; no shared facts or answer path.\n- Warnings answered: pending preflight.",
+    "necessary documents": "- D02: Answer component\n- D01: Answer component",
+    "platform validation": "",
+    "question": "What percentage of youth-vaping consultation respondents picked the Netherlands' method of restricting vape flavours but not Finland's, to one decimal place?",
+    "reasoning": "Step 1. Source fact (Doc 1, consultation options for how to restrict vape flavours): Option 2, \"limiting the ingredients in vapes\", is the Netherlands' method: \"In the Netherlands, for example, there is a specified list of ingredients that can be used in vapes\".\n\nStep 2. Source fact (Doc 1, same section): Option 3, \"limiting the characterising flavours (the taste and smell) of vapes\", is Finland's method: \"Finland, for example, has restricted all characterising flavours for vapes, apart from the flavour of tobacco.\"\n\nStep 3. Source fact (Doc 2, Table 4, percentage of all respondents who answered the question on how to restrict vape flavours, where more than one option could be selected): the combinations that include Option 2 but not Option 3 are Option 1 with Option 2 (2.6%), Option 1 with Option 2 and Don't know (0.0%), Option 2 only (3.4%) and Option 2 with Don't know (0.1%). Every other row containing Option 2 also contains Option 3, so those respondents also picked Finland's method.\n\nStep 4. Calculation (from Steps 1 to 3; Doc 1 and Doc 2): 2.6 + 0.0 = 2.6 per cent.\n\nStep 5. Calculation (from Steps 3 and 4; Doc 1 and Doc 2): 2.6 + 3.4 = 6 per cent.\n\nStep 6. Calculation (from Steps 3 and 5; Doc 1 and Doc 2): 6 + 0.1 = 6.1 per cent of respondents, the share that picked the Netherlands' method but not Finland's.",
+    "targeted failure modes": "### Failure mode 1\nTrap: Part vs total\nHow a careless solver fails: Takes the wrong line item\n\n### Failure mode 2\nTrap: Linking across documents\nHow a careless solver fails: Misapplies a rule or premise\n\n### Failure mode 3\nTrap: Figure that must be computed\nHow a careless solver fails: Wrong members in a list\n\nWhy these are traps: Doc 2's Table 4 row \"Option 2 ... only\" gives 3.4%. Doc 2 lumps the Netherlands with Finland; swapping Doc 1's ingredients and characterising-flavour mapping gives 15.9%. Adding every Option 2 row gives 33.2%. The gold adds only Option 2 rows without Option 3: 6.1%."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "28fe056cd30e1a798ad94bf9762b6261f9c33f53c84044475311bc69326cdbc0"
+}

@@ -1,0 +1,87 @@
+{
+  "question": "What percentage of youth-vaping consultation respondents picked the Netherlands' method of restricting vape flavours but not Finland's, to one decimal place?",
+  "number_of_asks": 1,
+  "gold_answer": "6.1%",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 1, consultation options for how to restrict vape flavours): Option 2, \"limiting the ingredients in vapes\", is the Netherlands' method: \"In the Netherlands, for example, there is a specified list of ingredients that can be used in vapes\".\n\nStep 2. Source fact (Doc 1, same section): Option 3, \"limiting the characterising flavours (the taste and smell) of vapes\", is Finland's method: \"Finland, for example, has restricted all characterising flavours for vapes, apart from the flavour of tobacco.\"\n\nStep 3. Source fact (Doc 2, Table 4, percentage of all respondents who answered the question on how to restrict vape flavours, where more than one option could be selected): the combinations that include Option 2 but not Option 3 are Option 1 with Option 2 (2.6%), Option 1 with Option 2 and Don't know (0.0%), Option 2 only (3.4%) and Option 2 with Don't know (0.1%). Every other row containing Option 2 also contains Option 3, so those respondents also picked Finland's method.\n\nStep 4. Calculation (from Steps 1 to 3; Doc 1 and Doc 2): 2.6 + 0.0 = 2.6 per cent.\n\nStep 5. Calculation (from Steps 3 and 4; Doc 1 and Doc 2): 2.6 + 3.4 = 6 per cent.\n\nStep 6. Calculation (from Steps 3 and 5; Doc 1 and Doc 2): 6 + 0.1 = 6.1 per cent of respondents, the share that picked the Netherlands' method but not Finland's.",
+  "answer_components": [
+    "6.1%"
+  ],
+  "evidence": [
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "In the Netherlands, for example, there is a specified list of ingredients that can be used in vapes"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Option 2: limiting the ingredients in vapes."
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Finland, for example, has restricted all characterising flavours for vapes, apart from the flavour of tobacco."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "For this question, respondents could select more than one answer."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Option 1, Option 2|2.6%"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Option 1, Option 2, Don’t know|0.0%"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Option 2: limiting the ingredients in vapes only|3.4%"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Option 2, Don’t know|0.1%"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    },
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    },
+    {
+      "trap": "Figure that must be computed",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Doc 2's Table 4 row \"Option 2 ... only\" gives 3.4%. Doc 2 lumps the Netherlands with Finland; swapping Doc 1's ingredients and characterising-flavour mapping gives 15.9%. Adding every Option 2 row gives 33.2%. The gold adds only Option 2 rows without Option 3: 6.1%."
+}

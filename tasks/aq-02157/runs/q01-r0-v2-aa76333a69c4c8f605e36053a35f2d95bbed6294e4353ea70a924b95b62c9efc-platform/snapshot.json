@@ -1,0 +1,50 @@
+{
+  "bundle": "aq-02157",
+  "corpus_sha256": {
+    "docs/Creating-a-smokefree-generation-and-tackling-youth-vaping-2.txt": "98d8da77c6d9b0a1f162fd83e7049a2354e8db076d930565f06e9bc697eebb6a",
+    "docs/Creating-a-smokefree-generation-and-tackling-youth-vaping.txt": "de5445b690c20aaf656d1ea82f71a918f3e8bdc991c10e19dc5927d57bf90192",
+    "docs/Mandating-quit-information-messages-inside-tobacco-packs-2.txt": "288f18891bbcf6a4eceaf22b860ff75f42752357e85f7dd956a799651661482a",
+    "docs/Mandating-quit-information-messages-inside-tobacco-packs-3.txt": "13de19de4a80a0faffcafe4f17fe30b374356ba2253f60775a4fb76683ca0c88",
+    "docs/Mandating-quit-information-messages-inside-tobacco-packs.txt": "f8461fd393f34f800aad2019ff556a3c35343bd3a92171a3672f54e1dabc8529",
+    "text/D01.txt": "c7d79854371a6b7131cb1100b9cbaaf45e00b48203899285e2869aca4565438c",
+    "text/D02.txt": "77c77de1a4e9f80c4cf6b86f056bb2badf1fe87ea43c33704d7b8fd33aac76e5",
+    "text/D03.txt": "7db548dcb9ef3d3ec140760a2057ab52ffb65ddc020aeec485a6c3133dbcba4b",
+    "text/D04.txt": "af057a2bfb7c170dd9706f9d8d3f9478256ffffcb93474581cc99e398e491015",
+    "text/D05.txt": "e412d13aa668669842e4c4e66b0b9664bd67a119e52d19ef4d8cdb2ddd78dc73",
+    "text/manifest.json": "61d1ef4863604f10d78b02aa675e63bd49e6163c51a6e2b31feb0fe85907fa5b"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "fba03a94c8dfef8105d812c9aee581287348235d39985dcc5774bdf02e11eeee",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "date",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D05, D02",
+    "id": "q01",
+    "levers": "Calculate across documents; Who belongs where",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i01",
+    "status": "draft",
+    "tags": "Cross-document join; Temporal alignment; Aggregation"
+  },
+  "question_id": "q01",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "2032",
+    "components": "- c1: 2032",
+    "evidence": "- D05 (L68, ONS 2021 report) [c1]: \"Adult smoking habits in the UK: 2021 shows that the adult smoking rate in the UK is the lowest on record\"\n- D05 (L70) [c1]: \"13% in England\"\n- D05 (L72) [c1]: \"14.8% in Scotland\"\n- D05 (L74) [c1]: \"14.1% in Wales\"\n- D05 (L76) [c1]: \"13.8% in Northern Ireland\"\n- D02 (L42, ONS 2022 report) [c1]: \"Adult smoking habits in the UK 2022 reported that 6.4 million people in the UK were current smokers\"\n- D02 (L44) [c1]: \"12.7% in England\"\n- D02 (L46) [c1]: \"14.1% in Wales\"\n- D02 (L48) [c1]: \"14.0% in Northern Ireland\"\n- D02 (L50) [c1]: \"13.9% in Scotland\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: h1, two editions of the ONS nation rates printed in two documents, projected by the Guide's \"keep changing by the same amount\" shape. Medium target (no Easy slot); measured platform result pending.\n- Dependency plan: Doc 3 L68-76 gives 2021 (England 13, Scotland 14.8, Wales 14.1, NI 13.8); Doc 1 L42-50 gives 2022 (England 12.7, Wales 14.1, NI 14.0, Scotland 13.9). Changes: Scotland -0.9, England -0.3, Wales 0, NI +0.2. Scotland: 13.9 - 0.9 x 9 = 5.8 (2031), 13.9 - 0.9 x 10 = 4.9 (2032). England reaches 4.9 only in 2048; Wales and NI never.\n- Universe: the four UK nations, each printed once per edition; Wales and NI excluded by their zero and upward changes, England by its later year (2048).\n- Necessity: Doc 3 is the only source of 2021 nation rates (searched \"14.8\", \"13.8%\", \"13% in England\", \"in Scotland\"; Doc 4 L638 gives only UK 14.1% in 2019 and 13.3% in 2021 and says \"Declines were seen across all constituent countries\"); without it no nation's change can be formed. Doc 1 is the only source of 2022 nation rates (searched \"12.7%\", \"13.9%\", \"14.0%\"; Doc 2 L417 gives only UK 12.9% in 2022; D01 L188 \"12.7%\" is a population share by age); without it no change can be formed. The question supplies neither year's values. Recall risk: ONS nation rates for 2021 and 2022 may be remembered by a strong model; a removal probe per document is the concrete check (see Blind solve).\n- Selected-lever checks: Calculate across documents: one change per nation needs both editions. Who belongs where: the 2021 list runs England, Scotland, Wales, NI; the 2022 list England, Wales, NI, Scotland; positional pairing gives Scotland 14.8 against 14.1 (-0.7) and 2035 (scratchpad aq02157_calc.py).\n- Targeted failure modes: mode 1 (Linking across documents) pairing by list position: 2035. Mode 2 (Figure that must be computed) 8.9 / 0.9 = 9.89 years rounded down: 2031, when Scotland is at 5.8. Mode 3 (Wrong jurisdiction or scope) UK aggregate 13.3 -> 12.9 (-0.4 a year) from 12.9: 2042. All recomputed. Considered and not declared: relative (percent) change, 2039, ruled out by \"percentage-point change\"; England alone, 2048; Doc 4's 2019-2021 UK pace (-0.4) applied to Scotland, 2045; counting from 2023, 2033.\n- Calculation verification: Python Decimal 2026-10-08 (scratchpad aq02157_calc.py): Scotland first year 2032 (4.9) from 2022, and 2032 from 2021 (14.8 - 0.9 x 11 = 4.9); strict \"below 5\" also 2032. Every reasoning expression is exact in float (13.9 - 14.8 gives -0.9000000000000004, written as 14.8 - 13.9 = 0.9).\n- Semantic/ID/overview probes: the page overview gives only UK rates (12.9% Doc 1; 13.3% Docs 3 and 4; 12% Doc 5); no nation rate and no 2032 anywhere in the bundle. Shortest complete route: find both nation lists, match names, compute four changes, project Scotland.\n- Precision/readings: answer is a whole year, no rounding. England's \"13%\" (no decimal) cannot change the answer: for any 12.95-13.05 England's first year is 2044-2053. Starting the projection from 2021 or 2022 gives the same year. \"5% or below\" and \"below 5%\" both give 2032 (4.9). Doc 5 L88's Scotland 11% is maternal smoking at booking (2023), Doc 1 L60's NI 21.3% is youth vaping; neither is an adult smoking rate.\n- Completeness: full corpus, no gaps (notes/intake.json; caller read all five documents).\n- Style/set review: 23 words, no em dashes. q02 uses Doc 1 and Doc 2 on a different topic (flavour-restriction methods); no shared facts or answer path.\n- Warnings answered: pending preflight.",
+    "necessary documents": "- D05: Answer component\n- D02: Answer component",
+    "platform validation": "",
+    "question": "If each UK nation's adult smoking rate repeated its 2021-to-2022 percentage-point change yearly, in what year would one first reach 5% or below?",
+    "reasoning": "Step 1. Source fact (Doc 3, ONS report Adult smoking habits in the UK: 2021): the adult smoking rate was 13% in England, 14.8% in Scotland, 14.1% in Wales and 13.8% in Northern Ireland.\n\nStep 2. Source fact (Doc 1, ONS Adult smoking habits in the UK 2022): the rate was 12.7% in England, 14.1% in Wales, 14.0% in Northern Ireland and 13.9% in Scotland. This list gives the nations in a different order, so each nation is matched by name.\n\nStep 3. Calculation (from Steps 1 and 2; Doc 3 and Doc 1): Scotland's yearly fall: 14.8 - 13.9 = 0.9 percentage points.\n\nStep 4. Calculation (from Steps 1 and 2; Doc 3 and Doc 1): England's yearly fall: 13 - 12.7 = 0.3 percentage points.\n\nStep 5. Calculation (from Steps 1 and 2; Doc 3 and Doc 1): Wales's change: 14.1 - 14.1 = 0, so repeating it never brings Wales down to five per cent.\n\nStep 6. Calculation (from Steps 1 and 2; Doc 3 and Doc 1): Northern Ireland's change: 14.0 - 13.8 = 0.2 percentage points upward, so it never falls to five per cent either.\n\nStep 7. Calculation (from Step 3; Doc 3 and Doc 1): Scotland's fall over nine more years: 0.9 * 9 = 8.1 percentage points.\n\nStep 8. Calculation (from Steps 2 and 7; Doc 3 and Doc 1): Scotland's rate nine years after 2022: 13.9 - 8.1 = 5.8, still above five per cent.\n\nStep 9. Calculation (from Step 3; Doc 3 and Doc 1): Scotland's fall over ten more years: 0.9 * 10 = 9 percentage points.\n\nStep 10. Calculation (from Steps 2 and 9; Doc 3 and Doc 1): Scotland's rate ten years after 2022: 13.9 - 9 = 4.9, at or below five per cent for the first time.\n\nStep 11. Calculation (from Step 4; Doc 3 and Doc 1): England's fall over the same ten years: 0.3 * 10 = 3 percentage points.\n\nStep 12. Calculation (from Steps 2 and 11; Doc 3 and Doc 1): England's rate ten years after 2022: 12.7 - 3 = 9.7, still above five per cent, so Scotland is the first nation to get there.\n\nStep 13. Calculation (from Steps 2 and 10; Doc 1 and Doc 3): the year Scotland first reaches five per cent or below: 2022 + 10 = 2032.",
+    "targeted failure modes": "### Failure mode 1\nTrap: Linking across documents\nHow a careless solver fails: Picks the wrong entity or section\n\n### Failure mode 2\nTrap: Figure that must be computed\nHow a careless solver fails: Rounding, scale or sign\n\n### Failure mode 3\nTrap: Wrong jurisdiction or scope\nHow a careless solver fails: Picks the wrong entity or section\n\nWhy these are traps: Doc 3 lists 2021 rates as England, Scotland, Wales, Northern Ireland; Doc 1 lists 2022 as England, Wales, Northern Ireland, Scotland, so pairing by position gives 2035. Rounding 9.89 years down gives 2031 (5.8%). UK totals, 13.3% to 12.9%, give 2042. Matched by name, Scotland reaches 4.9% in 2032."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "aa76333a69c4c8f605e36053a35f2d95bbed6294e4353ea70a924b95b62c9efc"
+}

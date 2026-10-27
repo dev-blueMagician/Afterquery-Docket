@@ -1,0 +1,77 @@
+{
+  "question": "What is the increase in the minimum excise duty on a pack of 20 cigarettes, to one decimal place, from the pack insert impact assessment to the government's response to the smoke-free consultation?",
+  "number_of_asks": 1,
+  "gold_answer": "£1.5",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 2, affordability of vaping products): HMRC guidance on rates and allowances for Tobacco Products Duty estimates at least 8.46 pounds of excise duty on a packet of 20 cigarettes, so the minimum excise duty on a 20-pack in the response is 8.46 pounds.\n\nStep 2. Source fact (Doc 4, the impact assessment's October 2021 duty rates table): cigarettes pay the highest of 262.90 pounds per 1,000 cigarettes plus 16.5% of retail price and 347.86 pounds per 1,000 cigarettes (the MET), so no pack pays less than 347.86 pounds per 1,000 cigarettes; the next paragraph calls this the MET threshold.\n\nStep 3. Calculation (from Step 2; Doc 4 and Doc 2): minimum duty per cigarette: 347.86 / 1,000 = 0.34786 pounds.\n\nStep 4. Calculation (from Step 3; Doc 4 and Doc 2): minimum duty per 20-pack: 0.34786 * 20 = 6.9572 pounds.\n\nStep 5. Calculation (from Steps 1 and 4; Doc 2 and Doc 4): increase in the minimum from the impact assessment to the government's response: 8.46 - 6.9572 = 1.5028 pounds.\n\nStep 6. Answer (from Step 5; Doc 2 and Doc 4): rounded to one decimal place, as the question asks, the increase of 1.5028 pounds is one and a half pounds.",
+  "answer_components": [
+    "£1.5"
+  ],
+  "evidence": [
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Guidance on rates and allowances for the Tobacco Products Duty estimates at least a £8.46 excise duty on a packet of 20 cigarettes"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Tobacco duty rates set by HMRC are set out below"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Duty rate (October 2021)"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "£262.90 per 1,000 cigarettes plus 16.5% of retail price"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "£347.86 per 1,000 cigarettes (MET)"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "which is above the MET threshold"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Unit normalization"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    },
+    {
+      "trap": "Wrong year or edition",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    },
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Picks the wrong entity or section"
+    }
+  ],
+  "why_these_are_traps": "Doc 4 paragraph 123's £7.98 is an average-priced pack's duty: £0.5. Doc 1's £7.87 is the consultation's, not the response's: £0.9. Taking Doc 1's £7.87 as the impact assessment's figure gives £0.6. The minimum is Doc 4's MET, £347.86 per 1,000 (£6.9572 a pack): £1.5."
+}
