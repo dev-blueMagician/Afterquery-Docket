@@ -1,0 +1,281 @@
+AQ-02780 · Bank Merger Act Rulemaking — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-02780
+Saved: 2026-10-11 11:37 (local time)
+Bundle: Bank Merger Act Rulemaking · Public policy · 7 documents · 112,142 prompt tokens
+Attempts read: 1
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+9 of 10 runs left · 2 of 50 runs used in the last 24 h (all tasks)
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Answerable without the documents.
+
+Answerable without the documents
+
+Your answer can be reached without reading the documents. Make the question depend on them, then run the check again.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Change the counts so the naive sum differs from the correct answer (e.g., have the savings association open five branches and the bank open two, so the sum is 9 but the correct count under the rules is different), or ask for a per-institution breakdown ('how many changes for each institution and in total') so a bare sum cannot match the gold answer. Why: The question enumerates exactly the counts 2, 3, and 4 branch openings, and the gold answer (9) equals their simple sum. A solver with no documents can reach the gold answer by adding the three numbers given in the prompt, as Low model did. The intended reasoning — that the savings association's three branch openings need no application at all under 12 CFR 5.31(f)(2)(iii) when notice is published and no comments are filed, that 'next door' moves fall under the FDIC's proposed de minimis exception at 12 CFR 303.41(b), and that the OCC covered-community provisions still require (expedited) applications — never has to be performed, because the arithmetic shortcut lands on the same number. Doc 4 Doc 7
+
+Gold answer · Your answer
+-------------------------
+
+- 2 Make the gold answer a structured response, e.g., 'Community bank: 2 branch applications + 1 main-office relocation application; savings association: 0 (notice procedure, no comments); State nonmember bank: 4 branch filings; total: 7' — whatever the intended tally is — so only document-based counting matches. Why: The gold answer '9 changes' is a bare number with no breakdown, so it is compatible with many wrong reasoning paths — including simply counting the branch openings (2+3+4). The documents support a different tally: the covered community savings association's three branch establishments require no application when public notice is published and no opposing comment is filed (12 CFR 5.31(f)(2)(iii), extended to covered community savings associations by the 2026 OCC rule), and 'next door' relocations can qualify as de minimis changes exempt from FDIC filings under proposed 12 CFR 303.41(b). A single total cannot distinguish correct rule application from the shortcut. Doc 4 Doc 7
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is answerable without the documents, so the gate does not pass.
+
+The gate reads Run 1 (Oct 11, 2026, 11:27 AM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+1 run
+
+------------------------------------------------------------------------
+Run 1 · Answerable without the documents · Result the gate uses
+Oct 11, 2026, 11:27 AM · Version 5d70b5 (current) · Low — · Medium — · High —
+------------------------------------------------------------------------
+
+What changed before this run: first run
+
+Your answer: 9 changes
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Answered without documents ✗
+----------------------------------------
+Docs: — · Note: —
+
+Final answer: Total: 2 + 3 + 4 = 9 changes need approval. | Your answer (gold): 9 changes
+
+Full answer
+-----------
+
+The relocations and head-office moves are all within the immediate vicinity (“next door”), so they fall under the short-distance/exempt or notice-only provisions—especially with no public objections—meaning they do not require prior approval. Only the de novo branch openings still need regulatory approval.
+
+- Covered community bank: 2 branches opened
+- Covered community savings association: 3 branches opened
+- State nonmember bank: 4 branches opened
+
+The branch relocations (1 + 3) and the three head-office moves are streamlined/exempt.
+
+Total: 2 + 3 + 4 = 9 changes need approval.
+
+Reasoning
+---------
+
+We need answer: "Under the OCC's 2026 community-bank rule and FDIC's 2025 branch proposal, how many changes need regulatory approval?" Need understand context: covered community bank opens two branches; covered community savings association opens three and moves one next door; a State nonmember bank opens four and moves three next door. Each also moves its head office next door; nobody comments. Under OCC 2026 community-bank rule and FDIC 2025 branch proposal, how many changes need regulatory approval?
+
+We need determine which changes require prior approval versus notice/comment. Need recall specific rules.
+
+We need parse entities:
+1. Covered community bank (likely OCC-regulated? Or FDIC? "Covered community bank" maybe under OCC's 2026 rule for community banks? Actually OCC in 2025/2026 proposed/ final rule amending regulations for national banks and federal savings associations? Let's recall.
+
+OCC's 2026 community-bank rule? Maybe in January 2026 OCC issued final rule modernizing requirements for community banks? Or maybe "community bank" definition? But question mentions "OCC's 2026 community-bank rule and FDIC's 2025 branch proposal". So need combine both regimes? Let's understand branch establishment and relocation rules.
+
+Under current law, banks can open branches with prior approval or notice depending on charter and state law. The FDIC in 2025 proposed a rule to streamline branch applications? Let's recall: In December 2028? No. Let's recall actual proposals.
+
+In July 2025? The FDIC proposed changes to Part 303 regarding filing procedures for branch applications? Or in 2025 FDIC proposed rule to allow state nonmember banks to open branches via notice rather than application if conditions met? Let's think carefully.
+
+There's a well-known regulatory change: In December 2024 or 2025, federal banking agencies proposed updates to branch application rules? Specifically, OCC and FDIC proposed rules to modernize branch and relocation rules, including allowing banks to move branches/headquarters within same immediate vicinity without application?
+
+Actually I recall in late 2024 the FDIC proposed a rule amending 12 CFR part 303 to revise filing requirements for branch applications and relocations, including allowing banks to relocate a main office or branch within the same immediate neighborhood without filing an application if no public comments? Hmm need be precise.
+
+Also OCC in January 2026 issued a final rule titled "Community Bank Regulatory Relief" maybe? Or "OCC Issues Final Rule to Reduce Regulatory Burden for Community Banks"? Let's recall news in January 2026: The OCC issued a final rule that raises the asset threshold for community banks? No that was in 2025? Wait there was an interagency final rule in 2025 adjusting asset thresholds for community banks from $2.4B? Actually in 2024 the threshold was $2.4B? Let's not confuse.
+
+But the question specifically asks "how many changes need regulatory approval?" Given lists of branch openings and moves next door, and head office moves next door, nobody comments. Need count those that still need approval under the new rules.
+
+We need understand the specific provisions:
+- Under FDIC's 2025 branch proposal, state nonmember banks can open branches via notice? Or can move branches/head office next door without approval?
+- Under OCC's 2026 community-bank rule, covered community banks and savings associations have streamlined procedures?
+
+Let's recall details of FDIC proposal in 2025: On July 2025? Actually on August 2025 FDIC proposed amendments to Part 303 Subpart C (Establishment and Relocation of Domestic Branches and Offices). The proposal might allow state nonmember banks to open branches in states where they are already present via expedited notice? Or allow relocation within 1000 feet?
+
+Another possibility: The question refers to specific numeric answers like "3" or "5". Let's analyze logic.
+
+We have:
+A) Covered community bank (OCC? FDIC?) opens two branches.
+B) Covered community savings association opens three and moves one next door.
+C) State nonmember bank opens four and moves three next door.
+Each also moves its head office next door; nobody comments.
+
+We need determine for each entity, under respective rules, which actions require prior regulatory approval versus being permitted via notice or exempt.
+
+The phrase "moves one next door" and "moves three next door" and "moves its head office next door" sounds like relocations to immediately adjacent property, which might be exempt from application if within same immediate vicinity and no comments.
+
+The OCC's 2021? Or 2026 rule might provide that national banks and federal savings associations can relocate main office or branch to adjacent property without application, only notice? Or maybe they don't need anything?
+
+Let's recall the specific regulatory texts:
+- For national banks, 12 CFR 5.30 governs establishment of branches. There's also 12 CFR 5.31 for relocations? Under current rules, a national bank may relocate a branch or main office within the same city/town/village with notice if within same immediate neighborhood? Actually there is a provision for "short-distance relocation" where a national bank can move a branch within the same immediate neighborhood without filing an application, just notifying OCC? Let's check mental: In 12 CFR 5.30, there are expedited procedures for certain branch applications. For relocations, 12 CFR 5.31? Maybe "Relocation of a main office or branch" requires application unless it's within 30 miles? No, that's for main office? Let's not overanalyze.
+
+But the question mentions "nobody comments" - this sounds like a notice-and-comment period where if no one comments, the application is automatically approved? Or maybe under the new rules, if you file a notice and nobody objects within a comment period, then it's deemed approved?
+
+Specifically, FDIC's 2025 proposal might change the branch application process for state nonmember banks: Instead of filing an application, they file a notice, and if no one comments within 30 days, it's automatically approved? Or they still need approval but it's streamlined?
+
+Let's recall in March 2025? The FDIC proposed a rule to amend its filing requirements for mergers and branch applications? Actually in December 2024, FDIC proposed a rule to amend Part 303 to update filing requirements for mergers, branches, etc., including allowing expedited processing?
+
+Wait there's also the OCC's 2026 rule for community banks that simplifies branch opening? Let's search mental news headlines around Jan 2028? No.
+
+Let's parse the problem wording precisely: "A covered community bank opens two branches; a covered community savings association opens three and moves one next door; a State nonmember bank opens four and moves three next door. Each also moves its head office next door; nobody comments. Under the OCC's 2026 community-bank rule and FDIC's 2025 branch proposal, how many changes need regulatory approval?"
+
+This sounds like a counting problem based on specific thresholds in the rules. For each type of institution, there may be a limit on the number of branches they can open via notice (without prior approval) per year, and relocations next door might be exempt.
+
+Perhaps the OCC 2026 rule allows covered community banks to open up to a certain number of branches per year via notice? Or allows them to open branches without prior approval if they meet capital and management ratings?
+
+Actually, there is a provision in the Economic Growth, Regulatory Relief and Consumer Protection Act (EGRRCPA) of 2018 that allows well-capitalized and well-managed banks to open branches with notice rather than application? Let's recall: Section 122 of EGRRCPA amended the Federal Deposit Insurance Act and the National Bank Act to allow certain banks to open branches via notice. Specifically, for state banks, if they are well-capitalized and well-managed and the state allows branching, they can open branches in-state via notice to the FDIC, not prior approval. For national banks, OCC can allow notice for interstate branching?
+
+But then there are also provisions for "covered community banks" under the OCC's rule implementing EGRRCPA?
+
+Let's recall in January 2029? No.
+
+Actually, in 2020 the OCC issued a final rule implementing Section 123 of EGRRCPA? Hmm.
+
+But the question mentions "OCC's 2026 community-bank rule" - this might be a rule issued in 2026 that modifies the community bank leverage ratio or other things? Not branch-related.
+
+Wait, but they ask "how many changes need regulatory approval?" This sounds like applying both rules together to count the total number of actions across all three institutions that still require an approval application, as opposed to being handled via notice or being exempt.
+
+We need determine for each institution:
+- Branch openings: some number need approval, others are via notice/exempt.
+- Branch relocations next door: maybe all are exempt if adjacent?
+- Head office moves next door: maybe also exempt?
+
+But they ask "Each also moves its head office next door; nobody comments." So head office moves might be subject to notice with comment period; since nobody comments, they are automatically approved? Or do they not need approval?
+
+We need understand the FDIC 2025 branch proposal provisions regarding relocation of main office. Let's recall: In August 2025, FDIC proposed amendments to Part 303 that include allowing a state nonmember bank to relocate its main office within the same city, town, or village without filing an application, just filing a notice? Or maybe they can relocate within 1000 feet?
+
+Actually, there is an existing rule for FDIC-insured state nonmember banks: Under 12 CFR 303.2, a bank must file an application to establish a branch or to relocate a main office or branch. But there are exceptions: Relocation of a main office within the same city, town, or village is treated differently? Let's check mental: For FDIC, moving a main office within the same "city, town, or village" might require an application but can be expedited?
+
+But the problem mentions "moves one next door" and "moves three next door" and "head office next door; nobody comments". This sounds like they filed notices for these moves, there was a public comment period, but nobody commented. Under the proposed rule, maybe if no comments are received, the move is automatically approved without further regulatory action? But the question is asking "how many changes need regulatory approval?" So maybe the ones where comments were received need approval, but since nobody commented, none of them need approval? That can't be right because then answer might be just the branch openings?
+
+Let's think differently: The question might be testing knowledge of specific numeric limits in the rules. For example:
+- Under OCC's 2026 rule, a covered community bank can open up to 2 branches without approval?
+- A covered community savings association can open up to 3?
+- Under FDIC's 2025 proposal, a state nonmember bank can open up to 4?
+
+But then they ask "how many changes need regulatory approval?" Maybe it's zero? Or all?
+
+Let's recall actual news in early 2026: On January 2026, the OCC issued a final rule that updates various regulations for community banks, including reducing reporting burdens. One part might address branch applications? Actually in January 2026, the OCC, Fed, and FDIC issued a joint final rule adjusting the asset-size thresholds for small bank reporting? No, that was in late 2024/2025.
+
+Wait, there was an OCC final rule on January 2028? Not clear.
+
+Let's search mental database for "FDIC 2025 branch proposal". In December 2025, the FDIC proposed a rule to amend regulations regarding branch applications, relocations, and closures? Or maybe in October 2025?
+
+Actually, I think in July 2025 the FDIC proposed changes to its branch application rules to align with OCC? Let's recall news headlines in mid-2025: The FDIC proposed to rescind the 2024 brokered deposit rule? No that was in 2025 but about brokered deposits.
+
+Another headline in 2025: Federal banking agencies proposed rule to modernize the Community Reinvestment Act? That was in 2025? Yes, in 2025 they proposed CRA modernization but not about branches.
+
+But there is specifically a "branch proposal" in 2025 from FDIC. Let's recall in September 2025 the FDIC proposed amendments to Part 303, Subpart C, to revise filing requirements for domestic branches and offices. The proposal might allow state nonmember banks to open branches via a notice procedure rather than an application if they are well capitalized and well managed, similar to national banks?
+
+Wait, there is also the "Federal Deposit Insurance Act Section 18(d)" which requires prior written consent of the FDIC for a state nonmember bank to establish or acquire a branch, except that if the bank is well capitalized and well managed, it can do so via notice? Actually Section 18(d)(1) requires prior consent. But there is an exception in Section 18(d)(4) added by EGRRCPA? Let's check mental: The EGRRCPA added a provision allowing well-capitalized and well-managed banks to open branches in states other than the home state if state law permits? Or was that interstate branching?
+
+Specifically, the Riegle-Neal Interstate Banking and Branching Efficiency Act of 1994 allows interstate branching with prior approval. Then EGRRCPA in 2018 added Section 613 of the Dodd-Frank? Hmm.
+
+But maybe the FDIC's 2025 proposal implements a provision that allows state nonmember banks to relocate branches and main offices within the same immediate vicinity without filing an application, just providing notice.
+
+The problem mentions "covered community bank" and "covered community savings association". The term "covered community bank" sounds like it's defined in the OCC's rule. Let's recall: In 2026, the OCC might have issued a rule defining "community banks" for purposes of some streamlined regulations, with an asset threshold of maybe $30 billion? No, that's not right.
+
+Wait, there's the OCC's "community bank leverage ratio" (CBLR) framework. The CBLR applies to qualifying community banking organizations with less than $10 billion in assets. In 2019, the agencies adopted the CBLR framework. In 2025 or 2026, they might have updated it?
+
+But the question is specifically about branch changes needing regulatory approval. This sounds like it's about the number of applications required, not about capital ratios.
+
+Let's try to recall specific provisions in 12 CFR 5.30 and 5.31 for national banks and federal savings associations, and 12 CFR 303 for state banks.
+
+For national banks:
+- To establish a branch: file application with OCC, except that there are expedited review procedures for well-capitalized banks?
+- To relocate a branch or main office: There are specific rules. If the relocation is within the same city, town, or village and within a certain distance? Actually, a national bank can relocate its main office within the same city, town, or village with prior notice but without an application if conditions are met?
+
+Specifically, 12 U.S.C. 30 allows a national bank to relocate its main office within the limits of the original city, town, or village without changing its name or designating a different place? Wait, that's old law.
+
+Let's recall: Under 12 U.S.C. 30(b), a national banking association may change the location of its main office within the city, town, or village in which it is situated, with prior approval of the OCC? Or is it just notice?
+
+Actually, there is a distinction: Relocation of a main office within the same city/town/village requires approval? Or maybe it's permitted if within 30 miles?
+
+But the problem says "Each also moves its head office next door; nobody comments." This sounds like they filed notices for the head office moves, and because there were no comments, they didn't need further approval?
+
+Let's try to understand the FDIC 2025 proposal specifics. Maybe the proposal was to amend Part 303 to allow state nonmember banks to file a notice instead of an application for branch establishment if they meet certain criteria, and also for relocations within 1000 feet? And there is a 30-day comment period; if no adverse comments, the notice is effective?
+
+If so, then for the state nonmember bank:
+- Opens four branches: need to file notices? Or applications?
+- Moves three branches next door: maybe these relocations are within the immediate vicinity and are exempt or notice-only?
+- Moves head office next door: notice filed, no comments, so automatically okay?
+
+But the question asks "how many changes need regulatory approval?" This might be asking: Given these actions, count the ones for which prior regulatory approval is still required (not just notice).
+
+We need apply both OCC rule and FDIC proposal.
+
+Let's break down by institution type and apply rules.
+
+Institution 1: Covered community bank (likely national bank regulated by OCC). It opens two branches. Under OCC's 2026 community-bank rule, maybe covered community banks can open branches via notice, not prior approval? Or maybe they are allowed up to a certain number?
+
+But wait, "covered community bank" might be defined in the rule with specific criteria. The rule might provide streamlined filing for branch applications? Or maybe it allows them to open branches without prior approval altogether?
+
+Let's recall in January 2026, the OCC issued a final rule titled "Community Bank Regulatory Relief and Technical Corrections" maybe? Let's try to recall news in January 2026: The OCC announced a final rule reducing regulatory burden for community banks, including adjustments to the community bank leverage ratio, simplifying call reports, etc. Did it include branch provisions?
+
+Actually, in December 2029? No.
+
+But there's also the OCC's 2025 rule modernizing branch and other application processes? In 2025, the OCC proposed updates to its licensing manual?
+
+We might be overanalyzing. Let's consider that the answer might be a specific number, perhaps "four".
+
+But we need be somewhat reasoned.
+
+Let's recall the FDIC's branch proposal in 2025 was published in the Federal Register. The proposal might have said: A state nonmember bank may relocate a branch or main office within the same immediate vicinity (within 1000 feet?) without prior approval, but must provide notice. Or maybe it's within the same census tract?
+
+Also, there's a concept of "moving next door" - literally adjacent building. Under both OCC and FDIC rules, relocating a branch or office to an adjacent site (within 30 feet? within the same block?) might be considered not a "relocation" requiring approval, but just a change of address?
+
+But they said "nobody comments" - this sounds like there's a publication/comment requirement for certain moves. For example, when a bank moves its main office, it must publish notice in a newspaper, and if no one objects within some period, it's okay?
+
+Wait, under 12 CFR 5.33? There's a publication requirement for branch applications. The bank publishes notice, and interested parties can comment within 30 days.
+
+But they said "nobody comments" for all of them? Or for each?
+
+The problem asks "how many changes need regulatory approval?" Maybe it's testing that under the new rules, all of these actions can be done via notice except for a specific number that still need an application.
+
+Let's list all actions:
+1. Community bank opens branch A
+2. Community bank opens branch B
+3. Savings association opens branch C
+4. Savings association opens branch D
+5. Savings association opens branch E
+6. Savings association moves branch F next door
+7. State bank opens branch G
+8. State bank opens branch H
+9. State bank opens branch I
+10. State bank opens branch J
+11. State bank moves branch K next door
+12. State bank moves branch L next door
+13. State bank moves branch M next door
+14. Community bank moves head office next door
+15. Savings association moves head o
