@@ -1,0 +1,97 @@
+{
+  "question": "Suppose on June 25, 2026, CDC received 30 letters and 27 portal comments on its interim quarantine rule and 21 letters on its June 21 Ebola entry order, and that 22 and 19 portal comments later reached its June and July orders, each 18 days after that order was issued. How many would meet CDC's requirements on method and timing?",
+  "number_of_asks": 1,
+  "gold_answer": "89 comments",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 4, DATES and ADDRESSES): comments on the interim final rule must be received by June 26, 2026. They may be submitted by one method only, the Federal eRulemaking Portal, and all comments must be submitted electronically.\n\nStep 2. Application (Doc 4 and Doc 5): the 30 letters on the rule were not submitted electronically, so they do not meet the rule's method requirement. The 27 portal comments on the rule arrived on June 25, before June 26, and count.\n\nStep 3. Source input (Doc 5, SUMMARY, DATES and ADDRESSES): the June order was issued on June 21, 2026. Comments on it may be submitted through the portal or by mail and must be received on or before July 10, 2026.\n\nStep 4. Application (Doc 4 and Doc 5): the 21 letters on the June order came by mail, a method that order accepts, on June 25, before July 10, and count.\n\nStep 5. Calculation (Doc 5 and Doc 6): June has 30 days, so the days of June left after June 21 are 30 - 21 = 9.\n\nStep 6. Calculation (Doc 5 and Doc 6): the rest of the 18 days fall in July: 18 - 9 = 9. The June order's batch arrived on July 9, before July 10, so its 22 comments count.\n\nStep 7. Source input (Doc 6, SUMMARY and DATES): the July order was issued on July 13, 2026, and written comments on it must be received on or before July 31, 2026.\n\nStep 8. Calculation (Doc 5 and Doc 6): the July order's batch arrived on this day of July: 13 + 18 = 31. July 31 is the last day that order allows, so its 19 comments count.\n\nStep 9. Application (Doc 5 and Doc 6): Doc 6 also says the June order provided a 15-day comment period. That phrase does not replace the dates the notices print: comments must be received on or before July 10 for the June order and on or before July 31 for the July order, and both batches meet them.\n\nStep 10. Calculation (Doc 4 and Doc 5): the rule's timely portal comments plus the June order's letters: 27 + 21 = 48.\n\nStep 11. Calculation (Doc 5 and Doc 6): adding the June order's batch: 48 + 22 = 70.\n\nStep 12. Calculation (Doc 5 and Doc 6): adding the July order's batch: 70 + 19 = 89.",
+  "answer_components": [
+    "89 comments"
+  ],
+  "evidence": [
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Comment date: Comments must be received by June 26, 2026."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "You may submit comments, identified by CDC-2026-0991, by the following method:"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Federal eRulemaking Portal: http://www.regulations.gov."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Because of staff and resource limitations, all comments must be submitted electronically to www.regulations.gov."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "This Order was issued on June 21, 2026, and shall remain in effect through 4:59 p.m. Eastern Daylight Time (EDT) on Tuesday, July 21, 2026."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "This action took effect June 21, 2026, at 5:00 p.m. EDT. Written comments must be received on or before July 10, 2026."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "by either of the methods listed below. Do not submit comments by email. CDC does not accept comments by email."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "Mail: Division of Global Migration Health, Centers for Disease Control and Prevention, 1600 Clifton Road NE, MS H16-4, Atlanta, GA 30329."
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "This Order was issued on July 13, 2026, and shall remain in effect through 4:59 p.m. Eastern Daylight Time (EDT) on Wednesday, August 12, 2026."
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "This action took effect July 13, 2026, at 5:00 p.m. EDT. Written comments must be received on or before July 31, 2026."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Conditional filter",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Wrong jurisdiction or scope",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    }
+  ],
+  "why_these_are_traps": "Wrong jurisdiction or scope: Doc 5's order accepts mailed comments, and the question's own letters on that order count, but Doc 4's interim rule takes comments only through the portal. Carrying the order's mail rule to the rule counts its 30 letters: 119. The rule's own terms give 89."
+}

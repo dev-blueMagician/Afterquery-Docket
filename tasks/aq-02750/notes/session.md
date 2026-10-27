@@ -1,0 +1,13 @@
+# Current bundle checkpoint
+
+- Goal and user constraints: user 2026-10-10, "there is no slot for Easy Tier for this bundle, we should target medium and high. do your best."; 2026-10-11, "no easy slot left, so must be medium or high". Target medium, Hard welcome. Do not offer Easy submissions here: the form's "Easy 0/1" counts accepted questions only.
+- Verification target / measured platform tier: medium / none at target. q04 (comment-procedure hook h11) measured four times (captures verdicts/AQ-02750_difficulty_2026-10-11_1820.txt, _2048.txt): Run 1 rev 0 "Between levels" Low 0/5 · Medium 5/5; Run 2 rev 1 "Too easy" Low 4/5; Run 3 rev 2 "A marked document may not be needed" Low 3/5; Run 4 rev 3 "In band — Easy tier" Low 2/5 (unusable: no Easy slot). 6 of 10 runs left.
+- Prepared runs / tested_sha256: q04 rev 3 a89df736304fcfc5c5a74bf3685539466dca5cb315612aadf72c430812b75566 (checked, unsubmitted, Easy pass on record). q05 rev 0 6881cae3... (dropped: quick test too easy, user 2026-10-11). Dropped: q01, q02, q03. Stale untested snapshots remain in runs/.
+- Bundle slug / documents: aq-02750, capture AQ-02750_2026-10-10_1858.txt, D01-D07 = Doc 1-7, all complete.
+- Phase: stop rule reached, 2026-10-12. q06 (i11, list of six sections from Doc 2 and Doc 3; rev 1 b6ec9851...) passed its form repair and was then reported "too easy for quick test" (user chat, no panel, route unread; index F14). q06 dropped. No difficulty run was spent on it.
+- What is known: on this bundle the low model has solved every order-in-force, date-gap and rule-application question at least sometimes; only the look-alike ADDRESSES trap held it, and it never held the medium model. A printed deadline is needed by the Document check only when an item falls between a loose restated date and the printed one. A scenario must not state invented events as fact where the bundle records the real ones.
+- Rejected this round (reasons in notes/ideas.md): h6 travel-notice date conflict, notice levels by province, commenter requests, DHS/EOIR sections minus withdrawn, i10, i05.
+- Stop rule (stated to the user twice): reached. Recommendation: release the bundle. Do not start a fourth round unless the user supplies a new idea or new information (an open Easy slot would make q04 rev 3 usable: Run 4, Easy, a89df736...).
+- Feedback index: notes/feedback-index.md rows F1-F14 (all historical). Efficiency ledger: i08 platform attempts for Runs 1-4 recorded; trial slots full, work unpromoted. Active timer: none.
+- Next action (user): release the bundle, or say otherwise. Nothing is submitted; 6 of 10 difficulty runs unused.
+- Runtime/model/effort: Claude Code (VS Code extension), claude-opus-5-5. Optional diagnostics: none run.

@@ -1,0 +1,99 @@
+{
+  "question": "Which sections of 8 CFR parts 1003, 1208 and 1235 are amended by either EOIR's December 2024 interim rule on bars in fear reviews or the provisions of the 2020 Security Bars rule that survived the December 2025 partial withdrawal?",
+  "number_of_asks": 1,
+  "gold_answer": "8 CFR 1003.42, 1208.13, 1208.16, 1208.31, 1208.33, 1208.35",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 2, amendatory instructions at the end of the rule): EOIR's interim rule amends Sec. 1003.42, Sec. 1208.31, Sec. 1208.33 and Sec. 1208.35. The amendment to Sec. 1208.35 is the rule's last instruction and only corrects a cross-reference.\n\nStep 2. Application (Doc 2): footnote 8 says it was unnecessary to amend Sec. 1208.35 in order to clarify the review of bars. That does not take Sec. 1208.35 off the list: the preamble describes cross-reference corrections in 8 CFR 1208.33(a)(3)(i)(C) and 1208.35(a)(2)(i)(C), and the last instruction makes the one in Sec. 1208.35. No instruction in Doc 2 amends Sec. 1208.30.\n\nStep 3. Source input (Doc 3, section III): the provisions of the Security Bars rule that remain will be codified, in part 1208, at 8 CFR 1208.13(c)(10) and 1208.16(d)(2). In parts 1003, 1208 and 1235 the rule will no longer amend 8 CFR 1003.42, 1208.16(f), 1208.30 and 1235.6.\n\nStep 4. Application (Doc 3): within parts 1003, 1208 and 1235, the surviving provisions amend Sec. 1208.13 and Sec. 1208.16. Sec. 1208.16 stays on the list because only the change to its paragraph (f) was withdrawn; the corrected instruction still revises its paragraph (d)(2). Decoy: Sec. 1208.30 and Sec. 1235.6 look like members because both documents discuss them, but they are off the list: their Security Bars amendments were withdrawn and EOIR's rule has no instruction for them.\n\nStep 5. Application (Doc 2 and Doc 3): Sec. 1003.42 stays on the list although the Security Bars amendment to it was withdrawn, because EOIR's interim rule amends it; Doc 3 says EOIR will maintain that later provision. The sections of parts 208 and 235 that the same passages name are outside the three parts asked about.\n\nStep 6. Application (Doc 2 and Doc 3): the two sets together are Sec. 1003.42, 1208.13, 1208.16, 1208.31, 1208.33 and 1208.35, six sections.",
+  "answer_components": [
+    "8 CFR 1003.42",
+    "1208.13",
+    "1208.16",
+    "1208.31",
+    "1208.33",
+    "1208.35"
+  ],
+  "evidence": [
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "2. Amend Sec. 1003.42 by:"
+    },
+    {
+      "document_number": 2,
+      "component_number": 4,
+      "quote": "4. Amend Sec. 1208.31 by:"
+    },
+    {
+      "document_number": 2,
+      "component_number": 5,
+      "quote": "5. Amend Sec. 1208.33 by:"
+    },
+    {
+      "document_number": 2,
+      "component_number": 6,
+      "quote": "6. Amend Sec. 1208.35 by removing the reference to"
+    },
+    {
+      "document_number": 2,
+      "component_number": 5,
+      "quote": "in 8 CFR 1208.33(a)(3)(i)(C) and 1208.35(a)(2)(i)(C)."
+    },
+    {
+      "document_number": 2,
+      "component_number": 6,
+      "quote": "in 8 CFR 1208.33(a)(3)(i)(C) and 1208.35(a)(2)(i)(C)."
+    },
+    {
+      "document_number": 3,
+      "component_number": 2,
+      "quote": "These provisions will be codified at 8 CFR 208.13(c)(10), 1208.13(c)(10) (clarification with respect to asylum), and at 8 CFR 208.16(d)(2), 1208.16(d)(2) (clarification with respect to statutory and CAT withholding of removal)."
+    },
+    {
+      "document_number": 3,
+      "component_number": 3,
+      "quote": "These provisions will be codified at 8 CFR 208.13(c)(10), 1208.13(c)(10) (clarification with respect to asylum), and at 8 CFR 208.16(d)(2), 1208.16(d)(2) (clarification with respect to statutory and CAT withholding of removal)."
+    },
+    {
+      "document_number": 3,
+      "component_number": 3,
+      "quote": "to the extent that they would amend 8 CFR 208.16(f), 208.30, 235.6, 1003.42, 1208.16(f), 1208.30, and 1235.6, and the Security Bars Final Rule will no longer amend those provisions."
+    },
+    {
+      "document_number": 3,
+      "component_number": 3,
+      "quote": "11. Amend Sec. 1208.16 by revising paragraph (d)(2) to read as follows:"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "EOIR will maintain its later-enacted provision from the EOIR Bars IFR at 8 CFR 1003.42(d)"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Part vs total: Doc 2's preamble names three sections for its wording change, and footnote 8 says amending Sec. 1208.35 was unnecessary, but the rule's last instruction amends Sec. 1208.35. Taking the part the preamble discusses for the whole gives five sections, without 1208.35. The instructions give six."
+}

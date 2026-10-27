@@ -1,0 +1,79 @@
+{
+  "question": "By what percentage, to one decimal, did DRC's confirmed cases rise between the two counts in CDC's entry-suspension order in force when CDC raised its outbreak response to Level 1, its highest?",
+  "number_of_asks": 1,
+  "gold_answer": "819.8%",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 6, factual basis, section III.B, with its footnote): CDC escalated its response to the outbreak to a Level 1, the highest level in its Graduated Response Framework. The sentence carries no date; its footnote cites a CDC internal decision memo dated in late June 2026. Doc 7 repeats the sentence and the footnote.\n\nStep 2. Source input (Doc 6, DATES): the order printed in Doc 6 took effect on July 13, 2026 and already reports the escalation, so the escalation came before that order.\n\nStep 3. Source input (Doc 5, SUMMARY and DATES): the order printed in Doc 5 took effect on June 21, 2026 and was to remain in effect through July 21, 2026. Doc 5 does not report a Level 1 response, and the memo is dated after June 21, so the Doc 5 order was the one in force when CDC raised its response.\n\nStep 4. Source input (Doc 5, factual basis, section III.B): Doc 5 cites two DRC confirmed-case counts: 91 confirmed cases on May 22, 2026, when the Amended Order was issued, and 837 confirmed cases as of June 15, 2026. Its text rounds the rise to more than 800 percent.\n\nStep 5. Calculation (Doc 5 and Doc 6): the later count less the earlier count: 837 - 91 = 746.\n\nStep 6. Calculation (Doc 5 and Doc 6): that rise as a percentage of the earlier count, to one decimal: 746 / 91 = 819.8%.",
+  "answer_components": [
+    "819.8%"
+  ],
+  "evidence": [
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "Commensurate with the deterioration of the epidemiological situation in DRC, CDC escalated its response to the outbreak to a Level 1, the highest level within the agency's Graduated Response Framework."
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "CDC, Internal Decision Memo, June 26, 2026."
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "This action took effect July 13, 2026, at 5:00 p.m. EDT."
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "Commensurate with the deterioration of the epidemiological situation in DRC, CDC escalated its response to the outbreak to a Level 1, the highest level within the agency's Graduated Response Framework."
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "CDC, Internal Decision Memo, June 26, 2026."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "This Order was issued on June 21, 2026, and shall remain in effect through 4:59 p.m. Eastern Daylight Time (EDT) on Tuesday, July 21, 2026."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "On May 22, 2026, when the Amended Order was issued, DRC reported 91 confirmed cases across 11 health zones."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "As of June 15, 2026, DRC reports 837 confirmed cases across 31 health zones"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6,
+        7
+      ],
+      "role": "Used to identify",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Wrong year or edition",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Wrong year or edition: Doc 6 and Doc 7 report the Level 1 response beside their own counts (123.8% and 130.5%), but their footnote dates it June 26, 2026, when Doc 5's June 21 order was in force. Its counts, 91 and 837, give 819.8%."
+}
