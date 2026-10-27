@@ -1,0 +1,52 @@
+{
+  "bundle": "aq-02405",
+  "corpus_sha256": {
+    "docs/fr_2024_28711.txt": "54b3f199758f0a5c234f5143e47f0dcb6bf241bc098124f7bc4c24fb6bb60643",
+    "docs/fr_2026_08912.txt": "45c5c235d3b9c618fccb111c1da8574eec8579d38a11e3f9f9d3c180e6850e01",
+    "docs/fr_2026_08918.txt": "ba8c708b985cac32e4088cdbf8ba3a8c10e88c005ea9475980adb6a6c30b719a",
+    "docs/fr_2026_09157.txt": "379aed9042f6a3c7de0798c9f59f7061445aa68ef98a83823bb0445fc5a7f2bc",
+    "docs/fr_2026_09182.txt": "ec4f91ea845a03b20cb3c952603dd496107ff28baaa90bc74f2d66194af4fd7d",
+    "docs/fr_2026_13587.txt": "e77f3b0471e28e0947a27b1e412ac243204503e2101729f31917aa6b855108d3",
+    "text/D01.txt": "745174ffa61ec1334a64caecf82c0cc98091add667238ee22967258e615728c4",
+    "text/D02.txt": "2cecb98d81070e12020baaed7a1338d3521303dfcf3a1f71b3d94db329903425",
+    "text/D03.txt": "afe78d42434d33c61c87344b467c7149424ec61314dc31751de60eec76ddd9b3",
+    "text/D04.txt": "88998dd38aa943cb6339012778036e56a3c006fbe0a68c1d3b27ae55ef1888b3",
+    "text/D05.txt": "71ab1eade20381c569f4f22f7247592085335caaec7995b89a8d97a0208f5599",
+    "text/D06.txt": "ebd0bb7147bd5cf4f931df18f2f16f473c17c77c20b08b784cf01442c3644fa6",
+    "text/manifest.json": "bce612b22a0610bf213e435781aed8d9faf53d5e969659091c3fb1f46576474e"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "250f7344fc8685f520c2b493b8ed61a31f7eb0d8c46f63a7f0b8a4f1ada4669f",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "name",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D05, D04",
+    "id": "q02",
+    "levers": "Same series, right edition",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i02",
+    "status": "draft",
+    "tags": "Cross-document join; Temporal alignment"
+  },
+  "question_id": "q02",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "27 CFR 478.96(d)(4)",
+    "components": "- c1: 27 CFR 478.96(d)(4)",
+    "evidence": "- D05 (L155, section II.C) [c1]: \"redesignating the current paragraph (c) content on out-of-state transfers as paragraph (d)\"\n- D05 (L487, proposed 478.96(c)) [c1]: \"(c) Law enforcement notice for NOTC transfers.\"\n- D05 (L498, proposed 478.96(c)(4)) [c1]: \"(4) Delay shipping or delivering the firearm to the transferee for a period of at least seven days after receiving the return receipt or response\"\n- D04 (L465, amendatory instruction 2.b) [c1]: \"Redesignating paragraphs (c) and (d) to (d) and (e), respectively\"\n- D04 (L468, amendatory instruction 2.d) [c1]: \"Amending newly designated paragraph (d) by, in the heading, adding the word\"\n- D04 (L468, amendatory instruction 2.d) [c1]: \"in paragraph (d)(4), redesignating the paragraph reference\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: h2, amendments applied in order. Doc 5 rewrites 27 CFR 478.96; Doc 4's instructions amend that rewritten text. Same series, right edition: the fully printed earlier text holds the decoy designation. Medium target (user: no Easy slot, \"target medium and high\"). Platform result pending; no local tier estimate.\n- Dependency plan: Doc 5 L155 (current (c) becomes (d)), L470-506 (rewritten (a)-(d)), L498 ((c)(4) seven-day delay); Doc 4 L462-470 (new (c); (c), (d) -> (d), (e); (d) edits including the (d)(4) cross-reference); Doc 5 fn8 L181 (both final rules expected at about the same time). Result: (c)(4) -> (d)(4).\n- Universe: not applicable (one provision). Other bundle proposals: Doc 1 amends 28 CFR part 25; Doc 2 amends 478.102; Doc 3 amends 479.62 and 479.84; Doc 6 amends 478.44 and part 479; none touches 478.96. Out-of-bundle ATF rules named in Doc 5 (new 478.130 records, retention periods) are not said to amend 478.96.\n- Necessity: Doc 5 is the only source of the rewritten section's items (Doc 4 states the statutory seven-day wait, L67, and that the current rule is 478.96(b), L68, but never prints the paragraph it redesignates); without it the answer is 478.96(b) or unknown. Doc 4 is the only source of the redesignation (Doc 5 fn8 L181 says only that another proposal revises 478.96); without it the answer is (c)(4).\n- Selected-lever checks: Same series, right edition: Doc 5's printed (c)(4) is the decoy, and a keyword search for \"seven days\" in 478.96 lands on it (L498). Doc 4's new (c)(4) (L485, wait for the NICS response or the investigatory period) is a second shipping wait that is not seven days. Doc 5 L536's \"seven-day waiting period\" is a state law inside an example for 478.102(c), not 478.96.\n- Targeted failure modes: mode 1 (Superseded date or version / Misapplies a rule or premise): Doc 5 alone gives (c)(4). Considered and not declared: Doc 4's new (c)(4) NICS wait (also (c)(4), and \"seven-day\" rules it out); the current rule's 478.96(b) (Doc 4 L68; \"finalized as written\" rules it out); \"(d)\" without the item (incomplete, not a separate trap). No platform attempts yet.\n- Calculation verification: not applicable (no arithmetic). Designation check: Doc 5 (c)(4) + Doc 4 (c) -> (d) = (d)(4); Doc 4 also rewrites (d)(4)'s internal reference \"(c)(2) and (3)\" to \"(d)(2) and (3)\", consistent with the item staying (4).\n- Semantic/ID/overview probes: the page overview for Doc 4 and Doc 5 lists only 27 CFR Part 478, 18 U.S.C. 922(c)/(t), 27 CFR 478.96 and figures; no document or overview states where the delay sits after both proposals. Shortest route: find the seven-day delay in Doc 5's 478.96, find Doc 4's amendatory instruction for 478.96, apply the redesignation.\n- Precision/readings: \"paragraph\" includes the item number, as the documents write \"paragraph (c)(2)\" (Doc 5 L498) and \"paragraph (d)(4)\" (Doc 4 L468). \"All finalized as written\" applies every 2026 proposal together; only Doc 4 and Doc 5 touch 478.96. Doc 4's preamble and its (d)(1) edit disagree about sworn statements for NICS-check NOTC sales; the question does not depend on that.\n- Completeness: full capture. Doc 6's omitted tables concern fingerprint/photograph costs and do not touch 478.96.\n- Style/set review: 21 words; \"seven-day shipping delay\" paraphrases Doc 5's \"Delay shipping or delivering ... at least seven days\". Answer is a regulation provision (the platform guide allows regulations as answers). q01 uses Docs 3 and 6; no shared facts or hints.\n- Warnings answered: pending first preflight.",
+    "necessary documents": "- D05: Answer component\n- D04: Answer component",
+    "platform validation": "",
+    "question": "If ATF's 2026 proposals were all finalized as written, which paragraph of 27 CFR 478.96 would hold the seven-day shipping delay?",
+    "reasoning": "Step 1. Source fact (Doc 5, section II.C): ATF's Form 4473 proposal rewrites 27 CFR 478.96, moving the requirements for later notice to law enforcement into a new paragraph (c) and redesignating the current paragraph (c) on out-of-state transfers as paragraph (d).\n\nStep 2. Source fact (Doc 5, proposed text of 478.96): the rewritten section has paragraph (a) Applicability, (b) Non-over-the-counter (NOTC) transactions, (c) Law enforcement notice for NOTC transfers and (d) Out-of-state transactions.\n\nStep 3. Source fact (Doc 5, proposed 478.96(c)): item (4) of the law enforcement notice paragraph requires the licensee to delay shipping or delivering the firearm for at least seven days after receiving the return receipt or response, so in Doc 5's text the delay is 478.96(c)(4).\n\nStep 4. Source fact (Doc 4, amendatory instruction 2): ATF's non-over-the-counter proposal amends 478.96 by redesignating paragraphs (c) and (d) as (d) and (e) and adding a new paragraph (c) for NOTC sales that need a NICS check; that new (c)(4) is a wait for the NICS response, not the seven-day delay.\n\nStep 5. Source fact (Doc 4, instruction 2.d): the edits it makes to the newly designated paragraph (d) (adding \"all\" before \"NOTC\" in the heading, the clause on the sworn statement, and changing the cross-reference in (d)(4) from (c) to (d)) match the wording of Doc 5's paragraph (c), so Doc 4 amends the section as Doc 5 rewrites it; Doc 5 also says ATF expects to publish both final rules at about the same time.\n\nStep 6. Combination (Steps 3 to 5; Doc 5 and Doc 4): with both proposals applied, Doc 5's item (c)(4) becomes item (d)(4), so the seven-day shipping delay would sit in 27 CFR 478.96(d)(4).",
+    "targeted failure modes": "### Failure mode 1\nTrap: Superseded date or version\nHow a careless solver fails: Misapplies a rule or premise\n\nWhy these are traps: Superseded version: Doc 5's rewritten 478.96 prints the seven-day delay as item (c)(4). Doc 4's amendatory instruction 2 then redesignates (c) and (d) as (d) and (e), so reading Doc 5 alone gives (c)(4). Applying both proposals gives (d)(4)."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "8508a7dbb79a2d1144f61c4edd39eebaeb9ea5d812524e9852801d896238caa0"
+}

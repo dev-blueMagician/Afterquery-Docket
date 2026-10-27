@@ -1,0 +1,63 @@
+{
+  "question": "If ATF's 2026 proposals were all finalized as written, which paragraph of 27 CFR 478.124 would require checking a non-immigrant-visa buyer's exception or waiver papers?",
+  "number_of_asks": 1,
+  "gold_answer": "Paragraph (c)(5)(iv)",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 5, proposed 478.124(c)(5), Licensee verifications): ATF's Form 4473 proposal rewrites 27 CFR 478.124 so that paragraph (c)(5) lists the licensee's verification steps as items (i) to (v).\n\nStep 2. Source fact (Doc 5, proposed 478.124(c)(5)(iii)): item (iii) applies to all transfers in which the transferee is an alien admitted under a non-immigrant visa who states that an exception to, or a waiver from, the prohibition in section 922(g)(5)(B) applies, and requires the licensee to examine the documents establishing the exception or waiver; items (iv) and (v) begin \"For non-over-the-counter transfers\" and \"For over-the-counter transfers\".\n\nStep 3. Source fact (Doc 4, footnote 37): ATF's non-over-the-counter proposal makes its changes to 478.124(c)(5) as it has been proposed for revision in the Form 4473 proposal, where (c)(5) has the heading \"Licensee verifications\".\n\nStep 4. Source fact (Doc 4, amendatory instruction 3): it redesignates paragraphs (iii) through (v) of 478.124(c)(5) as (iv) through (vi) and adds a new paragraph (iii) for non-over-the-counter transfers subject to a NICS check; its edits to the newly designated (v) and (vi) start from the words \"For non-over-the-counter transfers\" and \"For over-the-counter transfers\", which open Doc 5's items (iv) and (v).\n\nStep 5. Combination (Steps 2 to 4; Doc 5 and Doc 4): with both proposals applied, Doc 5's item (iii) on non-immigrant-visa buyers becomes item (iv), so the requirement would sit in 27 CFR 478.124(c)(5)(iv).",
+  "answer_components": [
+    "Paragraph (c)(5)(iv)"
+  ],
+  "evidence": [
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "(5) Licensee verifications. After the transferee has executed the transferee portion of Form 4473, the licensee must:"
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "(iii) For all transfers in which the transferee is an alien admitted to the United States under a non-immigrant visa who states that the alien falls within an exception to, or has a waiver from, the prohibition in section 922(g)(5)(B) of the Act, examine applicable documents establishing the exception or waiver"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "This would be Sec. 478.124(c)(5) as it has been proposed for revision in the Revising Firearms Transaction Record, Form 4473, proposed rule"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Redesignating paragraphs (iii) through (v) as paragraphs (iv) through (vi);"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "In newly designated paragraph (v), adding the phrase"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Superseded date or version",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    }
+  ],
+  "why_these_are_traps": "Superseded version: Doc 5's rewritten 478.124(c)(5) lists the non-immigrant-visa check as item (iii). Doc 4, which amends that rewritten text (its footnote 37), redesignates (iii) through (v) as (iv) through (vi), so reading Doc 5 alone gives (c)(5)(iii). Gold: (c)(5)(iv)."
+}

@@ -1,0 +1,52 @@
+{
+  "bundle": "aq-02405",
+  "corpus_sha256": {
+    "docs/fr_2024_28711.txt": "54b3f199758f0a5c234f5143e47f0dcb6bf241bc098124f7bc4c24fb6bb60643",
+    "docs/fr_2026_08912.txt": "45c5c235d3b9c618fccb111c1da8574eec8579d38a11e3f9f9d3c180e6850e01",
+    "docs/fr_2026_08918.txt": "ba8c708b985cac32e4088cdbf8ba3a8c10e88c005ea9475980adb6a6c30b719a",
+    "docs/fr_2026_09157.txt": "379aed9042f6a3c7de0798c9f59f7061445aa68ef98a83823bb0445fc5a7f2bc",
+    "docs/fr_2026_09182.txt": "ec4f91ea845a03b20cb3c952603dd496107ff28baaa90bc74f2d66194af4fd7d",
+    "docs/fr_2026_13587.txt": "e77f3b0471e28e0947a27b1e412ac243204503e2101729f31917aa6b855108d3",
+    "text/D01.txt": "745174ffa61ec1334a64caecf82c0cc98091add667238ee22967258e615728c4",
+    "text/D02.txt": "2cecb98d81070e12020baaed7a1338d3521303dfcf3a1f71b3d94db329903425",
+    "text/D03.txt": "afe78d42434d33c61c87344b467c7149424ec61314dc31751de60eec76ddd9b3",
+    "text/D04.txt": "88998dd38aa943cb6339012778036e56a3c006fbe0a68c1d3b27ae55ef1888b3",
+    "text/D05.txt": "71ab1eade20381c569f4f22f7247592085335caaec7995b89a8d97a0208f5599",
+    "text/D06.txt": "ebd0bb7147bd5cf4f931df18f2f16f473c17c77c20b08b784cf01442c3644fa6",
+    "text/manifest.json": "bce612b22a0610bf213e435781aed8d9faf53d5e969659091c3fb1f46576474e"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "79c2930334154f16312fb7f5bd720375c48f9ff62e96e03e2f0858a10a9ba91c",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D02, D06",
+    "id": "q01",
+    "levers": "Scatter the pieces; State the rounding",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i01",
+    "status": "draft",
+    "tags": "Cross-document join; Aggregation; Unit normalization"
+  },
+  "question_id": "q01",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "$48.05",
+    "components": "- c1: $48.05",
+    "evidence": "- D06 (L200, Fingerprint Cost Savings) [c1]: \"resulting in a per-application savings of $18 for this two percent of applicants\"\n- D06 (L220, Photograph Cost Savings) [c1]: \"could realize a capital savings of $17 per application\"\n- D06 (L253, time estimates) [c1]: \"up to 0.25 hours for GCA individual/RP applicants and NFA individual applicants who submit paper applications and would no longer have to obtain paper 2'' x 2'' photographs\"\n- D02 (L141, Benefits and Savings) [c1]: \"ATF estimates that it would take 15 minutes (0.25 hours) for an individual to copy the relevant form prior to submitting the original to ATF\"\n- D02 (L66, Application To Make a Firearm) [c1]: \"all applicants and responsible persons must currently forward a complete copy of Form 1\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: h1, two 2026 ATF proposals cutting parts of the same NFA applicant's burden (Doc 3 CLEO copy; Doc 6 fingerprints and photographs); one applicant type (individual, paper Form 1) and a stated hourly value. Medium target (user: no Easy slot, \"target medium and high\"). Platform result pending; no local tier estimate.\n- Dependency plan: Doc 6 L200 $18 (one card instead of two), L220 $17 (photograph), L253 0.25 h (photograph time, paper NFA individuals); Doc 3 L141 0.25 h (copy for the CLEO), L66 Form 1 copies are required. Time 0.25 + 0.25 = 0.5 h; 0.5 x 26.10 = 13.05; cash 18 + 17 = 35; 35 + 13.05 = 48.05.\n- Universe: not applicable (single value). Applicable proposals checked: Doc 2 (permits), Doc 4 (non-over-the-counter sales) and Doc 5 (Form 4473) never mention Form 1 or making a firearm; only Docs 3 and 6 change what a Form 1 filer does.\n- Necessity: Doc 3 is the only source of the CLEO-copy burden (Doc 6 has 0 CLEO mentions; Doc 4/Doc 5 CLEO text concerns notices for licensee sales, not NFA application copies); without it the answer is $41.53. Doc 6 is the only source of fingerprint/photograph costs and photograph time (searched all texts for fingerprint/photograph dollar figures and \"Form 1\"/\"5320.1\": D02 and D06 only); without it the answer is $6.53. The hourly value is in the question and printed in Docs 3, 4, 6, so it carries no necessity.\n- Selected-lever checks: Scatter the pieces: each proposal prints only its own part; Doc 6's own total \"$42\" (L257) is the nearest printed figure. State the rounding: with the printed rounded figures the answer would be $42 + $7 = $49, and at the rounded $26 wage $48.00; both differ from $48.05, so the stated $26.10 changes the answer.\n- Targeted failure modes: mode 1 (Part vs total / Picks the wrong entity or section): Doc 6 alone, 18 + 17 + 0.25 x 26.10 = 41.525 -> $41.53 (printed $42); the solver stops at the fingerprint/photo proposal's section. Mode 2 (Document convention / Rounding, scale or sign): Doc 6 L257 \"($7)\" and \"$26 * 0.25 hours, rounded\" and Doc 3 L165 \"$7 (rounded)\" both round $6.50 up; adding printed $42 + $7 = $49. Recomputed (Decimal, scratchpad i01_calc.py). No platform attempts yet. Considered and not declared: $48.00 (rounded $26 wage; the question states $26.10, so the wording already rules it out), $49.36 (Doc 3's paperwork estimate, 30 to 12 minutes \"due to conversion to eForm, changes proposed in this rule, and other related changes\", L222: not the rule's own savings estimate and not applicable to a paper filer), $74.15/$106.15 (responsible-person fingerprint hour or cash; \"an individual\" rules them out, and Doc 6 L257 gives individuals no fingerprint time), $6.53 (electronic filer; \"paper\" rules it out).\n- Calculation verification: Python Decimal (scratchpad i01_calc.py, 2026-10-09): 0.25 + 0.25 = 0.5; 0.5 x 26.10 = 13.05; 18 + 17 = 35; 35 + 13.05 = 48.05 exactly; no rounding step. All bare expressions terminate.\n- Semantic/ID/overview probes: the page overview for Doc 6 lists only \"fewer than 1 percent\", \"1.3 to 2.3 percent\" and \"over 97 percent\"; for Doc 3 it lists $11.4 million, $5.8 million, 1,170,028, 749,242, 149,848 and \"15 minutes (0.25 hours) estimated time to copy relevant form\". No document or overview states a combined per-application figure. Shortest route: find Doc 6's paper-individual savings ($18, $17, 0.25 h), find Doc 3's copy time (0.25 h), revalue both times at $26.10, add.\n- Precision/readings: \"to the cent\" asked; the gold is exact. \"Recomputing ATF's 2026 savings estimates\" anchors the components to ATF's estimates, excluding unquantified options such as self-taken fingerprints (Doc 6 L120, L350-351, called currently unlikely). The photograph saving is an option (\"could realize\", L220), but ATF's own paper-individual estimate counts it (L257 \"would have a combined (rounded) savings of $42\"). \"Per paper Form 1\" = one paper application to make an NFA firearm; Doc 6's 2 percent paper share is a population share, not a per-application factor.\n- Completeness: full capture, no clipped text. Doc 6 Tables 1-15 are omitted graphics in the source itself; every input used here is restated in Doc 6 prose (L200, L220, L253, L257), so the gap does not touch premises, gold, exclusions, uniqueness, necessity or shortcuts.\n- Style/set review: 22 words, plain wording; \"Form 1\" is the form's own name in Docs 3 and 6. q02 uses Docs 4 and 5 (regulation structure); no shared facts or hints.\n- Warnings answered: pending first preflight.",
+    "necessary documents": "- D02: Answer component\n- D06: Answer component",
+    "platform validation": "",
+    "question": "Recomputing ATF's 2026 savings estimates at $26.10 an hour, how much would an individual save per paper Form 1, to the cent?",
+    "reasoning": "Step 1. Source fact (Doc 6, fingerprint cost savings): an individual NFA applicant who files on paper would submit one fingerprint card instead of two, a per-application savings of 18 dollars.\n\nStep 2. Source fact (Doc 6, photograph cost savings): a paper filer who sends a copy of a photo identification document instead of a 2 x 2 photograph saves 17 dollars per application.\n\nStep 3. Source fact (Doc 6, time estimates): NFA individual applicants who submit paper applications save up to 0.25 hours by no longer obtaining a paper photograph.\n\nStep 4. Source fact (Doc 3, benefits and savings): removing the copy for the chief law enforcement officer saves the time it takes an individual to copy the form, 0.25 hours per application; every Form 1 applicant now forwards that copy.\n\nStep 5. Calculation (from Steps 3 and 4; Doc 6 and Doc 3): hours saved per paper Form 1: 0.25 + 0.25 = 0.5 hours.\n\nStep 6. Calculation (from Step 5 and the question's hourly value of 26.10 dollars, also printed as the unrounded leisure wage in Doc 6 and Doc 3): value of the time saved: 0.5 * 26.10 = 13.05 dollars.\n\nStep 7. Calculation (from Steps 1 and 2; Doc 6): cash saved: 18 + 17 = 35 dollars.\n\nStep 8. Calculation (from Steps 6 and 7; Doc 6 and Doc 3): total saved per paper Form 1: 35 + 13.05 = 48.05 dollars, which needs no rounding to the cent.",
+    "targeted failure modes": "### Failure mode 1\nTrap: Part vs total\nHow a careless solver fails: Picks the wrong entity or section\n\n### Failure mode 2\nTrap: Document convention\nHow a careless solver fails: Rounding, scale or sign\n\nWhy these are traps: Part vs total: Doc 6's paper-individual savings ($42, or $41.53 at $26.10) is one proposal's part; Doc 3's CLEO-copy time adds 0.25 hours. Document convention: both documents round $6.50 time values up to $7, so adding the printed $42 and $7 gives $49. Gold: $48.05."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "d9b2eec437147d65306639d277f1cbf9b0eb177c6d38108896449787fed06eca"
+}
