@@ -1,0 +1,68 @@
+{
+  "question": "How much did Kiwibank's home lending book grow in the half of its financial year that last ended before its owner announced a $225 million capital injection?",
+  "number_of_asks": 1,
+  "gold_answer": "$0.5 billion",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 4, its paragraph on Kiwibank's growth and the footnotes to it): Kiwibank's owner, Kiwi Group Capital, announced its $225 million investment in the bank on 1 August 2023. The date is given in the two footnote citations for that announcement.\n\nStep 2. Source input (Doc 4, the same paragraph and its footnote on the half-year results): Kiwibank grew its home lending book by $0.6b during the first half of its 2023 financial year. The footnote gives the source as Kiwibank's half-year results for the six months to the end of December 2022.\n\nStep 3. Inference (Doc 4): a first half that ends in December 2022 means Kiwibank's financial halves end in December and June, and its 2023 financial year ran from July 2022 to June 2023. The half that last ended before 1 August 2023 is therefore January to June 2023, the second half of that year, not the first half whose growth Doc 4 prints.\n\nStep 4. Source input (Doc 3, its paragraph on Kiwibank's results): for the whole of that financial year, which ASB calls FY23, Kiwibank reported home lending growth of $1.1 billion.\n\nStep 5. Calculation (Doc 3 and Doc 4): no document prints the second-half growth, so it is the full-year growth less the first-half growth, in billions of dollars: 1.1 - 0.6 = 0.5\n\nStep 6. Final answer (Doc 3 and Doc 4): in the half of its financial year that last ended before the injection was announced, Kiwibank's home lending book grew by about $0.5 billion.",
+  "answer_components": [
+    "$0.5 billion"
+  ],
+  "evidence": [
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "(1 August 2023). Kiwi Group Capital invests $225 million into Kiwibank to accelerate growth"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "(1 August 2023). Kiwibank owner to invest $225m in growing bank's home loan business"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "the bank grew its home lending book by $0.6b (1.5 x the banking system) during the first half [of FY23]"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Kiwibank half-year results for the six months to 31 December 2022"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Kiwibank announced its best results in the history of the bank for FY23"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Home lending growth of $1.1 billion, (or 1.5x market)"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Figure that must be computed",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Figure that must be computed: Doc 4 prints growth only for the half to 31 December 2022, $0.6b. The half that last ended before the 1 August 2023 injection ended in June 2023 and is unprinted: Doc 3's full-year $1.1 billion minus $0.6b. Careless solvers report $0.6 billion."
+}
