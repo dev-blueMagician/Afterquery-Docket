@@ -1,0 +1,406 @@
+AQ-06801 · Corporate filingsHard only — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-06801
+Saved: 2026-10-18 21:04 (local time)
+Bundle: Corporate filingsHard only · Iridium Communications Inc. and Comtech Telecommunications Corp. · 7 documents · 96,995 prompt tokens
+Run read: Run 1, the latest
+Attempts read: 4
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 16 runs left · 1 of 60 runs used in the last 24 h (all tasks)
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 3 attempts right
+
+Solver A 3/3 · Solver B not needed · Not Hard: Solver A solved 3/3
+
+High model: two solvers (Solver A, Solver B) try up to 3 times each. Hard = each of the two Hard solvers gets it wrong at least once in its three runs, even if every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Remove the mirroring language: ask, e.g., 'By how much did the liability Comtech carries separately from its Series B-3 preferred host change during the fiscal quarter ended January 31, 2026?' and require the answer in millions with sign, so the solver must identify the instrument from the notes rather than being handed the balance-sheet line. Why: The phrase 'derivative liability that Comtech split out of its convertible preferred stock' closely mirrors the Note 17 language ('embedded derivatives that require bifurcation from the ... Convertible Preferred Stock'), and 'quarter ended January 31, 2026' points straight at the Q2 FY2026 balance sheet in doc 5, where the redemption value and carrying value appear in the same line. The wording effectively tells the solver which two numbers to subtract, and the required prior-quarter figure is repeated identically in docs 6 and 7, so there are three redundant routes to it. From a run (High model · attempt 3): Again derived from the adjacent balance-sheet parentheticals; the question's wording ('split out of its convertible preferred stock') pointed directly at those lines, so no reading of the derivative notes or competing line items was needed. Doc 5 Doc 7
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 1 (Oct 18, 2026, 8:55 PM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+1 run
+
+------------------------------------------------------------------------
+Run 1 · Too easy · Result the gate uses
+Oct 18, 2026, 8:55 PM · Version 75bed4 (current) · Low — · Medium — · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: first run
+
+Solver summary: Run 1 · Too easy · 3 of 3 right
+Every solver attempt got it (3 of 3).
+
+Your answer: -1.8
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: Note: where it went wrong
+
+Final answer: -0.5 | Your answer (gold): -1.8
+
+Where it went wrong: Without documents, Low model guessed −0.5, confirming the answer is not retrievable from prior knowledge and that the documents alone — via the easy balance-sheet subtraction — supply it.
+
+Full answer
+-----------
+
+-0.5
+
+Reasoning
+---------
+
+We need answer: "By how much did the fair value of the derivative liability that Comtech split out of its convertible preferred stock change during the quarter ended January 31, 2026? Answer in millions of dollars to one decimal, negative for a decrease."
+
+Need knowledge about Comtech financials for quarter ended Jan 31, 2026? Need derivative liability split out of convertible preferred stock fair value change during quarter.
+
+We need determine from knowledge. Comtech Telecommunications Corp? They have convertible preferred stock with embedded derivative? Need change in fair value of derivative liability during quarter ended Jan 31, 2026.
+
+We need find the amount in millions, negative for decrease.
+
+Let's recall Comtech earnings release for three months ended January 31, 2026? Maybe in their 10-Q filing for the three months ended January 31, 2026 filed around March 2026.
+
+We need specifically "the derivative liability that Comtech split out of its convertible preferred stock" - this sounds like in connection with issuance of Series A convertible preferred stock? They might have bifurcated an embedded derivative related to conversion feature? Or maybe related to redemption feature?
+
+We need the change during the quarter ended Jan 31, 2026. Let's recall figures.
+
+Comtech Telecom Corp reported results for first quarter fiscal 2026? Wait fiscal year ends July 31? Let's check mental: Comtech fiscal 2025 ended July 31, 2025. So quarter ended October 31, 2025 was fiscal Q1 2026. Quarter ended January 31, 2026 was fiscal Q2 2026? Or maybe calendar quarter.
+
+In the earnings release around March 2026? They might have mentioned a non-cash change in fair value of derivative liability.
+
+Let's recall news in March 2026: Comtech Telecommunications Corp. Announces Results for the Three Months Ended January 31, 2027? No, need correct.
+
+Actually there was a press release on March 10, 2026? Or March 9, 2026? Comtech announced financial results for the three months ended January 31, 2026? Let's recall details.
+
+We need be precise: change in fair value of derivative liability split out of convertible preferred stock during the quarter. Might be an increase or decrease of e.g., $1.5 million? Or $0.3?
+
+Let's think about accounting: When issuing convertible preferred stock with certain features (like mandatory redemption or contingent features), an embedded derivative may need to be separated and measured at fair value each period. The change in fair value is recognized in earnings.
+
+Comtech issued Series A Convertible Preferred Stock in maybe October 2024? Or in 2025? Actually in October 2024 Comtech announced issuance of $100 million of Series A Convertible Preferred Stock? Let's recall: In October 2024, Comtech completed a private placement of $100 million of 8.0% Series A Convertible Preferred Stock? Or was it in 2023?
+
+Let's search mental database: In December 2024 Comtech announced strategic investment? Hmm.
+
+Alternatively, maybe this refers to Comtech's fiscal 2026 second quarter earnings call in March 2025? No, need quarter ended Jan 31, 2026, so likely reported in March 2026.
+
+The question asks "By how much did the fair value... change during the quarter... Answer in millions of dollars to one decimal, negative for a decrease." This sounds like the answer might be -1.2 or +0.5.
+
+We need determine correct figure from financial statements.
+
+Let's recall the 10-Q for three months ended January 31, 2026 filed with SEC around March 2026. In the "Other income (expense)" or "Change in fair value of derivative liability" line?
+
+We need specifically "the derivative liability that Comtech split out of its convertible preferred stock". In the balance sheet, there might be a derivative liability of, say, $4.2 million at Jan 31, 2026 and $5.1 million at Oct 31, 2025? Or vice versa.
+
+Let's recall from prior quarters: At July 31, 2025 maybe derivative liability was around $1.9 million? Or at October 31, 2025 maybe $2.5 million?
+
+Actually, I think Comtech had a derivative liability related to the convertible preferred stock issued in connection with the acquisition? Not sure.
+
+Let's reason about the stock issuance: Comtech issued convertible preferred stock with liquidation preference of $100 per share? The conversion price might be adjusted based on stock price, but that might be an embedded derivative if not considered indexed to own stock.
+
+But they "split out" a derivative liability from the convertible preferred stock at issuance, then remeasure each quarter.
+
+We need only the change during the quarter ended Jan 31, 2026.
+
+Let's recall the income statement line items for three months ended Jan 31, 2026 compared to prior year. Maybe there was a line "Change in fair value of derivative liability" with amounts (0.5) and (1.2) etc.
+
+Given the question asks "By how much did the fair value... change... negative for a decrease." So likely the fair value went down, hence negative number? Or they want the change value (ending minus beginning). If it decreased, then negative.
+
+We need answer in millions to one decimal.
+
+Perhaps the derivative liability was $3.3 million at beginning and $1.8 million at end, change -1.5.
+
+But need be accurate.
+
+Let's recall from Comtech 10-Q filed around March 9, 2026 for three and six months ended Jan 31, 2026. The financial highlights might include net sales of $?) Let's try to recall the press release headline numbers: For the three months ended January 31, 2026, net sales were $124.5 million? Or net income?
+
+Actually, in March 2025 Comtech announced results for three months ended January 31, 2025 with net sales of $123.1 million? Let's not confuse years.
+
+We need specifically derivative liability change. Let's try to recall from the 10-Q filing details: There might be Note about Preferred Stock and Derivative Liability.
+
+Perhaps in Note 7: The Company has 100,000 shares of Series A convertible preferred stock outstanding. The embedded derivative relates to the change of control redemption feature? The fair value at issuance was separated and initially recognized as a liability of $6.0 million, reducing the carrying amount of preferred stock.
+
+Then each quarter they remeasure. At October 31, 2025 maybe fair value was $4.5 million, and at January 31, 2026 it was $3.0 million, change -1.5? Or maybe increase?
+
+Let's try to recall specific numbers in balance sheet: At January 31, 2026, derivative liability might be listed at $2.4 million? At October 31, 2025 maybe $2.1 million? Change +0.3?
+
+But the question asks "By how much did the fair value... change during the quarter ended January 31, 2026? Answer in millions..." This sounds like it's asking for the amount of change recognized in earnings, which might be listed directly in the income statement.
+
+Let's recall income statement for three months ended Jan 31, 2026:
+Net sales: maybe $166.3 million?
+Operating income: ?
+Other income (expense): maybe includes interest expense, change in fair value of derivative, etc. The change might be ($0.8) million?
+
+Wait, there might also be a derivative related to interest rate swaps? But they said "split out of its convertible preferred stock" so it's specific.
+
+Let's recall in 2023 Comtech issued 8.0% Series A Convertible Preferred Stock? Actually in October 2023 Comtech Telecommunications Corp. entered into an agreement with White Hat Capital? No that was in 2022.
+
+Let's search mental news: In October 2024, Comtech announced it entered into agreements for $150 million strategic investment? Or in September 2024?
+
+Actually, in September 2024, Comtech announced a strategic investment of up to $150 million led by White Hat Capital and others, including convertible preferred? Let's check mental: In September 2024, Comtech announced a strategic investment of $150 million? Maybe $75 million initially?
+
+But then they split a derivative?
+
+Alternatively, in February 2025 Comtech announced issuance of convertible notes? Hmm.
+
+Given the difficulty, I need to provide the best guess with reasoning? But I need be accurate if possible.
+
+Let's recall the 10-Q for the three months ended January 31, 2024? No.
+
+Actually, I think I saw in a recent filing: "The fair value of the derivative liability was $1.8 million and $2.3 million at January 31, 2025 and July 31, 2024 respectively..." Not clear.
+
+But the question specifies "quarter ended January 31, 2026". This sounds like a recent quarterly report filed in March 2026. They ask "By how much did the fair value... change during the quarter..." which sounds like they want you to compute ending minus beginning using balance sheet figures disclosed for Jan 31, 2026 and Oct 31, 2025 (or Nov 1?).
+
+Thus we need the two values. Let's recall the balance sheet in that filing might show:
+Derivative liability
+October 31, 2025: $X
+January 31, 2026: $Y
+Change = Y - X.
+
+If I can recall the specific line in the balance sheet.
+
+The filing is likely Form 10-Q for the three and six months ended January 31, 2026. The balance sheet might be as of January 31, 2026 and July 31, 2025? Or compared to October 31, 2025?
+
+Usually in quarterly filings they present balance sheets for current quarter and prior fiscal year end (July 31). But they might also present prior quarter in the MD&A? Actually 10-Q includes balance sheet for current and prior year end. So to find change during the quarter, they might ask you to compare with prior quarter's filing? But they ask specifically "during the quarter ended January 31, 2026" - you might need the values at beginning (Nov 1, 2025) and end (Jan 31, 2026). The beginning value might be in the prior 10-Q (for quarter ended Oct 31, 2025).
+
+Thus we need both figures.
+
+But maybe in the current filing they present comparative balance sheets for Jan 31, 2026 and Jan 31, 2025? No, that's for income statement and cash flows. For balance sheet, it's current and prior fiscal year end.
+
+However, they might disclose in the notes the fair value of derivative liability at each reporting date, including Oct 31, 2025 and Jan 31, 2026.
+
+Let's recall Note 6 or 8 in the 10-Q: "Derivative Liability" with a table:
+July 31, 2025: $?
+October 31, 2025: $?
+January 31, 2026: $?
+
+Actually, they might discuss in MD&A: "The change in fair value of the derivative liability resulted in a non-cash benefit of $X for the three months ended January 31, 2026 compared to $Y for the prior period."
+
+This sounds plausible. Let's recall MD&A language: "Other income (expense) for the three months ended January 31, 2026 included a $0.5 million favorable change in the fair value of our derivative liability compared to a $0.2 million unfavorable change in the prior year..."
+
+We need just for this quarter.
+
+Given all this, I think the change might be a decrease of about $0.5 million? Or increase?
+
+Wait, they ask "negative for a decrease". If they anticipate it might be negative, then likely it was a decrease. So answer might be -0.5?
+
+But we need "By how much... change... Answer in millions... negative for a decrease." So if fair value went from 2.0 to 1.5, change is -0.5.
+
+Let's try to be more specific: maybe -1.1?
+
+Actually, I think in the earnings release for three months ended Jan 31, 2026, they mentioned net income included a non-cash gain of $1.1 million related to change in fair value of derivative liability? Or was it $0.8?
+
+Let's recall Comtech's net income figures. For the three months ended Jan 31, 2025, net income was maybe $1.2 million? For three months ended Jan 31, 2026, net income was maybe $5.6 million? Or loss?
+
+We need not be perfect but need best answer.
+
+Let's recall in March 2025 Comtech reported for three months ended Jan 31, 2025: Net sales $129.7 million, net income $3.5 million? Or net loss?
+
+Actually, I think Comtech in March 2025 announced results for three months ended January 31, 2025: Net sales of $135.4 million, net income of $0.8 million? Let's not overanalyze.
+
+But there was a mention of derivative liability change of ($0.6) million?
+
+Given all this ambiguity, I need to provide an answer. Let's go with -0.5? No, need one decimal.
+
+Wait, maybe the answer is -2.5? That sounds large relative to net income.
+
+Let's recall that the convertible preferred stock might have a large derivative. At issuance, the derivative might be valued at $10 million. Then quarterly changes might be in millions.
+
+But the question asks "By how much did the fair value... change during the quarter..." If it was large, they'd ask "by how much" with one decimal, maybe 1.3.
+
+Actually, I think I should try to recall specific line in the balance sheet for derivative liability at Jan 31, 2026 and Oct 31, 2025.
+
+Looking mental at a 10-Q filing layout:
+CONDENSED CONSOLIDATED BALANCE SHEETS
+As of January 31, 2026 and July 31, 2025
+
+But they need prior quarter, not shown.
+
+But in the notes, they might have:
+The derivative liability is measured at fair value using Level 3 inputs. The fair value was $3.2 million and $4.0 million at January 31, 2026 and July 31, 2025, respectively. But that'd be over six months.
+
+But they ask specifically during the quarter ended Jan 31, 2026, so maybe they want change from Oct 31, 2025 to Jan 31, 2026. Those values might be in the prior 10-Q and current 10-Q notes.
+
+Let's recall in the 10-Q for three months ended Oct 31, 2025 filed in Dec 2025, the derivative liability might have been $4.5 million at Oct 31, 2025. Then in the 10-Q for Jan 31, 2026 filed March 2026, it might be $3.9 million. Change -0.6.
+
+But I need be more accurate.
+
+Actually, I think the derivative liability is related to the Series B? No.
+
+Let's recall in October 2028? No.
+
+Given all this, I will answer -0.5? Hmm, but I want one decimal.
+
+But wait, there's also the possibility that the fair value increased, but they said "negative for a decrease" meaning if it decreased, put negative. So they anticipate you compute ending minus beginning, which might be negative.
+
+Let's try to recall from the income statement line "Other income (expense)" broken out:
+For three months ended Jan 31, 2026:
+Interest expense: ($2.1) million?
+Change in fair value of derivative liability: ($1.0) million? Or +?
+
+If it's in other income/expense, a decrease in liability is income (positive), an increase is expense (negative). So if they ask "by how much did fair value change... negative for decrease" - wait if fair value decreases, that's a gain (positive income) but they ask negative for decrease? Let's parse: "By how much did the fair value... change... negative for a decrease." That means they want the change in the liability value itself, not the income effect. So if liability went down by 0.5, answer -0.5.
+
+Thus we just need the delta in liability.
+
+Given typical wording in financial analysis questions: "By how much did X change? ... negative for a decrease." Yes, that's computing X(end) - X(start).
+
+Thus need X at start and end.
+
+Given I don't have the document, but I need answer.
+
+Perhaps the values are in the 10-Q note: "The fair value of the derivative liability was $1.5 million and $1.9 million as of January 31, 2026 and October 31, 2025, respectively." Change = -0.4.
+
+But I need one decimal. Maybe -0.4.
+
+However, I want to be somewhat closer. Let's recall that in the fiscal 2025 10-K, there was a derivative liability of maybe $2.8 million at July 31, 2025. Then in the 10-Q for Oct 31, 2025 it might be $3.2 million? Or $2.4?
+
+Actually, if in 10-K for year ended July 31, 2025 they mentioned a derivative liability of $1.7 million?
+
+This is too ambiguous.
+
+But maybe the answer is -1.0? Let's check mental consistency: If the liability was around $5 million and changed by about 20%, that's 1 million.
+
+But I think it's smaller.
+
+Wait, there's also a possibility that the answer is 0.0? No, that'd be trivial.
+
+Let's recall that in March 2026, Comtech reported net income of $5.9 million for the three months ended Jan 31, 2026, up from net income of $0.9 million in prior year? The increase might partly be due to a $2.5 million change in derivative?
+
+Actually, I think in March 2026 Comtech announced results for the three months ended January 31, 2026:
+Net sales: $132.4 million vs $124.1 million?
+Net income: $8.2 million vs net income of $1.1 million?
+
+If net income jumped by ~7 million, part could be derivative change.
+
+But also there might be tax adjustments.
+
+Let's recall the actual press release in March 2026: Around March 9, 2026, Comtech Telecommunications Corp. announced results for the three and six months ended January 31, 2026 and 2025. The headline figures might be:
+For the three months ended Jan 31, 2026:
+Net sales: $166.8 million?
+Operating income: $10.2 million?
+Net income: $7.5 million?
+
+Actually, Comtech has two segments: Satellite and Space Communications and Terrestrial and Wireless Networks. Net sales in recent quarters have been around $130-150 million.
+
+But I think for fiscal Q2 2026 (quarter ended Jan 2026) net sales were around $130 million.
+
+Given all this, I will provide the answer -0.5? No, I want -0.8?
+
+Wait, there's a specific phrase "the derivative liability that Comtech split out of its convertible preferred stock". This sounds like they split it out initially and then each quarter update. The change during the quarter might be mentioned explicitly in the filing: "The fair value of the derivative liability decreased by $0.8 million during the quarter ended January 31, 2026..."
+
+Thus I will answer -0.8? Or maybe -1.2?
+
+Actually, I think it's -0.6.
+
+But I need be single best answer. Let's go with -0.5? No, that's round number but they want one decimal, could be -0.5.
+
+However, I feel somewhat unsure. Let's try to recall the specific balance sheet line in the filing filed March 2020? No.
+
+Another mental check: Comtech's convertible preferred stock was issued in 2023? Let's check mental news: In November 2023, Comtech announced issuance of $100 million of 8.0% Series A Convertible Preferred Stock to an institutional investor? Or was it in 2024?
+
+Actually, in December 2024, Comtech Telecommunications Corp. announced that it entered into an agreement with White Hat Capital Partners LP and Magnetar Financial LLC? Hmm, that was in 2022: White Hat Capital bought $100 million of convertible preferred in 2022? Let's recall: In October 2022, Comtech announced a strategic investment of up to $100 million led by White Hat Capital, including $20 million of convertible preferred? Or was it $50 million?
+
+Specifically, in October 2022 Comtech announced a strategic partnership and investment of up to $100 million, including an initial investment of $25 million in convertible preferred stock. Yes, that sounds right. The convertible preferred stock had an 8.0% dividend and was convertible at $3.73? Or maybe $4.00?
+
+Then later in 2024 they might have issued more.
+
+But the derivative split out might relate to a feature in that 2022 issuance. The derivative liability might have been initially valued and then remeasured.
+
+If the initial investment was in 2022, then by 2026 the derivative might still be on books.
+
+But actually, in 2022 they issued Series A Convertible Preferred Stock with a liquidation preference of $20 million? Or more?
+
+This is too far back.
+
+However, the question mentions "the quarter ended January 31, 2026" which suggests this is in a recent filing discussing the current derivative.
+
+Given all this, I think the answer is likely -0.3? No, that's too small.
+
+Wait, the problem asks "By how much did the fair value... change... Answer in millions of dollars to one decimal..." This framing sounds like the answer might be a specific number like "2.3" but negative if decrease.
+
+Actually, maybe the fair value went up by 1.5 million, but they said negative for decrease, so if it went up you answer positive.
+
+Thus I need correct sign.
+
+Let's recall in the income statement, there might be a line:
+Change in fair value of derivative liability (0.4) (income?) Let's understand accounting: The derivative is a liability. If fair value increases, that's a loss
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): -1.8
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): -1.8
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): -1.8
+
+Where it shortcut: Again derived from the adjacent balance-sheet parentheticals; the question's wording ('split out of its convertible preferred stock') pointed directly at those lines, so no reading of the derivative notes or competing line items was needed.Doc 5 Doc 7
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

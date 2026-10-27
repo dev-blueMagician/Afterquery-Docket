@@ -1,0 +1,25 @@
+{
+  "bundle": "aq-06801",
+  "corpus_sha256": {
+    "docs/Comtech-Telecommunications-Q1-FY2026-Earnings-Release.txt": "a96a03b3bc121e45f9d63c39ae33b89df1e87db94791ff157721211f76209f3a",
+    "docs/Comtech-Telecommunications-Q1-FY2026-Quarterly-Report.txt": "02fd6f937c067f0f71c7b839a66aae0756fb8c4f967b51587ff164afa5b512af",
+    "docs/Comtech-Telecommunications-Q2-FY2026-Earnings-Release.txt": "6021c02ff6f72b16d54e0212b4606049f74f57dcdefa57ea415286e1c476eab3",
+    "docs/Comtech-Telecommunications-Q3-FY2026-Earnings-Release.txt": "73a35b895692eb7798b3472a12aef35ba085ba7626a46e8c11d3b5c4a1ea82d7",
+    "docs/Iridium-Communications-Q1-2026-Earnings-Release.txt": "61b06e5e916a40617cf6980825119a2fcb91ef3b9ebbf68c8b744427f62d5dd9",
+    "docs/Iridium-Communications-Q3-2025-Earnings-Release.txt": "0502089767353c109f7d62cb24c3a07fa53dd07cd02ff9ba4c7fcbd811c5bf5c",
+    "docs/Iridium-Communications-Q4-2025-Earnings-Release.txt": "f19980e18d33787102ab9e48a61da1f59d2e4a9614bddb4eaa62701b1e046138",
+    "text/D01.txt": "a34c08ddcf00c53b16992affc97517ee8cb9be8e0fb8e7e6b28ff72cf282657e",
+    "text/D02.txt": "d65b16f68637636ec4390ce664bf26acea551778901980308bcd344defde91a6",
+    "text/D03.txt": "13a4a4a4bd8b310d6be630beb039e4495a773015ad34a78b8fe56ddbdbe54de2",
+    "text/D04.txt": "ed8760d83202ff51e782cb7bd54a4452ee3db946ecf3f590c5b9c449e117972d",
+    "text/D05.txt": "e686210c7b73eaf1dadefd8b1023bc918d4533dffa317e0ae65469eacf037f3a",
+    "text/D06.txt": "27a9d66cc16f5faf58eadd3aa023497a75ccfde482e124fa0bc67ec989b2f758",
+    "text/D07.txt": "b6499282df3cc6c3cae9cb8f461bf5d6917689f1fbdb3b75345b43784f8622b5",
+    "text/manifest.json": "4bef270ce468d038b64aeb8464045c60747bfe86ca1f1239e0c33ed6c5b60139"
+  },
+  "independence": "One fresh context per solve; the packet holds documents and the sentence only.",
+  "question": "What was Comtech's Adjusted EBITDA as a percentage of net sales for the twelve months ended April 30, 2026? Give the percentage to one decimal place.",
+  "schema": 1,
+  "screen_sha256": "918939735bffab07067997dc6f07746dd32eda41cf80e0666fd362eb9e5a94ba",
+  "source": "notes/sketches/i04.md"
+}
