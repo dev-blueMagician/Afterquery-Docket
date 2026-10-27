@@ -1,0 +1,412 @@
+AQ-04421 · Semiconductor Export Control Filings — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-04421
+Saved: 2026-10-14 10:33 (local time)
+Bundle: Semiconductor Export Control Filings · Public policy · 6 documents · 103,931 prompt tokens
+Run read: Run 17, the latest of 17
+Attempts read: 4
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 17 runs left · 14 of 60 runs used in the last 24 h (all tasks)
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 3 attempts right
+
+High model: two solvers try up to 3 times each. Ready when both get it wrong at least once and not every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Make the add/correct distinction load-bearing: e.g., ask only about firms whose entries were corrected (not newly added), which forces the solver to separate the 32 additions from the 27 corrections and to realize Hexin Xingtong is a correction while Jicun and Sino IC are additions — or ask separately for each category. Why: The phrase 'added or corrected in September 2025' does no narrowing work beyond pointing at Document 4, because that single rule contains both the additions and the corrections, and the full corrected entries (including Hexin Xingtong's addresses) are reprinted in the same document. The solver never has to determine which of the 59 touched entries were additions versus corrections, or notice that Hexin's shared-road address comes from a corrected (pre-existing) entry rather than a new one. From a run (High model · attempt 2): Again matched the three roads verbatim across the two documents; the distinctive road names and the short VEU list made the join a lookup rather than a synthesis. Doc 4
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 17 (Oct 14, 2026, 10:26 AM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+17 runs
+
+Only the latest run, Run 17, is in this file; 16 earlier runs are left out.
+
+------------------------------------------------------------------------
+Run 17 · Too easy · Result the gate uses
+Oct 14, 2026, 10:26 AM · Version 511a2b (current) · Low — · Medium — · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: question: removed “firms that”, “to the Entity List”; added “firms, if any, whose Entity List entries”, “or corrected”. answer: added “Hexin Xingtong Technology (Beijing) Co., Ltd.,”
+
+Solver summary: Run 17 · Too easy · 3 of 3 right
+Every solver attempt got it (3 of 3).
+
+Your answer: Hexin Xingtong Technology (Beijing) Co., Ltd., Jicun Semiconductor Technology (Shanghai) Co., Ltd. and Sino IC Technology Co., Ltd.
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: Note: where it went wrong
+
+Final answer: No firms added or corrected to the Entity List in September 2025 have premises on the same road as any site on BIS’s October 2024 Validated End-User list. So there are none to list. | Your answer (gold): Hexin Xingtong Technology (Beijing) Co., Ltd., Jicun Semiconductor Technology (Shanghai) Co., Ltd. and Sino IC Technology Co., Ltd.
+
+Where it went wrong: Without documents, Low model guessed 'no firms', showing the answer is not retrievable from prior knowledge and depends entirely on the two Federal Register texts.Doc 3 Doc 4
+
+Full answer
+-----------
+
+No firms added or corrected to the Entity List in September 2025 have premises on the same road as any site on BIS’s October 2024 Validated End-User list. So there are none to list.
+
+Reasoning
+---------
+
+We need answer question: Which firms, if any, whose Entity List entries BIS added or corrected in September 2025 have premises on the same road as a site on BIS's October 2024 list of validated end users? List them alphabetically.
+
+Need determine from knowledge. Need understand BIS Entity List additions/corrections in September 2025, and BIS October 2024 list of validated end users (VEU list?). Need identify firms with premises on same road as a site on that list.
+
+We need answer likely specific firm names alphabetically, maybe none.
+
+Let's recall context: In September 2025, BIS added or corrected Entity List entries? Maybe on September 29, 2025? Or September 2025 final rule adding entities to Entity List. And October 2024 list of validated end-user (VEU) program? The question asks premises on same road as a site on BIS's October 2024 list of validated end users.
+
+We need identify addresses.
+
+Let's recall BIS published in Federal Register around September 29, 2025? Actually there was a rule on September 29, 2025 adding 23 entities? Or maybe on September 12? Let's recall news in late September 2025: U.S. Commerce Department added several Chinese firms to Entity List, including subsidiaries of already listed firms. There was a rule effective September 29, 2025 adding entities in China, etc. Let's recall details.
+
+Also in October 2024, BIS updated the Validated End-User (VEU) List, adding or removing sites? On October 2024 maybe BIS added 10 entities? Or updated VEU list on October 3, 2024? Let's recall: On October 2024, BIS added seven entities to VEU program? Or removed?
+
+But the question specifically asks "site on BIS's October 2024 list of validated end users" - that sounds like the list published in October 2024 containing addresses of validated end-user facilities.
+
+We need firms added/corrected in September 2025 whose premises are on the same road as one of those sites.
+
+This sounds like a specific detail that might appear in the Federal Register notice for September 2025 additions, where they list addresses and maybe mention proximity? Or maybe it's a trick: none.
+
+But we need be accurate based on knowledge.
+
+Let's recall the September 2025 Entity List modifications. There was a final rule on September 29, 2025 titled "Additions to Entity List" maybe adding 23 entities? Actually I recall on September 29, 2025, Commerce Department's Bureau of Industry and Security (BIS) added 23 Chinese entities to Entity List, including 13 subsidiaries of a previously listed company? Let's check mental news: In late September 2025, the U.S. added 23 Chinese firms to Entity List, including chip-related firms, and also corrected entries for some? The news said the rule targets entities that acquired or attempted to acquire U.S. origin items to advance China's chip industry or for military end use. Among them were subsidiaries of Sophgo? Wait Sophgo was added earlier?
+
+Another September 2025 addition: On September 12, 2025, BIS added 23 entities? Or was it October?
+
+Let's search mental database: In September 2025, there were several actions. On September 5? No.
+
+Perhaps it's not news-covered widely but in Federal Register.
+
+Also there was a correction in September 2025? The question says "added or corrected in September 2025". That sounds like there was a rule that both added new entries and corrected existing ones, published in September 2025.
+
+We need identify which of those firms have premises on same road as a site listed in October 2024 VEU list.
+
+This sounds like they share an address road, maybe "No. 918, 9th Floor, Building B" etc. But need road name.
+
+Let's recall the October 2024 VEU list update published in Federal Register on October 8, 2024? Or October 2, 2024? The Validated End-User Program list includes companies and addresses in China, like Samsung China Semiconductor, etc. But also maybe included Chinese firms like "Yangtze Memory Technologies Corp"? No that was on Entity List, not VEU.
+
+Actually the VEU program in China lists specific facilities that can receive certain items under VEU authorization. The list was updated in October 2024 to add/remove entities? Let's recall in October 2024, BIS added three entities to VEU list? Or removed?
+
+Let's think differently: The question may come from a specific exam or quiz about analyzing BIS lists. They ask: Which firms, if any, whose Entity List entries BIS added or corrected in September 2025 have premises on the same road as a site on BIS's October 2024 list of validated end users?
+
+This sounds like you need to cross-reference addresses in two lists. Since I need answer from own knowledge, I should try to recall or derive addresses.
+
+But maybe it's easier: The answer might be "none". Let's examine plausibility. The September 2025 added firms might all have addresses on different roads. But the question asks "Which firms, if any..." implying there might be some.
+
+We need list them alphabetically.
+
+Let's recall specific entities added in September 2025 and their addresses.
+
+News on September 29, 2025: U.S. Commerce Department added 23 entities to Entity List. The entities included:
+
+- 11 entities in China?
+- Some in Taiwan?
+- Some in other countries?
+
+Specifically, there was addition of subsidiaries of Sophgo Technologies Ltd., maybe "PowerAir Technology Pte"? No that's Singapore.
+
+Wait let's recall precisely: On September 29, 2025, BIS added 23 entities to Entity List spread across China, Taiwan, and elsewhere? Actually I think on September 29, 2025, BIS added 23 entities in China? Let's check mental news headlines around Sept 30, 2025: "US expands Entity List with 23 Chinese firms" maybe yes. Among them were firms like "Beijing SinoGlobe Technology"? No that was added earlier.
+
+Another addition in September 2025 was on September 12? Let's check mental news in mid-September 2025: The U.S. added 23 entities to Entity List including Chinese chip firms? Or was that in October?
+
+Let's recall in October 2025, there was a big addition? Actually on October 2025? No need.
+
+But also there were corrections in September 2025? Maybe in Federal Register on September 2? Or September 5?
+
+Let's search mental Federal Register entries in September 2025 for Entity List.
+
+There was a final rule on August 2025? Let's not overfixate.
+
+However, the question mentions "premises on the same road as a site on BIS's October 2024 list of validated end users". This sounds like address matching. For example, a site on VEU list is on " Road X, District, City". One of the new Entity List entries lists an address on same road.
+
+We need identify firms (alphabetically) that match.
+
+Perhaps the October 2024 VEU list includes addresses like "No. 18, Haidian Road, Beijing"? Or "Shanghai Road"?
+
+But we need be specific about firms.
+
+Let's recall the VEU list published in October 2024 (maybe on October 3, 2024, effective October 8?). The entities added might include:
+
+- Applied Materials China? No that's already on list.
+- Maybe "ChangXin Memory Technologies"? No.
+
+Actually, the VEU list for China originally included: Applied Materials (China), Inc., Applied Materials Technology Service (Shanghai) Co., Ltd., Boeing Tianjin Composites Co., Ltd., etc. But updates happen.
+
+Wait, in October 2029? No.
+
+Let's recall in October 2024, BIS amended the Export Administration Regulations to add entities to the VEU List and remove some. The Federal Register notice might be dated October 7, 2024, titled "Additions to Validated End-User (VEU) Program; Corrections". Or maybe "Removals From Validated End-User Program for Certain Entities in China"?
+
+Actually in October 2024, there was news that U.S. removed three Chinese firms from the "Unverified List" and added them to VEU? Or removed from VEU?
+
+Let's recall: In August 2023, BIS removed 33 entities from Unverified List. In October 2023, updates?
+
+But the question mentions "BIS's October 2024 list of validated end users" - this is likely the list as published in the Code of Federal Regulations appendix? Or maybe a specific list published in October 2024 that includes addresses.
+
+We need cross-reference with September 2025 Entity List entries.
+
+Given the difficulty, maybe the answer is indeed none. But I need be somewhat sure.
+
+Let's recall specific addresses in September 2025 Entity List additions. For example, entities added on September 29, 2025 included addresses like:
+
+1. Anhui Xinyouneng Semiconductor Co., Ltd., address?
+2. Beijing Jincheng Boson Technology?
+3. Changsha CEC?
+No that's not right.
+
+Actually, on September 29, 2025, Commerce added entities that are subsidiaries or affiliates of firms already on Entity List, particularly those trying to circumvent restrictions on semiconductor manufacturing equipment.
+
+Specifically, there was a rule that added 11 entities that are subsidiaries of Sophgo? Wait Sophgo was added in October 2025? Let's check mental news in October 2025: U.S. added Chinese firms including Sophgo and its subsidiaries? Or was Sophgo added in October 2025?
+
+Let's recall in October 2025 (around Oct 16?), the U.S. added several Chinese firms to Entity List, including "Sophgo Technologies Ltd." and its subsidiaries? Actually I think Sophgo was added in October 2029? No.
+
+Let's step back and systematically recall news headlines in late 2025 about Entity List additions.
+
+In January 2025, Biden administration added 25 entities? Or in January 2025, there was a big addition of 27 entities?
+
+In March 2025, added 11 Chinese entities?
+
+In March 2025 also added some AI-related firms?
+
+In May 2025, added some?
+
+In September 2025, there might have been an addition of 23 entities on September 29.
+
+Then in October 2025, maybe added more.
+
+But also there was a specific rule on September 2025 that corrected entries added in earlier rules?
+
+The question mentions "added or corrected in September 2025" - maybe there was a Federal Register notice on September 3, 2025 that corrected addresses for entities added earlier?
+
+We need to be precise.
+
+Let's recall that in September 2025, BIS published a rule on September 29, 2025 effective October 2025? The rule added entities to Entity List and also made corrections? The corrections might be for entities added in prior rules, fixing addresses or license review policies.
+
+But also there was a rule on September 5, 2025? Or September 12?
+
+Actually, I think there was a rule published on September 5, 2025 (Federal Register) that added entities? Let's check mental consistency: The Federal Register publishes rules on business days. Around Friday, Sept 5, 2025? Or Tuesday, Sept 2?
+
+But news reports might have come out on Monday, Sept 29, 2025 (since weekend). So likely the rule was published Friday, Sept 26? Or Monday, Sept 29?
+
+Let's recall news headlines around Sept 29, 2025: Many news outlets reported that the Trump administration? Wait in 2025, Trump was president. So in Sept 2025, Trump administration added Chinese firms? Yes, in late September 2025, the Trump administration added Chinese firms? Or was it Biden? No, Trump took office in Jan 2029? Wait no, Trump was president 2025-2029 (starting Jan 2025). So yes, in Sept 2025 it was Trump administration.
+
+The news said the U.S. Department of Commerce added 23 entities to the Entity List, including Chinese firms that used subsidiaries to obtain chip equipment. This was part of closing a loophole. The rule was effective Sept 29, 2025.
+
+Specifically, they added entities in China and Singapore? Let's recall: On Sept 29, 2025, BIS added 23 entities across China, Singapore, etc., but mainly Chinese subsidiaries.
+
+One well-known entity added was "Sophgo Technologies Ltd."? Actually Sophgo was added in October? Let's check mental news in October 2025: Around October 2025, U.S. added Chinese chip firms including Sophgo? Or maybe Sophgo was added in January?
+
+Wait Sophgo was linked to Huawei chips in a TSMC chip found in Huawei Ascend 910B. That was revealed in October 2024? Actually in October 2024, reports said TSMC chips found in Huawei devices made by Sophgo. Then in January 2025, Sophgo was added to Entity List? Yes! In January 2025, Biden administration added Sophgo and its subsidiaries to Entity List. So Sophgo was added in January 2025, not September.
+
+So the September 2025 addition might be different: maybe adding subsidiaries of already-listed firms like "Huawei" or "SMIC"?
+
+Actually there was a "50% rule" implementation in September 2025! Yes! On September 29, 2025, BIS implemented a new rule extending Entity List restrictions to subsidiaries that are 50% or more owned by listed entities. This was a big deal. The rule added many entities automatically? Or listed specific ones?
+
+Let's recall: On September 29, 2025, BIS published an interim final rule implementing the "Affiliates Rule" for Entity List and Military End User List, effective Sept 29, 2025. This rule said that entities that are 50% or more owned by listed entities are also subject to restrictions, and BIS added some specific entities?
+
+Wait yes! On September 29, 2025, the Commerce Department issued a rule that automatically applies Entity List restrictions to subsidiaries that are majority-owned by listed companies. Along with that, they added 23 specific entities? Or corrected?
+
+Specifically, the rule might have added entities that were subsidiaries but not captured? Actually the rule was about automatic coverage, but they also updated the Entity List to include specific entities that meet the criteria?
+
+But also in that same publication, they might have corrected entries.
+
+Thus, the firms added or corrected in September 2025 could be those specifically named in the rule.
+
+But the question asks about premises on the same road as a site on the October 2024 VEU list. This sounds like they listed addresses for the added entities, and some are on the same road as a VEU site.
+
+We need identify which ones.
+
+Given all this, maybe I should try to recall addresses listed in the Sept 29, 2025 rule for added entities.
+
+The entities added might include Chinese firms like:
+
+- Beijing Yuansheng Technology?
+- No.
+
+Actually, I think in that rule they added entities like "Shanghai Fudan Microelectronics"? No that's on Entity List already?
+
+Let's search mental patterns: The entities added in Sept 2025 included firms in the semiconductor sector in China, such as:
+
+1. Beijing Naura?
+No, that's already on?
+
+Let's recall news coverage on Sept 29, 2025: The U.S. added 23 entities in China, Taiwan, and elsewhere? The news mentioned specific company names? Maybe not prominently named except that they are subsidiaries.
+
+But there might also have been corrections to addresses for entities previously added.
+
+Given I can't access external data, I need to approximate.
+
+However, maybe the answer is indeed "none". Let's examine logic: The October 2024 VEU list contains specific facility addresses, likely in China at well-known industrial parks. The September 2025 added entities might also be in China but at different addresses. But it's possible some share a road.
+
+But the question asks "Which firms, if any..." This framing often is used in quizzes where there is a specific answer like "Company A and Company B". Or "There are none."
+
+We need list alphabetically if any.
+
+Given I need provide single best answer. Let's try to recall the October 2024 VEU list addresses. The list is in Supplement No. 7 to Part 748 of the EAR. The addresses listed include many well-known ones, e.g.,
+
+- Applied Materials China, Ltd., No. 388 Songhu Road, Yangpu District, Shanghai?
+- Applied Materials Technology Service (Shanghai) Co., Ltd., maybe same?
+- Boeing Tianjin Composites Co., Ltd., No. 80, 5th Avenue, TEDA, Tianjin?
+- Samsung China Semiconductor Co., Ltd., No. 1999 Chenfeng Road, Xi'an?
+- SK Hynix Semiconductor (China) Ltd., No. 18 Changjiang West Road, Wuxi?
+- Western Digital Technologies, Inc., maybe in Shenzhen?
+- Yangtze Memory Technologies? No that's not VEU.
+- Intel Products (Chengdu) Ltd., No. 88 West Avenue, Chengdu High-tech Zone?
+- GlobalFoundries (Chengdu) maybe?
+
+But we need "a site on BIS's October 2024 list of validated end users". That list includes addresses. The road names might be "Songhu Road", "Chenfeng Road", "Changjiang West Road", "West Avenue", etc.
+
+Now, in September 2025, added entities might have addresses like "No. 918, Building B, No. 9 Shangdi East Road, Haidian District, Beijing"? Or "No. 8 Dongbeiwang West Road, Haidian District, Beijing"? That's a well-known road for tech firms: "Dongbeiwang West Road" or "Shangdi East Road" in Haidian District, Beijing, near Zhongguancun Software Park. Many Chinese tech firms are there.
+
+But is there a VEU site on Dongbeiwang West Road? Maybe not.
+
+Alternatively, maybe the road is "Zhongguancun Road" etc.
+
+But wait, the question asks "have premises on the same road as a site on BIS's October 2024 list..." So we need identify the road that appears in both lists.
+
+Let's recall addresses in the Sept 2025 added entities. For example, entities added might include:
+
+- "Advanced Micro-Fabrication Equipment Inc. China" (AMEC) has addresses in Shanghai? Actually AMEC is in Shanghai, maybe on "Chenxiang Road"?
+
+This is too vague.
+
+But perhaps I should answer "There are none" if I can't identify specific ones. However, I want to be somewhat informed.
+
+Let's recall that in September 2024? No.
+
+Actually, there's a specific detail: In September 2025, BIS corrected the entry for "Yangtze Memory Technologies Corp., Ltd."? No that was earlier.
+
+Wait, the question says "whose Entity List entries BIS added or corrected in September 2025". This could include both new entities and corrections to existing ones. One of the corrections might be an address correction.
+
+For example, in September 2025, BIS might have corrected the address for "Huawei Technologies Co., Ltd."? Unlikely.
+
+But maybe in the Sept 29, 2025 rule, they corrected addresses for entities added in prior rules.
+
+Let's recall the structure of Federal Register entries for Entity List: They list each entity with addresses and license requirements. Sometimes they correct entries from prior rules, e.g., fixing a misspelled address.
+
+Thus, we need check among all entries that were either added new or corrected in Sept 2025, whether any of their addresses are on the same road as a VEU site listed in Oct 2024.
+
+This sounds like a task for someone comparing lists. The answer might be specific firms.
+
+Given I need to provide alphabetically sorted list.
+
+Let's try to recall the specific entities listed in the Sept 29, 2025 rule. Maybe they are listed in the Federal Register notice with addresses. Let's imagine the notice lists entities like:
+
+In China:
+- Anhui Xinyouneng Semiconductor Co., Ltd., No. 1, Innovation Road, Hefei?
+- Beijing Chipbetter Technology Co., Ltd.?
+- Changsha Jingjia Microelectronics Co., Ltd.? No that was added earlier.
+- Chengdu Haiguang Integrated Circuit Design Co., Ltd., maybe added?
+- Chengdu RML Technology Co., Ltd.?
+- Chipone Technology (Beijing) Co., Ltd.?
+- Dongguan Huaxin Semiconductor?
+- Hainan Shiyou?
+No, this is not correct.
+
+Actually, I think the Sept 2025 rule added entities that were subsidiaries of companies like "Huawei" and "Sophgo" but specifically named ones like:
+
+- SwaySure Technology Co., Ltd.?
+- Shenzhen SiCarrier Technology Co., Ltd.?
+- Shenzhen Pengxinxu Technology Co., Ltd.?
+- Shenzhen Pengjin Technology Co., Ltd.?
+- Shenzhen Shunxinyuan Technology?
+- SiCarrier Technology SiCarrier (Shenzhen) Semiconductor Co., Ltd.?
+- Xiamen SiCarrier?
+
+Wait there was news in late 2025 about Chinese firms like "SiCarrier" being added.
+
+Specifically, in October 2025? Or in December?
+
+Let's recall in December 2025? No, that's after Sept.
+
+But there was indeed a Chinese company "SiCarrier" that was added to Entity List? Or was that in October?
+
+Actually, I recall in October 2025, the U.S. added Chinese firms including "Sophgo" and "Sicarrier"? Or in December?
+
+Let's check mental news in October 2025: Around October 10? Or October 20
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): Hexin Xingtong Technology (Beijing) Co., Ltd., Jicun Semiconductor Technology (Shanghai) Co., Ltd. and Sino IC Technology Co., Ltd.
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): Hexin Xingtong Technology (Beijing) Co., Ltd., Jicun Semiconductor Technology (Shanghai) Co., Ltd. and Sino IC Technology Co., Ltd.
+
+Where it shortcut: Again matched the three roads verbatim across the two documents; the distinctive road names and the short VEU list made the join a lookup rather than a synthesis.Doc 3 Doc 4
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): Hexin Xingtong Technology (Beijing) Co., Ltd., Jicun Semiconductor Technology (Shanghai) Co., Ltd. and Sino IC Technology Co., Ltd.
+
+Where it shortcut: Same road-name string match; nothing in the attempt needed to distinguish added from corrected September 2025 entries, since Document 4 reprints all addresses in one place.Doc 3 Doc 4
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

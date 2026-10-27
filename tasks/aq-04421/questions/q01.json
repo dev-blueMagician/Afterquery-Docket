@@ -1,0 +1,146 @@
+{
+  "question": "Which firms, if any, whose Entity List entries BIS added or corrected in September 2025 have premises on the same road as a site on BIS's October 2024 list of validated end users? List them alphabetically.",
+  "number_of_asks": 1,
+  "gold_answer": "Hexin Xingtong Technology (Beijing) Co., Ltd., Jicun Semiconductor Technology (Shanghai) Co., Ltd. and Sino IC Technology Co., Ltd.",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 4, \"Additions to the Entity List\" and \"Corrections to Entries on the Entity List\"): the September 2025 rule adds new entities and corrects existing entries. Sino IC Technology Co., Ltd. and Jicun Semiconductor Technology (Shanghai) Co., Ltd. are among the entities it adds. Hexin Xingtong Technology (Beijing) Co., Ltd., \"first added to the Entity List on May 9, 2024\", is among the entries it corrects.\nStep 2. Source input (Doc 3, Supplement No. 7): the October 2024 list names each validated end user and prints the address of every site it may receive items at. The table prints its columns side by side, so an address can run on with item codes from the next column in the middle of it.\nStep 3. Source input (Doc 4, Entity List table, and Doc 3, Supplement No. 7): Sino IC Technology's address is on Guoshoujing Road in the Shanghai free trade zone. Shanghai Huahong Grace, a validated end user, has its HFab 2 site on Guoshoujing Road, Zhangjiang Hi-Tech Park, Shanghai. Same road, so Sino IC Technology qualifies (third component).\nStep 4. Source input (Doc 4, Entity List table, and Doc 3, Supplement No. 7): one of Jicun's addresses is on \"Feila Road\" in the China (Shanghai) Pilot Free Trade Zone. Lam Research Service, a validated end user, has a bonded warehouse site on \"Fei La Road\", Waigaoqiao Free Trade Zone, Shanghai. Neither document says so, but these are two spellings of one road name in one city, so Jicun qualifies (second component).\nStep 5. Source input (Doc 4, Entity List table, and Doc 3, Supplement No. 7): one of Hexin Xingtong's addresses is on Bi Bo Road, Shanghai. Lam Research Service's Shanghai office is in Hua Hong Science & Technology Park, Zhangjiang Hi-Tech Park; Doc 3 prints its road as \"Bi\" and then, after two item codes from the next column, \"Bo Road\". Read without the item codes, the office is on Bi Bo Road, so Hexin Xingtong qualifies (first component).\nStep 6. Decoy (Doc 4 and Doc 3): Beijing Tsingke Biotech Co., Ltd., an added firm, has addresses on Jinghai 3rd Road and Jinghai 4th Road in Beijing, while Lam's Beijing warehouse is on Jinghai Second Road. These are three different roads, so Beijing Tsingke is left out.\nStep 7. Final answer (Doc 3 and Doc 4): no other road in Doc 3's site addresses appears among the addresses of the entries that Doc 4 adds or corrects. In alphabetical order: Hexin Xingtong Technology (Beijing) Co., Ltd., Jicun Semiconductor Technology (Shanghai) Co., Ltd. and Sino IC Technology Co., Ltd.",
+  "answer_components": [
+    "Hexin Xingtong Technology (Beijing) Co., Ltd.",
+    "Jicun Semiconductor Technology (Shanghai) Co., Ltd.",
+    "Sino IC Technology Co., Ltd."
+  ],
+  "evidence": [
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "``Hexin Xingtong Technology (Beijing) Co., Ltd.,'' first added to the Entity List on May 9, 2024"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Building 8, No. 912 Bi Bo Road,"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "These Items Authorized ** Lam Research Service"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Destinations Identified 1st Floor, Area C, Hua by double asterisks Hong Science &"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Technology Park, 177 Bi 2B350.d, 2B350.g, Bo Road, Zhangjiang Hi-"
+    },
+    {
+      "document_number": 4,
+      "component_number": 2,
+      "quote": "The ERC determined to add GMC Semiconductor Technology (Wuxi) Co., Ltd.; and Jicun Semiconductor Technology (Shanghai) Co., Ltd., under the destination of China, to the Entity List."
+    },
+    {
+      "document_number": 4,
+      "component_number": 2,
+      "quote": "Room 115, 1F, No. 45, Feila Road,"
+    },
+    {
+      "document_number": 4,
+      "component_number": 2,
+      "quote": "China (Shanghai) Pilot Free Trade"
+    },
+    {
+      "document_number": 3,
+      "component_number": 2,
+      "quote": "Lam Research Service These Items Authorized * Lam Research"
+    },
+    {
+      "document_number": 3,
+      "component_number": 2,
+      "quote": "Bonded Warehouse), c/o"
+    },
+    {
+      "document_number": 3,
+      "component_number": 2,
+      "quote": "No. 55, Fei La Road,"
+    },
+    {
+      "document_number": 3,
+      "component_number": 2,
+      "quote": "Waigaoqiao Free Trade"
+    },
+    {
+      "document_number": 3,
+      "component_number": 2,
+      "quote": "Shanghai, China 200131."
+    },
+    {
+      "document_number": 4,
+      "component_number": 3,
+      "quote": "Sino IC Technology Co., Ltd., under the destination of China"
+    },
+    {
+      "document_number": 4,
+      "component_number": 3,
+      "quote": "No. 351, Guoshoujing Road, China"
+    },
+    {
+      "document_number": 4,
+      "component_number": 3,
+      "quote": "(Shanghai) Pilot Free Trade Zone,"
+    },
+    {
+      "document_number": 3,
+      "component_number": 3,
+      "quote": "1C350.c.4, 1C350.d.14, Shanghai Huahong Grace 78 FR 32981, 6/3/"
+    },
+    {
+      "document_number": 3,
+      "component_number": 3,
+      "quote": "Corporation--HFab 2, 668 3B001.e, 3B001.f, Guoshoujing Road,"
+    },
+    {
+      "document_number": 3,
+      "component_number": 3,
+      "quote": "Zhangjiang Hi-Tech Park, 5B002, and 5E002 Shanghai 201203 China."
+    },
+    {
+      "document_number": 4,
+      "component_number": 2,
+      "quote": "Jinghai 3rd Road, Beijing, China; and Room 401, Building 5, Jinghai"
+    },
+    {
+      "document_number": 3,
+      "component_number": 2,
+      "quote": "28, Jinghai Second Road,"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Document convention",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Document convention: Doc 3's table runs its columns together, so Lam's Shanghai office reads \"177 Bi 2B350.d, 2B350.g, Bo Road\". Matching road names without separating the columns misses Bi Bo Road and gives Jicun and Sino IC only; Hexin Xingtong, on Bi Bo Road (Doc 4), completes the list."
+}

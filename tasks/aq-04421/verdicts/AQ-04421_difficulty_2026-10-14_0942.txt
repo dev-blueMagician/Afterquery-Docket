@@ -1,0 +1,147 @@
+AQ-04421 · Semiconductor Export Control Filings — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-04421
+Saved: 2026-10-14 09:42 (local time)
+Bundle: Semiconductor Export Control Filings · Public policy · 6 documents · 103,931 prompt tokens
+Run read: Run 16, the latest of 16
+Attempts read: 4
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 16 runs left · 13 of 60 runs used in the last 24 h (all tasks)
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 3 attempts right
+
+High model: two solvers try up to 3 times each. Ready when both get it wrong at least once and not every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Remove the explicit month-year framing (e.g., 'firms added in the most recent Entity List rule in this set' or reference the rule by its subject matter), and require the answer to include the matching VEU site or road so solvers must read both lists fully rather than grep one. Why: The question's date anchors ('September 2025' and 'October 2024') point straight at documents 4 and 3, and 'same road' invites a literal road-name comparison. The other four documents are pure noise, so the effective search space is small and the phrasing effectively tells the solver which two lists to diff. From a run (High model · attempt 1): Reached the gold answer by matching road names between the September 2025 Entity List additions (Feila Road, Guoshoujing Road) and the October 2024 VEU addresses in supplement no. 7 to part 748, a near-verbatim string match. Doc 3 Doc 4
+
+Structure · Which documents it needs, and how they combine
+----------------------------------------------------------
+
+- 2 Make the matching require judgment rather than substring search: ask for the validated end-users whose roads are shared (forcing solvers to also extract the VEU side), or ask across all Entity List additions and revisions in the rule, so solvers must distinguish additions from corrections and aliases from primary addresses. Why: The question reduces to a two-document string match: enumerate the 32 additions in the September 2025 Entity List rule (doc 4) and scan the October 2024 VEU supplement (doc 3) for shared road names. Only two roads overlap (Feila/Fei La Road and Guoshoujing Road), and both matches are near-verbatim ('No. 45, Feila Road' vs 'No. 55, Fei La Road'; 'No. 351, Guoshoujing Road' vs '668 Guoshoujing Road'), so a simple text search on distinctive road names yields the gold pair without any real synthesis. From a run (High model · attempt 1): Reached the gold answer by matching road names between the September 2025 Entity List additions (Feila Road, Guoshoujing Road) and the October 2024 VEU addresses in supplement no. 7 to part 748, a near-verbatim string match. Doc 3 Doc 4
+- 3 Add distractors that genuinely require cross-checking: e.g., ask about firms whose aliases or alternate addresses (not primary addresses) share a road with a VEU site, or include an Entity List addition whose road matches a VEU site only under a differently romanized spelling, forcing solvers to normalize names. Why: The built-in distractors do not force careful reading. Hexin Xingtong Technology (Beijing) Co., Ltd. sits at No. 912 Bi Bo Road, the same road as Lam Research's 177 Bi Bo Road VEU site, but it appears in the September 2025 rule only as a typographical correction to a May 2024 entry, so it is excluded by a single glance at the preamble. GMC Semiconductor shares Jingxiang Road only with fellow Entity List firm Jicun, not with any VEU site, so it never tests the VEU side. From a run (High model · attempt 1): Reached the gold answer by matching road names between the September 2025 Entity List additions (Feila Road, Guoshoujing Road) and the October 2024 VEU addresses in supplement no. 7 to part 748, a near-verbatim string match. Doc 3 Doc 4
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 16 (Oct 14, 2026, 9:32 AM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+16 runs
+
+Only the latest run, Run 16, is in this file; 15 earlier runs are left out.
+
+------------------------------------------------------------------------
+Run 16 · Too easy · Result the gate uses
+Oct 14, 2026, 9:32 AM · Version fa81d1 (current) · Low — · Medium — · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: the documents or the documents marked necessary changed
+
+Solver summary: Run 16 · Too easy · 3 of 3 right
+Every solver attempt got it (3 of 3).
+
+Your answer: Jicun Semiconductor Technology (Shanghai) Co., Ltd. and Sino IC Technology Co., Ltd.
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: Note: where it went wrong
+
+Final answer: (Alphabetically: Chipone Technology Co., Ltd.; SiCarrier Technology Co., Ltd.) | Your answer (gold): Jicun Semiconductor Technology (Shanghai) Co., Ltd. and Sino IC Technology Co., Ltd.
+
+Where it went wrong: Without documents, guessed unrelated firms (Chipone, SiCarrier) that appear nowhere in the provided set, confirming the answer is only derivable from docs 3 and 4.Doc 3 Doc 4
+
+Full answer
+-----------
+
+Chipone Technology Co., Ltd. and SiCarrier Technology Co., Ltd.
+
+(Alphabetically: Chipone Technology Co., Ltd.; SiCarrier Technology Co., Ltd.)
+
+Reasoning
+---------
+
+Could not load the reasoning — try again.
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): Jicun Semiconductor Technology (Shanghai) Co., Ltd. and Sino IC Technology Co., Ltd.
+
+Where it shortcut: Reached the gold answer by matching road names between the September 2025 Entity List additions (Feila Road, Guoshoujing Road) and the October 2024 VEU addresses in supplement no. 7 to part 748, a near-verbatim string match.Doc 3 Doc 4
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): Jicun Semiconductor Technology (Shanghai) Co., Ltd. and Sino IC Technology Co., Ltd.
+
+Where it shortcut: Same shortcut: the distinctive road names 'Fei La Road' and 'Guoshoujing Road' appear in both lists with almost identical spelling, so no reasoning about aliases, revisions, or other roads was needed.Doc 3 Doc 4
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): Jicun Semiconductor Technology (Shanghai) Co., Ltd. and Sino IC Technology Co., Ltd.
+
+Where it shortcut: Again matched the two roads directly; the Hexin Xingtong Bi Bo Road distractor is only a correction to an older entry, so it is excluded without checking the VEU list carefully.Doc 3 Doc 4
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
