@@ -1,0 +1,52 @@
+{
+  "bundle": "aq-02626",
+  "corpus_sha256": {
+    "docs/fr_2025_11907.txt": "a49ee191e051c260908f6aa55c0c02c0bb3a12e2530b88fb6afec5627502e77d",
+    "docs/fr_2025_16801.txt": "63e2b2c3c7a0aee826a9e544a4f38f0a05379896a150e134559e5472fa665290",
+    "docs/fr_2026_08662.txt": "9125ec900694a12c3b1c75f1f69f1b4fa87340b24447a6c1ef73efb37e8a17c8",
+    "docs/fr_2026_11312.txt": "a4d2788dd5bd38c23e1836ef07118a0108dd3210ec67f033925badb96373a091",
+    "docs/fr_2026_14118.txt": "c7e9f17ac48dda5d7d73a356304135396ad663fb612810e8ea0c260cc94ca2ee",
+    "docs/fr_2026_18552.txt": "56e32345ff72728e20ca85bf4f9691458d0aa8ae97c60dbf3bc6a9a212529dc8",
+    "text/D01.txt": "6fb99f063f1e3261c129606e47ae931207738f7d345f7d735d89625a24a1d4e9",
+    "text/D02.txt": "f268a3b20c14dcb28f54a47f647202eed1788b3a156bed8ea96791f5d0efdf05",
+    "text/D03.txt": "3cc5f13a77684dcb26bae20a976e6037733157e985334fd48fed6b85e3402954",
+    "text/D04.txt": "f307f1ef8cac1f6b0ad416b80064833c5e46b776c96cd3ed9a265576da6ae2b4",
+    "text/D05.txt": "c1f09108f8b49995cfbf37e2a62d9c0ba5882239e0cd9ec96f97407d3075875d",
+    "text/D06.txt": "9014006d625c454efded975e3d26a810f993e75699a15a397e66bff7544622ac",
+    "text/manifest.json": "84e55f321b55d281717751243362c37a2967e31176732c895bed64723ea5d03c"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "79e698eb5f77dc98e10cfdfac7b51a02d8adf22f01ffe1dffb94b77efe8cf1f8",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D02, D03, D06",
+    "id": "q06",
+    "levers": "Mentions it vs does it; Scatter the pieces",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i08",
+    "status": "draft",
+    "tags": "Cross-document join; Conditional filter; Aggregation"
+  },
+  "question_id": "q06",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "16 landfills",
+    "components": "- c1: 16",
+    "evidence": "- D03 (Permit Requirements and Permitting Process, L190) [c1]: \"The permit is issued for the life of the facility (through termination of postclosure care)\"\n- D03 (Virginia CCR Units and Resources, L226) [c1]: \"VADEQ has identified 25 disposal units that are currently or have been used for disposal of CCR wastes (7 landfills and 18 surface impoundments) at 8 facilities in Virginia.\"\n- D02 (Permit Requirements and Permitting Process, L204) [c1]: \"The permit duration for new or existing CCR surface impoundments and CCR landfills renewal permits will be for the operating life of the facility through post-closure\"\n- D02 (Wyoming CCR Units and Resources, L267) [c1]: \"WDEQ has identified 19 disposal units that are currently or have been used for disposal of CCR wastes (3 landfills and 16 surface impoundments) at 4 facilities in Wyoming.\"\n- D06 (Guidelines for Permitting, L192) [c1]: \"There is no expiration for an operating license or plan of operation approval\"\n- D06 (Wisconsin CCR Units and Resources, L290) [c1]: \"WDNR has identified 9 CCR units (6 landfills and 3 surface impoundments) at 6 facilities in Wisconsin.\"",
+    "feedback log": "- 2026-10-10 | source: user chat, verbatim \"q03 too easy after final checks, i08 survived, i09 too easy for quick test\" | stage: form quick test (easier solver, question + short answer) | tested wording: sketch i08's question and answer \"16\" as handed over (no panel or screenshot pasted) | observed result: survived | action: written up unchanged as q06 rev 0, gold written \"16 landfills\". A quick test is a first screen, not a tier result.",
+    "lever checks": "- Family and target: five parallel permit-duration statements with look-alike wording (hook h24, sketch i08). Target medium (user 2026-10-10: no Easy slot, \"target medium and high\"). Platform quick test of this exact question with the short answer \"16\" (user 2026-10-10, \"i08 survived\", no panel text): survived; rev 0 keeps the question word for word and writes the gold with its unit. Difficulty result pending. On this bundle a quick-test survivor has since measured Easy (q04) and Too easy (q03), so survival is a first screen only.\n- Dependency plan: Doc 3 L190 life of the facility -> Virginia qualifies, L226 7 landfills. Doc 2 L204 operating life through post-closure -> Wyoming qualifies, L267 3 landfills. Doc 6 L192 no expiration -> Wisconsin qualifies, L290 6 landfills. 7 + 3 + 6 = 16.\n- Universe: the five States with coal ash permit programs. Virginia, Wyoming, Wisconsin: no set expiry (above). Alabama: \"a CCR facility permit is valid for the design life of the CCR facility, but for a period of no longer than ten years\" (D05 L208); 3 landfills (L276). Louisiana: \"permits for CCR units are to be issued for a maximum of 10 years\" (D04 L202), although a facility \"must operate under a permit for the active life of the facility\" (L194); 3 landfills (L290). Pennsylvania's document concerns mining permits, not a coal ash program, and reports no landfills.\n- Necessity: Doc 3, Doc 2 and Doc 6 are each the only source of their State's duration rule and landfill count (grep \"life of the facility\", \"operating life of the facility\", \"no expiration\": one document each; each units sentence is in one document). Dropping one changes the sum to 9, 13 or 10. Docs 4 and 5 hold only excluded States: removing one removes its State from the candidates and leaves 16, so they are not ticked.\n- Selected-lever checks: Mentions it vs does it: Alabama's \"design life\" and Louisiana's \"active life\" mention a lifetime while capping the permit at ten years; counting either gives 19, both 22. Wisconsin's ten-year plan update mentions a term while the licence has none; dropping it gives 10. Scatter the pieces: each State's duration sentence and its unit count sit in different sections of its document.\n- Targeted failure modes: mode 1 (Look-alike measure / Takes the wrong line item): Doc 6 L192 \"updated every 10 years\" read as a permit term -> 7 + 3 = 10. Recomputed 2026-10-10. Considered and not declared: Alabama or Louisiana added (19 or 22); Wyoming dropped because its existing landfills hold older solid waste permits with expiration dates (D02 L202) -> 13, which \"CCR-program permits\" answers: L204 gives the chapter 18 permits the operating life.\n- Calculation verification: python 2026-10-10 (caller): 7 + 3 + 6 = 16; without Wisconsin 10; without Wyoming 13; with Alabama or Louisiana 19; all five 22.\n- Semantic/ID/overview probes: no document prints 16 or compares permit durations across States. The page overview lists no permit duration; it gives Doc 6 \"6 CCR landfills in Wisconsin\". Shortest route: five duration sentences, three unit counts, one sum.\n- Precision/readings: \"no set expiry\" covers a permit that runs for the life of the facility or has no expiration, and excludes one capped at a number of years; \"CCR-program permits\" are permits issued under each State's coal ash rules (Wyoming's chapter 18 renewal permits, not its older solid waste permits); \"are in States\" counts landfills located in the qualifying States as each proposal reports them. Whole number.\n- Completeness: full corpus, no gaps (intake: incomplete false, gap 0 for all six documents).\n- Style/set review: 14 words, one ask, wording as quick-tested. Sketch i09 used the same sentences and is dropped (quick test too easy). q04 (held, Easy) uses the approved-definition lists and impoundment counts; no shared fact.\n- Warnings answered: filled after the floor run.",
+    "necessary documents": "- D02: Answer component\n- D03: Answer component\n- D06: Answer component",
+    "platform validation": "",
+    "question": "How many coal-ash landfills are in States whose CCR-program permits carry no set expiry?",
+    "reasoning": "Step 1. Source input (Doc 3, Permit Requirements and Permitting Process): in Virginia \"The permit is issued for the life of the facility (through termination of postclosure care)\", so it has no set expiry. Virginia qualifies.\nStep 2. Source input (Doc 3, Virginia CCR Units and Resources): Virginia's disposal units include \"7 landfills\".\nStep 3. Source input (Doc 2, Permit Requirements and Permitting Process): in Wyoming the duration of \"CCR landfills renewal permits will be for the operating life of the facility through post-closure\", so the permit under the State's coal ash rules has no set expiry. Wyoming qualifies.\nStep 4. Source input (Doc 2, Wyoming CCR Units and Resources): Wyoming's disposal units include \"3 landfills\".\nStep 5. Source input (Doc 6, Guidelines for Permitting): in Wisconsin \"There is no expiration for an operating license or plan of operation approval\". The same passage has the plan of operation \"updated every 10 years\", which is a plan update, not a permit term. Wisconsin qualifies.\nStep 6. Source input (Doc 6, Wisconsin CCR Units and Resources): Wisconsin's units include \"6 landfills\".\nStep 7. Decoy check: Alabama's permit (Doc 5) is tied to the facility's design life but capped at a fixed number of years, and Louisiana's (Doc 4) is issued for a fixed maximum term although the facility must hold a permit for its active life. Both carry a set expiry, so their landfills are not counted.\nStep 8. Calculation (Doc 2 and Doc 3): landfills in Virginia and Wyoming: 7 + 3 = 10.\nStep 9. Final answer (Doc 2, Doc 3 and Doc 6): adding Wisconsin's landfills: 10 + 6 = 16.",
+    "targeted failure modes": "### Failure mode 1\nTrap: Look-alike measure\nHow a careless solver fails: Takes the wrong line item\n\nWhy these are traps: Look-alike measure: Doc 6 prints a ten-year figure for Wisconsin, but it is the interval for updating a landfill's plan of operation; the licence has \"no expiration\". Reading it as a permit term drops Wisconsin's 6 landfills and gives 10. The gold counts Virginia 7, Wyoming 3, Wisconsin 6: 16."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "8b7ea010d8a2f6709efac5f5270e7c0de6ef761b18e6e7eee969ff326656b3ee"
+}

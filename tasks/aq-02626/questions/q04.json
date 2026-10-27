@@ -1,0 +1,69 @@
+{
+  "question": "How many coal-ash surface impoundments are in States where EPA proposes approving the State's own version of the definition \"contains both CCR and liquids\"?",
+  "number_of_asks": 1,
+  "gold_answer": "24 surface impoundments",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 3, Virginia Partial Program): for the terms the 2024 Legacy Rule changed for all units, \"EPA is approving the State's version of the following requirements\", and that list includes \"Contains both CCR and liquids\". Virginia qualifies.\nStep 2. Source input (Doc 3, Virginia CCR Units and Resources): Virginia's disposal units include \"18 surface impoundments\".\nStep 3. Source input (Doc 4, Louisiana Partial Program): \"EPA is approving the State's version of these requirements\", and that list also includes \"Contains both CCR and liquids\". Louisiana qualifies.\nStep 4. Source input (Doc 4, Louisiana CCR Units and Resources): Louisiana's disposal units include \"6 surface impoundments\".\nStep 5. Decoy check: Alabama's proposal (Doc 5) prints the same definition entry, but in its list of amendments that \"are not being approved\"; Wisconsin's approved list (Doc 6) carries the related definitions of infiltration and liquids but not this one; Wyoming (Doc 2) seeks approval of no Legacy Rule amendment. The impoundments in those three States are not counted.\nStep 6. Final answer (Doc 3 and Doc 4): impoundments in the two qualifying States: 18 + 6 = 24.",
+  "answer_components": [
+    "24"
+  ],
+  "evidence": [
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Therefore, EPA is approving the State's version of the following requirements:"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Contains both CCR and liquids"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "VADEQ has identified 25 disposal units that are currently or have been used for disposal of CCR wastes (7 landfills and 18 surface impoundments) at 8 facilities in Virginia."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Therefore, EPA is approving the State's version of these requirements:"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Contains both CCR and liquids"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "LDEQ has identified 9 disposal units that are currently or have been used for disposal of CCR wastes (3 landfills and 6 surface impoundments) at 4 facilities in Louisiana."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Wrong jurisdiction or scope",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Wrong jurisdiction or scope: Doc 5 prints the same definition entry for Alabama, but in its list of amendments \"not being approved\"; a solver matching the phrase adds Alabama's 13 impoundments and answers 37. Only Virginia's and Louisiana's lists approve the State's version: 18 + 6 = 24."
+}

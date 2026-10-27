@@ -1,0 +1,21 @@
+# Current bundle checkpoint
+
+- Goal and user constraints: AQ-02626 (EPA proposed approvals of Wyoming, Virginia, Louisiana, Alabama, Wisconsin CCR permit programs + an OSMRE Pennsylvania rule). User 2026-10-10: "there is no slot for Easy Tier for this bundle, we should target medium and high. do your best."
+- Verification target / measured platform tier: medium / not reached. Best measured: q04 rev 0, Run 1 (Version d686ca), "In band — Easy tier", Low 3/5 (raw verdicts/AQ-02626_difficulty_2026-10-10_0806.txt). q03 Run 2 (Version 564142): Too easy, Low 5/5. q06 Run 3 (Version 8bf6fe, current): Too easy, Low 4/5, with Coach suggestions (raw verdicts/AQ-02626_difficulty_2026-10-10_1132.txt). Page: "7 of 10 runs left".
+- Prepared runs / tested_sha256: q04 rev 0 c18fded5e2b2310412fede8109d4cf7b9e358f3375a24c919523a55542a0221b (held). Dropped: q01 3532a741..., q02 eaf8ef1c..., q03 f3d04aef... (rev 2), q05 15e8c0cd..., q06 8b7ea010....
+- Bundle slug / documents / extraction warnings: aq-02626, D01-D06 = Doc 1-6, complete capture, no gaps. Texts byte-identical to aq-02483.
+- Phase: q06 verdict triaged; no live candidate for an open tier; release recommended; one Coach-based sketch (i13, 13 landfills) offered as a free quick test.
+- Questions: q04 checked, measured Easy, held (no Easy slot; usable only if one opens, on Version d686ca's content). q01, q02, q05 dropped (quick test too easy). q03, q06 dropped (survived the quick test, too easy at the difficulty check).
+- Sketches: i04, i05 dropped untested; i09, i10 quick test too easy.
+- Measured families (all below Medium): two parallel rules applied to one stated case (q01); right measure plus an unprinted list count (q02); stale edition with a long day count (q03); list status across templated proposals (q04, Easy); exact dates against a printed label (q05); look-alike permit-duration statements (q06, i09, i10). On aq-02483, the same files: amendment gap, definition count, deadline gap.
+- Untested, same family as q04 only: approvals in Alabama's list but not Wisconsin's (8; count shortcut 6); five-State total of approved amendments (68). Not recommended as more than free quick tests.
+- Decisions and constraints: three sketch rounds used; no fourth ladder. Quick-test survival did not carry to the difficulty check three times out of three here (q03, q04, q06).
+- Tool change (this session): tools/form_numbers.py FAILs a number word of ten or more in a calculation step and WARNs on a mixed chain (aq-02626 q03 form screenshot); both suites pass.
+- Changed files: questions/q06.md (dropped, Feedback log), notes/feedback-index.md (P10, P11), ideas.md (outcome), memory (calibration, index).
+- Revision rounds used / open platform feedback: q03 2 (form fix) / none open.
+- Active feedback index: notes/feedback-index.md P1-P11.
+- Five-candidate trial: not enrolled (workspace trial full). Timing partial: only i01's sketch interval measured.
+- Efficiency ledger / active timer: ../../../notes/efficiency.json / none.
+- Next action (user's choice): release the bundle (recommended), or quick-test i13 (the Coach's second condition on q06); a survivor becomes q06 rev 1. The form now holds q06's content, so q04's Run 1 shows as "Earlier version — does not count".
+- Runtime/model/effort: Claude Code, claude-opus-5-5.
+- Optional diagnostic: none run.

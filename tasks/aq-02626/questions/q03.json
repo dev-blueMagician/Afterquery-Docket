@@ -1,0 +1,76 @@
+{
+  "question": "As of September 2026, how many days after Wyoming's Solid Waste Rules chapter 18 took effect did EPA last amend the federal coal-ash regulations?",
+  "number_of_asks": 1,
+  "gold_answer": "1,271 days",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 2, Wyoming CCR Regulations): Wyoming's coal ash rules are Solid Waste Rules chapter 18, and \"chapter 18 became effective on August 19, 2022\".\nStep 2. Source input (Doc 6, Background): Doc 6 was published on September 11, 2026 and lists every amendment EPA has made to the federal coal ash regulations. The list ends with \"February 10, 2026 (91 FR 5806)\", so that is the latest amendment as of September 2026.\nStep 3. Source input (Doc 2, Background): Doc 2 was published on September 2, 2025, and its own list of amendments ends with \"November 8, 2024 (89 FR 88650)\". It predates the amendment in Step 2, so its list is not the latest one.\nStep 4. Calculation (Doc 2 and Doc 6): 12 months of 30 days each, in days: 12 × 30 = 360.\nStep 5. Calculation (Doc 2 and Doc 6): a common year is 5 days longer than that: 360 + 5 = 365.\nStep 6. Calculation (Doc 2 and Doc 6): from August 19, 2022 to August 19, 2025 is 3 years, which at a common year's length is, in days: 365 × 3 = 1,095.\nStep 7. Calculation (Doc 2 and Doc 6): a leap day (in February 2024) falls inside those years and adds 1 day: 1,095 + 1 = 1,096.\nStep 8. Calculation (Doc 2 and Doc 6): 180 days after August 19, 2025 falls 5 days after February 10, 2026, so the remaining stretch in days is: 180 - 5 = 175.\nStep 9. Final answer (Doc 2 and Doc 6): days from chapter 18 taking effect to EPA's latest amendment: 1,096 + 175 = 1,271.",
+  "answer_components": [
+    "1,271"
+  ],
+  "evidence": [
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "chapter 18 became effective on August 19, 2022"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "May 8, 2024 (89 FR 38950), and November 8, 2024 (89 FR 88650)."
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "Federal Register, Volume 91 Issue 175 (Friday, September 11, 2026)"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "November 8, 2024 (89 FR 88650), and February 10, 2026 (91 FR 5806)."
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "November 8, 2024 (89 FR 88650), and February 10, 2026 (91 FR 5806)."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "November 8, 2024 (89 FR 88650), and February 10, 2026 (91 FR 5806)."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "November 8, 2024 (89 FR 88650), and February 10, 2026 (91 FR 5806)."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6,
+        3,
+        4,
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Wrong year or edition",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Wrong year or edition: Doc 2, the September 2025 Wyoming proposal, lists EPA's amendments only through November 8, 2024; using it gives 812 days. Doc 6, published September 11, 2026, lists a later amendment, February 10, 2026, so the count from August 19, 2022 is 1,271 days."
+}
