@@ -1,13 +1,13 @@
 ---
-description: Export only questions with current local validation, an observed platform pass at their target and eligible authorship
+description: Export questions with a clean mechanical floor, an exact-content platform pass at target and eligible authorship
 argument-hint: <slug>
 model: claude-opus-5-5
 effort: max
 ---
 
-Read applicable memory and newer-guide checks. For the named bundle, use report/checker to
-verify each question's current revision and submitted-content fingerprint. Local review is
-separate from observed Easy/Medium/Hard survival, authorship and submission permission.
+Read applicable memory and newer-guide checks. The export command verifies the current
+revision, submitted-content fingerprint and mechanical floor. Do not launch local models or
+refresh historical diagnostics. Platform survival, authorship and submission remain separate.
 
 1. Run python tools/check_questions.py tasks/<slug> --export. The tool exports ready questions
    with no FAIL and eligible origin: user. Other origins retain their actual agent/collaboration label;

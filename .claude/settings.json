@@ -20,20 +20,7 @@
     ],
     "ask": []
   },
-  "hooks": {
-    "PostToolUse": [
-      {
-        "matcher": "Edit|Write|MultiEdit",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "python \"$CLAUDE_PROJECT_DIR/tools/check_questions.py\" --hook",
-            "timeout": 30
-          }
-        ]
-      }
-    ]
-  },
+  "hooks": {},
   "model": "claude-opus-5-5",
   "alwaysThinkingEnabled": true,
   "autoCompactEnabled": false,
