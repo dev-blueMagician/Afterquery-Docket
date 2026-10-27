@@ -1,0 +1,70 @@
+{
+  "question": "Judging by all the submissions to the Commerce Commission's mobile market study together, which of the organisations that made them, if any, had become an MVNO or had tried to? List them alphabetically.",
+  "number_of_asks": 1,
+  "gold_answer": "Trustpower, Vocus, WISPA NZ",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 7, 2degrees on Vocus): 2degrees notes that Vocus has a mobile offer and that Vocus says the network operators constrain it. Vocus sells mobile service over another operator's network, so it has become an MVNO. Vocus's own submissions and the issues paper say the same and are not needed for this.\n\nStep 2. Source input (Doc 10, WISPA NZ): WISPA NZ says its members would dearly like to offer an MVNO service and that WISPA has requested negotiations to establish an MVNO from the two largest network operators, without progress. It tried.\n\nStep 3. Source input (Doc 7, 2degrees on Trustpower): Trustpower's own submission, a consultant's report, does not say that Trustpower is seeking an MVNO. 2degrees reports that Trustpower holds a competing MVNO offer from Spark, is considering whether to launch an MVNO with 2degrees or Spark, and that 2degrees has invested in the opportunity. Trustpower was trying to become an MVNO, and only another submitter reports it.\n\nStep 4. Decoy: 2degrees writes about MVNOs more than any other submitter and hosts the largest one, but it is a network operator, like Spark and Vodafone, so it has not become an MVNO or tried to. Chorus, New Street Research, Bluereach and Speedchecker report no MVNO of their own and no attempt at one, and no other submitter reports one for them. Bluereach is building its own network and asks for roaming. Warehouse Mobile, Compass and Kogan are MVNOs named in the papers, but none of them made a submission.\n\nStep 5. Answer, alphabetically: Trustpower, Vocus, WISPA NZ.",
+  "answer_components": [
+    "Trustpower",
+    "Vocus",
+    "WISPA NZ"
+  ],
+  "evidence": [
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "We understand Trustpower has also received a competing MVNO offer from Spark."
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "2degrees understands Trustpower is considering whether it will launch an MVNO with 2degrees or Spark"
+    },
+    {
+      "document_number": 7,
+      "component_number": 2,
+      "quote": "Vocus claims its mobile offer is constrained by MNOs"
+    },
+    {
+      "document_number": 10,
+      "component_number": 3,
+      "quote": "WISPs would dearly like to be able to offer a MVNO service."
+    },
+    {
+      "document_number": 10,
+      "component_number": 3,
+      "quote": "WISPA has requested negotiations to establish a MVNO from the two largest MNOs."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        7
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        10
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    },
+    {
+      "trap": "Wrong jurisdiction or scope",
+      "how_a_careless_solver_fails": "Picks the wrong entity or section"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: Trustpower's own submission is silent; only Doc 7's answer on wholesale competition reports its MVNO offers, so reading each submitter's own paper gives Vocus, WISPA NZ. Wrong scope: Doc 1's table of MVNOs adds Compass and Warehouse Mobile, which made no submission. Gold: Trustpower, Vocus, WISPA NZ."
+}

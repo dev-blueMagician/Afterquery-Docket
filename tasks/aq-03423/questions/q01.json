@@ -1,0 +1,63 @@
+{
+  "question": "On the Commerce Commission's December 2017 monitoring figures, what share of the fixed broadband market, to the nearest percent, did New Zealand's two largest mobile network operators hold together?",
+  "number_of_asks": 1,
+  "gold_answer": "71%",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 8, product bundling section): Covec reads the Commerce Commission's most recent monitoring report, its Key Facts edition of December 2017, as showing that the three mobile network operators collectively have 75 per cent of the fixed broadband market.\n\nStep 2. Source input (Doc 8, roaming regulation section): the three operators are Spark, Vodafone and 2degrees, and 2degrees is well behind Spark and Vodafone in subscriber shares. The two largest operators are therefore Spark and Vodafone, and the collective figure also holds the share of the third operator, 2degrees.\n\nStep 3. Source input (Doc 7, footnote to its answer on bundling): on the Commission's annual monitoring report of the same December date, 2degrees' own share of broadband connections was 4 per cent.\n\nStep 4. Calculation (Doc 8 and Doc 7): the two largest operators' share is the three-operator figure less the third operator's share: 75 − 4 = 71. Spark and Vodafone together held that percentage of the fixed broadband market.\n\nStep 5. Check on the printed look-alike (Doc 2): Chorus says the two largest mobile network owners account for 80 per cent of the retail broadband market. Chorus wrote on 30 November 2017, before the December report existed, and gives no source for the figure, so it is not the Commission's December figure and is not used.",
+  "answer_components": [
+    "71%"
+  ],
+  "evidence": [
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "the three MNOs collectively have 75% of the fixed broadband market"
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "Annual Telecommunications Monitoring Report: Key Facts, 20 December 2017"
+    },
+    {
+      "document_number": 8,
+      "component_number": 1,
+      "quote": "2degrees is well behind Spark (incl Skinny) and Vodafone in total subscriber shares"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "estimated broadband retailer market share by connections was 13% versus 4% for 2degrees: Commerce Commission, 2017 Annual Telecommunications Monitoring Report, 20 December 2017"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        8
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        7
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Conditional filter"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    },
+    {
+      "trap": "Wrong year or edition",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Part vs total: Doc 8's 75% is all three operators' fixed broadband share; taking it for the two largest gives 75%. Wrong edition: Doc 2's 80%, written 30 November 2017, predates the December report. The gold removes 2degrees' 4% (Doc 7) from 75%: 71%."
+}

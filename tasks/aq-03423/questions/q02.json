@@ -1,0 +1,63 @@
+{
+  "question": "Over a first year, how much more or less per included gigabyte, to the nearest cent, does the 10GB plan 2degrees cites cost than its 25GB plan that the Commerce Commission priced?",
+  "number_of_asks": 1,
+  "gold_answer": "$1.60 more per gigabyte",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 1, pricing section): the Commission prices 2degrees' SIM-only plan with a data allowance of up to 25 GB at 70 dollars per month. The 65 dollars printed beside it is Skinny Direct's price, not 2degrees'.\n\nStep 2. Source input (Doc 7, answer on higher-volume prices): 2degrees replies that its rates are lower than stated and cites a plan at 55 dollars for 10 GB, with double data for the first 3 months.\n\nStep 3. Calculation (Doc 1 and Doc 7): the doubled monthly allowance, in GB: 2 × 10 = 20.\n\nStep 4. Calculation (Doc 1 and Doc 7): months of a first year at the standard allowance: 12 − 3 = 9.\n\nStep 5. Calculation (Doc 1 and Doc 7): data in the double-data months, in GB: 3 × 20 = 60.\n\nStep 6. Calculation (Doc 1 and Doc 7): data in the other months, in GB: 9 × 10 = 90.\n\nStep 7. Calculation (Doc 1 and Doc 7): data the cited plan includes over the year, in GB: 60 + 90 = 150.\n\nStep 8. Calculation (Doc 1 and Doc 7): price of the cited plan over the year, in dollars: 12 × 55 = 660.\n\nStep 9. Calculation (Doc 1 and Doc 7): the cited plan, in dollars per GB over the year: 660 / 150 = 4.4.\n\nStep 10. Calculation (Doc 1 and Doc 7): the plan the Commission priced, in dollars per GB, the same in every month: 70 / 25 = 2.8.\n\nStep 11. Calculation (Doc 1 and Doc 7): difference in dollars per GB: 4.4 − 2.8 = 1.6. The plan 2degrees cites is the dearer one by that amount per included gigabyte.",
+  "answer_components": [
+    "$1.60 more per gigabyte"
+  ],
+  "evidence": [
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "with data allowances of up to 25GB, for $65 per month (Skinny Direct) and $70 per month (2degrees)"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "the 25GB plans offered by Skinny Direct and 2degrees have no fixed term"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "rates are lower than that stated and substantially lower than in the benchmarking table"
+    },
+    {
+      "document_number": 7,
+      "component_number": 1,
+      "quote": "2degrees currently offers $55 for 10GB (with double data, i.e. 20GB, for the first 3 months)"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        7
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Unit normalization",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike company",
+      "how_a_careless_solver_fails": "Picks the wrong entity or section"
+    },
+    {
+      "trap": "Out-of-range period",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Look-alike company: Doc 1 prices Skinny Direct's 25GB plan at $65 beside 2degrees' $70; using it gives $1.80 more. Out-of-range period: Doc 7's 20GB lasts three months; applied all year it gives $0.05 less, ignored $2.70 more. The gold counts three doubled months: $1.60."
+}
