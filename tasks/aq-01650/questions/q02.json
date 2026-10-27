@@ -1,0 +1,93 @@
+{
+  "question": "In the 2011 wave of Osaka University's Preference Parameters Study, what was women's share of 40-to-64-year-olds who had a non-mandatory health check-up in the prior 12 months, minus their share of those aged 40 or over who had a non-breast, non-uterine cancer examination in that period? Give percentage points to one decimal.",
+  "number_of_asks": 1,
+  "gold_answer": "14.5 percentage points",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 3, Data and Variables): the check-up study merges the 2010 and 2011 waves of the Preference Parameters Study and keeps 2,208 respondents aged 40 to 64. Its outcome is 1 for any health check-up taken within the year other than those organized by the government, employers and schools, which the paper treats as mandatory.\n\nStep 2. Source fact (Doc 3, table of check-up probability by demographic characteristic): in the row for respondents who had such a check-up, the Female column holds 418 and the Total column holds 701.\n\nStep 3. Calculation (from Step 2; Doc 3): women's share of the check-up takers = 418 / 701 = 59.629%.\n\nStep 4. Source fact (Doc 4, Data and Variables): the screening study merges the 2010 and 2011 waves of the same study and keeps 2693 respondents aged 40 or older. Its outcome counts the cancer examinations taken over the last 12 months, summing all types other than breast and uterine, from 0 to 4.\n\nStep 5. Source fact (Doc 4, table of the number of cancer screenings by demographic characteristics): the Female column totals 1347, of whom 723 had zero screenings, and the Total column totals 2693, of whom 1311 had zero screenings.\n\nStep 6. Calculation (from Step 5; Doc 4): women with at least one counted examination = 1347 - 723 = 624.\n\nStep 7. Calculation (from Step 5; Doc 4): respondents with at least one counted examination = 2693 - 1311 = 1382.\n\nStep 8. Calculation (from Steps 6 and 7; Doc 4): women's share of the examined respondents = 624 / 1382 = 45.152%.\n\nStep 9. Calculation (from Steps 3 and 8; Doc 3 and Doc 4): 59.629% - 45.152% = 14.5 percentage points (to one decimal place).",
+  "answer_components": [
+    "14.5 percentage points"
+  ],
+  "evidence": [
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Removing 1,212 individuals aged under 40 and over 64 yielded the final sample of 2,208 responses"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "for any type of health check-up taken within a year besides those organized by the government, employers, and schools"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "|Female|Male|Below University degree|Above university degree|No|Yes|||"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "|1|418|283|534|167|680|21|701|"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "our sample only includes Japanese individuals who are 40 years old or older"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "summed data from all types of cancer, other than breast and uterine cancers"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "|Female|Male|Below University Degree|Above University Degree|No|Yes|||"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "|0|723|588|1043|268|1276|35|1311|"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "|Total|1347|1346|2028|665|2638|55|2693|"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item",
+      "where_the_trap_sits": "Both demographic tables print percentages, but they are shares within each sex column, not shares of the participants. In Doc 3's table of check-up probability by demographic characteristic, the check-up row shows 418 above \"36.99%\" in the Female column, meaning 36.99% of the 1130 women had a non-mandatory check-up, and the prose repeats it: \"Women (36.99%) had more check-ups than men (26.25%)\". In Doc 4's table of the number of cancer screenings by demographic characteristics, the zero row shows 723 above \"53.67%\" in the Female column, meaning 53.67% of the 1347 women had no counted examination.",
+      "the_wrong_answer_a_careless_solver_gives": "-9.3 percentage points. A solver who reads the printed female percentages as women's share of each group of participants takes 36.99% for the check-ups and 46.33% (100% minus 53.67%) for the cancer examinations, and 36.99 - 46.33 = -9.34. A solver who uses the zero row's 53.67% directly gets -16.7 instead. Either way the sign flips, so the careless answer says women were less prominent among check-up takers than among the screened.",
+      "why_the_correct_answer_avoids_it": "The question asks for women's share of the people who took part, so the female count is divided by all participants, not by all women. In Doc 3, 418 of the 701 check-up takers were women, 59.629%. In Doc 4, no row prints the participants, so they are computed from the zero row and the totals: 1347 - 723 = 624 women and 2693 - 1311 = 1382 respondents had at least one counted examination, 45.152%. The difference is 14.5 points."
+    },
+    {
+      "trap": "Document convention",
+      "how_a_careless_solver_fails": "Takes the wrong line item",
+      "where_the_trap_sits": "The two Osaka panel papers use the same table layout, with rows numbered from 0, but the row labels mean different things. In Doc 3 the outcome is binary, so the row labelled \"1\" (\"|1|418|283|534|167|680|21|701|\") holds everyone who had a non-mandatory check-up. In Doc 4 the outcome is a count of cancer examinations from 0 to 4, so its row labelled \"1\" (\"|1|173|192|267|98|357|8|365|\") holds only the respondents who had exactly one examination, while those with two, three or four sit in the rows below.",
+      "the_wrong_answer_a_careless_solver_gives": "12.2 percentage points. A solver who carries Doc 3's convention over to Doc 4 reads the \"1\" row as the people who were screened and takes women's share of it, 173 of 365 or 47.397%. Then 59.629 - 47.397 = 12.2, which looks plausible because it keeps the right sign and the right order of magnitude, so nothing in the result warns the solver.",
+      "why_the_correct_answer_avoids_it": "Doc 4 defines its outcome as the number of cancer screenings, summing all types other than breast and uterine, so anyone with one or more examinations counts. The careful reader uses every row above zero, which is the column total minus the zero row: 1347 - 723 = 624 women out of 2693 - 1311 = 1382 respondents, 45.152%, and the difference from 59.629% is 14.5 points."
+    }
+  ]
+}

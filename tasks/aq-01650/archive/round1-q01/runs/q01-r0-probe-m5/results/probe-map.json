@@ -1,0 +1,26 @@
+{
+  "solver-1": {
+    "left_out": "D01",
+    "renumbered": {
+      "D02": "D01",
+      "D03": "D02",
+      "D04": "D03",
+      "D05": "D04",
+      "D06": "D05",
+      "D07": "D06"
+    },
+    "omitted_source": "docs/Age-gender-and-financial-literacy-in-Japan.txt"
+  },
+  "solver-2": {
+    "left_out": "D03",
+    "renumbered": {
+      "D01": "D01",
+      "D02": "D02",
+      "D04": "D03",
+      "D05": "D04",
+      "D06": "D05",
+      "D07": "D06"
+    },
+    "omitted_source": "docs/Does-Financial-Literacy-Affect-Household-Financial-Behavior.txt"
+  }
+}
