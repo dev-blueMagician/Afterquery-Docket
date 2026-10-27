@@ -1,0 +1,140 @@
+{
+  "question": "By how many million dollars did KLA's GAAP gross profit for fiscal 2026 (ended June 30, 2026) exceed the sum of the gross profits implied by the revenue and GAAP gross margin guidance it issued for each of that year's four quarters, multiplying the two midpoints for each quarter? Round to the nearest million dollars.",
+  "number_of_asks": 1,
+  "gold_answer": "$250 million",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 10, guidance for the first quarter of fiscal 2026 ending in September): total revenues are expected at $3.15 billion +/- $150 million and GAAP gross margin at 60.7% +/- 1.0%, so the midpoints are $3.15 billion and 60.7%.\n\nStep 2. Calculation (from Step 1; Doc 10): implied first-quarter gross profit in billions of dollars = 3.15 × 60.7% = 1.91205.\n\nStep 3. Source fact (Doc 11, guidance for the second quarter of fiscal 2026 ending in December): total revenues $3.225 billion +/- $150 million and GAAP gross margin 60.8% +/- 1.0%.\n\nStep 4. Calculation (from Step 3; Doc 11): implied second-quarter gross profit in billions of dollars = 3.225 × 60.8% = 1.9608.\n\nStep 5. Source fact (Doc 12, guidance for the third quarter of fiscal 2026 ending in March): total revenues $3.35 billion +/- $150 million and GAAP gross margin 60.62% +/- 1.00%.\n\nStep 6. Calculation (from Step 5; Doc 12): implied third-quarter gross profit in billions of dollars = 3.35 × 60.62% = 2.03077.\n\nStep 7. Source fact (Doc 13, guidance for the fourth quarter of fiscal 2026 ending in June): total revenues $3.575 billion +/- $200 million and GAAP gross margin 60.72% +/- 1.00%.\n\nStep 8. Calculation (from Step 7; Doc 13): implied fourth-quarter gross profit in billions of dollars = 3.575 × 60.72% = 2.17074.\n\nStep 9. Calculation (Steps 2, 4, 6 and 8 results; Docs 10 to 13): sum of the implied gross profits in billions of dollars = 1.91205 + 1.9608 + 2.03077 + 2.17074 = 8.07436.\n\nStep 10. Source fact (Doc 14, statement of operations, twelve months ended June 30, 2026, in thousands): total revenues 13,579,476 and costs of revenues 5,255,060.\n\nStep 11. Calculation (from Step 10; Doc 14): fiscal 2026 GAAP gross profit = 13,579,476 - 5,255,060 = 8,324,416 thousand dollars.\n\nStep 12. Calculation (Steps 9 and 11 results; Docs 10 to 14): 8,324,416 thousand dollars - 8.07436 billion dollars = 250 million dollars (to the nearest million).",
+  "answer_components": [
+    "$250 million"
+  ],
+  "evidence": [
+    {
+      "document_number": 10,
+      "component_number": 1,
+      "quote": "The following details our guidance for the first quarter of fiscal 2026 ending in September"
+    },
+    {
+      "document_number": 10,
+      "component_number": 1,
+      "quote": "Total revenues is expected to be in a range of $3.15 billion +/- $150 million"
+    },
+    {
+      "document_number": 10,
+      "component_number": 1,
+      "quote": "GAAP gross margin is expected to be in a range of 60.7% +/- 1.0%"
+    },
+    {
+      "document_number": 11,
+      "component_number": 1,
+      "quote": "The following details our guidance for the second quarter of fiscal 2026 ending in December"
+    },
+    {
+      "document_number": 11,
+      "component_number": 1,
+      "quote": "Total revenues are expected to be in a range of $3.225 billion +/- $150 million"
+    },
+    {
+      "document_number": 11,
+      "component_number": 1,
+      "quote": "GAAP gross margin is expected to be in a range of 60.8% +/- 1.0%"
+    },
+    {
+      "document_number": 12,
+      "component_number": 1,
+      "quote": "The following details our guidance for the third quarter of fiscal 2026 ending in March"
+    },
+    {
+      "document_number": 12,
+      "component_number": 1,
+      "quote": "Total revenues are expected to be in a range of $3.35 billion +/- $150 million"
+    },
+    {
+      "document_number": 12,
+      "component_number": 1,
+      "quote": "GAAP gross margin is expected to be in a range of 60.62% +/- 1.00%"
+    },
+    {
+      "document_number": 13,
+      "component_number": 1,
+      "quote": "The following details our guidance for the fourth quarter of fiscal 2026 ending in June"
+    },
+    {
+      "document_number": 13,
+      "component_number": 1,
+      "quote": "Total revenues are expected to be in a range of $3.575 billion +/- $200 million"
+    },
+    {
+      "document_number": 13,
+      "component_number": 1,
+      "quote": "GAAP gross margin is expected to be in a range of 60.72% +/- 1.00%"
+    },
+    {
+      "document_number": 14,
+      "component_number": 1,
+      "quote": "Three Months Ended June 30, Twelve Months Ended June 30,"
+    },
+    {
+      "document_number": 14,
+      "component_number": 1,
+      "quote": "Total revenues 3,657,556 3,174,741 13,579,476 12,156,162"
+    },
+    {
+      "document_number": 14,
+      "component_number": 1,
+      "quote": "Costs of revenues 1,413,108 1,207,286 5,255,060 4,751,867"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        10
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        11
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        12
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        13
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        14
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Unit normalization",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Wrong year or edition",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    },
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Docs 11 to 14 print next-quarter guidance (Doc 14: September 2026); pairing each fiscal 2026 release with its own block gives -$302 million. Each block also lists non-GAAP margin; using it gives $96 million. The gold pairs Docs 10-13's GAAP guidance with their named quarters."
+}
