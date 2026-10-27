@@ -1,0 +1,71 @@
+{
+  "question": "Which of these submitters, if any, have one of their own submissions mentioned in another submitter's document? List them alphabetically.",
+  "number_of_asks": 1,
+  "gold_answer": "ACCC, Australian Dairy Farmers, Fresh Markets Australia",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 10, on the Dairy Code review): eastAUSmilk writes that \"the ACCC noted it would not fully correct the bargaining power imbalance\" and, in the next line, that \"This assessment also underpins their 2021 submission to the review of the dairy code\". \"Their\" is the ACCC's, and the footnote's web address names an \"ACCC submission to Dairy Code of Conduct Review\". eastAUSmilk mentions a submission by the ACCC (first component).\nStep 2. Source input (Doc 10, answer on how the codes interact): eastAUSmilk writes that \"Australian Dairy Farmers has done an analysis\" of the Dairy Code and the Grocery Code, and that \"Their analysis was part of their confidential submission to the Australian Competition and Consumer Commission review of the acquisition by Coles of two Saputo dairy processing facilities\". eastAUSmilk mentions a submission by Australian Dairy Farmers (second component).\nStep 3. Source input (Doc 12, about Freshmark): Freshmark \"has also contributed to and broadly supports a submission developed by Fresh Markets Australia, our national industry body\". Freshmark mentions a submission by Fresh Markets Australia (third component).\nStep 4. Decoys: several submitters mention only their own submissions, such as AUSVEG's earlier submissions to a Senate committee and to the dispute resolution review, Australian Dairy Farmers' own submission to the ACCC, and Metcash's earlier submissions on dispute resolution. The test is a mention in another submitter's document, so these add no one; Australian Dairy Farmers is in the answer only because eastAUSmilk mentions its submission. The Australian Macadamia Society mentions the NFF Horticulture Council's submission, but that council is not one of these submitters.\nStep 5. Final answer (Doc 10 and Doc 12): ACCC, Australian Dairy Farmers, Fresh Markets Australia.",
+  "answer_components": [
+    "ACCC",
+    "Australian Dairy Farmers",
+    "Fresh Markets Australia"
+  ],
+  "evidence": [
+    {
+      "document_number": 10,
+      "component_number": 1,
+      "quote": "Even at its making, the ACCC noted it would not fully correct the bargaining power imbalance"
+    },
+    {
+      "document_number": 10,
+      "component_number": 1,
+      "quote": "This assessment also underpins their 2021 submission to the review of the dairy code"
+    },
+    {
+      "document_number": 10,
+      "component_number": 1,
+      "quote": "https://www.accc.gov.au/system/files/ACCC%20submission%20to%20Dairy%20Code%20of%20Conduct%20Review"
+    },
+    {
+      "document_number": 10,
+      "component_number": 2,
+      "quote": "Australian Dairy Farmers has done an analysis of the content of each of the Dairy Industry Code and the Food and Grocery Industry Code"
+    },
+    {
+      "document_number": 10,
+      "component_number": 2,
+      "quote": "Their analysis was part of their confidential submission to the Australian Competition and Consumer Commission review of the acquisition by Coles of two Saputo dairy processing facilities."
+    },
+    {
+      "document_number": 12,
+      "component_number": 3,
+      "quote": "Freshmark has also contributed to and broadly supports a submission developed by Fresh Markets Australia, our national industry body."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        10
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        12
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: Australian Dairy Farmers' submission is mentioned only near the end of Doc 10, eastAUSmilk's dairy submission, as \"their confidential submission\" after a sentence naming the dairy body. Missing it gives ACCC and Fresh Markets Australia; the gold adds Australian Dairy Farmers."
+}

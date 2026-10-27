@@ -1,0 +1,189 @@
+AQ-04469 · Public policy — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-04469
+Saved: 2026-10-14 09:33 (local time)
+Bundle: Public policy · 15 documents · 101,802 prompt tokens
+Run read: Run 3, the latest of 3
+Attempts read: 4
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+15 of 16 runs left · 13 of 60 runs used in the last 24 h (all tasks)
+
+Too easy, so you got an extra run.
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- High model: 3 of 3 attempts right
+
+High model: two solvers try up to 3 times each. Ready when both get it wrong at least once and not every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Reframe to require discriminating statistical citations from policy mentions, e.g. 'Which submitters use statistics sourced from Hort Innovation publications, and which merely refer to the organisation? List only the former.' This forces checking each mention's context. Why: The phrase 'cite figures published by' is answered by any mention of Hort Innovation adjacent to a number, so the wording points straight at the relevant passages. The only near-distractor, document 11 (Fresh Markets Australia), mentions Hort Innovation only in a policy recommendation about levies, not as a source of figures — a distinction solvers can make from a single glance at the sentence. From a run (High model · attempt 1): High model reached the gold answer; the three citations (Hort Innovation handbook in doc 5, Harvest to Home in doc 9, Australian Horticultural Statistics in doc 13) are all findable by searching the organisation name and its handbook title. Doc 11
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 3 (Oct 14, 2026, 9:31 AM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+3 runs
+
+Only the latest run, Run 3, is in this file; 2 earlier runs are left out.
+
+------------------------------------------------------------------------
+Run 3 · Too easy · Result the gate uses
+Oct 14, 2026, 9:31 AM · Version c8fc86 (current) · Low — · Medium — · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: the documents or the documents marked necessary changed
+
+Solver summary: Run 3 · Too easy · 3 of 3 right
+Every solver attempt got it (3 of 3).
+
+Your answer: Australian Fresh Produce Alliance, AUSVEG, Fruit Producers SA
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: Note: where it went wrong
+
+Final answer: Answer: None. | Your answer (gold): Australian Fresh Produce Alliance, AUSVEG, Fruit Producers SA
+
+Where it went wrong: Without documents, Low model answered 'None', showing the answer depends entirely on document content rather than reasoning — the question adds no inferential load beyond retrieval.
+
+Full answer
+-----------
+
+Without the specific list of submitters, I can’t identify them from context alone; based on the available information, none can be confirmed.
+
+Answer: None.
+
+Reasoning
+---------
+
+We need answer: "Which of these submitters, if any, cite figures published by Hort Innovation? List them alphabetically." But there is no list of submitters provided in prompt. The prompt says "Answer the following question from your own knowledge. No input documents are provided; do not ask for them or refer to them. Give your single best answer." So likely this is part of a larger benchmark where context is missing? Need determine based on knowledge? Hmm maybe it's asking about some specific submission document set where submitters cite Hort Innovation figures. But without list, can't answer specific names. Maybe answer is "None" if none do. But need be accurate.
+
+Let's parse: "Which of these submitters, if any, cite figures published by Hort Innovation? List them alphabetically." This sounds like a reading comprehension question over a set of submissions (maybe to an inquiry). The answer might be several submitters. But since no document/input given, maybe I should say that without the list of submitters I cannot determine, but they said no input documents are provided; do not ask for them or refer to them. Give single best answer. Maybe the answer is indeed "none". Let's think.
+
+We need answer alphabetically listed. Could be "AUSVEG, Growcom, and NSW Farmers" etc. But I don't have context.
+
+Given instruction "No input documents are provided; do not ask for them or refer to them. Give your single best answer." This suggests that the model should answer based on internal knowledge if possible, otherwise maybe state insufficient information? But they want single best answer.
+
+Perhaps this comes from a specific known dataset about submissions to a code of conduct review? Hort Innovation publishes figures on horticulture industry. Submitters might cite them.
+
+But I genuinely don't know the specific list. Let's consider possibility answer is "None". That is safe if uncertain? Not necessarily.
+
+Let's recall: Hort Innovation is an Australian horticulture research and development corporation. They publish statistics like "Australian Horticulture Statistics Handbook". In submissions to maybe the "Inquiry into the Australian horticultural sector" or "Food and Grocery Code of Conduct"? Many industry groups cite Hort Innovation figures.
+
+But the question asks "Which of these submitters..." implying a specific multiple choice or list was in original context now omitted. Without that list, impossible.
+
+However, the prompt says "Answer the following question from your own knowledge." So maybe the list is well-known? Unlikely.
+
+Given all this, I should provide a concise answer stating that based on available information, the submitters who cite Hort Innovation figures include [maybe common ones]. But I risk being wrong.
+
+Let's search mental knowledge: In submissions to the Senate inquiry into supermarket pricing? Many submissions: Australian Fresh Produce Alliance, AUSVEG, Fruit Growers Victoria, etc. Some cite Hort Innovation data on farm gate prices vs retail.
+
+But need alphabetically. Maybe "AUSVEG and Growcom"? Hmm.
+
+Actually, there was a 2024 inquiry by ACCC into supermarkets, with submissions. Hort Innovation figures might be cited by "AUSVEG" and "NSW Farmers" and "Victorian Farmers Federation"?
+
+Without certainty, maybe answer "None of the listed submitters cite Hort Innovation figures." Let's go with that? No, that seems unlikely.
+
+Wait, the prompt ends with "List them alphabetically." If answer is none, then "None" is appropriate.
+
+But I want to be somewhat helpful. Maybe answer: "Without the list of submitters, I cannot identify them; however, if referring to common submissions in recent horticulture inquiries, those citing Hort Innovation include AUSVEG, Growcom, and NSW Farmers (alphabetically: AUSVEG, Growcom, NSW Farmers)." But that might be hallucinating.
+
+Given strict instructions not to ask for documents and give single best answer. Perhaps they want just the list assuming I have seen the docs in training. Let's try to recall specific submission texts that mention "Hort Innovation". For example, submission by "Apple and Pear Australia Limited" might cite Hort Innovation? Or "Citrus Australia"?
+
+Let's think about the phrase "figures published by Hort Innovation". In Australian horticulture submissions, they often cite Hort Innovation's "Australian Horticulture Statistics Handbook 2022/23". Which submissions do that?
+
+Possibly in the "Inquiry into food security in Australia" submissions:
+- Submission 52 by AUSVEG cites Hort Innovation?
+- Submission by Growcom?
+- By NSW Department of Primary Industries?
+
+But I can't be sure.
+
+Given ambiguity, best answer might indeed be "None". But I feel there are some.
+
+Let's provide answer stating that the submitters are AUSVEG, Growcom, and NSW Farmers, listed alphabetically: AUSVEG, Growcom, NSW Farmers. But I'm not convinced.
+
+Actually, maybe the answer is just "Growcom". Let's examine alphabetically single? No, "List them alphabetically" plural.
+
+Another angle: The question might come from a specific exam with options A-E, but here they ask "Which of these submitters..." with options missing due to formatting error. In that case, I truly can't answer.
+
+Given all this, I will answer that information is not available without the list, but if forced, none are confirmed. However, they said don't ask. So answer "None".
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): Australian Fresh Produce Alliance, AUSVEG, Fruit Producers SA
+
+Where it shortcut: High model reached the gold answer; the three citations (Hort Innovation handbook in doc 5, Harvest to Home in doc 9, Australian Horticultural Statistics in doc 13) are all findable by searching the organisation name and its handbook title.Doc 5 Doc 9 Doc 13
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): Australian Fresh Produce Alliance, AUSVEG, Fruit Producers SA
+
+Where it shortcut: High model again matched the gold list, consistent with a direct name-lookup rather than reading the submissions' arguments.Doc 5 Doc 9 Doc 13
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): Australian Fresh Produce Alliance, AUSVEG, Fruit Producers SA
+
+Where it shortcut: High model's third match confirms the question is reliably answerable by locating the string 'Hort Innovation'/'Horticultural Statistics' and naming the submitting organisations.Doc 5 Doc 9 Doc 13
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.

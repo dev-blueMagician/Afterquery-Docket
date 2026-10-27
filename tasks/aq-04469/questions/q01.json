@@ -1,0 +1,73 @@
+{
+  "question": "Which of these submitters, if any, cite figures published by Hort Innovation? List them alphabetically.",
+  "number_of_asks": 1,
+  "gold_answer": "Australian Fresh Produce Alliance, AUSVEG, Fruit Producers SA",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 5, key facts): the Australian Fresh Produce Alliance says its key facts are \"sourced largely from Hort Innovation's Australian Horticulture Statistics Handbook\", and its footnote gives that handbook as \"Australian Horticulture Statistics Handbook 2022/23 - Hort Innovation\". It cites Hort Innovation figures (first component).\nStep 2. Source input (Doc 9, executive summary and its footnote): AUSVEG writes \"Harvest to Home citing 78 percent of retail fresh vegetables are sold through Coles, Woolworths, and Aldi\", and its footnote gives the source as \"'Harvest to Home', Hort Innovation\". It cites a Hort Innovation figure (second component).\nStep 3. Source input (Doc 13, executive summary): Fruit Producers SA gives its growers' \"over $150 million in value of production (Source: Australian Horticultural Statistics 2022/2023)\". It names no publisher.\nStep 4. Join (Doc 5 and Doc 13): Doc 5 says the Australian Horticulture Statistics Handbook for 2022/23 is Hort Innovation's. Fruit Producers SA's source is that publication for the same year, so its figure is also a Hort Innovation figure (third component).\nStep 5. Decoy: Fresh Markets Australia also names Hort Innovation, but only in a proposal that the Government steer Hort Innovation's fruit and vegetable levies towards independent retailers. It cites no figure from Hort Innovation, so it is not in the list. No other submission names Hort Innovation, Harvest to Home or the horticulture statistics handbook as a source.\nStep 6. Final answer (Doc 5, Doc 9 and Doc 13): Australian Fresh Produce Alliance, AUSVEG, Fruit Producers SA.",
+  "answer_components": [
+    "Australian Fresh Produce Alliance",
+    "AUSVEG",
+    "Fruit Producers SA"
+  ],
+  "evidence": [
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "The following key facts and information, sourced largely from Hort Innovation’s Australian Horticulture Statistics Handbook"
+    },
+    {
+      "document_number": 5,
+      "component_number": 3,
+      "quote": "Australian Horticulture Statistics Handbook 2022/23 - Hort Innovation"
+    },
+    {
+      "document_number": 9,
+      "component_number": 2,
+      "quote": "Harvest to Home citing 78 percent of retail fresh vegetables are sold through Coles, Woolworths, and Aldi"
+    },
+    {
+      "document_number": 9,
+      "component_number": 2,
+      "quote": "‘Harvest to Home’, Hort Innovation."
+    },
+    {
+      "document_number": 13,
+      "component_number": 3,
+      "quote": "These horticultural activities represent over $150 million in value of production (Source: Australian Horticultural Statistics 2022/2023)"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        5
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        9
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        13
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: Doc 13 sources its $150 million to \"Australian Horticultural Statistics 2022/2023\" and names no publisher; only Doc 5 calls that handbook Hort Innovation's. Searching for Hort Innovation finds Docs 5 and 9 and gives two names; the link adds Fruit Producers SA."
+}
