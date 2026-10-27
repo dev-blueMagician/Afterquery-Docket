@@ -1,0 +1,1503 @@
+AQ-03993 · Public policy — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-03993
+Saved: 2026-10-13 15:39 (local time)
+Bundle: Public policy · 4 documents · 105,832 prompt tokens
+Attempts read: 26
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+13 of 15 runs left · 13 of 60 runs used in the last 24 h (all tasks)
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Between levels.
+
+Between levels
+
+Too hard for the medium model but too easy for the high model. Make it a little harder, so the high model reaches your answer only some of the time, then run the check again.
+
+- Low model: 0 of 5 attempts right
+- Medium model: 0 of 6 attempts right
+- High model: 3 of 3 attempts right
+
+Medium model: three solvers try up to 3 times each. Ready when at least two get it wrong twice and one gets it right twice. High model: two solvers try up to 3 times each. Ready when both get it wrong at least once and not every attempt is wrong. A level stops as soon as more attempts could not change the result.
+
+What to change: Make it harder
+------------------------------
+
+Gold answer · Your answer
+-------------------------
+
+- 1 Either adjust the gold to acknowledge both figures, or (better) keep £50,000 and reword the question so the £2m/20 shortcut is explicitly excluded, e.g. 'According to evidence given to the Committee, how much grant funding (as distinct from the fund's total £2 million allocation) did the Future News Pilot Fund actually pay out per project?' Why: The gold answer 'About £50,000' is only supported by combining Document 1's 'issued grants to 20 projects' with Document 4's oral remark that the £2 million Nesta Future News Fund included 'about £1 million was grant funding' (£1m ÷ 20 = £50,000). Document 1 alone, the most prominent source, states the fund was '£2 million' and funded 20 projects, which yields £100,000 — the answer most solvers gave. The gold is not wrong, but it rests on a single oral aside that contradicts the natural reading of the main report, making the question effectively a trap rather than a reasoning task. From a run (Low model · attempt 2): Divided the fund's headline £2 million (Document 1, para 41) by 20 projects, treating the fund's total value as grants paid out; missed Document 4's statement that only about £1 million was grant funding. Doc 1 Doc 4
+
+Structure · Which documents it needs, and how they combine
+----------------------------------------------------------
+
+- 2 Keep the two-document requirement but remove the decoy: the reworded prompt should reference that the fund's total value was not all grants, prompting a search of the oral evidence for the disbursed amount. Quiet edit in a re-quoted passage Why: The question needs two documents: Document 1 for the number of funded projects (20) and Document 4 (Q254, David Floyd) for the actual grant figure (~£1 million). But Document 1 appears to contain a complete, self-consistent answer (£2m, 20 projects), so solvers never cross into the oral transcripts. The structure invites stopping at the first plausible calculation. From a run (Low model · attempt 2): Divided the fund's headline £2 million (Document 1, para 41) by 20 projects, treating the fund's total value as grants paid out; missed Document 4's statement that only about £1 million was grant funding. Doc 1 Doc 4
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is between difficulty levels, so the gate does not pass.
+
+The gate reads Run 2 (Oct 13, 2026, 3:21 PM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+Between levels means the solvers’ results fell between two tiers: too hard for one level and too easy for the next, so no single tier fits.
+
+2 runs
+
+------------------------------------------------------------------------
+Run 2 · Between levels · Result the gate uses
+Oct 13, 2026, 3:21 PM · Version 2a5462 (current) · Low 0/5 · Medium 0/6 · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: question: removed “many Future News Pilot Fund applications went unfunded, and how”, “average funded”, “receive? Answer in that order.”; added “Future News Pilot Fund pay out, on average, to each”, “it funded?”. answer: removed “158 applications and about”; added “About”
+
+Solver summary: Run 2 · Between levels · 3 of 14 right
+2 of 14 gave the same wrong answer: “£100,000”.
+
+4 wrong attempts quoted the same passage: Doc 1 (“It received 178 applications and issued grants to 20 projects.”).
+
+Your answer: About £50,000
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: —
+
+Final answer: The Future News Pilot Fund had about £2 million to distribute and ended up backing roughly 20 projects, so the average grant worked out to around £100,000 per project (about £101,000). | Your answer (gold): About £50,000
+
+Full answer
+-----------
+
+The Future News Pilot Fund had about £2 million to distribute and ended up backing roughly 20 projects, so the average grant worked out to around £100,000 per project (about £101,000).
+
+Reasoning
+---------
+
+We need answer: "How much grant money did the Future News Pilot Fund pay out, on average, to each project it funded?" Need knowledge about Future News Pilot Fund. Likely a UK fund? Future News Pilot Fund was established by the UK government? Or by Nesta? Let's recall. The Future News Pilot Fund was a £2 million fund? Or £2m pilot fund launched in 2019? Actually there was "Future News Fund" launched in 2019 by Nesta with £2 million? Let's recall details.
+
+There's a "Future News Pilot Fund" launched in 2019 with £2 million? Wait, in 2019 the UK government announced a £2 million pilot fund to support innovation in news? Let's check mental knowledge.
+
+In October 2019, the UK government announced a £2 million Future News Pilot Fund to support local journalism? Or was it £2m fund to help develop new ways of delivering local news?
+
+Another possibility: The Future News Pilot Fund was part of the Cairncross Review recommendations. The government pledged £2 million for a pilot fund? Actually the Cairncross Review (2019) recommended a new institute for public interest news. The government responded with a £2 million pilot fund? Let's recall precisely.
+
+The "Future News Pilot Fund" was launched in October 2029? No.
+
+Let's search mental database: In 2020, Nesta launched the Future News Fund with £2.2 million? Hmm.
+
+Wait there is "Future News Fund" launched by NESTA in partnership with Department for Digital, Culture, Media and Sport? Let's recall news headlines around 2020: "£2m Future News Pilot Fund opens for applications" maybe in October 2020? The fund was designed to support innovation in public interest news, with grants of up to £100,000? Or average payout?
+
+Question asks "How much grant money did the Future News Pilot Fund pay out, on average, to each project it funded?" This sounds like there was a specific number of projects funded and total payout known, so average can be computed.
+
+We need determine total payout divided by number of projects.
+
+Let's recall reports summarizing the pilot fund. Maybe in 2022 they published evaluation: The Future News Pilot Fund awarded £2.2 million across 19 projects? Or 20 projects? Let's think.
+
+There was a fund with £2 million, funding 19 projects? That'd average about £105k? Or maybe total was £2.2m across 22 projects averaging £100k?
+
+But the question asks "How much grant money did the Future News Pilot Fund pay out, on average, to each project it funded?" This might be answered in a specific report stating average grant was about £85,000? Or £101,000?
+
+Let's dig deeper mental.
+
+The Future News Pilot Fund was announced in February 2029? No.
+
+Actually I recall in October 2019 the Department for Digital, Culture, Media and Sport announced a £2 million pilot innovation fund for news industry. The fund was managed by Nesta. Applications opened in early 2020? They funded projects that test new tech and business models for news.
+
+Then in maybe 2022 Nesta published "The Future News Pilot Fund: An evaluation" stating that they funded 20 projects with a total of £2.1 million, average grant size around £101,000? Let's try to recall figures.
+
+Let's recall news in 2020: The Future News Pilot Fund awarded £2.2m to 19 projects? Actually I think there were two rounds? Or one round?
+
+Let's recall specific funded projects: There was "The Bureau of Investigative Journalism" received funding? Or "Tortoise Media"? Or "The Mill"? Hmm not clear.
+
+But maybe the answer is simpler: The fund had £2 million total and funded 20 projects, so average £100,000.
+
+However, need be accurate based on real figures. Let's recall the evaluation report might have said: "The fund distributed £2.2 million across 19 projects, with an average grant of £116,000"? Or maybe "£2 million across 23 projects averaging £87,000"?
+
+We need best answer.
+
+Let's recall the announcement in Dec 2019? The government said £2m fund. Then in June 2020 they announced the first round of funding? How many projects? Maybe 11 projects received funding totaling £1.3m? Then second round?
+
+Actually I think there were two funding rounds: One in 2020 and one in 2021? Or maybe just one round with 20 projects.
+
+Let's search mental news headlines in 2020: "Future News Fund: £2m to support journalism innovation" and lists winners? Maybe in November 2020 they announced 6 projects? No, that sounds like another fund: The Google News Initiative?
+
+Wait there's also "Journalism Innovation Fund" by Facebook?
+
+We need be precise: "Future News Pilot Fund" specifically. Let's recall in 2022 there was a report titled "Building the future of news: Findings from the Future News Pilot Fund" published by Nesta. In that report they might discuss 19 funded projects and total investment.
+
+Actually, I think Nesta's Future News Fund (not pilot) was launched in 2019 with £2.3 million? Let's check mental consistency: In 2019 Nesta pledged £1 million? No.
+
+Let's recall the context of the Cairncross Review published in Feb 2019. One recommendation was for government to create an innovation fund for news of £10m per year? The government rejected direct funding but agreed to a £2m pilot scheme run by Nesta.
+
+Yes, that sounds right: The government committed £2 million for a pilot scheme run by Nesta, named the Future News Pilot Fund, running from 2019 to 2021? Or 2020-2023?
+
+Then in 2022 they evaluated and said it funded 19 projects? Actually maybe 19 news organizations received funding totaling £2.1m with grants ranging from £50k to £150k.
+
+But the question specifically: "How much grant money did the Future News Pilot Fund pay out, on average, to each project it funded?" This sounds like they want a specific figure mentioned in a summary, perhaps "£101,000" if 20 projects shared £2m? Or maybe "£85,000" if 23 projects?
+
+Let's try to recall from news coverage in 2029? No.
+
+Given typical grant sizes for pilot funds, they might be around £50,000 to £100,000. The average might be near £85,000.
+
+But I need provide a single best answer with a number.
+
+Let's analyze logic: The total fund was £2 million. If they funded, say, 19 projects, average = £105,263. That rounds to about £100,000. Many reports might round average grant size to about £100,000.
+
+But maybe total payout was £2.2 million for 22 projects = exactly £100,000 average.
+
+Actually I think the fund was £2.2 million, not £2 million. Let's check mental: In 2019 government pledged £2m. But Nesta might have added matching? Or the pilot ended up distributing £2.2m?
+
+Let's recall seeing a figure: "The £2m Future News Pilot Fund has supported 20 projects..." That'd be average £100k.
+
+But wait, there might have been 45 projects? Unlikely with £2m.
+
+Let's recall specific funded projects in 2029? No.
+
+Given all this, I will answer approximately £100,000 (around £101,000). But need be somewhat specific? The question asks "How much grant money..." Maybe answer "about £100,000" or "an average of £101,000".
+
+However, I want more confidence. Let's recall the evaluation report published in June 2029? Not right.
+
+Actually in 2022, Nesta published "The Future News Pilot Fund evaluation: Key findings". The report might list: "We funded 19 projects with grants totaling £2 million, averaging £105,000 per project"?
+
+Let's try to recall headlines after report release: Maybe "Fund handed out £2m to 19 news projects" and then average calculated by journalists.
+
+But I need answer from my own knowledge. Let's provide the figure with context: The fund distributed roughly £2 million among about 20 projects, averaging around £100,000 each.
+
+But they asked "How much grant money did the Future News Pilot Fund pay out, on average..." This might be expecting "£85,000" if there were 24 projects? Hmm.
+
+Let's recall in 2020 they announced 9 projects received funding? Or in 2021?
+
+Actually there was news in December 2020? Let's mental search: In Dec 2020, the government announced £2m future news pilot fund winners? Maybe 19 winners?
+
+Let's try to recall specific named projects that got funded: "The Independent" no. Maybe "The Bristol Cable", "The Meteor", "Social Spider"? Hmm.
+
+Wait, there is a well-known UK local news site "The Bristol Cable" received funding? Or "The Mill" in Manchester?
+
+Let's recall in 2021, Nesta announced funding for 10 projects? Or maybe in Jan 2021 they announced £500k? No.
+
+Given uncertainty, I will answer approximately £100,000 per project, based on the £2 million total shared among roughly 20 funded projects. I can phrase "around £100,000 (about £101,000)".
+
+But I want a single value. Let's go with "about £100,000".
+
+Low model
+=========
+
+Attempt 1 · Wrong
+-----------------
+Docs: Doc 1 · Note: —
+
+Final answer: Source: The report states the Government “launched the £2 million Future News Pilot Fund (FNF), administered by Nesta” and that it “received 178 applications and issued grants to 20 projects” (Document 1, paras 41–42). | Your answer (gold): About £50,000
+
+How it got there: It used Doc 1's £2 million fund and 20 projects to compute £100,000 per project.
+
+Where it left your evidence: It treated the full £2 million fund as grant money, ignoring Doc 4's statement that only about £1 million was grant funding.
+
+Passages quoted:
+
+- Quoted Doc 1: “launched the £2 million Future News Pilot Fund (FNF), administered by Nesta”
+
+Named Doc 1
+
+Full answer
+-----------
+
+Based on the report, the Future News Pilot Fund had a total budget of £2 million and issued grants to 20 projects (out of 178 applications).
+
+So the average grant per funded project was:
+
+£2,000,000 ÷ 20 = £100,000
+
+Source: The report states the Government “launched the £2 million Future News Pilot Fund (FNF), administered by Nesta” and that it “received 178 applications and issued grants to 20 projects” (Document 1, paras 41–42).
+
+Reasoning
+---------
+
+We need answer based on input documents. Need locate Future News Pilot Fund details. In Document 1, paragraph 41-42 mentions pilot fund received 178 applications and issued grants to 20 projects, run by Nesta, investment £2 million? Let's check precisely.
+
+Document 1 paragraph 41: "We launched our inquiry... The Government... pilot news innovation fund, run by Nesta..." Wait need correct excerpt.
+
+Let's search mental: In Document 1, paragraph about Future News Pilot Fund: "In October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta. The pilot fund ran until June 2020... received 178 applications and issued grants to 20 projects." Then paragraph 42 mentions criticisms. So total grant money was £2 million? Need average paid out to each project funded: £2 million / 20 = £100,000. But check if all £2m was grants? The fund was £2 million pilot. Likely yes.
+
+Need cite source. Let's provide answer: £100,000 on average (since £2m divided among 20 projects).
+
+Attempt 2 · Wrong
+-----------------
+Docs: Doc 1 · Note: Note: where it went wrong
+
+Final answer: £2,000,000 ÷ 20 = £100,000 per project. | Your answer (gold): About £50,000
+
+Where it went wrong: Divided the fund's headline £2 million (Document 1, para 41) by 20 projects, treating the fund's total value as grants paid out; missed Document 4's statement that only about £1 million was grant funding.Doc 1 Doc 4
+
+How it got there: It divided Doc 1's £2 million fund by 20 funded projects to get £100,000.
+
+Where it left your evidence: It used the whole £2 million rather than Doc 4's ~£1 million grant-funding figure.
+
+Passages quoted:
+
+- Quoted Doc 1: “The pilot fund ran until June 2020, with investment targeted at new technologies, start-ups, and innovative business models.122 It received 178 applications and issued grants to 20 projects.123”
+- Quoted Doc 1: “£2 million Future News Pilot Fund (FNF)”
+
+Named Doc 1
+
+Full answer
+-----------
+
+The documents state that the Future News Pilot Fund was a £2 million pilot and that it issued grants to 20 projects.
+
+So the average grant per project was:
+
+£2,000,000 ÷ 20 = £100,000 per project.
+
+Reasoning
+---------
+
+We need answer based on input docs. Let's locate Future News Pilot Fund (FNF) info. In Document 1, paragraph about FNF: "The pilot fund ran until June 2020, with investment targeted at new technologies, start-ups, and innovative business models.122 It received 178 applications and issued grants to 20 projects.123" Need grant money total? Earlier said "£2 million Future News Pilot Fund (FNF)" and "Nesta acknowledged ... sustained investment ... £10 million a year ... The Cairncross Review ... generous enough ... £2 million..." Need average per project = £2 million / 20 = £100,000. Let's verify if all £2m paid out? It says pilot fund launched with £2 million. Received 178 applications and issued grants to 20 projects. So average grant = £100,000. We'll answer with reasoning.
+
+Attempt 3 · Wrong
+-----------------
+Docs: Doc 1, Doc 2, Doc 3 · Note: —
+
+Final answer: So, on average, each funded project received approximately £100,000. | Your answer (gold): About £50,000
+
+How it got there: It used Doc 1's £2 million and 20 projects to calculate £100,000 average.
+
+Where it left your evidence: It assumed all £2 million was paid out as grants, missing Doc 4's clarification that only ~£1 million was grant funding.
+
+Passages quoted:
+
+- Quoted Doc 1: “£2 million Future News Pilot Fund”
+- Quoted Doc 1: “It received 178 applications and issued grants to 20 projects.”
+
+Named Doc 1, Doc 3, Doc 2
+
+Full answer
+-----------
+
+Based on the report, the Future News Pilot Fund had a total budget of £2 million and issued grants to 20 projects (Document 1, paras 41–42).
+
+Assuming the full pot was distributed among those funded projects, the average grant per project was:
+
+£2,000,000 ÷ 20 = £100,000
+
+So, on average, each funded project received approximately £100,000.
+
+Reasoning
+---------
+
+We need answer based on documents. Look for Future News Pilot Fund details. In Document 1 paragraph 42: "The pilot fund ran until June 2020... received 178 applications and issued grants to 20 projects." Need grant money paid out total? Need average per project. Need total amount of pilot fund: earlier paragraph 42? Actually in Document 1 paragraph 41 mentions "£2 million Future News Pilot Fund" and paragraph 42 mentions received 178 applications and issued grants to 20 projects. But need grant money paid out on average per project funded? Total £2 million? Wait pilot fund was £2 million total, but was all paid out? Let's check precisely.
+
+Document 1 paragraph 41: "We launched ... pilot news innovation fund... said the Chancellor would consider... The Government... launched the £2 million Future News Pilot Fund..." Paragraph 42: "Several submissions said... The FNF was a missed opportunity... The National Council... said... Nesta acknowledged... They called for sustained investment... ten years... £10 million a year..." Then paragraph 43? Actually need check if total grants issued equals £2 million divided among 20? Let's inspect wording: "It received 178 applications and issued grants to 20 projects." If total fund £2m, average £100k? But need check if all £2m was paid out in grants, maybe less. Let's search other docs.
+
+Document 3 Q123? No. Document 2 Q? Maybe not. Let's search mental: In Document 1 paragraph 42 also mentions "grants were too small" but not specific average. However question asks "How much grant money did the Future News Pilot Fund pay out, on average, to each project it funded?" We need compute from total fund and number of projects if all distributed. The fund was £2 million. Issued grants to 20 projects. So average £100,000. But need verify if total payout was £2m. The text says "launched the £2 million Future News Pilot Fund... received 178 applications and issued grants to 20 projects." Usually that implies £2m distributed? Not necessarily all distributed, but likely total pot £2m divided among 20 => £100k average. Let's answer with reasoning, citing £2 million total and 20 projects funded => average £100,000. Need be precise: "around £100,000".
+
+Attempt 4 · Wrong
+-----------------
+Docs: Doc 1, Doc 2 · Note: —
+
+Final answer: So the Future News Pilot Fund paid out an average of £100,000 to each project it funded. | Your answer (gold): About £50,000
+
+How it got there: It used Doc 1's £2 million fund and 20 projects, and considered but dismissed Doc 2's £3,000 grants as unrelated, yielding £100,000.
+
+Where it left your evidence: It relied on the full £2 million from Doc 1 instead of Doc 4's ~£1 million grant-funding figure.
+
+Passages quoted:
+
+- Quoted Doc 2: “We know from the bit of funding we were able to run during the early phase of Covid when we were only able to offer £3,000 grants”
+
+Named Doc 1, Doc 2
+
+Full answer
+-----------
+
+Based on the report, the Government launched the £2 million Future News Pilot Fund, and it issued grants to 20 projects.
+
+Average grant per project:
+
+- £2,000,000 ÷ 20 = £100,000
+
+So the Future News Pilot Fund paid out an average of £100,000 to each project it funded.
+
+Reasoning
+---------
+
+The user asks: "How much grant money did the Future News Pilot Fund pay out, on average, to each project it funded?"
+
+We need to find information in the documents about the Future News Pilot Fund (FNF), how much it paid out in total, and how many projects it funded, then compute average.
+
+Looking at Document 1 (the report) and Document 2 (oral evidence).
+
+In Document 1:
+"We have received evidence... The FNF pilot ran until June 2020... It received 178 applications and issued grants to 20 projects."
+Earlier: "In October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta."
+
+So total fund was £2 million, but was all paid out? The text says "launched the £2 million Future News Pilot Fund... received 178 applications and issued grants to 20 projects." Later in Document 2, Jonathan Heawood mentions: "We were only able to offer £3,000 grants..." but that's about a different fund? Wait, need to check.
+
+Actually in Document 2, Jonathan Heawood says: "We know from the bit of funding we were able to run during the early phase of Covid when we were only able to offer £3,000 grants..." That's a different fund (Public Interest News Foundation).
+
+But for FNF, the report says it was a £2 million pilot fund and it issued grants to 20 projects. So average grant = £2,000,000 / 20 = £100,000 per project? Wait need to check if all £2m was distributed. The report says "launched the £2 million Future News Pilot Fund... received 178 applications and issued grants to 20 projects." It might be that total grants were part of the £2m. But let's verify if there's mention of grant sizes.
+
+In Document 2, Adam Cantwell-Corn? No. Let's search mental text: "The FNF pilot ran until June 2020, with investment targeted at new technologies... received 178 applications and issued grants to 20 projects." There's no explicit total payout mentioned other than the £2 million fund size.
+
+But wait, in Document 1: "We heard suggestions... The Government launched the £2 million Future News Pilot Fund..." Then "Nesta acknowledged... we’ve only been able to support the tip of the iceberg..."
+
+However, there's also mention in Document 2 by Jonathan Heawood? Actually he mentions "We were only able to offer £3,000 grants..." That's his own foundation's funding.
+
+But the question asks specifically: "How much grant money did the Future News Pilot Fund pay out, on average, to each project it funded?" This implies we have enough data: total payout divided by 20.
+
+If total fund was £2 million and 20 projects funded, average is £100,000. But was the full £2 million paid out? The report says "launched the £2 million... issued grants to 20 projects." Usually that means £2m was the budget and distributed. Let's check if any other figure exists.
+
+Looking at Document 1 paragraph 41-42:
+"The Government responded positively... launched the £2 million Future News Pilot Fund (FNF), administered by Nesta. The pilot fund ran until June 2020... received 178 applications and issued grants to 20 projects."
+
+There's no other figure. So average = £2,000,000 / 20 = £100,000.
+
+But wait, in Document 2, Jonathan Heawood mentions: "We know from the bit of funding we were able to run... only able to offer £3,000 grants..." Not relevant.
+
+Actually there might be a specific figure in the Nesta report mentioned: "Nesta... we’ve only been able to support the tip of the iceberg..." Not specific.
+
+Thus the answer should be £100,000.
+
+But I need to be precise: "How much grant money did the Future News Pilot Fund pay out, on average, to each project it funded?" If total was £2m and 20 projects, then average payout per project is £100,000.
+
+Let me double-check if there is any mention of total payout being different. The report says "launched the £2 million Future News Pilot Fund" and "issued grants to 20 projects." It's reasonable to assume the fund paid out its £2 million across the 20 projects, but actually some funds might not have fully distributed. However, without other data, this is the calculation expected.
+
+Thus answer: £100,000 (or £100,000 per project).
+
+But wait, the question might be expecting just the calculation based on the numbers given in the text. Yes.
+
+Therefore I will answer £100,000.
+
+Attempt 5 · Wrong
+-----------------
+Docs: Doc 1, Doc 3 · Note: —
+
+Final answer: £2,000,000 ÷ 20 = £100,000 per project (on average). | Your answer (gold): About £50,000
+
+How it got there: It divided Doc 1's £2 million by 20 projects to get £100,000.
+
+Where it left your evidence: It used the total fund size rather than Doc 4's ~£1 million grant portion.
+
+Passages quoted:
+
+- Quoted Doc 1: “An innovation fund for news”
+- Quoted Doc 1: “It received 178 applications and issued grants to 20 projects.”
+
+Named Doc 1, Doc 3
+
+Full answer
+-----------
+
+Based on the report, the Future News Pilot Fund was a £2 million pilot scheme that received 178 applications and issued grants to 20 projects (Document 1, paras 41–42).
+
+Dividing the total fund by the number of funded projects gives an average grant of:
+
+£2,000,000 ÷ 20 = £100,000 per project (on average).
+
+Reasoning
+---------
+
+We need answer based on input documents. Need locate info about Future News Pilot Fund grant amounts and number of projects funded.
+
+From Document 1 (Report): Section "An innovation fund for news" paragraph 41-42: The Future News Pilot Fund (FNF) was £2 million pilot fund... received 178 applications and issued grants to 20 projects.
+
+Need average grant money paid out to each project: total £2 million? Wait need check if all £2m paid out or some administrative costs? Likely £2m divided by 20 = £100,000 each on average? But need verify document mentions grant sizes? Let's inspect precisely.
+
+Document 1 paragraph 41: "We launched the £2 million Future News Pilot Fund..." Paragraph 42: "It received 178 applications and issued grants to 20 projects." Not explicit division but can compute average if total paid out equals £2m. However need be careful: fund was £2 million total, likely grant payout total near £2m minus admin? But question asks "How much grant money did the Future News Pilot Fund pay out, on average, to each project it funded?" This sounds compute £2,000,000 / 20 = £100,000.
+
+Let's verify in Document 3? No. So answer £100,000.
+
+Need cite source. We'll mention £2 million fund, 20 projects funded, average £100,000.
+
+Medium model
+============
+
+Attempt 1 · Wrong
+-----------------
+Docs: Doc 1 · Note: Note: where it went wrong
+
+Final answer: £100,000 | Your answer (gold): About £50,000
+
+Where it went wrong: Computed £100,000 from Document 1's £2 million / 20 projects without checking the oral evidence in Document 4 clarifying that roughly half the fund was actual grant funding.Doc 1 Doc 4
+
+How it got there: It used Doc 1's £2 million fund and 20 projects to compute £100,000 average.
+
+Where it left your evidence: It treated the entire £2 million as grant payout, overlooking Doc 4's ~£1 million grant-funding statement.
+
+Passages quoted:
+
+- Quoted Doc 1: “42. Several submissions said the FNF was a missed opportunity, focusing on too broad a range of projects with grants that were too small to make real change.124 The National Council for the Training of Journalists said”
+- Quoted Doc 1: “.125 Clear Sky Publishing said that the fund was largely directed at”
+- Quoted Doc 1: “rather than creating a sustainable platform for local news publishers.126 The News Media Association expressed disappointment that the FNF did not include established news media publishers.127 Reach PLC said that the FNF showed”
+- Quoted Doc 1: “128 In the project review Nesta acknowledged that”
+- Quoted Doc 1: “.129 They called for a sustained investment in news innovation of £10 million a year for the next decade.”
+
+Named Doc 1
+
+Full answer
+-----------
+
+The Future News Pilot Fund had a total budget of £2 million and issued grants to 20 projects.
+
+According to Document 1, paragraph 41: "The Government accepted the recommendation and in October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta. The pilot fund ran until June 2020, with investment targeted at new technologies, start-ups, and innovative business models. It received 178 applications and issued grants to 20 projects."
+
+To calculate the average grant amount: £2,000,000 ÷ 20 projects = £100,000 per project.
+
+This is further supported by paragraph 42 which states that "Several submissions said the FNF was a missed opportunity, focusing on too broad a range of projects with grants that were too small to make real change," and Nesta acknowledged they had "only been able to support the tip of the iceberg."
+
+£100,000
+
+Reasoning
+---------
+
+Let me search through the provided text to find information about the Future News Pilot Fund and how much grant money it paid out on average to each project.
+
+In Document 1, I find this relevant section:
+
+"41. The Cairncross Review recommended that the Government launch an innovation fund for the news industry.121 It argued that the declining revenues of news publishers and the difficulty of developing new business models meant there was a clear case for targeted public support. It called for the fund to be focused on innovations that would have industrywide benefits and improve the supply of public interest news. The Government accepted the recommendation and in October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta. The pilot fund ran until June 2020, with investment targeted at new technologies, start-ups, and innovative business models.122 It received 178 applications and issued grants to 20 projects.123"
+
+So according to this text:
+- The Future News Pilot Fund had a total budget of £2 million
+- It issued grants to 20 projects
+
+To calculate the average grant per project: £2,000,000 / 20 = £100,000 per project
+
+Let me double-check if there's any other information that might modify this calculation.
+
+Further in the text:
+"42. Several submissions said the FNF was a missed opportunity, focusing on too broad a range of projects with grants that were too small to make real change.124 The National Council for the Training of Journalists said "there was a sense that the FNF was a case of simply tinkering at the edges, with no obvious co-ordination of broader industry interests".125 Clear Sky Publishing said that the fund was largely directed at "innovation" rather than creating a sustainable platform for local news publishers.126 The News Media Association expressed disappointment that the FNF did not include established news media publishers.127 Reach PLC said that the FNF showed "distinct bias towards exceptionally small scale, niche-focused programmes that offered little or no learnings that could be scaled up to have an impact across the whole of the regional news landscape."128 In the project review Nesta acknowledged that "we've only been able to support the tip of the iceberg and what we've tapped into is an ambitious, creative and diverse field of innovation".129 They called for a sustained investment in news innovation of £10 million a year for the next decade."
+
+This confirms that the grants were considered small, which aligns with the £100,000 average calculation.
+
+Also: "This was the same amount and timespan as recommended in the Cairncross Review, which said that public support for journalism "should be generous enough to make a difference".130 The Cairncross Review also noted that in 2015 Nesta had managed a fund of around £2 million to encourage innovation in news gathering, but which was too small to have much impact.131"
+
+This further confirms the £2 million total fund size.
+
+So the calculation is straightforward: £2 million total fund / 20 projects = £100,000 average per project.
+
+Attempt 2 · Wrong
+-----------------
+Docs: Doc 1 · Note: —
+
+Final answer: However, it is worth noting that the document also indicates this funding was criticised as being too small to make a real difference. Several submissions stated that "the FNF was a missed opportunity, focusing on too broad a range of projects with grants that were too small to make real change." For example, the National Council for the Training of Journalists said "there was a sense that the FNF was a case of simply tinkering at the edges," and Clear Sky Publishing said the fund was largely di | Your answer (gold): About £50,000
+
+How it got there: It used Doc 1's £2 million and 20 projects to calculate £100,000 per project.
+
+Where it left your evidence: It used the full fund amount instead of Doc 4's ~£1 million grant-funding figure.
+
+Passages quoted:
+
+- Quoted Doc 1: “the FNF was a missed opportunity, focusing on too broad a range of projects with grants that were too small to make real change.”
+- Quoted Doc 1: “there was a sense that the FNF was a case of simply tinkering at the edges,”
+- Quoted Doc 1: “An innovation fund for news”
+- Quoted Doc 1: “The Government accepted the recommendation and in October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta.”
+- Quoted Doc 1: “It received 178 applications and issued grants to 20 projects.”
+
+Named Doc 1
+
+Full answer
+-----------
+
+Based on the information in Document 1, the Future News Pilot Fund (FNF) was a £2 million fund administered by Nesta that received 178 applications and issued grants to 20 projects.
+
+Average grant per project: £2,000,000 ÷ 20 = £100,000
+
+However, it is worth noting that the document also indicates this funding was criticised as being too small to make a real difference. Several submissions stated that "the FNF was a missed opportunity, focusing on too broad a range of projects with grants that were too small to make real change." For example, the National Council for the Training of Journalists said "there was a sense that the FNF was a case of simply tinkering at the edges," and Clear Sky Publishing said the fund was largely directed at "innovation" rather than creating a sustainable platform for local news publishers. The average of £100,000 per project should therefore be understood in the context of these criticisms about the inadequacy of the funding levels.
+
+Reasoning
+---------
+
+The user is asking about the average grant money paid out by the Future News Pilot Fund to each project it funded.
+
+Let me search through the documents for information about the Future News Pilot Fund.
+
+From Document 1, I found this passage in the "An innovation fund for news" section:
+- "The Government accepted the recommendation and in October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta."
+- "It received 178 applications and issued grants to 20 projects."
+
+So the fund was £2 million total, and it funded 20 projects.
+
+Average = £2,000,000 / 20 = £100,000 per project.
+
+Let me double-check this calculation. £2 million / 20 projects = £100,000 per project on average.
+
+The information is clearly stated in Document 1, paragraph 42:
+"The Government accepted the recommendation and in October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta. The pilot fund ran until June 2020, with investment targeted at new technologies, start-ups, and innovative business models. It received 178 applications and issued grants to 20 projects."
+
+So the answer is £100,000 per project on average.
+
+Attempt 3 · Wrong
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): About £50,000
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 4 · Wrong
+-----------------
+Docs: Doc 1 · Note: Note: where it went wrong
+
+Final answer: Therefore: £2,000,000 ÷ 20 projects = £100,000 per project on average. | Your answer (gold): About £50,000
+
+Where it went wrong: Repeated the £2,000,000 ÷ 20 calculation from Document 1 alone; the 'grant money paid out' wording was read as the fund's total value.Doc 1
+
+How it got there: It divided Doc 1's £2 million by 20 projects to arrive at £100,000.
+
+Where it left your evidence: It assumed all £2 million was grant money, missing Doc 4's ~£1 million grant-funding clarification.
+
+Passages quoted:
+
+- Quoted Doc 1: “received 178 applications and issued grants to 20 projects.”
+- Quoted Doc 1: “It received 178 applications and issued grants to 20 projects.”
+
+Named Doc 1
+
+Full answer
+-----------
+
+Based on the information provided in the documents, the Future News Pilot Fund paid out an average of £100,000 per project.
+
+According to Document 1, the Future News Pilot Fund was a £2 million fund that "received 178 applications and issued grants to 20 projects."
+
+Therefore: £2,000,000 ÷ 20 projects = £100,000 per project on average.
+
+Reasoning
+---------
+
+The user is asking about the average grant money paid out by the Future News Pilot Fund to each project it funded.
+
+Let me look through the documents to find information about the Future News Pilot Fund.
+
+From Document 1 (the main report), I can see:
+- "In October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta."
+- "The pilot fund ran until June 2020, with investment targeted at new technologies, start-ups, and innovative business models. It received 178 applications and issued grants to 20 projects."
+
+So:
+- Total fund: £2 million
+- Number of projects funded: 20
+
+Average per project = £2,000,000 / 20 = £100,000
+
+Let me verify this calculation:
+£2,000,000 ÷ 20 = £100,000
+
+So the average grant per project would be £100,000.
+
+Let me check if there's any more specific information about the actual grant amounts in the documents.
+
+Looking again at Document 1:
+- "It received 178 applications and issued grants to 20 projects."
+- The fund was £2 million total.
+
+So the average would be £2 million / 20 = £100,000 per project.
+
+I should provide this answer based on the informationin the documents.
+
+Attempt 5 · Wrong
+-----------------
+Docs: Doc 1 · Note: Note: where it went wrong
+
+Final answer: £100,000 | Your answer (gold): About £50,000
+
+Where it went wrong: Answered £100,000 from Document 1's figures; did not use David Floyd's evidence in Document 4 that only about £1 million of the £2 million was grant funding.Doc 1 Doc 4
+
+How it got there: It used Doc 1's £2 million fund and 20 projects to compute £100,000 average.
+
+Where it left your evidence: It treated the whole £2 million as grants rather than Doc 4's ~£1 million grant portion.
+
+Passages quoted:
+
+- Quoted Doc 1: “too small to make real change”
+- Quoted Doc 1: “42. Several submissions said the FNF was a missed opportunity, focusing on too broad a range of projects with grants that were too small to make real change.124 The National Council for the Training of Journalists said”
+- Quoted Doc 1: “.125 Clear Sky Publishing said that the fund was largely directed at”
+- Quoted Doc 1: “rather than creating a sustainable platform for local news publishers.126 The News Media Association expressed disappointment that the FNF did not include established news media publishers.127 Reach PLC said that the FNF showed”
+- Quoted Doc 1: “128 In the project review Nesta acknowledged that”
+
+Named Doc 1
+
+Full answer
+-----------
+
+The Future News Pilot Fund (FNF) was a £2 million fund that issued grants to 20 projects. This information is found in paragraph 41 of Document 1:
+
+"The Government accepted the recommendation and in October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta. The pilot fund ran until June 2020, with investment targeted at new technologies, start-ups, and innovative business models. It received 178 applications and issued grants to 20 projects."
+
+To calculate the average grant amount: £2,000,000 ÷ 20 projects = £100,000 per project.
+
+This is further supported by criticisms mentioned in paragraph 42 that the grants were "too small to make real change" and showed "distinct bias towards exceptionally small scale, niche-focused programmes."
+
+£100,000
+
+Reasoning
+---------
+
+Let me search through the text to find information about the Future News Pilot Fund and how much it paid out on average per project.
+
+From Document 1 (the main report), I find this relevant section:
+
+"41. The Cairncross Review recommended that the Government launch an innovation fund for the news industry.121 It argued that the declining revenues of news publishers and the difficulty of developing new business models meant there was a clear case for targeted public support. It called for the fund to be focused on innovations that would have industrywide benefits and improve the supply of public interest news. The Government accepted the recommendation and in October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta. The pilot fund ran until June 2020, with investment targeted at new technologies, start-ups, and innovative business models.122 It received 178 applications and issued grants to 20 projects.123"
+
+So the Future News Pilot Fund (FNF) was a £2 million fund that issued grants to 20 projects.
+
+To calculate the average grant per project: £2,000,000 / 20 = £100,000 per project.
+
+Let me double-check if there's any other information that might modify this calculation.
+
+Further in the text:
+"42. Several submissions said the FNF was a missed opportunity, focusing on too broad a range of projects with grants that were too small to make real change.124 The National Council for the Training of Journalists said "there was a sense that the FNF was a case of simply tinkering at the edges, with no obvious co-ordination of broader industry interests".125 Clear Sky Publishing said that the fund was largely directed at "innovation" rather than creating a sustainable platform for local news publishers.126 The News Media Association expressed disappointment that the FNF did not include established news media publishers.127 Reach PLC said that the FNF showed "distinct bias towards exceptionally small scale, niche-focused programmes that offered little or no learnings that could be scaled up to have an impact across the whole of the regional news landscape."128 In the project review Nesta acknowledged that "we've only been able to support the tip of the iceberg and what we've tapped into is an ambitious, creative and diverse field of innovation".129 They called for a sustained investment in news innovation of £10 million a year for the next decade."
+
+This confirms the £2 million total and 20 projects, but doesn't give a different figure for the average grant size.
+
+Also, in footnote 123: "Nesta, "The Future News Pilot Fund: meet the grantees", [accessed 19 December 2022]"
+
+And footnote 129: "Nesta, Future News Pilot Fund, End of programme report (12 August 2020), p.36"
+
+So the calculation is straightforward: £2 million total fund / 20 projects = £100,000 average per project.
+
+Wait, let me check if the £2 million was the total amount paid out or just the fund size. The text says: "launched the £2 million Future News Pilot Fund (FNF)" and "issued grants to 20 projects." It doesn't explicitly say the entire £2 million was distributed, but given the context and the criticisms that the grants were "too small," it's reasonable to assume the £2 million was the total amount distributed across the 20 projects.
+
+Actually, let me read more carefully: "in October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta. The pilot fund ran until June 2020, with investment targeted at new technologies, start-ups, and innovative business models.122 It received 178 applications and issued grants to 20 projects.123"
+
+The phrase "launched the £2 million Future News Pilot Fund" suggests the fund size was £2 million, and "issued grants to 20 projects" suggests they distributed grants to 20 projects. Given the context and the criticisms about the grants being too small, it's almost certain that the £2 million was the total amount distributed across the 20 projects.
+
+So the average would be £2,000,000 / 20 = £100,000 per project.
+
+Let me check if there's any other mention of the actual amount distributed.
+
+In paragraph 43: "DCMS has not announced a follow up to the FNF pilot nor an alternative source of funding. In written evidence, the Department told us that they "continue to explore options for additional fiscal measures to support the sector".132 The Minister admitted there was "probably some merit" to the criticisms that had been directed towards the Fund and acknowledged that any future intervention would need to have "clearer criteria"133 and be "more substantial".134 On whether a follow up fund would be launched, she told us "We are aware of NESTA's recommendations and we are looking at whether there is value in developing a more substantial fund with more targeted interventions."134"
+
+And footnote 129: "Nesta, Future News Pilot Fund, End of programme report (12 August 2020), p.36" where "They called for a sustained investment in news innovation of £10 million a year for the next decade. This was the same amount and timespan as recommended in the Cairncross Review, which said that public support for journalism "should be generous enough to make a difference".130 The Cairncross Review also noted that in 2015 Nesta had managed a fund of around £2 million to encourage innovation in news gathering, but which was too small to have much impact.131"
+
+This confirms that the FNF was £2 million total, and Nesta's end of programme report (which would have the exact figures) is cited.
+
+Given all this, the average grant size was £100,000 (£2 million / 20 projects).
+
+Attempt 6 · Wrong
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): About £50,000
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: Note: where it shortcut
+
+Final answer: not shown | Your answer (gold): About £50,000
+
+Where it shortcut: Reached 'about £50,000' by combining Document 1's 20 funded projects with Document 4's remark that the £2 million fund included 'about £1 million was grant funding' — the only passage supporting the gold figure.Doc 1 Doc 4
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): About £50,000
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: —
+
+Final answer: not shown | Your answer (gold): About £50,000
+
+How it got there: Only right or wrong was recorded for this attempt.
+
+This attempt’s text was not recorded.
+
+------------------------------------------------------------------------
+Run 1 · Between levels · Earlier version — does not count
+Oct 13, 2026, 2:26 PM · Version fb9504 · Low 0/5 · Medium 1/7 · High 3/3
+------------------------------------------------------------------------
+
+What changed before this run: first run
+
+Your answer: 158 applications and about £50,000
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: —
+
+Final answer: 158 applications went unfunded, and the average funded project received £100,000. | Your answer (gold): 158 applications and about £50,000
+
+Full answer
+-----------
+
+158 applications went unfunded, and the average funded project received £100,000.
+
+Reasoning
+---------
+
+The user asks: "How many Future News Pilot Fund applications went unfunded, and how much grant money did the average funded project receive? Answer in that order."
+
+We need answer from own knowledge. Need identify Future News Pilot Fund applications unfunded count and average grant money per funded project.
+
+Need recall specifics about Future News Pilot Fund. This is likely a UK fund? Maybe "Future News Pilot Fund" launched by Nesta? Let's recall.
+
+Nesta had a "Future News Pilot Fund" in 2019? Actually Nesta launched "Future News Pilot Fund" in 2019 with £2 million? Let's recall details.
+
+There was "Future News Fund" by Facebook? No, that's different (Facebook Journalism Project?). But "Future News Pilot Fund" sounds like Nesta's initiative to support innovation in news. Let's recall: In 2019 Nesta announced a £2m pilot fund for news innovation? Or in 2020?
+
+Let's recall news: In June 2019, Nesta launched the £2m Future News Pilot Fund? Or was it in 2020?
+
+Actually I remember in 2019 Nesta launched "Future News Pilot Fund" with £2 million to support innovative news projects in UK? Let's check mental details.
+
+There may have been 178 applications? Or 100? Let's think.
+
+Another possibility: The "Future News Pilot Fund" was part of the UK government's? No, Nesta is an innovation foundation.
+
+We need number of applications that went unfunded, and average grant money funded projects received.
+
+Let's recall announcement of winners. Maybe there were 20 projects funded? Or 19?
+
+Let's search mental database: In January 2020, Nesta announced 20 projects received funding from Future News Pilot Fund? Or maybe 13?
+
+Wait, I think in late 2020 Nesta announced £2m Future News Fund? Let's recall precisely.
+
+There was a "Future News Pilot Fund" launched in June 2019 with £2m, open for applications. They received over 100 applications? Then in January 2020 they announced 20 projects funded? Or maybe 19 funded projects totaling £2m?
+
+Let's try to recall news headlines around Jan 2020: "Nesta announces £2m funding for 20 news innovation projects" maybe.
+
+But the question asks "How many Future News Pilot Fund applications went unfunded..." This sounds like there were a specific total number of applications and some funded. For example, if there were 178 applications and 20 funded, then unfunded = 158? Or 178 total, 20 funded => 158 unfunded.
+
+But need correct numbers.
+
+Let's recall a specific report: "Future News Pilot Fund: we received 178 applications, funded 19 projects with total £2m, average grant around £100k?" Hmm 19 projects with £2m average about £105k.
+
+But wait, there might have been 130 applications, 20 funded => 110 unfunded.
+
+We need be precise.
+
+Let's recall details from Nesta's website: The Future News Pilot Fund was a £2 million fund running from 2019-2021? They might have had two rounds?
+
+Actually there was "Future News Fund" launched in 2029? No.
+
+Let's recall news articles in 2019: Nesta launches £2m pilot fund for public interest news. The fund offered grants between £20,000 and £100,000? Or up to £50,000?
+
+Let's try to recall the funded projects: Some included "The Bureau of Investigative Journalism"? No, that was supported elsewhere. Maybe projects like "Tortoise Media"? No, Tortoise got funding from different sources.
+
+Perhaps the pilot fund supported projects like "The Mill"? No.
+
+Let's systematically recall Nesta news innovation funds. Nesta had "Destination Local" for local news in 2019? That was a £2m fund? Actually "Destination Local" was a £2m programme to help local news in UK, launched in 2019? Let's check mental: In 2019, Facebook gave £4.5m for local news in UK via NCTJ. Meanwhile Nesta had "Future News Pilot Fund" with £2.2m?
+
+Wait, there was also the "Cairncross Review" on sustainable journalism, then UK government responded with a "Future News Fund" of £2m? Let's recall: The Cairncross Review was published in Feb 2019, recommending a new Institute for Public Interest News and funding for local journalism. The UK government responded in January 2020? Actually in January 2020 the government announced a £2m pilot fund for news innovation? Or was that Nesta?
+
+Let's recall: In November 2019, the UK government announced a £2m "Future News Pilot Fund" to be administered by Nesta? Yes! That sounds right. The government pledged £2 million for a pilot fund to support new ways of delivering news, administered by Nesta. The fund opened for applications in late 2019/early 2020.
+
+Then in maybe June 2020 they announced the winners? Or in 2021?
+
+The question asks specifically "How many Future News Pilot Fund applications went unfunded, and how much grant money did the average funded project receive? Answer in that order."
+
+This sounds like a specific statistic mentioned in a report summarizing the fund: e.g., "We received 178 applications, of which 158 went unfunded. The average funded project received £73,000" or something.
+
+We need be accurate.
+
+Let's recall a news article summarizing the pilot fund results. Maybe in 2022 they published an evaluation report. The report might state: "We received 178 applications and funded 20, leaving 158 unfunded. The average grant was £83,000"? Or total £2m divided by 20 = £100k average.
+
+But let's try to be more precise.
+
+The fund total was £2 million. If 20 projects funded, average is £100,000. But some might have received different amounts (between £20k and £100k?). Actually if the range was £20k to £100k, average might be around £70k if 29 projects? Let's check consistency: If average is £73,000 and total is £2m, then number funded is about 27.
+
+But maybe the total was £2.2m?
+
+Let's recall the announcement of funded projects. I think in September 2029? No, that's wrong.
+
+Let's search mental news headlines in 2020: "Nesta awards £2m to 20 news projects"? Or "11 projects share £2m"?
+
+Actually I think in 2020 there was an announcement that 10 projects received funding? Let's try to recall specific project names: One was "The Ferret" in Scotland? Another was "The Bristol Cable"? Or "Bureau Local"?
+
+Wait, there was a list of funded projects announced in maybe October 2029? No.
+
+Let's recall that in 2020, during COVID, there were many funds. The Future News Pilot Fund might have funded projects like "The Citizens" in Scotland?
+
+But we just need numbers, not names.
+
+Perhaps the evaluation report said: "There were 178 applications, 19 were funded, leaving 159 unfunded. The average grant size was £101,000"? Let's check: 19 * £100k = £1.9m, close to £2m.
+
+But I need be somewhat sure.
+
+Let's recall that in June 2019 Nesta launched the fund with £2m available, with grant sizes of up to £100,000? Actually they said grants of up to £50,000? Let's check mental consistency: If grant sizes up to £100k, then with £2m you could fund at least 20.
+
+But there might also have been development grants of £20k and pilot grants of £100k? Hmm.
+
+Let's recall seeing a headline: "Future News Pilot Fund receives 178 applications for £2m pot" Maybe they said they received 178 applications totaling requests of £10m?
+
+Then they funded 19 projects totaling £2m? Let's check: 178 applications, 19 funded => 159 unfunded. The average grant = £2,000,000 / 19 ≈ £105,263. That sounds plausible, but they might round to £100,000.
+
+But wait the question asks "how much grant money did the average funded project receive?" If the answer is about £100,000, that'd be neat.
+
+But I should check if unfunded number is 158 (if 20 funded) or 159 (if 19 funded).
+
+Let's recall specific number of funded projects announced. I think I saw a list of 20 projects? Or maybe 17?
+
+Let's try to recall news in late 2020: "20 innovative news projects share £2m fund" That sounds right. So 20 funded.
+
+But then total applications might have been 178, leaving 158 unfunded. Or maybe 200 applied, leaving 180.
+
+Let's recall that in the evaluation report they might have said "We received 178 applications... we funded 19 projects..." Hmm but I think 20 is rounder.
+
+Actually, I think there were two rounds: round 1 funded some, round 2 funded others?
+
+Let's recall the timeline: Fund launched June 2019. Applications opened? Maybe they received applications by some deadline. Then in around March 2020 they announced the first round? Or maybe in September 2020?
+
+Given COVID hit in March 2020, they might have delayed.
+
+But eventually in maybe 2021 they announced 13 funded projects?
+
+Let's try to recall specific projects funded: One was "The Gazette" in north east? Another was "Social Spider"? No, that's a publisher.
+
+Actually, I think the funded projects included:
+- The Bristol Cable
+- The Meteor
+- The Ferret
+- The Mill?
+- Bureau of Investigative Journalism's local network?
+- Tortoise?
+- "Newsquest"?
+- "The People's Newsroom"?
+
+This is too vague.
+
+But the question is likely drawn from a specific source that lists these stats. The wording "Future News Pilot Fund applications went unfunded" sounds like they said "Of the 178 applications received, 158 went unfunded..." Or "Of 170 applications, 150 went unfunded..."
+
+We need "Answer in that order" => first the number unfunded, then the average grant.
+
+Given typical exam/quiz based on a report, they might ask: "How many Future News Pilot Fund applications went unfunded, and how much grant money did the average funded project receive?"
+
+If total applications = 178 and funded = 20 => unfunded = 158. Average grant = £2m/20 = £100,000.
+
+But wait, if grant sizes vary, average might not be exactly £100k, but they might have said "an average of £85,000" etc.
+
+Let's recall that in the announcement they said grants range from £20,000 to £100,000. So average might indeed be somewhere in the middle, maybe £60,000? But if total is £2m and there are, say, 30 funded projects, average is ~£67k.
+
+But was the total fund £2m? Yes, I think so.
+
+However, there might have been £2.2m distributed?
+
+Let's try to recall a specific figure mentioned in news coverage: "The average grant was £85,000" sounds familiar.
+
+But I need provide one answer.
+
+Given I need to be honest about uncertainty but provide best answer. The prompt asks "Answer the following question from your own knowledge... Give your single best answer." So I should provide the pair.
+
+I'll guess that 158 applications went unfunded, and the average funded project received £100,000 (or about £100,000).
+
+But I want to check consistency: If 20 funded with average £100k => total £2m exactly. That sounds like a designed round number, likely correct. So unfunded might be 158 if total was 178.
+
+But was total 178? That sounds specific, likely correct. So 158 unfunded, £100,000 average.
+
+Let's go with: 158 unfunded, and the average project received £100,000.
+
+But wait, if 178 applied and 20 funded, then unfunded = 158 indeed.
+
+Thus answer: 158, and £100,000.
+
+However, I want to be somewhat precise with currency maybe "£100,000". We'll answer "158 went unfunded, and the average funded project received £100,000."
+
+But I'm not 100% sure. Let's refine: Maybe there were 170 applications, 20 funded => 150 unfunded, average £85,000? Hmm.
+
+Let's recall seeing a figure "170 applications" maybe not.
+
+Actually, I think in a report they said "We received 178 applications from across the UK..." Yes, 178 sounds right. Then they said "We funded 19 projects totaling £1.9m"? Or "We funded 19 projects"?
+
+Let's check mental arithmetic: 178 - 20 = 158.
+
+Therefore I will answer 158 and £100,000.
+
+But wait, there might have been 19 funded, then 178 - 19 = 159. Which one is correct?
+
+If total fund is £2m and average grant is about £100k, then number of funded projects is about 20. So 20 funded is correct. So unfunded = 178 - 20 = 158.
+
+Thus my answer: 158 applications went unfunded, and the average grant was £100,000.
+
+I'll present that.
+
+Low model
+=========
+
+Attempt 1 · Wrong
+-----------------
+Docs: Doc 1 · Note: —
+
+Final answer: The Future News Pilot Fund received 178 applications and funded 20 projects, so 158 went unfunded. The pilot fund was £2 million, divided among 20 grantees, so the average funded project received £100,000. | Your answer (gold): 158 applications and about £50,000
+
+Passages quoted:
+
+- Quoted Doc 1: “issued grants to 20 projects”
+
+Full answer
+-----------
+
+The Future News Pilot Fund received 178 applications and funded 20 projects, so 158 went unfunded. The pilot fund was £2 million, divided among 20 grantees, so the average funded project received £100,000.
+
+Reasoning
+---------
+
+We need answer using docs. Need find Future News Pilot Fund applications unfunded and average grant money funded projects received.
+
+From doc: "The pilot fund ran until June 2020, with investment targeted at new technologies... received 178 applications and issued grants to 20 projects." So unfunded = 178 - 20 = 158.
+
+Need average grant money funded project received. Need total fund amount and divide by 20? The pilot was £2 million? From doc: "Government agreed... launched the £2 million Future News Pilot Fund... pilot fund ran... received 178 applications and issued grants to 20 projects." Also "Nesta acknowledged... sustained investment in news innovation of £10 million a year..." But need average grant money per funded project. £2 million divided by 20 = £100,000. Need verify if total grant pool £2m. Let's check docs for grant sizes. Might mention grants? Let's search mental: "issued grants to 20 projects" no explicit average, but pilot fund was £2 million, likely distributed among 20 => average £100k. Need answer in order: 158, £100,000.
+
+Need cite maybe. We'll answer concisely.
+
+Attempt 2 · Wrong
+-----------------
+Docs: Doc 1, Doc 2 · Note: —
+
+Final answer: Based on the documents, the Future News Pilot Fund received 178 applications and funded 20 projects, so 158 went unfunded. The fund was £2 million in total, meaning the average funded project received £100,000. | Your answer (gold): 158 applications and about £50,000
+
+Passages quoted:
+
+- Quoted Doc 1: “investment targeted”
+- Quoted Doc 1: “The Government accepted the recommendation and in October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta. The pilot fund ran until June 2020, with investment targeted at new technologies, start-ups, and innovative business models.122 It received 178 applications and”
+
+Named Doc 1, Doc 2
+
+Full answer
+-----------
+
+Based on the documents, the Future News Pilot Fund received 178 applications and funded 20 projects, so 158 went unfunded. The fund was £2 million in total, meaning the average funded project received £100,000.
+
+Reasoning
+---------
+
+We need answer based on input documents. Need find info about Future News Pilot Fund applications and grant money average funded project.
+
+Document 1 mentions pilot fund and Nesta. Let's locate details.
+
+In Document 1 paragraph 42? Let's check.
+
+Document 1 text around Future News Pilot Fund:
+"We received 178 applications and issued grants to 20 projects." Need unfunded = 178 - 20 = 158.
+
+Also need average grant money funded project received. The pilot fund was £2 million? Let's check. In Document 1: "In October 2019 launched the £2 million Future News Pilot Fund..." And "We received 178 applications and issued grants to 20 projects..." Need average grant money = £2 million / 20 = £100,000? But need verify if all £2m distributed or some other total. The text mentions "investment targeted..." Let's inspect precisely.
+
+Looking at Document 1:
+"The Government accepted the recommendation and in October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta. The pilot fund ran until June 2020, with investment targeted at new technologies, start-ups, and innovative business models.122 It received 178 applications and issued grants to 20 projects.123"
+
+Then in footnote 130 maybe? Actually paragraph 42 mentions NESTA recommendation £10m per year. But for average grant, likely £2m divided by 20 = £100,000. Let's verify with other docs.
+
+Document 2 Q? Not necessary.
+
+But need answer in order: unfunded applications count, then average grant money.
+
+Unfunded = 178 - 20 = 158.
+
+Average grant = £2,000,000 / 20 = £100,000.
+
+Need present in that order.
+
+Attempt 3 · Wrong
+-----------------
+Docs: Doc 1, Doc 3 · Note: —
+
+Final answer: The Future News Pilot Fund received 178 applications and funded 20 projects, so 158 went unfunded. The fund was £2 million in total, divided among the 20 funded projects, so the average grant was £100,000. | Your answer (gold): 158 applications and about £50,000
+
+Passages quoted:
+
+- Quoted Doc 1: “It received 178 applications and issued grants to 20 projects.”
+- Quoted Doc 1: “£2 million Future News Pilot Fund (FNF), administered by Nesta.”
+- Quoted Doc 1: “Several submissions said the FNF was a missed opportunity, focusing on too broad a range of projects with grants that were too small”
+
+Named Doc 1, Doc 3
+
+Full answer
+-----------
+
+The Future News Pilot Fund received 178 applications and funded 20 projects, so 158 went unfunded. The fund was £2 million in total, divided among the 20 funded projects, so the average grant was £100,000.
+
+Reasoning
+---------
+
+We need parse input docs for Future News Pilot Fund info. Need number of applications that went unfunded, and average grant money funded project received.
+
+Looking in Document 1 (report) paragraph 42: "It received 178 applications and issued grants to 20 projects." So unfunded = 178 - 20 = 158.
+
+Need average grant money funded project received. The pilot fund was £2 million total? Let's check context. Paragraph 41 mentions "£2 million Future News Pilot Fund (FNF), administered by Nesta." Paragraph 42 "It received 178 applications and issued grants to 20 projects." Need average grant = total £2m divided by 20? Or maybe not all £2m distributed? Let's inspect precisely.
+
+Document 1 paragraph 41: "We launched our inquiry... The Government accepted... In October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta."
+
+Then paragraph 42: "Several submissions said the FNF was a missed opportunity, focusing on too broad a range of projects with grants that were too small..."
+
+Need grant money average funded project received = £2m / 20 = £100,000. But need verify if total distributed was £2m. Might be pilot fund of £2 million, likely distributed among 20 projects => average £100k. Let's check if any other figure. In Document 3 oral evidence? Maybe not. So answer: 158 unfunded, average £100,000.
+
+Need "Answer in that order." So "158, £100,000".
+
+Attempt 4 · Wrong
+-----------------
+Docs: Doc 1, Doc 3 · Note: —
+
+Final answer: 158 applications went unfunded, and the average funded project received £100,000. | Your answer (gold): 158 applications and about £50,000
+
+Passages quoted:
+
+- Quoted Doc 1: “The pilot fund ran until June 2020, with investment targeted at new technologies, start-ups, and innovative business models.122 It received 178 applications and issued grants to 20 projects.123”
+- Quoted Doc 1: “grants that were too small”
+
+Named Doc 1, Doc 3
+
+Full answer
+-----------
+
+158 applications went unfunded, and the average funded project received £100,000.
+
+Reasoning
+---------
+
+We need answer based on input documents. Need find Future News Pilot Fund applications numbers unfunded and average grant money funded project received. Let's locate in docs.
+
+In Document 1 (Report) paragraph 42: "The pilot fund ran until June 2020, with investment targeted at new technologies, start-ups, and innovative business models.122 It received 178 applications and issued grants to 20 projects.123"
+
+So total applications 178, funded 20, unfunded 178 -20 = 158.
+
+Need average grant money funded project received. Need total grant money divided by 20. Document mentions pilot fund £2 million? Let's check. In Document 1 paragraph 41: "The Government... launched the £2 million Future News Pilot Fund (FNF), administered by Nesta." So total £2 million divided by 20 = £100,000 average? Wait need check if all £2m distributed as grants to 20 projects, likely yes. Let's verify in Document 1 maybe mention grant sizes? Paragraph 42 mentions "grants that were too small..." but not specific average. However with £2 million total and 20 projects, average £100,000. Need ensure correct units.
+
+Also Document 3 oral evidence maybe mentions? Not necessary.
+
+Thus answer: 158 unfunded, average £100,000. Need order "How many ... went unfunded, and how much grant money did the average funded project receive? Answer in that order." So "158, £100,000".
+
+Attempt 5 · Wrong
+-----------------
+Docs: Doc 1, Doc 2 · Note: —
+
+Final answer: The Future News Pilot Fund received 178 applications and funded 20 projects, so 158 went unfunded. The fund was £2 million in total, so the average grant per funded project was £100,000. | Your answer (gold): 158 applications and about £50,000
+
+Passages quoted:
+
+- Quoted Doc 1: “An innovation fund for news”
+- Quoted Doc 1: “we’ve only been able to support the tip of the iceberg”
+
+Named Doc 1, Doc 2
+
+Full answer
+-----------
+
+The Future News Pilot Fund received 178 applications and funded 20 projects, so 158 went unfunded. The fund was £2 million in total, so the average grant per funded project was £100,000.
+
+Reasoning
+---------
+
+We need answer based on input docs. Need find info about Future News Pilot Fund applications unfunded and average grant money funded project received.
+
+Looking at Document 1 (report) and Document 2/3/4 (oral evidence). In Document 1 paragraph 41-42? Let's recall precisely.
+
+In Document 1, section "An innovation fund for news" paragraph 41? Let's locate: "In October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta. The pilot fund ran until June 2020, with investment targeted at new technologies, start-ups, and innovative business models. It received 178 applications and issued grants to 20 projects."
+
+Then paragraph 43 mentions Nesta recommendations etc.
+
+Also in Document 2? Not needed.
+
+So applications received 178, grants issued to 20, so unfunded applications = 178 - 20 = 158.
+
+Average grant money per funded project: total fund £2 million? Wait "£2 million Future News Pilot Fund... received 178 applications and issued grants to 20 projects." Need average grant money funded project received. If total £2 million distributed among 20 projects? Might not all distributed? But likely average = £2m / 20 = £100,000. Need verify if total grant pool was £2m and all issued? The text says pilot fund £2 million... received 178 applications and issued grants to 20 projects. In the Nesta report mentioned "we've only been able to support the tip of the iceberg..." but not necessary. So average grant = £100,000.
+
+Need answer in that order: unfunded applications then average grant.
+
+Thus: 158 unfunded applications, and £100,000 average grant.
+
+Medium model
+============
+
+Attempt 1 · Wrong
+-----------------
+Docs: Doc 1 · Note: —
+
+Final answer: 158, £100000 | Your answer (gold): 158 applications and about £50,000
+
+Passages quoted:
+
+- Quoted Doc 1: “In the project review Nesta acknowledged that”
+- Quoted Doc 1: “.129 They called for a sustained investment in news innovation of £10 million a year for the next decade.”
+- Quoted Doc 1: “The Future News Pilot Fund: meet the grantees”
+- Quoted Doc 1: “Department for Digital, Culture, Media and Sport (SLJ0041)”
+
+Named Doc 1
+
+Full answer
+-----------
+
+158, £100000
+
+Reasoning
+---------
+
+Let me carefully search through the provided text to find information about the Future News Pilot Fund, specifically the number of applications that went unfunded and the average grant amount for funded projects.
+
+From Document 1 (the main report), I find this relevant section:
+
+"41. The Cairncross Review recommended that the Government launch an innovation fund for the news industry.121 It argued that the declining revenues of news publishers and the difficulty of developing new business models meant there was a clear case for targeted public support. It called for the fund to be focused on innovations that would have industrywide benefits and improve the supply of public interest news. The Government accepted the recommendation and in October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta. The pilot fund ran until June 2020, with investment targeted at new technologies, start-ups, and innovative business models.122 It received 178 applications and issued grants to 20 projects.123"
+
+So according to this:
+- Total applications: 178
+- Funded projects: 20
+- Total fund amount: £2 million
+
+To find the number of unfunded applications: 178 - 20 = 158
+
+To find the average grant amount for funded projects: £2,000,000 / 20 = £100,000
+
+Let me double-check if there's any other information in the text that might modify these numbers.
+
+In paragraph 42, it says: "In the project review Nesta acknowledged that "we've only been able to support the tip of the iceberg and what we've tapped into is an ambitious, creative and diverse field of innovation".129 They called for a sustained investment in news innovation of £10 million a year for the next decade."
+
+But this doesn't change the numbers for the pilot fund itself.
+
+Also, footnote 123 says: "Nesta, "The Future News Pilot Fund: meet the grantees", [accessed 19 December 2022]"
+
+But we don't have the content of that footnote, just the reference.
+
+So based on the information provided in the text:
+- Unfunded applications: 158 (178 total - 20 funded)
+- Average grant per funded project: £100,000 (£2,000,000 total / 20 projects)
+
+Let me check if there's any other mention of the fund that might give different numbers.
+
+In paragraph 122: "Department for Digital, Culture, Media and Sport (SLJ0041)" - this is just a reference to written evidence.
+
+In paragraph 123: "Nesta, "The Future News Pilot Fund: meet the grantees", [accessed 19 December 2022]" - again, just a reference.
+
+I don't see any other specific numbers about the Future News Pilot Fund applications or grant amounts.
+
+So my calculation stands:
+- Unfunded applications: 158
+- Average grant per funded project: £100,000
+
+Attempt 2 · Wrong
+-----------------
+Docs: — · Note: —
+Final answer: Answer not shown.
+
+Attempt 3 · Right
+-----------------
+Docs: Doc 1, Doc 4 · Note: —
+
+Final answer: - £1,000,000 ÷ 20 funded projects = £50,000 average per project | Your answer (gold): 158 applications and about £50,000
+
+Passages quoted:
+
+- Quoted Doc 1: “£2 million Future News Pilot Fund”
+- Quoted Doc 1: “It received 178 applications and issued grants to 20 projects.”
+- Quoted Doc 4: “That was £2 million and about £1 million was grant funding.”
+
+Named Doc 1, Doc 4
+
+Full answer
+-----------
+
+Based on the input documents:
+
+1. Number of unfunded applications: 158
+
+- The Future News Pilot Fund received 178 applications and issued grants to 20 projects (Document 1, paragraph 42)
+- 178 total applications − 20 funded projects = 158 unfunded applications
+
+1. Average grant per funded project: approximately £50,000
+
+- The total fund was £2 million, but approximately £1 million was distributed as grant funding (Document 4, paragraph 254)
+- £1,000,000 ÷ 20 funded projects = £50,000 average per project
+
+Reasoning
+---------
+
+The user is asking about the Future News Pilot Fund (FNF). I need to find:
+1. How many applications went unfunded
+2. The average grant money per funded project
+
+Let me search through the documents for information about the FNF.
+
+From Document 1, paragraph 42:
+"The pilot fund ran until June 2020, with investment targeted at new technologies, start-ups, and innovative business models. It received 178 applications and issued grants to 20 projects."
+
+So:
+- Total applications: 178
+- Funded projects: 20
+- Unfunded applications: 178 - 20 = 158
+
+Now I need to find the total amount of the fund to calculate the average.
+
+From Document 1, paragraph 41:
+"In October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta."
+
+Wait, let me check this again. The text says "£2 million Future News Pilot Fund". But I should look for the actual grant amounts.
+
+Looking again at Document 1, paragraph 42: "It received 178 applications and issued grants to 20 projects."
+
+And paragraph 43 mentions the Fund being £2 million, but I need to check if the full £2 million was distributed or just part of it.
+
+Actually, looking at Document 4, paragraph 254:
+"That was £2 million and about £1 million was grant funding."
+
+So about £1 million was grant funding. So if there were 20 projects funded, the average would be approximately £1 million / 20 = £50,000 per project.
+
+Let me verify this calculation:
+- Total applications: 178
+- Funded: 20
+- Unfunded: 178 - 20 = 158
+- Total grant funding: ~£1 million (from Document 4)
+- Average per funded project: £1,000,000 / 20 = £50,000
+
+So:
+1. Number of unfunded applications: 158
+2. Average grant per funded project: £50,000
+
+Let me double-check by looking at Document 1 again. It says the fund was £2 million, but Document 4 clarifies that about £1 million was grant funding. So the average would be £50,000.
+
+Actually, I should be precise here. The question asks specifically for:
+1. How many applications went unfunded
+2. Average grant money per funded project
+
+From the documents:
+- 178 applications received
+- 20 grants issued
+- 158 applications went unfunded
+- Total fund was £2 million, but only about £1 million was grant funding
+- So average = £1 million / 20 = £50,000
+
+The answer should be: 158 applications went unfunded, and the average funded project received approximately £50,000.
+
+Attempt 4 · Wrong
+-----------------
+Docs: Doc 1 · Note: —
+
+Final answer: 158, £100,000 | Your answer (gold): 158 applications and about £50,000
+
+Passages quoted:
+
+- Quoted Doc 1: “In the project review Nesta acknowledged that”
+- Quoted Doc 1: “.129 They called for a sustained investment in news innovation of £10 million a year for the next decade.”
+- Quoted Doc 1: “The Future News Pilot Fund: meet the grantees”
+- Quoted Doc 1: “The Government accepted the recommendation and in October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta.”
+- Quoted Doc 1: “It received 178 applications and issued grants to 20 projects.”
+
+Named Doc 1
+
+Full answer
+-----------
+
+158, £100,000
+
+Reasoning
+---------
+
+Let me carefully read through the provided text to find information about the Future News Pilot Fund, specifically how many applications went unfunded and how much grant money the average funded project received.
+
+From Document 1 (the main report), I find this relevant section:
+
+"41. The Cairncross Review recommended that the Government launch an innovation fund for the news industry.121 It argued that the declining revenues of news publishers and the difficulty of developing new business models meant there was a clear case for targeted public support. It called for the fund to be focused on innovations that would have industry-wide benefits and improve the supply of public interest news. The Government accepted the recommendation and in October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta. The pilot fund ran until June 2020, with investment targeted at new technologies, start-ups, and innovative business models.122 It received 178 applications and issued grants to 20 projects.123"
+
+So according to this:
+- Total applications: 178
+- Funded projects: 20
+- Therefore, unfunded applications: 178 - 20 = 158
+- Total fund amount: £2 million
+- Funded projects: 20
+- Average grant per funded project: £2,000,000 / 20 = £100,000
+
+Let me double-check if there's any other information in the text that might modify these numbers.
+
+In paragraph 42, it says: "In the project review Nesta acknowledged that "we've only been able to support the tip of the iceberg and what we've tapped into is an ambitious, creative and diverse field of innovation".129 They called for a sustained investment in news innovation of £10 million a year for the next decade."
+
+But this doesn't change the numbers for the pilot fund itself.
+
+Also, footnote 123 says: "Nesta, "The Future News Pilot Fund: meet the grantees", [accessed 19 December 2022]" which confirms the 20 grantees.
+
+So the answer should be:
+- Unfunded applications: 158
+- Average grant per funded project: £100,000
+
+Wait, let me check if the £2 million was the total fund size or if there's any nuance I'm missing.
+
+"The Government accepted the recommendation and in October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta."
+
+"It received 178 applications and issued grants to 20 projects."
+
+So yes, £2 million total fund, 20 projects funded, so average £100,000 per project.
+
+And 178 total applications minus 20 funded = 158 unfunded applications.
+
+Actually, let me check one more time to be absolutely sure.
+
+Paragraph 41: "launched the £2 million Future News Pilot Fund (FNF)... It received 178 applications and issued grants to 20 projects."
+
+Paragraph 42: "Nesta acknowledged that "we've only been able to support the tip of the iceberg...""
+
+Footnote 129: "Nesta, Future News Pilot Fund, End of programme report (12 August 2020), p.36"
+
+So the numbers are clear: 178 applications, 20 funded, so 158 unfunded. £2 million total / 20 projects = £100,000 average grant.
+
+Actually, I should check if the £2 million was fully disbursed or if there were administrative costs, etc. But the text says "issued grants to 20 projects" from the "£2 million Future News Pilot Fund", so I think we can assume the £2 million was the grant pool.
+
+Let me check footnote 122: "Department for Digital, Culture, Media and Sport (SLJ0041)" - this is just citing the source, doesn't give more details.
+
+Footnote 123: "Nesta, "The Future News Pilot Fund: meet the grantees", [accessed 19 December 2022]" - confirms 20 grantees.
+
+So my calculation stands: 158 unfunded applications, £100,000 average grant.
+
+Attempt 5 · Wrong
+-----------------
+Docs: Doc 1 · Note: —
+
+Final answer: - Average grant per funded project: The Fund totalled £2 million and supported 20 projects, so the average funded project received £100,000 (£2,000,000 ÷ 20 = £100,000). | Your answer (gold): 158 applications and about £50,000
+
+Passages quoted:
+
+- Quoted Doc 1: “It received 178 applications and issued grants to 20 projects.”
+
+Named Doc 1
+
+Full answer
+-----------
+
+Based on the input documents, specifically Document 1 (the main committee report):
+
+- Unfunded applications: The Future News Pilot Fund received 178 applications and issued grants to 20 projects, meaning 158 applications went unfunded (178 − 20 = 158).
+- Average grant per funded project: The Fund totalled £2 million and supported 20 projects, so the average funded project received £100,000 (£2,000,000 ÷ 20 = £100,000).
+
+Reasoning
+---------
+
+The user is asking about the Future News Pilot Fund (FNF). I need to find information about:
+1. How many applications went unfunded
+2. The average grant money per funded project
+
+Let me search through the documents for relevant information.
+
+From Document 1, I found this information:
+- "It received 178 applications and issued grants to 20 projects."
+
+So:
+- Total applications: 178
+- Funded projects: 20
+- Unfunded applications: 178 - 20 = 158
+
+Now I need to find the average grant money per funded project. The documents mention:
+- "In October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta."
+
+So the total fund was £2 million, and 20 projects were funded.
+
+Average grant per funded project = £2,000,000 / 20 = £100,000
+
+Let me verify this. The document says:
+"the Government accepted the recommendation and in October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta. The pilot fund ran until June 2020, with investment targeted at new technologies, start-ups, and innovative business models. It received 178 applications and issued grants to 20 projects."
+
+So:
+- 178 total applications
+- 20 funded
+- 158 unfunded (178 - 20)
+- £2 million total
+- 20 funded projects
+- Average per project = £2,000,000 / 20 = £100,000
+
+The answer is:
+- 158 applications went unfunded
+- Average funded project received £100,000
+
+Attempt 6 · Wrong
+-----------------
+Docs: — · Note: —
+Final answer: Answer not shown.
+
+Attempt 7 · Wrong
+-----------------
+Docs: Doc 1 · Note: —
+
+Final answer: Based on the information provided in Document 1, the Future News Pilot Fund received 178 applications and funded 20 projects. Therefore: | Your answer (gold): 158 applications and about £50,000
+
+Passages quoted:
+
+- Quoted Doc 1: “An innovation fund for news”
+- Quoted Doc 1: “It received 178 applications and issued grants to 20 projects.”
+
+Named Doc 1
+
+Full answer
+-----------
+
+Based on the information provided in Document 1, the Future News Pilot Fund received 178 applications and funded 20 projects. Therefore:
+
+- Number of unfunded applications: 178 - 20 = 158.
+- The total fund was £2 million, so the average grant per funded project was £2,000,000 / 20 = £100,000.
+
+Answer: 158 applications went unfunded, and the average funded project received £100,000.
+
+Reasoning
+---------
+
+Alright, I need to figure out two things from the provided documents: how many Future News Pilot Fund applications went unfunded, and how much grant money did the average funded project receive. Let me start by locating the relevant section in Document 1, which is the main report on the sustainability of local journalism.
+
+Looking through Document 1, I find a section titled "An innovation fund for news" starting around paragraph 41. It mentions the Future News Pilot Fund (FNF) launched by the Government. Specifically, in paragraph 42, it states: "It received 178 applications and issued grants to 20 projects." So, 178 applications total, 20 were funded. Therefore, the number of unfunded applications would be 178 minus 20, which is 158.
+
+Now, for the average grant money per funded project. I need to find the total amount of the fund and divide it by the number of projects funded. Looking back at paragraph 42, it mentions the fund was £2 million. Also, in paragraph 121, it says the fund was £2 million. So, total funding is £2,000,000. Divided by 20 projects, that's £100,000 per project on average.
+
+Wait, let me double-check the details. Paragraph 42 says: "The Government accepted the recommendation and in October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta. The pilot fund ran until June 2020, with investment targeted at new technologies, start-ups, and innovative business models. It received 178 applications and issued grants to 20 projects."
+
+Yes, so total applications: 178, funded: 20, unfunded: 158. Total fund: £2 million. Average per funded project: £2,000,000 / 20 = £100,000.
+
+I should make sure there isn't any other mention of the fund size or number of projects elsewhere. Looking through the other documents, like the oral evidence, but Document 1 seems to have the most concise information. Therefore, my answers are based on that.
+
+So, to answer the question in the specified order: Number of unfunded applications: 158. Average grant money per funded project: £100,000.
+
+High model
+==========
+
+Attempt 1 · Right
+-----------------
+Docs: — · Note: —
+Final answer: Answer not shown.
+
+Attempt 2 · Right
+-----------------
+Docs: — · Note: —
+Final answer: Answer not shown.
+
+Attempt 3 · Right
+-----------------
+Docs: — · Note: —
+Final answer: Answer not shown.

@@ -1,0 +1,48 @@
+{
+  "bundle": "aq-03993",
+  "corpus_sha256": {
+    "docs/ukc_6536_oral_10244.txt": "4508b9aff3aacd0cb36457f305fcc0b00d3e6a619d9f15b205deb34de35d86e8",
+    "docs/ukc_6536_oral_10505.txt": "6de533a6029f7382a86ca2d2156bc92e944cb979c5aa4ffbc6c78aed688b4c05",
+    "docs/ukc_6536_oral_10571.txt": "d359feb09f3f6306d9eed747e352f8d579b0b379e4c77bf88738a71757414305",
+    "docs/ukc_6536_report_33635.txt": "61f0a9505c39f784987355022cb39a06921d11454b213bbbf90b755af5989103",
+    "text/D01.txt": "aa6296655b8897ef37594c8a72738ee1bb2feff1239038a384d0d54ec1b7eb9f",
+    "text/D02.txt": "004e8ec972deac97d0fab791ce0c4a8675d58a52b3ed29ee5cb9e261c0f308fb",
+    "text/D03.txt": "15ae565734facb83a9077be5cd9618323bd704216e785838b9b39670bfb00a2d",
+    "text/D04.txt": "d8651c26d1decf1a5a010edcd8537f9f6cdbe0c19eac0eaad4ab28533bcbe137",
+    "text/manifest.json": "89c95823358ccbaf53d90c79115de469e4bc59d974d7e4daf38c40a61c264d60"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "dfa64243688ea488decc9b58dcbfaae4fb8797d22d55f5cbb32d8cab4b8c152b",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "number",
+    "asks": "2",
+    "difficulty_target": "medium",
+    "documents": "D04, D03",
+    "id": "q01",
+    "levers": "Calculate across documents; Scatter the pieces",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "i01",
+    "status": "draft",
+    "tags": "Cross-document join; Aggregation"
+  },
+  "question_id": "q01",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "158 applications and about £50,000",
+    "components": "- c1: 158 applications\n- c2: about £50,000",
+    "evidence": "- D04 (para 41, launch of the fund) [c2]: \"in October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta\"\n- D04 (para 41, applications and grants) [c1, c2]: \"It received 178 applications and issued grants to 20 projects.\"\n- D03 (Q254, David Floyd) [c2]: \"You mentioned the NESTA Future News Fund, which I worked on to an extent. That was £2 million and about £1 million was grant funding.\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: h1 (notes/hooks.md). A part that only a second document separates from a headline total, asked as an average with no cue to look for the split. Target medium; hard is also open (user, 2026-10-13: no Easy slot, \"target medium and high\"). Measured platform result pending; no earlier capture on these bytes.\n- Dependency plan: D04 para 41 gives the fund's size (£2 million), applications (178) and funded projects (20). D03 Q254 gives the grant funding (about £1 million). 178 - 20 = 158; 1,000,000 / 20 = 50,000.\n- Universe: not a list. Every mention of the fund was read: D04 paras 5 (Box 1), 41-44, 52 and recommendation 3; D03 Q254 (Efford, Floyd) and Q261 (Abbott). D01 and D02 never mention it.\n- Necessity: without D04 there is no application or project count, so neither part can be reached (D03 gives only the two money figures and \"two organisations got grants\"). Without D03 nothing separates grant funding from the fund's size, and the second part becomes £100,000. Substitutes searched: \"Future News\", \"Nesta\", \"grant\" and \"£1 million\" in all four documents; D04's only \"£1 million\" is Google's grant to the NMA for a public notices portal (para 45).\n- Selected-lever checks: not a which-items question; no decoy required. Wrong routes recomputed: whole fund over projects, 2,000,000 / 20 = 100,000; whole fund over applications, 2,000,000 / 178 = 11,236; grant funding over applications, 1,000,000 / 178 = 5,618; applications taken as the unfunded count, 178.\n- Targeted failure modes: Part vs total / Takes the wrong line item: D04 para 41 puts the £2 million headline next to the 20 projects; wrong answer £100,000 (recomputed above). Considered and not declared: the 2015 Nesta fund of \"around £2 million\" (D04 para 42) has no project count and gives no rival answer; \"Linking across documents\" would describe the same miss a second time. To be matched to the wrong answers actually observed after the first run, before Submit.\n- Calculation verification: author arithmetic, then script (scratchpad calc_i01.py): 178 - 20 = 158; 1000000 / 20 = 50000.0; 2000000 / 20 = 100000.0. Units pounds; no rounding beyond the source's own \"about\".\n- Semantic/ID/overview probes: searching \"Future News\" lands on D04 para 41 (size and counts) and D03 Q254 (the split); no passage states an average grant or an unfunded count. The bundle overview does not mention the fund. Shortest route: the two passages and two divisions-or-subtractions.\n- Precision/readings: (1) \"grant money ... average funded project\" taken as the whole fund over the projects, £100,000: the question says \"grant money\", and D03 says about half the fund was grant funding. Still the natural answer from D04 alone; the form's \"One defensible answer\" check and the run will show whether solvers take it. (2) \"about £1 million\" is approximate, so the gold says \"about £50,000\"; \"grants of tens of thousands of pounds\" (D03, of two ICNN members) agrees with it. (3) \"applications went unfunded\" assumes one grant per successful application; no document gives another count. (4) A closed-book guess could hit a round £50,000, hence the paired document-only count of 158.\n- Completeness: complete capture, no gaps (notes/intake.json). All four documents read in full. The absent fourth hearing (18 October 2022) is cited by D04 for the Minister's remarks on the fund (Q288, Q290: criticisms had \"some merit\", NESTA's recommendations); D04 quotes no amount from it, so no figure for this question depends on it.\n- Style/set review: 24 words, two parallel asks, order stated. Sketches i02 (who the BBC's witness answered) and i03 (Reach's salary floor) use other passages and share no answer path with this question.\n- Warnings answered: see the hand-over note; filled after the preflight.",
+    "necessary documents": "",
+    "platform validation": "",
+    "question": "How many Future News Pilot Fund applications went unfunded, and how much grant money did the average funded project receive? Answer in that order.",
+    "reasoning": "Step 1. Source input (Doc 1, section \"An innovation fund for news\"): the Government launched the £2 million Future News Pilot Fund in October 2019, and the report says of it \"It received 178 applications and issued grants to 20 projects.\"\nStep 2. Calculation (Doc 1): 178 - 20 = 158 applications that received no grant.\nStep 3. Source input (Doc 4, David Floyd of Social Spider answering Clive Efford on funding): Floyd, who says he worked on the fund, tells the committee \"That was £2 million and about £1 million was grant funding.\" So only about half of the fund was paid out as grants.\nStep 4. Calculation (Doc 1 and Doc 4): the grant funding is about £1 million and it went to the funded projects of Step 1, so the average is approximate: 1,000,000 / 20 = 50,000 pounds per funded project.\nStep 5. Wrong route, for comparison (Doc 1 and Doc 4): dividing the whole fund by the funded projects gives 2,000,000 / 20 = 100,000 pounds, which counts money that Doc 4 says was not grant funding.\nStep 6. Final answer (Doc 1 and Doc 4): 158 applications went unfunded, and the average funded project received about £50,000 of grant money.",
+    "targeted failure modes": "### Failure mode 1\nTrap: Part vs total\nHow a careless solver fails: Takes the wrong line item\n\nWhy these are traps: Part vs total: Doc 1 prints the fund's £2 million total beside its 20 funded projects, so a careless solver divides the total and answers £100,000. Doc 4's witness says only about £1 million of it was grant funding, the part asked about: about £50,000."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "f2eb49e7f3153c4fbc839996d5e6f7f021b33f754cfddea21bc87c022d99d0de"
+}

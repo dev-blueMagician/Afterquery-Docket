@@ -1,0 +1,89 @@
+{
+  "question": "How many BBC-funded local democracy reporters does the evidence place on the staff of organisations that sent a witness to the committee's hearings?",
+  "number_of_asks": 1,
+  "gold_answer": "77 reporters",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 1, list of witnesses): among the witnesses the report lists \"David Higgerson, Chief Audience Officer, Reach plc\" and \"David Floyd, Director, Social Spider CIC\".\nStep 2. Source input (Doc 1, section \"The Local Democracy Reporter Service\"): the BBC pays these reporters' salaries and they \"are allocated to local news providers\". In the latest allocation Reach \"Plc took 75\".\nStep 3. Source input (Doc 4, David Floyd): he says the \"Local Democracy Reporter scheme funds posts\" and adds \"we have two of them and it is great\". Social Spider therefore has 2 of these reporters. Doc 1 gives no figure for Social Spider.\nStep 4. Source input (Doc 4, Dr Rupa Huq to the last panel): \"I think the Liverpool Echo was a Reach plc title\". The Echo's editor, Maria Breslin, also gave evidence, but her paper's reporters are already inside Reach's figure and no separate number is given for them.\nStep 5. Not counted (Doc 1 and Doc 4): the BBC pays for the reporters but they sit with the news providers, not on its own staff. Matt Abbott says of the Independent Community News Network \"I think our members employ perhaps a dozen Local Democracy Reporters themselves\", which puts them on the members' staff, not the network's. Newsquest and JPI Media, the other publishers in the allocation sentence of Doc 1, sent no witness, and neither did Notts TV, the only television provider with a contract.\nStep 6. Calculation (Doc 1 and Doc 4): 75 + 2 = 77 reporters.\nStep 7. Final answer (Doc 1 and Doc 4): 77 reporters.",
+  "answer_components": [
+    "77 reporters"
+  ],
+  "evidence": [
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "David Higgerson, Chief Audience Officer, Reach plc"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "David Floyd, Director, Social Spider CIC"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "The BBC funds the salaries of 165 journalists, who are allocated to local news providers"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Of the 165 reporters allocated in July 2021, Reach"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Plc took 75, Newsquest 28.5, and JPI Media (now National World) 35.5."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "the Local Democracy Reporter scheme funds posts"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "we have two of them and it is great"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "I think the Liverpool Echo was a Reach plc title that had a donation drive"
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "I think our members employ perhaps a dozen Local Democracy Reporters themselves"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Notts TV qualified in the latest round of contract allocations, though it was the only TV news provider to do so."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Part vs total: Doc 1's allocation sentence gives Reach 75 reporters, and Reach is the only publisher there that sent a witness, so 75 looks complete. It is one part. In Doc 4 David Floyd says Social Spider has two such posts. Careless answer 75; the total is 77."
+}

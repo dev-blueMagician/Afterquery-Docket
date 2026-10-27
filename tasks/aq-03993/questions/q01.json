@@ -1,0 +1,53 @@
+{
+  "question": "How much grant money did the Future News Pilot Fund pay out, on average, to each project it funded?",
+  "number_of_asks": 1,
+  "gold_answer": "About £50,000",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 1, section \"An innovation fund for news\"): the Government launched the £2 million Future News Pilot Fund in October 2019, and the report says the fund \"issued grants to 20 projects\".\nStep 2. Source input (Doc 4, David Floyd of Social Spider answering Clive Efford on funding): Floyd, who says he worked on the fund, tells the committee \"That was £2 million and about £1 million was grant funding.\" So only about half of the fund was paid out as grants.\nStep 3. Calculation (Doc 1 and Doc 4): the grant funding is about £1 million and it went to the funded projects of Step 1, so the average is approximate: 1,000,000 / 20 = 50,000 pounds per funded project.\nStep 4. Wrong route, for comparison (Doc 1 and Doc 4): dividing the whole fund by the funded projects gives 2,000,000 / 20 = 100,000 pounds, which counts money that Doc 4 says was not grant funding.\nStep 5. Final answer (Doc 1 and Doc 4): the fund paid out about £50,000 of grant money, on average, to each project it funded.",
+  "answer_components": [
+    "About £50,000"
+  ],
+  "evidence": [
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "in October 2019 launched the £2 million Future News Pilot Fund (FNF), administered by Nesta"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "It received 178 applications and issued grants to 20 projects."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "You mentioned the NESTA Future News Fund, which I worked on to an extent. That was £2 million and about £1 million was grant funding."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Part vs total: Doc 1 prints the fund's £2 million total beside its 20 funded projects, so a careless solver divides the total and answers £100,000. Doc 4's witness says only about £1 million of it was grant funding, the part asked about: about £50,000."
+}
