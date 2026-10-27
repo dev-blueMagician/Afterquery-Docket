@@ -11,11 +11,32 @@ metadata:
 
 ## Current rule
 
+- A document that only defines or labels the asked population is not necessary when a reader would assume
+  the same set without it. Removal test at sketch time: delete the document and name the gold component
+  that becomes unreachable, not merely unconfirmed. Each ticked document must supply its own gold component
+  or an exclusion that changes the answer (aq-02501 q01: DoD's "less than honorable" list is every
+  characterization but honorable, so the other document's own list already gave the whole answer).
+- When the difficulty page says "A marked document may not be needed", repair the dependency before
+  submitting. The page's one-line reviewer note unblocks Submit ("an admin must sign it off"), but the
+  reviewer returned aq-02501 q01 the next day: "Only document 3 is necessary." What worked: keep the measured
+  ask word for word and add a parallel second ask whose value only the weak document states; the next run
+  read "Needed document 3 ✓" and "Needed document 5 ✓" and stayed in the Medium band.
 - When a fact appears in more than one document (repeated editions of a series, or a footnote
   repeated in a proposal and its final rule), none of those documents is individually necessary.
   List only documents whose removal leaves the question unanswerable. Quote a repeated fact from
   one source, leave that document unlisted, and explain in `## Lever checks` (the floor WARNs
-  "quoted but not listed"; answer it).
+  "quoted but not listed"; answer it). Do not rely on the form's "or..." alternatives to rescue
+  such a document: in the one observed case the check still left out the marked document alone and
+  reached the gold from its twin (aq-02147 q01, below). If the needed input sits in two documents,
+  change the input, not the ticks.
+- Updated 2026-10-13 (aq-03950 q02, page text): the Document check now states "Documents you marked as
+  alternatives of one another are left out together, and are needed when the answer without all of them is
+  wrong or changes." A witness's title printed word for word in the report and in her own transcript was
+  ticked as Doc 1 with Doc 7 in its "or" box; the check ran "Without documents 1 and 7" twice and returned
+  "Needed document 1 or 7 ✓" both times. So when one input is printed in two documents and the answer still
+  needs one of them, tick one and put the other in its "or" box; that is what the box is for. The aq-02147
+  observation above predates this text. The bullet above still holds when the answer needs neither twin.
+  Do not warn the user about such a tick or prepare a repair for it before the form has refused it.
 - Give every listed document an edition-unique fact. Good examples are a value a later edition
   supersedes (an unextended deadline beside a stated extension), the only actual date beside
   earlier planned months, or the only edition that covers the whole window.
@@ -78,7 +99,9 @@ metadata:
   and otherwise commit to a forced guess with its probability. It caught guessable inputs that the
   removal reasoning had passed: a top-3,000 variability screen (guessed at p 0.8 as "a common
   round-number screen") and a leukemia cluster count equal to the dataset's three labelled subtypes
-  (p 0.3). Run it when an input is a habitual round number or a dataset's default class count.
+  (p 0.3). Since 2026-10-08 (user instruction) it is required for every ticked document before any
+  hand-over or platform run, not only for round numbers or default class counts: see
+  [[docket-removal-probe-required]]. A closed-book reach fails it for every marked document.
   Build the probe packet as a byte copy of a prepared packet minus one document, bound to the read
   guard as its own run, and give it a neutral folder name: a folder named "removal-noD02" told the
   probe which document was missing (aq-docket-trial-06, 2026-10-06). The id gap tells too: probes
@@ -103,6 +126,12 @@ metadata:
   Pick a period whose original and restated sides each come from one irreplaceable document (there:
   calendar January-June 2025, needing the original March quarter and the restated June quarter), list
   only those, and leave the replaceable inputs quoted but unlisted.
+- In a run of quarterly earnings releases only the latest quarter's actuals are single-source: every
+  earlier quarter reappears as a prior-quarter or year-ago column, or rebuilds from neighbouring
+  year-to-date columns. Next-quarter guidance is edition-unique (a revenue range may be restated in the
+  following release's highlights), but compare the neighbouring editions' midpoints first: a guided value
+  that repeats across adjacent quarters lets a leave-one-out solver reach the gold by assuming the
+  guidance was unchanged. Pick a quantity, form or precision at which every such proxy answer differs.
 
 - Two-edition edition traps (aq-01428 q01, 2026-10-06, local probes): when the question asks for the
   value in force at an event printed only in the later release, removing that release leaves the earlier
@@ -120,6 +149,35 @@ edition's coverage.
 
 ## Evidence and history
 
+- 2026-10-09: aq-02501 q01 rev 1 difficulty Run 1 (Low 0/5 · Medium 2/5, Medium band) failed the gate with "A marked document may not
+  be needed": a qualifier naming another document's definition (DoD DARB's "less than honorable" set) that excludes nothing
+  from the answer is decorative to the high model, which assumed the membership (uncharacterized separations) the defining
+  document alone supplies. The page then offers "a one-line note for the reviewer" (200 characters) that "clears submit without a
+  new run"; any later edit to question, answer, reasoning or necessary documents clears the note. Design lesson: a defining
+  document is mechanically necessary only when its definition changes the answer (excludes an item the other document supplies,
+  or includes one the usual sense would drop and the solver cannot otherwise reach).
+  Outcome: with the 190-character note saved, the page allowed submit ("an admin must sign it off (waive the check for
+  this content) before the task can be approved") and kept the Medium label ("+$20 Medium+ bonus if accepted"); the user
+  submitted. Reviewer outcome (2026-10-10): "Sent back for revision ... Only document 3 is necessary. Ensure at least two docs are
+  necessary for the solver to get the "gold answer"." So the note buys a submission, not an acceptance: when the document
+  check says a marked document is not needed, fix the dependency before submitting. A defining document whose set equals
+  "everything but the obvious exclusion" (here every characterization but honorable) can never be necessary through that
+  definition; give the second document its own gold component (rev 2: a second ask for a value only it states).
+  Result (2026-10-10, Run 2, Version 432875): "In band — Medium tier", Low 0/5 · Medium 1/5; document check
+  "Needed document 3 ✓" and "Needed document 5 ✓" (without Doc 5 the high model gave the wrong board's 15-year
+  window); resubmitted the same day. Raw: tasks/aq-02501/verdicts/AQ-02501_difficulty_2026-10-10_2103.txt.
+
+- 2026-10-09, aq-02367 (aq-02220's bytes; local, caller plus two independent authors, no platform run): the June 2022
+  government response reprints each 2021 proposal beside its response table (Option 3 with its refurbishment group, the
+  trigger points, the 10-year grace period, the one-day familiarisation estimate), so no proposal-versus-final design had an
+  indispensable proposal document. In consultation/response bundles, list which proposal facts the response does not
+  restate before designing on the consultation; here almost none survived outside the impact assessment's own numbers.
+
+- 2026-10-08, aq-02198 (local, no platform run): a consultation and its response can reprint the same annex word for
+  word. Both 2021-22 McCloud papers carry the identical equality assessment (Table 1 protection counts, 419,000, age, sex,
+  ethnicity and disability figures), so a question built on any of them has a twin and neither paper is individually
+  necessary; this ruled out the bundle's richest bundle-only numbers. At intake, diff each proposal/response pair's annexes
+  before treating their figures as single-source.
 - 2026-10-04: aq-docket-trial-03 (three DOT semiannual agendas). q02: the refund hearing date was
   in D03, D06 fn 11 and D07 fn 24, so documents became D01 and D04 only; step 2 had misread a
   repeated Section 610 sentence as "citing the previous edition". q03: a window ending at the
@@ -204,3 +262,52 @@ edition's coverage.
   p 0.4; any recall within about 1,344-1,360 lands on the gold. A long-run baseline that matches an
   official national statistic is common knowledge for the document check, even inside a 0.1-point
   window. Dropped before write-up.
+- 2026-10-08: aq-00949 q07 rev 0 (dividends declared over the four quarters after the quarter that
+  declared the October 17, 2025 record-date dividend, $3.06; Doc 3 and Doc 7), run by the user after the
+  local drop. Platform Run 5: "Low model ●●○○○ 2/5 right" but "Your answer can still be reached without
+  documents 3 and 7", so "the gate does not pass". Locally the closed-book run had already reached
+  $3.06, and Lever checks had named both risks: Doc 3's declaration quarter is recalled or inferred from
+  Doc 7 (2Q 2025 1.9950, 3Q 2025 a dash; the window is exactly Doc 7's last four quarters), and Doc 7's
+  2Q 2026 equals the unchanged $1.02 an assumption supplies from Doc 6. No probe was run. Per-document
+  answers were not supplied, so the routes are inferred. Platform evidence, one question; it led to the
+  required-probe rule.
+- 2026-10-08: aq-00949 q06 (local removal probe under the new rule): without Doc 3, the only document
+  dating the Encino agreement, a fresh solver answered the gold $0.94 unforced with high confidence. It
+  dated the deal from the supplements' Encino acquisition-related costs (first in 2Q 2025, none in
+  1Q 2025 by the full-year total) and the acquisition cash in 3Q 2025. The first acquisition-cost
+  quarter in a later edition dates a deal announcement, so an announcement date fails as a bridge
+  whenever the series reports deal costs. Dropped before any run. Local evidence, one question.
+- 2026-10-08, aq-01960 (14 KLA releases, local design analysis, platform pending). Only Q4 FY26 actuals
+  (D14) had no substitute; Q1-Q3 FY26 rebuild from D12/D13/D14 year-to-date columns. Non-GAAP gross
+  margin guidance midpoints repeat (62.0, 62.0, 61.75, 61.75; EPS $8.28 for Q4 FY25 and Q1 FY26), so a
+  margin-beat question (gold 0.6) also came out 0.6 with the March quarter's guidance assumed for June.
+  The product form (non-GAAP gross profit vs revenue midpoint x margin midpoint, q01, 3.3%) moved that
+  proxy to 10.2; a fiscal-year GAAP form in dollars (q02, $250 million) left every neighbour proxy at a
+  different value, where a one-decimal percent form would have collided twice.
+- 2026-10-08, aq-01543 q04 (platform Run 1, version a39f39; raw tasks/aq-01543/verdicts/): a recall test had rebuilt
+  Doc 4's exact 23,500 MWe (26,050 - 2,550) when its prompt listed the exclusions (offline, under construction, shut
+  down), so the Document check on Doc 4 was stated as a risk. The platform's high model, given the bare question
+  without Doc 4, used its own stale fleet list (25 reactors, about 25,374 and 25,321 MW: 7.21% and 7.23%), and both
+  documents were judged needed. A recall prompt that spells out the filter overstates the risk; ask the bare question.
+- 2026-10-08, aq-02147 q01 (platform Run 1, version 8b4bdc; raw tasks/aq-02147/verdicts/AQ-02147_difficulty_2026-10-08_1706.txt):
+  "A marked document may not be needed ... without document 3". The question asked for the 2024 SSP consultation's
+  break-even point (its £123, five-day employee) at a rate only the government response prints. The equality analysis's
+  case study 1 is the same employee with the same flat rate and waiting days; with the consultation left out, the high
+  model took that case study and computed the gold (week 12). The hand-over had grouped the two as "Doc 3 or Doc 4"; the
+  capture does not show whether the "or..." box was set, and no "Without document 4" attempt ran. Without the response
+  both attempts answered 3 weeks (the median of the 60/70/80% illustrations), so that document was needed. Hook retired;
+  the replacement uses inputs printed in one document each.
+- 2026-10-10, aq-02686 q01 (local design and one removal probe; platform pending): a proposal/final pair
+  (DOE's "foreign entity of concern" interpretation, Doc 2 and Doc 4) where the final reprints nearly every
+  rule of the proposal, so a rule application rests on either. The question stayed dependent on the final by
+  resting one step on a clarification printed only in the final's responses to comments (a board seat is
+  valued at its board voting power, so two of five seats with 20% of the votes is 20%, not 40%). A fresh
+  solver given the proposal without the final counted seats and answered $45,602 against the gold $45,708,
+  and the full-packet solver said the proposal "cannot replace" the final. How to apply: in an edition pair,
+  diff the operative text and the comment responses, and let one scenario fact turn on a point the earlier
+  edition answers differently, not merely omits. Two side notes from the same bundle. (1) A second document's
+  only input can be boilerplate a model recalls (EPA's "approximately $106" export-notice cost appears in
+  many notices); adding that document's 2026-only figure ($45,496) to the total removes the doubt. The
+  natural partner document was not used because its only unique inputs were the $7,500 / $3,750 clean
+  vehicle credit amounts. (2) The probe's readings list caught "Korean" as possibly North Korean in a
+  bundle that names North Korea as a covered nation; name countries unambiguously in scenario questions.

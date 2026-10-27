@@ -16,6 +16,12 @@ metadata:
   public facts count as general knowledge even when every one of them is quoted from the bundle.
   Examples: a notable rule's Federal Register publication date and comment period, famous event
   dates, and headline company or survey figures.
+- Published regulation text is general knowledge too. A condition that restates the Code of Federal
+  Regulations (aq-02501 q01 rev 0: which discharges VA accepts automatically, 38 CFR 3.12) failed the form's
+  "Needs the documents" although its quick test had survived; quick-test survival says nothing about this
+  check. Rest the deciding condition on what only the bundle's document says, such as a rule preamble's own
+  statement of which cases it does not apply to, impacts or helps (rev 1 and rev 2 then read "Needed the
+  documents ✓").
 - Anchor the answer on at least one fact a model cannot know:
   - a document published after likely model cutoffs (in late 2026, documents from late 2025
     and 2026; the local closed-book model recalled headline company guidance issued as late as
@@ -24,7 +30,45 @@ metadata:
   - a planned or internal value, such as an agenda's target month, a footnote's docket citation,
     a comment tally or a document-specific classification;
   - a bridge only the bundle states.
-  A public fact may still sit on the path, but it cannot be the whole path.
+  A public fact may still sit on the path, but it cannot be the whole path. A statutory
+  cross-reference that is the Act's standard provision for the topic is guessable too (aq-02360
+  q01: "Section 95(2)" of the Pension Schemes Act 1993 for a transfer-payment rule failed the form's
+  blocking "Needs the documents" check, although its trap needed two documents); add a part only the
+  documents hold, such as the citing regulation's paragraph number.
+- A scenario question can fail this check by arithmetic coincidence, with nothing recalled. When the
+  question prints the counts of a stated case, a solver with no documents applies a plausible naive rule
+  and adds them. aq-02780 q01 rev 0 (2026-10-11, "Answerable without the documents"): the gold, 9
+  approvals, equalled the sum of the three branch-opening counts in the question (2 + 3 + 4); the
+  closed-book attempt guessed "only new branches need approval" and landed on it, although its rule was
+  wrong on five of seven cells. Before prepare, list the sums a guesser would form from the question's
+  own numbers (each category alone, every category, natural pairs, one party's items) next to the
+  document-based wrong routes, and change the counts until none equals the gold or any part of it. Keep
+  answer parts off the numbers the question prints. Asking for a count per regulator or party, at most two
+  asks, also stops one coincidence carrying the whole answer. Tool gap, not yet built: the floor could
+  flag a numeric gold equal to a sum of numbers printed in the question.
+- A gold with few possible values fails the same way, with nothing recalled and nothing printed to add up. The
+  platform's closed-book check is one attempt by the low model, and that attempt always commits to a value.
+  aq-03169 q01 rev 0 (2026-10-12, "Answerable without the documents", run spent, no solver with documents
+  measured): the gold was "7 years", asked "to the nearest whole year"; the attempt wrote "This suggests the
+  result is not an integer, maybe 7.2 rounds to 7" and committed 7. Before prepare, count the answers a
+  guesser could give at the asked form. A lone whole number under about twenty (years, a count, a rank, a
+  step number) or a round value at a coarse precision (a multiple of ten percent) is too few: add a second
+  ask whose answer is a number only the documents hold (rev 1: "260 audits and 7 years"), or use a form with
+  more digits. A coarse precision chosen so that several stated inputs agree does not excuse this; pair it
+  with the document-only part. Check that the added part does not point at the trap (aq-02360 q01 rev 2).
+  Tool gap, not yet built: the floor could warn on a one-component numeric gold that is a whole number under
+  twenty.
+- A difference of two partly recalled public figures is reachable even when neither figure is recalled
+  correctly, because a shared error cancels. aq-03570 q03 (2026-10-13): the letters print $3.45 trillion and
+  $1.8 trillion (gold 1.65); the closed-book attempt of Run 3 recalled 3.44 and 1.74 (1.70, "Needed the
+  documents") and the one of Run 4 recalled 3.41 and 1.76 and committed 1.65 ("Answerable without the
+  documents", run spent, no solver with documents measured). A closed-book answer within a few percent of the
+  gold counts as reached: change the asked form before the next run instead of writing the risk down (the
+  author noted it at two hand-overs and changed nothing). Prefer a form in which a shared error does not
+  cancel, such as a ratio or percentage at one decimal place (the two recalled pairs give 93.8% and 97.7%
+  against a gold of 91.7%), and write the delete-and-guess line with the recalled values actually seen. The
+  form's "Needs the documents" row had passed on the previous wording with the same gold: that row and the
+  run's closed-book check are separate single samples, and neither clears the other.
 - Before hand-over, run a closed-book solve. Give a fresh agent the question alone, tell it to
   answer from memory without tools, and count a correct or near answer as a fail. The floor
   cannot test this, and neither can the blind solver, which reads the documents.
@@ -49,6 +93,62 @@ common-knowledge bridge) and [[docket-series-editions-necessity]] (common knowle
 duplicate).
 
 ## Evidence and history
+
+- 2026-10-13: aq-03570 q03 rev 2 (US SIF 2022 fund assets by issue, climate change stand-alone minus the
+  runner-up, gold $1.65 trillion), difficulty Run 4, Version 730996, raw
+  tasks/aq-03570/verdicts/AQ-03570_difficulty_2026-10-13_1553.txt: "Answerable without the documents"; only the
+  closed-book check ran (11 of 15 runs left). The attempt, read in full as far as the page records it, listed
+  candidate figures in billions for climate change/carbon, tobacco and military/weapons, wrote "if second is
+  tobacco 1,756, diff = 1,651B = 1.65T" and committed about 3.41 and 1.76. Its runner-up was the wrong issue
+  and neither figure matched the letters. Rev 3 asks the same gap as a percentage of the runner-up's figure
+  (91.7%); it was quick-test too easy the same day, so the percentage form has no closed-book sample. Scope: one
+  hook, two closed-book samples.
+
+- 2026-10-13: aq-03993 q01 rev 0 (average grant from a public pilot fund, gold "158 applications and about
+  £50,000"; the count had been paired in as the document-only part). The closed-book attempt recalled the
+  fund's published figures (£2 million, 178 applications, 20 projects), produced 158 from memory and answered
+  £100,000 for the average: "Needed the documents ✓". Two things to carry: a count taken from a government or
+  committee report about a public scheme is not document-only, so it protects nothing; and when the gold
+  departs from what the headline public figures imply, the closed-book attempt lands on that implied value
+  (here the question's own wrong route), which is what kept the gold out of reach. Check the paired part
+  against "would a model know this from the news" before relying on it. One run, one bundle.
+
+- 2026-10-12: aq-03169 q01 rev 0 (years of tender wins, at the rate one consultation response assumes, to bring the
+  Big Four within another response's per-firm cap; gold "7 years", chosen at whole-year precision because the
+  present base is stated four ways), difficulty Run 1, Version 4e4850, raw
+  tasks/aq-03169/verdicts/AQ-03169_difficulty_2026-10-12_1034.txt: "Answerable without the documents"; only the
+  closed-book check ran and the run was spent (14 of 15 left). The attempt, read in full, recalled none of the inputs,
+  called the question "too ambiguous without the source", guessed 7 from the rounding instruction and then wrote
+  figures to fit (8-10 wins a year, 50-65 audits, "approximately 6.5 years, which rounds to 7 years"). The author's
+  checks had covered recall of the inputs and the overview, not the size of the answer space, although this note
+  already listed small-integer counts (aq-01430). Rev 1 adds a first ask, gold "260 audits and 7 years". Scope: one
+  run, one question; the platform result on rev 1 is pending.
+- 2026-10-11: aq-02780 q01 rev 0 (a three-institution branch plan counted against the OCC's 2026 rule and the
+  FDIC's 2025 proposal, gold "9 changes"), difficulty Run 1, Version 5d70b5, raw
+  tasks/aq-02780/verdicts/AQ-02780_difficulty_2026-10-11_1137.txt: "Answerable without the documents"; only the
+  closed-book check ran (Low, Medium and High not run) and the run was spent (9 of 10 left). The one closed-book
+  attempt committed "2 + 3 + 4 = 9", the question's three opening counts; the documents' route is 3 + 1 + 5. The
+  author's wrong-route table had ten document-based slips and no sum of the question's own numbers. Rev 1 changed
+  two counts (gold 4 for the OCC and 6 for the FDIC, total 10 of 21; naive sums 14, 17, 21, 7, 3, 18) and asks per
+  agency; a local closed-book run of rev 1 answered "OCC 3; FDIC 5" (a miss; minor context contamination
+  reported). Scope: one run, one question; the platform result on rev 1 is pending.
+
+- 2026-10-09: aq-02501 q01 rev 0 (DoD DARB's "less than honorable" set filtered by VA's automatic acceptance: general
+  discharges and entry-level separations) survived the free quick test but failed the form's blocking "Needs the documents"
+  (user screenshot, tasks/aq-02501/notes/platform-feedback/q01-rev0-checks-2026-10-09.png): both VA facts are public
+  38 CFR 3.12 text, so a quick-test survival says nothing about closed-book answerability. Rev 1 moved the VA side to the
+  2024 rule preamble's own statements of effect (dropped-from-the-rolls separations "favorably impacted"); a local
+  closed-book probe then answered OTH and special-court-martial BCD only (miss). Regulation text that is public, even
+  quoted from the bundle, counts as general knowledge; a rule's preamble clarification of its own scope did not.
+- 2026-10-09: aq-02360 q01 rev 0 (user screenshot of the form's Checks panel,
+  tasks/aq-02360/notes/platform-feedback/q01-rev0-checks-2026-10-09.png): "Needs the documents Failed"
+  ("Answerable without the documents: This question is answerable without the documents. Ask something
+  that can only be worked out from them.") for a gold of "Section 95(2)", while "Needs two or more
+  documents" and "One defensible answer" passed and the sketch had survived a quick test. The form's
+  blocking closed-book check is now on the Checks list itself, before any difficulty run. Rev 1 added
+  "Regulation 142(4)" to the gold; rev 2 (order wording added) was then reported too easy (user, same day): the
+  paragraph number points the solver to the document sentence that defeats the trap. Check that a non-guessable
+  addition does not tie the trap before filing it.
 
 - 2026-10-06: aq-01321 (ADI, Microchip, TI and onsemi releases, Jan-Aug 2026), closed-book sketch
   screens. Combined revenue of the four companies' quarters ended January 1-March 31, 2026 (gold
@@ -251,3 +351,29 @@ duplicate).
   that states offence status forced-guess the gold (p 0.55). In public-law bundles, anchor the universe on
   a list only one guidance document prints; expect the law document's platform necessity to depend on
   whether the high model recalls the rule. (Golds deliberately not stated here: questions still under check.)
+- 2026-10-08: aq-01431 restart (SEC comment letters), closed-book screens. Reached: the climate rule's lag
+  behind the Fall 2022 agenda target (11 months; recalled the April 2023 target and the Mar 6, 2024
+  adoption) and the courts of two co-signers' climate-rule petitions (Sierra Club D.C. Circuit, NRDC Second
+  Circuit, recalled; the co-signers inferred from the question's own framing). Three closed-book runs on
+  the new q01 recalled all four December 2022 equity-market-structure proposals' Federal Register dates
+  exactly (Dec 29, Jan 3, Jan 20, Jan 27; one run also S7-29-22 = Rule 605 and its release number) but
+  not a commenter letter's date or which files it covered, so they missed (83.7, 90.7). SEC proposals'
+  Federal Register dates and file numbers are general knowledge for strong models; a document whose
+  only input is one of them is a removal-check risk even when the closed-book solve misses.
+- 2026-10-10: aq-02673 (NOAA Atlantic HMS quota proposal and final rule), three closed-book diagnostics (each
+  reported minor contamination from an auto-attached git status; none answered correctly). Recalled exactly: the
+  ICCAT North Atlantic swordfish TAC for 2025-2027 (14,769 t, hedged beside the older 13,200 t), the U.S.
+  swordfish baseline (3,907 t ww, 2,937.6 mt dw) and its 15 percent carryover (440.6 mt dw); the 2025 U.S.
+  bluefin baseline (1,316.14 mt), the 25 mt longline allowance and that it came out of the western TAC (2,726 t
+  less 40 t), and the 2026 bluefin TAC (3,081.6 t). Not recalled: the lowest TAC the swordfish management
+  procedure allows (4,764 t), any 2025 U.S. catch or underharvest figure, and the 2026 rule that the U.S. gets
+  49 percent of the whole TAC. In quota-rule bundles, headline TACs and baseline quotas are general knowledge
+  even when recent; a ticked document whose only input is one of them is a document-check risk. Anchor on the
+  final rule's catch data and on procedure parameters instead.
+- 2026-10-10 (aq-02673 q05, platform Document check, Run 3): the local closed-book diagnostic had recalled the
+  2025 U.S. bluefin baseline (1,316.14 mt) exactly, so the final rule looked replaceable. The platform's high
+  model, with that document left out, did not recall it: it rebuilt the old baseline from the proposal's
+  subquotas (1,341.11 with the set-aside, answer 168.87) or took the wrong rows (231.38), and both were graded
+  different from 168.84, so the document was "needed". A local recall of a public figure overstated the platform
+  risk here, and a two-decimal gold kept a rebuilt figure from matching. State such a risk; do not drop a design
+  on it alone.

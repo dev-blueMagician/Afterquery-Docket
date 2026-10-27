@@ -1,15 +1,31 @@
 ---
 name: docket-capture-pipe-tables
-description: "In complete captures, table blocks the earlier capture hid come out as Markdown pipe tables; the platform's own text shows those rows without pipes, so evidence quotes spanning their cells may fail the form's verbatim check. Prefer prose or tab-text rows; otherwise re-copy via Save passage."
+description: "Compact pipe rows (\"|a|b|\" under \"|---|\", no spaces) are the documents' own text on the task page: quote a table row exactly as printed, pipes included; the form rejected every pipe-free quote of such rows (aq-06840, 2026-10-18) and accepted a piped one (aq-01322). Only the spaced \"| --- |\" rows the old Markdown captures drew are capture artifacts."
 metadata:
   node_type: memory
   type: project
-  updated: 2026-10-05
+  updated: 2026-10-18
   originSessionId: 3aa0fb8b-a0f5-4582-9b0e-56bdce72da25
   modified: 2026-10-06T06:15:15.379Z
 ---
 
-## Current rule
+## Current rule (2026-10-18)
+
+- Plain-text captures (docket-capture v4 and the .txt captures since 2026-10-06) copy each document as the
+  page lays it out (innerText); a grid table would come out tab-separated. Compact pipe rows ("|Capital
+  expenditures|(434,416)|(1,337,719)|" under "|---|---|---|") are therefore the document's own text, and the
+  form's "Verbatim evidence" check matches them with their pipes. Quote such a row exactly as the document
+  prints it, pipes included; a whole line or any contiguous part of it works.
+- Evidence: aq-06840 q01 and q02 rev 0 (user screenshots, 2026-10-18): every pipe-free quote of a table row
+  failed ("Quote 2 does not appear word for word in document 5. Copy it exactly from the document."), the
+  one prose quote passed, and the documents then counted as cited by no quote. Rev 1 quoted the rows with
+  their pipes. aq-01322 (2026-10-06): a piped quote passed.
+- Floor (2026-10-18, aq-06840 session): check_questions.py FAILs a quote that matches only with the pipes
+  removed when the document's own text has compact "|---|" rules (WARN on a submitted or accepted
+  question); test_native_pipe_row_needs_its_pipes. The pipe-free allowance stays only for the spaced
+  "| --- |" rows the old Markdown captures drew themselves (aq-00745), whose platform form stays unconfirmed.
+
+## Superseded rule (2026-10-05 to 2026-10-18; wrong for compact pipe rows)
 
 - A complete capture renders the formerly hidden table blocks ("[... N characters not shown on the
   page ...]" in the clipped capture) as Markdown pipe tables: a blank header row "|  |  |", a
@@ -41,6 +57,11 @@ compare with the old gap counts; at sketch time note which inputs live only in p
 
 ## Evidence and history
 
+- 2026-10-18 (aq-06840, .txt capture, 8 documents): no tabs in the documents section and 329 "|---|" rules.
+  The rev 0 hand-overs quoted table rows pipe-free, following the superseded rule above although the
+  aq-01322 entry below had already shown a piped quote passing; the form rejected all 18 such quotes across
+  the two questions. Mine, not the user's words: the history entry was the evidence, the "Current rule"
+  was stale, and I followed the rule.
 - 2026-10-06 (aq-01322, .txt capture, compact pipe tables): the form accepted piped quotes. The
   difficulty check unlocks only after every blocking check passes, and its run echoed the question's
   evidence "|U.S. Healthcare Solutions|$998,300|$944,969|5.6%|" with the pipes. First observed pass

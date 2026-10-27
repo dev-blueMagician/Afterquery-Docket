@@ -1,6 +1,6 @@
 ---
 name: docket-platform-guide-newer-than-instruction
-description: "The platform guide captured 2026-10-04 (sections dated Oct 1-3) is newer than instruction.md - rule 10 (ask about the world, not the set), 20-45 word aim with a warning over 60, task shapes, send-back reasons, full AI-use section; the floor and gate card still follow the older text."
+description: "The platform guide is newer than instruction.md: sections 4-7 of 2026-10-15/16 are saved verbatim in reference/platform-guide-2026-10-16.md (Hard definition, stacked levers, Hard shapes, Hard bank, send-back pitfalls); older summaries of 2026-10-04 (rule 10, 20-45 words) and 2026-10-15 (levers) below."
 metadata:
   node_type: memory
   type: project
@@ -8,6 +8,23 @@ metadata:
   originSessionId: 58fa60e0-67c1-4288-96e5-e9a1cc580e0a
   modified: 2026-10-05T02:19:54.654Z
 ---
+
+## 2026-10-17: the guide's sections 4-7 saved verbatim
+
+The user pasted the platform guide's sections 4-7 (last updated Oct 15-16, 2026), saved verbatim in
+[reference/platform-guide-2026-10-16.md](reference/platform-guide-2026-10-16.md). It governs where it differs
+from this note's summaries below. What changed a check or a design:
+
+- Hard is defined: "each of the two Hard solvers gets it wrong at least once in its three runs".
+- "One lever is rarely enough"; Hard questions "stack two or more levers"; four Hard shapes (A-D);
+  "Where solvers fail" and the method to find slips ("compare every quote of the same passage across
+  documents, every spelling of each name, each figure against its earlier versions, and each summary
+  against the rest of the document"), now `docket_agent.py mine`.
+- An accepted Hard bank of eight questions, each with two or three levers stacked.
+- Send-back pitfalls: contrived selectors (the most common), two questions in one, riddle chains,
+  judgement conditions, golds that punish a right answer (bare value only); reason 8, read literally.
+- The floor now lists the newer levers and warns on hint words, gold extras, selectors and "the latest
+  report"; the design rules are in `reference/hard-playbook.md` (batch review 3).
 
 ## Current rule
 
@@ -58,3 +75,25 @@ floor remains incomplete. Once the guide and floor are synchronized, update this
   file ends inside Doc 6), and no other trial capture (01-07) holds the guide. The AI-use
   section's exact wording cannot be rechecked locally; ask the user for a fresh capture if a
   decision turns on it.
+
+## Section 4 levers, as summarised 2026-10-15
+
+Source: the user pasted a summary of the platform guide's Section 4, "How to make a question harder"
+(aq-04466, 2026-10-15). It is a summary, not the guide's words; the user found no "L1-L4" labels or
+"harder variations" in the guide (the Coach had cited them). Levers beyond `instruction.md`'s list:
+
+- Restated figures (marked most effective): an earlier period's figure on the basis a named later release uses.
+- A precision the document does not print, computed from raw lines ("do not round intermediate values").
+- A period no document reports on its own (a quarter backed out of a full year).
+- Like for like across a definition change.
+- Summary vs detail: a detail that corrects the document's own headline or summary.
+- Quiet edit in a re-quoted passage: one word differs between two quotations of the same passage.
+- Second mention, different words: the mention that matters uses other wording, a label or another section.
+- Claimed but never discussed: a summary cites something the text never covers.
+- Short references: "Id.", "the same case", "the Company", abbreviations.
+- Footnotes and prose that change how a table is read.
+- Calculate across documents: "three or more dependent steps usually trip solvers up".
+- Combine two levers: "One lever usually lands Easy; two together land Medium or Hard."
+
+Still marked most effective: Mentions it vs does it. The local guide's other two "most effective"
+marks (the hedge; match, then exclude) are not marked in this summary.
