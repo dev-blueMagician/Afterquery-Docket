@@ -1,0 +1,68 @@
+{
+  "question": "Which proposed FCC space-launch coordination-request items, if any, do the final procedures require of no licensee? Any order.",
+  "number_of_asks": 1,
+  "gold_answer": "Distance to the nearest aircraft landing area, and natural formations or structures shielding the antenna from aircraft",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 2, proposed data requirements for frequency coordination requests): the Bureau proposed that licensees give the third-party frequency coordinator, among other groups, \"7. Additional launch site technical information\", made of \"a. Elevation of ground at antenna site above mean sea level in meters\", \"b. Overall height above ground to tip of antenna in meters\", \"c. Distance to nearest aircraft landing area in kilometers\" and \"d. Natural formations or existing man-made structures\" that \"would tend to shield the antenna from aircraft\". Its emission details also asked, if bandwidth exceeds 5 megahertz, for an explanation of why it is necessary.\n\nStep 2. Source fact (Doc 4, final frequency coordination requests): the final list that \"Space Launch Service licensees shall provide\" keeps licensee details, the registered launch site and stations, transmitter characteristics, emission details, launch details and additional station details. It has no launch-site technical group, and no item asks for the distance to an aircraft landing area or for structures that shield the antenna.\n\nStep 3. Decoy check (Doc 4, final fixed and base station registration): the registration list includes \"4. Overall height above ground to tip of antenna in meters\" and \"5. Elevation of ground at antenna site above mean sea level in meters\", so proposed items a and b are still required, at registration, and do not qualify. A \"justification for greater than five megahertz must be submitted in the initial station registration in ULS as a single attachment\", so the bandwidth explanation does not qualify either.\n\nStep 4. Decoy check (Doc 4, discussion of coordination data): operators \"proposing suborbital launches need not provide\" the list of objects to achieve orbit, the orbital location or transmission durations. The final list still contains these items for orbital launches, so some licensees must give them and they do not qualify.\n\nStep 5. Source fact (Doc 4, registration of coordinated launch parameters): the post-coordination list (purpose of operation, start and end times, stations, launch site, transmission characteristics, coordinator response) contains neither the landing-area distance nor shielding structures, and neither does the launch site registration.\n\nStep 6. Comparison (Doc 2 and Doc 4): every other proposed coordination item appears in a final list. Only the distance to the nearest aircraft landing area and the natural formations or man-made structures shielding the antenna from aircraft are required of no licensee.",
+  "answer_components": [
+    "Distance to the nearest aircraft landing area",
+    "natural formations or structures shielding the antenna from aircraft"
+  ],
+  "evidence": [
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "c. Distance to nearest aircraft landing area in kilometers; and"
+    },
+    {
+      "document_number": 2,
+      "component_number": 2,
+      "quote": "Natural formations or existing man-made structures (hills, trees, water tanks, towers, etc.) which would tend to shield the antenna from aircraft."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "Space Launch Service licensees shall provide the following data to the space launch frequency coordinator in a frequency coordination request:"
+    },
+    {
+      "document_number": 4,
+      "component_number": 2,
+      "quote": "Space Launch Service licensees shall provide the following data to the space launch frequency coordinator in a frequency coordination request:"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        4
+      ],
+      "role": "Exclusion / condition source",
+      "reviewer_note": "its final lists keep every other proposed coordination item (for example, elevation of ground and antenna height move to fixed and base station registration), ruling those items out; they exist in Doc 2 without it"
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Conditional filter"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    },
+    {
+      "trap": "Wrong jurisdiction or scope",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    },
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    }
+  ],
+  "why_these_are_traps": "Doc 4's prose (adopting \"the substantial majority\", no significant reduction) suggests none. Diffing only its coordination list gives four items, but elevation and antenna height moved to fixed/base registration. Suborbital exemptions still bind orbital launches. Only Doc 2's landing-area distance and shielding structures appear in no final list."
+}
