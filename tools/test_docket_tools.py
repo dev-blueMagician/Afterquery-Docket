@@ -26,6 +26,7 @@ sys.path.insert(0, str(TOOLS))
 import agent_scope  # noqa: E402
 import check_questions as cq  # noqa: E402
 import extract_text  # noqa: E402
+import form_numbers as fn  # noqa: E402
 import split_capture  # noqa: E402
 
 FILLER = ("The company operates a regional freight network across four states and reports results "
@@ -59,8 +60,13 @@ Missed, by $2.8 million
 
 ## Reasoning
 
-The forecast of $412.6 million is in the first-quarter release; the actual $409.8 million is in
-the second-quarter table. 409.8 - 412.6 = -2.8, so revenue missed the forecast by $2.8 million.
+Step 1. Source fact (Doc 2, first-quarter release): The forecast of $412.6 million is the revenue
+the company expected for the second quarter.
+
+Step 2. Source fact (Doc 1, revenue table): the actual revenue of 409.8 million dollars for Q2 2025 is in
+the second-quarter table.
+
+Step 3. Calculation (Doc 1 and Doc 2): actual minus forecast, in millions of dollars: 409.8 - 412.6 = -2.8, so revenue missed the forecast.
 
 ## Evidence
 
@@ -72,17 +78,10 @@ the second-quarter table. 409.8 - 412.6 = -2.8, so revenue missed the forecast b
 ### Failure mode 1
 Trap: Figure that must be computed
 How a careless solver fails: Misapplies a rule or premise
-Where the trap sits: The second-quarter release says revenue was "in line" with the forecast, while its
-revenue table shows 409.8 million dollars for the quarter. The forecast of 412.6 million dollars sits only
-in the first-quarter release, so the comparison has to be made across the two documents rather than read
-from either one of them.
-The wrong answer a careless solver gives: Met the forecast, by 0 million dollars. A careless solver trusts
-the second-quarter wording that revenue was in line with the forecast and reports no miss at all, or it
-compares the table figure with the prose and never opens the earlier release that holds the forecast.
-Why the correct answer avoids it: A careful reader takes the forecast from the first-quarter release and the
-actual figure from the second-quarter table, then subtracts: 409.8 minus 412.6 gives minus 2.8, so revenue
-missed the forecast by 2.8 million dollars. The phrase in line describes the result loosely and does not
-replace the printed figures, which decide the answer that the question asks for.
+
+Why these are traps: The second-quarter release (Doc 1) calls revenue "in line" with the forecast,
+so a careless solver answers that it met the forecast. The forecast of 412.6 sits only in the
+first-quarter release; against the table's 409.8, revenue missed by 2.8 million dollars.
 
 ## Lever checks
 
@@ -143,6 +142,14 @@ class DocketTools(unittest.TestCase):
     def codes(self, text: str, level: str = "FAIL") -> set[str]:
         _, _, found = cq.check(self.write(text), cq.Bundle(self.bundle))
         return {code for lvl, code, _ in found if lvl == level}
+
+    def write_platform_numbers(self):
+        # Intentionally different from local Dnn order.
+        (self.bundle / "notes").mkdir(exist_ok=True)
+        (self.bundle / "notes" / "intake.json").write_bytes(json.dumps({"schema": 1, "documents": [
+            {"number": 1, "source": "docs/b-release-q2.html"},
+            {"number": 2, "source": "docs/a-release-q1.pdf"},
+            {"number": 3, "source": "docs/c-notes.txt"}]}).encode("utf-8"))
 
     # extract_text.py
     def test_ids_follow_sorted_names_and_formats(self):
@@ -214,6 +221,20 @@ class DocketTools(unittest.TestCase):
         wrong = row.replace('"Dividends Paid (538) (528)"', '"Dividends Paid (538) (529)"')
         self.assertIn("evidence", self.codes(wrong))
 
+    def test_native_pipe_row_needs_its_pipes(self):
+        # A document whose own text is a Markdown table ("|---|" rules, no spaces) keeps its pipes on the
+        # page, and the form rejected every pipe-free quote of such rows (aq-06840 q01 and q02 rev 0,
+        # user screenshots 2026-10-18). The quote must copy the row as printed; the spaced rows the older
+        # captures drew themselves (test above) keep the pipe-free allowance.
+        (self.bundle / "docs" / "c-notes.txt").write_bytes(
+            b"|Item|2025|2024|\n|---|---|---|\n|Dividends Paid|(538)|(528)|\n")
+        extract_text.run(self.bundle)
+        piped = GOOD.replace('"Q2 2025 | 409.8"\n',
+                             '"Q2 2025 | 409.8"\n- D03 (cash flow) [c1]: "|Dividends Paid|(538)|(528)|"\n')
+        self.assertNotIn("evidence", self.codes(piped))
+        bare = piped.replace('"|Dividends Paid|(538)|(528)|"', '"Dividends Paid (538) (528)"')
+        self.assertIn("evidence", self.codes(bare))
+
     def test_floor_catches_each_rule(self):
         cases = {
             "evidence": GOOD.replace("$412.6 million\"", "$412.9 million\""),
@@ -262,6 +283,7 @@ class DocketTools(unittest.TestCase):
         self.assertNotIn("components", self.codes(count))
 
     def test_floor_warnings(self):
+        self.write_platform_numbers()  # the form's reasoning number check needs the page's Doc numbers
         copied = GOOD.replace("Did the freight", "Harlow Freight expects second-quarter revenue of $412.6 million; did the")
         self.assertIn("copied-phrasing", self.codes(copied, "WARN"))
         rate = GOOD.replace("Did the freight company's actual revenue", "How much did the operating margin change versus revenue")
@@ -278,7 +300,7 @@ class DocketTools(unittest.TestCase):
             "question-length": GOOD.replace("to one\ndecimal place?", "to one decimal place? " + "word " * 30),
             "style": GOOD.replace("= -2.8, so", "= -2.8 — so"),
             "format": listed,
-            "list-contract": listed.replace("- c2: $2.8 million\n", "- c2: $2.8 million\n- c3: by\n- c4: Missed, by\n"),
+            "list-contract": listed.replace("Missed, by $2.8 million", "Alpha, Beta, Gamma, Delta"),
             "partial": GOOD.replace("miss or beat", "miss or beat at least one"),
             "world": GOOD.replace("Did the freight", "In this bundle, did the freight"),
         }
@@ -289,11 +311,110 @@ class DocketTools(unittest.TestCase):
         self.assertIn("style", self.codes(GOOD.replace("so revenue missed", "it is worth noting that revenue missed"), "WARN"))
         ordered = listed.replace("to one\ndecimal place?", "to one\ndecimal place, if any, in any order?")
         self.assertNotIn("format", self.codes(ordered, "WARN"))
+        # aq-03736 q02 (2026-10-13): the form's rule-10 advisory called "in any order" an answer-protocol tail.
+        self.assertIn("world", self.codes(ordered, "WARN"))
+        sorted_list = listed.replace("to one\ndecimal place?", "to one\ndecimal place, if any? List them alphabetically.")
+        self.assertNotIn("format", self.codes(sorted_list, "WARN"))
+        self.assertNotIn("world", self.codes(sorted_list, "WARN"))
+        # Measured on aq-03170 q01 (2026-10-12): an order the form did not read as one, a cue clause that
+        # measured a tier easier than the structural wording, and an ordinal the form took for a pointer.
+        bare = listed.replace("to one\ndecimal place?", "to one\ndecimal place, if any? Earliest quarter first.")
+        self.assertIn("format", self.codes(bare, "WARN"))
+        cued = GOOD.replace("to one\ndecimal place?", "to one\ndecimal place, including restated figures?")
+        self.assertIn("cue", self.codes(cued, "WARN"))
+        # Measured on aq-03169 q02 (2026-10-13): a completeness word is a cue too, and a list gold written as
+        # labelled sentences failed the form's blocking "Short answer" check.
+        searched = GOOD.replace("Did the freight", "Anywhere in its filings, did the freight")
+        self.assertIn("cue", self.codes(searched, "WARN"))
+        labelled = listed.replace("Missed, by $2.8 million", "Result: missed. Size: $2.8 million")
+        self.assertIn("short-answer", self.codes(labelled, "WARN"))
+        self.assertNotIn("short-answer", self.codes(listed, "WARN"))
+        pointed = GOOD.replace("Did the freight", "Going by the second table, did the freight")
+        self.assertIn("pointer", self.codes(pointed, "WARN"))
         self.assertEqual(self.codes(GOOD, "WARN"), set())
 
+    def test_floor_reads_the_2026_10_16_guide(self):
+        # The guide's newer levers, its "two together land Medium or Hard", and send-back reasons it lists (sections
+        # 5 and 7, saved in .claude/memory/reference/platform-guide-2026-10-16.md).
+        self.write_platform_numbers()
+        newer = GOOD.replace("levers: Scatter the pieces; Calculate across documents",
+                             "levers: Restated figures; Ask for a precision the document doesn’t print")
+        self.assertNotIn("levers", self.codes(newer, "WARN"))
+        self.assertIn("levers", self.codes(GOOD.replace("Calculate across documents", "Hidden trap"), "WARN"))
+        hard = GOOD.replace("revision: 0", "revision: 0\ndifficulty_target: hard")
+        self.assertNotIn("levers", self.codes(hard, "WARN"))
+        self.assertIn("levers", self.codes(hard.replace("Scatter the pieces; ", ""), "WARN"))
+        cases = {
+            "hint": GOOD.replace("actual revenue", "actual revenue, as originally reported,"),
+            "gold-extra": GOOD.replace("Missed, by $2.8 million", "Missed, by about $2.8 million"),
+            "selector": GOOD.replace("for the second calendar quarter of 2025",
+                                     "for the calendar quarter of 2025 in which its depot opened"),
+            "literal": GOOD.replace("the revenue it had forecast", "the revenue its latest release had forecast"),
+        }
+        for code, text in cases.items():
+            with self.subTest(code=code):
+                self.assertIn(code, self.codes(text, "WARN"))
+                self.assertNotIn(code, self.codes(text))
+        bracketed = GOOD.replace("Missed, by $2.8 million", "Missed, by $2.8 million (Q2)")
+        self.assertIn("gold-extra", self.codes(bracketed, "WARN"))
+        asked = bracketed.replace("to one\ndecimal place?", "to one\ndecimal place? Give the quarter in brackets.")
+        self.assertNotIn("gold-extra", self.codes(asked, "WARN"))
+
+    def test_list_limits_count_answer_items_not_evidence_components(self):
+        def listed(answer, comp_text):
+            return GOOD.replace("answer_type: yes-no; number", "answer_type: list").replace(
+                "Missed, by $2.8 million", answer).replace(
+                "- c1: Missed\n- c2: $2.8 million", comp_text)
+
+        thirteen = ", ".join(f"Item{n}" for n in range(1, 14))
+        self.assertIn("short-answer", self.codes(listed(thirteen, f"- c1: {thirteen}")))
+        twelve = ", ".join(f"Item{n}" for n in range(1, 13))
+        self.assertNotIn("short-answer", self.codes(listed(twelve, f"- c1: {twelve}")))
+        four = "Alpha, Beta, Gamma, Delta"
+        compressed = listed(four, f"- c1: {four}")
+        self.assertIn("list-contract", self.codes(compressed, "WARN"))
+        partial = compressed.replace("miss or beat", "miss or beat at least two")
+        self.assertIn("partial", self.codes(partial, "WARN"))
+        # Splitting one item's evidence into several components cannot inflate its count.
+        single = listed('"Alpha Beta Gamma Delta"', "- c1: Alpha\n- c2: Beta\n- c3: Gamma\n- c4: Delta")
+        self.assertNotIn("list-contract", self.codes(single, "WARN"))
+        self.assertNotIn("partial", self.codes(single.replace("miss or beat", "miss or beat at least one"), "WARN"))
+        long_item = " ".join("abcdefghijk")
+        self.assertIn("answer-length", self.codes(listed(long_item, "- c1: a\n- c2: b"), "WARN"))
+
+    def test_list_boundaries_preserve_numbers_dates_and_entity_names(self):
+        cases = {
+            "1,000, 2,000": ["1,000", "2,000"],
+            "October 5, 2026, October 6, 2026": ["October 5, 2026", "October 6, 2026"],
+            "Acme, Inc., Beta, Ltd.": ["Acme, Inc.", "Beta, Ltd."],
+            '"Health and Human Services", "Alpha, Beta and Gamma"':
+                ['"Health and Human Services"', '"Alpha, Beta and Gamma"'],
+            "Alpha (East, West), Beta [North, South]": ["Alpha (East, West)", "Beta [North, South]"],
+            "Alpha, Beta, and Gamma": ["Alpha", "Beta", "Gamma"],
+            "- Health and Human Services\n- Smith, Jones and Co.":
+                ["Health and Human Services", "Smith, Jones and Co."],
+            "1. October 5, 2026\n2. October 6, 2026": ["October 5, 2026", "October 6, 2026"],
+        }
+        for answer, expected in cases.items():
+            with self.subTest(answer=answer):
+                self.assertEqual(cq.list_answer_items(answer), (expected, False))
+        self.assertEqual(cq.list_answer_items("Department of Health and Human Services"),
+                         (["Department of Health and Human Services"], True))
+        unclear = GOOD.replace("answer_type: yes-no; number", "answer_type: list").replace(
+            "Missed, by $2.8 million", "Alpha and Beta and Gamma and Delta")
+        self.assertIn("list-items", self.codes(unclear, "WARN"))
+        self.assertNotIn("list-contract", self.codes(unclear, "WARN"))
+        # A scalar or multipart answer keeps its existing treatment, including decimal commas.
+        self.assertEqual(cq.answer_items("October 5, 2026", False), ["October 5, 2026"])
+        self.assertEqual(cq.answer_items("Missed, by $1,000", False), ["Missed, by $1,000"])
+        self.write_platform_numbers()
+        self.assertEqual(self.codes(GOOD) | self.codes(GOOD, "WARN"), set())
+
     def test_targeted_failure_modes_follow_the_form(self):
-        # The form (2026-10-07): 1-3 traps from its list, each once, a cause from its list, and three
-        # boxes of 150+ words together; Submit stays blocked without them.
+        # The form: 1-3 traps from its list, each once, a cause from its list (2026-10-07), then one
+        # shared "Why these are traps" reason of at most 50 words (2026-10-08, replacing three boxes
+        # per mode); Submit stays blocked without them or above 50 words.
+        self.write_platform_numbers()
         self.assertEqual(self.codes(GOOD) | self.codes(GOOD, "WARN"), set())
         section = GOOD[GOOD.index("### Failure mode 1"):GOOD.index("## Lever checks")]
         missing = GOOD.replace(section, "")
@@ -304,42 +425,64 @@ class DocketTools(unittest.TestCase):
         self.assertIn("failure-modes", self.codes(GOOD.replace("Trap: Figure", "Trap: TODO Figure"), "WARN"))
         frozen = missing.replace("status: draft", "status: submitted")
         self.assertNotIn("failure-modes", self.codes(frozen) | self.codes(frozen, "WARN"))
-        modes = cq.failure_modes(section)
-        self.assertEqual(len(modes), 1)
-        self.assertTrue(modes[0]["where"].endswith("from either one of them."))
-        # A box may hold paragraphs; the blank line between them survives into the hand-over.
-        split = cq.failure_modes(section.replace("in the first-quarter release, so", "in the first-quarter release.\n\nSo"))
-        self.assertIn("release.\n\nSo the comparison", split[0]["where"])
-        self.assertIn("release.\n\nSo the comparison", cq.unwrapped(split[0]["where"]))
+        modes, reason = cq.failure_section(section)
+        self.assertEqual(modes, cq.failure_modes(section))
+        self.assertEqual([(m["trap"], m["cause"]) for m in modes],
+                         [("Figure that must be computed", "Misapplies a rule or premise")])
+        self.assertTrue(reason.startswith("The second-quarter release (Doc 1) calls revenue"))
+        self.assertTrue(reason.endswith("revenue missed by 2.8 million dollars."))
+        self.assertEqual(cq.reason_words(reason), 42)
+        # The reason may also sit under its own heading after the modes.
+        heading = section.replace("Why these are traps: ", "### Why these are traps\n")
+        self.assertEqual(cq.failure_section(heading), (modes, reason))
+        self.assertEqual(self.codes(GOOD.replace(section, heading)) | self.codes(GOOD.replace(section, heading), "WARN"),
+                         set())
 
-        def block(number: int, trap: str, why: str = modes[0]["why"]) -> str:
+        def block(number: int, trap: str) -> str:
             return (f"### Failure mode {number}\nTrap: {trap}\nHow a careless solver fails: Misapplies a rule or "
-                    f"premise\nWhere the trap sits: {modes[0]['where']}\nThe wrong answer a careless solver gives: "
-                    f"{modes[0]['wrong']}\nWhy the correct answer avoids it: {why}\n\n")
+                    "premise\n\n")
 
+        why = f"Why these are traps: {reason}\n\n"
         traps = ["Figure that must be computed", "Part vs total", "Unit or basis", "Look-alike measure"]
         failing = {
             "trap not on the list": GOOD.replace("Trap: Figure that must be computed", "Trap: Exact table vs rounded prose"),
             "cause not on the list": GOOD.replace("Misapplies a rule or premise", "Misreads the table"),
-            "same trap twice": GOOD.replace(section, block(1, traps[0]) + block(2, traps[0])),
-            "four modes": GOOD.replace(section, "".join(block(n, trap) for n, trap in enumerate(traps, 1))),
-            "empty box": GOOD.replace(section, block(1, traps[0], why="")),
-            "under 150 words": GOOD.replace(section, block(1, traps[0], why="Subtract.").replace(
-                modes[0]["where"], "Two releases.")),
+            "same trap twice": GOOD.replace(section, block(1, traps[0]) + block(2, traps[0]) + why),
+            "four modes": GOOD.replace(section, "".join(block(n, trap) for n, trap in enumerate(traps, 1)) + why),
+            "no shared reason": GOOD.replace(section, block(1, traps[0])),
+            "reason over 50 words": GOOD.replace("2.8 million dollars.", "2.8 million dollars." + " more" * 9),
+            "old per-mode box": GOOD.replace("premise\n\nWhy these", "premise\nWhere the trap sits: Doc 1, the "
+                                                                  "revenue table.\n\nWhy these"),
         }
         for name, text in failing.items():
             with self.subTest(name=name):
                 self.assertIn("failure-modes", self.codes(text))
-        # The form's own option values are accepted, and figures that may not count as words warn.
+        # Fifty words is the limit, the form's own option values are accepted, and a reason naming no
+        # document warns.
+        fifty = GOOD.replace("2.8 million dollars.", "2.8 million dollars." + " more" * 8)
+        self.assertEqual(self.codes(fifty) | self.codes(fifty, "WARN"), set())
+        two = GOOD.replace(section, block(1, traps[0]) + block(2, traps[2]) + why)
+        self.assertEqual(self.codes(two) | self.codes(two, "WARN"), set())
+        # Submit checks a pick against its definition (aq-02208 q02, 2026-10-09): the period-subtraction trap
+        # wants a period in the question, and "Part vs total" a reason naming the total or the part.
+        no_period = GOOD.replace("second calendar quarter of 2025", "spring 2025 season").replace(
+            "for that quarter", "for that season")
+        self.assertIn("failure-modes", self.codes(no_period, "WARN"))
+        self.assertNotIn("failure-modes", self.codes(no_period))
+        part = GOOD.replace(section, block(1, traps[1]) + why)
+        self.assertIn("failure-modes", self.codes(part, "WARN"))
+        part_named = part.replace("revenue missed by 2.8 million dollars.",
+                                  "total revenue missed by 2.8 million dollars.")
+        self.assertEqual(self.codes(part_named) | self.codes(part_named, "WARN"), set())
         values = GOOD.replace("Trap: Figure that must be computed", "Trap: derived_or_computed_metric").replace(
             "Misapplies a rule or premise", "rule_or_premise_misapplication")
         self.assertEqual(self.codes(values) | self.codes(values, "WARN"), set())
-        figures = GOOD.replace("then subtracts:", "then subtracts: " + "409.8 412.6 " * 3)
-        figures = figures.replace("A careful reader takes", "A reader takes").replace("by 2.8 million dollars.", "by 2.8.")
-        self.assertIn("failure-modes", self.codes(figures, "WARN"))
-        self.assertNotIn("failure-modes", self.codes(figures))
+        nodoc = GOOD.replace(" (Doc 1)", "")
+        self.assertIn("failure-modes", self.codes(nodoc, "WARN"))
+        self.assertNotIn("failure-modes", self.codes(nodoc))
 
     def test_necessary_document_roles_and_alternatives(self):
+        self.write_platform_numbers()
         roles = GOOD.replace("## Targeted failure modes", "## Necessary documents\n\n- D01: Answer component\n"
                                                            "- D02: Used to identify\n\n## Targeted failure modes")
         self.assertEqual(self.codes(roles) | self.codes(roles, "WARN"), set())
@@ -374,7 +517,8 @@ class DocketTools(unittest.TestCase):
         canonical = json.dumps(legacy, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
         import hashlib
         self.assertEqual(cq.submission_sha256(meta, sections), hashlib.sha256(canonical.encode("utf-8")).hexdigest())
-        reworded = GOOD.replace("trusts\nthe second-quarter wording", "believes\nthe second-quarter wording")
+        reworded = GOOD.replace("so a careless solver answers", "so a hasty solver answers")
+        self.assertNotEqual(reworded, GOOD)
         self.assertEqual(cq.submission_sha256(*cq.parse(self.write(reworded))), cq.submission_sha256(meta, sections))
         roles = GOOD.replace("## Targeted failure modes", "## Necessary documents\n\n- D01: Answer component\n"
                                                            "- D02: Used to identify\n\n## Targeted failure modes")
@@ -382,14 +526,14 @@ class DocketTools(unittest.TestCase):
 
     def test_handover_writes_every_form_field_in_order(self):
         # The page numbers documents in its own order; intake.json records it for each source.
-        (self.bundle / "notes").mkdir(exist_ok=True)
-        (self.bundle / "notes" / "intake.json").write_bytes(json.dumps({"schema": 1, "documents": [
-            {"number": 1, "source": "docs/b-release-q2.html"}, {"number": 2, "source": "docs/a-release-q1.pdf"},
-            {"number": 3, "source": "docs/c-notes.txt"}]}).encode())
-        self.write(GOOD)
+        self.write_platform_numbers()
+        source = self.write(GOOD)
         with contextlib.redirect_stdout(io.StringIO()) as out:
             self.assertEqual(cq.handover(self.bundle, ["q01"]), 0)
         self.assertIn("0 FAIL, 0 WARN", out.getvalue())
+        json_path = source.with_suffix(".json")
+        self.assertEqual(json.loads(json_path.read_bytes())["gold_answer"], "Missed, by $2.8 million")
+        self.assertEqual(source.read_bytes(), GOOD.encode("utf-8"))
         sheet = (self.bundle / "notes" / "handover-q01.md").read_bytes().decode("utf-8")
         headings = ["### Question", "### Number of asks", "### Gold answer", "### Step-by-step reasoning",
                     "### Answer components", "### Evidence", "### Necessary documents", "### Reasoning tags",
@@ -399,8 +543,8 @@ class DocketTools(unittest.TestCase):
         # Wrapped lines become one paragraph in a box; the reasoning keeps its lines as steps.
         self.assertIn("```text\nDid the freight company's actual revenue for the second calendar quarter of 2025 miss "
                       "or beat the revenue it had forecast", sheet)
-        self.assertIn('Where the trap sits:\n\n```text\nThe second-quarter release says revenue was "in line" with the '
-                      "forecast, while its revenue table shows", sheet)
+        self.assertIn('#### Why these are traps (at most 50 words)\n\n```text\nThe second-quarter release (Doc 1) calls '
+                      'revenue "in line" with the forecast, so a careless solver answers', sheet)
         self.assertIn("is in\nthe second-quarter table.", sheet)
         self.assertIn("### Number of asks\n\n2 asks", sheet)
         self.assertIn("Evidence 4: document Doc 1 (b-release-q2.html), proves component 2. $2.8 million", sheet)
@@ -408,7 +552,8 @@ class DocketTools(unittest.TestCase):
         self.assertIn("Leave unticked: Doc 3 (c-notes.txt)", sheet)
         self.assertIn("Tick: Cross-document join, Temporal alignment\n\nLeave unticked: Unit normalization", sheet)
         self.assertIn("How a careless solver fails: Misapplies a rule or premise", sheet)
-        self.assertIn("(159 words across the three boxes", sheet)
+        self.assertIn("(42 / 50 words.)", sheet)
+        self.assertNotIn("Where the trap sits", sheet)
         self.assertIn("DRAFT", sheet)
         self.assertIn("so are the default Answer component roles shown below", sheet)
         self.assertNotIn("Authorship", sheet)
@@ -420,16 +565,154 @@ class DocketTools(unittest.TestCase):
         sheet = (self.bundle / "notes" / "handover-q01.md").read_bytes().decode("utf-8")
         self.assertIn("Authorship: origin claude", sheet)
         self.assertNotIn("DRAFT", sheet)
+        self.assertEqual(source.read_bytes(), claude.encode("utf-8"))
+        self.assertNotIn("origin", json.loads(json_path.read_bytes()))
+        json_path.unlink()
         self.write(GOOD.replace("Missed, by $2.8 million", "TODO"))
         with contextlib.redirect_stdout(io.StringIO()):
             self.assertEqual(cq.handover(self.bundle, ["q01"]), 1)
         self.assertIn("NOT READY TO PASTE", (self.bundle / "notes" / "handover-q01.md").read_bytes().decode("utf-8"))
+        self.assertFalse(json_path.exists())
         (self.bundle / "notes" / "handover-q01.md").unlink()
         self.write(GOOD.replace("status: draft", "status: submitted"))
         with contextlib.redirect_stdout(io.StringIO()) as out:
             cq.handover(self.bundle, ["q01"])
         self.assertIn("no hand-over", out.getvalue())
         self.assertFalse((self.bundle / "notes" / "handover-q01.md").exists())
+        self.assertFalse(json_path.exists())
+
+    def test_json_inputs_contain_only_platform_fields_and_expand_evidence(self):
+        self.write_platform_numbers()
+        text = GOOD.replace("origin: user", "origin: claude").replace(
+            "status: draft", "status: checked").replace("The forecast of", "Le prévisionnel — the forecast of")
+        text += "\n## Platform validation\n\nPRIVATE PLATFORM RETURN\n\n## Local resolution\n\nPRIVATE DIAGNOSTIC\n"
+        source = self.write(text)
+        meta, sec = cq.parse(source)
+        bundle = cq.Bundle(self.bundle)
+        with mock.patch.object(cq, "check", side_effect=AssertionError("serialization must not run checks")):
+            target = cq.write_json_inputs(bundle, source, meta, sec)
+        self.assertEqual(target, source.with_suffix(".json"))
+        self.assertEqual(source.read_bytes(), text.encode("utf-8"))
+        data = json.loads(target.read_bytes())
+        self.assertEqual(set(data), {"question", "number_of_asks", "gold_answer", "step_by_step_reasoning",
+                                     "answer_components", "evidence", "necessary_documents", "reasoning_tags",
+                                     "targeted_failure_modes", "why_these_are_traps"})
+        self.assertEqual(data["question"], "Did the freight company's actual revenue for the second calendar "
+                         "quarter of 2025 miss or beat the revenue it had forecast for that quarter, and by how "
+                         "many million dollars, to one decimal place?")
+        self.assertEqual(data["number_of_asks"], 2)
+        self.assertIs(type(data["number_of_asks"]), int)
+        self.assertEqual(data["gold_answer"], "Missed, by $2.8 million")
+        self.assertEqual(data["step_by_step_reasoning"], sec["reasoning"])
+        self.assertIn("prévisionnel —", data["step_by_step_reasoning"])
+        self.assertEqual(data["answer_components"], ["Missed", "$2.8 million"])
+        self.assertEqual(data["evidence"], [
+            {"document_number": 2, "component_number": 1, "quote": "expects second-quarter revenue of $412.6 million"},
+            {"document_number": 2, "component_number": 2, "quote": "expects second-quarter revenue of $412.6 million"},
+            {"document_number": 1, "component_number": 1, "quote": "Q2 2025 | 409.8"},
+            {"document_number": 1, "component_number": 2, "quote": "Q2 2025 | 409.8"}])
+        self.assertEqual(data["necessary_documents"], [
+            {"document_numbers": [2], "role": "Answer component", "reviewer_note": ""},
+            {"document_numbers": [1], "role": "Answer component", "reviewer_note": ""}])
+        self.assertEqual(data["reasoning_tags"], ["Cross-document join", "Temporal alignment"])
+        self.assertEqual(len(data["targeted_failure_modes"]), 1)
+        mode = data["targeted_failure_modes"][0]
+        self.assertEqual(mode, {"trap": "Figure that must be computed",
+                                "how_a_careless_solver_fails": "Misapplies a rule or premise"})
+        self.assertTrue(data["why_these_are_traps"].startswith('The second-quarter release (Doc 1) calls revenue "in line"'))
+        self.assertTrue(data["why_these_are_traps"].endswith("revenue missed by 2.8 million dollars."))
+        self.assertNotIn("\n", data["why_these_are_traps"])
+        self.assertNotIn("PRIVATE", target.read_bytes().decode("utf-8"))
+        self.assertNotIn("One document is not enough", target.read_bytes().decode("utf-8"))
+
+    def test_json_inputs_preserve_component_and_alternative_order_and_normalize_labels(self):
+        self.write_platform_numbers()
+        text = GOOD.replace("c1", "c7").replace("c2", "c3").replace(
+            "documents: D01, D02", "documents: D01, D02, D03").replace(
+            "tags: Cross-document join; Temporal alignment", "tags: temporal alignment; cross-document join").replace(
+            "Trap: Figure that must be computed", "Trap: derived_or_computed_metric").replace(
+            "How a careless solver fails: Misapplies a rule or premise",
+            "How a careless solver fails: rule_or_premise_misapplication").replace(
+            "## Targeted failure modes", "## Necessary documents\n\n- D01: answer component\n"
+            "- D03 or D02: exclusion / condition source | note: Both releases use the same fiscal period.\n\n"
+            "## Targeted failure modes")
+        meta, sec = cq.parse(self.write(text))
+        data = cq.form_payload(meta, sec, cq.Bundle(self.bundle))
+        self.assertEqual(data["answer_components"], ["Missed", "$2.8 million"])
+        self.assertEqual([row["component_number"] for row in data["evidence"]], [1, 2, 1, 2])
+        self.assertEqual(data["necessary_documents"], [
+            {"document_numbers": [2], "role": "Answer component", "reviewer_note": ""},
+            {"document_numbers": [3, 1], "role": "Exclusion / condition source",
+             "reviewer_note": "Both releases use the same fiscal period."}])
+        self.assertEqual(set(data["reasoning_tags"]), {"Cross-document join", "Temporal alignment"})
+        self.assertEqual(data["targeted_failure_modes"][0]["trap"], "Figure that must be computed")
+        self.assertEqual(data["targeted_failure_modes"][0]["how_a_careless_solver_fails"], "Misapplies a rule or premise")
+
+    def test_json_inputs_refuse_unknown_mapping_and_malformed_required_fields(self):
+        source = self.write(GOOD)
+        meta, sec = cq.parse(source)
+        with self.assertRaises(ValueError):
+            cq.write_json_inputs(cq.Bundle(self.bundle), source, meta, sec)
+        self.assertFalse(source.with_suffix(".json").exists())
+        self.assertEqual(source.read_bytes(), GOOD.encode("utf-8"))
+        self.write_platform_numbers()
+        bad_inputs = {
+            "unknown component": GOOD.replace("[c1, c2]", "[c1, c9]"),
+            "unknown evidence document": GOOD.replace("- D02 (revenue table)", "- D04 (revenue table)"),
+            "unparsed evidence": GOOD.replace('- D02 (revenue table) [c1, c2]: "Q2 2025 | 409.8"',
+                                               "- this evidence line cannot be parsed"),
+            "unparsed components": GOOD.replace("- c2: $2.8 million", "- this component cannot be parsed"),
+            "unknown tag": GOOD.replace("tags: Cross-document join; Temporal alignment", "tags: Unknown tag"),
+            "malformed document metadata": GOOD.replace("documents: D01, D02", "documents: D01, unknown"),
+            "unknown role": GOOD.replace("## Targeted failure modes", "## Necessary documents\n\n"
+                                          "- D01: unknown role\n- D02: Answer component\n\n## Targeted failure modes"),
+            "unknown trap": GOOD.replace("Trap: Figure that must be computed", "Trap: unknown trap"),
+            "unknown cause": GOOD.replace("How a careless solver fails: Misapplies a rule or premise",
+                                            "How a careless solver fails: unknown cause"),
+            "missing asks": GOOD.replace("asks: 2\n", ""),
+            "missing question": GOOD.replace("## Question", "## Local question"),
+            "missing answer": GOOD.replace("## Answer", "## Local answer"),
+            "missing reasoning": GOOD.replace("## Reasoning", "## Local reasoning"),
+            "missing failure modes": GOOD.replace("## Targeted failure modes", "## Local failure modes"),
+            "missing failure-mode reason": GOOD.replace("Why these are traps: ", "Notes: "),
+            "failure-mode reason over 50 words": GOOD.replace("2.8 million dollars.", "2.8 million dollars." + " more" * 9),
+            "old per-mode failure box": GOOD.replace("premise\n\nWhy these", "premise\nWhere the trap sits: Doc 1.\n\n"
+                                                                          "Why these"),
+        }
+        for name, text in bad_inputs.items():
+            with self.subTest(name=name):
+                source = self.write(text)
+                meta, sec = cq.parse(source)
+                with self.assertRaises(ValueError):
+                    cq.write_json_inputs(cq.Bundle(self.bundle), source, meta, sec)
+                self.assertFalse(source.with_suffix(".json").exists())
+                self.assertEqual(source.read_bytes(), text.encode("utf-8"))
+
+    def test_json_cli_serializes_selected_frozen_question_without_validation(self):
+        self.write_platform_numbers()
+        text = GOOD.replace("origin: user", "origin: claude").replace("status: draft", "status: accepted")
+        source = self.write(text)
+        self.write(GOOD.replace("id: q01", "id: q02"), "q02")
+        with mock.patch.object(cq, "check", side_effect=AssertionError("JSON must not run the floor")), \
+                mock.patch.object(cq.pc, "summary", side_effect=AssertionError("JSON must not consult platform checks")), \
+                contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(cq.main([str(self.bundle), "--json", "--q", "q01"]), 0)
+        self.assertEqual(source.read_bytes(), text.encode("utf-8"))
+        self.assertTrue(source.with_suffix(".json").exists())
+        self.assertFalse((self.bundle / "questions" / "q02.json").exists())
+        self.assertFalse((self.bundle / "notes" / "handover-q01.md").exists())
+
+    def test_handover_reports_missing_json_mapping_without_changing_source(self):
+        source = self.write(GOOD)
+        with contextlib.redirect_stdout(io.StringIO()) as out:
+            self.assertEqual(cq.handover(self.bundle, ["q01"]), 0)
+        self.assertIn("JSON not written", out.getvalue())
+        self.assertTrue((self.bundle / "notes" / "handover-q01.md").exists())
+        self.assertFalse(source.with_suffix(".json").exists())
+        self.assertEqual(source.read_bytes(), GOOD.encode("utf-8"))
+        with contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(cq.main([str(self.bundle), "--json", "--q", "q01"]), 1)
+        self.assertFalse(source.with_suffix(".json").exists())
 
     def test_sibling_questions_on_one_bundle(self):
         self.write(GOOD.replace("id: q01", "id: q02"), "q02")
@@ -437,39 +720,21 @@ class DocketTools(unittest.TestCase):
         self.write(GOOD.replace("id: q01", "id: q02").replace("status: draft", "status: dropped"), "q02")
         self.assertNotIn("sibling", self.codes(GOOD, "WARN"))
 
-    def test_ready_needs_records_and_export_takes_only_ready(self):
-        solves = ("- 2026-10-01 | rev: 0 | answer: below by 2.8 | outcome: match | readings: none\n"
-                  "- 2026-10-01 | rev: 0 | answer: below by 2.8 | outcome: match | readings: none\n"
-                  "- 2026-10-01 | rev: 0 | closed-book solve | answer: below by 5 | result: misses\n"
-                  "- 2026-10-02 | rev: 0 | platform quick test | platform_verdict: pass | passed_tier: hard | result: survived | tiers: Low 1/5 · Medium 0/5 · High 0/5 | feedback: Passed Hard verification\n")
-        review = "- 2026-10-01 | rev: 0 | verdict: ready | difficulty: maximum | findings: none\n"
-        ready = GOOD.replace("status: draft", "status: ready").replace(
-            "## Blind solve\n", "## Blind solve\n\n" + solves).replace("## Review\n", "## Review\n\n" + review)
+    def test_legacy_target_needs_bound_hard_platform_pass_and_export_takes_only_ready(self):
+        ready = self.rebound_ready(self.targeted_ready("hard", local=False).replace("difficulty_target: hard\n", ""))
         self.assertEqual(self.codes(ready), set())
-        # Lever misses provide difficulty evidence, but cannot establish the gold answer.
-        self.assertIn("status", self.codes(ready.replace("outcome: match", "outcome: wrong-lever", 1)))
-        # A slip is discounted, and a review whose findings mention the closed-book solve still counts.
-        slip = ready.replace("result: misses\n", "result: misses\n- 2026-10-02 | rev: 0 | answer: 7 | outcome: solver-error\n")
-        self.assertEqual(self.codes(slip.replace("findings: none", "findings: the closed-book solve missed")), set())
         failing = {
-            "below maximum": ready.replace("difficulty: maximum", "difficulty: below maximum"),
-            "no difficulty rating": ready.replace("difficulty: maximum | ", ""),
-            "review says revise": ready.replace("verdict: ready", "verdict: revise"),
-            "closed book reaches the key": ready.replace("result: misses", "result: reaches"),
-            "no closed-book solve": ready.replace("- 2026-10-01 | rev: 0 | closed-book solve | answer: below by 5 | result: misses\n", ""),
-            "platform quick test solved it": ready.replace("result: survived", "result: solved"),
-            "no platform quick test": ready.replace("- 2026-10-02 | rev: 0 | platform quick test | platform_verdict: pass | passed_tier: hard | result: survived | tiers: Low 1/5 · Medium 0/5 · High 0/5 | feedback: Passed Hard verification\n", ""),
+            "platform solved it": ready.replace("platform_verdict: pass", "result: solved | platform_verdict: pass"),
+            "no platform result": re.sub(r"(?m)^- .*platform difficulty check.*\n", "", ready),
             "High tier not reached": ready.replace("High 0/5", "High —"),
-            "one blind solve": ready.replace("- 2026-10-01 | rev: 0 | answer: below by 2.8 | outcome: match | readings: none\n", "", 1),
-            "ambiguous": ready.replace("outcome: match", "outcome: ambiguous", 1),
-            "not answerable": ready.replace("outcome: match", "outcome: not-answerable"),
-            "unknown outcome": ready.replace("outcome: match", "outcome: wronglever", 1),
+            "below legacy target": ready.replace("passed_tier: hard", "passed_tier: easy"),
             "observed counts are not a pass": ready.replace("platform_verdict: pass | ", ""),
             "no passed tier": ready.replace("passed_tier: hard | ", ""),
-            "no saved platform feedback": ready.replace("feedback: Passed Hard verification", ""),
-            "contradictory platform verdict": ready.replace("Passed Hard verification", "Too easy: High model solved it"),
+            "no saved platform feedback": ready.replace("feedback: Passed hard verification", ""),
+            "contradictory platform verdict": ready.replace("Passed hard verification", "Too easy: High model solved it"),
             "records of an older revision": ready.replace("revision: 0", "revision: 1"),
             "untagged records": ready.replace("rev: 0 | ", ""),
+            "unbound historical records": re.sub(r"tested_sha256: [a-f0-9]+ \| ", "", ready),
         }
         for name, text in failing.items():
             with self.subTest(name=name):
@@ -494,7 +759,7 @@ class DocketTools(unittest.TestCase):
         self.assertNotIn("Lever checks", sheet)
         self.assertNotIn("outcome:", sheet)
 
-    def targeted_ready(self, target: str = "easy", passed_tier: str | None = None) -> str:
+    def targeted_ready(self, target: str = "easy", passed_tier: str | None = None, local: bool = True) -> str:
         """Build a complete revision-bound fixture; this is a recorded verdict, not a live pass."""
         # The extraction fixture intentionally includes one unsupported document; a complete
         # corpus for readiness excludes that separate unsupported-format test input.
@@ -513,11 +778,14 @@ class DocketTools(unittest.TestCase):
         tier_line = {"easy": "Easy 1/5 · Medium — · Hard —",
                      "medium": "Easy 1/5 · Medium 0/5 · Hard —",
                      "hard": "Low 1/5 · Medium 0/5 · High 0/5"}[passed_tier]
+        platform = (f"- 2026-10-02 | {binding} | platform difficulty check | platform_verdict: pass | "
+                    f"passed_tier: {passed_tier} | tiers: {tier_line} | feedback: Passed {passed_tier} verification\n")
+        if not local:
+            return question + "\n## Platform validation\n\n" + platform
         solves = (f"- 2026-10-01 | {binding} | solver: A | outcome: match | answer: below by 2.8 | readings: none\n"
                   f"- 2026-10-01 | {binding} | solver: B | outcome: match | answer: below by 2.8 | readings: none\n"
                   f"- 2026-10-01 | {binding} | closed-book solve | result: misses | answer: unknown\n"
-                  f"- 2026-10-02 | {binding} | platform difficulty check | platform_verdict: pass | "
-                  f"passed_tier: {passed_tier} | tiers: {tier_line} | feedback: Passed {passed_tier} verification\n")
+                  + platform)
         review = f"- 2026-10-01 | {binding} | verdict: ready | difficulty: {target} | findings: none\n"
         audit = f"## Shortcut audit\n\n- 2026-10-01 | {binding} | verdict: clear | findings: none\n\n"
         return question.replace("## Blind solve\n", "## Blind solve\n\n" + solves).replace(
@@ -542,12 +810,7 @@ class DocketTools(unittest.TestCase):
             "unfinished platform feedback": ready.replace("Passed easy verification", "Pending / Running / Not started"),
             "rejection hidden after delimiter": ready.replace("Passed easy verification", "Passed easy verification | Too easy"),
             "conflicting verdict fields": ready.replace("platform_verdict: pass", "platform_verdict: fail | platform_verdict: pass"),
-            "only one gold match": ready.replace("outcome: match", "outcome: wrong-lever", 1),
-            "repeated solver identity": ready.replace("solver: B", "solver: A"),
-            "missing solver identity": ready.replace("solver: B | ", ""),
             "shortcut found": ready.replace("verdict: clear", "verdict: shortcut"),
-            "shortcut missing": ready.replace("## Shortcut audit", "## Unrecorded audit"),
-            "invalid review prediction": ready.replace("difficulty: easy", "difficulty: below maximum"),
         }
         for name, question in cases.items():
             with self.subTest(name=name):
@@ -567,6 +830,102 @@ class DocketTools(unittest.TestCase):
         self.assertIn("status", self.codes(ready.replace("Passed easy verification", "Easy failed; Medium passed")))
         self.assertIn("difficulty-target", self.codes(ready.replace("difficulty_target: easy", "difficulty_target: low")))
 
+    def test_local_positives_predictions_and_freshness_are_not_ready_requirements(self):
+        ready = self.targeted_ready()
+        cases = {
+            "platform only": self.targeted_ready(local=False),
+            "one gold match": ready.replace("outcome: match", "outcome: wrong-lever", 1),
+            "no gold matches": ready.replace("outcome: match", "outcome: solver-error"),
+            "repeated solver": ready.replace("solver: B", "solver: A"),
+            "missing solver identity": ready.replace("solver: B | ", ""),
+            "no closed-book": re.sub(r"(?m)^- .*closed-book solve.*\n", "", ready),
+            "no audit": ready.replace("## Shortcut audit", "## Historical optional audit"),
+            "no review": ready.replace("## Review", "## Historical optional review"),
+            "lower local rating": ready.replace("difficulty: easy", "difficulty: below maximum"),
+            "no local rating": ready.replace("difficulty: easy | ", ""),
+            "stale local records": re.sub(r"(?m)^(- 2026-10-01 .*tested_sha256: )[a-f0-9]+", r"\g<1>" + "0" * 64, ready),
+            "unbound newest review": ready.replace("## Shortcut audit", "- 2026-10-03 | rev: 0 | verdict: ready\n\n## Shortcut audit"),
+        }
+        for name, question in cases.items():
+            with self.subTest(name=name):
+                self.assertEqual(self.codes(question), set())
+        # A generic local 'revise' is visible, but never substitutes its rating for the platform.
+        diagnostic = ready.replace("verdict: ready", "verdict: revise").replace(
+            "findings: none", "findings: The local rating may be below Easy.", 1)
+        self.assertEqual(self.codes(diagnostic), set())
+        _, _, found = cq.check(self.write(diagnostic), cq.Bundle(self.bundle))
+        self.assertTrue(any(level == "WARN" and code == "local-diagnostic" and "below Easy" in message
+                            for level, code, message in found))
+
+    def test_current_adverse_local_evidence_survives_later_positive_records(self):
+        ready = self.targeted_ready()
+        binding = re.search(r"rev: 0 \| tested_sha256: [a-f0-9]+", ready).group()
+        cases = {
+            "ambiguity": ready.replace("outcome: match", "outcome: ambiguous", 1),
+            "unsupported gold": ready.replace("outcome: match", "outcome: not-answerable", 1),
+            "closed-book reach": ready.replace("result: misses", "result: reaches"),
+            "removal reach": ready.replace("## Blind solve\n", "## Blind solve\n\n"
+                f"- 2026-10-01 | {binding} | removal probe | left_out: D01 | result: reaches\n"),
+            "shortcut": ready.replace("verdict: clear", "verdict: shortcut"),
+            "review unsupported": ready.replace("verdict: ready", "verdict: unsupported"),
+            "invalid outcome": ready.replace("outcome: match", "outcome: wronglever", 1),
+            "duplicate outcome": ready.replace("outcome: match", "outcome: ambiguous | outcome: match", 1),
+        }
+        for name, question in cases.items():
+            with self.subTest(name=name):
+                self.assertIn("status", self.codes(question))
+                # Historical diagnostics remain in the file without forcing local reruns.
+                historical = question.replace("- 2026-10-01 | rev: 0", "- 2026-10-01 | rev: 1")
+                self.assertEqual(self.codes(historical), set())
+                unbound = re.sub(r"(?m)^(- 2026-10-01 .*tested_sha256: )[a-f0-9]+", r"\g<1>" + "0" * 64, question)
+                self.assertEqual(self.codes(unbound), set())
+
+    def test_concrete_local_resolution_needs_attribution_and_current_binding(self):
+        ready = self.targeted_ready().replace("outcome: match", "outcome: ambiguous", 1)
+        binding = re.search(r"rev: 0 \| tested_sha256: [a-f0-9]+", ready).group()
+        resolution = (f"- 2026-10-03 | {binding} | assessor: Author | issue: blind: ambiguous | "
+                      "verdict: resolved | findings: D01 labels the forecast for Q2; the alternative used "
+                      "the Q1 actual, which the exact question period excludes.\n")
+        resolved = ready + "\n## Local resolution\n\n" + resolution
+        self.assertEqual(self.codes(resolved), set())
+        _, _, found = cq.check(self.write(resolved), cq.Bundle(self.bundle))
+        self.assertTrue(any(code == "local-diagnostic" and "adverse history retained" in message
+                            for _, code, message in found))
+        for name, bad in {
+            "no assessor": resolution.replace("assessor: Author | ", ""),
+            "wrong issue": resolution.replace("issue: blind: ambiguous", "issue: closed-book: reaches"),
+            "older revision": resolution.replace("rev: 0", "rev: 1"),
+            "stale fingerprint": re.sub(r"tested_sha256: [a-f0-9]+", "tested_sha256: " + "0" * 64, resolution),
+            "not resolved": resolution.replace("verdict: resolved", "verdict: pending"),
+            "duplicate verdict": resolution.replace("verdict: resolved", "verdict: pending | verdict: resolved"),
+            "missing findings": resolution.split("findings:")[0],
+        }.items():
+            with self.subTest(name=name):
+                self.assertIn("status", self.codes(ready + "\n## Local resolution\n\n" + bad))
+        self.assertIn("status", self.codes(resolved + resolution.replace("verdict: resolved", "verdict: pending")))
+
+    def test_platform_history_merges_sections_and_never_hides_a_later_failure(self):
+        ready = self.targeted_ready(local=False)
+        platform = next(line for line in ready.splitlines() if "platform difficulty check" in line)
+        self.assertEqual(self.codes(ready), set())
+        self.assertEqual(self.codes(ready.replace("platform difficulty check", "platform validation")), set())
+        legacy_failure = platform.replace("2026-10-02", "2026-10-03").replace("platform_verdict: pass", "platform_verdict: fail")
+        both = ready.replace("## Blind solve\n", "## Blind solve\n\n" + legacy_failure + "\n")
+        _, sec = cq.parse(self.write(both))
+        self.assertEqual([r["platform_verdict"] for r in cq.platform_records(sec)], ["pass", "fail"])
+        self.assertIn("status", self.codes(both))
+        # Dedicated-section precedence only breaks a date tie; it cannot hide newer legacy feedback.
+        self.assertEqual(self.codes(both.replace("2026-10-03", "2026-10-01")), set())
+        self.assertEqual(self.codes(both.replace("2026-10-03", "2026-10-02")), set())
+        later_unbound = re.sub(r"tested_sha256: [a-f0-9]+", "tested_sha256: " + "0" * 64,
+                               platform.replace("2026-10-02", "2026-10-04"))
+        self.assertIn("status", self.codes(ready + later_unbound + "\n"))
+        for unknown_date in ("today", "2026-99-99"):
+            with self.subTest(unknown_date=unknown_date):
+                undated = both.replace("2026-10-03", unknown_date)
+                self.assertIn("status", self.codes(undated))
+                self.assertIn("status", self.codes(ready.replace("2026-10-02", unknown_date)))
+
     def test_targeted_check_records_bind_to_submission_and_corpus(self):
         ready = self.targeted_ready()
         self.assertEqual(self.codes(ready), set())
@@ -576,7 +935,6 @@ class DocketTools(unittest.TestCase):
             "evidence location edited": ready.replace("D01 (p. 1)", "D01 (first release)"),
             "hash missing from records": re.sub(r"tested_sha256: [a-f0-9]+ \| ", "", ready),
             "older revision": ready.replace("revision: 0", "revision: 1"),
-            "newest review unbound": ready.replace("## Shortcut audit", "- 2026-10-03 | rev: 0 | verdict: ready | difficulty: easy\n\n## Shortcut audit"),
         }.items():
             with self.subTest(name=name):
                 self.assertIn("status", self.codes(question))
@@ -627,7 +985,7 @@ class DocketTools(unittest.TestCase):
                 source.write_bytes(original)
 
     def rebound_ready(self, ready: str) -> str:
-        """Simulate rerunning all other checks after a corpus change in this fixture."""
+        """Bind synthetic fixture records to changed bytes; never a real check or verdict."""
         meta, sections = cq.parse(self.write(ready))
         digest = cq.submission_sha256(meta, sections, cq.Bundle(self.bundle))
         return re.sub(r"tested_sha256: [a-f0-9]+", "tested_sha256: " + digest, ready)
@@ -652,8 +1010,8 @@ class DocketTools(unittest.TestCase):
         return ready + "\n## Source assessment\n\n" + record
 
     def test_scoped_source_assessment_preserves_incomplete_warning_and_platform_gate(self):
-        ready = self.targeted_ready()
-        # The reviewer can inspect the intact original of the unused margin-only note.
+        ready = self.targeted_ready(local=False)
+        # The author can inspect the intact original of the unused margin-only note.
         (self.bundle / "text" / "D03.txt").unlink()
         ready = self.rebound_ready(ready)
         self.assertIn("source-completeness", self.codes(ready))
@@ -664,7 +1022,9 @@ class DocketTools(unittest.TestCase):
                             "corpus remains incomplete" in message for level, code, message in found))
         self.assertTrue(cq.source_completeness(cq.Bundle(self.bundle)))
         self.assertIn("status", self.codes(assessed.replace("platform_verdict: pass", "platform_verdict: unknown")))
-        self.assertIn("status", self.codes(assessed.replace("solver: B", "solver: A")))
+        for identity in ("assessor: Author", "author: Codex", "assessor: Platform source review"):
+            with self.subTest(identity=identity):
+                self.assertEqual(self.codes(assessed.replace("reviewer: Reviewer-C", identity)), set())
 
     def test_source_assessment_must_cover_exact_gaps_and_all_impacts(self):
         ready = self.targeted_ready()
@@ -792,7 +1152,9 @@ class DocketTools(unittest.TestCase):
         meta, sections, found = cq.check(template, cq.Bundle(self.bundle))
         self.assertEqual(meta["status"], "template")
         self.assertEqual(found, [])
-        self.assertNotIn("outcome", sections["blind solve"])
+        self.assertEqual(sections["platform validation"], "")
+        self.assertEqual(cq.platform_records(sections), [])
+        self.assertNotIn("blind solve", sections)
         filled = template.read_bytes().decode("utf-8").replace("status: template", "status: draft")
         self.assertIn("fields", self.codes(filled))
 
@@ -939,6 +1301,155 @@ class DocketTools(unittest.TestCase):
         broken = subprocess.run([sys.executable, str(TOOLS / "agent_scope.py"), "blind-solver"],
                                 input=b"not json", capture_output=True, check=True).stdout.decode()
         self.assertIn("failed closed", broken)
+
+    # The form's reasoning number check in the floor and the hand-over (tools/form_numbers.py).
+    def test_form_number_misses_fail_the_floor_and_block_the_handover(self):
+        self.write_platform_numbers()
+        wrong_doc = GOOD.replace("Step 2. Source fact (Doc 1, revenue table)", "Step 2. Source fact (Doc 2, revenue table)")
+        _, _, found = cq.check(self.write(wrong_doc), cq.Bundle(self.bundle))
+        misses = [message for level, code, message in found if level == "FAIL" and code == "form-numbers"]
+        self.assertEqual(len(misses), 2)
+        self.assertTrue(misses[0].startswith("Step 2: Doc 2 doesn't mention 409.8. Doc 1 prints it"))
+        with contextlib.redirect_stdout(io.StringIO()):
+            self.assertEqual(cq.handover(self.bundle, ["q01"]), 1)
+        sheet = (self.bundle / "notes" / "handover-q01.md").read_bytes().decode("utf-8")
+        self.assertIn("NOT READY TO PASTE", sheet)
+        self.assertIn("FAIL form-numbers: Step 2: Doc 2 doesn't mention 409.8.", sheet)
+        # A ready question was measured with this reasoning: the miss is reported, not a reason for draft.
+        ready = self.rebound_ready(self.targeted_ready(local=False).replace(
+            "(Doc 1, revenue table)", "(Doc 2, revenue table)"))
+        _, _, found = cq.check(self.write(ready), cq.Bundle(self.bundle))
+        self.assertEqual([code for level, code, _ in found if level == "FAIL"], [])
+        self.assertTrue(any(level == "WARN" and code == "form-numbers" and "new difficulty result" in message
+                            for level, code, message in found))
+        # A step that leans on an unticked document is reported (reviewer returns, aq-01333 q01 and aq-02749 q02).
+        leaning = GOOD.replace("so revenue missed the forecast.",
+                               "so revenue missed the forecast. Doc 3 (not needed for the count) says the same.")
+        _, _, found = cq.check(self.write(leaning), cq.Bundle(self.bundle))
+        self.assertTrue(any(level == "WARN" and code == "documents" and message.startswith(
+            "the reasoning names Doc 3, which is not ticked as necessary") for level, code, message in found))
+        _, _, found = cq.check(self.write(GOOD), cq.Bundle(self.bundle))
+        self.assertFalse(any("is not ticked as necessary" in message for _, _, message in found))
+        # Frozen questions are history, and without page numbers the check says it could not run.
+        self.assertNotIn("form-numbers", self.codes(wrong_doc.replace("status: draft", "status: submitted"), "WARN"))
+        (self.bundle / "notes" / "intake.json").unlink()
+        self.assertIn("form-numbers", self.codes(GOOD, "WARN"))
+        self.assertNotIn("form-numbers", self.codes(wrong_doc))
+
+
+class FormNumbers(unittest.TestCase):
+    """The form's reasoning number check against the form's recorded results (user screenshots)."""
+
+    FILLER = "Background paragraph on enforcement of the import ban. " * 700  # about 38,500 characters
+
+    def test_totals_printed_only_in_words_are_flagged_as_the_form_did(self):
+        # aq-02505 q01 rev 0 (2026-10-09): "Step 1: Doc 2 doesn't mention 107." and "Step 7: Doc 6 doesn't
+        # mention 187." The notices print both totals only in words; "five" early in Doc 2 passed as 5.
+        doc2 = ("Federal Register (Monday, November 25, 2024). See appendix 1. This update adds five entities to "
+                "one list and twenty-five entities to another. One of them was first listed in June 2022. "
+                + self.FILLER + "One hundred and seven entities that meet the criteria set forth in the four "
+                "required lists")
+        doc6 = ("The list as of August 3, 2026 is in appendix 1. " + self.FILLER + "One hundred and eighty-seven "
+                "entities that meet the criteria set forth in the four required lists")
+        reasoning = "\n\n".join([
+            'Step 1. Source fact (Doc 2, appendix 1): the list as of November 25, 2024 specifies "One hundred and '
+            'seven entities" (107).',
+            "Step 2. Source fact (Doc 2, summary): the update adds five entities (5) to one list and twenty-five "
+            "entities (25) to another.",
+            "Step 3. Source fact (Doc 2): one of the twenty-five was first listed in June 2022.",
+            "Step 4. Calculation (Doc 2 and Doc 6): additions: 5 + 25 = 30.",
+            "Step 5. Calculation (Doc 2 and Doc 6): entities new to the list: 30 - 1 = 29.",
+            "Step 6. Calculation (Doc 2 and Doc 6): entities on the earlier version: 107 - 29 = 78.",
+            'Step 7. Source fact (Doc 6, appendix 1): the list as of August 3, 2026 specifies "One hundred and '
+            'eighty-seven entities" (187).',
+            "Step 8. Calculation (Doc 2 and Doc 6): growth: 187 - 78 = 109.",
+            "Step 9. Calculation (Doc 2 and Doc 6): growth as a percentage of the earlier count: 109 / 78 = 139.7%."])
+        found = fn.check(reasoning, {2: doc2, 6: doc6})
+        self.assertEqual([(f.level, f.form) for f in found], [("FAIL", "Step 1: Doc 2 doesn't mention 107."),
+                                                              ("FAIL", "Step 7: Doc 6 doesn't mention 187.")])
+        self.assertIn('only in words ("One hundred and seven"', found[0].why)
+        self.assertIn("quote it as evidence", found[0].why)
+        # Quoted as evidence, the totals are the documents' own statements: expected false alarms, which
+        # the user knew were wrong warnings ("this time, it is not your fault", 2026-10-09).
+        quotes = {2: ["One hundred and seven entities that meet the criteria"],
+                  6: ["One hundred and eighty-seven entities that meet the criteria"]}
+        found = fn.check(reasoning, {2: doc2, 6: doc6}, quotes)
+        self.assertEqual([(f.level, f.form) for f in found], [("WARN", "Step 1: Doc 2 doesn't mention 107."),
+                                                              ("WARN", "Step 7: Doc 6 doesn't mention 187.")])
+        self.assertTrue(all(f.why.startswith("expected false alarm") for f in found))
+        # A quote from the other document does not excuse the citation.
+        self.assertEqual([f.level for f in fn.check(reasoning, {2: doc2, 6: doc6}, {6: quotes[2]})], ["FAIL", "FAIL"])
+
+    def test_recorded_rules(self):
+        doc1 = ("Table 2: 1,295 individuals of 1,301 responses. Revenue is expected at $3.15 billion and gross "
+                "margin at 60.7%. Page 2 of 4.")
+        doc4 = "Paragraph 3.9 and Table 2: 102 individuals answered and 10 more did not. Annex 1."
+        docs = {1: doc1, 4: doc4}
+
+        def forms(reasoning: str, level: str = "FAIL") -> list[str]:
+            return [f.form for f in fn.check(reasoning, docs) if f.level == level]
+
+        derived = "Step 1. Calculation (Doc 4): individuals: 102 + 10 = 112.\n\n"
+        # aq-02102 q01 rev 1: a step citing one document accepts no earlier result; two documents do.
+        self.assertEqual(forms(derived + "Step 2. Calculation (Doc 4): half: 112 / 2 = 56."),
+                         ["Step 2: Doc 4 doesn't mention 112."])
+        self.assertEqual(forms(derived + "Step 2. Calculation (Doc 1 and Doc 4): half: 112 / 2 = 56."), [])
+        # aq-02486 q01 rev 0: a new number in a step citing no document.
+        self.assertEqual(forms("Step 1. The request covers 225 pages."),
+                         ["Step 1: Which document says 225? Add 'Doc N'."])
+        # aq-01960 q02: unit words inside the expression leave the result unexempted; a label before the
+        # bare expression and a longer chain passed.
+        self.assertEqual(forms("Step 1. Calculation (Doc 1): 3.15 billion x 60.7% = 1.91205 billion."),
+                         ["Step 1: Doc 1 doesn't mention 1.91205."])
+        self.assertEqual(forms("Step 1. Calculation (Doc 1): gross profit in billions of dollars = 3.15 × 60.7% = "
+                               "1.91205."), [])
+        self.assertEqual(forms(derived + "Step 2. Calculation (Doc 1 and Doc 4): total = 112 + 1,295 + 2 = 1,409."), [])
+        # aq-02626 q03 Step 4 ("twelve 30-day months ...: 12 × 30 + 5 = 365") and aq-01321 q02 Step 9 ("Twelve
+        # months ended June 30, 2026: 1,942 + 1,999 = 3,941") were flagged on exact results; both steps spell a
+        # number out. aq-02626 q03 Step 5, a mixed chain with no number word, drew no line: a WARN only.
+        wordy = fn.check("Step 1. Calculation (Doc 1 and Doc 4): the twelve responses: 102 + 10 = 112.", docs)
+        self.assertEqual([(f.level, f.form) for f in wordy], [("FAIL", "Step 1: Docs 1 and 4 don't mention 112.")])
+        self.assertIn("spells a number out", wordy[0].why)
+        mixed = fn.check("Step 1. Calculation (Doc 1 and Doc 4): 102 × 2 + 10 = 214.", docs)
+        self.assertEqual([(f.level, f.form) for f in mixed], [("WARN", "Step 1: a chain that mixes operators.")])
+        self.assertEqual(forms("Step 1. Calculation (Doc 1 and Doc 4): 102 × 2 = 204.\n\n"
+                               "Step 2. Calculation (Doc 1 and Doc 4): 204 + 10 = 214."), [])
+        # aq-02157 q01: a result typed as a percentage is not reusable as a plain number.
+        typed = forms("Step 1. Calculation (Doc 1 and Doc 4): share: 1,295 / 1,301 = 99.54%.\n\n"
+                      "Step 2. Calculation (Doc 1 and Doc 4): gap: 99.54 - 2 = 97.54.")
+        self.assertEqual(typed, ["Step 2: Docs 1 and 4 don't mention 99.54."])
+        # aq-00949 q04 / rev 3 of aq-00745: a restated or rounded result is read as a document figure.
+        restated = fn.check("Step 1. Calculation (Doc 1): share: 1,295 / 1,301 = 99.539%, or 99.5%.", docs)
+        self.assertEqual([f.number for f in restated], ["99.5%"])
+        self.assertIn("restates", restated[0].why)
+        self.assertEqual(forms("Step 1. Calculation (Doc 1): 1,295 / 1,301 = 0.9954 (rounded)."),
+                         ["Step 1: Doc 1 doesn't mention 0.9954."])
+        # A figure from another document: the diagnosis names the document that prints it.
+        wrong = fn.check("Step 1. Source fact (Doc 1): 102 individuals answered.", docs)
+        self.assertEqual([f.form for f in wrong], ["Step 1: Doc 1 doesn't mention 102."])
+        self.assertIn("Doc 4 prints it", wrong[0].why)
+        # A range reads as its first document (aq-01960 q02); step and document references are not figures.
+        ranged = fn.check(derived + "Step 2. Calculation (from Steps 1 to 1; Docs 1 to 4): 112 + 2 = 114.", docs)
+        self.assertEqual([(f.level, f.number) for f in ranged], [("WARN", ""), ("FAIL", "112")])
+
+    def test_depth_limits(self):
+        # aq-02157: printed digits near character 80,000 were flagged; 19,581 is the deepest observed pass.
+        deep = {2: self.FILLER * 2 + "The minimum duty is 8.46 pounds.",
+                3: self.FILLER[:25_000] + "Rates fell by 24 points."}
+        found = fn.check("Step 1. Source fact (Doc 2): 8.46 pounds.\n\nStep 2. Source fact (Doc 3): 24 points.", deep)
+        self.assertEqual([(f.level, f.form) for f in found], [("FAIL", "Step 1: Doc 2 doesn't mention 8.46."),
+                                                              ("WARN", "Step 2: Doc 3 doesn't mention 24.")])
+        self.assertIn("past the 60,000 characters", found[0].why)
+        quoted = fn.check("Step 1. Source fact (Doc 2): 8.46 pounds.", deep, {2: ["The minimum duty is 8.46 pounds."]})
+        self.assertEqual([(f.level, f.why.split(":")[0]) for f in quoted], [("WARN", "expected false alarm")])
+
+    def test_sketch_input_notes(self):
+        text = "Summary. " + self.FILLER + "One hundred and seven entities are listed; 8.46 pounds per pack."
+        notes = fn.input_notes("One hundred and seven entities are listed; 8.46 pounds per pack", text)
+        self.assertEqual(len(notes), 2)
+        self.assertIn("states 107 only in words", notes[0])
+        self.assertIn("8.46 is printed first at character", notes[1])
+        self.assertEqual(fn.input_notes("adds five entities to one list", "This update adds five entities to one list."), [])
 
 
 if __name__ == "__main__":

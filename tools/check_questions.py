@@ -3,6 +3,7 @@
 Usage:
   python tools/check_questions.py tasks/<slug> [--q q01 q02 ...]  check questions; exit 1 on any FAIL
   python tools/check_questions.py tasks/<slug> --handover [--q ...] write notes/handover-qNN.md: every form field
+  python tools/check_questions.py tasks/<slug> --json [--q ...] write questions/qNN.json: form input values only
   python tools/check_questions.py tasks/<slug> --export          write dist/<slug>.md from ready questions
   python tools/check_questions.py --status                        every bundle's questions by status
   python tools/check_questions.py --hook                          PostToolUse hook for question files
@@ -12,16 +13,20 @@ in text/, the wording traps instruction.md names, and the task form's mechanical
 (captured 2026-10-04, .claude/memory/reference/platform-quality-checks.md): 1-10 answer
 components, each a piece of the answer with a tagged quote of 12+ contiguous characters; no
 semicolon in the answer; 8-80 words; no answer part in the question. Since 2026-10-07 the form
-also needs 1-3 "Targeted failure modes" (a trap and a cause from fixed lists, three boxes of 150+
-words together) and gives each necessary document a role; '## Targeted failure modes' and the
-optional '## Necessary documents' hold them. --handover prints every form field in the form's
+also needs 1-3 "Targeted failure modes" (each a trap and a cause from fixed lists; since 2026-10-08
+one shared "Why these are traps" reason of at most 50 words, not three boxes per mode) and gives
+each necessary document a role; '## Targeted failure modes' and the optional '## Necessary
+documents' hold them. The form's reasoning number check is emulated by tools/form_numbers.py: a
+number a step's cited documents cannot be shown to print FAILs ("Step 1: Doc 2 doesn't mention 107."),
+unless the document states it, in words or deep, in an evidence quote (an expected false alarm, WARN).
+--handover prints every form field in the form's
 order, with the task page's Doc numbers. It cannot tell whether a question has
-one answer, is fair, or is hard; the blind solves, the closed-book solve and the review decide
-that. For status ready it confirms two matching blind solves, a closed-book miss, a local
-review, and an explicit platform pass at the requested difficulty. New questions declare
-'difficulty_target: easy|medium|hard'; their records and shortcut audit bind to both the
-revision and a submission/corpus fingerprint. Questions without a target retain the legacy
-Hard/maximum difficulty gate. Tier counts show which tests ran, never whether they passed.
+one answer, is fair, or is hard. Status ready requires an explicit platform pass at the
+requested difficulty, bound to the revision and full submission/corpus fingerprint.
+Optional local checks remain diagnostics: positive results are not prerequisites, stale
+records never demand reruns, and current concrete adverse evidence still blocks readiness.
+New questions declare 'difficulty_target: easy|medium|hard'; targetless questions retain
+the legacy Hard target. Tier counts show which tests ran, never whether they passed.
 A clean run is a floor, not a pass. The question format is tasks/template-task/questions/q00.md.
 """
 from __future__ import annotations
@@ -30,11 +35,16 @@ import argparse
 import datetime
 import hashlib
 import json
+import os
 import re
 import sys
+import tempfile
 import unicodedata
 from collections import Counter
 from pathlib import Path
+
+import form_numbers as fn
+import platform_checks as pc
 
 ROOT = Path(__file__).resolve().parent.parent
 TEMPLATE = "template-task"
@@ -46,7 +56,33 @@ TAGS = {"cross-document join", "temporal alignment", "unit normalization", "cond
 LEVERS = {"mentions it vs does it", "scatter the pieces", "bury one list item late",
           "same series, right edition", "who belongs where", "exact table vs rounded prose",
           "does the hedge apply", "match, then exclude", "ordered answers",
-          "calculate across documents", "state the rounding"}
+          "calculate across documents", "state the rounding",
+          # The platform guide of 2026-10-15/16 (section 5's lever table and "More traps to add"), saved
+          # verbatim in .claude/memory/reference/platform-guide-2026-10-16.md.
+          "restated figures", "ask for a precision the document doesn't print",
+          "ask about a period no document reports on its own", "like for like across a definition change",
+          "summary vs detail", "quiet edit in a re-quoted passage", "second mention, different words",
+          "claimed but never discussed", "short references", "look-alike metric",
+          "footnotes and prose can change how a table is read"}
+# Wording the guide of 2026-10-16 names as giving the trap away ("skip words like 'actually' or 'originally'";
+# send-back pitfall 5: "spelling out the trap in the question ('not rounded percentages', 'one of them isn't
+# internally consistent')").
+HINT_WORDS = re.compile(r"\b(?:actually|originally|really|in fact|truly|true figure|correct(?:ed)? figure|"
+                        r"not rounded|unrounded|internally (?:in)?consistent|inconsistent|discrepan\w*|typo|misprint|"
+                        r"mistake)\b", re.I)
+# Send-back pitfall 1 (the most common): a period or case picked through another fact. Fine when the selector
+# is the analysis ("in the quarter its gross margin was lowest"), not when it is an unrelated hop.
+SELECTOR = re.compile(r"\b(?:quarter|year|month|half|period|week|day)s?\b(?:\s+[\w'’-]+){0,3}?\s+"
+                      r"(?:in which|when|during which)\b", re.I)
+# Send-back reason 8: "the most recent release", "the latest report" must point at exactly the gold's document.
+LITERAL = re.compile(r"\b(?:latest|most recent|newest|last|previous|prior|earlier|earliest|first|initial|original)\s+"
+                     r"(?:published |available |reported |quarterly |annual |earnings |interim )?(?:release|report|"
+                     r"edition|filing|estimate|forecast|outlook|update|statement|submission|letter|version|"
+                     r"announcement|guidance|projection|circular)s?\b", re.I)
+# Send-back pitfall 5: the gold is the bare value only ("no 'about', no 'increase of', no labels in brackets").
+GOLD_WORDS = re.compile(r"\b(?:about|approximately|approx|around|roughly|nearly|almost|"
+                        r"an? (?:increase|decrease|rise|fall|drop|decline) of|"
+                        r"(?:increased|decreased|rose|fell|dropped|declined|up|down) by)\b", re.I)
 # The task form's own option lists (value: label), as saved in the task page on 2026-10-07.
 FAILURE_TRAPS = {
     "wrong_company_in_bundle": "Look-alike company",
@@ -75,11 +111,31 @@ FAILURE_CAUSES = {
     "output_form_or_presentation_error": "Right content, wrong form",
     "precision_rounding_or_sign_error": "Rounding, scale or sign",
 }
-# A failure mode's labelled fields, in the form's order; the last three are its text boxes.
-FAILURE_FIELDS = {"trap": "Trap", "cause": "How a careless solver fails", "where": "Where the trap sits",
-                  "wrong": "The wrong answer a careless solver gives", "why": "Why the correct answer avoids it"}
-FAILURE_BOXES = ("where", "wrong", "why")
-FAILURE_WORDS = 150
+# A failure mode's labelled fields, in the form's order. Since 2026-10-08 the form follows them with
+# one shared box for all modes, "Why these are traps", which blocks Submit above 50 words; its counter
+# matched whitespace-separated words (an old 95-word box read "95 / 50 words").
+FAILURE_FIELDS = {"trap": "Trap", "cause": "How a careless solver fails"}
+FAILURE_REASON = "Why these are traps"
+FAILURE_REASON_WORDS = 50
+# Since 2026-10-09 Submit reads the shared reason against each pick's own definition and the chosen cause
+# (aq-02208 q02, user screenshot): "Figure that must be computed" is "computing a metric by subtracting one
+# period from another (full year minus first half)", and "Part vs total" needs a careless solver who "would
+# mistake a headline total or different part" for the asked figure. A pick whose question (period trap) or
+# reason (part trap) shows no cue of its definition gets a WARN. Other traps' definitions are not captured yet.
+TRAP_DEFINITION_CUES = {
+    "Figure that must be computed": (
+        "a figure derived by subtracting one period from another (full year minus first half)",
+        r"\b(quarters?|half|halves|months?|years?|fiscal|annual|year-to-date|ytd|full-year|nine-month|six-month)\b",
+        "question"),
+    "Part vs total": (
+        "a headline total or a different part taken for the asked figure",
+        r"\b(totals?|whole|parts?|subtotals?|subsets?|segments?|overall|combined|aggregate|entire)\b",
+        "reason"),
+}
+# The 2026-10-07 form's three boxes per mode. The floor still reads them so it can flag a file
+# that has not been rewritten to the shared reason.
+LEGACY_FAILURE_BOXES = {"where": "Where the trap sits", "wrong": "The wrong answer a careless solver gives",
+                        "why": "Why the correct answer avoids it"}
 DOC_ROLES = ("Answer component", "Exclusion / condition source", "Used to identify")
 FORM_TAGS = ("Cross-document join", "Temporal alignment", "Unit normalization", "Conditional filter",
              "Entity resolution", "Aggregation")
@@ -134,8 +190,36 @@ def items(field: str) -> list[str]:
     return [part.strip() for part in re.split(r"[;\n]", field) if part.strip()]
 
 
+def gold_extra(answer: str, question: str) -> str | None:
+    """Words or a bracket in the gold that the question does not ask for (send-back pitfall 5). A bracket the
+    question's own format asks for ("Name (level)", "marking those that ...") is fine."""
+    found = GOLD_WORDS.search(norm(answer))
+    if found:
+        return f"'{found.group(0)}'"
+    if "(" in answer and not re.search(r"bracket|parenthes|\(|in the form|mark(?:ing|ed)?\b|asterisk|\btag",
+                                       norm(question)):
+        return "a bracketed note"
+    return None
+
+
 def read_text(path: Path) -> str:
     return path.read_bytes().decode("utf-8-sig").replace("\r\n", "\n")
+
+
+def long_path(path: Path) -> Path:
+    """Windows extended-length form of a path, so files past 260 characters stay readable.
+
+    A prepared snapshot nests the platform's document names under a run folder named by the full
+    fingerprint; on aq-04797 (2026-10-14) that came to 265-284 characters with LongPathsEnabled 0,
+    and Path.rglob/is_file silently skipped the documents, so prepare refused its own snapshot.
+    Elsewhere, and for a path already in that form, the absolute path is returned unchanged.
+    """
+    text = str(path.absolute())
+    if os.name != "nt" or text.startswith("\\\\?\\"):
+        return Path(text)
+    if text.startswith("\\\\"):
+        return Path("\\\\?\\UNC\\" + text[2:])
+    return Path("\\\\?\\" + text)
 
 
 def parse(path: Path) -> tuple[dict, dict]:
@@ -170,6 +254,17 @@ class Bundle:
         manifest = path / "text" / "manifest.json"
         self.manifest = json.loads(read_text(manifest)) if manifest.exists() else {}
         self._texts: dict[str, list[str]] = {}
+        self._page_texts: dict[str, str] = {}
+
+    def page_text(self, doc_id: str) -> str:
+        """A document's text as the task page shows it, case and spacing kept, for the form's number
+        check and its character positions: the extraction header and PDF page markers are dropped."""
+        if doc_id not in self._page_texts:
+            file = self.path / "text" / f"{doc_id}.txt"
+            text = read_text(file) if file.exists() else ""
+            text = re.sub(r"\A# D\d{2,3} \|[^\n]*\n\n", "", text)
+            self._page_texts[doc_id] = re.sub(r"(?m)^=== page \d+ ===\n", "", text)
+        return self._page_texts[doc_id]
 
     def texts(self, doc_id: str) -> list[str]:
         if doc_id not in self._texts:
@@ -200,7 +295,8 @@ def verbatim_found(quote: str, haystacks: list[str]) -> bool:
                for hay in haystacks)
 
 
-def quote_found(quote: str, haystacks: list[str]) -> bool:
+def quote_found(quote: str, haystacks: list[str], pipes: bool = True) -> bool:
+    """With pipes=False only the literal (or de-hyphenated) passage counts, not the pipe-free form."""
     parts = [norm(p) for p in re.split(r"\s*\[?(?:\.\.\.|…)\]?\s*", quote) if p.strip()]
     for hay in haystacks:
         if all(p in hay for p in parts):
@@ -208,10 +304,24 @@ def quote_found(quote: str, haystacks: list[str]) -> bool:
         flat = dehyphen(hay)
         if all(dehyphen(p) in flat for p in parts):
             return True
+        if not pipes:
+            continue
         bare = depipe(hay)
         if all(depipe(p) in bare for p in parts):
             return True
     return False
+
+
+# A table row the document itself writes in Markdown ("|Capital expenditures|(434,416)|(1,337,719)|" under a
+# "|---|---|---|" rule) is part of the page's own text. Captures that lay out the page text (docket-capture v4,
+# plain .txt) keep those pipes, while the older Markdown captures drew their own spaced "| --- |" rows. The form
+# matches the page text, so it rejected every pipe-free quote of such rows (aq-06840 q01 and q02 rev 0, user
+# screenshots 2026-10-18: "Quote 2 does not appear word for word in document 5").
+NATIVE_PIPE_RULE = re.compile(r"(?m)^\|(?:-{3,}\|)+[ 	]*$")
+
+
+def native_pipe_rows(page_text: str) -> bool:
+    return bool(NATIVE_PIPE_RULE.search(page_text))
 
 
 def submission_sha256(meta: dict, sec: dict, bundle: Bundle | None = None) -> str:
@@ -233,21 +343,82 @@ def submission_sha256(meta: dict, sec: dict, bundle: Bundle | None = None) -> st
     if sec.get("necessary documents", "").strip():
         payload["sections"]["necessary documents"] = sec["necessary documents"].strip()
     if bundle is not None:
-        text_dir = bundle.path / "text"
-        manifest = text_dir / "manifest.json"
-        intake = bundle.path / "notes" / "intake.json"
-        docs_dir = bundle.path / "docs"
-        payload["corpus"] = {
-            "manifest_sha256": hashlib.sha256(manifest.read_bytes()).hexdigest() if manifest.exists() else None,
-            "intake_sha256": hashlib.sha256(intake.read_bytes()).hexdigest() if intake.exists() else None,
-            "documents": [(path.relative_to(docs_dir).as_posix(), hashlib.sha256(path.read_bytes()).hexdigest())
-                          for path in sorted(docs_dir.rglob("*")) if path.is_file()
-                          and not (path.name == ".gitkeep" and path.stat().st_size == 0)],
-            "texts": [(path.name, hashlib.sha256(path.read_bytes()).hexdigest())
-                      for path in sorted(text_dir.glob("*.txt"))],
-        }
+        payload["corpus"] = corpus_identity(bundle)
     canonical = json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
+
+
+def corpus_identity(bundle: Bundle) -> dict:
+    """The source bytes a check saw: manifest, intake record, originals and extracted texts."""
+    text_dir = bundle.path / "text"
+    manifest = text_dir / "manifest.json"
+    intake = bundle.path / "notes" / "intake.json"
+    docs_dir = bundle.path / "docs"
+    return {
+        "manifest_sha256": hashlib.sha256(manifest.read_bytes()).hexdigest() if manifest.exists() else None,
+        "intake_sha256": hashlib.sha256(intake.read_bytes()).hexdigest() if intake.exists() else None,
+        "documents": [(path.relative_to(docs_dir).as_posix(), hashlib.sha256(path.read_bytes()).hexdigest())
+                      for path in sorted(docs_dir.rglob("*")) if path.is_file()
+                      and not (path.name == ".gitkeep" and path.stat().st_size == 0)],
+        "texts": [(path.name, hashlib.sha256(path.read_bytes()).hexdigest())
+                  for path in sorted(text_dir.glob("*.txt"))],
+    }
+
+
+SCREEN_SECTION = "strong-solver screen"
+SCREEN_SOLVES = 3
+SCREEN_RECORD = re.compile(r"\bscreen_sha256: ([a-f0-9]{64})\b.*?\bright: (\d+)/(\d+)\b")
+
+
+def screen_sha256(question: str, bundle: Bundle) -> str:
+    """Bind a strong-solver screen to the sentence the solvers saw and the documents they read.
+
+    Only the question's words count (whitespace collapsed), so a sentence carried word for word from
+    its sketch into a question file keeps its screen; any other change to the sentence or the corpus
+    needs a new one. The gold stays outside: the solvers never see it.
+    """
+    payload = {"question": " ".join(question.split()), "corpus": corpus_identity(bundle)}
+    canonical = json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
+
+
+def screen_records(bundle: Bundle, digest: str) -> list[dict]:
+    """Strong-solver screen records bound to digest, from the bundle's sketches and question files."""
+    sketches = bundle.path / "notes" / "sketches"
+    paths = (sorted(sketches.glob("i*.md")) if sketches.is_dir() else []) + bundle.questions()
+    found = []
+    for path in paths:
+        try:
+            _, sec = parse(path)
+        except (OSError, UnicodeDecodeError):
+            continue
+        for line in sec.get(SCREEN_SECTION, "").splitlines():
+            match = SCREEN_RECORD.search(line)
+            if match and match.group(1) == digest:
+                found.append({"source": path.name, "right": int(match.group(2)),
+                              "solves": int(match.group(3)), "line": line.strip()})
+    return found
+
+
+def screen_findings(question: str, bundle: Bundle) -> tuple[list[str], list[str]]:
+    """Failures and warnings for a live Hard target: with Easy and Medium full the platform's check starts
+    at the High model, so every Hard sentence gets three fresh strong solves before a run. On 2026-10-14,
+    14 of 14 such runs failed, 13 of them "High 3/3", with no strong solve before any of them. The screen
+    ranks and never withholds: an all-right screen warns, and the user decides whether to run it (aq-05049,
+    2026-10-14: withholding four 3/3 sketches drew "you even didn't give me any questions")."""
+    records = screen_records(bundle, screen_sha256(question, bundle))
+    if not records:
+        return ["no strong-solver screen on this exact sentence and corpus. The Hard check starts at the High "
+                "model: run `docket_agent.py packet`, three fresh blind solves and `record-screen` before a "
+                "difficulty run (.claude/memory/reference/hard-playbook.md)"], []
+    if any(r["solves"] >= SCREEN_SOLVES and r["right"] == r["solves"] for r in records):
+        return [], ["the strong solver was right in every fresh solve of this exact sentence: likely Too easy at "
+                    "High. Say so with the hand-over; the user decides whether to run it. Never reword or "
+                    "re-screen the sentence to find a miss"]
+    if all(r["right"] == 0 for r in records):
+        return [], ["every fresh strong solve of this sentence missed: the High check fails when every attempt "
+                    "is wrong. Read each miss; a second reading or an unsupported gold must be fixed first"]
+    return [], []
 
 
 def record_fields(line: str) -> tuple[dict[str, str], list[str], bool]:
@@ -352,10 +523,10 @@ def source_gaps_sha256(gaps: list[str]) -> str:
 
 
 def source_assessment_errors(section: str, revision: int, digest: str, gaps: list[str]) -> list[str]:
-    """Check the explicit reviewer record, without treating its prose as a proven fact.
+    """Check a concrete author/source or platform assessment without proving its prose.
 
-    Each known gap needs an explanation for all six impacts. The independent reviewer
-    must establish those claims from evidence; passing this schema alone proves nothing.
+    Each known gap needs evidence for all six impacts. No local model role is required;
+    passing this schema alone proves neither the claims nor source completeness.
     """
     current = []
     for line in section.splitlines():
@@ -365,7 +536,7 @@ def source_assessment_errors(section: str, revision: int, digest: str, gaps: lis
         if fields.get("rev", "") == str(revision):
             current.append((fields, duplicate))
     if not current:
-        return ["known gaps need this revision's independent '## Source assessment' record"]
+        return ["known gaps need this revision's evidence-based '## Source assessment' record"]
     fields, duplicate = current[-1]
     errors = []
     if duplicate:
@@ -376,8 +547,8 @@ def source_assessment_errors(section: str, revision: int, digest: str, gaps: lis
         errors.append("latest source assessment does not match the exact known-gap fingerprint")
     if norm(fields.get("verdict", "")) != "unaffected":
         errors.append("source assessment must explicitly conclude 'verdict: unaffected'")
-    if not fields.get("reviewer", "").strip():
-        errors.append("source assessment needs an independent reviewer identity")
+    if not any(fields.get(key, "").strip() for key in ("assessor", "reviewer", "author")):
+        errors.append("source assessment needs an assessor, reviewer or author identity")
 
     def unique_object(pairs: list[tuple[str, object]]) -> dict:
         result = {}
@@ -429,10 +600,12 @@ def feedback_contradicts_pass(feedback: str, passed_tier: str) -> bool:
 
 
 def records(section: str, review: bool = False) -> list[dict]:
-    """Check records, one per bulleted line, oldest first, each with its revision ('rev: N'; None
-    on older lines). From '## Blind solve': a blind solve (the line has 'outcome:') or a
-    closed-book solve ('closed-book', 'result:'). From '## Review' (review=True): the verdict and
-    the difficulty rating."""
+    """Parse optional local checks or platform results, preserving terminal raw feedback.
+
+    Platform records belong in '## Platform validation'; historical '## Blind solve'
+    records remain supported. Review/audit records use review=True. Parsing a record
+    asserts neither its authenticity nor that its check is required.
+    """
     found = []
     for line in section.splitlines():
         if not re.match(r"^\s*[-*]\s", line):
@@ -440,16 +613,22 @@ def records(section: str, review: bool = False) -> list[dict]:
         fields, cells, duplicate = record_fields(line)
         low_fields = {key: norm(value) for key, value in fields.items()}
         revision = fields.get("rev", "")
-        record: dict = {"rev": int(revision) if re.fullmatch(r"\d+", revision) else None,
+        date = cells[0] if cells and re.fullmatch(r"\d{4}-\d{2}-\d{2}", cells[0]) else ""
+        if date:
+            try:
+                datetime.date.fromisoformat(date)
+            except ValueError:
+                date = ""
+        record: dict = {"date": date, "rev": int(revision) if re.fullmatch(r"\d+", revision) else None,
                         "tested_sha256": low_fields.get("tested_sha256", ""), "duplicate_fields": duplicate}
         if review:
             if "verdict" not in fields:
                 continue
             record.update(kind="review", verdict=low_fields["verdict"],
-                          difficulty=low_fields.get("difficulty", ""))
+                          difficulty=low_fields.get("difficulty", ""), findings=fields.get("findings", ""))
         else:
             markers = {norm(cell) for cell in cells if ":" not in cell}
-            if markers & {"platform quick test", "platform difficulty check"}:
+            if markers & {"platform quick test", "platform difficulty check", "platform validation"}:
                 record.update(kind="quick-test", result=low_fields.get("result", ""),
                               platform_verdict=low_fields.get("platform_verdict", ""),
                               passed_tier=low_fields.get("passed_tier", ""),
@@ -457,6 +636,9 @@ def records(section: str, review: bool = False) -> list[dict]:
                               feedback=fields.get("feedback", ""))
             elif "closed-book solve" in markers:
                 record.update(kind="closed-book", result=low_fields.get("result", ""))
+            elif "removal probe" in markers:
+                record.update(kind="removal", result=low_fields.get("result", ""),
+                              left_out=fields.get("left_out", ""))
             elif "outcome" in fields:
                 record.update(kind="blind", outcome=low_fields["outcome"], solver=low_fields.get("solver", ""))
             else:
@@ -465,11 +647,110 @@ def records(section: str, review: bool = False) -> list[dict]:
     return found
 
 
+def platform_records(sec: dict) -> list[dict]:
+    """Merge old/new platform history by ISO date, retaining line order for ties.
+
+    For equal dates the dedicated section follows the legacy section. Undated/invalid
+    dates sort last so a dated pass cannot hide a failure of unknown chronology.
+    Callers must still select the revision and validate the latest record's fingerprint;
+    filtering stale records first could hide a later failure.
+    """
+    found = [record for section in ("blind solve", "platform validation")
+             for record in records(sec.get(section, "")) if record["kind"] == "quick-test"]
+    return sorted(found, key=lambda record: record["date"] or "9999-99-99")
+
+
+def local_issue_resolved(section: str, revision: int, digest: str, issue: str) -> bool:
+    """Optional author/source adjudication of a current adverse diagnostic; no model rerun.
+
+    A '## Local resolution' bullet uses rev, tested_sha256, assessor (or author/reviewer),
+    issue (the exact diagnostic label), verdict: resolved, and terminal findings describing
+    the concrete resolution. The latest record for that issue controls. This validates
+    binding and attribution, not the truth of the explanation; keep the original return.
+    """
+    matching = []
+    for line in section.splitlines():
+        if re.match(r"^\s*[-*]\s", line):
+            fields, _, duplicate = record_fields(line)
+            if fields.get("rev") == str(revision) and norm(fields.get("issue", "")) == issue:
+                matching.append((fields, duplicate))
+    if not matching:
+        return False
+    fields, duplicate = matching[-1]
+    return (not duplicate and fields.get("tested_sha256", "").lower() == digest
+            and norm(fields.get("verdict", "")) == "resolved"
+            and any(fields.get(key, "").strip() for key in ("assessor", "author", "reviewer"))
+            and bool(fields.get("findings", "").strip()))
+
+
 def answer_items(answer: str, is_list: bool) -> list[str]:
+    if is_list:
+        return list_answer_items(answer)[0]
     parts = items(re.sub(r"^\s*[-*]\s*", "", answer, flags=re.M))
-    if is_list and len(parts) == 1:
-        parts = [p.strip() for p in re.split(r",|\s+and\s+", parts[0]) if p.strip()]
     return parts
+
+
+def list_answer_items(answer: str) -> tuple[list[str], bool]:
+    """Parse visible list boundaries, independently of evidence components.
+
+    Bullet/numbered lines explicitly delimit items. Inline lists use top-level commas;
+    quoted/bracketed names, thousands, month-name dates and common company suffixes stay
+    together. Plain line breaks may be wrapping. Bare 'and' can be part of an entity name,
+    so it is not a separator and returns uncertainty instead of a made-up item count.
+    This is a formatting heuristic, not semantic entity recognition: ambiguous names
+    should use quoted items or one bullet per item; the platform judges their meaning.
+    """
+    lines = [line.strip() for line in answer.splitlines() if line.strip()]
+    marked = [re.match(r"^(?:[-*+]\s+|\d+[.)]\s+)(.+)$", line) for line in lines]
+    if marked and marked[0]:
+        listed: list[str] = []
+        for line, match in zip(lines, marked):
+            if match:
+                listed.append(match.group(1).strip())
+            else:
+                listed[-1] += " " + line
+        return listed, False
+    text = " ".join(lines)
+    protected: set[int] = set()
+    months = (r"Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|"
+              r"Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?")
+    for pattern in (r"(?<![\d,])\d{1,3}(?:,\d{3})+(?!\d)",
+                    rf"\b(?:{months})\.?\s+\d{{1,2}},\s*\d{{4}}\b",
+                    rf"\b\d{{1,2}}\s+(?:{months})\.?,\s*\d{{4}}\b",
+                    r",\s*(?:Inc|Ltd|LLC|Corp|Co|L\.L\.C)\b\.?",):
+        for match in re.finditer(pattern, text, re.I):
+            protected.update(range(match.start(), match.end()))
+    stack: list[str] = []
+    quote = ""
+    separators = []
+    visible = []
+    malformed = False
+    for index, char in enumerate(text):
+        if quote:
+            if char == quote:
+                quote = ""
+            visible.append(" ")
+            continue
+        if char in {'"', '\u201c', '\u2018'}:
+            quote = {'\u201c': '\u201d', '\u2018': '\u2019'}.get(char, char)
+            visible.append(" ")
+            continue
+        if char in "([{":
+            stack.append({"(": ")", "[": "]", "{": "}"}[char])
+        elif char in ")]}":
+            if not stack or stack.pop() != char:
+                malformed = True
+        if char in ",;" and not stack and index not in protected:
+            separators.append(index)
+        visible.append(char if not stack and index not in protected else " ")
+    if quote or stack or malformed:
+        return [text] if text else [], True
+    starts, ends = [0] + [index + 1 for index in separators], separators + [len(text)]
+    parts = [re.sub(r"^and\s+", "", text[start:end].strip(), flags=re.I) if start else text[start:end].strip()
+             for start, end in zip(starts, ends)]
+    # An Oxford-comma ', and' is a list boundary; other conjunctions are unresolved.
+    unclear = bool(re.search(r"\band\b", re.sub(r"[,;]\s*and\s+", ", ", "".join(visible), flags=re.I)))
+    return [part for part in parts if part], unclear
 
 
 def components(section: str) -> tuple[dict[str, str], list[str]]:
@@ -493,32 +774,49 @@ def form_choice(value: str, choices: dict[str, str]) -> str | None:
     return next((label for slug, label in choices.items() if key in {norm(label), slug}), None)
 
 
-def failure_modes(section: str) -> list[dict[str, str]]:
-    """'## Targeted failure modes': one '### ...' block per trap, holding the form's five labelled
-    fields ('Trap: ...', 'How a careless solver fails: ...', then the three boxes). A box's text runs
-    on over the following lines until the next label or block."""
-    label = re.compile(r"^\s*(?:[-*]\s*)?(" + "|".join(re.escape(v) for v in FAILURE_FIELDS.values())
+def failure_section(section: str) -> tuple[list[dict[str, str]], str]:
+    """'## Targeted failure modes': one '### Failure mode N' block per trap holding 'Trap: ...' and
+    'How a careless solver fails: ...' (one line each: the form's dropdowns), then the shared reason,
+    written as a 'Why these are traps:' line or a '### Why these are traps' heading, whose text runs on
+    until the next heading. Old per-mode boxes, whose text ran on until the next label, are kept under
+    their keys so the floor can flag them. Returns the modes and the reason."""
+    labels = {**FAILURE_FIELDS, **LEGACY_FAILURE_BOXES}
+    label = re.compile(r"^\s*(?:[-*]\s*)?(" + "|".join(re.escape(v) for v in labels.values())
                        + r")\s*:\s*(.*)$", re.I)
+    reason_start = re.compile(r"^\s*(?:#{3,}\s*|[-*]\s*)?" + re.escape(FAILURE_REASON)
+                              + r"\b[^:\n]*?(?::\s*(.*))?$", re.I)
     blocks: list[dict[str, list[str]]] = []
-    key = None
+    reason: list[str] = []
+    key, in_reason = None, False
     for line in section.splitlines():
-        if re.match(r"^###\s", line):
+        start = reason_start.match(line)
+        if start:
+            in_reason, key = True, None
+            reason = [(start.group(1) or "").strip()]
+        elif re.match(r"^###\s", line):
+            in_reason, key = False, None
             blocks.append({"heading": [line.lstrip("#").strip()]})
-            key = None
-            continue
-        match = label.match(line)
-        if match and blocks:
-            key = next(k for k, v in FAILURE_FIELDS.items() if v.lower() == match.group(1).lower())
-            blocks[-1][key] = [match.group(2).strip()]
-        elif blocks and key:
-            blocks[-1][key].append(line.rstrip())
-    return [{key: "\n".join(lines).strip() for key, lines in block.items()} for block in blocks]
+        elif in_reason:
+            reason.append(line.rstrip())
+        else:
+            match = label.match(line)
+            if match and blocks:
+                key = next(k for k, v in labels.items() if v.lower() == match.group(1).lower())
+                blocks[-1][key] = [match.group(2).strip()]
+            elif blocks and key in LEGACY_FAILURE_BOXES:
+                blocks[-1][key].append(line.rstrip())
+    modes = [{key: "\n".join(lines).strip() for key, lines in block.items()} for block in blocks]
+    return modes, "\n".join(reason).strip()
 
 
-def failure_words(mode: dict[str, str]) -> tuple[int, int]:
-    """Words across a failure mode's three boxes, all of them and those holding a letter."""
-    words = [w for key in FAILURE_BOXES for w in mode.get(key, "").split()]
-    return len(words), sum(1 for w in words if re.search(r"[A-Za-z]", w))
+def failure_modes(section: str) -> list[dict[str, str]]:
+    """The '### Failure mode N' blocks of '## Targeted failure modes' (see failure_section)."""
+    return failure_section(section)[0]
+
+
+def reason_words(text: str) -> int:
+    """Words in the shared reason as the form's counter reads them: whitespace-separated runs."""
+    return len(text.split())
 
 
 def necessary_documents(section: str) -> tuple[list[dict], list[str]]:
@@ -551,7 +849,6 @@ def check(path: Path, bundle: Bundle) -> tuple[dict, dict, list[tuple[str, str, 
         found.append(("WARN", code, message))
 
     status = meta.get("status", "").lower()
-    targeted = "difficulty_target" in meta
     target = meta.get("difficulty_target", "hard").lower()
     if status not in STATUSES:
         fail("status", f"status '{status}' is not one of {sorted(STATUSES)}")
@@ -559,6 +856,13 @@ def check(path: Path, bundle: Bundle) -> tuple[dict, dict, list[tuple[str, str, 
         return meta, sec, found
     if target not in DIFFICULTIES:
         fail("difficulty-target", "difficulty_target must be easy, medium or hard")
+    # Explicit field only: a targetless legacy file defaults to hard above and is not live Hard work.
+    if meta.get("difficulty_target", "").strip().lower() == "hard" and status in {"draft", "checked"}:
+        screen_fails, screen_warns = screen_findings(sec.get("question", ""), bundle)
+        for message in screen_fails:
+            fail("strong-screen", message)
+        for message in screen_warns:
+            warn("strong-screen", message)
 
     for key in ("id", "status", "origin", "asks", "answer_type", "documents", "tags"):
         if not meta.get(key):
@@ -590,14 +894,18 @@ def check(path: Path, bundle: Bundle) -> tuple[dict, dict, list[tuple[str, str, 
     is_list = bool(kinds & {"list", "ordered-list"})
     comps, unparsed = components(sec.get("components", ""))
     parts = list(comps.values()) or answer_items(answer, is_list)
+    list_parts, unclear_list = list_answer_items(answer) if is_list else ([], False)
     if ";" in answer:
         fail("short-answer", "the answer has a semicolon, which the form refuses; separate parts with commas or 'and'")
     if len(answer) > 250:
         fail("short-answer", f"answer is {len(answer)} characters; the limit is 250")
     if is_list:
-        if len(parts) > 12:
-            fail("short-answer", f"answer lists {len(parts)} items; the limit is 12")
-        for part in parts:
+        if unclear_list:
+            warn("list-items", "cannot determine every list boundary from the answer; use comma-separated quoted items or "
+                               "one bullet per item, then review the item count on the platform")
+        if not unclear_list and len(list_parts) > 12:
+            fail("short-answer", f"answer lists {len(list_parts)} items; the limit is 12")
+        for part in list_parts if not unclear_list else []:
             if len(part.split()) > 10:
                 warn("answer-length", f"list item '{part[:40]}' is over 10 words")
     elif len(answer.split()) > 10:
@@ -605,6 +913,11 @@ def check(path: Path, bundle: Bundle) -> tuple[dict, dict, list[tuple[str, str, 
     if re.search(r"\b(because|due to|which means|so that)\b", a_norm) or (
             answer.rstrip().endswith(".") and len(answer.split()) > 4):
         warn("short-answer", "the answer reads like a sentence or an explanation; give the value")
+    extra = gold_extra(answer, question)
+    if extra:
+        warn("gold-extra", f"the gold carries {extra} that the question does not ask for; give the bare value in the "
+                           "asked format (send-back pitfall 5, guide of 2026-10-15; ledger rows 24 and 26: quick tests "
+                           "read as survivals with an explanatory parenthesis and failed with the bare answer)")
     if re.fullmatch(r"[-+]?[\d.,]+", answer.strip()):
         warn("units", "the answer is a bare number; give its units (form: 'short and checkable, with units')")
     if kinds == {"yes-no"}:
@@ -632,8 +945,11 @@ def check(path: Path, bundle: Bundle) -> tuple[dict, dict, list[tuple[str, str, 
         if value not in a_norm:
             fail("components", f"{cid} '{comps[cid]}' is not a piece of the answer (a value or a name from it)")
     if comps:
+        # Whole numbers, as the form compares them: "8" in "8 CFR 1208.13" is not covered by "1208.13"
+        # (form, aq-02750 q06, 2026-10-11: "Your answer includes 8, but no component contains it").
+        covered = {n for value in normed.values() for n in re.findall(r"\d+(?:[.,]\d+)*", value)}
         for number in re.findall(r"\d+(?:[.,]\d+)*", a_norm):
-            if not any(number in value for value in normed.values()):
+            if number not in covered:
                 fail("components", f"the number {number} in the answer is in no component")
         if asks in {"1", "2"} and len(comps) < int(asks):
             fail("components", f"{len(comps)} component for {asks} asks; the answer must cover every ask")
@@ -688,9 +1004,15 @@ def check(path: Path, bundle: Bundle) -> tuple[dict, dict, list[tuple[str, str, 
         fail("tags", f"unknown tags {unknown}; use the guide's six, separated by semicolons")
     if len(set(tags) - set(unknown)) < 2:
         fail("tags", "at least two reasoning tags")
-    for lever in items(meta.get("levers", "")):
-        if re.sub(r"\s*\(most effective\)|\?", "", lever.lower()).strip() not in LEVERS:
+    declared = items(meta.get("levers", ""))
+    for lever in declared:
+        if norm(re.sub(r"\s*\(most effective\)|\?", "", lever)).strip() not in LEVERS:
             warn("levers", f"'{lever}' is not one of the guide's levers (separate them with semicolons)")
+    if meta.get("difficulty_target", "").strip().lower() == "hard" and status in {"draft", "checked"} and len(
+            declared) < 2:
+        warn("levers", f"{len(declared)} lever(s) declared for a Hard target; the guide (2026-10-16): 'One lever "
+                       "usually lands Easy; two together land Medium or Hard'. Stack two or three on the path to the "
+                       "answer (playbook section 4) and list them in 'levers:'")
 
     # Rule 9a and the form's evidence checks: every quote is 12+ characters of one passage, found
     # verbatim in the document it cites, and attached to a component; every component has a quote
@@ -722,6 +1044,12 @@ def check(path: Path, bundle: Bundle) -> tuple[dict, dict, list[tuple[str, str, 
             warn("evidence", f"{doc_id} has no extracted text; its quote cannot be verified")
         elif not quote_found(quote, haystacks):
             fail("evidence", f"{doc_id} quote not found verbatim: \"{quote[:70]}\"")
+        elif native_pipe_rows(bundle.page_text(doc_id)) and not quote_found(quote, haystacks, pipes=False):
+            # A submitted or accepted question is frozen (never edited), so its old quotes are reported, not failed.
+            (warn if status in FROZEN else fail)(
+                             "evidence", f"{doc_id} quote matches only with the table pipes removed, but this document's own text "
+                             f"keeps them, and the form rejects such a quote (aq-06840, 2026-10-18): copy the row as "
+                             f"the document prints it, pipes included: \"{quote[:70]}\"")
     uncited = [cid for cid in comps if cid not in covered]
     if len(uncited) > 1 or (uncited and not COUNT.fullmatch(normed[uncited[0]])):
         fail("components", f"no evidence quote for {', '.join(uncited)}; every component needs one "
@@ -735,16 +1063,57 @@ def check(path: Path, bundle: Bundle) -> tuple[dict, dict, list[tuple[str, str, 
     for doc_id in sorted(cited - set(documents)):
         warn("evidence", f"{doc_id} is quoted but not listed as necessary; if the answer needs it, list it")
 
-    # The form's Targeted failure modes (2026-10-07): 1-3 traps from its list, each once, with how a
-    # careless solver fails and three boxes of 150+ words together. Submit stays blocked without them.
+    # The form's reasoning number check (tools/form_numbers.py): each number in a step must be printed,
+    # in digits, in a document the step cites, or be the step's exact "=" result, or (in a step citing
+    # two or more documents) repeat an earlier step's string. The form shows each miss in orange under
+    # the reasoning box ("Step 1: Doc 2 doesn't mention 107."). A miss a rewording could fix is a FAIL
+    # and blocks a clean hand-over; a figure the cited document states in words or deep, inside an
+    # evidence quote, is an expected false alarm and a WARN (user, 2026-10-09). A ready question was
+    # measured with its reasoning as it stands, and an edit voids that pass, so there it is reported only.
+    if status not in FROZEN and reasoning and "TODO" not in reasoning:
+        pages = platform_numbers(bundle)
+        if not pages:
+            warn("form-numbers", "notes/intake.json gives no task-page Doc numbers, so the form's reasoning "
+                                 "number check could not run; check every step's numbers by hand")
+        else:
+            page_texts = {pages[doc_id]: bundle.page_text(doc_id) for doc_id in bundle.live_ids() if doc_id in pages}
+            page_quotes: dict[int, list[str]] = {}
+            for doc_id, _, _, quote in evidence_rows(sec.get("evidence", "")):
+                if doc_id in pages:
+                    page_quotes.setdefault(pages[doc_id], []).append(quote)
+            for flag in fn.check(reasoning, page_texts, page_quotes):
+                if flag.level == "FAIL" and status != "ready":
+                    fail("form-numbers", f"{flag.form} {flag.why}")
+                else:
+                    warn("form-numbers", f"{flag.form} {flag.why}" + (
+                        " (ready: the platform measured this reasoning; an edit needs a new difficulty result)"
+                        if flag.level == "FAIL" else ""))
+            # A step that names a document relies on it. Platform reviewers returned aq-01333 q01 and aq-02749
+            # q02 because the explanation leaned on a document that was not marked necessary: the Document check
+            # (answer unchanged without it) is a narrower test than the reviewer's (every document the count or
+            # condition depends on is ticked and quoted). The exclusion role with its note covers that case.
+            ticked = {pages[doc_id] for doc_id in documents if doc_id in pages}
+            named = {int(number)
+                     for found in re.finditer(r"\bDocs?\s+(\d+(?:(?:\s*,\s*|\s+and\s+|\s+or\s+)\d+)*)", reasoning)
+                     for number in re.findall(r"\d+", found.group(1))}
+            for number in sorted(named - ticked):
+                warn("documents", f"the reasoning names Doc {number}, which is not ticked as necessary: tick it "
+                                  "(\"Exclusion / condition source\" with the note and a quote when it only rules "
+                                  "something out) or take the statement out; reviewers returned aq-01333 q01 and "
+                                  "aq-02749 q02 for an explanation that relied on an unmarked document")
+
+    # The form's Targeted failure modes: 1-3 traps from its list, each once, each with how a careless
+    # solver fails (2026-10-07), then one shared "Why these are traps" reason of at most 50 words
+    # (2026-10-08, replacing three boxes per mode). Submit stays blocked without them or above 50 words.
     if status not in FROZEN:
         modes_text = sec.get("targeted failure modes", "")
         if not modes_text or "TODO" in modes_text:
             (fail if status == "ready" else warn)(
                 "failure-modes", "no complete '## Targeted failure modes'; the form blocks Submit until 1-3 traps "
-                                 "are filled in, each proved in Lever checks with the wrong answer it gives")
+                                 "and one shared reason are filled in, each trap proved in Lever checks with the "
+                                 "wrong answer it gives")
         else:
-            modes = failure_modes(modes_text)
+            modes, reason = failure_section(modes_text)
             if not 1 <= len(modes) <= 3:
                 fail("failure-modes", f"{len(modes)} failure modes; the form takes 1 to 3, one "
                                       "'### Failure mode N' block each")
@@ -758,19 +1127,30 @@ def check(path: Path, bundle: Bundle) -> tuple[dict, dict, list[tuple[str, str, 
                     fail("failure-modes", f"failure mode {number} repeats '{trap}'; the form takes each trap once")
                 else:
                     seen.add(trap)
+                    cue = TRAP_DEFINITION_CUES.get(trap)
+                    if cue and not re.search(cue[1], q_norm if cue[2] == "question" else reason, re.I):
+                        warn("failure-modes", f"failure mode {number}: Submit checks '{trap}' against its definition, "
+                                              f"{cue[0]}; the {cue[2]} shows no such cue, so pick the trap whose "
+                                              "definition fits the wrong route (aq-02208 q02 was blocked)")
                 if form_choice(mode.get("cause", ""), FAILURE_CAUSES) is None:
                     fail("failure-modes", f"failure mode {number}: '{FAILURE_FIELDS['cause']}' must be one of: "
                                           + ", ".join(FAILURE_CAUSES.values()))
-                empty = [f"'{FAILURE_FIELDS[key]}'" for key in FAILURE_BOXES if not mode.get(key)]
-                if empty:
-                    fail("failure-modes", f"failure mode {number}: empty box {', '.join(empty)}")
-                total, lettered = failure_words(mode)
-                if total < FAILURE_WORDS:
-                    fail("failure-modes", f"failure mode {number} has {total} words across its three boxes; the "
-                                          f"form needs at least {FAILURE_WORDS}")
-                elif lettered < FAILURE_WORDS:
-                    warn("failure-modes", f"failure mode {number}: only {lettered} of its {total} words hold a letter; "
-                                          "leave a margin in case the form's counter skips bare figures")
+                old = [f"'{LEGACY_FAILURE_BOXES[key]}'" for key in LEGACY_FAILURE_BOXES if key in mode]
+                if old:
+                    fail("failure-modes", f"failure mode {number} still has the old per-mode box(es) {', '.join(old)}; "
+                                          f"the form now has one shared '{FAILURE_REASON}' box for all modes, at most "
+                                          f"{FAILURE_REASON_WORDS} words")
+            words = reason_words(reason)
+            if not reason:
+                fail("failure-modes", f"no '{FAILURE_REASON}:' reason; the form needs one short reason for all picks "
+                                      f"(where the trap sits, the wrong answer, why the gold avoids it), at most "
+                                      f"{FAILURE_REASON_WORDS} words")
+            elif words > FAILURE_REASON_WORDS:
+                fail("failure-modes", f"'{FAILURE_REASON}' has {words} words; the form blocks Submit above "
+                                      f"{FAILURE_REASON_WORDS}")
+            elif not re.search(r"\bDocs? \d+", reason):
+                warn("failure-modes", f"'{FAILURE_REASON}' names no Doc N; the form asks where each trap sits "
+                                      "(the document and passage)")
 
     # Rule 7: self-contained wording.
     if re.search(r"\.(pdf|html?|docx?|txt|xlsx?|csv|xml)\b", q_norm):
@@ -833,25 +1213,85 @@ def check(path: Path, bundle: Bundle) -> tuple[dict, dict, list[tuple[str, str, 
     # qualifies, how many items a long list has, and no "at least N" over a longer answer.
     if is_list and not re.search(r"\border\b|rank|first|earliest|latest|chronolog|sequence|ascending|descending"
                                  r"|lowest|highest|alphabetical", q_norm):
-        warn("format", "a list answer: say the order, or 'in any order' (form: answer format stated)")
+        warn("format", "a list answer: say the order, e.g. 'alphabetically' or 'in date order' (form: answer "
+                       "format stated; 'in any order' clears this check but draws the rule-10 advisory)")
+    elif is_list and not re.search(r"\border\b|rank|chronolog|sequence|ascending|descending|alphabetical", q_norm):
+        # aq-03170 q01 rev 1: "Earliest second letter first." cleared this floor and the form still warned
+        # ("the question does not say what order to give them in"); "List them alphabetically." cleared both.
+        warn("format", "a list answer whose only order word is 'first', 'earliest', 'latest', 'lowest' or 'highest': "
+                       "the form did not read \"Earliest second letter first.\" as an order (aq-03170 q01); use "
+                       "the check's own words ('alphabetically', 'in date order')")
+    # A clause telling the solver what to count is a cue, even when it reads like a fairness rule. Measured:
+    # "Counting co-signed letters" Between levels (aq-03570); "including letters only others mention" Medium
+    # where the same question naming only the evidence ("Judging by all these letters together") was Hard
+    # (aq-03170 q01); "including any whose attempt only another submitter reports" quick-test too easy
+    # (aq-03423). Name the set or the evidence by its structure and leave the counting to the solver.
+    if re.search(r"(?:^|[,;:(?]\s*)(?:counting|including|whether or not)\b", q_norm):
+        warn("cue", "a clause beginning 'counting', 'including' or 'whether or not' tells the solver what to "
+                    "look for; name the set or the evidence by its structure instead (aq-03170 q01: the clause "
+                    "measured Medium, the structural wording Hard)")
+    # A completeness word does the same job as a clause. Measured on one list with a member outside a
+    # complete-looking table (aq-03169 q02): "say anywhere in its response" Between levels (Medium 4/5); the
+    # scope dropped altogether, "Answer not supported" (the high model stayed in the table, 0 of 3); the scope
+    # named with no search word, "does Grant Thornton's response say", Hard. Same ladder on aq-02933
+    # ("Wherever": Between levels; "appears in CMS's hospice notice": Medium).
+    if re.search(r"\b(?:anywhere|wherever)\b", q_norm):
+        warn("cue", "'anywhere' or 'wherever' tells the solver to keep searching (aq-03169 q02, aq-02933 q04: "
+                    "Between levels); name the document or section set the members are drawn from, and do not "
+                    "drop the scope either (dropped: the high model answered from the table only)")
+    # The platform guide of 2026-10-15/16: no word that points at the trap, no contrived selector, and words like
+    # "the latest release" that point at exactly the gold's document (sections 5 and 7).
+    hint = HINT_WORDS.search(q_norm)
+    if hint:
+        warn("hint", f"'{hint.group(0)}' points at the trap; the guide says to skip words like 'actually' or "
+                     "'originally' and not to spell the trap out (send-back pitfall 5)")
+    if SELECTOR.search(q_norm):
+        warn("selector", "the period or case is picked through another fact: keep it only if the selector is the "
+                         "analysis (the company's own best or worst quarter); otherwise name the period (send-back "
+                         "pitfall 1, the most common)")
+    literal = LITERAL.search(q_norm)
+    if literal:
+        warn("literal", f"'{literal.group(0)}': read only the words and confirm they point at exactly the document "
+                        "and period the gold uses (send-back reason 8)")
+    # A list gold written as labelled sentences ("Less concentration: a, b, c. Lower audit quality: d, e")
+    # failed the form's blocking "Short answer" check: it splits on commas, so a label and a sentence break
+    # fold into the neighbouring items (aq-03169 q02 rev 1). One comma list, a short tag in brackets per item.
+    if is_list and (re.search(r"[A-Za-z]:\s", answer) or re.search(r"[a-z]{3}\.\s+[A-Z]", answer)):
+        warn("short-answer", "the list answer carries a colon label or a sentence break; the form's blocking "
+                             "'Short answer' check failed that shape (aq-03169 q02 rev 1): write one comma list "
+                             "and tag items in brackets when two asks share it")
+    # The form reads an ordinal before a document part as a pointer to the answer: "second letter" drew
+    # "points to where the answer is ... name the thing you mean instead" (aq-03170 q01 rev 1).
+    pointer = re.search(r"\b(first|second|third|fourth|fifth|last)\s+(letter|paragraph|table|section|footnote|"
+                        r"sentence|page|row|column|mention)\b", q_norm)
+    if pointer:
+        warn("pointer", f"'{pointer.group(0)}' reads as a pointer to where the answer sits (the form flagged "
+                        "'second letter' on aq-03170 q01); name the thing itself")
     if (which_items or is_list) and not re.search(r"\bif any\b|\bnone\b|\bif no\b|\bzero\b", q_norm):
         warn("format", "say what to answer when nothing qualifies, e.g. 'which ..., if any, ...' "
                        "(form: answer format stated)")
-    if is_list and len(parts) > 3:
-        names = "|".join([str(len(parts))] + [w for w, n in NUMBER_WORDS.items() if n == len(parts)])
+    if is_list and not unclear_list and len(list_parts) > 3:
+        names = "|".join([str(len(list_parts))] + [w for w, n in NUMBER_WORDS.items() if n == len(list_parts)])
         if not re.search(rf"\b({names})\b", q_norm):
-            warn("list-contract", f"the answer lists {len(parts)} items; say how many to expect, or ask for one "
+            warn("list-contract", f"the answer lists {len(list_parts)} items; say how many to expect, or ask for one "
                                   "value (form: list contract)")
     least = re.search(r"\bat least (\d+|" + "|".join(NUMBER_WORDS) + r")\b", q_norm)
     if least:
         wanted = int(least.group(1)) if least.group(1).isdigit() else NUMBER_WORDS[least.group(1)]
-        if len(parts) > wanted:
-            warn("partial", f"'at least {least.group(1)}' with {len(parts)} answer items marks a correct partial "
+        item_count = len(list_parts) if is_list else len(parts)
+        if not unclear_list and item_count > wanted:
+            warn("partial", f"'at least {least.group(1)}' with {item_count} answer items marks a correct partial "
                             "answer wrong (form: partial answers)")
     if re.search(r"\b(this|the) (bundle|document set|set of documents|collection of documents)\b"
                  r"|\bhow many (of the )?documents\b|\bwhich (of the )?documents?\b"
                  r"|\b(both|all|each|exactly \w+) (of the )?documents\b|\bcited (in|by) both\b", q_norm):
         warn("world", "the question is about the documents, not what they describe (rule 10)")
+    # aq-03736 q02 (2026-10-13): the form's "Asks about the world, not the set" advisory flagged the tail
+    # "List the items in any order." as "an answer-protocol tail". "List them alphabetically." (aq-03170 q01)
+    # cleared "Answer format stated" and is not known to draw this line.
+    if re.search(r"\bin any order\b", q_norm):
+        warn("world", "'in any order' drew the form's rule-10 advisory as an answer-protocol tail (aq-03736 q02); "
+                      "give a natural order instead ('alphabetically', 'in date order'), or ask for one value")
     for name, text in (("question", question), ("reasoning", reasoning)):
         if re.search(r"[—–]|(?<!-)--(?!-)", text):
             warn("style", f"the {name} has an em or en dash; the form flags them (writing style)")
@@ -919,100 +1359,96 @@ def check(path: Path, bundle: Bundle) -> tuple[dict, dict, list[tuple[str, str, 
             revision = int(meta.get("revision", "0"))
         except ValueError:
             revision = -1
-        if targeted:
-            digest = submission_sha256(meta, sec, bundle)
-            gap_details = source_gap_details(bundle)
-            gaps = [gap["identity"] for gap in gap_details]
-            if gaps:
-                necessary = set(documents) | cited
-                unavailable = {"unavailable-document", "missing-text", "missing-original"}
-                unwaivable = [gap["identity"] for gap in gap_details if not gap["document"]
-                              or (gap["document"] in necessary and gap["kind"] in unavailable)]
-                if unwaivable:
-                    fail("source-completeness", "ready cannot waive missing necessary/cited sources or "
-                         "unscoped provenance gaps: " + ", ".join(unwaivable))
+        digest = submission_sha256(meta, sec, bundle)
+        gap_details = source_gap_details(bundle)
+        gaps = [gap["identity"] for gap in gap_details]
+        if gaps:
+            necessary = set(documents) | cited
+            unavailable = {"unavailable-document", "missing-text", "missing-original"}
+            unwaivable = [gap["identity"] for gap in gap_details if not gap["document"]
+                          or (gap["document"] in necessary and gap["kind"] in unavailable)]
+            if unwaivable:
+                fail("source-completeness", "ready cannot waive missing necessary/cited sources or "
+                     "unscoped provenance gaps: " + ", ".join(unwaivable))
+            else:
+                errors = source_assessment_errors(sec.get("source assessment", ""), revision, digest, gaps)
+                for error in errors:
+                    fail("source-completeness", error)
+                if errors:
+                    fail("source-completeness", "known source gaps remain unassessed: " + ", ".join(gaps))
                 else:
-                    errors = source_assessment_errors(sec.get("source assessment", ""), revision, digest, gaps)
-                    for error in errors:
-                        fail("source-completeness", error)
-                    if errors:
-                        fail("source-completeness", "known source gaps remain unassessed: " + ", ".join(gaps))
-                    else:
-                        warn("source-completeness", "corpus remains incomplete; independent review assessed "
-                             "this candidate as unaffected: " + ", ".join(gaps))
-            elif not (bundle.path / "notes" / "intake.json").exists():
-                warn("source-completeness", "capture provenance is unavailable; confirm original source completeness")
+                    warn("source-completeness", "corpus remains incomplete; source assessment found "
+                         "this candidate unaffected: " + ", ".join(gaps))
+        elif not (bundle.path / "notes" / "intake.json").exists():
+            warn("source-completeness", "capture provenance is unavailable; confirm original source completeness")
         if any(level == "FAIL" for level, _, _ in found):
             fail("status", "ready with a FAIL; set it back to draft")
-        solves = [r for r in records(sec.get("blind solve", "")) if r["rev"] == revision]
-        reviews = [r for r in records(sec.get("review", ""), review=True) if r["rev"] == revision]
-        audits = [r for r in records(sec.get("shortcut audit", ""), review=True) if r["rev"] == revision]
-        if any(r["duplicate_fields"] for r in solves + reviews + audits):
-            fail("status", "check records must not contain duplicate fields")
-        if targeted:
-            for label, candidates in (("blind solve", [r for r in solves if r["kind"] == "blind"]),
-                                      ("closed-book solve", [r for r in solves if r["kind"] == "closed-book"]),
-                                      ("platform check", [r for r in solves if r["kind"] == "quick-test"]),
-                                      ("review", reviews), ("shortcut audit", audits)):
-                if candidates and candidates[-1]["tested_sha256"] != digest:
-                    fail("status", f"latest {label} is not bound to this submission and corpus; "
-                                   "record the current tested_sha256 after rerunning it")
-            solves = [r for r in solves if r["tested_sha256"] == digest]
-            reviews = [r for r in reviews if r["tested_sha256"] == digest]
-            audits = [r for r in audits if r["tested_sha256"] == digest]
-            if not audits or audits[-1]["verdict"] != "clear":
-                fail("status", "ready needs a shortcut audit of this revision and fingerprint with 'verdict: clear'")
-        blind = [r["outcome"] for r in solves if r["kind"] == "blind" and r["outcome"] != "solver-error"]
-        closed = [r["result"] for r in solves if r["kind"] == "closed-book"]
-        quick = [r for r in solves if r["kind"] == "quick-test"]
-        if not solves:
-            fail("status", f"ready needs this revision's check records (lines tagged 'rev: {revision}') "
-                           "in '## Blind solve'; run /docket-check")
-        else:
-            if set(blind) - OUTCOMES:
-                fail("status", f"unknown blind-solve outcome {sorted(set(blind) - OUTCOMES)}; use {sorted(OUTCOMES)}")
-            if set(blind) & {"ambiguous", "not-answerable"}:
-                fail("status", "ready with an ambiguous or not-answerable blind solve of this revision; "
-                               "fix fairness first (rule 4)")
-            if blind.count("match") < 2:
-                fail("status", "ready needs two matching blind solves of this revision; lever misses and solver "
-                               "errors do not validate the gold answer")
-            if targeted:
-                matching_solvers = {r["solver"] for r in solves if r["kind"] == "blind"
-                                    and r["outcome"] == "match" and r["solver"]}
-                if len(matching_solvers) < 2:
-                    fail("status", "ready needs matching records from two distinct nonempty solver identities "
-                                   "('solver: A' and 'solver: B') launched in fresh contexts")
-            if not closed or closed[-1] != "misses":
-                fail("status", "ready needs a closed-book solve of this revision with 'result: misses' (rule 1)")
-            if not quick:
-                fail("status", "ready needs an explicit platform difficulty verdict for this revision")
+
+        # Local checks are optional historical diagnostics. Only exact-content adverse
+        # evidence can block readiness; missing, stale or low-rated local checks cannot.
+        stale_local = False
+
+        def adverse_local(issue: str, message: str) -> None:
+            if local_issue_resolved(sec.get("local resolution", ""), revision, digest, issue):
+                warn("local-diagnostic", f"{issue}: adverse history retained with a current attributed resolution")
             else:
-                platform = quick[-1]
-                passed_tier = platform["passed_tier"]
-                if platform["platform_verdict"] != "pass":
-                    fail("status", "ready needs 'platform_verdict: pass'; a local rating or tier count is no pass")
-                if not platform["feedback"].strip():
-                    fail("status", "ready needs the platform's verbatim verdict in 'feedback:'")
-                elif feedback_contradicts_pass(platform["feedback"], passed_tier):
-                    fail("status", "platform feedback contradicts the recorded pass; resolve the verdict before ready")
-                if platform["result"] in {"solved", "failed", "rejected"}:
-                    fail("status", "platform result contradicts the recorded pass")
-                if passed_tier not in DIFFICULTIES or DIFFICULTIES.get(passed_tier, 0) < DIFFICULTIES.get(target, 4):
-                    fail("status", f"ready needs an explicit passed_tier at or above {target}")
-                elif passed_tier not in platform["reached"]:
-                    fail("status", "passed_tier did not run according to the verbatim tier line; record the observed "
-                                   "tier counts without inferring success")
-        if not reviews or reviews[-1]["verdict"] != "ready":
-            fail("status", f"ready needs a review of this revision (rev: {revision}) whose last verdict is ready")
-        elif targeted:
-            predicted = reviews[-1]["difficulty"]
-            rating = "hard" if predicted == "maximum" else predicted
-            if DIFFICULTIES.get(rating, 0) < DIFFICULTIES.get(target, 4):
-                fail("status", f"ready needs the local review's difficulty prediction at or above {target}")
-        elif reviews[-1]["difficulty"] != "maximum":
-            fail("status", "legacy ready needs a maximum difficulty review; declare difficulty_target for the "
-                           "current Easy, Medium or Hard policy")
+                fail("status", message + f"; retain the return and resolve '{issue}' from source or platform "
+                     "evidence in '## Local resolution' (no local model rerun required)")
+
+        for section, is_review in (("blind solve", False), ("review", True), ("shortcut audit", True)):
+            local = [r for r in records(sec.get(section, ""), review=is_review) if r["kind"] != "quick-test"]
+            current = [r for r in local if r["rev"] == revision and r["tested_sha256"] == digest]
+            stale_local = stale_local or len(current) < len(local)
+            for record in current:
+                if record["duplicate_fields"]:
+                    fail("status", f"current {section} record contains duplicate fields; reconcile the raw evidence")
+                if record["kind"] == "blind":
+                    if record["outcome"] not in OUTCOMES:
+                        fail("status", f"unknown current blind-solve outcome {record['outcome']!r}; use {sorted(OUTCOMES)}")
+                    elif record["outcome"] in {"ambiguous", "not-answerable"}:
+                        adverse_local(f"blind: {record['outcome']}",
+                                      "current local evidence reports an ambiguous or not-answerable question")
+                elif record["kind"] in {"closed-book", "removal"} and record["result"] == "reaches":
+                    adverse_local(f"{record['kind']}: reaches", f"current {record['kind']} result reaches the "
+                                  "gold and reports a document-necessity failure")
+                elif is_review:
+                    if record["verdict"] in {"shortcut", "ambiguous", "not-answerable", "unsupported", "rejected"}:
+                        adverse_local(f"{section}: {record['verdict']}",
+                                      f"current {section} reports {record['verdict']}")
+                    elif record["verdict"] not in {"ready", "clear"}:
+                        warn("local-diagnostic", f"current {section} verdict {record['verdict']!r}: "
+                             f"{record['findings'] or 'no findings recorded'}. Inspect this diagnostic; local tier "
+                             "predictions are not readiness requirements")
+        if stale_local:
+            warn("local-history", "stale or unbound optional local records retained as history; no local rerun required")
+
+        quick = [r for r in platform_records(sec) if r["rev"] == revision]
+        if not quick:
+            fail("status", "ready needs an explicit platform difficulty verdict for this revision in "
+                 "'## Platform validation' (legacy '## Blind solve' is also read)")
+        else:
+            platform = quick[-1]
+            passed_tier = platform["passed_tier"]
+            if not platform["date"]:
+                fail("status", "platform result needs its actual calendar date in YYYY-MM-DD format")
+            if platform["duplicate_fields"]:
+                fail("status", "platform record must not contain duplicate fields")
+            if platform["tested_sha256"] != digest:
+                fail("status", "latest platform check is not bound to this submission and corpus; "
+                     "a new platform result is required for the current fingerprint")
+            if platform["platform_verdict"] != "pass":
+                fail("status", "ready needs 'platform_verdict: pass'; a local rating or tier count is no pass")
+            if not platform["feedback"].strip():
+                fail("status", "ready needs the platform's verbatim verdict in 'feedback:'")
+            elif feedback_contradicts_pass(platform["feedback"], passed_tier):
+                fail("status", "platform feedback contradicts the recorded pass; resolve the verdict before ready")
+            if platform["result"] in {"solved", "failed", "rejected"}:
+                fail("status", "platform result contradicts the recorded pass")
+            if passed_tier not in DIFFICULTIES or DIFFICULTIES.get(passed_tier, 0) < DIFFICULTIES.get(target, 4):
+                fail("status", f"ready needs an explicit passed_tier at or above {target}")
+            elif passed_tier not in platform["reached"]:
+                fail("status", "passed_tier did not run according to the verbatim tier line; record the observed "
+                     "tier counts without inferring success")
     return meta, sec, found
 
 
@@ -1036,7 +1472,7 @@ def check_bundle(bundle_path: Path, only: list[str] | None = None) -> int:
         for level, code, message in found:
             print(f"    {level} {code}: {message}")
     print(f"\n{len(files)} question file(s): {totals['FAIL']} FAIL, {totals['WARN']} WARN. "
-          "A floor, not a pass: uniqueness, fairness and difficulty need the solves and the review.")
+          "A mechanical floor, not a platform pass: validation happens on the platform.")
     return 1 if totals["FAIL"] else 0
 
 
@@ -1157,22 +1593,150 @@ def form_fields(meta: dict, sec: dict, bundle: Bundle) -> str:
                + "\n\nLeave unticked: " + (", ".join(t for t in FORM_TAGS if norm(t) not in tags) or "none"))
 
     modes_text = sec.get("targeted failure modes", "")
-    modes = failure_modes(modes_text) if modes_text and "TODO" not in modes_text else []
+    modes, reason = failure_section(modes_text) if modes_text and "TODO" not in modes_text else ([], "")
     if not modes:
         out.append("### Targeted failure modes\n\nMISSING: write 1-3 in the question file's "
                    "'## Targeted failure modes'. The form blocks Submit without them.")
     else:
         blocks = []
         for n, mode in enumerate(modes, 1):
-            total, _ = failure_words(mode)
             trap = form_choice(mode.get("trap", ""), FAILURE_TRAPS) or mode.get("trap", "?")
             cause = form_choice(mode.get("cause", ""), FAILURE_CAUSES) or mode.get("cause", "?")
-            blocks.append(f"#### Failure mode {n}\n\nTrap: {trap}\n\n{FAILURE_FIELDS['cause']}: {cause}\n\n"
-                          + "\n\n".join(f"{FAILURE_FIELDS[key]}:\n\n{fenced(unwrapped(mode.get(key, '')))}"
-                                        for key in FAILURE_BOXES)
-                          + f"\n\n({total} words across the three boxes; the form needs at least {FAILURE_WORDS}.)")
+            blocks.append(f"#### Failure mode {n}\n\nTrap: {trap}\n\n{FAILURE_FIELDS['cause']}: {cause}")
+        heading = f"#### {FAILURE_REASON} (at most {FAILURE_REASON_WORDS} words)\n\n"
+        if reason:
+            text = unwrapped(reason)
+            blocks.append(heading + fenced(text) + f"\n\n({reason_words(text)} / {FAILURE_REASON_WORDS} words.)")
+        else:
+            blocks.append(heading + f"MISSING: write '{FAILURE_REASON}:' in the question file. "
+                                    "The form blocks Submit without it.")
         out.append("### Targeted failure modes\n\n" + "\n\n".join(blocks))
     return "\n\n".join(out) + "\n"
+
+
+def form_payload(meta: dict, sec: dict, bundle: Bundle) -> dict:
+    """Only form input values, with display labels and one-based platform references.
+
+    Serialize existing content without validation runs or a readiness claim. Reject missing
+    fields and ambiguous mappings rather than produce a partial automation payload.
+    """
+    def required(value: str, field: str) -> str:
+        if not value.strip() or "TODO" in value:
+            raise ValueError(f"Missing {field} input")
+        return value.strip()
+
+    question = unwrapped(required(sec.get("question", ""), "question"))
+    answer = unwrapped(required(sec.get("answer", ""), "gold answer"))
+    reasoning = required(sec.get("reasoning", ""), "step-by-step reasoning")
+    if meta.get("asks") not in {"1", "2"}:
+        raise ValueError("Number of asks must be 1 or 2")
+    comps, bad = components(sec.get("components", ""))
+    component_lines = [line for line in sec.get("components", "").splitlines() if line.strip()]
+    if bad or not 1 <= len(comps) <= 10 or len(component_lines) != len(comps):
+        raise ValueError("Answer components are missing, duplicated or unparseable")
+    values = [required(value, "answer component") for value in comps.values()]
+    index = {cid: n for n, cid in enumerate(comps, 1)}
+    numbers = platform_numbers(bundle)
+    if len(set(numbers.values())) != len(numbers):
+        raise ValueError("Ambiguous platform document numbers in notes/intake.json")
+
+    def number(doc_id: str) -> int:
+        value = numbers.get(doc_id)
+        if type(value) is not int or value < 1 or bundle.manifest.get(doc_id, {}).get("missing"):
+            raise ValueError(f"Missing platform document number for {doc_id}; check notes/intake.json")
+        return value
+
+    rows = evidence_rows(sec.get("evidence", ""))
+    evidence_lines = [line for line in sec.get("evidence", "").splitlines() if line.strip()]
+    if not rows or len(rows) != len(evidence_lines):
+        raise ValueError("Evidence is missing or unparseable")
+    evidence = []
+    for doc_id, _, ids, quote in rows:
+        if not ids or any(cid not in index for cid in ids):
+            raise ValueError("Evidence refers to an unknown or missing answer component")
+        evidence.extend({"document_number": number(doc_id), "component_number": index[cid],
+                         "quote": unwrapped(required(quote, "evidence quote"))} for cid in ids)
+    doc_text = meta.get("documents", "")
+    documents = re.findall(r"\bD\d{2,3}\b", doc_text)
+    if (not documents or len(set(documents)) != len(documents)
+            or re.sub(r"\bD\d{2,3}\b", "", doc_text).strip(" ,;\t\n")):
+        raise ValueError("Necessary document selections are missing, duplicated or unparseable")
+    roles_text = sec.get("necessary documents", "")
+    groups, bad = necessary_documents(roles_text)
+    if roles_text.strip():
+        if bad or not groups or sorted(d for group in groups for d in group["ids"]) != sorted(documents):
+            raise ValueError("Necessary document roles do not match the selections")
+    else:
+        groups = [{"ids": [doc_id], "role": "Answer component", "note": ""} for doc_id in documents]
+    necessary = []
+    for group in groups:
+        if group["role"] not in DOC_ROLES:
+            raise ValueError("Unknown necessary document role")
+        necessary.append({"document_numbers": [number(doc_id) for doc_id in group["ids"]],
+                          "role": group["role"], "reviewer_note": unwrapped(group["note"])})
+    tags = {norm(tag) for tag in items(meta.get("tags", ""))}
+    if len(tags) < 2 or tags - {norm(tag) for tag in FORM_TAGS}:
+        raise ValueError("Reasoning tags are missing or unknown")
+    modes, reason = failure_section(sec.get("targeted failure modes", ""))
+    if not 1 <= len(modes) <= 3:
+        raise ValueError("Missing targeted failure modes; expected 1-3")
+    failures = []
+    for mode in modes:
+        trap = form_choice(mode.get("trap", ""), FAILURE_TRAPS)
+        cause = form_choice(mode.get("cause", ""), FAILURE_CAUSES)
+        if trap is None or cause is None:
+            raise ValueError("Unknown targeted failure mode trap or cause")
+        if any(key in mode for key in LEGACY_FAILURE_BOXES):
+            raise ValueError("Targeted failure modes still use the old per-mode boxes; write one shared reason")
+        failures.append({"trap": trap, "how_a_careless_solver_fails": cause})
+    why = unwrapped(required(reason, "targeted failure modes reason"))
+    if reason_words(why) > FAILURE_REASON_WORDS:
+        raise ValueError(f"Targeted failure modes reason exceeds {FAILURE_REASON_WORDS} words")
+    return {"question": question, "number_of_asks": int(meta["asks"]), "gold_answer": answer,
+            "step_by_step_reasoning": reasoning, "answer_components": values, "evidence": evidence,
+            "necessary_documents": necessary,
+            "reasoning_tags": [tag for tag in FORM_TAGS if norm(tag) in tags],
+            "targeted_failure_modes": failures, "why_these_are_traps": why}
+
+
+def write_json_inputs(bundle: Bundle, path: Path, meta: dict, sec: dict) -> Path:
+    """Write a UTF-8 JSON sidecar atomically; preserve the authored Markdown bytes."""
+    folder = bundle.path / "questions"
+    out = path.with_suffix(".json")
+    if (not re.fullmatch(r"q\d{2,}", path.stem) or path.resolve().parent != folder.resolve()
+            or folder.is_symlink() or getattr(folder, "is_junction", lambda: False)()
+            or out.is_symlink()):
+        raise ValueError("JSON output must be an unlinked questions/qNN.json in the bundle")
+    data = (json.dumps(form_payload(meta, sec, bundle), ensure_ascii=False, indent=2) + "\n").encode("utf-8")
+    descriptor, temporary = tempfile.mkstemp(prefix=f".{path.stem}-", suffix=".json.tmp", dir=folder)
+    try:
+        with os.fdopen(descriptor, "wb") as stream:
+            stream.write(data)
+        os.replace(temporary, out)
+    finally:
+        Path(temporary).unlink(missing_ok=True)
+    return out
+
+
+def json_inputs(bundle_path: Path, only: list[str] | None = None) -> int:
+    """Serialize requested input values; no mechanical/semantic question validation."""
+    bundle = Bundle(bundle_path)
+    files = [path for path in bundle.questions() if not only or path.stem in only]
+    written, failed = 0, False
+    for path in files:
+        meta, sec = parse(path)
+        if meta.get("status") in {"template", "dropped"} or (not only and meta.get("status") in FROZEN):
+            continue
+        try:
+            out = write_json_inputs(bundle, path, meta, sec)
+            print(f"Wrote {out.as_posix()}: form input values only.")
+            written += 1
+        except (ValueError, OSError) as error:
+            print(f"{path.stem}: JSON not written; any existing sidecar is unchanged: {error}")
+            failed = True
+    if not written and not failed:
+        print("No selected questions eligible for JSON input serialization.")
+    return int(failed or not written)
 
 
 def handover(bundle_path: Path, only: list[str] | None = None) -> int:
@@ -1212,6 +1776,20 @@ def handover(bundle_path: Path, only: list[str] | None = None) -> int:
                 f"- Local ids and the task page's numbers: {mapping}.",
                 f"- Floor: {len(fails)} FAIL, {len(warns)} WARN."]
         head += [f"  - FAIL {item}" for item in fails] + [f"  - WARN {item}" for item in warns]
+        try:
+            revision = int(meta.get("revision", "-1"))
+        except ValueError:
+            revision = -1
+        quality = pc.summary(bundle.path, path.stem, revision, submission_sha256(meta, sec, bundle))
+        cleared = status == "ready" and not fails and quality["blocking_clearance"] == "clear"
+        head.append(f"- Recorded platform Checks: {quality['blocking_clearance']}; "
+                    f"{quality['counts'].get('passed', 0)}/39 passed in the latest capture. "
+                    f"Submission clearance recorded: {'yes' if cleared else 'no'}. "
+                    "Difficulty readiness and Checks clearance are separate; neither is acceptance.")
+        head += [f"  - Checks: {message}" for message in quality["errors"] + quality["capture_blockers"]]
+        for name, result in quality["checks"].items():
+            if result["status"] not in {"passed", "unknown"}:
+                head.append(f"  - {name}: {result['status']} ({result['kind']}).")
         if origin.lower() != "user":
             head.append(f"- Authorship: origin {origin}. The form's authorship and AI-use statements are the "
                         "user's to make; the export sheet takes origin user only.")
@@ -1219,6 +1797,16 @@ def handover(bundle_path: Path, only: list[str] | None = None) -> int:
             head.append("- DRAFT: not locally checked. Use it for a quick test or a look at the form only.")
         if fails:
             head.append("- NOT READY TO PASTE: fix every FAIL first.")
+            head.append("- JSON inputs not refreshed because the mechanical floor failed.")
+        else:
+            try:
+                json_path = write_json_inputs(bundle, path, meta, sec)
+                head.append(f"- Form input JSON: questions/{json_path.name} (input values only).")
+                print(f"Wrote {json_path.as_posix()}: form input values only.")
+            except (ValueError, OSError) as error:
+                message = f"JSON not written; any existing sidecar is unchanged: {error}"
+                head.append(f"- {message}")
+                print(f"{path.stem}: {message}")
         head += ["", "Paste each block into the form field of the same name, replacing what the field holds. Copy "
                  "only the text inside each box. On the platform, an edit to the question, answer or necessary "
                  "documents needs a new difficulty result.", ""]
@@ -1255,7 +1843,7 @@ def export(bundle_path: Path, root: Path = ROOT) -> int:
             f"tools/check_questions.py from tasks/{slug}/questions/. Ready questions only, each field "
             "exactly as checked and in the form's order. Paste each field into the task form, replacing what it "
             "holds, and attach each evidence passage to its component.\n\nConfirm any statements the form asks "
-            "you to tick yourself. The floor, blind solve and review cover the rule checks; looking at every "
+            "you to tick yourself. The floor checks form mechanics and the platform validates the question; looking at every "
             "document and figure, re-doing the calculation from the evidence alone, and having written the "
             "question are yours to confirm.\n")
     out.write_bytes(("\n---\n\n".join([head] + blocks)).encode("utf-8"))
@@ -1300,6 +1888,8 @@ def main(argv: list[str]) -> int:
     parser.add_argument("bundle", nargs="?", type=Path, help="tasks/<slug>")
     parser.add_argument("--q", nargs="+", metavar="QID", help="check only these question ids")
     parser.add_argument("--export", action="store_true", help="write dist/<slug>.md from ready questions")
+    parser.add_argument("--json", dest="json_inputs", action="store_true",
+                        help="write questions/qNN.json with form input values only, without validation")
     parser.add_argument("--handover", action="store_true",
                         help="write notes/handover-qNN.md with every form field, in the form's order")
     parser.add_argument("--status", action="store_true", help="list every bundle's questions by status")
@@ -1313,8 +1903,10 @@ def main(argv: list[str]) -> int:
         parser.error("give a bundle (tasks/<slug>) or --status")
     if not args.bundle.is_dir():
         parser.error(f"{args.bundle} is not a directory")
-    if args.export and args.handover:
-        parser.error("choose --export or --handover")
+    if sum((args.export, args.handover, args.json_inputs)) > 1:
+        parser.error("choose --export, --handover or --json")
+    if args.json_inputs:
+        return json_inputs(args.bundle, args.q)
     if args.handover:
         return handover(args.bundle, args.q)
     return export(args.bundle) if args.export else check_bundle(args.bundle, args.q)
