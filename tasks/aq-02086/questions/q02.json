@@ -1,0 +1,84 @@
+{
+  "question": "Which annexed Awaab's Law consultation examples, classed there as emergencies or significant risks, were not yet covered when the law's first phase began? Any order.",
+  "number_of_asks": 1,
+  "gold_answer": "Rodents entering via the kitchen wall (domestic hygiene hazard), and a faulty window handle (entry by intruders hazard)",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 1, annex of example hazards): the consultation classes these annexed examples as emergencies: widespread damp and mould with a child struggling to breathe, a broken front door lock that leaves the home insecure (entry by intruders) and a total loss of water supply (water supply). It classes these as significant risks: damp and mould in two rooms with an immunosuppressed occupant, mice or rats entering through the kitchen's external wall (domestic hygiene, pests and refuse) and a faulty external window whose handle may snap (entry by intruders). Its other examples (small mould patches, one broken tap, a loose handrail) are routine and would not trigger Awaab's Law.\n\nStep 2. Source fact (Doc 3, phasing and Annex A): from 27 October 2025, in the first phase, Awaab's Law covers damp and mould hazards that present a significant risk and all emergency hazards. Significant hazards of the domestic hygiene, pests and refuse type are added in 2026; entry by intruders and water supply are added in 2027.\n\nStep 3. Application (Steps 1 and 2; Doc 1 and Doc 3): both damp and mould examples were covered from the first phase. The broken front door lock and the lost water supply were also covered then, because every emergency hazard was in the first phase, even though their hazard types join for significant cases only in 2027. They are the decoys.\n\nStep 4. Application (Steps 1 and 2; Doc 1 and Doc 3): the rodents (significant risk, domestic hygiene, pests and refuse) waited for 2026 and the faulty window handle (significant risk, entry by intruders) for 2027. These two examples were not yet covered when the first phase began.",
+  "answer_components": [
+    "Rodents entering via the kitchen wall (domestic hygiene hazard)",
+    "a faulty window handle (entry by intruders hazard)"
+  ],
+  "evidence": [
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Example of hazard posing a significant risk to residents(Domestic hygiene, pests and refuse)"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "A social housing resident has reported seeing mice or rats in their property that they believe are entering the property from the external wall in their kitchen."
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Structural collapse and falling elements Domestic hygiene, pests and refuse Food safety"
+    },
+    {
+      "document_number": 1,
+      "component_number": 2,
+      "quote": "Example of hazard posing a significant risk to residents (entry by intruders)"
+    },
+    {
+      "document_number": 1,
+      "component_number": 2,
+      "quote": "A resident has reported that one of their external windows is faulty, and whilst it can be secured for the moment, they suspect the handle will snap off and prevent them from being able to lock the window."
+    },
+    {
+      "document_number": 3,
+      "component_number": 2,
+      "quote": "Volatile organic compounds Entry by intruders Lighting Noise Water supply"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "From 27 October 2025, social landlords will have to investigate and take action on all emergency hazards as soon as reasonably practicable and within no longer than 24 hours."
+    },
+    {
+      "document_number": 3,
+      "component_number": 2,
+      "quote": "From 27 October 2025, social landlords will have to investigate and take action on all emergency hazards as soon as reasonably practicable and within no longer than 24 hours."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Conditional filter"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Wrong jurisdiction or scope",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    },
+    {
+      "trap": "Superseded date or version",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    }
+  ],
+  "why_these_are_traps": "Doc 1's door-lock and water-supply examples are emergencies; Doc 3 puts all emergency hazards in Phase 1, though their types join in 2027, so listing them gives four items. Doc 1 proposed covering every HHSRS hazard at once, giving none. Gold: rodents (2026) and window (2027)."
+}

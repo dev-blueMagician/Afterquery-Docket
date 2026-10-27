@@ -1,0 +1,68 @@
+{
+  "question": "Under the consultation-stage impact assessment's assumptions, how many staff hours a year would the Ishak family's landlord spend preparing additional written summaries?",
+  "number_of_asks": 1,
+  "gold_answer": "2,400 hours",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 1, Annex C glossary entry for Rochdale Boroughwide Housing): the housing association the Ishak family rented their social home from is a housing society with 12,000 homes throughout Rochdale.\n\nStep 2. Source fact (Doc 2, preparation and posting costs for written summaries): the impact assessment assumes 4 repairs per property are carried out per year, the upper bound of the Housemark estimate.\n\nStep 3. Source fact (Doc 2, same section): it takes the English Housing Survey estimate that 40% of faults are urgent as the proportion of responsive repairs requiring a written report to tenants.\n\nStep 4. Source fact (Doc 2, same section): it assumes only 50% of these reports will be an additional burden, because some landlords already give tenants this information.\n\nStep 5. Source fact (Doc 2, same section): it assumes 15 minutes of staff time per report sent.\n\nStep 6. Calculation (from Steps 1 and 2; Doc 1 and Doc 2), repairs a year at the landlord: 12,000 * 4 = 48,000 repairs.\n\nStep 7. Calculation (from Steps 3 and 6; Doc 1 and Doc 2), repairs needing a written summary: 48,000 * 40% = 19,200 summaries.\n\nStep 8. Calculation (from Steps 4 and 7; Doc 1 and Doc 2), additional written summaries a year: 19,200 * 50% = 9,600 summaries.\n\nStep 9. Calculation (from Steps 5 and 8; Doc 1 and Doc 2), staff time a year in minutes: 9,600 * 15 = 144,000 minutes.\n\nStep 10. Calculation (from Step 9; Doc 1 and Doc 2; 60 minutes per hour is a unit convention), staff time a year in hours: 144,000 / 60 = 2,400 hours.",
+  "answer_components": [
+    "2,400"
+  ],
+  "evidence": [
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Resident and employee co-owned housing society, with 12,000 homes throughout Rochdale. This was Housing Association the Ishak family rented their social home from."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Housemark estimate, that 4 repairs per property are carried out per year"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Using the EHS estimate that 40% of faults are classified as requiring an urgent repair as a proxy for the proportion of responsive repairs requiring a report to be provided to tenants"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "we have assumed that only 50% of these reports will be an additional burden to the sector"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "we have assumed that it will take 15 minutes of staff time per report sent"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Unit normalization",
+    "Entity resolution"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    },
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    }
+  ],
+  "why_these_are_traps": "Doc 2 cites survey responses of 4.2 repairs per property but adopts 4; using 4.2 gives 2,520 hours. Doc 2 counts only 50% of required summaries as additional; all 19,200 give 4,800 hours. Gold: 12,000 homes (Doc 1) x 4 x 40% x 50% x 15 minutes."
+}

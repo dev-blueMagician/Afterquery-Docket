@@ -1,0 +1,50 @@
+{
+  "bundle": "aq-02086",
+  "corpus_sha256": {
+    "docs/A-Decent-Homes-Standard-in-the-private-rented-sector.txt": "ca2a226eba28a01f4ca3aadbcaf4029fb91eccc13cb9c346281f839bb0674a73",
+    "docs/Awaabs-Law-consultation-on-timescales-for-repairs-in-the.txt": "defb89eb233fd487ea9716458a1dd2018c967bafdcf9c27dcc9a80bbf9898d63",
+    "docs/Awaabs-Law-consultation-stage-impact-assessment.txt": "c3c6f068b2e19cf84be4dfac48114cb4472165761e533e74af39f487b8a1ed45",
+    "docs/Awaabs-Law-government-response.txt": "44ed077b301614a8f8599ea5c53c95cb84beff1a64f91c71cb90e967cd3b0c2e",
+    "docs/Response-to-the-consultation-on-a-Decent-Homes-Standard-in.txt": "eac0d865b4243f66c9ece4409ca6c1cb3fd871e8558b267ed6d40c14599a16cc",
+    "text/D01.txt": "95381493be64680662ea5402543b74beefeed200d8ea40c11167d1ecdc25ff03",
+    "text/D02.txt": "06bfa6971a168b5f5ad40eaf9248ef75e8808c7bfe0db88284e64403d9af2045",
+    "text/D03.txt": "1b4913d7c3fdc8c1de4718752fe686b2dbb92c3057417622ff03f1b255e9a37a",
+    "text/D04.txt": "82ad9d9e199d59db0bcef35bf172cd20220b33818e7531fc778abaa745f2e904",
+    "text/D05.txt": "d5a39f70e759af3ea0335b9ccb6fff1971216ed04460ed916ab9f1ea3fb4d77f",
+    "text/manifest.json": "469940ffc2a21ff33866da8985c6df6bf98d5c3aacec2f7653138307df889677"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "4e1a6aa955ae4ab77928f8c2b2ef21c7f262c4d3e2d1fa114f2650a330060319",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D03, D04",
+    "id": "q03",
+    "levers": "Calculate across documents; Who belongs where",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "h11",
+    "status": "draft",
+    "tags": "Cross-document join; Entity resolution; Aggregation"
+  },
+  "question_id": "q03",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "15.4%",
+    "components": "- c1: 15.4%",
+    "evidence": "- D04 (L101, respondent table) [c1]: \"Local authority registered provider|113|11%\"\n- D04 (L103, respondent table) [c1]: \"Private registered provider of social housing|140|14%\"\n- D04 (L130, scope) [c1]: \"refers to registered providers of social housing. This could include a local authority landlord or private registered provider of social housing\"\n- D03 (L454, familiarisation costs) [c1]: \"At present there are 234 large PRPs (with a stock volume of greater than 1,000 social dwellings) and 1,162 small PRPs (1,000 social dwellings or fewer) in the sector.\"\n- D03 (L454, familiarisation costs) [c1]: \"Using the same thresholds, there are 163 large local authority registered providers (LARPs) and 86 small LARPs in operation across the sector.\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: new hook (round 3) after q01 and q02 were measured too easy. Count from one document divided by a population scattered across another: Doc 3's respondent table against Doc 2's provider counts (given in the familiarisation-cost section, split by size and type). Target medium (user, 2026-10-08). Platform result pending.\n- Dependency plan: Doc 3 L101/L103: 113 LARP and 140 PRP responses. Doc 3 L130 (and Doc 1 glossary L1037): registered providers are local authority landlords and private registered providers. Doc 2 L454: 234 large + 1,162 small PRPs, 163 large + 86 small LARPs. 113 + 140 = 253; 234 + 1,162 = 1,396; 163 + 86 = 249; 1,396 + 249 = 1,645; 253 / 1,645 = 15.38% -> 15.4%.\n- Universe: registered-provider response rows are LARP (113) and PRP (140). Excluded rows: Other local authority (not a registered provider) 24, Other social landlord (not a registered provider) 9, ALMO 9, TMO 4, representative groups, charities, industry bodies, other, not answered. Provider population: the four Doc 2 counts (all sizes, both types).\n- Necessity: D04 (Doc 3) is the only source of respondent counts by type (Doc 1 lists the categories without counts; Doc 5's 1,032 belongs to the other consultation). D03 (Doc 2) is the only source of provider counts (grep \"1,162\", \"234 large\", \"163 large\", \"86 small\": Doc 2 only; Doc 1 gives familiarisation costs without counts). Without either document the ratio cannot be formed; Doc 2 L703's \"1,162 PRPs\" (small and micro) alone gives a wrong population.\n- Selected-lever checks: Calculate across documents: no document prints 253, 1,645 or 15.4% (grep). Who belongs where: registered providers are the LARP and PRP rows; the \"not a registered provider\" rows and management organisations are other bodies.\n- Targeted failure modes: Failure mode 1 (Part vs total: large providers only, 234 + 163) gives 253 / 397 = 63.7%; PRPs only gives 140 / 1,396 = 10.0%. Failure mode 2 (Wrong kind of entity: adding ALMO, TMO and other social landlord responses) gives 275 / 1,645 = 16.7% (with other local authorities too, 18.2%). Failure mode 3 (Look-alike measure: Doc 3's printed 11% and 14% are shares of the 1,028 responses) gives 25%. All recomputed (Python Decimal, 2026-10-08).\n- Calculation verification: 253 / 1,645 = 0.153799... -> 15.4% (Decimal, half-up). Sums exact.\n- Semantic/ID/overview probes: the task-page overview lists 1,028 responses (Doc 3) and GBP 10.2m (Doc 2), no provider counts. Shortest route: two table rows in Doc 3, one sentence in Doc 2, five operations.\n- Precision/readings: \"equalled what percentage of\" states a ratio and asserts no one-response-per-provider premise. \"In operation\" matches Doc 2 L454. One decimal separates the gold from 16.7% and 16.8%.\n- Completeness: full corpus, no gaps (notes/intake.json).\n- Style/set review: 21 words, no em dashes. q01 and q02 (dropped) used other inputs; q04 uses Docs 1 and 3 for a different question.\n- Warnings answered: pending preflight.",
+    "necessary documents": "- D03: Answer component\n- D04: Answer component",
+    "platform validation": "",
+    "question": "Responses from registered providers to the Awaab's Law consultation equalled what percentage of all registered providers in operation, to one decimal place?",
+    "reasoning": "Step 1. Source fact (Doc 3, breakdown of consultation responses by type of respondent): 113 responses came from local authority registered providers and 140 from private registered providers of social housing. The table lists other local authorities and other social landlords as not registered providers, and arms-length and tenant management organisations as separate types.\n\nStep 2. Source fact (Doc 3, scope of the document): social landlords are registered providers of social housing, which can be local authority landlords or private registered providers.\n\nStep 3. Source fact (Doc 2, familiarisation costs): there are 234 large and 1,162 small private registered providers in the sector, and 163 large and 86 small local authority registered providers in operation.\n\nStep 4. Calculation (Doc 3), responses from registered providers: 113 + 140 = 253 responses.\n\nStep 5. Calculation (Doc 2), private registered providers: 234 + 1,162 = 1,396 providers.\n\nStep 6. Calculation (Doc 2), local authority registered providers: 163 + 86 = 249 providers.\n\nStep 7. Calculation (Doc 2), all registered providers: 1,396 + 249 = 1,645 providers.\n\nStep 8. Calculation (Doc 2 and Doc 3), responses as a share of providers: 253 / 1,645 = 15.4% (to one decimal place).",
+    "targeted failure modes": "### Failure mode 1\nTrap: Part vs total\nHow a careless solver fails: Takes the wrong line item\n\n### Failure mode 2\nTrap: Wrong kind of entity\nHow a careless solver fails: Wrong members in a list\n\n### Failure mode 3\nTrap: Look-alike measure\nHow a careless solver fails: Takes the wrong line item\n\nWhy these are traps: Doc 2 splits providers into large and small; counting only large gives 63.7%. Doc 3 lists ALMOs, TMOs and other social landlords beside registered providers; adding them gives 16.7%. Doc 3's 11% and 14% are shares of responses (25%). Gold: 253 / 1,645 = 15.4%."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "28a06f796dbfd45077f778c3022338b886ed65ea53ce2dac8b2755f3e5e29674"
+}

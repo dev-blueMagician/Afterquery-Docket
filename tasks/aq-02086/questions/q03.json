@@ -1,0 +1,72 @@
+{
+  "question": "Responses from registered providers to the Awaab's Law consultation equalled what percentage of all registered providers in operation, to one decimal place?",
+  "number_of_asks": 1,
+  "gold_answer": "15.4%",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 3, breakdown of consultation responses by type of respondent): 113 responses came from local authority registered providers and 140 from private registered providers of social housing. The table lists other local authorities and other social landlords as not registered providers, and arms-length and tenant management organisations as separate types.\n\nStep 2. Source fact (Doc 3, scope of the document): social landlords are registered providers of social housing, which can be local authority landlords or private registered providers.\n\nStep 3. Source fact (Doc 2, familiarisation costs): there are 234 large and 1,162 small private registered providers in the sector, and 163 large and 86 small local authority registered providers in operation.\n\nStep 4. Calculation (Doc 3), responses from registered providers: 113 + 140 = 253 responses.\n\nStep 5. Calculation (Doc 2), private registered providers: 234 + 1,162 = 1,396 providers.\n\nStep 6. Calculation (Doc 2), local authority registered providers: 163 + 86 = 249 providers.\n\nStep 7. Calculation (Doc 2), all registered providers: 1,396 + 249 = 1,645 providers.\n\nStep 8. Calculation (Doc 2 and Doc 3), responses as a share of providers: 253 / 1,645 = 15.4% (to one decimal place).",
+  "answer_components": [
+    "15.4%"
+  ],
+  "evidence": [
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Local authority registered provider|113|11%"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Private registered provider of social housing|140|14%"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "refers to registered providers of social housing. This could include a local authority landlord or private registered provider of social housing"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "At present there are 234 large PRPs (with a stock volume of greater than 1,000 social dwellings) and 1,162 small PRPs (1,000 social dwellings or fewer) in the sector."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Using the same thresholds, there are 163 large local authority registered providers (LARPs) and 86 small LARPs in operation across the sector."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Entity resolution",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    },
+    {
+      "trap": "Wrong kind of entity",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    },
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    }
+  ],
+  "why_these_are_traps": "Doc 2 splits providers into large and small; counting only large gives 63.7%. Doc 3 lists ALMOs, TMOs and other social landlords beside registered providers; adding them gives 16.7%. Doc 3's 11% and 14% are shares of responses (25%). Gold: 253 / 1,645 = 15.4%."
+}

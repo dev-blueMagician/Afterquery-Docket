@@ -1,0 +1,84 @@
+{
+  "question": "Which hazard types had an emergency or significant-risk example in the Awaab's Law consultation's annex that the law's first phase missed? Any order.",
+  "number_of_asks": 1,
+  "gold_answer": "\"Entry by intruders\", \"Domestic hygiene, pests and refuse\"",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 1, annex of example hazards): the annex classes as emergencies widespread damp and mould with a child struggling to breathe, a broken front door lock that leaves the home insecure (entry by intruders) and a total loss of water supply (water supply). It classes as significant risks damp and mould in two rooms with an immunosuppressed occupant, mice or rats entering through the kitchen's external wall (domestic hygiene, pests and refuse) and a faulty external window whose handle may snap (entry by intruders). Its remaining examples are routine and would not trigger Awaab's Law.\n\nStep 2. Source fact (Doc 3, phasing and Annex A): from 27 October 2025, in the first phase, Awaab's Law covers damp and mould hazards that present a significant risk and all emergency hazards. Significant hazards of the domestic hygiene, pests and refuse type are added in 2026; entry by intruders and water supply are added in 2027.\n\nStep 3. Application (Steps 1 and 2; Doc 1 and Doc 3): damp and mould had no missed example, since both of its examples were covered from the first phase. Decoy: water supply had none either. Its only emergency or significant-risk example, the lost water supply, is an emergency and so was covered from the first phase, although the type joins for significant cases only in 2027.\n\nStep 4. Application (Steps 1 and 2; Doc 1 and Doc 3): entry by intruders had a missed example, the faulty window handle (significant risk, added in 2027), even though its broken front door lock example was an emergency and covered. Domestic hygiene, pests and refuse had a missed example, the rodents (significant risk, added in 2026). These are the two hazard types.",
+  "answer_components": [
+    "Entry by intruders",
+    "Domestic hygiene, pests and refuse"
+  ],
+  "evidence": [
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Example of hazard posing a significant risk to residents (entry by intruders)"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "A resident has reported that one of their external windows is faulty, and whilst it can be secured for the moment, they suspect the handle will snap off and prevent them from being able to lock the window."
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Volatile organic compounds Entry by intruders Lighting Noise Water supply"
+    },
+    {
+      "document_number": 1,
+      "component_number": 2,
+      "quote": "Example of hazard posing a significant risk to residents(Domestic hygiene, pests and refuse)"
+    },
+    {
+      "document_number": 1,
+      "component_number": 2,
+      "quote": "A social housing resident has reported seeing mice or rats in their property that they believe are entering the property from the external wall in their kitchen."
+    },
+    {
+      "document_number": 3,
+      "component_number": 2,
+      "quote": "Structural collapse and falling elements Domestic hygiene, pests and refuse Food safety"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "From 27 October 2025, social landlords will have to investigate and take action on all emergency hazards as soon as reasonably practicable and within no longer than 24 hours."
+    },
+    {
+      "document_number": 3,
+      "component_number": 2,
+      "quote": "From 27 October 2025, social landlords will have to investigate and take action on all emergency hazards as soon as reasonably practicable and within no longer than 24 hours."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Wrong jurisdiction or scope",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    },
+    {
+      "trap": "Superseded date or version",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    }
+  ],
+  "why_these_are_traps": "Doc 1's water-supply example is an emergency, which Doc 3's first phase covers, so adding water supply gives three types. Entry by intruders stays: its window example is significant. Doc 1 proposed covering all hazards at once, giving none. Gold: entry by intruders and domestic hygiene."
+}

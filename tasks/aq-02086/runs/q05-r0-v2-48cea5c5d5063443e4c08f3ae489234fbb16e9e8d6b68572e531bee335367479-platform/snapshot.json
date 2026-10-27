@@ -1,0 +1,50 @@
+{
+  "bundle": "aq-02086",
+  "corpus_sha256": {
+    "docs/A-Decent-Homes-Standard-in-the-private-rented-sector.txt": "ca2a226eba28a01f4ca3aadbcaf4029fb91eccc13cb9c346281f839bb0674a73",
+    "docs/Awaabs-Law-consultation-on-timescales-for-repairs-in-the.txt": "defb89eb233fd487ea9716458a1dd2018c967bafdcf9c27dcc9a80bbf9898d63",
+    "docs/Awaabs-Law-consultation-stage-impact-assessment.txt": "c3c6f068b2e19cf84be4dfac48114cb4472165761e533e74af39f487b8a1ed45",
+    "docs/Awaabs-Law-government-response.txt": "44ed077b301614a8f8599ea5c53c95cb84beff1a64f91c71cb90e967cd3b0c2e",
+    "docs/Response-to-the-consultation-on-a-Decent-Homes-Standard-in.txt": "eac0d865b4243f66c9ece4409ca6c1cb3fd871e8558b267ed6d40c14599a16cc",
+    "text/D01.txt": "95381493be64680662ea5402543b74beefeed200d8ea40c11167d1ecdc25ff03",
+    "text/D02.txt": "06bfa6971a168b5f5ad40eaf9248ef75e8808c7bfe0db88284e64403d9af2045",
+    "text/D03.txt": "1b4913d7c3fdc8c1de4718752fe686b2dbb92c3057417622ff03f1b255e9a37a",
+    "text/D04.txt": "82ad9d9e199d59db0bcef35bf172cd20220b33818e7531fc778abaa745f2e904",
+    "text/D05.txt": "d5a39f70e759af3ea0335b9ccb6fff1971216ed04460ed916ab9f1ea3fb4d77f",
+    "text/manifest.json": "469940ffc2a21ff33866da8985c6df6bf98d5c3aacec2f7653138307df889677"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "a2fb3d2f8199f351496aee039adccb5815c9da8e9e993b15fec3b1723529850e",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "number",
+    "asks": "1",
+    "difficulty_target": "medium",
+    "documents": "D01, D02",
+    "id": "q05",
+    "levers": "Calculate across documents; Scatter the pieces",
+    "origin": "claude",
+    "revision": "0",
+    "sketch": "h5",
+    "status": "draft",
+    "tags": "Cross-document join; Temporal alignment"
+  },
+  "question_id": "q05",
+  "revision": 0,
+  "schema": 2,
+  "sections": {
+    "answer": "53.5%",
+    "components": "- c1: 53.5%",
+    "evidence": "- D01 (L235, introduction) [c1]: \"the proportion of substandard dwellings in the private rented sector falling from 37.2% in 2010 to 21.0% in 2020\"\n- D01 (L259, Decent Homes Standard background) [c1]: \"the proportion of homes that do not meet the Standard has reduced from 39% in 2001 to 13% in 2020\"\n- D02 (L239, introduction) [c1]: \"In 2021, there were 380,000 (10%) non-decent social rented homes, down from 759,000 (20%) in 2010.\"",
+    "feedback log": "",
+    "lever checks": "- Family and target: hook h5, chosen by the user (\"try one of the three ideas\") after three rounds of quick tests came back too easy. A sector gap whose two endpoints draw on different documents: Doc 4 prints both private shares and the 2020 social share; only Doc 1 prints the 2010 social share. Asked as a relative shrink of a percentage-point gap. Target medium (user, 2026-10-08). Platform result pending.\n- Dependency plan: Doc 4 L235/L259: private 37.2% (2010) and 21.0% (2020); L259: social 13% (2020), next to social 39% (2001). Doc 1 L34/L239: social 20% (2010). Gaps 37.2 - 20 = 17.2 and 21.0 - 13 = 8.0; narrowing 9.2 points; 9.2 / 17.2 = 53.49% -> 53.5%.\n- Universe: not applicable (single value). Every social or private non-decency share in the bundle: social 39% (2001, Doc 4), 38% (2001, Doc 5), 20% (2010, Doc 1), 13% (2020, Doc 4), 10% (2021, Doc 1; and Doc 1 L247's \"published in July 2023\"), 10% (2023, Doc 5); private 37.2% (2010, Doc 4), 21.0% (2020, Doc 4), 21% (\"currently\", Doc 4 L924; 2023, Doc 5).\n- Necessity: D02 (Doc 1) is the only source of the 2010 social share (L34, L239); Docs 4 and 5 give social shares for 2001, 2020 and 2023 only. D01 (Doc 4) is the only source of the private 2010 and 2020 shares and the social 2020 share; Doc 5 gives 2023 only, Doc 1 none for private renting. Without Doc 1, interpolating Doc 4's 39% (2001) and 13% (2020) gives about 26.7% for 2010 and a 23.8% shrink; without Doc 4 nothing for private renting remains. Risk: a strong model may recall the English Housing Survey's 2010 social figure (20%) in the platform's document check.\n- Selected-lever checks: Calculate across documents: no document prints 17.2, 8.0, 9.2 or 53.5 for this gap (grep). Scatter the pieces: the 2010 endpoint needs Doc 1, the 2020 endpoint Doc 4.\n- Targeted failure modes: Failure mode 1 (Wrong year or edition: 10% social share for 2021 in Doc 1, or 2023 in Doc 5, taken as 2020) gives (17.2 - 11.0) / 17.2 = 36.0%. Failure mode 2 (Out-of-range period: Doc 4's 39% for 2001, printed in the same paragraph as the private 2010 figure, taken as the 2010 social share) gives a 2010 gap of -1.8 points, a widening of 9.8 points. Considered and not declared: answering 9.2 percentage points or dividing by the 2020 gap (115.0%), both excluded by the question's wording (\"By what percentage ... shrink\"). Python Decimal, 2026-10-08.\n- Calculation verification: Decimal: 37.2 - 20 = 17.2; 21.0 - 13 = 8.0; 17.2 - 8.0 = 9.2; 9.2 / 17.2 = 0.534883... -> 53.5% (half-up). Float evaluation of the reasoning's expressions: 17.200000000000003, 8.0, 9.2, 0.5348837... (within the form's float tolerance).\n- Semantic/ID/overview probes: the task-page overview lists Doc 4's \"37.2% substandard dwellings in 2010\", \"21.0% ... in 2020\" and \"13% social rented sector non-compliance in 2020\", and Doc 1's \"10% non-decent social rented homes, 2021\", not the 2010 social 20%. Shortest route: three figures from one Doc 4 paragraph, one from Doc 1, four operations.\n- Precision/readings: \"percentage point gap\" fixes the gap as private share minus social share in points; \"By what percentage ... shrink\" fixes a relative change against the 2010 gap. Doc 4's \"substandard dwellings\" (L235) and \"do not meet the Standard\" (L259) are the same measure as Doc 1's \"non-decent\" (failing the Decent Homes Standard). All inputs are printed shares, so the gold uses the printed precision; one decimal separates it from 36.0%.\n- Completeness: full corpus, no gaps (notes/intake.json).\n- Style/set review: 23 words, no em dashes. q01-q04 (dropped) used other inputs.\n- Warnings answered: pending preflight.",
+    "necessary documents": "- D01: Answer component\n- D02: Answer component",
+    "platform validation": "",
+    "question": "By what percentage did the percentage point gap between private and social rented non-decency shrink from 2010 to 2020, to one decimal place?",
+    "reasoning": "Step 1. Source fact (Doc 4, introduction): the proportion of substandard dwellings in the private rented sector fell from 37.2% in 2010 to 21.0% in 2020.\n\nStep 2. Source fact (Doc 4, background to the Decent Homes Standard): the proportion of social rented homes that do not meet the Standard fell from 39% in 2001 to 13% in 2020.\n\nStep 3. Source fact (Doc 1, introduction): in 2010, 759,000 social rented homes (20%) were non-decent.\n\nStep 4. Calculation (from Steps 1 and 3; Doc 4 and Doc 1), percentage-point gap in 2010: 37.2 - 20 = 17.2 percentage points.\n\nStep 5. Calculation (from Steps 1 and 2; Doc 4), percentage-point gap in 2020: 21.0 - 13 = 8 percentage points.\n\nStep 6. Calculation (from Steps 4 and 5; Doc 4 and Doc 1), narrowing of the gap: 17.2 - 8 = 9.2 percentage points.\n\nStep 7. Calculation (from Steps 4 and 6; Doc 4 and Doc 1), narrowing as a share of the 2010 gap: 9.2 / 17.2 = 53.5% (to one decimal place).",
+    "targeted failure modes": "### Failure mode 1\nTrap: Wrong year or edition\nHow a careless solver fails: Uses the wrong period or date\n\n### Failure mode 2\nTrap: Out-of-range period\nHow a careless solver fails: Uses the wrong period or date\n\nWhy these are traps: Doc 1's 10% social share is for 2021 and Doc 5's for 2023; using either for 2020 gives 36.0%. Doc 4 gives social non-decency for 2001 (39%), not 2010; using it makes the gap widen 9.8 points. Gold: gaps 17.2 and 8.0, shrink 53.5%."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "48cea5c5d5063443e4c08f3ae489234fbb16e9e8d6b68572e531bee335367479"
+}
