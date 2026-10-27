@@ -1,0 +1,74 @@
+{
+  "question": "Which guidance, if any, does the adopted due diligence directive require the Commission to issue where the articles of the Commission's original proposal had merely allowed it to? List the items in any order.",
+  "number_of_asks": 1,
+  "gold_answer": "Guidelines on fulfilling due diligence obligations, guidance on the fitness of industry or multi-stakeholder initiatives",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 3, article headed \"Guidelines\"): to support companies and Member State authorities on how companies should fulfil their due diligence obligations, the Commission \"shall issue guidelines\". This is a duty.\nStep 2. Source input (Doc 3, article headed \"Accompanying measures\"): the Commission \"shall issue guidance setting out fitness criteria and a methodology for companies to assess the fitness of industry and multi-stakeholder initiatives\". The next paragraph requires the same for \"the fitness of third-party verifiers\", with guidance on monitoring their verification. All of these are duties.\nStep 3. Source input (Doc 3, article headed \"Model contractual clauses\"): the Commission \"shall adopt guidance about voluntary model contractual clauses\". Also a duty. Steps 1 to 3 are all the guidance the adopted directive's articles require the Commission to issue.\nStep 4. Source input (Doc 1, article headed \"Guidelines\"): in the proposal the Commission \"may issue guidelines, including for specific sectors or specific adverse impacts\". That was a permission, so the guidelines qualify (first component).\nStep 5. Source input (Doc 1, article headed \"Accompanying measures\"): the Commission \"may issue guidance for assessing the fitness of industry schemes and multi-stakeholder initiatives\". That was a permission too, so this guidance qualifies (second component). The proposal's articles say nothing about guidance on third-party verifiers, so that guidance was not something the proposal had allowed and it does not qualify.\nStep 6. Source input (Doc 1, article headed \"Model contractual clauses\"): the proposal already said the Commission \"shall adopt guidance about voluntary model contract clauses\". It was a duty from the start, so it does not qualify.\nDecoy: the guidance on third-party verifiers sits in a sentence that mirrors the one on industry and multi-stakeholder initiatives, but the proposal has no such sentence. The guidance on model contractual clauses is required in both texts.\nStep 7. Final answer (Doc 1 and Doc 3): two items moved from a permission in the proposal's articles to a duty in the adopted directive: the guidelines on fulfilling due diligence obligations, and the guidance on the fitness of industry or multi-stakeholder initiatives.",
+  "answer_components": [
+    "Guidelines on fulfilling due diligence obligations",
+    "guidance on the fitness of industry or multi-stakeholder initiatives"
+  ],
+  "evidence": [
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "shall issue guidelines, including general guidelines and sector-specific guidelines or guidelines for specific adverse impacts"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "may issue guidelines, including for specific sectors or specific adverse impacts"
+    },
+    {
+      "document_number": 3,
+      "component_number": 2,
+      "quote": "The Commission, in collaboration with Member States, shall issue guidance setting out fitness criteria and a methodology for companies to assess the fitness of industry and multi-stakeholder initiatives."
+    },
+    {
+      "document_number": 1,
+      "component_number": 2,
+      "quote": "The Commission, in collaboration with Member States, may issue guidance for assessing the fitness of industry schemes and multi-stakeholder initiatives."
+    },
+    {
+      "document_number": 3,
+      "component_number": 2,
+      "quote": "shall issue guidance setting out fitness criteria and a methodology for companies to assess the fitness of third-party verifiers"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "shall adopt guidance about voluntary model contractual clauses"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "the Commission shall adopt guidance about voluntary model contract clauses"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Conditional filter"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Wrong members in a list"
+    }
+  ],
+  "why_these_are_traps": "Linking across documents: Doc 3's Accompanying measures article requires fitness guidance twice, for initiatives and for third-party verifiers; Doc 1 allows only the first. Listing Doc 3's guidance duties unchecked adds verifiers and model clauses, four items. Matching each to Doc 1's wording leaves the two."
+}
