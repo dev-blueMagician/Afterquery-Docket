@@ -3,43 +3,40 @@
 Replace this file at each phase boundary; keep it under 4,000 characters.
 It is working memory for resuming the bundle and is never submitted.
 
-- Goal and user constraints: user 2026-10-05 (after q04's Easy pass): "set target difficulty as at
-  least Medium [tier] and start work from the scratch again. This is for trial task, we have only
-  one attempt, once after reach result, you need to check carefully again." New work on this bundle
-  targets difficulty_target: medium (Medium or High pass; Easy no longer counts here).
-- Measured so far: q01/q02 too easy (quick test), q03 too easy (Low 5/5), q04 rev 2 Easy (Low
-  3/5, ambiguous wording) then rev 5 too easy (Low 5/5). Difficulty-check runs: 5 of 8 left.
-- q04 dropped 2026-10-06 (rev 5 Run 4 "Too easy", 3 of 5 quoted D01's "$5.2 billion" yet used
-  5,175). User: "find another, set difficulty_target to at least medium"; q05 cross-referenced.
+- Goal (user, 2026-10-08): "remove q01 ~ 07 and work again ... there is no slot for Easy Tier for
+  this bundle, we should target medium and high. do you best." Targets: difficulty_target medium
+  (a Medium or High pass). Standing rule: one removal probe per ticked document before any hand-over
+  or platform run (memory docket-removal-probe-required).
+- q01-q07 moved unchanged to archive/round1-q01-q07/ (README there lists each outcome). New
+  questions start at q08 so the old ids stay unambiguous in records and memory.
+- Platform page (2026-10-08): 4 of 8 difficulty runs left; slots Hard 0/2, Medium 0/3, Easy 0/1
+  ("In review: Easy 1"); 8 submissions left. Quick tests (one low-model attempt, "Survived" or "Too
+  easy") are separate from the runs; 2 of 10 used on 2026-10-06, then 4 in round 4, so about 4 left.
 - Source: complete capture AQ-00949_2026-10-06_0251.md; no gaps; local D01-D07 = platform Doc 1-7.
-- Round 4 (2026-10-05, fresh full re-read of D01, D03, D07 and the edition-unique parts of D02,
-  D04-D06; caller origin: claude). Structural findings:
-  - No forecast, outlook or guidance edition anywhere (series grep: none; D03 defers guidance to
-    after closing; D01's 2020 plan has no 2020 actuals). Every Medium/High pass so far (aq-00964 q01,
-    aq-00745 q09) used an event reported beside its own later outlook; that material is absent.
-  - No same-period figure is restated except the 2026 PRM fold-in. Every 2025 value repeats in D06
-    and D07; walks are rebuildable from later per-Boe tables; D07 explains the FCF definition change.
-  - Robustly unique facts: D01 (Dec 31, 2019 balances, 2020 plan), D03 (deal terms, dividend dates,
-    $4.08 rate), D07 (2Q26, H1 2026, June 30, 2026), D05 (Sep 30, 2025 PRM split). Encino-quarter
-    anchors (2Q25) are guessable from the series' 2Q25 Encino costs, so D03 fails the removal test
-    unless the anchor is a dividend date (4Q25, duplicated in D06/D07).
-  - Feasible mechanisms were already measured Easy or too easy here (q01-q04).
-- Round 4 sketches i07-i10 (ideas.md): user quick-tested all four, each "Survived — worth writing
-  up" (screenshot saved in q05's run results). Chosen: i07 (only sketch whose two documents both
-  survive the removal test; i09/i10 anchors are inferable or guessable).
-- q05 (i07 = platform draft 1; target medium). Rev 0 (6d615228...) reviewed revise / easy. User
-  chose to submit it anyway (2026-10-06). Form flagged rev 0 steps 1-2 ("Doc 1 doesn't mention
-  5,175", "Doc 7 doesn't mention 7,926": figures after a quoted label). Rev 1 (ba6b4f23...):
-  plain "current and long-term debt of 5,175"; A/B match, audit clear, closed-book misses;
-  review running. Form reaction to rev 1 pending from the user.
-- q06 rev 0 (from i09; target medium): YoY volume effect by EOG's bridge method, $0.94; D03 + D07;
-  tested_sha256 7adb1a8d.... A/B match, audit clear, closed-book misses (recalled May 30, 2025);
-  review revise / easy: Doc 3 removal risk high (date public and implied by 2Q25 Encino costs),
-  $0.95 via daily-rate volumes, q02-family bridge. Status checked.
-- User chose "stay here". Long shot q07 (i11; dividends declared over the four quarters after
-  the Oct 17, 2025 record-date dividend's declaration quarter -> $3.06, decoy $4.08) DROPPED:
-  A/B match, audit clear, but the closed-book run reached $3.06 from recall. The 1Q24->2Q26
-  bridge-method idea fails one-clear-answer (printed 46.73 vs derived 46.74 flips $0.72/$0.71).
-  Recommended stopping here; awaiting the user's decision.
-- Questions: q01-q04, q07 dropped; q05, q06 checked (rev 0, both revise: easy; other session).
-- Runtime: Claude Code (VS Code), Opus 5.5 max; fresh Agent subagents for checks.
+- Structural limits (rounds 1-5, re-confirmed in round 6): 2024 quarters repeat in D02/D04/D05, 2025
+  quarters in D06/D07; no outlook or restated figures (only the 2026 PRM fold-in and relabels).
+  Individually necessary facts: D01 (2019 balances, 2020 plan), D03 (deal terms; dates inferable from
+  the series' Encino costs), D05 (Sep 30, 2025 PRM split, Bapco), D06 (1Q26 Bahrain-only note), D07
+  (2Q26, June 30, 2026). The platform passed q04 on a D01 input (end-2019 debt), so D01 + D07 is the
+  best-proven pair. Lookup-plus-arithmetic designs measured Easy or Too easy here.
+- Round 6 (ideas.md): new family, reasoning on a leverage ratio, with D07's printed total
+  capitalization as the systematic shortcut.
+  - i12: additional net debt, equity fixed, to lift the June 30, 2026 net debt-to-total-cap ratio to
+    the end-2019 ratio from reported net debt and equity -> $1,615M (shortcut $1,410M; printed 13%
+    $1,742M; ratio rounded first $1,616M).
+  - i13 (sibling): signed total-debt change on the GAAP ratio -> -$306M (shortcut -$247M; 19% -$452M).
+  - i14: net debt rise Jun 30, 2025 ((980)) to Jun 30, 2026 (3,019) beyond D03's $3.5B debt plan ->
+    $499M (sign slip -$1,461M; borrowings route $527M).
+  - Screens (raw: runs/sketch-r6-a4/results/, runs/sketch-r6-b9/results/): each full-bundle solve
+    matched with high confidence; each closed-book missed (no June 2026 data; recalled the 2019 and
+    deal inputs exactly); each probe "not answerable" unforced, the gold forced from memory (p 0.6 /
+    0.6 / 0.75): a stated recall risk, not a probe failure.
+- User 2026-10-08: "prepare both" -> i12 = q08 (71912869...), i14 = q09 (3d35521f...), rev 0, status
+  checked, hand-overs notes/handover-q08.md and -q09.md. Both: A/B match, audit clear, closed-book
+  misses, probe without D07 misses, probe without D01/D03 "not answerable" but gold forced from
+  memory (p 0.5 / 0.65). Reviews: revise, difficulty easy (q08 rough guess Too easy ~45%, Easy ~40%,
+  Medium <=10%; q09 Easy or Too easy). Advice to user: quick-test both before any difficulty run;
+  "Too easy" = retire the design. i13 (sibling of q08) still held.
+- Runtime: Claude Code (VS Code), Opus 5.5 max; fresh Agent subagents for checks. Subagents see the
+  harness git status, which lists the archived runs' deleted file names (a probe can see that the
+  removed document's file exists; this makes local probes more conservative, not less).
