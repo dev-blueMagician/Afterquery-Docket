@@ -1,0 +1,69 @@
+{
+  "question": "From 1 April 2022, which paragraph of alpha's rules on transfer payments to other schemes cited which Pension Schemes Act 1993 subsection? Give them in that order.",
+  "number_of_asks": 2,
+  "gold_answer": "Regulation 142(4), section 95(2)",
+  "step_by_step_reasoning": "Step 1. Source fact (Doc 1, Annex E, draft regulation 5): under the heading \"Amendment of regulation 142 (transfer of payments made to other schemes or pension arrangements)\", the draft reads \"In regulation 142(4), for “95(2)” substitute “95(2A)”.\" So the paragraph of alpha's transfer-payment rule that cross-refers to the Pension Schemes Act 1993 is regulation 142(4), and before any change it cited section 95(2).\nStep 2. Source fact (Doc 1, paragraph 3.3): the change was proposed as an \"amendment to regulation 142 to correct a cross reference to the wrong subsection\" of the Pension Schemes Act 1993.\nStep 3. Source fact (Doc 1, Annex E, draft regulation 1(2)): \"These Regulations come into force on 1st April 2022\". Had draft regulation 5 been made, regulation 142(4) would have cited the substitute subsection from that date.\nStep 4. Source fact (Doc 2, Cabinet Office response on the technical amendments): \"Cabinet Office has decided not to proceed with the amendment of regulation 142 to update a cross-referencing error\". The 2022 amendments therefore left regulation 142(4) unchanged.\nStep 5. Conclusion (Doc 1 and Doc 2): from 1 April 2022 regulation 142(4) still cited section 95(2) of the Pension Schemes Act 1993.\nDecoy: 95(2A), the substitute subsection in Doc 1's draft regulation 5, never took effect, because Doc 2 records that the amendment of regulation 142 was not made.",
+  "answer_components": [
+    "Regulation 142(4)",
+    "Section 95(2)"
+  ],
+  "evidence": [
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "Amendment of regulation 142 (transfer of payments made to other schemes or pension arrangements)"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "In regulation 142(4), for “95(2)” substitute “95(2A)”."
+    },
+    {
+      "document_number": 1,
+      "component_number": 2,
+      "quote": "In regulation 142(4), for “95(2)” substitute “95(2A)”."
+    },
+    {
+      "document_number": 1,
+      "component_number": 2,
+      "quote": "These Regulations come into force on 1st April 2022"
+    },
+    {
+      "document_number": 1,
+      "component_number": 2,
+      "quote": "amendment to regulation 142 to correct a cross reference to the wrong subsection"
+    },
+    {
+      "document_number": 2,
+      "component_number": 2,
+      "quote": "Cabinet Office has decided not to proceed with the amendment of regulation 142"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Superseded date or version",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    }
+  ],
+  "why_these_are_traps": "Superseded date or version: Doc 1's draft regulation 5 would change regulation 142(4)'s cross-reference from 95(2) to 95(2A) from 1 April 2022. A careless solver assumes the draft took effect and answers section 95(2A). Doc 2 paragraph 4.61 says the amendment was not made, so 142(4) still cited 95(2)."
+}

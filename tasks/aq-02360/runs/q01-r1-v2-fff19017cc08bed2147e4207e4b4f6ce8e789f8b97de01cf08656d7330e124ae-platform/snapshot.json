@@ -1,0 +1,50 @@
+{
+  "bundle": "aq-02360",
+  "corpus_sha256": {
+    "docs/Civil-Service-Pension-Scheme-2015-remedy-and-civil-service-2.txt": "77077ea6f8ea88f449c0b0cc29c25ed9be40e75e37fc5bc12c5ad011cbfd7653",
+    "docs/Civil-Service-Pension-Scheme-2015-remedy-and-civil-service.txt": "5d065d3a55fb28bc30ed24ba73f3d29886a46685d3990fe500b82f5cbabfc94c",
+    "docs/Civil-Service-Pensions-2015-Remedy-McCloud-consultation.txt": "a29c7636e381d669d1b806244270af39596192eb53ff97b0414e8abe0919a325",
+    "docs/Civil-Service-Pensions-2015-Remedy-consultation-response.txt": "7784dcaeed591256458468493c5b74ce2341ef09e18d9f54a55d0f1c5282aa72",
+    "docs/Consultation-on-reform-of-the-Civil-Service-Compensation.txt": "19937e7bfaea3ab81b3408d2d572636b2604ac29a603b1ce543f6dacbf1b4e58",
+    "text/D01.txt": "6be1416fd849264289e92b5dedee7f43d2945f7883eb6c855b7b07c637f2ebe0",
+    "text/D02.txt": "cb73b0912bee590e31eeba791e1fc0d97cff00d764b0bb73acab52ab3b23a954",
+    "text/D03.txt": "4830a14da3ddb9bb3b2e65fac5c53bddceb8f05571c4b2817040d4fc5c6ad5a1",
+    "text/D04.txt": "3a72e0037df6ec80a4943f8ac6857fa1bf5c3fab706ac8499b6fdab218a7383d",
+    "text/D05.txt": "d1917ebc5f489ecb2803c593f24d694390169e45ed890d61d464d859e8141df9",
+    "text/manifest.json": "312e2de1658e76874f7ae10986d7f67f9815bd61c3f8f67b1ff686b2828e1c6e"
+  },
+  "difficulty_target": "medium",
+  "form_sha256": "581d610731feb503297c37e1bf8ff81547a9e376371f1b45333790a1cb9b4f18",
+  "local_checks": false,
+  "metadata": {
+    "answer_type": "name",
+    "asks": "2",
+    "difficulty_target": "medium",
+    "documents": "D02, D01",
+    "id": "q01",
+    "levers": "Same series, right edition; Scatter the pieces",
+    "origin": "claude",
+    "revision": "1",
+    "sketch": "i01",
+    "status": "draft",
+    "tags": "Cross-document join; Temporal alignment"
+  },
+  "question_id": "q01",
+  "revision": 1,
+  "schema": 2,
+  "sections": {
+    "answer": "Regulation 142(4), section 95(2)",
+    "components": "- c1: Regulation 142(4)\n- c2: Section 95(2)",
+    "evidence": "- D02 (Annex E, draft regulation 5 heading) [c1]: \"Amendment of regulation 142 (transfer of payments made to other schemes or pension arrangements)\"\n- D02 (Annex E, draft regulation 5) [c1, c2]: \"In regulation 142(4), for “95(2)” substitute “95(2A)”.\"\n- D02 (Annex E, draft regulation 1(2)) [c2]: \"These Regulations come into force on 1st April 2022\"\n- D02 (paragraph 3.3) [c2]: \"amendment to regulation 142 to correct a cross reference to the wrong subsection\"\n- D01 (paragraph 4.61) [c2]: \"Cabinet Office has decided not to proceed with the amendment of regulation 142\"",
+    "feedback log": "- 2026-10-09 | sketch i01 (same question and answer as rev 0) | quick test | user report: \"both of i01 and i02 survived quick test\" (no screenshot; low-model answer not captured).\n- 2026-10-09 | rev 0 (tested_sha256 6f8b3e9c5a7123529e1e2c96ce48907bf08717afe923b5d80890f9f3f9406427; binding by the user's context, the panel shows no question text) | form checks | raw: notes/platform-feedback/q01-rev0-checks-2026-10-09.png | user: \"two checks failed\". \"Needs the documents Failed · 8 min ago\" \"Answerable without the documents: This question is answerable without the documents. Ask something that can only be worked out from them.\" \"No single passage gives the answer Warning · 8 min ago · advisory\" \"Doc 1 on its own may give enough to compute the answer.\" Passed: Question in your own words, Reasoning in your own words, One defensible answer, Needs two or more documents, Reasoning reaches the answer, Evidence supports its component, Question does not hint the answer, Left-out items do not qualify, Answer matches a stated figure, Each description fits one thing, Answer covers every ask, Question mix, List contract, Which period. Fix: rev 1 adds the paragraph to the gold.",
+    "lever checks": "- Family and target: superseded draft, untied (the question names neither regulation 142 nor the consultation, and its date is the draft's own commencement date); target medium. Rev 0 quick test survived (one low-model attempt); rev 0 form checks then failed \"Needs the documents\" (closed-book answer reached \"Section 95(2)\", the Act's standard transfer-right subsection). Rev 1 is the one focused repair: the gold adds the paragraph, regulation 142(4), which no solver can name without Doc 1. Rev 1 not yet quick-tested; difficulty pending.\n- Dependency plan: Doc 1 draft regulation 5 identifies the paragraph (regulation 142(4)) and its existing cross-reference 95(2); Doc 1 regulation 1(2) dates the draft's commencement (1 April 2022); Doc 2 §4.61 records that the regulation 142 amendment was not made. Answer: regulation 142(4), section 95(2).\n- Universe: every printing of a Pension Schemes Act 1993 cross-reference or regulation 142: D02 L308-310 (§3.3), L1219-1220 (draft regulation 5); D01 L583-585 (§4.55 list), L619 (§4.61). Docs 3-5 have none (grep \"95(\", \"142\", \"cross.refer\", \"Pension Schemes Act 1993\").\n- Necessity: Doc 1 -> only printing of \"142(4)\", \"95(2)\", \"95(2A)\" and regulation 142's heading (D02 L1219-1220); Doc 2 names only \"regulation 142\" and \"the wrong subsection\" (D01 L583-585, L619) -> without Doc 1 neither the paragraph number nor the subsection is available. Doc 2 -> only statement that the amendment was dropped (D01 L619); without it Doc 1's draft, in force from 1 April 2022, gives 95(2A). Rev 0's form check \"Needs two or more documents\" passed; its advisory \"No single passage gives the answer\" warned \"Doc 1 on its own may give enough to compute the answer\", read here as the closed-book prior (95(2)) plus Doc 1's pre-amendment text, which states the substitution and its commencement; Doc 2 alone records that the substitution was not made.\n- Selected-lever checks: Same series, right edition / superseded version: decoy 95(2A), from Doc 1 draft regulation 5 alone, fails \"cited ... from 1 April 2022\" because Doc 2 §4.61 drops the amendment. Scatter the pieces: paragraph and subsection in Doc 1, the decision in Doc 2.\n- Targeted failure modes: Mode 1 wrong answer \"regulation 142(4), section 95(2A)\" (D02 L1220 with the commencement at L1185, taken as made). Considered and not declared: Linking across documents (no distinct wrong answer beyond 95(2A)); Wrong year or edition (no other edition prints another subsection).\n- Calculation verification: not applicable (identifiers). Accepted forms: \"regulation 142(4)\" or \"paragraph (4) of regulation 142\"; \"section 95(2)\", \"95(2)\" or \"subsection (2) of section 95\".\n- Semantic/ID/overview probes: \"regulation 142\" finds D02 L308/L1219/L1220 and D01 L583/L619; \"Pension Schemes Act\" finds the two lists and draft regulation 5; \"transfer\" in Docs 3-4 finds club/bulk transfer policy with no statutory cross-reference. The bundle overview does not mention regulation 142. Shortest complete route: draft regulation 5 (Doc 1) plus §4.61 (Doc 2).\n- Precision/readings: \"from 1 April 2022\" pins the state the 2022 amendments produced; Doc 2's \"will consider further and make an amendment if appropriate\" is a possible later change outside the bundle. \"alpha's rules\": the 2014 Regulations are alpha's (Doc 2 §4.55 \"bring alpha provisions into line\", §4.59 \"as the alpha rules currently do\"). \"paragraph\": regulation 142(4) is paragraph (4) of regulation 142.\n- Completeness: no source gaps (capture complete; notes/intake.json).\n- Style/set review: 22 words; own wording. Two linked asks (the paragraph and what it cited), answered in the question's order. Sibling q02 shares no document, fact or answer path. Form emulator (aq-02157 form_check_v10.py) to be rerun on rev 1; \"95\" is printed only deep in Doc 1 (character 71,393).\n- Warnings answered: see the floor output at preflight.",
+    "necessary documents": "",
+    "platform validation": "",
+    "question": "From 1 April 2022, which paragraph of alpha's rules on transfer payments to other schemes cited which Pension Schemes Act 1993 subsection?",
+    "reasoning": "Step 1. Source fact (Doc 1, Annex E, draft regulation 5): under the heading \"Amendment of regulation 142 (transfer of payments made to other schemes or pension arrangements)\", the draft reads \"In regulation 142(4), for “95(2)” substitute “95(2A)”.\" So the paragraph of alpha's transfer-payment rule that cross-refers to the Pension Schemes Act 1993 is regulation 142(4), and before any change it cited section 95(2).\nStep 2. Source fact (Doc 1, paragraph 3.3): the change was proposed as an \"amendment to regulation 142 to correct a cross reference to the wrong subsection\" of the Pension Schemes Act 1993.\nStep 3. Source fact (Doc 1, Annex E, draft regulation 1(2)): \"These Regulations come into force on 1st April 2022\". Had draft regulation 5 been made, regulation 142(4) would have cited the substitute subsection from that date.\nStep 4. Source fact (Doc 2, Cabinet Office response on the technical amendments): \"Cabinet Office has decided not to proceed with the amendment of regulation 142 to update a cross-referencing error\". The 2022 amendments therefore left regulation 142(4) unchanged.\nStep 5. Conclusion (Doc 1 and Doc 2): from 1 April 2022 regulation 142(4) still cited section 95(2) of the Pension Schemes Act 1993.\nDecoy: 95(2A), the substitute subsection in Doc 1's draft regulation 5, never took effect, because Doc 2 records that the amendment of regulation 142 was not made.",
+    "targeted failure modes": "### Failure mode 1\nTrap: Superseded date or version\nHow a careless solver fails: Misapplies a rule or premise\n\nWhy these are traps: Superseded date or version: Doc 1's draft regulation 5 would change regulation 142(4)'s cross-reference from 95(2) to 95(2A) from 1 April 2022. A careless solver assumes the draft took effect and answers section 95(2A). Doc 2 paragraph 4.61 says the amendment was not made, so 142(4) still cited 95(2)."
+  },
+  "source_gaps": [],
+  "source_gaps_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "tested_sha256": "fff19017cc08bed2147e4207e4b4f6ce8e789f8b97de01cf08656d7330e124ae"
+}
