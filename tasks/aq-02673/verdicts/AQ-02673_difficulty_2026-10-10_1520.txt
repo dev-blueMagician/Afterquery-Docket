@@ -1,0 +1,2080 @@
+AQ-02673 · Commercial Fishing Quota Regulations — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-02673
+Saved: 2026-10-10 15:20 (local time)
+Bundle: Commercial Fishing Quota Regulations · Public policy · 7 documents · 111,862 prompt tokens
+Attempts read: 16
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+9 of 10 runs left · 17 of 50 runs used in the last 24 h (all tasks)
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too hard.
+
+Too hard
+
+None of the solvers reached your answer. Check that the question is clear and that the documents support your answer, then run the check again.
+
+- Low model: 0 of 5 attempts right
+- Medium model: 0 of 5 attempts right
+- High model: 0 of 5 attempts right
+
+Ready when 1–3 attempts at a level are right, out of up to 5. A level can settle early, for example at 1 right out of 3.
+
+What to change: Make it solvable
+--------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Reword to: "Before any underharvest or overharvest adjustment, how many more metric tons was the United States' baseline quota for Atlantic bluefin tuna in 2026 than in 2025, to two decimals?" This points solvers to the baseline row of Table 5 in Document 6. Why: The phrase "total allowable catch" in the question invites confusion between the ICCAT western Atlantic TAC (3,081.6 mt), the U.S. baseline quota, and the U.S. total quota including the pelagic longline bycatch set-aside. The documents use "quota" for the U.S. amounts and "TAC" for the stock-wide catch; several attempts quoted the TAC and the 49-percent share language in Document 3 while working toward an answer. The question should name the specific U.S. quota measure it wants. Doc 3 Doc 6
+
+This question may be too vague: several solvers agreed on an answer that is not your gold "168.84 mt". The solvers answered "193.84", "1,509.98 − 1,316.14 = **193.84 metric tons**", "So the United States was allocated **193.84 metric tons** more for 2026 than for 2025.". Tighten the question so only one answer fits, or check the gold.
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too hard, so the gate does not pass.
+
+The gate reads Run 1 (Oct 10, 2026, 3:09 PM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+1 run
+
+------------------------------------------------------------------------
+Run 1 · Too hard · Result the gate uses
+Oct 10, 2026, 3:09 PM · Version d599f9 (current) · Low 0/5 · Medium 0/5 · High 0/5
+------------------------------------------------------------------------
+
+What changed before this run: first run
+
+Solver summary: Run 1 · Too hard · 0 of 15 right
+No solver attempt got it. 5 of 15 gave the same wrong answer: “193.84”. Check that your answer and your evidence agree.
+
+7 wrong attempts quoted the same passage: Doc 3 (“In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,08…”).
+
+Your answer: 168.84 mt
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: —
+
+Final answer: 69.31 | Your answer (gold): 168.84 mt
+
+Full answer
+-----------
+
+69.31
+
+Reasoning
+---------
+
+We need answer: Before any underharvest or overharvest adjustment, how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025, to two decimals?
+
+Need knowledge of US allocation of western Atlantic bluefin tuna TAC for 2025 and 2026. Likely from ICCAT recommendations implemented in US regulations. Need determine base allocations before adjustments.
+
+We need recall or derive the total allowable catch allocations for US in western Atlantic bluefin tuna for 2025 and 2026.
+
+Let's recall ICCAT recommendations for western Atlantic bluefin tuna stock. The total TAC for West Atlantic is maybe 2,707.34 mt? Or 3,000? Let's recall recent ICCAT 2024? Actually in 2022 ICCAT adopted Recommendation 2022-02? Or 2021? Let's think.
+
+Western Atlantic bluefin tuna TAC was set at 2,726 mt for 2023? Hmm need correct figures.
+
+But specifically US allocation for 2025 and 2026. Maybe in the US final rule for 2025 Atlantic highly migratory species? Or 2024? Let's recall US quota for bluefin tuna in western Atlantic (Gulf of Mexico and Atlantic). The US gets a share of the western Atlantic TAC. In recent years US quota was around 1,316.7 mt? Or 1,247.39? Let's recall precisely.
+
+We need the difference in allocated TAC for US between 2026 and 2025 before adjustments.
+
+Possibly the US base quota for 2025 is 1,180.01 mt? Or 764.5? Let's systematically recall.
+
+ICCAT western stock TAC: For 2023-2025 maybe 2,707.34 mt annually? Or was it 2,726 mt? Let's check mental: In 2017 ICCAT set TAC for eastern and western stocks. Western TAC was 2,350 mt for 2018-2020, then increased? In 2021 recommendation 2021-06? Actually in 2021 ICCAT adopted new management measures for eastern and western bluefin tuna. The western TAC was set at 2,726 mt for 2023? Let's recall news in 2021: ICCAT agreed to maintain eastern TAC at 36,000 mt for 2023-2025, and western TAC at 2,726 mt for 2023? Or maybe 2,350?
+
+Wait there was a 2022 meeting where they kept western TAC at 2,726 mt for 2023? Or increased?
+
+Then in 2024 ICCAT meeting (November 2024 in Cyprus?) they adopted new recommendations for 2025-2034? Actually in November 2024, ICCAT adopted Recommendation 2024-06? Or 2024-07? Let's recall news headlines in late 2024: ICCAT agreed to increase eastern Atlantic and Mediterranean bluefin tuna TAC to 40,570 mt in 2025, up from 40,570? Wait need correct.
+
+Let's recall from news in November 2024: ICCAT agreed on new quotas for bluefin tuna. For the eastern stock, TAC will be 40,570 tons in 2025, 2026, 2027, then 43,155 tons in 2028-2030? Or something like that. For the western stock, TAC was set at 3,085.88 mt? Or 3,100?
+
+Actually I think in 2024 ICCAT increased the western Atlantic bluefin tuna TAC from 2,726 mt to 3,085.88 t? Or maybe 3,100? Let's check mental consistency: In 2024, scientists said western stock was rebuilt and could support higher catch. So ICCAT might have raised western TAC to 3,107? Hmm.
+
+But the question asks "Before any underharvest or overharvest adjustment, how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025..."
+
+This sounds like in US regulations they specify annual allocations for 2025 and 2026 that differ, perhaps because ICCAT TAC changed between years? Wait if ICCAT set multi-year TAC constant, then US allocation might be constant except for adjustments? But they ask how many more for 2026 than 2025, implying the base allocation numbers are different.
+
+Let's recall a specific US rule published maybe in 2024 setting quotas for 2025? Or maybe in December 2024 NOAA published final rule adjusting quotas for 2025? Or in 2025 for 2026?
+
+We need be precise to two decimal places, so likely the allocations have decimal values like 1,180.00 vs 1,316.67? Difference maybe 92.52?
+
+Let's recall US share of western TAC: The US is allocated 54.02%? Or 53.2%? Actually the US gets about 54% of the western TAC? Let's check mental: The western TAC is divided among US, Canada, and maybe others (Mexico, UK?). The US allocation might be around 1,316.7 mt out of 2,726, which is about 48.3%. Or maybe US gets 1,247.39?
+
+Wait there is a known US quota for Atlantic bluefin: In recent years, the US quota for the western Atlantic was 1,247.39 mt (about 2,745,000 lb). Yes, that sounds familiar! The US quota was 1,247.39 metric tons (approximately 2.75 million pounds). This was divided among gear categories: General category, Harpoon, Trap, etc. For example in 2023 the US quota was 1,247.39 mt. Yes, that sounds right.
+
+But then in 2024 maybe the quota was adjusted? Actually I recall in 2023 the US quota was 1,316.67 mt? Or 1,247.39? Let's think more.
+
+There was a 2025 quota notice? In January 2024, NOAA announced 2024 quota allocations? Or in 2023?
+
+Let's recall specific numbers: In 2023, the US Atlantic bluefin tuna quota was 1,247.39 mt, with 1,180.0 mt available? Wait there might be base quota of 1,247.39 mt, then adjustments for previous years.
+
+Specifically, in 2024, NOAA might have said the 2024 base quota is 1,316.7 mt? Or was that for 2025?
+
+Let's search mental database for "1,316.7 mt bluefin tuna" - I think I've seen 1,316.7 metric tons being the US quota for 2025? Or maybe 1,316.7 is the US allocation of the eastern stock? No, eastern is huge.
+
+Actually, there's also the "Reserve" quota of 170 mt, etc.
+
+But the question mentions "Before any underharvest or overharvest adjustment, how many more metric tons... was the United States allocated for 2026 than for 2025" This sounds like there are two years with different base allocations specified in a table. The adjustments (underharvest/overharvest) are applied after the base allocation.
+
+This sounds like a specific regulatory table listing allocations for 2025, 2026, 2027, etc., with adjustments carried over.
+
+We need identify the base allocation for 2025 and 2026.
+
+Perhaps ICCAT in 2024 set western TAC at 3,085.88 mt for 2025, and then maybe 3,100 for 2026? But US share might change?
+
+Wait, the phrase "western Atlantic bluefin tuna total allowable catch was the United States allocated" - this sounds like US gets a specific TAC allocation each year. The allocations might be listed in a federal register notice.
+
+Let's recall a specific federal register document: Maybe "Atlantic Highly Migratory Species; Atlantic Bluefin Tuna Quotas" published around Dec 2024 or Jan 2025. In that rule, they might have specified US quotas for 2025 through 2027 based on ICCAT Recommendation 2024-06?
+
+Actually, in November 2024 ICCAT adopted Recommendation 2024-06? Let's recall the content: For western bluefin, TAC might be 3,107.5 mt? Or 3,100?
+
+But also there might be different allocations for US and Canada. Let's try to recall news coverage in Nov 2024: "ICCAT sets 2025-2034 quotas for bluefin tuna and swordfish". For western Atlantic bluefin, the TAC was kept at 2,726 mt? Or increased?
+
+Let's recall that in 2023 the western stock assessment was updated and showed stock was not overfished, but biomass was low. The TAC for 2023-2025 was 2,726 mt. Then in 2024 they updated? Actually there was a stock assessment in 2023 that led to maintaining TAC? Or in 2024?
+
+Let's recall the news in November 2022: ICCAT kept western TAC at 2,726 mt for 2023, with US getting 1,247.39 mt? Or maybe US got 1,316.7?
+
+Wait, there's also a specific figure: The US allocation is 54.02 percent of 2,726? Let's calculate: 54.02% of 2,726 = 1,472.5, not matching 1,247. So not that.
+
+Maybe US gets 1,247.39 mt, which divided by 2,726 equals about 45.75%. So US share might be around 45.75%? Or maybe Canada gets the rest except small shares.
+
+But wait, in 2024 ICCAT might have changed the allocation scheme?
+
+Actually, I think I need to be more precise. Let's recall the US regulations at 50 CFR 635.27? That lists quota allocations. The base quota for the US might be 1,316.7 mt for 2025? Hmm.
+
+Let's recall that in January 2025, NOAA announced the 2025 Atlantic bluefin tuna quota allocations. The notice might have said something like: "The 2025 U.S. quota is 1,316.7 mt, of which 1,180.0 is for domestic..." No, need correct.
+
+But also the question specifically asks "Before any underharvest or overharvest adjustment, how many more metric tons... for 2026 than for 2025..." This sounds like in the rule there is a table with columns for 2025, 2026, 2027, etc., showing the "Initial quota" or "Base allocation". The difference might be constant? Or maybe 2026 gets an increase because of a phased-in TAC increase.
+
+Let's recall that in Nov 2024 ICCAT agreed on a multi-year TAC for western stock: maybe 2,726 mt for 2023-2025, then 3,107.5 mt for 2026-2028? Or maybe it steps up.
+
+If the western TAC steps up in 2026, then the US allocation also steps up.
+
+Specifically, maybe ICCAT Recommendation 2024-06 established TAC of 2,726 mt for 2025 and 3,085.88 mt for 2026? Or constant?
+
+But wait, the question asks "how many more... was the United States allocated for 2026 than for 2025" - if the TAC jumps, then US allocation jumps proportionally.
+
+We need the exact difference in metric tons, to two decimal places. So we need both numbers precisely.
+
+Let's recall that in Dec 2023 or Jan 2024, NOAA published final rule "Atlantic Highly Migratory Species; 2024 Atlantic Bluefin Tuna Quotas" which might have included allocations for 2024, 2025, and 2026?
+
+Actually, there was a proposed rule in 2023 for 2024 quotas. Then in 2024 for 2025 quotas.
+
+But also there might be a 2024 ICCAT recommendation that sets allocations for 2025-2030.
+
+Let's recall news from Nov 2028? No.
+
+Let's try to recall specific figures mentioned in news articles after Nov 2024 ICCAT meeting. Many news focused on eastern stock increase to 40,570 mt in 2025, then 43,155 mt in 2028. For the western stock, I think they agreed on TAC of 3,100 mt? Or maybe kept at 2,726?
+
+Actually I recall seeing that the western stock TAC was increased to 3,085.88 metric tons? Or was that the US allocation?
+
+Wait, there's also the figure 3,085.88 - that sounds like a specific allocation calculated with some percentage. For example, if the TAC is 3,000 and US gets some share yielding 3,085? No that'd be more than TAC.
+
+But maybe the US allocation for 2029 is 3,085.88? Unlikely.
+
+Let's systematically think about ICCAT allocations for western Atlantic bluefin. The contracting parties with quota are US, Canada, and maybe UK (Bermuda?), Japan? Actually Japan gets a small quota in West? Let's check mental: In the west, the main countries are US, Canada, and Mexico? But Mexico is not ICCAT member? Actually Mexico is a cooperating non-member. The allocations are specified in ICCAT recommendations.
+
+In Recommendation 2016-06? Or 2017-04? There was an allocation table for 2015-2017: US 1,000 mt, Canada 500 mt, etc. But then updated.
+
+Let's recall in 2028? Not clear.
+
+But maybe easier: The question might come from a specific exam or quiz referencing a table in a document. The answer likely involves subtracting two numbers that are visible in a table. We need determine those two numbers.
+
+The phrase "Before any underharvest or overharvest adjustment" is used in regulations to define the "base quota" versus "adjusted quota". For example, in the US notice they might list "2025 Base quota: X mt; Underharvest adjustment: Y mt; Adjusted quota: Z mt". Similarly for 2026.
+
+Thus we need the base quota values for 2025 and 2026.
+
+Let's recall a specific notice: In Dec 2024, NOAA announced 2025 quotas. The notice might say: "The 2025 U.S. quota is 1,316.7 mt... However, accounting for prior year adjustments..." Or maybe "The base quota for 2025 is 1,180.12 mt"?
+
+Wait, I think there's a specific figure for 2025: The US was allocated 1,247.39 mt. But then there might be adjustments of -34.5? Hmm.
+
+Actually, in 2023, the US quota was 1,247.39 mt, but then they had an underharvest of 170 mt carried over? Or overharvest deducted?
+
+Let's recall in Jan 2023, NOAA announced 2023 quota allocations. The base quota might have been 1,247.39 mt, but then they added 2021 underharvest of 217 mt? Or subtracted?
+
+But we need 2025 vs 2026.
+
+Perhaps in the Nov 2024 ICCAT recommendation, they set US allocations specifically for each year 2025-2034, with values gradually increasing?
+
+Let's recall that in 2024, ICCAT adopted a 10-year plan for western bluefin? Actually they adopted a management procedure (MP) that sets TAC based on stock status, with TACs predetermined for 2025-2034? Yes! This sounds right. In 2022 they adopted a management procedure (MP) for western Atlantic bluefin tuna that specifies TACs for 2023 onward based on stock indicators. But then in 2024 they might have updated the MP?
+
+Wait, there is a "western Atlantic bluefin tuna management procedure" adopted in 2021? Let's recall: In 2024, ICCAT adopted a new management procedure for western stock? Or was that for eastern?
+
+Actually, in Nov 2022 ICCAT adopted a management procedure for eastern stock, with TACs of 40,570 t for 2023-2025, etc. For the western stock, they adopted a management procedure in 2021? Or in 2023?
+
+Let's check mental: In 2023, ICCAT adopted Recommendation 2023-06? Or 2022-10?
+
+But regardless, the US allocations depend on ICCAT TAC multiplied by US share.
+
+However, the question asks specifically "Before any underharvest or overharvest adjustment, how many more metric tons... was the US allocated for 2026 than for 2025..."
+
+This sounds like in the US implementing regulations, they list for each year the "quota" which is the ICCAT allocation, then apply adjustments.
+
+We need the difference.
+
+Let's recall a specific federal register entry from maybe Dec 2023 titled "Atlantic Highly Migratory Species; Atlantic Bluefin Tuna Fisheries; Quota Transfer and Closure". No, that's different.
+
+But there was also a notice in March 2025? Hmm.
+
+Actually, I think the answer might be 92.52 metric tons? Or 52.40? Let's try to derive from potential TAC values.
+
+If TAC for 2025 is 2,726 mt and for 2026 is 3,085.88? No that'd be difference of about 359.88, multiplied by US share ~45% gives ~162.
+
+But we need "how many more... was the United States allocated" - that'd be the difference in US allocations, not TAC.
+
+If US share is constant, then US allocation difference = share × TAC difference.
+
+But we need precise numbers with decimals, maybe like 1,247.39 vs 1,400.91? Difference about 153.52?
+
+Let's try to recall actual US allocation figures in recent notices. In Jan 2024, NOAA might have said: "The 2024 U.S. quota is 1,316.7 mt, including 1,180.0 mt base..." Or "The 2024 quota is 1,247.39 mt"?
+
+Let's recall that in 2022, the US quota was 1,247.39 mt. In 2023, also 1,247.39? Or did it increase?
+
+Actually, I think the US base quota was 1,247.39 mt for several years (2018-2022?). Then in 2023 it might have increased to 1,316.7 mt? Let's check mental consistency: In 2027 maybe it's 1,316.7?
+
+Wait, I recall seeing a number 1,316.7 in the context of "General category" quota being 1,180 mt? No, 1,180 is close to 1,247? Not clear.
+
+But there's also the figure 1,180.0 mt being the "quota for domestic Atlantic fisheries" after reserving 170 mt for longline in Gulf of Mexico? Actually, yes! The US divides its quota: Reserve 170 mt for longline in Gulf of Mexico, and the rest (around 1,077) for other gears? Or maybe 230 mt?
+
+Let's recall specific allocation by gear for 2024:
+- General category: 1,180.0 mt? Or 660 mt?
+- Harpoon: 77.0 mt?
+- Trap: 21.0 mt?
+- Longline (North and South): 232.8 mt?
+- Purse Seine: 223.7 mt?
+- Reserve: 306.8 mt?
+
+Actually, let's recall the 2023 allocations:
+General category (Jan-Mar, etc.): maybe 592.8 mt?
+Harpoon: 77 mt?
+Trap: 22.6 mt?
+Longline: 284.8 mt?
+Purse seine: 303.8 mt?
+Reserve: 207.3 mt?
+
+That adds up: 592.8 + 77 + 22.6 + 284.8 + 303.8 + 207.3 = about 1,488.3, not matching.
+
+But wait there's also the "dead discard allowance"?
+
+This path is too murky.
+
+However, the question asks specifically "the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025" - maybe they ask about the TAC allocations listed in a table in a specific document, like "Table 1—U.S. Western Atlantic Bluefin Tuna Quotas". The values might be 1,247.39 mt for 2025 and 1,316.70 mt for 2026, difference 69.31? Or 1,180.01 vs 1,247.39?
+
+But we need "to two decimals" - this suggests both values have two decimal places, and we subtract.
+
+Let's recall that in 2024 ICCAT Recommendation 2024-06 might have specified US allocations exactly: For 2025: 1,180.12 mt? For 2026: 1,274.14? Difference?
+
+Actually, maybe the allocations are calculated precisely using percentages with two decimal places.
+
+Let's recall the US share formula: The US receives 54.02 percent of the TAC minus Canadian allocations? Or maybe the US gets 1,247.39 mt, which is exactly 54.02% of 2,308? No.
+
+Wait, there's a specific ICCAT recommendation that lists allocations in metric tons with two decimal places. For example, Recommendation 2022-02 might have a table:
+USA: 1,247.39 mt
+Canada: 503.57 mt
+Mexico: ? No.
+
+But actually I think in Recommendation 2017-04? Let's not overanalyze.
+
+But we need only the difference for US between 2026 and 2025.
+
+Perhaps in the 2024 ICCAT recommendation, they specified TAC and allocations for each year from 2025 to 2034. For the western stock, TAC might be constant at 3,085.88 mt? Or maybe increasing?
+
+Wait, I just recalled seeing a figure "3,085.88 t" in news about ICCAT 2024: "The TAC for western Atlantic bluefin tuna will be 3,100 t, divided among US (1,647.06 t?), Canada (503.57 t?), etc." Hmm, 1,647.06 sounds plausible as US share of 3,100 (around 53%).
+
+But was there a specific figure 3,085.88? That sounds like 3,085.88 mt = about 6.8 million pounds. Actually, in pounds, the US quota might be around 3,000,000 lb, which is about 1,360 mt. So 1,647 mt is about 3.6 million lb.
+
+Let's recall that in recent years, the US quota was about 2.75 million lb (around 1,247 mt). So if TAC increased, US quota might go up to about 3.5 million lb (around 1,587 mt).
+
+But we need precise metric ton figures.
+
+Actually, I think in Dec 2024, NOAA published a notice with proposed quotas for 2025-2027. Let's try to recall the content: Maybe they said "US quota for 2025 is 1,316.7 mt, for 2026 is 1,316.7 mt, for 2027..." No, that'd be constant.
+
+But the question says 2026 is more than 2025, so not constant.
+
+Let's recall that in Nov 2024, ICCAT agreed on TAC for western stock of 2,726 mt for 2025, and then 3,100 mt for 2026? Or maybe 2,726 for 2025 and 2026?
+
+Wait, I think the management procedure for western stock sets TAC every year based on indicators, but they also agreed on specific TAC values for 2025, 2026, 2027 in the recommendation. Actually, they might have adopted TAC values of 3,100 mt for 2025, 2026, and 2027?
+
+But then why would US allocation differ between 2025 and 2026?
+
+Unless the US share changes due to adjustments carried over from prior years? But the question says "Before any underharvest or overharvest adjustment..." So the base allocation might differ because of different ICCAT allocations each year.
+
+Let's search mental database for "2025 2026 bluefin tuna quota United States 1,180.01" No, not clear.
+
+But maybe the answer is 0.00? No, they ask "how many more" implying nonzero.
+
+Actually, I think there was a specific rule in Dec 2024: "Atlantic Highly Migratory Species; Atlantic Bluefin Tuna Quotas for 2025" where they listed:
+Year | Base Quota (mt)
+2025 | 1,247.39
+2026 | 1,316.70
+Difference | 69.31
+
+But need be precise: maybe 2025 is 1,247.39 and 2026 is 1,316.70, difference 69.31. Or 2025 is 1,180.01 and 2026 is 1,247.39, diff 67.38?
+
+Wait, I recall seeing 1,316.7 mt in the context of "the U.S. quota is 1,316.7 mt (2,900,000 lb)"? Actually 1,316.7 mt is about 2,902,000 lb. Yes! 2.9 million pounds. Meanwhile 1,247.39 mt is about 2,749,000 lb (around 2.75 million lb). So 1,316.7 mt corresponds to about 2.9 million lb. I thi
+
+Low model
+=========
+
+Attempt 1 · Wrong
+-----------------
+Docs: Doc 2, Doc 3, Doc 6 · Note: Note: where it went wrong
+
+Final answer: 1,509.98 − 1,316.14 = 193.84 metric tons | Your answer (gold): 168.84 mt
+
+Where it went wrong: Computed 1,509.98 − 1,316.14 = 193.84 from the baseline quota figures in Documents 3 and 6; this is the baseline-to-baseline difference the documents directly state.Doc 3 Doc 6
+
+How it got there: It used Doc 6's Table 5 baseline quota figures (1,316.14 for 2025 and 1,509.98 for 2026) and subtracted them directly.
+
+Where it left your evidence: It treated the 2025 bycatch set-aside of 25 mt as not part of the western Atlantic TAC allocation, whereas the expert's reasoning includes it for 2025 because it was previously subtracted from the western TAC.
+
+Passages quoted:
+
+- Quoted Doc 3: “In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028. The current U.S. percentages of the bluefin tuna TAC were first established in Recommendation 10-03. If the overall TAC is greater than 2,660 mt,”
+
+Named Doc 6, Doc 3, Doc 2
+
+Full answer
+-----------
+
+The U.S. baseline western Atlantic bluefin tuna quota was 1,316.14 mt in 2025 and 1,509.98 mt in 2026 (before applying any carryover or overharvest adjustments).
+
+Difference: 1,509.98 − 1,316.14 = 193.84 metric tons
+
+Reasoning
+---------
+
+Loading the reasoning…
+
+Attempt 2 · Wrong
+-----------------
+Docs: Doc 3, Doc 6 · Note: —
+
+Final answer: 1,509.98 − 1,316.14 = 193.84 metric tons | Your answer (gold): 168.84 mt
+
+How it got there: It used Doc 6's Table 5 baseline quota figures (1,316.14 for 2025 and 1,509.98 for 2026) and subtracted them directly.
+
+Where it left your evidence: It treated the 2025 bycatch set-aside of 25 mt as not part of the western Atlantic TAC allocation, whereas the expert's reasoning includes it for 2025 because it was previously subtracted from the western TAC.
+
+Passages quoted:
+
+- Quoted Doc 3: “For bluefin tuna, this action also proposes to implement the increased U.S. baseline quota adopted by ICCAT in 2025”
+
+Named Doc 6, Doc 3
+
+Full answer
+-----------
+
+The U.S. baseline (pre-adjustment) bluefin tuna quota was:
+
+- 2025: 1,316.14 mt
+- 2026: 1,509.98 mt
+
+Difference: 1,509.98 − 1,316.14 = 193.84 metric tons
+
+Reasoning
+---------
+
+We need answer: Before any underharvest or overharvest adjustment, how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025, to two decimals?
+
+Need examine input documents for bluefin tuna quotas 2025 and 2026 baseline.
+
+Document 6 (final rule August 19, 2026) has table and text: "In 2025, the adjusted U.S. quota was 1,199.94 mt... The baseline annual U.S. BFT quota is 1,509.98 mt..." Wait need "Before any underharvest or overharvest adjustment" => baseline quota?
+
+Need determine U.S. allocation for 2025 baseline and 2026 baseline.
+
+In Document 3 (proposed rule May 7, 2026) there is table 1 proposed annual baseline bluefin tuna quotas with U.S. Baseline Quota 1,509.98. Also mentions current U.S. baseline quota? Let's check Document 6 more precisely.
+
+Document 6: In Supplementary Information: "Through this action, NMFS implements various management measures... For bluefin tuna, this action implements the increased U.S. baseline quota adopted by ICCAT in 2025..." Then in table? Let's scan.
+
+There is table 5--2026 Bluefin Tuna Quotas with Baseline Quota 2025 1,316.14 and 2026 1,509.98. So 2025 baseline was 1,316.14 mt, 2026 baseline 1,509.98 mt. Difference = 193.84 mt.
+
+But question asks "how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025..." This sounds like the U.S. share of TAC? Wait "total allowable catch was the United States allocated" => U.S. quota allocation (baseline) increased by 193.84 mt.
+
+Check consistency: In Document 3 proposed rule mentions "For bluefin tuna, this action also proposes to implement the increased U.S. baseline quota adopted by ICCAT in 2025..." And in table 1 proposed annual baseline bluefin tuna quotas and subquotas with U.S. Baseline Quota ... 1,509.98. But need 2025 baseline. In Document 6 table 5 lists 2025 baseline quota 1,316.14. Difference exactly 193.84.
+
+Need "to two decimals" -> 193.84.
+
+But verify if there's any other figure like total TAC difference multiplied by percentage? Let's read carefully: "how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025" This could be interpreted as the U.S. allocation of the TAC (the quota) was higher by X mt. Yes baseline quota difference.
+
+Thus answer 193.84 metric tons.
+
+Attempt 3 · Wrong
+-----------------
+Docs: Doc 3, Doc 6 · Note: —
+
+Final answer: So the United States was allocated 193.84 metric tons more for 2026 than for 2025. | Your answer (gold): 168.84 mt
+
+How it got there: It used Doc 6's Table 5 baseline quota figures (1,316.14 for 2025 and 1,509.98 for 2026) and subtracted them directly.
+
+Where it left your evidence: It treated the 2025 bycatch set-aside of 25 mt as not part of the western Atlantic TAC allocation, whereas the expert's reasoning includes it for 2025 because it was previously subtracted from the western TAC.
+
+Passages quoted:
+
+- Quoted Doc 3: “For bluefin tuna, this action also proposes to implement the increased U.S. baseline quota adopted by ICCAT in 2025”
+- Quoted Doc 6: “In 2025, the adjusted U.S. quota was 1,199.94 mt (including the 25-mt set-aside for the Northeast Distant gear restricted area (NED))”
+- Quoted Doc 6: “Bluefin Tuna Annual Quota and Subquotas”
+- Quoted Doc 6: “In this rulemaking, NMFS implements a U.S. bluefin tuna baseline quota of 1,509.98 mt, reflecting adoption of the new quota by ICCAT in Recommendation 25-05.”
+- Quoted Doc 6: “New Annual Baseline Bluefin Tuna Quotas and Subquotas”
+
+Named Doc 6, Doc 3
+
+Full answer
+-----------
+
+The 2025 U.S. baseline bluefin tuna quota was 1,316.14 mt and the 2026 baseline quota is 1,509.98 mt (Document 6, Table 5).
+
+1,509.98 − 1,316.14 = 193.84
+
+So the United States was allocated 193.84 metric tons more for 2026 than for 2025.
+
+Reasoning
+---------
+
+We need answer: Before any underharvest or overharvest adjustment, how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025, to two decimals?
+Need parse documents for U.S. baseline quota for bluefin tuna in 2025 and 2026 before adjustments.
+We need western Atlantic bluefin tuna total allowable catch (TAC) allocation to US? Or U.S. baseline quota? The wording "how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025" likely refers to the U.S. baseline quota increase implemented via ICCAT Recommendation 25-05.
+Let's find values.
+In Document 6 (Federal Register final rule Aug 19, 2026) and Document 3 (proposed rule May 7, 2026) discuss quotas.
+Document 3 proposed rule mentions: "For bluefin tuna, this action also proposes to implement the increased U.S. baseline quota adopted by ICCAT in 2025..." Need specific numbers.
+In Document 3 supplementary information: "In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028. The current U.S. percentages... U.S. receives 49 percent of that TAC... Recommendation 25-05 further increased the U.S. allocation for longline bycatch..." Wait need baseline quota values for 2025 and 2026.
+Document 6 final rule includes table? Let's inspect Document 6 text near quotas.
+Document 6: "In 2025, the adjusted U.S. quota was 1,199.94 mt (including the 25-mt set-aside for the Northeast Distant gear restricted area (NED))..." That's adjusted for 2025 including adjustments? Need baseline before adjustments.
+Also in Document 6 Table 5? Let's read precisely.
+Document 6 has section "Bluefin Tuna Annual Quota and Subquotas": "In this rulemaking, NMFS implements a U.S. bluefin tuna baseline quota of 1,509.98 mt, reflecting adoption of the new quota by ICCAT in Recommendation 25-05."
+Then table 4 lists "New Annual Baseline Bluefin Tuna Quotas and Subquotas" with U.S. Baseline Quota 1,509.98 and Bycatch set-aside, Annual Total U.S. quota 1,572.48.
+Then later: "The baseline quota is 889.4 mt..." that's northern albacore.
+We need 2025 baseline quota before adjustments. In Document 3 proposed rule: maybe mentions current baseline quota of 1,316.14 mt? Let's check Document 6 table 5: "Baseline Quota ... 2025 1,316.14; 2026 1,509.98". Yes table 5 header "Bluefin tuna quota (mt ww)" with rows Baseline Quota: 2025 1,316.14, 2026 1,509.98.
+Thus difference = 1,509.98 - 1,316.14 = 193.84 mt.
+Need "how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated" - yes that's the increase in U.S. quota/TAC allocation.
+Answer 193.84.
+
+Attempt 4 · Wrong
+-----------------
+Docs: Doc 3, Doc 6 · Note: —
+
+Final answer: 1,509.98 − 1,316.14 = 193.84 metric tons | Your answer (gold): 168.84 mt
+
+How it got there: It used Doc 6's Table 5 baseline quota figures (1,316.14 for 2025 and 1,509.98 for 2026) and subtracted them directly.
+
+Where it left your evidence: It treated the 2025 bycatch set-aside of 25 mt as not part of the western Atlantic TAC allocation, whereas the expert's reasoning includes it for 2025 because it was previously subtracted from the western TAC.
+
+Passages quoted:
+
+- Quoted Doc 6: “The baseline quota is 889.4 mt”
+- Quoted Doc 6: “In 2025, the adjusted U.S. quota was 1,199.94 mt (including the 25-mt set-aside for the Northeast Distant gear restricted area (NED))”
+- Quoted Doc 6: “2026 Bluefin Tuna Quotas”
+
+Named Doc 6, Doc 3
+
+Full answer
+-----------
+
+The 2025 U.S. baseline (pre-adjustment) western Atlantic bluefin tuna quota was 1,316.14 mt, and the 2026 baseline quota is 1,509.98 mt (see Document 6, Table 5).
+
+Difference: 1,509.98 − 1,316.14 = 193.84 metric tons
+
+Reasoning
+---------
+
+We need parse documents to find U.S. allocations of western Atlantic bluefin tuna TAC for 2025 and 2026 before adjustments.
+
+Need identify correct values in docs.
+
+Looking at Document 3 proposed rule and Document 6 final rule.
+
+Document 3 (proposed rule May 7, 2026) mentions: "In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028. The current U.S. percentages of the bluefin tuna TAC were first established in Recommendation 10-03. If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC. Recommendation 25-05 further increased the U.S. allocation for longline bycatch..." Also earlier mentions baseline quota adjustments.
+
+Need 2025 U.S. allocation before adjustments. Document 6 final rule (Aug 19, 2026) includes table? Let's check.
+
+Document 6 supplementary info: "The baseline quota is 889.4 mt..." that's albacore. For bluefin, document 6 says: "In 2025, the adjusted U.S. quota was 1,199.94 mt (including the 25-mt set-aside for the Northeast Distant gear restricted area (NED))" but that's adjusted with carryover/transfer? Need "before any underharvest or overharvest adjustment" i.e., baseline quota? Or the TAC allocation?
+
+Question: "Before any underharvest or overharvest adjustment, how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025, to two decimals?"
+
+So need U.S. allocation portion of TAC for 2025 and 2026 before adjustments (baseline quotas).
+
+From Document 3: For 2025? Need determine 2025 baseline U.S. quota. The proposed rule mentions current baseline? Let's search mental.
+
+Document 3 paragraph: "This proposed rule would implement Recommendation 25-05, which... For bluefin tuna, this action also proposes to implement the increased U.S. baseline quota adopted by ICCAT in 2025..." Then in summary of alternatives? Actually in Document 6 final rule they implement baseline quota of 1,509.98 mt for 2026. They also have table with 2025 and 2026 baseline quotas? Let's inspect Document 6 table 5: "2026 Bluefin Tuna Quotas" lists Baseline Quota 2025 1,316.14 and 2026 1,509.98. Yes! So 2025 baseline was 1,316.14 mt, 2026 baseline 1,509.98 mt. Difference = 193.84 mt.
+
+Check consistency: 49% of TAC? Let's see TAC for 2025 maybe 2,686 mt? 49% = 1,316.14 indeed (1,316.14 /0.49 = 2,686). For 2026 TAC 3,081.633? 49% = 1,509.999? Yes about 1,509.98. Difference 193.84.
+
+Need "how many more metric tons... was the United States allocated for 2026 than for 2025" => 1,509.98 - 1,316.14 = 193.84.
+
+Need to two decimal places => 193.84.
+
+Let's provide answer.
+
+Attempt 5 · Wrong
+-----------------
+Docs: Doc 3, Doc 6 · Note: —
+
+Final answer: 1,509.98 − 1,316.14 = 193.84 metric tons | Your answer (gold): 168.84 mt
+
+How it got there: It used Doc 6's Table 5 baseline quota figures (1,316.14 for 2025 and 1,509.98 for 2026) and subtracted them directly.
+
+Where it left your evidence: It treated the 2025 bycatch set-aside of 25 mt as not part of the western Atlantic TAC allocation, whereas the expert's reasoning includes it for 2025 because it was previously subtracted from the western TAC.
+
+Passages quoted:
+
+- Quoted Doc 3: “For bluefin tuna, this action also proposes to implement the increased U.S. baseline quota adopted by ICCAT in 2025, divide it among the established regulatory domestic subquota categories”
+- Quoted Doc 3: “In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028.”
+
+Named Doc 3, Doc 6
+
+Full answer
+-----------
+
+The U.S. baseline (pre-adjustment) western Atlantic bluefin tuna quota was:
+
+- 2025: 1,316.14 mt
+- 2026: 1,509.98 mt
+
+Difference: 1,509.98 − 1,316.14 = 193.84 metric tons
+
+Reasoning
+---------
+
+We need answer question based on input documents. Need determine western Atlantic bluefin tuna total allowable catch allocated to US for 2026 vs 2025 before any underharvest/overharvest adjustment.
+
+Need locate information in documents. Document 3 proposed rule mentions ICCAT Recommendation 25-05 increased bluefin tuna TAC and US quota. Document 6 final rule implements increased US baseline quota adopted by ICCAT in 2025, dividing etc. Need baseline quotas for 2025 and 2026.
+
+In Document 6 (final rule Aug 2026): "In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028. The current U.S. percentages... United States receives 49 percent of TAC... Recommendation 25-05 further increased U.S. allocation for longline bycatch... 62.5 mt... Recommendation 25-05 removed provision... overall U.S. quota under Recommendation 25-05 is 1,572.48 mt, of which 62.5 mt can be used only by pelagic longline fishermen..."
+
+But need "before any underharvest or overharvest adjustment" - likely baseline quota not including carryover/transfer. For 2025 baseline quota was 1,316.14 mt? Let's check Document 6 table? There's table with 2025 and 2026 quotas: Baseline Quota 2025 1,316.14; 2026 1,509.98. Also in Document 3 proposed rule table? Let's search mental.
+
+Document 3 proposed rule (May 2026) said: "For bluefin tuna, this action also proposes to implement the increased U.S. baseline quota adopted by ICCAT in 2025, divide it among the established regulatory domestic subquota categories..." In Document 3 table 1 proposed annual baseline quotas and subquotas? Let's recall: In Document 3, table 1 lists Proposed Annual Baseline Bluefin Tuna Quotas and Subquotas with U.S. Baseline Quota of 1,509.98 and Annual Total U.S. quota 1,572.48. For 2025 existing maybe 1,316.14? Let's verify in Document 6 table 5: 2025 Baseline Quota 1,316.14; Total Quota (Baseline Quota + Bycatch Allocation) 1,341.14; Adjusted Quota 1,199.94.
+
+Thus 2026 baseline quota 1,509.98 mt, 2025 baseline 1,316.14 mt. Difference = 193.84 mt.
+
+Need "how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025" This sounds like difference in U.S. allocation (quota) not TAC itself? But phrase "total allowable catch was the United States allocated" means US allocation of TAC. So 1,509.98 - 1,316.14 = 193.84.
+
+Check if 2025 included bycatch allocation 25 mt, making total 1,341.14 baseline+bycatch. But question says "before any underharvest or overharvest adjustment" - baseline quota is before adjustments, but should we include bycatch set-aside? The allocation for 2026 includes 62.5 mt bycatch set-aside in total 1,572.48, but baseline is 1,509.98 excluding? Actually table shows Baseline Quota 1,509.98 and Bycatch set-aside (for use by Longline category) 62.5, then Annual Total U.S. quota 1,572.48. For 2025 table shows Baseline Quota 1,316.14 and Total Quota (Baseline Quota + Bycatch Allocation) 1,341.14, meaning bycatch allocation was 25 mt included in total but not in baseline? So baseline quotas exclude bycatch? Wait baseline quota divided among categories includes longline category 240.1? Hmm need understand precisely.
+
+But question asks "how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated" The TAC is divided among parties. US gets a percentage. In 2025 TAC maybe 2,707? Actually need check ICCAT recommendations. Let's examine Document 6: "In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028." That implies prior TAC was lower and prior US quota was lower. Specifically prior US quota was 1,316.14 mt? Let's check consistency: If US gets 49% of TAC greater than 2,660 mt, then 49% of 3,081.6 = 1,509.984 ~ 1,509.98. For prior TAC maybe 2,686? 49% of 2,686 = 1,316.14 indeed (since 1,316.14 /0.49 = 2,686). So yes 2025 US allocation (quota) was 1,316.14 mt baseline plus 25 mt bycatch = 1,341.14 total? But the TAC allocation portion is 1,316.14 mt, with an additional 25 mt bycatch allocation from eastern stock? Wait need understand.
+
+However question specifically "Before any underharvest or overharvest adjustment, how many more metric tons..." This sounds compare the adjusted? No, "before any underharvest or overharvest adjustment" means compare the baseline/initial allocations for 2026 vs 2025, not including carryover/overharvest adjustments. So need 2026 initial allocation minus 2025 initial allocation.
+
+What is 2025 initial allocation? In Document 6 table, Baseline Quota 2025 is 1,316.14, Total Quota 1,341.14 (includes bycatch allocation of 25). For 2026, Baseline Quota 1,509.98, and there's additional bycatch set-aside 62.5, total 1,572.48. The question mentions "western Atlantic bluefin tuna total allowable catch was the United States allocated" - The bycatch set-aside comes from eastern Atlantic/Mediterranean TAC, not western Atlantic TAC. So likely they refer only to the western Atlantic TAC allocation, which is the baseline quota. So difference is 193.84.
+
+But need "to two decimals" -> 193.84.
+
+Double-check: 1,509.98 - 1,316.14 = 193.84 exactly.
+
+Thus answer 193.84 metric tons.
+
+Medium model
+============
+
+Attempt 1 · Wrong
+-----------------
+Docs: Doc 3, Doc 6 · Note: Note: where it went wrong
+
+Final answer: 193.84 | Your answer (gold): 168.84 mt
+
+Where it went wrong: Used Table 5 of Document 6 (baseline 1,316.14 vs 1,509.98) and Document 3's quota description, arriving at 193.84; no passage supports subtracting the 2025 set-aside from only one side.Doc 3 Doc 6
+
+How it got there: It used Doc 6's Table 5 baseline quota figures (1,316.14 for 2025 and 1,509.98 for 2026) and subtracted them directly.
+
+Where it left your evidence: It treated the 2025 bycatch set-aside of 25 mt as not part of the western Atlantic TAC allocation, whereas the expert's reasoning includes it for 2025 because it was previously subtracted from the western TAC.
+
+Passages quoted:
+
+- Quoted Doc 3: “In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028. The current U.S. percentages of the bluefin tuna TAC were first established in Recommendation 10-03. If the overall TAC is greater than 2,660 mt,”
+- Quoted Doc 3: “Recommendation 25-05 further increased the U.S. allocation for longline bycatch of bluefin tuna from 25 mt to 62.5 mt.”
+- Quoted Doc 6: “2026 Bluefin Tuna Quotas”
+- Quoted Doc 6: “In this rulemaking, NMFS implements a U.S. bluefin tuna baseline quota of 1,509.98 mt, reflecting adoption of the new quota by ICCAT in Recommendation 25-05.”
+- Quoted Doc 6: “Baseline Quota.......................... 1,316.14 1,509.98”
+
+Named Doc 3, Doc 6
+
+Full answer
+-----------
+
+193.84
+
+Reasoning
+---------
+
+To answer this question, I need to find information about the U.S. allocation of the western Atlantic bluefin tuna total allowable catch (TAC) for 2025 and 2026, before any underharvest or overharvest adjustments.
+
+Let me search through the documents for this information.
+
+In Document 3 (Federal Register, Volume 91 Issue 88, May 7, 2026), I see information about bluefin tuna quotas. Let me look for the baseline quotas for 2025 and 2026.
+
+From Document 3:
+
+"In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028. The current U.S. percentages of the bluefin tuna TAC were first established in Recommendation 10-03. If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC."
+
+This tells me that for 2026-2028, the U.S. quota is 1,509.98 mt.
+
+But what was the U.S. quota for 2025? Let me look for that.
+
+Further in Document 3:
+"Recommendation 25-05 further increased the U.S. allocation for longline bycatch of bluefin tuna from 25 mt to 62.5 mt."
+
+And:
+"The overall U.S. quota under Recommendation 25-05 is 1,572.48 mt, of which 62.5 mt can be used only by pelagic longline fishermen."
+
+Wait, this seems to be the total quota including the bycatch set-aside. But the question asks for the allocation before any underharvest or overharvest adjustment, which should be the baseline quota.
+
+Let me check Table 5 in Document 3, which shows "2026 Bluefin Tuna Quotas":
+
+Table 5--2026 Bluefin Tuna Quotas
+------------------------------------------------------------------------
+Bluefin tuna quota (mt ww) 2025 2026
+------------------------------------------------------------------------
+Baseline Quota.......................... 1,316.14 1,509.98
+Total Quota (Baseline Quota + Bycatch 1,341.14 1,572.48
+Allocation) *..........................
+Under (+) or over (-) harvest from -141.2 74.8
+Previous Year [dagger].................
+Adjusted Quota (Total quota + Carryover) 1,199.94 1,647.28
+Baseline Reserve Category Quota......... 38.2 43.8
+Adjusted Reserve Category Quota (Reserve NA 112.2
+Category Quota + Carryover)............
+------------------------------------------------------------------------
+Values in this table are subject to rounding error.
+* The United States is allocated an additional 25 mt in 2025 and 62.5 mt
+in 2026 to account for bycatch related to pelagic longline fisheries.
+[dagger] Allowable underharvest carryover is capped at 10 percent of the
+total annual quota (134.1 mt ww in 2025).
+
+Ah, here it is! The table shows "Baseline Quota" for 2025 as 1,316.14 mt and for 2026 as 1,509.98 mt.
+
+The question asks: "Before any underharvest or overharvest adjustment, how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025, to two decimals?"
+
+So the baseline quota (before adjustments) for 2025 was 1,316.14 mt and for 2026 was 1,509.98 mt.
+
+The difference is: 1,509.98 - 1,316.14 = 193.84 mt
+
+Let me double-check this with other parts of the document to make sure.
+
+In Document 6 (Federal Register, Volume 91 Issue 159, August 19, 2026), which is the final rule implementing these quotas, I see:
+
+"In this rulemaking, NMFS implements a U.S. bluefin tuna baseline quota of 1,509.98 mt, reflecting adoption of the new quota by ICCAT in Recommendation 25-05."
+
+And in Table 5 of Document 6 (which appears to be the same table as in Document 3), it shows:
+"Baseline Quota.......................... 1,316.14 1,509.98"
+
+This confirms the baseline quotas for 2025 and 2026.
+
+Also, in Document 6: "Consistent with Recommendation 25-05, the maximum underharvest that the United States can carry forward from one year to the next is 10 percent of its total annual quota, which equates to 134.1 mt for 2025. In 2025, the adjusted U.S. quota was 1,199.94 mt (including the 25-mt set-aside for the Northeast Distant gear restricted area (NED)) (90 FR 60017, December 23, 2025), and the U.S. catch, including landings and dead discards, totaled 1,125.1 mt. Thus, the 2025 underharvest was 74.8 mt."
+
+This confirms that the baseline quota for 2025 was 1,316.14 mt (since 1,316.14 + 25 = 1,341.14, which matches the "Total Quota (Baseline Quota + Bycatch Allocation)" for 2025 in the table).
+
+So the difference between the 2026 baseline quota and the 2025 baseline quota is 1,509.98 - 1,316.14 = 193.84 mt.
+
+The question asks for the answer to two decimals, which 193.84 already is.
+
+Actually, let me verify the calculation once more:
+1,509.98 - 1,316.14 = 193.84
+
+Yes, that's correct.
+
+The question specifically asks about "the western Atlantic bluefin tuna total allowable catch". Let me make sure these quotas are for the western Atlantic stock specifically.
+
+From Document 3: "In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028. The current U.S. percentages of the bluefin tuna TAC were first established in Recommendation 10-03. If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC."
+
+And: "Recommendation 25-05 further increased the U.S. allocation for longline bycatch of bluefin tuna from 25 mt to 62.5 mt. The Recommendation states that the 62.5 mt allocation is for bycatch related to longline fisheries in the vicinity of the management area boundary and adjacent areas and that this allocation is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC. Recommendation 25-05 removed a provision from a prior recommendation that provided for subtracting the longline bycatch allocation from the TAC before calculating the individual country quotas. As such, the overall U.S. quota under Recommendation 25-05 is 1,572.48 mt, of which 62.5 mt can be used only by pelagic longline fishermen."
+
+This suggests that the 1,509.98 mt baseline quota for 2026 is for the western Atlantic bluefin tuna (since the bycatch allocation of 62.5 mt is "derived from the eastern Atlantic and Mediterranean bluefin tuna TAC").
+
+Also, in Document 3: "Recommendation 25-05 removed a provision from a prior recommendation that provided for subtracting the longline bycatch allocation from the TAC before calculating the individual country quotas."
+
+This implies that previously, the bycatch allocation was subtracted from the TAC before allocating to countries, but now it's not. So the 1,509.98 mt is the U.S. share of the western Atlantic TAC, and the additional 62.5 mt is from the eastern Atlantic TAC.
+
+Let me check the math: If the overall TAC is 3,081.6 mt and the U.S. gets 49%, that would be 3,081.6 * 0.49 = 1,509.984 mt, which rounds to 1,509.98 mt. This matches.
+
+For 2025, the baseline quota was 1,316.14 mt. If the same percentage (49%) applied, the TAC for 2025 would have been 1,316.14 / 0.49 = 2,686 mt. But the document says "If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC." So it's consistent.
+
+Actually, let me check Document 6 for more clarity on the 2025 quota.
+
+In Document 6: "Consistent with Recommendation 25-05, the maximum underharvest that the United States can carry forward from one year to the next is 10 percent of its total annual quota, which equates to 134.1 mt for 2025. In 2025, the adjusted U.S. quota was 1,199.94 mt (including the 25-mt set-aside for the Northeast Distant gear restricted area (NED)) (90 FR 60017, December 23, 2025)..."
+
+The "total annual quota" for 2025 is mentioned as 1,341.14 mt (from the table: "Total Quota (Baseline Quota + Bycatch Allocation) *.......................... 1,341.14"). And 10% of 1,341.14 is 134.114, which rounds to 134.1 mt. This matches.
+
+And the baseline quota for 2025 is 1,316.14 mt, with a bycatch allocation of 25 mt, totaling 1,341.14 mt.
+
+For 2026, baseline quota is 1,509.98 mt, with a bycatch allocation of 62.5 mt, totaling 1,572.48 mt.
+
+The question asks: "Before any underharvest or overharvest adjustment, how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025, to two decimals?"
+
+The key phrase is "of the western Atlantic bluefin tuna total allowable catch". The baseline quota (1,316.14 mt for 2025 and 1,509.98 mt for 2026) appears to be the U.S. allocation of the western Atlantic TAC, while the bycatch allocation (25 mt for 2025, 62.5 mt for 2026) is "derived from the eastern Atlantic and Mediterranean bluefin tuna TAC" as stated in Document 3.
+
+So the answer should be based on the baseline quotas only: 1,509.98 - 1,316.14 = 193.84 mt.
+
+Let me confirm once more with the exact wording in the documents.
+
+From Document 3: "the U.S. quota to 1,509.98 mt for 2026-2028" and "the overall U.S. quota under Recommendation 25-05 is 1,572.48 mt, of which 62.5 mt can be used only by pelagic longline fishermen."
+
+And: "Recommendation 25-05 further increased the U.S. allocation for longline bycatch of bluefin tuna from 25 mt to 62.5 mt. The Recommendation states that the 62.5 mt allocation is for bycatch related to longline fisheries in the vicinity of the management area boundary and adjacent areas and that this allocation is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC."
+
+This confirms that the 1,509.98 mt is the U.S. allocation from the western Atlantic TAC, and the additional 62.5 mt is from the eastern Atlantic TAC.
+
+Similarly, for 2025, the baseline quota of 1,316.14 mt would be from the western Atlantic TAC, and the 25 mt bycatch allocation from the eastern Atlantic TAC.
+
+So the difference in the U.S. allocation from the western Atlantic TAC (before adjustments) between 2026 and 2025 is 1,509.98 - 1,316.14 = 193.84 mt.
+
+Actually, let me check if there's any other mention of the 2025 western Atlantic allocation.
+
+In Document 6: "In 2025, the adjusted U.S. quota was 1,199.94 mt (including the 25-mt set-aside for the Northeast Distant gear restricted area (NED)) (90 FR 60017, December 23, 2025)"
+
+The "adjusted U.S. quota" includes adjustments for underharvest/overharvest. The table shows "Adjusted Quota (Total quota + Carryover) 1,199.94" for 2025.
+
+But the "Total Quota (Baseline Quota + Bycatch Allocation)" for 2025 is 1,341.14 mt, which equals baseline quota (1,316.14) + bycatch allocation (25).
+
+So yes, the baseline quota for the western Atlantic allocation in 2025 was 1,316.14 mt, and for 2026 it's 1,509.98 mt.
+
+Difference: 193.84 mt.
+
+The question asks for the answer to two decimals, which 193.84 already is.
+
+Wait, let me do the subtraction precisely:
+1,509.98
+-1,316.14
+---------
+  193.84
+
+Yes, exactly 193.84.
+
+So the answer is 193.84.
+
+Attempt 2 · Wrong
+-----------------
+Docs: Doc 3, Doc 6 · Note: —
+
+Final answer: 193.84 | Your answer (gold): 168.84 mt
+
+How it got there: It used Doc 6's Table 5 baseline quota figures (1,316.14 for 2025 and 1,509.98 for 2026) and subtracted them directly.
+
+Where it left your evidence: It treated the 2025 bycatch set-aside of 25 mt as not part of the western Atlantic TAC allocation, whereas the expert's reasoning includes it for 2025 because it was previously subtracted from the western TAC.
+
+Passages quoted:
+
+- Quoted Doc 3: “Atlantic Highly Migratory Species; North Atlantic Swordfish, South Atlantic Swordfish, North Atlantic Albacore, and Atlantic Bluefin Tuna Quotas”
+- Quoted Doc 3: “In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028.”
+- Quoted Doc 3: “The current U.S. percentages of the bluefin tuna TAC were first established in Recommendation 10-03. If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC.”
+- Quoted Doc 3: “Recommendation 25-05 further increased the U.S. allocation for longline bycatch of bluefin tuna from 25 mt to 62.5 mt.”
+- Quoted Doc 3: “As such, the overall U.S. quota under Recommendation 25-05 is 1,572.48 mt, of which 62.5 mt can be used only by pelagic longline fishermen.”
+
+Named Doc 3, Doc 6
+
+Full answer
+-----------
+
+193.84
+
+Reasoning
+---------
+
+Let me carefully analyze the question and find the relevant information in the provided documents.
+
+The question asks: "Before any underharvest or overharvest adjustment, how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025, to two decimals?"
+
+I need to find:
+1. The U.S. baseline quota for western Atlantic bluefin tuna for 2025
+2. The U.S. baseline quota for western Atlantic bluefin tuna for 2026
+3. Calculate the difference (2026 - 2025) in metric tons, to two decimal places
+
+Let me search through the documents for information about bluefin tuna quotas for 2025 and 2026.
+
+Looking at Document 3 (Federal Register, Volume 91 Issue 88, Thursday, May 7, 2026), which discusses "Atlantic Highly Migratory Species; North Atlantic Swordfish, South Atlantic Swordfish, North Atlantic Albacore, and Atlantic Bluefin Tuna Quotas".
+
+In this document, I see information about the bluefin tuna quota:
+
+"In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028."
+
+Also: "The current U.S. percentages of the bluefin tuna TAC were first established in Recommendation 10-03. If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC."
+
+And: "Recommendation 25-05 further increased the U.S. allocation for longline bycatch of bluefin tuna from 25 mt to 62.5 mt."
+
+Further: "As such, the overall U.S. quota under Recommendation 25-05 is 1,572.48 mt, of which 62.5 mt can be used only by pelagic longline fishermen."
+
+Let me check Document 6 (Federal Register, Volume 91 Issue 159, Wednesday, August 19, 2026), which is a final rule implementing these quotas.
+
+In Document 6, Table 5 shows "2026 Bluefin Tuna Quotas" with "Baseline Quota" for 2025 as 1,316.14 mt and for 2026 as 1,509.98 mt.
+
+Also, in the text: "In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028."
+
+And: "The current U.S. percentages of the bluefin tuna TAC were first established in Recommendation 10-03. If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC."
+
+Let me verify the 2025 baseline quota. In Table 5 of Document 6, it shows "Baseline Quota" for 2025 as 1,316.14 mt.
+
+For 2026, it shows "Baseline Quota" as 1,509.98 mt.
+
+The difference would be: 1,509.98 - 1,316.14 = 193.84 mt.
+
+But let me double-check if these are specifically for the western Atlantic bluefin tuna. The question asks about "western Atlantic bluefin tuna total allowable catch".
+
+Looking more carefully at Document 3:
+
+"In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028. The current U.S. percentages of the bluefin tuna TAC were first established in Recommendation 10-03. If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC. Recommendation 25-05 further increased the U.S. allocation for longline bycatch of bluefin tuna from 25 mt to 62.5 mt. The Recommendation states that the 62.5 mt allocation is for bycatch related to longline fisheries in the vicinity of the management area boundary and adjacent areas and that this allocation is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC. Recommendation 25-05 removed a provision from a prior recommendation that provided for subtracting the longline bycatch allocation from the TAC before calculating the individual country quotas. As such, the overall U.S. quota under Recommendation 25-05 is 1,572.48 mt, of which 62.5 mt can be used only by pelagic longline fishermen."
+
+This is a bit confusing. It says the U.S. quota is 1,509.98 mt, but then says the overall U.S. quota is 1,572.48 mt (which is 1,509.98 + 62.5).
+
+Let me check Document 6 again, Table 5: "2026 Bluefin Tuna Quotas"
+- Baseline Quota 2025: 1,316.14
+- Baseline Quota 2026: 1,509.98
+- Total Quota (Baseline Quota + Bycatch Allocation) 2025: 1,341.14
+- Total Quota (Baseline Quota + Bycatch Allocation) 2026: 1,572.48
+
+Ah, so the "Baseline Quota" is 1,316.14 for 2025 and 1,509.98 for 2026, and then there's an additional bycatch allocation (25 mt for 2025, 62.5 mt for 2026) that gets added to get the "Total Quota".
+
+The question asks: "Before any underharvest or overharvest adjustment, how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025, to two decimals?"
+
+The key phrase is "western Atlantic bluefin tuna total allowable catch" and "allocated".
+
+From the text: "Recommendation 25-05 further increased the U.S. allocation for longline bycatch of bluefin tuna from 25 mt to 62.5 mt. The Recommendation states that the 62.5 mt allocation is for bycatch related to longline fisheries in the vicinity of the management area boundary and adjacent areas and that this allocation is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC."
+
+This suggests that the 62.5 mt (and previously 25 mt) is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC, not the western Atlantic.
+
+And: "Recommendation 25-05 removed a provision from a prior recommendation that provided for subtracting the longline bycatch allocation from the TAC before calculating the individual country quotas."
+
+So it seems like the baseline quota (1,316.14 for 2025, 1,509.98 for 2026) is the U.S. allocation from the western Atlantic bluefin tuna TAC, and the additional 25/62.5 mt is from the eastern Atlantic/Mediterranean TAC.
+
+Let me confirm this. In Document 3: "If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC."
+
+And in Table 1 of Document 3: "U.S. Baseline Quota........................... ................. ................................ 1,509.98"
+
+Also: "Bycatch set-aside (for use by Longline ................. ................................ 62.5"
+
+And: "Annual Total U.S. quota................... ................. ................................ 1,572.48"
+
+So the U.S. Baseline Quota of 1,509.98 mt for 2026 is 49% of the western Atlantic bluefin tuna TAC (which would be 3,081.6 mt * 0.49 = 1,509.984 mt, matching the 1,509.98 mt figure).
+
+For 2025, the Baseline Quota was 1,316.14 mt (from Table 5 in Document 6). If this was also 49% of the TAC, then the 2025 TAC would have been 1,316.14 / 0.49 = 2,686 mt.
+
+But the question specifically asks about the "western Atlantic bluefin tuna total allowable catch" allocation to the U.S., which appears to be the "Baseline Quota" figures: 1,316.14 mt for 2025 and 1,509.98 mt for 2026.
+
+The difference is 1,509.98 - 1,316.14 = 193.84 mt.
+
+Let me check one more time to be absolutely sure.
+
+In Document 6, Table 5: "2026 Bluefin Tuna Quotas"
+- Baseline Quota 2025: 1,316.14
+- Baseline Quota 2026: 1,509.98
+
+And in the text: "In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028."
+
+Also: "The current U.S. percentages of the bluefin tuna TAC were first established in Recommendation 10-03. If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC."
+
+So the U.S. baseline quota (which comes from the western Atlantic bluefin tuna TAC) increased from 1,316.14 mt in 2025 to 1,509.98 mt in 2026.
+
+The difference is 1,509.98 - 1,316.14 = 193.84 mt.
+
+Actually, let me verify the 2025 baseline quota calculation. If the U.S. gets 49% of the TAC, and the 2026 TAC is 3,081.6 mt (giving 1,509.98 mt), what was the 2025 TAC?
+
+1,316.14 / 0.49 = 2,686 mt (approximately).
+
+But the document says: "If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC."
+
+So for 2025, the TAC must have been just over 2,660 mt, giving a U.S. quota of just over 1,303.4 mt (2,660 * 0.49). But the table shows 1,316.14, which would correspond to a TAC of 2,686 mt.
+
+Actually, let me calculate: 1,316.14 / 0.49 = 2,686.00 mt. So the 2025 TAC was 2,686 mt.
+
+And for 2026, TAC is 3,081.6 mt, U.S. quota = 3,081.6 * 0.49 = 1,509.984 mt, which rounds to 1,509.98 mt.
+
+So the U.S. allocation from the western Atlantic bluefin tuna TAC increased from 1,316.14 mt to 1,509.98 mt, a difference of 193.84 mt.
+
+The question asks for "how many more metric tons... was the United States allocated for 2026 than for 2025", so 2026 allocation minus 2025 allocation = 1,509.98 - 1,316.14 = 193.84 mt.
+
+And it specifies "before any underharvest or overharvest adjustment", which confirms we should use the baseline quotas (not the adjusted quotas which include carryover from previous years).
+
+Also, it specifies "western Atlantic bluefin tuna total allowable catch", and from the text, the baseline quota comes from the western Atlantic TAC (while the bycatch allocation comes from the eastern Atlantic/Mediterranean TAC).
+
+So the answer should be 193.84 metric tons.
+
+Let me check one more time in Document 6 to be 100% sure.
+
+In Document 6, Table 5: "2026 Bluefin Tuna Quotas"
+- Baseline Quota 2025: 1,316.14
+- Baseline Quota 2026: 1,509.98
+
+And in the text: "Consistent with Recommendation 25-05, the maximum underharvest that the United States can carry forward from one year to the next is 10 percent of its total annual quota, which equates to 134.1 mt for 2025. In 2025, the adjusted U.S. quota was 1,199.94 mt (including the 25-mt set-aside for the Northeast Distant gear restricted area (NED)) (90 FR 60017, December 23, 2025), and the U.S. catch, including landings and dead discards, totaled 1,125.1 mt. Thus, the 2025 underharvest was 74.8 mt."
+
+This confirms that the "Baseline Quota" is before any underharvest/overharvest adjustment, and the "adjusted U.S. quota" includes the bycatch set-aside (25 mt for 2025, 62.5 mt for 2026).
+
+But the question specifically asks about the allocation from the "western Atlantic bluefin tuna total allowable catch", which is the baseline quota (1,316.14 for 2025, 1,509.98 for 2026), not including the bycatch set-aside which comes from the eastern Atlantic/Mediterranean TAC.
+
+So the difference is 1,509.98 - 1,316.14 = 193.84 mt.
+
+Actually, wait. Let me read the question again carefully: "how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025"
+
+The U.S. allocation from the western Atlantic bluefin tuna TAC is 49% of that TAC. For 2025, that was 1,316.14 mt. For 2026, that's 1,509.98 mt.
+
+So the increase in allocation is 193.84 mt.
+
+But is the question asking for the increase in the U.S. allocation (which is what I calculated), or the increase in the TAC itself times 49%?
+
+No, it says "how many more metric tons... was the United States allocated", so it's the increase in the U.S. allocation, which is 193.84 mt.
+
+Let me check if there's any other interpretation.
+
+Another possibility: The "western Atlantic bluefin tuna total allowable catch" might refer to the TAC itself, not the U.S. allocation. But the question says "was the United States allocated", so it's definitely asking about the U.S. allocation amount.
+
+So I believe 193.84 is the correct answer.
+
+Actually, let me do the exact calculation:
+1,509.98 - 1,316.14 = 193.84
+
+Yes, that's exact to two decimals.
+
+Wait, I should verify the numbers are exactly as stated. In Table 5 of Document 6, it says:
+"Baseline Quota.......................... 1,316.14 1,509.98"
+
+So 1,509.98 - 1,316.14 = 193.84
+
+Perfect.
+
+Actually, one more check. In Document 3, Table 1 shows "U.S. Baseline Quota........................... ................. ................................ 1,509.98" for 2026.
+
+And in Document 6, Table 5 shows Baseline Quota for 2025 as 1,316.14.
+
+So the difference is definitely 193.84 mt.
+
+I think that's solid.
+
+Attempt 3 · Wrong
+-----------------
+Docs: Doc 3, Doc 6 · Note: —
+
+Final answer: 193.84 | Your answer (gold): 168.84 mt
+
+How it got there: It used Doc 6's Table 5 baseline quota figures (1,316.14 for 2025 and 1,509.98 for 2026) and subtracted them directly.
+
+Where it left your evidence: It treated the 2025 bycatch set-aside of 25 mt as not part of the western Atlantic TAC allocation, whereas the expert's reasoning includes it for 2025 because it was previously subtracted from the western TAC.
+
+Passages quoted:
+
+- Quoted Doc 6: “2026 Bluefin Tuna Quotas”
+- Quoted Doc 6: “Baseline Quota.......................... 1,316.14 1,509.98”
+- Quoted Doc 3: “the overall U.S. quota under Recommendation 25-05 is 1,572.48 mt, of which 62.5 mt can be used only by pelagic longline fishermen.”
+- Quoted Doc 3: “Annual Total U.S. quota................... ................. ................................ 1,572.48”
+- Quoted Doc 6: “In this rulemaking, NMFS implements a U.S. bluefin tuna baseline quota of 1,509.98 mt, reflecting adoption of the new quota by ICCAT in Recommendation 25-05.”
+
+Named Doc 3, Doc 6
+
+Full answer
+-----------
+
+193.84
+
+Reasoning
+---------
+
+To answer this question, I need to find information about the U.S. allocation of the western Atlantic bluefin tuna total allowable catch (TAC) for 2025 and 2026, before any underharvest or overharvest adjustments.
+
+Let me search through the documents for this information.
+
+From Document 3 (Federal Register, Volume 91 Issue 88, May 7, 2026), I see information about bluefin tuna quotas:
+
+"In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028. The current U.S. percentages of the bluefin tuna TAC were first established in Recommendation 10-03. If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC. Recommendation 25-05 further increased the U.S. allocation for longline bycatch of bluefin tuna from 25 mt to 62.5 mt. The Recommendation states that the 62.5 mt allocation is for bycatch related to longline fisheries in the vicinity of the management area boundary and adjacent areas and that this allocation is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC. Recommendation 25-05 removed a provision from a prior recommendation that provided for subtracting the longline bycatch allocation from the TAC before calculating the individual country quotas. As such, the overall U.S. quota under Recommendation 25-05 is 1,572.48 mt, of which 62.5 mt can be used only by pelagic longline fishermen."
+
+This tells me that for 2026-2028, the U.S. baseline quota is 1,509.98 mt (plus 62.5 mt for longline bycatch, making 1,572.48 mt total).
+
+Now I need to find what the U.S. quota was for 2025 (before any underharvest/overharvest adjustments).
+
+Looking at Table 5 in Document 3: "2026 Bluefin Tuna Quotas"
+
+It shows:
+"Baseline Quota.......................... 1,316.14 1,509.98"
+for 2025 and 2026 respectively.
+
+Also, in the text: "Consistent with Recommendation 25-05, the maximum underharvest that the United States can carry forward from one year to the next is 10 percent of its total annual quota, which equates to 134.1 mt for 2025. In 2025, the adjusted U.S. quota was 1,199.94 mt (including the 25-mt set-aside for the Northeast Distant gear restricted area (NED)) (90 FR 60017, December 23, 2025), and the U.S. catch, including landings and dead discards, totaled 1,125.1 mt."
+
+This confirms that the baseline quota for 2025 was 1,316.14 mt (before the 25 mt set-aside for NED, which would make the total annual quota 1,341.14 mt).
+
+Let me verify this. The table shows "Baseline Quota" as 1,316.14 for 2025 and 1,509.98 for 2026.
+
+Also, the text says: "the overall U.S. quota under Recommendation 25-05 is 1,572.48 mt, of which 62.5 mt can be used only by pelagic longline fishermen." And the table shows "Annual Total U.S. quota................... ................. ................................ 1,572.48" for 2026.
+
+For 2025, the table shows "Total Quota (Baseline Quota + Bycatch Allocation) *.......................... 1,341.14" which equals 1,316.14 + 25 = 1,341.14.
+
+So the baseline quota (before bycatch allocation) for 2025 was 1,316.14 mt, and for 2026 it's 1,509.98 mt.
+
+The question asks: "Before any underharvest or overharvest adjustment, how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025, to two decimals?"
+
+So I need to calculate: 1,509.98 - 1,316.14 = 193.84 mt
+
+Let me double-check if these are indeed the baseline quotas before any underharvest/overharvest adjustments.
+
+Yes, the table is labeled "2026 Bluefin Tuna Quotas" and shows "Baseline Quota" for both years. The footnote says "Values in this table are subject to rounding error." But we're asked to calculate to two decimals.
+
+Also, the text states: "In this rulemaking, NMFS implements a U.S. bluefin tuna baseline quota of 1,509.98 mt, reflecting adoption of the new quota by ICCAT in Recommendation 25-05."
+
+And for 2025, it refers to "the adjusted U.S. quota was 1,199.94 mt (including the 25-mt set-aside for the Northeast Distant gear restricted area (NED)) (90 FR 60017, December 23, 2025)" which was the quota after adjustments, but the baseline quota for 2025 is clearly shown as 1,316.14 mt in the table.
+
+So the difference is 1,509.98 - 1,316.14 = 193.84 mt.
+
+Wait, let me check one more time to be absolutely sure.
+
+In Document 6 (the final rule from August 19, 2026), Table 5 shows the same numbers:
+"Baseline Quota.......................... 1,316.14 1,509.98" for 2025 and 2026.
+
+And the text says: "Consistent with Recommendation 25-05, the maximum underharvest that the United States can carry forward from one year to the next is 10 percent of its total annual quota, which equates to 134.1 mt for 2025. In 2025, the adjusted U.S. quota was 1,199.94 mt (including the 25-mt set-aside for the Northeast Distant gear restricted area (NED)) (90 FR 60017, December 23, 2025)..."
+
+This confirms that 1,316.14 mt was the baseline quota for 2025 (before the 25 mt set-aside), and 1,509.98 mt is the baseline quota for 2026 (before the 62.5 mt set-aside).
+
+Actually, let me clarify: the "Baseline Quota" in the table appears to be the country-specific allocation before any set-asides. For 2025, the total annual quota including the set-aside was 1,341.14 mt (1,316.14 + 25). For 2026, the total annual quota including the set-aside is 1,572.48 mt (1,509.98 + 62.5).
+
+But the question asks about "the western Atlantic bluefin tuna total allowable catch was the United States allocated". The U.S. allocation would be the country-specific quota, which is the "Baseline Quota" in the table (1,316.14 mt for 2025 and 1,509.98 mt for 2026).
+
+The set-asides (25 mt for 2025, 62.5 mt for 2026) are part of the U.S. allocation but designated for specific purposes (bycatch). However, the question says "Before any underharvest or overharvest adjustment", which would refer to the baseline allocation before any carryover from previous years.
+
+Given the table explicitly labels these as "Baseline Quota" for each year, and the text refers to "the U.S. bluefin tuna baseline quota of 1,509.98 mt", I believe 1,316.14 mt and 1,509.98 mt are the correct figures to use.
+
+So the difference is 1,509.98 - 1,316.14 = 193.84 mt.
+
+Actually, let me check one more detail. The question says "western Atlantic bluefin tuna total allowable catch". Is the 1,316.14 mt and 1,509.98 mt specifically for the western Atlantic?
+
+Reading more carefully: "In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028. The current U.S. percentages of the bluefin tuna TAC were first established in Recommendation 10-03. If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC."
+
+3,081.6 mt * 0.49 = 1,509.984 mt, which rounds to 1,509.98 mt. So this 1,509.98 mt is the U.S. share of the total Atlantic bluefin tuna TAC (not just western Atlantic).
+
+But then it says: "Recommendation 25-05 further increased the U.S. allocation for longline bycatch of bluefin tuna from 25 mt to 62.5 mt. The Recommendation states that the 62.5 mt allocation is for bycatch related to longline fisheries in the vicinity of the management area boundary and adjacent areas and that this allocation is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC. Recommendation 25-05 removed a provision from a prior recommendation that provided for subtracting the longline bycatch allocation from the TAC before calculating the individual country quotas. As such, the overall U.S. quota under Recommendation 25-05 is 1,572.48 mt, of which 62.5 mt can be used only by pelagic longline fishermen."
+
+This suggests that the 1,509.98 mt is the U.S. allocation from the western Atlantic TAC, and the additional 62.5 mt is from the eastern Atlantic TAC.
+
+Let me check: 3,081.6 mt * 0.49 = 1,509.984 mt. If the total TAC is 3,081.6 mt and this is for the western Atlantic, then yes, 1,509.98 mt would be the U.S. allocation for western Atlantic bluefin tuna.
+
+But typically, ICCAT manages eastern and western Atlantic bluefin tuna as separate stocks with separate TACs. Let me see if the document clarifies.
+
+Actually, in the table it says "U.S. Baseline Quota........................... ................. ................................ 1,509.98" and then "Bycatch set-aside (for use by Longline ................. ................................ 62.5" and "Annual Total U.S. quota................... ................. ................................ 1,572.48".
+
+And the footnote says: "* The United States is allocated an additional 25 mt in 2025 and 62.5 mt in 2026 to account for bycatch related to pelagic longline fisheries."
+
+Earlier it says: "the 62.5 mt allocation is for bycatch related to longline fisheries in the vicinity of the management area boundary and adjacent areas and that this allocation is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC."
+
+So it seems the 1,509.98 mt is the U.S. allocation from the western Atlantic TAC, and the 62.5 mt is an additional allocation from the eastern Atlantic TAC for bycatch.
+
+Similarly for 2025: baseline quota 1,316.14 mt (western Atlantic) + 25 mt (eastern Atlantic bycatch) = 1,341.14 mt total.
+
+The question specifically asks about "western Atlantic bluefin tuna total allowable catch", so we should use the baseline quota numbers (1,316.14 mt for 2025 and 1,509.98 mt for 2026), which represent the U.S. allocation from the western Atlantic TAC.
+
+Therefore, the difference is 1,509.98 - 1,316.14 = 193.84 mt.
+
+Let me confirm the 2025 baseline quota once more. In Document 3, Table 5 shows "Baseline Quota.......................... 1,316.14 1,509.98" for 2025 and 2026.
+
+In Document 6, the same table shows the same numbers.
+
+And the text in Document 3: "In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028."
+
+This implies that prior to Recommendation 25-05, the U.S. quota was lower. The previous recommendation would have set the quota for 2025.
+
+Given all this, I'm confident the baseline quotas (U.S. allocation from western Atlantic TAC) are 1,316.14 mt for 2025 and 1,509.98 mt for 2026.
+
+Difference: 1,509.98 - 1,316.14 = 193.84 mt.
+
+Actually, let me do the exact calculation:
+1,509.98
+-1,316.14
+= 193.84
+
+Yes, 193.84 metric tons.
+
+The question asks for the answer to two decimals, which 193.84 already is.
+
+So the answer should be 193.84.
+
+Attempt 4 · Wrong
+-----------------
+Docs: Doc 3, Doc 6 · Note: —
+
+Final answer: 193.84 | Your answer (gold): 168.84 mt
+
+How it got there: It used Doc 6's Table 5 baseline quota figures (1,316.14 for 2025 and 1,509.98 for 2026) and subtracted them directly.
+
+Where it left your evidence: It treated the 2025 bycatch set-aside of 25 mt as not part of the western Atlantic TAC allocation, whereas the expert's reasoning includes it for 2025 because it was previously subtracted from the western TAC.
+
+Passages quoted:
+
+- Quoted Doc 3: “Atlantic Highly Migratory Species; North Atlantic Swordfish, South Atlantic Swordfish, North Atlantic Albacore, and Atlantic Bluefin Tuna Quotas”
+- Quoted Doc 3: “Bluefin Tuna Annual Quota, Subquotas, and Adjustment Process”
+- Quoted Doc 6: “* The United States is allocated an additional 25 mt in 2025 and 62.5 mt in 2026 to account for bycatch related to pelagic longline fisheries.”
+- Quoted Doc 3: “In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028.”
+- Quoted Doc 3: “The current U.S. percentages of the bluefin tuna TAC were first established in Recommendation 10-03. If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC.”
+
+Named Doc 3, Doc 6
+
+Full answer
+-----------
+
+193.84
+
+Reasoning
+---------
+
+Let me carefully analyze the text to find information about the United States' allocation of western Atlantic bluefin tuna total allowable catch for 2025 and 2026.
+
+First, I need to identify where the document discusses bluefin tuna quotas for 2025 and 2026.
+
+Looking at Document 3 (Federal Register, Volume 91 Issue 88, May 7, 2026), which discusses "Atlantic Highly Migratory Species; North Atlantic Swordfish, South Atlantic Swordfish, North Atlantic Albacore, and Atlantic Bluefin Tuna Quotas", I see relevant information.
+
+In the section about "Bluefin Tuna Annual Quota, Subquotas, and Adjustment Process", it states:
+
+"In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028. The current U.S. percentages of the bluefin tuna TAC were first established in Recommendation 10-03. If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC. Recommendation 25-05 further increased the U.S. allocation for longline bycatch of bluefin tuna from 25 mt to 62.5 mt. The Recommendation states that the 62.5 mt allocation is for bycatch related to longline fisheries in the vicinity of the management area boundary and adjacent areas and that this allocation is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC. Recommendation 25-05 removed a provision from a prior recommendation that provided for subtracting the longline bycatch allocation from the TAC before calculating the individual country quotas. As such, the overall U.S. quota under Recommendation 25-05 is 1,572.48 mt, of which 62.5 mt can be used only by pelagic longline fishermen."
+
+This tells me that for 2026-2028, the U.S. baseline quota is 1,509.98 mt, and with the longline bycatch allocation, the overall U.S. quota is 1,572.48 mt.
+
+Now I need to find what the U.S. quota was for 2025.
+
+Looking further in the document, in Table 5, it shows:
+"Bluefin tuna quota (mt ww) 2025 2026
+Baseline Quota.......................... 1,316.14 1,509.98
+Total Quota (Baseline Quota + Bycatch 1,341.14 1,572.48
+Allocation) *.........................."
+
+And there's a footnote: "* The United States is allocated an additional 25 mt in 2025 and 62.5 mt in 2026 to account for bycatch related to pelagic longline fisheries."
+
+So for 2025, the baseline quota was 1,316.14 mt, and with the 25 mt bycatch allocation, the total quota was 1,341.14 mt.
+For 2026, the baseline quota is 1,509.98 mt, and with the 62.5 mt bycatch allocation, the total quota is 1,572.48 mt.
+
+The question asks: "Before any underharvest or overharvest adjustment, how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025, to two decimals?"
+
+I need to be careful here. The question specifically asks about "the western Atlantic bluefin tuna total allowable catch" allocation, not the total quota including bycatch allocations.
+
+Let me check if the document distinguishes between western Atlantic and eastern Atlantic bluefin tuna.
+
+In the same section: "Recommendation 25-05 further increased the U.S. allocation for longline bycatch of bluefin tuna from 25 mt to 62.5 mt. The Recommendation states that the 62.5 mt allocation is for bycatch related to longline fisheries in the vicinity of the management area boundary and adjacent areas and that this allocation is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC. Recommendation 25-05 removed a provision from a prior recommendation that provided for subtracting the longline bycatch allocation from the TAC before calculating the individual country quotas."
+
+This suggests that the baseline quota (1,316.14 mt for 2025 and 1,509.98 mt for 2026) is for the western Atlantic bluefin tuna, while the bycatch allocation (25 mt for 2025 and 62.5 mt for 2026) is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC.
+
+Also, in the proposed rule (Document 3), it says: "In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028."
+
+And: "The current U.S. percentages of the bluefin tuna TAC were first established in Recommendation 10-03. If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC."
+
+Let me verify: 49% of 3,081.6 mt = 1,509.984 mt, which matches the 1,509.98 mt mentioned (rounded to two decimals).
+
+For 2025, what was the TAC? If the U.S. baseline quota was 1,316.14 mt and that represented 49% of the TAC (assuming the same percentage applied), then the TAC would have been 1,316.14 / 0.49 = 2,686 mt approximately.
+
+But the document states: "If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC." This suggests that for 2025, the TAC might have been below 2,660 mt, so a different percentage might have applied.
+
+Actually, let me check Document 6 (Federal Register, Volume 91 Issue 159, August 19, 2026), which is the final rule implementing these quotas.
+
+In Document 6, Table 5 shows:
+"Bluefin tuna quota (mt ww) 2025 2026
+Baseline Quota.......................... 1,316.14 1,509.98
+Total Quota (Baseline Quota + Bycatch 1,341.14 1,572.48
+Allocation) *.........................."
+
+And the footnote: "* The United States is allocated an additional 25 mt in 2025 and 62.5 mt in 2026 to account for bycatch related to pelagic longline fisheries."
+
+Also, in the text: "Consistent with Recommendation 25-05, the maximum underharvest that the United States can carry forward from one year to the next is 10 percent of its total annual quota, which equates to 134.1 mt for 2025. In 2025, the adjusted U.S. quota was 1,199.94 mt (including the 25-mt set-aside for the Northeast Distant gear restricted area (NED)) (90 FR 60017, December 23, 2025), and the U.S. catch, including landings and dead discards, totaled 1,125.1 mt. Thus, the 2025 underharvest was 74.8 mt."
+
+This confirms that for 2025, the baseline quota was 1,316.14 mt, with an additional 25 mt for bycatch (specifically for the NED), making the total quota 1,341.14 mt.
+
+But the question asks specifically about "the western Atlantic bluefin tuna total allowable catch" allocation.
+
+From the text: "Recommendation 25-05 further increased the U.S. allocation for longline bycatch of bluefin tuna from 25 mt to 62.5 mt. The Recommendation states that the 62.5 mt allocation is for bycatch related to longline fisheries in the vicinity of the management area boundary and adjacent areas and that this allocation is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC."
+
+And: "Recommendation 25-05 removed a provision from a prior recommendation that provided for subtracting the longline bycatch allocation from the TAC before calculating the individual country quotas."
+
+This suggests that the baseline quota (1,316.14 mt for 2025 and 1,509.98 mt for 2026) is the allocation from the western Atlantic bluefin tuna TAC, while the bycatch allocation (25 mt for 2025 and 62.5 mt for 2026) is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC.
+
+Let me confirm this with another part of the document.
+
+In Document 3: "In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028. The current U.S. percentages of the bluefin tuna TAC were first established in Recommendation 10-03. If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC."
+
+This "bluefin tuna TAC" of 3,081.6 mt appears to be the total TAC (western + eastern?), but then it says the U.S. receives 49% of that TAC, which equals 1,509.98 mt.
+
+But then it says: "Recommendation 25-05 further increased the U.S. allocation for longline bycatch of bluefin tuna from 25 mt to 62.5 mt. The Recommendation states that the 62.5 mt allocation is for bycatch related to longline fisheries in the vicinity of the management area boundary and adjacent areas and that this allocation is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC."
+
+This is confusing. If the U.S. gets 49% of the total TAC (3,081.6 mt) = 1,509.98 mt, and then gets an additional 62.5 mt from the eastern TAC, that would make the total U.S. allocation 1,572.48 mt.
+
+But the document says: "As such, the overall U.S. quota under Recommendation 25-05 is 1,572.48 mt, of which 62.5 mt can be used only by pelagic longline fishermen."
+
+And in Table 5 of Document 6, it shows Baseline Quota 1,509.98 for 2026 and Total Quota 1,572.48.
+
+For 2025, Baseline Quota 1,316.14 and Total Quota 1,341.14 (with 25 mt bycatch).
+
+Given the statement that the bycatch allocation "is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC", it seems that the "Baseline Quota" represents the allocation from the western Atlantic bluefin tuna TAC.
+
+Let me check if there's more explicit information.
+
+In Document 3: "Recommendation 25-05 removed a provision from a prior recommendation that provided for subtracting the longline bycatch allocation from the TAC before calculating the individual country quotas."
+
+This suggests that previously, the bycatch allocation was subtracted from the TAC first, then countries got their percentages of the remaining TAC. But now, countries get their percentages of the full TAC, and then get an additional bycatch allocation from the eastern TAC.
+
+Actually, let me think about this more carefully.
+
+Typically, ICCAT sets separate TACs for western Atlantic bluefin tuna and eastern Atlantic/Mediterranean bluefin tuna.
+
+The U.S. is primarily a western Atlantic fishing nation, so its main quota comes from the western Atlantic TAC.
+
+But there's some mixing, and U.S. longline vessels catch some eastern-origin bluefin tuna in the western Atlantic (in the "management area boundary and adjacent areas").
+
+So Recommendation 25-05 seems to have increased the western Atlantic TAC (hence increasing the U.S. baseline quota from 1,316.14 to 1,509.98), and also increased the allowance for U.S. longline bycatch of eastern-origin bluefin tuna from 25 mt to 62.5 mt.
+
+The question asks: "Before any underharvest or overharvest adjustment, how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025, to two decimals?"
+
+Based on the tables, the "Baseline Quota" for 2025 was 1,316.14 mt and for 2026 was 1,509.98 mt.
+
+The difference is 1,509.98 - 1,316.14 = 193.84 mt.
+
+And the text indicates this baseline quota is the allocation from the western Atlantic bluefin tuna TAC (since the bycatch allocation is explicitly stated to be "derived from the eastern Atlantic and Mediterranean bluefin tuna TAC").
+
+Let me double-check with the percentage calculation.
+
+For 2026: U.S. baseline quota = 1,509.98 mt = 49% of western Atlantic TAC
+So western Atlantic TAC for 2026 = 1,509.98 / 0.49 = 3,081.59 mt, which matches "increased the bluefin tuna TAC to 3,081.6 mt" (though it says "bluefin tuna TAC" not "western Atlantic bluefin tuna TAC").
+
+For 2025: If the same 49% applied, western Atlantic TAC for 2025 = 1,316.14 / 0.49 = 2,686 mt.
+
+But the document says: "If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC."
+
+"As is currently the case" likely refers to 2026 (when the proposed rule was written in May 2026), implying that for 2025, the TAC might have been <= 2,660 mt, so a different percentage applied.
+
+However, the baseline quota numbers are explicitly given as 1,316.14 for 2025 and 1,509.98 for 2026 in the tables, and the text explains the bycatch allocation separately as coming from the eastern TAC.
+
+Given all this, I believe the "Baseline Quota" in the tables represents the U.S. allocation from the western Atlantic bluefin tuna TAC.
+
+Therefore, the difference is 1,509.98 - 1,316.14 = 193.84 mt.
+
+Let me check if there's any other interpretation.
+
+In Document 6, it says: "In this rulemaking, NMFS implements a U.S. bluefin tuna baseline quota of 1,509.98 mt, reflecting adoption of the new quota by ICCAT in Recommendation 25-05."
+
+And for 2025, the baseline quota was 1,316.14 mt as shown in the table.
+
+Also, in the section "Bluefin Tuna Annual Quota and Subquotas" in Document 3: "In this rulemaking, NMFS proposes to implement a U.S. bluefin tuna baseline quota of 1,509.98 mt, reflecting adoption of the new quota at ICCAT in Recommendation 25-05."
+
+This confirms 1,509.98 mt is the new baseline quota for 2026.
+
+And from the table, 1,316.14 mt was the baseline quota for 2025.
+
+The question specifically asks about "the western Atlantic bluefin tuna total allowable catch" allocation, and given that the bycatch allocation is explicitly stated to be from the eastern TAC, the baseline quota should be the western Atlantic allocation.
+
+So the answer should be 1,509.98 - 1,316.14 = 193.84 mt.
+
+Let me calculate it precisely:
+1,509.98
+-1,316.14
+---------
+  193.84
+
+Yes, 193.84 metric tons.
+
+The question asks for the answer to two decimals, which this already is.
+
+Actually, let me verify the numbers once more from the tables.
+
+In Document 3, Table 1 shows for bluefin tuna:
+"U.S. Baseline Quota........................... ................. ................................ 1,509.98"
+
+But that's for 2026. Where is the 2025 baseline quota in Document 3?
+
+In Document 3, it says: "The current U.S. percentages of the bluefin tuna TAC were first established in Recommendation 10-03. If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC."
+
+But it doesn't explicitly state the 2025 baseline quota in Document 3. However, in Document 6 (the final rule), Table 5 clearly shows:
+"Baseline Quota.......................... 1,316.14 1,509.98" for 2025 and 2026 respectively.
+
+And Document 6 is the implementation of what was proposed in Document 3, so these numbers should be consistent.
+
+Also, in Document 3, in the section "Implementation of Pelagic Longline Bycatch Set-Aside Quota for Bluefin Tuna", it says: "As described above, this rulemaking would increase the pelagic longline bycatch set-aside quota from 25 mt to 62.5 mt consistent with ICCAT Recommendation 25-05."
+
+This confirms 25 mt was the 2025 bycatch allocation and 62.5 mt is the 2026 bycatch allocation.
+
+And in the same section: "Recommendation 25-05 removed a provision from a prior recommendation that provided for subtracting the longline bycatch allocation from the TAC before calculating the individual country quotas. As such, the overall U.S. quota under Recommendation 25-05 is 1,572.48 mt, of which 62.5 mt can be used only by pelagic longline fishermen."
+
+For 2025, the overall U.S. quota would have been baseline + 25 mt = 1,341.14 mt as shown in Document 6 Table 5.
+
+Given all this, I'm confident that the baseline quota (1,316.14 mt for 2025, 1,509.98 mt for 2026) represents the U.S. allocation from the western Atlantic bluefin tuna TAC.
+
+Therefore, the difference is 193.84 mt.
+
+Attempt 5 · Wrong
+-----------------
+Docs: Doc 3, Doc 6 · Note: —
+
+Final answer: 193.84 | Your answer (gold): 168.84 mt
+
+How it got there: It used Doc 6's Table 5 baseline quota figures (1,316.14 for 2025 and 1,509.98 for 2026) and subtracted them directly.
+
+Where it left your evidence: It treated the 2025 bycatch set-aside of 25 mt as not part of the western Atlantic TAC allocation, whereas the expert's reasoning includes it for 2025 because it was previously subtracted from the western TAC.
+
+Passages quoted:
+
+- Quoted Doc 3: “Atlantic Highly Migratory Species; North Atlantic Swordfish, South Atlantic Swordfish, North Atlantic Albacore, and Atlantic Bluefin Tuna Quotas”
+- Quoted Doc 3: “In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028.”
+- Quoted Doc 6: “Baseline Quota.......................... 1,316.14 1,509.98”
+- Quoted Doc 3: “The current U.S. percentages of the bluefin tuna TAC were first established in Recommendation 10-03. If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC.”
+- Quoted Doc 3: “Recommendation 25-05 further increased the U.S. allocation for longline bycatch of bluefin tuna from 25 mt to 62.5 mt.”
+
+Named Doc 3, Doc 6
+
+Full answer
+-----------
+
+193.84
+
+Reasoning
+---------
+
+Let me analyze the question and find the relevant information in the provided documents.
+
+The question asks: "Before any underharvest or overharvest adjustment, how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025, to two decimals?"
+
+I need to find:
+1. The U.S. allocation of western Atlantic bluefin tuna for 2026 (before adjustments)
+2. The U.S. allocation of western Atlantic bluefin tuna for 2025 (before adjustments)
+3. Calculate the difference in metric tons, rounded to two decimals
+
+Let me search through the documents for information about bluefin tuna quotas for 2025 and 2026.
+
+Looking at Document 3 (Federal Register, Volume 91 Issue 88, May 7, 2026), which discusses "Atlantic Highly Migratory Species; North Atlantic Swordfish, South Atlantic Swordfish, North Atlantic Albacore, and Atlantic Bluefin Tuna Quotas", I find relevant information.
+
+In Document 3, on page 24793, it states:
+"In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028."
+
+This gives me the 2026 U.S. quota: 1,509.98 mt
+
+Let me find the 2025 U.S. quota. On page 24797, in Table 5, it shows:
+"Baseline Quota.......................... 1,316.14 1,509.98"
+
+This appears to be showing the baseline quota for 2025 (1,316.14 mt) and 2026 (1,509.98 mt).
+
+Let me confirm this. On page 24793, it says: "The current U.S. percentages of the bluefin tuna TAC were first established in Recommendation 10-03. If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC."
+
+And on page 24797, Table 5 shows "Baseline Quota" as 1,316.14 for 2025 and 1,509.98 for 2026.
+
+Also, on page 24793: "Recommendation 25-05 further increased the U.S. allocation for longline bycatch of bluefin tuna from 25 mt to 62.5 mt."
+
+But the question asks for "before any underharvest or overharvest adjustment", so I think we're looking at the baseline quota, not including the bycatch set-aside.
+
+Let me check Document 6 (Federal Register, Volume 91 Issue 159, August 19, 2026), which is the final rule implementing these quotas.
+
+On page 53531, Table 5 shows:
+"Baseline Quota.......................... 1,316.14 1,509.98"
+
+This confirms the baseline quotas for 2025 and 2026.
+
+So the difference would be: 1,509.98 - 1,316.14 = 193.84 mt
+
+Let me double-check if these are specifically for the western Atlantic bluefin tuna.
+
+On page 24793 of Document 3: "Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028. The current U.S. percentages of the bluefin tuna TAC were first established in Recommendation 10-03. If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC."
+
+And: "Recommendation 25-05 further increased the U.S. allocation for longline bycatch of bluefin tuna from 25 mt to 62.5 mt. The Recommendation states that the 62.5 mt allocation is for bycatch related to longline fisheries in the vicinity of the management area boundary and adjacent areas and that this allocation is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC. Recommendation 25-05 removed a provision from a prior recommendation that provided for subtracting the longline bycatch allocation from the TAC before calculating the individual country quotas. As such, the overall U.S. quota under Recommendation 25-05 is 1,572.48 mt, of which 62.5 mt can be used only by pelagic longline fishermen."
+
+This is important. It says the overall U.S. quota is 1,572.48 mt, but 62.5 mt of that is from the eastern Atlantic and Mediterranean bluefin tuna TAC (for bycatch). So the western Atlantic bluefin tuna allocation would be 1,572.48 - 62.5 = 1,509.98 mt.
+
+For 2025, it says the baseline quota was 1,316.14 mt, and there was a 25 mt bycatch set-aside from the eastern Atlantic. So the western Atlantic allocation for 2025 would be 1,316.14 mt (since the 25 mt was already excluded from the baseline quota calculation, or was it included?).
+
+Let me check Document 6, page 53531, Table 5:
+"Baseline Quota.......................... 1,316.14 1,509.98
+Total Quota (Baseline Quota + Bycatch Allocation) *.......................... 1,341.14 1,572.48"
+
+And the footnote: "* The United States is allocated an additional 25 mt in 2025 and 62.5 mt in 2026 to account for bycatch related to pelagic longline fisheries."
+
+This confirms that the "Baseline Quota" (1,316.14 for 2025, 1,509.98 for 2026) is the western Atlantic bluefin tuna allocation, and the "Total Quota" adds the bycatch allocation from the eastern Atlantic.
+
+So the western Atlantic bluefin tuna baseline quota (before underharvest/overharvest adjustments) was:
+- 2025: 1,316.14 mt
+- 2026: 1,509.98 mt
+
+The difference is 1,509.98 - 1,316.14 = 193.84 mt
+
+The question asks for "how many more metric tons... was the United States allocated for 2026 than for 2025", so it's 193.84 mt more in 2026 than in 2025.
+
+Let me verify once more to be absolutely sure.
+
+From Document 3, page 24793: "In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028."
+
+And from Table 5 in both Document 3 (page 24797) and Document 6 (page 53531): Baseline Quota for 2025 is 1,316.14 mt, for 2026 is 1,509.98 mt.
+
+The footnote in Table 5 of Document 6 confirms: "The United States is allocated an additional 25 mt in 2025 and 62.5 mt in 2026 to account for bycatch related to pelagic longline fisheries."
+
+So yes, the baseline quota (1,316.14 and 1,509.98) is the western Atlantic allocation, and the additional amounts are from the eastern Atlantic for bycatch.
+
+Therefore, the difference in western Atlantic bluefin tuna allocation (before adjustments) between 2026 and 2025 is 1,509.98 - 1,316.14 = 193.84 mt.
+
+Actually, let me check one more time to ensure these are specifically for the western Atlantic.
+
+From Document 3, page 24793: "Recommendation 25-05 further increased the U.S. allocation for longline bycatch of bluefin tuna from 25 mt to 62.5 mt. The Recommendation states that the 62.5 mt allocation is for bycatch related to longline fisheries in the vicinity of the management area boundary and adjacent areas and that this allocation is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC."
+
+And: "Recommendation 25-05 removed a provision from a prior recommendation that provided for subtracting the longline bycatch allocation from the TAC before calculating the individual country quotas. As such, the overall U.S. quota under Recommendation 25-05 is 1,572.48 mt, of which 62.5 mt can be used only by pelagic longline fishermen."
+
+This suggests that previously, the bycatch allocation was subtracted from the TAC before calculating country quotas, but now it's added on top. But the key point is that the 62.5 mt (and previously 25 mt) is derived from the eastern Atlantic TAC, not the western Atlantic TAC.
+
+Also, from Document 6, page 53530: "In recognition of new information regarding increased mixing between the western Atlantic and eastern Atlantic bluefin tuna stocks in the western Atlantic bluefin tuna management area, Recommendation 25-05 modifies the area where the set-aside applies for longline fisheries from 'in the vicinity of the management area boundary' as specified in Recommendation 22-10 (and previous iterations of western Atlantic bluefin tuna management measures) to 'in the vicinity of the management area boundary and adjacent areas.' Additionally, Recommendation 25-05 now specifies that the set-aside comes from the eastern Atlantic bluefin tuna TAC as opposed to the western Atlantic TAC."
+
+This confirms that the bycatch set-aside (25 mt in 2025, 62.5 mt in 2026) comes from the eastern Atlantic TAC, not the western Atlantic TAC.
+
+Therefore, the baseline quota (1,316.14 mt for 2025, 1,509.98 mt for 2026) represents the U.S. allocation from the western Atlantic bluefin tuna TAC.
+
+So the difference is 1,509.98 - 1,316.14 = 193.84 mt.
+
+The question asks for the answer to two decimals, which 193.84 already is.
+
+Actually, let me do the precise calculation:
+1,509.98 - 1,316.14 = 193.84
+
+Yes, that's correct.
+
+Wait, I should check if there's any other mention of the 2025 quota that might be more precise.
+
+In Document 6, page 53531, Table 5 shows "Baseline Quota.......................... 1,316.14 1,509.98" for 2025 and 2026 respectively.
+
+In Document 3, page 24797, Table 5 shows the same values.
+
+So the calculation is solid: 1,509.98 - 1,316.14 = 193.84
+
+Actually, let me verify the subtraction:
+1,509.98
+-1,316.14
+=  193.84
+
+Yes, that's correct.
+
+So the answer should be 193.84
+
+High model
+==========
+
+Attempt 1 · Wrong
+-----------------
+Docs: Doc 3, Doc 6 · Note: Note: where it went wrong
+
+Final answer: The United States was allocated 193.84 metric tons more of the western Atlantic bluefin tuna total allowable catch for 2026 than for 2025. | Your answer (gold): 168.84 mt
+
+Where it went wrong: Quoted the TAC increase and U.S. quota language in Document 3 and computed the baseline difference 193.84; the documents never present 168.84 as any U.S. quota change.Doc 3
+
+How it got there: It used Doc 6's Table 5 baseline quota figures (1,316.14 for 2025 and 1,509.98 for 2026) and subtracted them directly.
+
+Where it left your evidence: It treated the 2025 bycatch set-aside of 25 mt as not part of the western Atlantic TAC allocation, whereas the expert's reasoning includes it for 2025 because it was previously subtracted from the western TAC.
+
+Passages quoted:
+
+- Quoted Doc 3: “In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028.”
+
+Named Doc 6, Doc 3
+
+Full answer
+-----------
+
+Finding the Answer
+
+From Document 6 (final rule), Table 5 provides the baseline quotas before underharvest/overharvest adjustments:
+
+| | 2025 | 2026 | |---|---|---| | Baseline Quota (mt ww) | 1,316.14 | 1,509.98 |
+
+These figures represent the U.S. allocation of the western Atlantic bluefin tuna TAC (49% of the western Atlantic TAC when it exceeds 2,660 mt). The 62.5 mt pelagic longline bycatch set-aside is derived from the eastern Atlantic/Mediterranean TAC and is not part of the western Atlantic allocation.
+
+Calculation:
+
+$$1{,}509.98 - 1{,}316.14 = 193.84 \text{ mt}$$
+
+The United States was allocated 193.84 metric tons more of the western Atlantic bluefin tuna total allowable catch for 2026 than for 2025.
+
+Reasoning
+---------
+
+We need to find the U.S. baseline quota for bluefin tuna in 2025 and 2026, before underharvest/overharvest adjustments.
+
+From Document 6 (final rule), Table 5 shows:
+- Baseline Quota 2025: 1,316.14 mt ww
+- Baseline Quota 2026: 1,509.98 mt ww
+
+But the question asks about "the western Atlantic bluefin tuna total allowable catch" allocated to the United States. Let me think about this more carefully.
+
+Actually, the question asks about how many more metric tons of the western Atlantic bluefin tuna total allowable catch the United States was allocated for 2026 than for 2025.
+
+From Document 3 (proposed rule): "In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028."
+
+The U.S. receives 49% of the TAC when the TAC is greater than 2,660 mt.
+
+For 2025: The baseline quota was 1,316.14 mt (from Table 5 in Document 6).
+For 2026: The baseline quota is 1,509.98 mt.
+
+Difference: 1,509.98 - 1,316.14 = 193.84 mt.
+
+Wait, but the question says "western Atlantic bluefin tuna total allowable catch." Let me re-read.
+
+From Document 3: "Recommendation 25-05 further increased the U.S. allocation for longline bycatch of bluefin tuna from 25 mt to 62.5 mt. The Recommendation states that the 62.5 mt allocation is for bycatch related to longline fisheries... and that this allocation is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC. Recommendation 25-05 removed a provision from a prior recommendation that provided for subtracting the longline bycatch allocation from the TAC before calculating the individual country quotas. As such, the overall U.S. quota under Recommendation 25-05 is 1,572.48 mt, of which 62.5 mt can be used only by pelagic longline fishermen."
+
+So the 62.5 mt is from the eastern Atlantic/Mediterranean TAC, not the western Atlantic TAC. The question specifically asks about the "western Atlantic bluefin tuna total allowable catch."
+
+The baseline U.S. quota of 1,509.98 mt for 2026 is the western Atlantic allocation (49% of the western Atlantic TAC of 3,081.6 mt).
+
+For 2025, the baseline quota was 1,316.14 mt. This would correspond to 49% of the 2025 western Atlantic TAC.
+
+1,509.98 - 1,316.14 = 193.84 mt.
+
+The question asks "to two decimals" — 193.84.
+
+Let me verify: 2025 baseline = 1,316.14 mt ww, 2026 baseline = 1,509.98 mt ww. Difference = 193.84 mt.
+
+These are the values "before any underharvest or overharvest adjustment" as the question specifies. The adjusted quotas include carryover, but baseline quotas don't.
+
+So the answer is 193.84 metric tons.
+
+Attempt 2 · Wrong
+-----------------
+Docs: Doc 3, Doc 6 · Note: —
+
+Final answer: 193.84 metric tons | Your answer (gold): 168.84 mt
+
+How it got there: It used Doc 6's Table 5 baseline quota figures (1,316.14 for 2025 and 1,509.98 for 2026) and subtracted them directly.
+
+Where it left your evidence: It treated the 2025 bycatch set-aside of 25 mt as not part of the western Atlantic TAC allocation, whereas the expert's reasoning includes it for 2025 because it was previously subtracted from the western TAC.
+
+Passages quoted:
+
+Named Doc 6, Doc 3
+
+Full answer
+-----------
+
+Analysis
+
+The question asks for the difference in the U.S. baseline (pre‑adjustment) allocation of the western Atlantic bluefin tuna TAC between 2026 and 2025.
+
+2025 baseline quota: 1,316.14 mt (Document 6, Table 5 — "Baseline Quota … 2025: 1,316.14"; also referenced in Document 3 as the pre‑Recommendation‑25‑05 quota).
+
+2026 baseline quota: 1,509.98 mt. Per Recommendation 25‑05 (adopted 2025), ICCAT raised the western Atlantic TAC to 3,081.6 mt, and with the U.S. share of 49 percent (the share established in Recommendation 10‑03 when the TAC exceeds 2,660 mt), the U.S. quota rises to 1,509.98 mt for 2026–2028 (Documents 3 and 6).
+
+Calculation (baseline quotas only — no underharvest/overharvest carryover):
+
+$$1{,}509.98 - 1{,}316.14 = 193.84 \text{ mt}$$
+
+Note: The pelagic longline bycatch set‑aside (25 mt in 2025 → 62.5 mt in 2026) is excluded — the rules explicitly state the baseline U.S. quota is "1,509.98 mt, not including an additional annual 62.5‑mt pelagic longline bycatch set‑aside," and Recommendation 25‑05 derives that set‑aside from the eastern Atlantic/Mediterranean TAC, not the western Atlantic TAC. Likewise, the 2025 underharvest carryover (74.8 mt) and inseason transfers are set aside per the question's "before any underharvest or overharvest adjustment" qualifier.
+
+Answer
+
+193.84 metric tons
+
+Reasoning
+---------
+
+We need the U.S. baseline bluefin tuna quota for 2025 and 2026, before adjustments.
+
+2025 baseline: 1,316.14 mt (from Table 5 in Document 6: "Baseline Quota 2025: 1,316.14").
+
+2026 baseline: 1,509.98 mt.
+
+Difference: 1,509.98 - 1,316.14 = 193.84 mt.
+
+Wait, but the question says "western Atlantic bluefin tuna total allowable catch" — the U.S. share. Let me check: Recommendation 25-05 increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028. The U.S. receives 49% of the TAC when overall TAC > 2,660 mt. The current quota in 2025 was 1,316.14 mt.
+
+Also note the bycatch set-aside: 25 mt in 2025 vs 62.5 mt in 2026 — but those are additional, and the question asks about "the western Atlantic bluefin tuna total allowable catch ... allocated to the United States" — that's the baseline quota. Actually, the question says "before any underharvest or overharvest adjustment" which refers to the baseline quota.
+
+Hmm, but should we include the bycatch set-aside? The question says "how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated." The U.S. baseline quota is the western Atlantic BFT TAC allocation. In 2025 the U.S. allocation was 1,316.14 mt (baseline) plus 25 mt bycatch set-aside = 1,341.14 total. In 2026: 1,509.98 + 62.5 = 1,572.48. Difference: 231.34.
+
+Hmm, which interpretation? The question says "the western Atlantic bluefin tuna total allowable catch was the United States allocated." The western Atlantic TAC allocation to the U.S. — Recommendation 25-05 increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt. Actually wait — is3,081.6 the western Atlantic TAC? Let me re-read.
+
+"In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028. The current U.S. percentages of the bluefin tuna TAC were first established in Recommendation 10-03. If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC."
+
+49% of 3,081.6 = 1,510.0... yes≈ 1,509.98. So the "TAC" here is the western Atlantic TAC. So the U.S. allocation is 1,509.98 mt for 2026.
+
+For 2025, the baseline was 1,316.14 mt. The difference = 193.84.
+
+"Before any underharvest or overharvest adjustment" — that means baseline quota. So 1,509.98 - 1,316.14 = 193.84 mt.
+
+The bycatch set-aside is separately noted as "not including an additional annual 62.5-mt pelagic longline bycatch set-aside quota" — it's derived from the eastern Atlantic and Mediterranean TAC, not the western Atlantic TAC. Actually the recommendation states "this allocation is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC." So the bycatch set-aside is not part of the western Atlantic TAC allocation. So the answer is 193.84 mt.
+
+Answer: 193.84 metric tons.
+
+Attempt 3 · Wrong
+-----------------
+Docs: Doc 3, Doc 6 · Note: —
+
+Final answer: The United States was allocated 193.84 more metric tons of the western Atlantic bluefin tuna TAC in 2026 than in 2025. | Your answer (gold): 168.84 mt
+
+How it got there: It used Doc 6's Table 5 baseline quota figures (1,316.14 for 2025 and 1,509.98 for 2026) and subtracted them directly.
+
+Where it left your evidence: It treated the 2025 bycatch set-aside of 25 mt as not part of the western Atlantic TAC allocation, whereas the expert's reasoning includes it for 2025 because it was previously subtracted from the western TAC.
+
+Passages quoted:
+
+- Quoted Doc 3: “In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028.”
+- Quoted Doc 3: “If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC.”
+
+Named Doc 6, Doc 3
+
+Full answer
+-----------
+
+Finding the Difference in U.S. Allocations
+
+From Document 6 (the final rule, Table 5), the baseline U.S. bluefin tuna quotas (before any underharvest or overharvest adjustment) are:
+
+| Year | Baseline Quota (mt) | |------|-------------------| | 2025 | 1,316.14 | | 2026 | 1,509.98 |
+
+These represent the U.S. share of the western Atlantic bluefin tuna TAC (the U.S. receives 49% of the western Atlantic TAC when it exceeds 2,660 mt, per ICCAT Recommendation 10-03). The pelagic longline bycatch set-aside (25 mt in 2025; 62.5 mt in 2026) is derived from the eastern Atlantic/Mediterranean TAC and is separate.
+
+Calculation: $$1{,}509.98 - 1{,}316.14 = 193.84 \text{ mt}$$
+
+The United States was allocated 193.84 more metric tons of the western Atlantic bluefin tuna TAC in 2026 than in 2025.
+
+Reasoning
+---------
+
+The question asks: Before any underharvest or overharvest adjustment, how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025, to two decimals?
+
+From the documents, I need to find the baseline U.S. bluefin tuna quotas for 2025 and 2026.
+
+From Document 6 (Table 5):
+- 2025 Baseline Quota: 1,316.14 mt
+- 2026 Baseline Quota: 1,509.98 mt
+
+But wait, the question asks about the "western Atlantic bluefin tuna total allowable catch" allocated to the US. Let me re-read.
+
+Actually, looking at Document 3 and Document 6:
+
+The U.S. baseline quota for 2026 is 1,509.98 mt (from Recommendation 25-05).
+The U.S. baseline quota for 2025 was 1,316.14 mt.
+
+But the question asks about "western Atlantic bluefin tuna total allowable catch." The documents mention that the U.S. receives 49% of the TAC if the overall TAC is greater than 2,660 mt. Recommendation 25-05 increased the TAC to 3,081.6 mt and the U.S. quota to 1,509.98 mt for 2026-2028.
+
+Wait, but the documents also mention a pelagic longline bycatch set-aside of 62.5 mt which is derived from the eastern Atlantic and Mediterranean TAC. So the "western Atlantic" allocation to the US would be the baseline quota of 1,509.98 mt.
+
+For 2025, the baseline quota was 1,316.14 mt (from Table 5 in Document 6).
+
+Actually, let me re-read more carefully. The question says "western Atlantic bluefin tuna total allowable catch" - this is the TAC for the western Atlantic bluefin tuna stock, from which the US gets a share.
+
+From Document 3: "In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028."
+
+Wait, but is 3,081.6 the western Atlantic TAC? Let me re-read. "If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC."
+
+Hmm, 1,509.98 / 3,081.6 = 0.49... Yes, that's 49%.
+
+But the question asks about "how many more metric tons... was the United States allocated for 2026 than for 2025."The question is asking about the U.S. allocation, not the TAC itself. So:
+
+2026 U.S. baseline: 1,509.98 mt
+2025 U.S. baseline: 1,316.14 mt (from Table 5)
+
+Difference: 1,509.98 - 1,316.14 = 193.84 mt
+
+Wait, but the question says "western Atlantic bluefin tuna total allowable catch" - is this asking about the TAC itself or the U.S. allocation from it?
+
+Re-reading: "how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025"
+
+This is asking how much more of the western Atlantic BFT TAC was allocated to the US. So it's the U.S. allocation difference.
+
+2026: 1,509.98 mt
+2025: 1,316.14 mt
+
+Difference: 193.84 mt
+
+But wait - should I include the pelagic longline bycatch set-aside? The set-aside for 2026 is 62.5 mt and for 2025 was 25 mt. But the question says "before any underharvest or overharvest adjustment" and asks about the "western Atlantic bluefin tuna total allowable catch" allocated to the US.
+
+Actually, looking more carefully at Document 3: "Recommendation 25-05 further increased the U.S. allocation for longline bycatch of bluefin tuna from 25 mt to 62.5 mt. The Recommendation states that the 62.5 mt allocation is for bycatch related to longline fisheries... and that this allocation is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC."
+
+So the 62.5 mt bycatch set-aside comes from the eastern Atlantic/Mediterranean TAC, NOT the western Atlantic TAC. The western Atlantic allocation to the US is 1,509.98 mt for 2026.
+
+For 2025, the western Atlantic allocation was 1,316.14 mt (the baseline quota).
+
+Actually, let me check - the total U.S. quota in 2025. From Table 5: Baseline Quota 2025 = 1,316.14 mt, and total quota including bycatch allocation = 1,341.14 mt (1,316.14 + 25).
+
+So the western Atlantic baseline quota for 2025 = 1,316.14 mt and for 2026 = 1,509.98 mt.
+
+Difference = 1,509.98 - 1,316.14 = 193.84 mt
+
+Hmm, but I should double-check. Let me look at what the 2025 U.S. allocation was.
+
+From Document 6 Table 5:
+- 2025 Baseline Quota: 1,316.14 mt
+- 2025 Total Quota (Baseline + Bycatch): 1,341.14 mt
+- 2026 Baseline Quota: 1,509.98 mt
+- 2026 Total Quota (Baseline + Bycatch): 1,572.48 mt
+
+The baseline quota is the western Atlantic allocation. The bycatch set-aside (25 mt in 2025, 62.5 mt in 2026) is from the eastern Atlantic/Mediterranean TAC.
+
+So the answer is 1,509.98 - 1,316.14 = 193.84 mt.
+
+Wait, but the question says "western Atlantic bluefin tuna total allowable catch" - maybe it's asking about the TAC itself, not the U.S. share?
+
+"how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated"
+
+This parses as: how many more mt of [the western Atlantic BFT TAC] was the US allocated. So it's the US allocation difference.
+
+193.84 mt.
+
+Hmm, but actually, let me reconsider. The "western Atlantic BFT TAC" is a specific ICCAT term. The US receives a percentage of the western Atlantic TAC. Let me check what the western Atlantic TAC was in 2025 vs 2026.
+
+From Document 3: "In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028."
+
+Is 3,081.6 mt the western Atlantic TAC? The US gets 49% of it when the overall TAC is > 2,660 mt. 1,509.98 / 3,081.6 = 0.49... so yes.
+
+For 2025, the US quota was 1,316.14 mt. If the US gets 49%, then the 2025 TAC was 1,316.14 / 0.49 = 2,685.99... Hmm, that doesn't seem to be a round number.
+
+Actually, from Document 3: "The current U.S. percentages of the bluefin tuna TAC were first established in Recommendation 10-03. If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC."
+
+So for 2025, if TAC = 2,686 mt (let me check), US would get 49% = 1,316.14 mt. 2,686 * 0.49 = 1,316.14. Yes!
+
+So the 2025 western Atlantic TAC was 2,686 mt and the 2026 TAC is 3,081.6 mt.
+
+But the question asks "how many more metric tons... was the United States allocated" - so it's the US allocation, not the TAC.
+
+US 2026 allocation: 1,509.98 mt
+US 2025 allocation: 1,316.14 mt
+
+Difference: 193.84 mt
+
+The answer is 193.84.
+
+Wait, but I want to make sure 1,316.14 is indeed the 2025 U.S. baseline allocation from the western Atlantic TAC, before any adjustments. Looking at Table 5 in Document 6:
+
+"Baseline Quota... 2025: 1,316.14, 2026: 1,509.98"
+
+Yes, these are the baseline quotas before adjustments.
+
+1,509.98 - 1,316.14 = 193.84
+
+Let me verify: 1,509.98 - 1,316.14 = 193.84. Yes.
+
+The answer is 193.84 mt.
+
+Hmm, but wait. The question says "western Atlantic bluefin tuna total allowable catch." The term "total allowable catch" (TAC) is different from the "quota" allocated to the US. But the question says "how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated" - meaning the US allocation from the western Atlantic TAC.
+
+So1,509.98 - 1,316.14 = 193.84.
+
+Actually, let me reconsider one more time. Could the question be asking about the TAC itself? "How many more metric tons of the western Atlantic bluefin tuna total allowable catch" - this could mean the TAC difference. But then "was the United States allocated" clarifies it's the US allocation.
+
+2026 US allocation from western Atlantic TAC: 1,509.98 mt
+2025 US allocation from western Atlantic TAC: 1,316.14 mt
+
+Difference: 193.84 mt
+
+I'll go with 193.84.
+
+Attempt 4 · Wrong
+-----------------
+Docs: Doc 3, Doc 6 · Note: —
+
+Final answer: The United States was allocated 193.84 metric tons more of the western Atlantic bluefin tuna TAC in 2026 than in 2025 (before any underharvest or overharvest adjustment). | Your answer (gold): 168.84 mt
+
+How it got there: It used Doc 6's Table 5 baseline quota figures (1,316.14 for 2025 and 1,509.98 for 2026) and subtracted them directly.
+
+Where it left your evidence: It treated the 2025 bycatch set-aside of 25 mt as not part of the western Atlantic TAC allocation, whereas the expert's reasoning includes it for 2025 because it was previously subtracted from the western TAC.
+
+Passages quoted:
+
+- Quoted Doc 6: “2026 Bluefin Tuna Quotas”
+- Quoted Doc 3: “ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028”
+- Quoted Doc 6: “total allowable catch”
+- Quoted Doc 3: “In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028.”
+
+Named Doc 6, Doc 3
+
+Full answer
+-----------
+
+Finding the Difference in U.S. Bluefin Tuna Allocations
+
+From Document 6 (the final rule, Table 5: "2026 Bluefin Tuna Quotas"), the baseline U.S. quota (before underharvest/overharvest adjustments) is listed as:
+
+| | 2025 | 2026 | |---|---|---| | Baseline Quota (mt ww) | 1,316.14 | 1,509.98 |
+
+This reflects the increase adopted by ICCAT in Recommendation 25-05 (Document 3 confirms: "ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028").
+
+Calculation: $$1{,}509.98 - 1{,}316.14 = 193.84 \text{ mt}$$
+
+The United States was allocated 193.84 metric tons more of the western Atlantic bluefin tuna TAC in 2026 than in 2025 (before any underharvest or overharvest adjustment).
+
+Reasoning
+---------
+
+We need to find the U.S. baseline quota for western Atlantic bluefin tuna for 2025 and 2026, before any underharvest/overharvest adjustment.
+
+From Document 6 (the final rule), we can see:
+- 2025 baseline quota: 1,316.14 mt
+- 2026 baseline quota: 1,509.98 mt
+
+The difference: 1,509.98 - 1,316.14 = 193.84 mt
+
+Wait, let me re-read the question: "how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025"
+
+The question asks about "total allowable catch" (TAC), not the U.S. quota. Let me re-read.
+
+Actually, the question says "the western Atlantic bluefin tuna total allowable catch was the United States allocated" - this is a bit awkwardly phrased. It seems to be asking about the U.S. allocation from the western Atlantic BFT TAC.
+
+From Document 3 (the proposed rule), we see: "In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028."
+
+And from Document 6 (Table 5): "Baseline Quota... 2025: 1,316.14, 2026: 1,509.98"
+
+So the U.S. baseline quota went from 1,316.14 mt to 1,509.98 mt.
+
+Difference: 1,509.98 - 1,316.14 = 193.84 mt
+
+But wait - the question asks about "total allowable catch" (TAC), not the U.S. quota. Let me re-read: "how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025"
+
+This is asking: how much more of the western Atlantic BFT TAC was the U.S. allocated in 2026 vs 2025? This is essentially the change in the U.S. quota.
+
+Actually, re-reading more carefully: "how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated" - this is asking about the U.S. allocation. The U.S. baseline quota (before adjustments) for 2025 was 1,316.14 mt and for 2026 was 1,509.98 mt.
+
+Difference: 193.84 mt
+
+But wait, maybe the question is asking about the TAC difference, not the U.S. quota. Let me think again.
+
+"how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025"
+
+I think this is asking: the U.S. was allocated X mt of the western Atlantic BFT TAC in 2026 and Y mt in 2025. How many more?
+
+From Document 6, Table 5:
+- 2025 Baseline Quota: 1,316.14 mt
+- 2026 Baseline Quota: 1,509.98 mt
+
+These are the U.S. allocations (the amount of TAC allocated to the U.S.) before underharvest/overharvest adjustments.
+
+Difference = 1,509.98 - 1,316.14 = 193.84 mt
+
+The answer is 193.84 metric tons.
+
+Attempt 5 · Wrong
+-----------------
+Docs: Doc 3, Doc 6 · Note: Note: where it went wrong
+
+Final answer: The United States was allocated 193.84 mt more of the western Atlantic bluefin tuna TAC for 2026 than for 2025, before any underharvest or overharvest adjustment. | Your answer (gold): 168.84 mt
+
+Where it went wrong: Explicitly considered the bycatch set-aside quotes (25 mt in 2025, 62.5 mt in 2026, derived from the eastern Atlantic TAC) but still concluded 193.84, since both set-asides sit outside the baseline quota under the same logic.Doc 3 Doc 6
+
+How it got there: It used Doc 6's Table 5 baseline quota figures (1,316.14 for 2025 and 1,509.98 for 2026) and subtracted them directly.
+
+Where it left your evidence: It treated the 2025 bycatch set-aside of 25 mt as not part of the western Atlantic TAC allocation, whereas the expert's reasoning includes it for 2025 because it was previously subtracted from the western TAC.
+
+Passages quoted:
+
+- Quoted Doc 3: “the overall U.S. quota under Recommendation 25-05 is 1,572.48 mt, of which 62.5 mt can be used only by pelagic longline fishermen.”
+- Quoted Doc 3: “Recommendation 25-05 now specifies that the set-aside comes from the eastern Atlantic bluefin tuna TAC as opposed to the western Atlantic TAC.”
+- Quoted Doc 6: “The United States is allocated an additional 25 mt in 2025 and 62.5 mt in 2026 to account for bycatch related to pelagic longline fisheries.”
+
+Named Doc 6, Doc 3
+
+Full answer
+-----------
+
+Calculating the Increase in U.S. Western Atlantic Bluefin Tuna Baseline Quota
+
+From the documents, I need the U.S. baseline quotas (before any underharvest/overharvest adjustments) for the western Atlantic bluefin tuna total allowable catch:
+
+| Year | U.S. Baseline Quota (mt ww) | Source | |------|----------------------------|--------| | 2025 | 1,316.14 | Document 6, Table 5 | | 2026 | 1,509.98 | Document 6, Table 4 & 5 (Recommendation 25-05) |
+
+The 2026 baseline quota reflects ICCAT Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and the U.S. share to 1,509.98 mt (49% of the TAC, since the TAC exceeds 2,660 mt).
+
+Difference: $$1{,}509.98 - 1{,}316.14 = \boxed{193.84 \text{ metric tons}}$$
+
+The United States was allocated 193.84 mt more of the western Atlantic bluefin tuna TAC for 2026 than for 2025, before any underharvest or overharvest adjustment.
+
+Reasoning
+---------
+
+The question asks: before any underharvest or overharvest adjustment, how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025, to two decimals?
+
+From the documents, the U.S. baseline quota for bluefin tuna for 2026 is 1,509.98 mt (from ICCAT Recommendation 25-05).
+
+For 2025, the U.S. baseline quota was 1,316.14 mt (mentioned in Document 6, Table 5: "Baseline Quota... 2025: 1,316.14").
+
+So the difference is 1,509.98 - 1,316.14 = 193.84 mt.
+
+Wait, but the question asks about "the western Atlantic bluefin tuna total allowable catch" allocated to the United States. Let me re-read.
+
+The documents state the U.S. receives 49% of the TAC when the TAC is greater than 2,660 mt. In 2025, ICCAT adopted Recommendation 25-05 which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028.
+
+For 2025, the U.S. baseline quota was 1,316.14 mt (as shown in Table 5 of Document 6).
+
+So: 1,509.98 - 1,316.14 = 193.84 mt.
+
+The answer is 193.84 metric tons.
+
+But wait - the question says "before any underharvest or overharvest adjustment" - so we want the baseline quotas, not adjusted quotas.
+
+From Document 6, Table 5:
+- 2025 Baseline Quota: 1,316.14 mt ww
+- 2026 Baseline Quota: 1,509.98 mt ww
+
+Difference: 1,509.98 - 1,316.14 = 193.84 mt ww
+
+But there's also the bycatch set-aside. The question asks about "the western Atlantic bluefin tuna total allowable catch" allocated to the US. Let me think about whether the bycatch set-aside is part of the U.S. allocation.
+
+From Document 6: "the overall U.S. quota under Recommendation 25-05 is 1,572.48 mt, of which 62.5 mt can be used only by pelagic longline fishermen."
+
+For 2025: total U.S. quota (including bycatch set-aside) was 1,341.14 mt (1,316.14 + 25 mt).
+
+For 2026: total U.S. quota (including bycatch set-aside) is 1,572.48 mt (1,509.98 + 62.5 mt).
+
+Hmm, but the question asks specifically about the "western Atlantic bluefin tuna total allowable catch" allocated to the United States. The documents mention that the set-aside comes from the eastern Atlantic TAC under Recommendation 25-05. Let me re-read.
+
+From Document 3: "Recommendation 25-05 now specifies that the set-aside comes from the eastern Atlantic bluefin tuna TAC as opposed to the western Atlantic TAC."
+
+So the western Atlantic TAC allocation to the US would be the baseline quota only (not including the bycatch set-aside).
+
+But wait, the question says "the western Atlantic bluefin tuna total allowable catch was the United States allocated" - this is asking about the U.S. share of the western Atlantic TAC.
+
+From Document 3: "If the overall TAC is greater than 2,660 mt, as is currently the case, the U.S. receives 49 percent of that TAC. Recommendation 25-05 further increased the U.S. allocation for longline bycatch of bluefin tuna from 25 mt to 62.5 mt. The Recommendation states that the 62.5 mt allocation is for bycatch related to longline fisheries in the vicinity of the management area boundary and adjacent areas and that this allocation is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC."
+
+So the baseline U.S. quota of 1,509.98 mt is the U.S. share of the western Atlantic TAC, and the 62.5 mt bycatch set-aside comes from the eastern Atlantic TAC.
+
+So for the western Atlantic TAC allocated to the U.S.:
+- 2025: 1,316.14 mt (baseline)
+- 2026: 1,509.98 mt (baseline)
+
+Difference: 193.84 mt
+
+But wait, actually in 2025 the set-aside was also from the western Atlantic TAC (it was only changed in Recommendation 25-05 to come from the eastern Atlantic). So in 2025, the total U.S. allocation from the western Atlantic TAC might have been 1,316.14 + 25 = 1,341.14 mt.
+
+Hmm, let me re-read more carefully.
+
+From Document 6, Table 5:
+- 2025 Baseline Quota: 1,316.14
+- Total Quota (Baseline Quota + Bycatch Allocation): 1,341.14 (2025), 1,572.48 (2026)
+
+The note says: "The United States is allocated an additional 25 mt in 2025 and 62.5 mt in 2026 to account for bycatch related to pelagic longline fisheries."
+
+From Document 3: "Recommendation 25-05 removed a provision from a prior recommendation that provided for subtracting the longline bycatch allocation from the TAC before calculating the individual country quotas."
+
+So in 2025 (under previous recommendations), the 25 mt bycatch was subtracted from the TAC before calculating country quotas. So the U.S. western Atlantic TAC allocation in 2025 would have been 1,316.14 mt (the baseline quota), and the 25 mt was an additional allocation.
+
+Actually, wait. Let me think about this differently. The question is asking about the total allowable catch of the western Atlantic bluefin tuna allocated to the United States.
+
+Under the old system (2025): The 25 mt bycatch set-aside was derived from the western Atlantic TAC and subtracted before calculating country quotas. So the total U.S. western Atlantic TAC allocation was 1,316.14 + 25 = 1,341.14? Or was it just 1,316.14?
+
+Hmm, let me re-read: "Recommendation 25-05 removed a provision from a prior recommendation that provided for subtracting the longline bycatch allocation from the TAC before calculating the individual country quotas."
+
+This means under the old provision (used in 2025), the 25 mt was subtracted from the TAC first, and then country quotas were calculated from the reduced TAC. So the U.S. got 49% of (TAC - 25 mt) + 25 mt. Under the new provision (2026), the U.S. gets 49% of the full TAC + 62.5 mt from the eastern Atlantic TAC.
+
+So the U.S. total allocation:
+- 2025: 1,316.14 + 25 = 1,341.14 (from western Atlantic TAC)
+- 2026: 1,509.98 (from western Atlantic TAC) + 62.5 (from eastern Atlantic TAC) = 1,572.48 total
+
+If the question is asking about western Atlantic TAC only:
+- 2025: 1,341.14 (1,316.14 + 25, since the 25 came from western Atlantic)
+- 2026: 1,509.98 (since the 62.5 comes from eastern Atlantic)
+
+Difference: 1,509.98 - 1,341.14 = 168.84
+
+Hmm, but this seems overly complicated. Let me re-read the question: "how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025"
+
+I think the simplest reading is comparing the baseline U.S. quotas (which represent the U.S. share of the western Atlantic TAC):
+- 2026: 1,509.98 mt
+- 2025: 1,316.14 mt
+- Difference: 193.84 mt
+
+But actually, if the 25 mt in 2025 also came from the western Atlantic TAC (as it was subtracted before calculating quotas), then the total western Atlantic allocation for2025 was 1,316.14 + 25 = 1,341.14.
+
+Hmm, but looking at Table 5, it clearly separates "Baseline Quota" (1,316.14 for 2025, 1,509.98 for 2026) from the "Bycatch Allocation" (25 for 2025, 62.5 for 2026). The baseline quota is what represents the U.S. share of the western Atlantic TAC.
+
+I think the answer the question is looking for is simply: 1,509.98 - 1,316.14 = 193.84 mt.
+
+Actually, I realize I need to think about this more carefully. The question asks about "the western Atlantic bluefin tuna total allowable catch was the United States allocated." This is about the U.S. allocation of the western Atlantic TAC.
+
+In 2025: The U.S. was allocated 1,316.14 mt from the western Atlantic TAC (as baseline quota). The 25 mt bycatch was also from the western Atlantic TAC (it was subtracted before calculating quotas). So total western Atlantic TAC allocated to U.S. = 1,316.14 + 25 = 1,341.14? Or just 1,316.14?
+
+Actually, I think the way it worked in 2025 is:
+- The total western Atlantic TAC included the 25 mt
+- The 25 mt was subtracted from the TAC before calculating country quotas
+- The U.S. got 49% of the remaining TAC = 1,316.14
+- Plus the 25 mt bycatch set-aside
+- Total U.S. from western Atlantic = 1,341.14
+
+In 2026:
+- The total western Atlantic TAC is 3,081.6 mt
+- The U.S. gets 49% = 1,509.98 mt
+- The 62.5 mt comes from the eastern Atlantic TAC
+- Total U.S. from western Atlantic = 1,509.98
+
+So if we're comparing western Atlantic allocations:
+2026: 1,509.98
+2025: 1,341.14
+Difference: 168.84
+
+Hmm, but this seems like a stretch. Let me re-read the documents more carefully.
+
+From Document 3: "In 2025, ICCAT adopted Recommendation 25-05, which increased the bluefin tuna TAC to 3,081.6 mt and increased the U.S. quota to 1,509.98 mt for 2026-2028."
+
+This says "increased the bluefin tuna TAC" - this seems to be referring to the western Atlantic TAC.
+
+"Recommendation 25-05 further increased the U.S. allocation for longline bycatch of bluefin tuna from 25 mt to 62.5 mt. The Recommendation states that the 62.5 mt allocation is for bycatch related to longline fisheries in the vicinity of the management area boundary and adjacent areas and that this allocation is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC."
+
+So the 62.5 mt comes from the eastern Atlantic TAC.
+
+"Recommendation 25-05 removed a provision from a prior recommendation that provided for subtracting the longline bycatch allocation from the TAC before calculating the individual country quotas. As such, the overall U.S. quota under Recommendation 25-05 is 1,572.48 mt, of which 62.5 mt can be used only by pelagic longline fishermen."
+
+So the total U.S. allocation is 1,572.48 = 1,509.98 (western Atlantic) + 62.5 (eastern Atlantic).
+
+For 2025: Total U.S. quota was 1,341.14 = 1,316.14 (baseline from western Atlantic) + 25 (bycatch, also from western Atlantic in 2025).
+
+Wait, but in 2025, the 25 mt was subtracted from the western Atlantic TAC before calculating quotas. So the U.S. total from western Atlantic TAC was 1,316.14 + 25 = 1,341.14.
+
+Hmm, I'm going in circles. Let me look at this from a different angle.
+
+The question is straightforward: "how many more metric tons of the western Atlantic bluefin tuna total allowable catch was the United States allocated for 2026 than for 2025, to two decimals?"
+
+The U.S. baseline quota (which represents the U.S. share of the western Atlantic TAC) is:
+- 2025: 1,316.14 mt (from Table 5)
+- 2026: 1,509.98 mt (from Table 5)
+
+These are the amounts "allocated" from the western Atlantic TAC to the United States.
+
+Difference: 1,509.98 - 1,316.14 = 193.84 mt
+
+I think this is the intended answer: 193.84.
+
+Actually, wait. Let me reconsider. In 2025, the 25 mt bycatch set-aside was derived from the western Atlantic TAC (it was subtracted from the TAC before calculating country quotas). So the total western Atlantic TAC allocated to the U.S. in 2025 was 1,316.14 + 25 = 1,341.14.
+
+In 2026, the 62.5 mt bycatch set-aside is derived from the eastern Atlantic TAC. So the total western Atlantic TAC allocated to the U.S. in 2026 is just 1,509.98.
+
+But the question asks about "western Atlantic bluefin tuna total allowable catch" allocated to the U.S. If the 25 mt in 2025 was from the western Atlantic TAC, then the answer would be 1,509.98 - 1,341.14 = 168.84.
+
+Hmm, but I think the question is simpler than I'm making it. The "baseline quota" IS the U.S. allocation of the western Atlantic TAC. The bycatch set-aside is an additional allocation (from eastern Atlantic in 2026, from western Atlantic in 2025, but it's tracked separately).
+
+Looking at Table 5 again:
+- 2025 Baseline Quota: 1,316.14 mt
+- 2026 Baseline Quota: 1,509.98 mt
+
+The "Baseline Quota" row represents the U.S. share of the western Atlantic TAC. The bycatch set-aside is listed separately.
+
+I'll go with 1,509.98 - 1,316.14 = 193.84 mt.
+
+Hmm, but actually - let me reconsider once more. The question asks about "the western Atlantic bluefin tuna total allowable catch was the United States allocated."The U.S. receives 49% of the TAC when the TAC > 2,660 mt. In 2025, the TAC was some value, and in 2026, the TAC is 3,081.6 mt.
+
+For 2025: If the U.S. got 1,316.14 mt as baseline, and this represents 49% of (TAC - 25), then TAC - 25 = 1,316.14/0.49 = 2,685.99, so TAC = 2,710.99.
+
+For 2026: TAC = 3,081.6, U.S. gets 49% = 1,509.984≈ 1,509.98.
+
+So the increase in the western Atlantic TAC is 3,081.6 - 2,710.99 = 370.61 mt. But the question asks about the U.S. allocation, not the total TAC.
+
+U.S. allocation increase: 1,509.98 - 1,316.14 = 193.84 mt.
+
+OK, I'm confident the answer is 193.84 mt.
+
+Wait, one more thought. The question says "before any underharvest or overharvest adjustment." This is asking about the baseline quotas, not the adjusted quotas. The baseline quotas are:
+- 2025: 1,316.14 mt
+- 2026: 1,509.98 mt
+
+These are already before adjustments. So the answer is 1,509.98 - 1,316.14 = 193.84 mt.
+
+Let me verify: 1509.98 - 1316.14 = 193.84. Yes.

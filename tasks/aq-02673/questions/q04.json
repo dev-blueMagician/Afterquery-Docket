@@ -1,0 +1,73 @@
+{
+  "question": "Before under- or overharvest adjustments, how many more metric tons of western Atlantic bluefin tuna TAC went to the United States in total for 2026 than for 2025 (to two decimals)?",
+  "number_of_asks": 1,
+  "gold_answer": "168.84 mt",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 6, Table 5 and Comment 1): the U.S. bluefin tuna baseline quota is 1,316.14 mt for 2025 and 1,509.98 mt for 2026, before any carryover.\n\nStep 2. Source input (Doc 6, note to Table 5): on top of the baseline quota the United States is allocated an additional 25 mt for pelagic longline bycatch in 2025, and a larger bycatch allocation in 2026.\n\nStep 3. Source input (Doc 3, bluefin tuna quota section): the new bycatch allocation is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC, so for 2026 the western Atlantic TAC tonnage that went to the United States is the baseline quota alone.\n\nStep 4. Source input (Doc 3, bluefin tuna quota section and set-aside section): the set-aside now comes from the eastern TAC \"as opposed to the western Atlantic TAC\", and the earlier recommendation subtracted the longline bycatch allocation from the TAC before the country quotas were calculated. The earlier bycatch allocation was therefore drawn from the western Atlantic TAC and counts for 2025.\n\nStep 5. Calculation (Doc 6 and Doc 3): western Atlantic TAC tonnage that went to the United States for 2025: 1,316.14 + 25 = 1,341.14 mt, the 2025 Total Quota that Table 5 prints.\n\nStep 6. Calculation (Doc 6 and Doc 3): increase from 2025 to 2026: 1,509.98 - 1,341.14 = 168.84 mt.",
+  "answer_components": [
+    "168.84 mt"
+  ],
+  "evidence": [
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "NMFS received multiple comments supporting the increased U.S. bluefin tuna baseline quota from 1,316.14 mt to 1,509.98 mt"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "Baseline Quota.......................... 1,316.14 1,509.98"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "The United States is allocated an additional 25 mt in 2025 and 62.5 mt in 2026 to account for bycatch related to pelagic longline fisheries."
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "this allocation is derived from the eastern Atlantic and Mediterranean bluefin tuna TAC"
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Recommendation 25-05 removed a provision from a prior recommendation that provided for subtracting the longline bycatch allocation from the TAC before calculating the individual country quotas."
+    },
+    {
+      "document_number": 3,
+      "component_number": 1,
+      "quote": "Recommendation 25-05 now specifies that the set-aside comes from the eastern Atlantic bluefin tuna TAC as opposed to the western Atlantic TAC."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        3
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Conditional filter"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Part vs total",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    },
+    {
+      "trap": "Wrong jurisdiction or scope",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    }
+  ],
+  "why_these_are_traps": "Part vs total: Doc 6 Table 5's Baseline row gives 193.84, leaving out 2025's 25 mt bycatch allocation, which Doc 3 says came from the western TAC. Wrong scope: its Total row gives 231.34, counting 2026's 62.5 mt, which Doc 3 says comes from the eastern TAC. Gold: 168.84."
+}

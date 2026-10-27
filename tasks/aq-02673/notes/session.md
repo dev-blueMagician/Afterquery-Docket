@@ -1,0 +1,21 @@
+# Current bundle checkpoint
+
+- Goal and user constraints: AQ-02673, "Commercial Fishing Quota Regulations" (seven NOAA/NMFS Federal Register texts; only D03, the HMS quota proposal, and D06, its final rule, join). User 2026-10-10: "there is no slot for Easy Tier for this bundle, we should target medium and high. do your best."; latest (18:58): "q05 failed but q04 passed medium. plz check arrived verdicts by using your feedback skill and improve your performance".
+- Verification target / measured platform tier: medium (hard welcome) / q05 "In band — Medium tier" (Run 3). Difficulty runs 3 of 10 used (7 left per the capture). Page slots at intake: Hard 0/2 · Medium 0/3.
+- Label warning: the user's message names the files the other way round. By the platform's change lists the passing wording ("whatever fishery the tonnage was reserved for", Version 1ee802, current on the page) is file q05; "in total" (Version 5d3970) is file q04 rev 2.
+- Prepared tested_sha256: q05 rev 0 0d9155dd... (ready, pass bound); q01 rev 0 557d1f45...; q06 rev 0 2411231e...; q02 rev 0 236aeb3b...; q03 rev 0 e5948567.... q04: rev 0 0819d70f, rev 1 ca7d711e, rev 2 50ca7237 (dropped). Untested snapshots to ignore: q02 6980f51b; q04 8f854287, 4f5af224, ab48e741.
+- Bundle slug / documents / extraction warnings: aq-02673, D01-D07 = Doc 1-7, complete capture. No question uses D01.
+- Phase: feedback recorded; q05 ready for Submit; next candidates awaiting the quick test.
+- Questions (all D03 + D06, Answer component):
+  - q05 READY, 168.84 mt. Run 3: Low 0/5 · Medium 1/5; wrong answers 231.34 (5 of 10) and 193.84 (4 of 10) = its two declared failure modes; Document check: Doc 3 and Doc 6 each needed; closed-book needed the documents; "may be too vague" advisory shown beside "You can submit now". Not submitted.
+  - q04 DROPPED (superseded by q05). Run 1 rev 0 Too hard 0/15; rev 1 quick test too easy (user report); Run 2 rev 2 "in total" Between levels, Low 0/5 · Medium 0/5 · High 4/5.
+  - q01 18.7% and its alternate q06 (same question plus "both on the same weight basis"): checked, untested; one of the two at most.
+  - q03 168% and q02 146% (q03 = q02 plus carryover): checked, untested; one of the two at most.
+- Decisions and constraints: lesson applied from q04 (memory, calibration note): never run a question whose deciding condition sits only in a document without a scope phrase; prepare alternates of different strength for one quick-test pass; take the most explicit survivor to the difficulty check; name alternates by their phrase, bind results by the platform's change list.
+- Candidate families / completeness: hooks.md h1-h10; all seven documents read.
+- Active feedback index: notes/feedback-index.md rows f1-f4 (f4 = q05 Medium pass). Raw: verdicts/AQ-02673_difficulty_2026-10-10_1520.txt, _1633.txt, _1832.txt.
+- Changed files this round: questions/q04.md (dropped, Run 2 record), q05.md (ready, Run 3 record), q06.md (new), q06.json; notes/handover-q05.md, handover-q06.md, feedback-index.md, ideas.md, session.md; runs/q06-r0-v2-2411231e.... Workspace memory: calibration, form-vague-block, windows-text-io, handover, general-knowledge, MEMORY.md index.
+- Revision rounds used: q04 2, q05 0. Five-candidate trial: not enrolled. Timing: unmeasured.
+- Efficiency ledger / active timer: ../../../notes/efficiency.json / none.
+- Next action (user): Submit the page's current content (the q05 wording) and tell me, so I freeze q05 as submitted with its tier. Then one quick-test pass on q06, q01, q03, q02; take q06 over q01 and q03 over q02 if both survive.
+- Runtime/model/effort: Claude Code, claude-opus-5-5.
