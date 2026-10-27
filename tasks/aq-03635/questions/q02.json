@@ -1,0 +1,78 @@
+{
+  "question": "In whichever of its 2016 to 2018 financial years Z Energy's ROACE (return on average capital employed) on the Commission's figures was highest, how many percentage points above the top of the Commission's reasonable-return range was it? Give one decimal place.",
+  "number_of_asks": 1,
+  "gold_answer": "15.8 percentage points",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 9, Appendix 2, capital employed reconciliation, the row \"The Commission capital employed\", in $ million at each year end): 1,006 at the year end before 2016, 1,101 for 2016, 1,425 for 2017 and 1,463 for 2018.\n\nStep 2. Source input (Doc 9, Appendix 2, earnings reconciliation, the row \"The Commission net operating after tax\", in $ million): 202 for 2016, 308 for the year after and 339 for 2018. The row has three figures, and Doc 9's earnings chart, which averages the same row, is titled 2016 to 2018.\n\nStep 3. Source input (Doc 9, Part A, on replacement cost): ROACE divides earnings by average capital employed. A year's average capital is therefore the mean of the balance at the end of the year before and the balance at the end of that year, which is why the capital rows start one year earlier than the earnings rows. Doc 9 states the Commission's ROACE for Z only as approximately 22% for the three years together, so each year's figure has to be worked out.\n\nStep 4. Source input (Doc 1, paragraph X45.2): the Commission's estimate of a reasonable return is the range 6.9 - 8.6%, so the top of the range is 8.6%.\n\nStep 5. Calculation (Doc 9 and Doc 1): opening plus closing capital for 2016: 1,006 + 1,101 = 2,107\n\nStep 6. Calculation (Doc 9 and Doc 1): average capital employed for 2016: 2,107 / 2 = 1,053.5\n\nStep 7. Calculation (Doc 9 and Doc 1): ROACE for 2016: 202 / 1,053.5 = 19.2%\n\nStep 8. Calculation (Doc 9 and Doc 1): opening plus closing capital for 2017: 1,101 + 1,425 = 2,526\n\nStep 9. Calculation (Doc 9 and Doc 1): average capital employed for 2017: 2,526 / 2 = 1,263\n\nStep 10. Calculation (Doc 9 and Doc 1): ROACE for 2017: 308 / 1,263 = 24.4%\n\nStep 11. Calculation (Doc 9 and Doc 1): opening plus closing capital for 2018: 1,425 + 1,463 = 2,888\n\nStep 12. Calculation (Doc 9 and Doc 1): average capital employed for 2018: 2,888 / 2 = 1,444\n\nStep 13. Calculation (Doc 9 and Doc 1): ROACE for 2018: 339 / 1,444 = 23.5%\n\nStep 14. Comparison (Doc 9 and Doc 1): the ratio for 2017 is the highest of the three, so 2017 is the year the question asks about.\n\nStep 15. Calculation (Doc 9 and Doc 1): the earnings, in $ million, that a return at the top of the range gives on the average capital employed for 2017: 1,263 × 8.6% = 108.618\n\nStep 16. Calculation (Doc 9 and Doc 1): the earnings for 2017 above that return, in $ million: 308 − 108.618 = 199.382\n\nStep 17. Final answer (Doc 9 and Doc 1): that excess as a rate on the average capital employed for 2017, which is the number of percentage points by which the ROACE exceeds the top of the range, to one decimal place: 199.382 / 1,263 = 15.8%",
+  "answer_components": [
+    "15.8 percentage points"
+  ],
+  "evidence": [
+    {
+      "document_number": 9,
+      "component_number": 1,
+      "quote": "The Commission capital employed\t1,006\t1,101\t1,425\t1,463"
+    },
+    {
+      "document_number": 9,
+      "component_number": 1,
+      "quote": "$m\t2015\t2016\t2017\t2018"
+    },
+    {
+      "document_number": 9,
+      "component_number": 1,
+      "quote": "The Commission net operating after tax\t202\t308\t339"
+    },
+    {
+      "document_number": 9,
+      "component_number": 1,
+      "quote": "2016 to 2018 average earnings: Z's assessment and The Commission's assessment"
+    },
+    {
+      "document_number": 9,
+      "component_number": 1,
+      "quote": "the average capital employed used in the denominator (where earnings are the numerator) to calculate ROACE"
+    },
+    {
+      "document_number": 9,
+      "component_number": 1,
+      "quote": "the approach used in the draft report shows an average ROACE for Z of approximately 22% for the period 2016 – 2018"
+    },
+    {
+      "document_number": 1,
+      "component_number": 1,
+      "quote": "well above our estimate of a reasonable return (6.9 - 8.6%)"
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        9
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        1
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Look-alike measure",
+      "how_a_careless_solver_fails": "Takes the wrong line item"
+    },
+    {
+      "trap": "Wrong year or edition",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Look-alike measure: Doc 9's Appendix 2 lists year-end capital employed; dividing by it instead of average capital makes 2018 the peak and gives 14.6. Wrong year: Doc 9's paragraph 24.2 prints 22% for 2016 to 2018 together, giving 13.4. Averaging the balances makes 2017 the peak, 15.8."
+}
