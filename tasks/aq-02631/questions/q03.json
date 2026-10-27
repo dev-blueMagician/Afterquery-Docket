@@ -1,0 +1,78 @@
+{
+  "question": "On what date would a Hashdex trust portfolio held at the index weights of December 31, 2024 first have met proposed Rule 5712's 90% requirement?",
+  "number_of_asks": 1,
+  "gold_answer": "March 18, 2025",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 2, proposed Rule 5712(e)(1)(ii)): at least 90% of the weight of the trust's holdings must be in assets on which Nasdaq can obtain information through the Intermarket Surveillance Group (ISG) or a surveillance sharing agreement. Assets without that coverage may therefore make up no more than a tenth of the portfolio.\n\nStep 2. Source input (Doc 2, surveillance discussion): Nasdaq gets that information from futures markets run by fellow ISG members: CME for bitcoin and ether, and Coinbase Derivatives for Chainlink, Litecoin and Avalanche. The filing names no such market for Solana, XRP, Cardano or Uniswap.\n\nStep 3. Source input and calculation (Doc 2, table of index constituents and weightings at the end of December 2024): the four uncovered constituents are weighted Solana 4.78, XRP 5.02, Cardano 1.50 and Uniswap 0.27. Together: 4.78 + 5.02 + 1.50 + 0.27 = 11.57. That is more than a tenth, so a portfolio held at those weights does not meet the requirement when Nasdaq proposes the rule.\n\nStep 4. Source input (Doc 6, asset backgrounds in the T. Rowe Price filing): Solana futures became available for trading on CME on March 18, 2025, and XRP futures on May 20, 2025. No document dates a futures market for Cardano or Uniswap.\n\nStep 5. Calculation (Doc 2 and Doc 6): once Solana is covered through CME, the uncovered weight is: 11.57 - 4.78 = 6.79. That is under a tenth, so the requirement is met from the day Solana futures start trading on CME.\n\nStep 6. Final answer (Doc 2 and Doc 6): Solana's CME futures come before XRP's, and Solana alone is enough, so the portfolio would first have met the requirement on March 18, 2025.",
+  "answer_components": [
+    "March 18, 2025"
+  ],
+  "evidence": [
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "at least 90% of the weight of such holdings shall, on both an initial and continuing basis, consist of commodities and/or digital assets concerning which the Exchange is able to obtain information via the Intermarket Surveillance Group"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "The exchanges have comprehensive surveillance-sharing agreements with the CME via their common membership in the ISG"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Notably, the Coinbase Derivatives offers derivative products for three additional Index Constituents (as of the filing date): chainlink (LINK), litecoin (LTC), and avalanche (AVAX)."
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "As of December 31, 2024, the Index Constituents and their weightings"
+    },
+    {
+      "document_number": 2,
+      "component_number": 1,
+      "quote": "Bitcoin (BTC)................................................ 72.70 Ether (ETH).................................................. 14.48 Solana (SOL)................................................. 4.78 XRP Ledger (XRP)............................................. 5.02 Cardano (ADA)................................................ 1.50 Chainlink (LINK)............................................. 0.51 Avalanche (AVAX)............................................. 0.37 Litecoin (LTC)............................................... 0.37 Uniswap (UNI)................................................ 0.27"
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "On March 18, 2025, SOL futures became available for trading on CME, a CFTC-regulated marketplace."
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "On May 20, 2025, XRP futures became available for trading on CME, a CFTC-regulated marketplace."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        2
+      ],
+      "role": "Used to identify",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Aggregation"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Wrong jurisdiction or scope",
+      "how_a_careless_solver_fails": "Misapplies a rule or premise"
+    },
+    {
+      "trap": "Linking across documents",
+      "how_a_careless_solver_fails": "Picks the wrong entity or section"
+    }
+  ],
+  "why_these_are_traps": "Scope: Doc 6's six-month futures test belongs to NYSE Arca's generic standards, not Nasdaq's Rule 5712; applying it gives September 18, 2025. Linking: Doc 6 also dates XRP futures, May 20, 2025, but Solana's alone lifts covered weight past 90%, so the first date is March 18, 2025."
+}

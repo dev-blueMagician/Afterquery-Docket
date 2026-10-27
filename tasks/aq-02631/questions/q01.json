@@ -1,0 +1,60 @@
+{
+  "question": "What weight of Bitwise 10's June 30, 2025 portfolio lay outside the eligible assets in T. Rowe Price's ETF proposal when the SEC instituted proceedings on it?",
+  "number_of_asks": 1,
+  "gold_answer": "0.35%",
+  "step_by_step_reasoning": "Step 1. Source input (Doc 7, opening paragraphs): the SEC instituted proceedings on NYSE Arca's proposal to list the T. Rowe Price Active Crypto ETF on January 28, 2026. Doc 7 itself is the notice of Amendment No. 1, which the Exchange filed later, on April 21, 2026, and which replaced the original filing. Its list of Eligible Assets is given as of that amendment, so it shows the proposal only as it stood after the proceedings were instituted.\n\nStep 2. Source input (Doc 6, opening paragraph and \"Background on Eligible Assets\"): the proposal in front of the SEC on that day was still the original filing, made on November 6, 2025. As of that filing the Sponsor considers these to be Eligible Assets: bitcoin (BTC), ether (ETH), SOL, XRP, ada (ADA), AVAX, litecoin (LTC), DOT, Dogecoin (DOGE), HBAR, Bitcoin Cash (BCH), LINK, lumen (XLM) and Shiba Inu (SHIB).\n\nStep 3. Source input (Doc 5, summary of the proposal): as of June 30, 2025 the Bitwise 10 Crypto Index ETF held bitcoin (BTC), ether (ETH), XRP, Solana (SOL), Cardano (ADA), SUI, Chainlink (LINK), Avalanche (AVAX), Litecoin (LTC) and Polkadot (DOT), and SUI's weighting was 0.35%. The staff order the Commission later set aside prints the same sentence.\n\nStep 4. Comparison (Doc 6 and Doc 5): matched by ticker, nine of the Bitwise holdings are on the original filing's list: BTC, ETH, XRP, SOL, ADA, LINK, AVAX, LTC and DOT. SUI is the only holding that is not on it.\n\nStep 5. Final answer (Doc 6 and Doc 5): the weight of the Bitwise portfolio outside the proposal's eligible assets when the SEC instituted proceedings is SUI's 0.35%.\n\nCheck on the other version (Doc 7): the amended list adds Sui (SUI). Read against it, every Bitwise holding would be eligible and nothing would lie outside, which is why the date of the proceedings decides the answer.",
+  "answer_components": [
+    "0.35%"
+  ],
+  "evidence": [
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "the Sponsor considers the following to be Eligible Assets (ticker symbols in parentheses): bitcoin (BTC), ether (ETH), SOL (SOL), XRP (XRP), ada (ADA), AVAX (AVAX), litecoin (LTC), DOT (DOT), Dogecoin (DOGE), HBAR (HBAR), Bitcoin Cash (BCH), LINK (LINK), lumen (XLM), and Shiba Inu (SHIB)."
+    },
+    {
+      "document_number": 6,
+      "component_number": 1,
+      "quote": "notice is hereby given that on November 6, 2025, NYSE Arca, Inc."
+    },
+    {
+      "document_number": 5,
+      "component_number": 1,
+      "quote": "As of June 30, 2025, the Trust's Portfolio Assets and their weightings were: 78.72% bitcoin (BTC), 11.10% ether (ETH), 4.97% XRP (XRP), 3.03% Solana (SOL), 0.78% Cardano (ADA), 0.35% SUI (SUI), 0.32% Chainlink (LINK), 0.28% Avalanche (AVAX), 0.24% Litecoin (LTC), and 0.19% Polkadot (DOT)."
+    },
+    {
+      "document_number": 4,
+      "component_number": 1,
+      "quote": "As of June 30, 2025, the Trust's Portfolio Assets and their weightings were: 78.72% bitcoin (BTC), 11.10% ether (ETH), 4.97% XRP (XRP), 3.03% Solana (SOL), 0.78% Cardano (ADA), 0.35% SUI (SUI), 0.32% Chainlink (LINK), 0.28% Avalanche (AVAX), 0.24% Litecoin (LTC), and 0.19% Polkadot (DOT)."
+    }
+  ],
+  "necessary_documents": [
+    {
+      "document_numbers": [
+        6
+      ],
+      "role": "Used to identify",
+      "reviewer_note": ""
+    },
+    {
+      "document_numbers": [
+        5,
+        4
+      ],
+      "role": "Answer component",
+      "reviewer_note": ""
+    }
+  ],
+  "reasoning_tags": [
+    "Cross-document join",
+    "Temporal alignment",
+    "Conditional filter"
+  ],
+  "targeted_failure_modes": [
+    {
+      "trap": "Wrong year or edition",
+      "how_a_careless_solver_fails": "Uses the wrong period or date"
+    }
+  ],
+  "why_these_are_traps": "Wrong edition: Doc 7 reports the January 28, 2026 proceedings but lists eligible assets as of its April 21, 2026 amendment, adding Sui, so every Bitwise holding looks eligible and the answer becomes zero. The filing then pending, Doc 6, omits Sui, leaving its 0.35%."
+}

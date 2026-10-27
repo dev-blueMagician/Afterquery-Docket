@@ -1,0 +1,639 @@
+AQ-02631 · Crypto Index ETF Listing Filings — difficulty check
+
+Page: https://experts.afterquery.com/projects/docket/edit-curated/AQ-02631
+Saved: 2026-10-10 10:45 (local time)
+Bundle: Crypto Index ETF Listing Filings · Public policy · 7 documents · 99,010 prompt tokens
+Attempts read: 6
+
+Capture notes:
+- The page said: "Docket has been updated. Reload this page so its checks and buttons keep working." If a run or an attempt would not open, reload the page and capture again.
+
+
+========================================================================
+DIFFICULTY CHECK
+========================================================================
+
+Check difficulty
+----------------
+
+9 of 10 runs left · 14 of 50 runs used in the last 24 h (all tasks)
+
+Change the question, answer or documents to run again.
+
+The difficulty check finished: Too easy.
+
+Too easy
+
+The solvers reached your answer too often. Make the question depend on more careful reading of the documents, then run the check again.
+
+- Low model: 5 of 5 attempts right
+
+Ready when 1–3 attempts at a level are right, out of up to 5. A level can settle early, for example at 1 right out of 3.
+
+What to change: Make it harder
+------------------------------
+
+Prompt · The question’s wording
+-------------------------------
+
+- 1 Either lean into the version issue explicitly (e.g., 'under the proposal as originally filed, before any amendment') so solvers must notice that Document 7 changed the list, or remove the date clause and instead require the derivation suggested elsewhere. As written, the temporal constraint is a distractor that never binds. Why: The clause 'when the SEC instituted proceedings on it' is the only element that could force temporal reasoning, because the T. Rowe Price filing was amended: the original filing (Document 6, November 2025) omits SUI from Eligible Assets, while Amendment No. 1 (Document 7, April 2026) adds SUI. Proceedings were instituted January 28, 2026, before the amendment, so Document 6's list governs. But the question never signals that two versions of the eligible list exist, so solvers simply used whichever list they retrieved first and the date constraint did no narrowing work. Doc 6 Doc 7
+
+
+========================================================================
+RUN HISTORY
+========================================================================
+
+How answers are graded:
+How answers are graded
+
+- Each attempt is compared with your answer and marked right or wrong. The grade is on the whole attempt; the final answer shown is picked out automatically as a guide.
+- Numbers match when they are the same value written differently: 0.675, 67.5% and 67.5 percentage points all match, and so do different scales (thousand, million, billion), thousands separators, currency symbols and numbers written as words.
+- If the question asks for a particular format (a percentage, a number of decimal places, a unit, a rounding or an order), the attempt must meet it. If it asks for none, any equivalent form is accepted.
+- For an ordered list, a title, honorific or article added to an entry is accepted if the order is right either with it or without it.
+- Only the value the attempt finally commits to counts. Values reached while working, or considered and set aside, do not. An attempt that offers several values without choosing one is wrong, even if one of them is right.
+
+The result on the current content is too easy, so the gate does not pass.
+
+The gate reads Run 1 (Oct 10, 2026, 10:37 AM): the result on the current content.
+
+Only the result on the current question, answer and documents counts, and any edit to the question, answer or necessary documents needs a new result. Since 2026-09-27 a result is final for its version: the same version is not measured again.
+
+1 run
+
+------------------------------------------------------------------------
+Run 1 · Too easy · Result the gate uses
+Oct 10, 2026, 10:37 AM · Version 45cf69 (current) · Low 5/5 · Medium — · High —
+------------------------------------------------------------------------
+
+What changed before this run: first run
+
+Solver summary: Run 1 · Too easy · 5 of 5 right
+2 of 5 solver attempts got it by quoting the same passage: Doc 6 (“Background on Eligible Assets”).
+
+Your answer: 0.35%
+
+Closed-book check
+=================
+The low model answers with no documents at all. Reaching your answer here means the question does not depend on the documents.
+
+Attempt 1 · Needed the documents ✓
+----------------------------------
+Docs: — · Note: —
+
+Final answer: About 4% (roughly 3.5–4.5%) of Bitwise 10’s June 30, 2025 portfolio—mostly its smaller holdings such as Cardano, Avalanche, Chainlink, Sui and Polkadot—fell outside the digital assets eligible under T. Rowe Price’s proposal (which covered the larger-cap names like Bitcoin, Ethereum, Solana and XRP). So the outside weight was only a small single-digit slice, approximately 4%. | Your answer (gold): 0.35%
+
+Full answer
+-----------
+
+About 4% (roughly 3.5–4.5%) of Bitwise 10’s June 30, 2025 portfolio—mostly its smaller holdings such as Cardano, Avalanche, Chainlink, Sui and Polkadot—fell outside the digital assets eligible under T. Rowe Price’s proposal (which covered the larger-cap names like Bitcoin, Ethereum, Solana and XRP). So the outside weight was only a small single-digit slice, approximately 4%.
+
+Reasoning
+---------
+
+We need answer: "What weight of Bitwise 10's June 30, 2025 portfolio lay outside the eligible assets in T. Rowe Price's ETF proposal when the SEC instituted proceedings on it?"
+
+Need understand context: Bitwise 10 (probably Bitwise 10 Crypto Index Fund?) portfolio as of June 30, 2025, and T. Rowe Price's ETF proposal eligible assets, when SEC instituted proceedings on it.
+
+We need determine weight of Bitwise 10 portfolio that was outside eligible assets defined in T. Rowe Price proposal at time SEC instituted proceedings.
+
+We need recall or know specific figures. Let's recall news around SEC instituting proceedings on T. Rowe Price ETF proposal? Maybe in November 2025? Or earlier?
+
+Let's parse: T. Rowe Price filed for an actively managed crypto ETF? The SEC delayed/instituted proceedings. The proposal might limit investments to assets that have futures contracts on CME or are part of certain indices? Need understand "eligible assets in T. Rowe Price's ETF proposal". Perhaps the proposal said the fund may invest in digital assets for which there are futures contracts traded on CME, i.e., Bitcoin and Ethereum only? Or maybe included other assets with CME futures? Let's think.
+
+There was a T. Rowe Price Active Crypto ETF filed in October 2025? Actually in October 2025, T. Rowe Price filed for its first crypto ETF, an actively managed ETF that would invest in digital assets. The filing said the fund will invest primarily in digital assets included in the T. Rowe Price Crypto Index? Hmm need correct.
+
+Another possibility: The SEC instituted proceedings to determine whether to approve a proposed rule change by NYSE Arca to list and trade shares of T. Rowe Price Active Crypto ETF? Or maybe CBOE?
+
+We need weight of Bitwise 10's June 30, 2025 portfolio outside those eligible assets.
+
+Bitwise 10 Crypto Index Fund holds top 10 crypto assets weighted by market cap. As of June 30, 2025, the holdings likely included Bitcoin (~70%?), Ethereum (~15%?), XRP (~5%?), Solana (~4%), Cardano (~1%), etc. Actually Bitwise 10 Crypto Index Fund (BITW) holds BTC, ETH, SOL, XRP, ADA, AVAX, LINK, SUI, DOT, maybe LTC? Let's check mental: Bitwise 10 Crypto Index Fund tracks Bitwise 10 Large Cap Crypto Index. Constituents as of some date: Bitcoin, Ethereum, Solana, XRP, Cardano, Avalanche, Chainlink, Sui, Polkadot, Litecoin? Or maybe Bitcoin Cash? Let's approximate weights around June 2025: BTC maybe 74.5%, ETH 14.5%, SOL 4.5%, XRP 4.8%, ADA 0.8%, AVAX 0.7%, LINK maybe 0.5%, SUI maybe 0.5%, DOT 0.3%, LTC? Actually need precise weights on June 30, 2025.
+
+But the question asks "What weight of Bitwise 10's June 30, 2025 portfolio lay outside the eligible assets in T. Rowe Price's ETF proposal..." So they compare Bitwise 10 portfolio to the eligible assets list in T. Rowe proposal. If T. Rowe proposal eligible assets are those with CME futures? That includes Bitcoin, Ethereum, Solana, XRP? Wait CME futures exist for Bitcoin, Ethereum, Solana, XRP, Micro versions. Actually CME launched futures for Solana and XRP in 2025? Yes, in March 2025 CME added Solana and XRP futures. So maybe eligible assets in T. Rowe proposal are digital assets that have CME futures and also are in the Coinbase 50 Index? Hmm need understand the specific language.
+
+Let's recall the filing for T. Rowe Price Active Crypto ETF (ticker?). In October 2021? No.
+
+Perhaps the question is from a specific article discussing SEC delaying decision on T. Rowe Price crypto ETF and comparing to Bitwise 10. The article might have said that as of June 30, 2025, about 35% of Bitwise 10's portfolio was in assets not eligible for the T. Rowe Price ETF, which only allows assets with CME futures? Or maybe only BTC and ETH are eligible, leaving about 25% outside? Let's examine.
+
+We need be precise: "What weight... lay outside..." So answer likely a percentage like "about 26%" or "approximately 30%"?
+
+Let's recall Bitwise 10 weights around end of June 2025. The Bitwise 10 Large Cap Crypto Index weights (maybe rebalanced monthly). At the end of June 2025, weights might be:
+BTC: 74.84%
+ETH: 14.45%
+SOL: 4.01%
+XRP: 3.05? Or maybe XRP was around 4.8?
+ADA: 0.64?
+AVAX: 0.54?
+LINK: 0.43?
+SUI: 0.80?
+DOT: 0.30?
+LTC? Hmm not sure.
+
+But if eligible assets are BTC, ETH, SOL, XRP (those with CME futures), then outside would be ADA, AVAX, LINK, SUI, DOT, etc. Sum of those might be around 2.5? No that seems small. But wait XRP weight might be ~3.7%, SOL ~4%, ETH ~14.8%, BTC ~74%. So non-eligible might be around 8%? That doesn't sound like a round number.
+
+Alternatively, maybe T. Rowe Price proposal limited to assets included in the CME CF Cryptocurrency Reference Rates? Those include BTC, ETH, SOL, XRP, ADA, AVAX, LINK, DOT, etc? Actually CME CF reference rates cover BTC, ETH, SOL, XRP, ADA, AVAX, LINK, DOT, SUI, etc? Let's check mental: CME CF launched reference rates for many assets: Bitcoin, Ethereum, Ripple, Solana, Cardano, Avalanche, Chainlink, Stellar, Sui, Polkadot, etc. So that might include almost all Bitwise 10 except maybe one?
+
+But the question mentions "when the SEC instituted proceedings on it" - maybe in late 2025 the SEC delayed decision and started proceedings. At that time, commentators compared the proposed ETF's investment universe to existing funds like Bitwise 10.
+
+We need derive exactly.
+
+Let's recall news in November 2025? Actually on November 2025? Let's search mental news: In October 2025, T. Rowe Price filed for Active Crypto ETF. Then in December 2025? Or maybe in July?
+
+Wait there was news in late July or August? Let's recall chronology in 2025: Many ETF filings for altcoins after Ethereum ETF approval in 2024. In 2025, firms filed for Solana, XRP, Litecoin, etc. ETFs. In October 2025, T. Rowe Price filed for an actively managed crypto ETF that could invest in a broad range of crypto assets, not just BTC and ETH. The filing said it will invest in digital assets that meet certain criteria: available on U.S. exchanges, have futures on CME for 6 months, or are part of an index with 40% cap? Hmm sounds like the criteria used by some other filings?
+
+Specifically, there was a proposed rule for listing crypto ETPs that requires either CME futures for 6 months or correlation with futures of another asset, or being part of an ETF with 40% exposure. This was used in filings for altcoin ETFs. But T. Rowe Price's active ETF might use a different standard: invest in digital assets for which there are CME futures contracts, or that are included in broad-market crypto indices?
+
+Let's recall the exact filing language for T. Rowe Price Active Crypto ETF filed with SEC around October 2025. The prospectus might state: "The Fund will invest primarily in digital assets that are available for trading on U.S.-registered digital asset trading platforms and for which futures contracts are traded on a CFTC-registered futures exchange..." Or maybe "The Fund may invest in digital assets included in the T. Rowe Price Crypto Benchmark, which includes assets with market cap >... and available on Coinbase and Kraken"?
+
+But the question references "eligible assets in T. Rowe Price's ETF proposal" and asks what weight of Bitwise 10's June 30, 2025 portfolio lay outside those eligible assets. This sounds like the article calculated that X% of Bitwise 10 was in assets that wouldn't qualify for the T. Rowe Price ETF under its proposed rules.
+
+We need determine that X.
+
+Let's think about the proposal's eligibility criteria. Maybe they said the fund can only invest in crypto assets that have a market capitalization of at least $1 billion and are available on U.S. exchanges? Or assets that are included in the Coinbase 50 Index?
+
+Wait there's a specific rule proposed by NYSE Arca, CBOE, Nasdaq for listing crypto ETPs: The underlying crypto must have futures contracts on a regulated market for at least six months, OR there must be another ETF with 40% exposure. But for an actively managed ETF, the manager can choose assets that meet liquidity and custody criteria.
+
+But the question mentions "T. Rowe Price's ETF proposal when the SEC instituted proceedings on it". The SEC instituting proceedings is a formal step in reviewing a proposed rule change for listing an ETF. So it's likely a proposed rule change filed by an exchange (maybe NYSE Arca) to list shares of the T. Rowe Price Active Crypto ETF. In that proposed rule change, there might be defined "Eligible Digital Assets" that the ETF can hold. The SEC then institutes proceedings to determine approval.
+
+Actually yes: In October 2025, T. Rowe Price filed for an ETF, but then an exchange filed a rule change to list it? Or maybe T. Rowe filed an S-1 registration statement, not a rule change. The SEC can delay the effective date of the registration statement. But "instituted proceedings" sounds like Section 19(b)(1) of the Securities Exchange Act for a self-regulatory organization rule change.
+
+Let's recall specific news headlines in late 2025: On November 2025? Let's list some known ETF filing delays in late 2025: The SEC delayed decisions on several spot crypto ETFs, including ones for Solana, XRP, Litecoin, etc. But also in December 2025, the SEC delayed decision on T. Rowe Price crypto ETF? Or in January 2026?
+
+Actually in December 2025, the SEC delayed decisions on multiple ETFs: Bitwise, Franklin Templeton, etc. But there was also news that the SEC started proceedings on T. Rowe Price's active crypto ETF filing? Let's recall: In late October 2025, T. Rowe Price filed for "T. Rowe Price Active Crypto ETF". Then in November or December, the SEC said it was instituting proceedings? Or maybe in January 2026?
+
+We need the specific weight figure mentioned in analysis. Let's try to recall an article that discussed this. Maybe on The Block, Cointelegraph, or Bloomberg ETF analysis by James Seyffart? They might have said: "Bitwise 10 holds about 30% in assets that wouldn't be eligible for T. Rowe Price's proposed fund, which can only hold assets with CME futures..." But need correct.
+
+Let's determine the eligible assets according to the proposal. The filing might list specific assets: Bitcoin, Ethereum, Solana, XRP, Cardano, Avalanche, Sui, Polkadot, Stellar, Chainlink? Or maybe only BTC and ETH?
+
+Wait, the phrase "eligible assets in T. Rowe Price's ETF proposal" sounds like there is a specific list in the proposal. Let's recall the filing details for T. Rowe Price Active Crypto ETF (ticker TCRY? Or something?). The fund aims to provide exposure to a range of digital assets, using an active strategy. The prospectus might include a "Crypto Selection Criteria" requiring:
+1. Market cap > $1B
+2. Daily trading volume > $10M
+3. Available on U.S. registered exchanges
+4. Secure custody available
+5. Not a security?
+
+But there might also be a specific list of "Eligible Crypto Assets" named in the filing: Bitcoin (BTC), Ethereum (ETH), Solana (SOL), XRP, Cardano (ADA), Avalanche (AVAX), Sui (SUI), Polkadot (DOT), Stellar (XLM), Chainlink (LINK), etc. Actually I think in some filings they list specific assets that currently meet criteria.
+
+Let's recall that in October 2025, Canary Capital filed for a "Canary Crypto ETF" or "American-Made Crypto ETF"? No, Canary filed for several altcoin ETFs. But T. Rowe Price filed for an actively managed one that could invest in 5 to 15 digital assets.
+
+Let's search mental database for news headlines around late October 2025: "T. Rowe Price files for first crypto ETF, seeking exposure to broad range of digital assets". Yes, I think in late October 2025 (around Oct 29?), T. Rowe Price filed with SEC for an actively managed ETF that will invest in crypto assets. The filing said the fund will initially invest in Bitcoin, Ethereum, Solana, XRP, and Cardano? Or maybe Bitcoin, Ethereum, Solana, XRP, Cardano, Avalanche, Sui, Chainlink, Stellar, and Polkadot?
+
+Actually, I recall seeing a headline that T. Rowe Price's crypto ETF will initially focus on Bitcoin, Ethereum, Solana, XRP, and Cardano? Or maybe on assets included in the "T. Rowe Price Digital Asset Reference Rate"?
+
+Let's try to recall the specific list in the filing. The filing might have said: "The Fund expects to initially invest in Bitcoin, Ethereum, Solana, XRP, Cardano, Avalanche, Sui, Stellar, Chainlink, and Polkadot, subject to meeting eligibility criteria..." That sounds plausible—10 assets, matching Bitwise 10? Hmm interesting: Bitwise 10 holds 10 assets. Maybe T. Rowe Price's ETF also considers 10 assets? Let's check mental consistency: Bitwise 10 includes BTC, ETH, SOL, XRP, ADA, AVAX, LINK, SUI, DOT, and maybe LTC or BCH? Actually the Bitwise 10 Large Cap Index includes the 10 largest crypto assets by market cap that meet certain criteria. As of mid-2025, the top 10 were: Bitcoin, Ethereum, XRP, Solana, BNB, Cardano? Wait BNB was in top 5 but might be excluded due to centralization? Let's check mental market caps in June 2025: BTC (~$2T), ETH (~$300B), XRP (~$130B?), BNB (~$100B?), SOL (~$80B?), USDC is stablecoin not included. Then ADA (~$25B?), DOGE (~$30B?), TRX (~$25B?), SUI (~$10B?), LINK (~$15B?), AVAX (~$10B?). So top 10 excluding stablecoins might be BTC, ETH, XRP, BNB, SOL, DOGE, ADA, TRX, SUI, LINK? Or AVAX?
+
+But Bitwise 10 index specifically excludes stablecoins and certain other assets. Let's check mental composition of BITW (Bitwise 10 Crypto Index Fund) in mid-2025. BITW holds BTC, ETH, SOL, XRP, ADA, AVAX, LINK, SUI, DOT, and maybe LTC? Actually in 2022 it held BTC, ETH, ADA, SOL, DOT, AVAX, MATIC, LTC, UNI, LINK. But they update constituents. By 2025, they might have replaced some. Let's check mental news in 2025: Bitwise updated its Bitwise 10 Index in June 2025? Or in July? There was news that Bitwise updated its indices, adding some and removing others. Specifically, in June or July 2025, Bitwise announced updates to its crypto indices: The Bitwise 10 Large Cap Crypto Index added SUI and removed some others? Or added SUI and dropped Uniswap?
+
+Let's recall in July 2025 Bitwise updated its Bitwise 10, 20, etc. They might have added Sui and removed Polygon? Let's not overfixate.
+
+But the question specifically mentions "Bitwise 10's June 30, 2025 portfolio". So they are using the portfolio weights on that date, which likely include specific assets.
+
+Now, the T. Rowe Price proposal might have defined eligible assets as those with CME futures contracts available for at least six months and also listed on Coinbase? Let's check which assets had CME futures by late 2025: Bitcoin (since 2017), Ethereum (since 2021), Solana (since March 2025), XRP (since May 2025?), and also micro futures for others? Actually CME launched Solana futures in March 2025, XRP futures in May 2025, and also Cardano, Chainlink, Stellar futures? Wait in August 2025, CME announced it would launch options on Solana and XRP futures, and also added futures for Cardano, Chainlink, and Stellar? Let's check mental: In August 2025, CME announced plans to launch futures for Cardano, Chainlink, and Stellar? Or was that just speculation? Actually I think in late 2025, CME added futures for Cardano, Chainlink, and Stellar? Let's recall: In September 2024 CME added options? No.
+
+But by late 2025, CME futures existed for BTC, ETH, SOL, XRP, and maybe also for ADA, LINK, XLM? Let's check mental news: In December 2025, CME launched spot-quoted futures for Cardano, Chainlink, and Stellar? Yes! I think on December 15, 2025, CME launched futures contracts for Cardano (ADA), Chainlink (LINK), and Stellar (XLM). So prior to that, they didn't have futures.
+
+Thus, if the T. Rowe Price proposal required CME futures for 6 months, then only BTC and ETH qualified by late 2025, since SOL and XRP futures only launched in March and May 2020? Wait 2025, so they hadn't been around for 6 months? Actually SOL futures launched March 2025, so by October/November 2025 they had been around for more than 6 months (March to October = 7 months). XRP futures launched in May 2025, so by November they had about 6 months. So SOL and XRP might also qualify.
+
+But the question mentions "when the SEC instituted proceedings on it" - maybe this was in November 202i? No, need correct date.
+
+Actually, there might be a specific article analyzing the T. Rowe Price filing and comparing it to Bitwise 10. The article might have calculated that about 16.5%? Or 35.8%?
+
+We need be precise.
+
+Let's recall that in October 2028? No.
+
+Let's systematically analyze possible eligible lists.
+
+Case 1: Eligible assets are BTC and ETH only.
+Bitwise 10 on June 30, 2025 weights:
+BTC ~74%
+ETH ~15%
+Total in BTC+ETH ~89%. Outside = ~11%. That could be the answer? About 11.5%?
+
+Case 2: Eligible are BTC, ETH, SOL, XRP.
+Weights: BTC ~74%, ETH ~15%, SOL ~5%, XRP ~4% => total ~98%. Outside ~2%. Unlikely they'd ask that.
+
+Case 3: Eligible are those included in some specific index like Coinbase 50? That includes many.
+
+Thus case 1 seems more plausible: only BTC and ETH are eligible, leaving about 25%? Wait no, BTC+ETH in Bitwise 10 might be around 88%, leaving ~12% outside. But is 12% a nice round number? Maybe 11.7%?
+
+But wait, Bitwise 10 in June 2025 might have had BTC at 70% and ETH at 20%, leaving 10% for others? Actually ETH was around 15%, BTC around 70%, others about 15%. So outside might be around 15-25% if only BTC/ETH are eligible.
+
+But we need "What weight... lay outside the eligible assets..." If BTC and ETH are inside, then outside is 100 - (BTC weight + ETH weight). Let's try more accurate Bitwise 10 weights on June 30, 2025.
+
+We need accurate weights from that date. Let's recall the Bitwise 10 Large Cap Crypto Index methodology: Weights are market-cap weighted, with a 25% cap? Or maybe 30%? Actually they apply a 30% cap? Let's check mental: The Bitwise 10 index caps any single asset at 30%? No, BTC is over 30%, so they might not cap, or they have a liquidity weighting. Wait in 2022 they had BTC at ~64%, ETH at ~28%, others small. By 2025, BTC dominance in crypto was around 65% of total market, but in Bitwise 10 (large cap excluding stablecoins) BTC might be around 70%.
+
+But we need the portfolio weights of the fund BITW on June 30, 2021? No, 2025.
+
+Actually, there might be a specific source: The Bitwise 10 Crypto Index Fund (BITW) publishes its holdings. As of June 30, 2025, maybe the allocations were:
+Bitcoin: 78.72%
+Ethereum: 12.30%
+Solana: 3.15%
+XRP: 2.80?
+Cardano: 0.45?
+Avalanche: 0.40?
+Sui: 0.88?
+Chainlink: 0.50?
+Polkadot: 0.30?
+Litecoin: ?
+
+That sums BTC+ETH = ~91%, others ~9%. So outside might be around 9%.
+
+But I need be closer.
+
+However, there's also BNB and DOGE not in Bitwise 10? Actually Bitwise 10 might include BNB? No, BNB might be excluded because it's exchange token? Or maybe included.
+
+Let's recall in July 2025, Bitwise updated its index constituents. The news said the Bitwise 10 Large Cap Crypto Index added Sui and removed Uniswap? Or added SUI and dropped MATIC? Let's check mental news in July 2025: Bitwise Asset Management announced updates to its crypto indices effective July 31, 2025. The Bitwise 10 Large Cap Crypto Index added SUI and dropped... maybe Uniswap? Actually Uniswap was never in top 10. Let's recall: In June 2025, the Bitwise 10 index included BTC, ETH, SOL, XRP, BNB, ADA, SUI, DOGE, TRX, LINK? No that sounds like top 10 by market cap excluding stablecoins. But Bitwise applies screening criteria (custody, liquidity, etc.). BNB might be excluded because it's primarily traded on Binance, not on U.S. exchanges? Yes, BNB is not available on major U.S. exchanges, so Bitwise might exclude it. Similarly, TRX and DOGE might be available.
+
+Actually, the Bitwise 10 index requires assets to be available on U.S. exchanges and have qualified custodians. So BNB (not on U.S. exchanges) is excluded. TRX might also be limited. So the constituents might be BTC, ETH, SOL, XRP, ADA, AVAX, LINK, SUI, DOT, and maybe LTC or UNI?
+
+Thus weights might be distributed among those.
+
+But we need specifically "What weight of Bitwise 10's June 30, 2025 portfolio lay outside the
+
+Low model
+=========
+
+Attempt 1 · Right
+-----------------
+Docs: Doc 4, Doc 6, Doc 7 · Note: —
+
+Final answer: 0.35% of Bitwise 10’s June 30, 2025 portfolio. | Your answer (gold): 0.35%
+
+How it got there: Quoted Doc 6 (“bitcoin (BTC), ether (ETH), SOL (SOL), XRP (XRP), ada (ADA), AVAX (AVAX), litecoin (LTC),…”), and 1 more passage.
+
+Passages quoted:
+
+- Quoted Doc 6: “bitcoin (BTC), ether (ETH), SOL (SOL), XRP (XRP), ada (ADA), AVAX (AVAX), litecoin (LTC), DOT (DOT), Dogecoin (DOGE), HBAR (HBAR), Bitcoin Cash (BCH), LINK (LINK), lumen (XLM), and Shiba Inu (SHIB).”
+- Quoted Doc 7: “bitcoin (BTC), ether (ETH), SOL (SOL), XRP (XRP), ada (ADA), AVAX (AVAX), litecoin (LTC), DOT (DOT), Dogecoin (DOGE), HBAR (HBAR), Bitcoin Cash (BCH), LINK (LINK), lumen (XLM), Shiba Inu (SHIB), and Sui (SUI).”
+
+Named Doc 4, Doc 6, Doc 7
+
+Full answer
+-----------
+
+Based on the Bitwise 10 portfolio weights listed as of June 30, 2025 (Document 4):
+
+- BTC 78.72%
+- ETH 11.10%
+- XRP 4.97%
+- SOL 3.03%
+- ADA 0.78%
+- SUI 0.35%
+- LINK 0.32%
+- AVAX 0.28%
+- LTC 0.24%
+- DOT 0.19%
+
+And the T. Rowe Price ETF proposal’s “Eligible Assets” list at the time proceedings were instituted on January 28, 2026 (the original November 2025 filing in Document 6) included:
+
+BTC, ETH, SOL, XRP, ADA, AVAX, LTC, DOT, DOGE, HBAR, BCH, LINK, XLM, and SHIB — but not SUI (SUI was added only in the April 2026 Amendment No. 1).
+
+Thus, only SUI was outside the T. Rowe Price eligible set, representing:
+
+0.35% of Bitwise 10’s June 30, 2025 portfolio.
+
+Reasoning
+---------
+
+We need answer based on input documents. Need understand context: Bitwise 10's June 30, 2025 portfolio weights listed in Document 4 (Amendment No.1 to SR-NYSEARCA-2024-98). Need determine which of those assets are not in T. Rowe Price ETF proposal eligible assets list (Document 6 or 7?). Need identify eligible assets in T. Rowe Price proposal. Let's parse carefully.
+
+We have Document 4 describing Bitwise 10 Crypto Index ETF portfolio weights as of June 30, 2025:
+- bitcoin (BTC) 78.72%
+- ether (ETH) 11.10%
+- XRP (XRP) 4.97%
+- Solana (SOL) 3.03%
+- Cardano (ADA) 0.78%
+- SUI (SUI) 0.35%
+- Chainlink (LINK) 0.32%
+- Avalanche (AVAX) 0.28%
+- Litecoin (LTC) 0.24%
+- Polkadot (DOT) 0.19%
+
+Need "outside the eligible assets in T. Rowe Price's ETF proposal when the SEC instituted proceedings on it"
+
+Need determine T. Rowe Price Active Crypto ETF eligible assets list in the proposal at time of institution? The proposal was filed Nov 6, 2025 (Document 6). Then Amendment No. 1 filed Apr 21, 2026 (Document 7) replaced filing. The SEC instituted proceedings on Jan 28, 2026 (Document 7 mentions). So we need the proposal as originally filed? Or as modified? The question says "when the SEC instituted proceedings on it" - that was on Jan 28, 2026, prior to Amendment No. 1 (Apr 2026). So we should use original filing (Document 6) eligible assets list.
+
+In Document 6, under "Eligible Assets" paragraph lists: "bitcoin (BTC), ether (ETH), SOL (SOL), XRP (XRP), ada (ADA), AVAX (AVAX), litecoin (LTC), DOT (DOT), Dogecoin (DOGE), HBAR (HBAR), Bitcoin Cash (BCH), LINK (LINK), lumen (XLM), and Shiba Inu (SHIB)." That's 14 assets. Need compare to Bitwise 10 portfolio assets: BTC, ETH, XRP, SOL, ADA, SUI, LINK, AVAX, LTC, DOT.
+
+Which ones are NOT in T. Rowe Price list?
+List present:
+BTC yes
+ETH yes
+XRP yes
+SOL yes
+ADA yes
+SUI? Not in list (SUI absent)
+LINK yes
+AVAX yes
+LTC yes
+DOT yes
+
+So only SUI is outside? Wait check if SUI might be in amended list in Document 7. Document 7 lists eligible assets including SUI (SUI) added? Let's check Document 7 lists: "bitcoin (BTC), ether (ETH), SOL (SOL), XRP (XRP), ada (ADA), AVAX (AVAX), litecoin (LTC), DOT (DOT), Dogecoin (DOGE), HBAR (HBAR), Bitcoin Cash (BCH), LINK (LINK), lumen (XLM), Shiba Inu (SHIB), and Sui (SUI)." Yes amendment added SUI. But institution was before amendment, so original list lacks SUI. Also need check if Polkadot? Wait DOT is present in original list yes. So only SUI (0.35%) is outside? But wait Bitwise 10 includes Polkadot (DOT) 0.19%, and DOT is in original list yes. So weight outside = 0.35%? But need "What weight ... lay outside the eligible assets" maybe sum of all not eligible. Only SUI 0.35%. Let's verify if any other asset missing: Chainlink LINK present. Avalanche AVAX present. Litecoin LTC present. So yes only SUI.
+
+But need be precise: 0.35 percent? Or 0.35% of portfolio? The weight of SUI in Bitwise portfolio is 0.35%. So answer 0.35%. Let's provide.
+
+Attempt 2 · Right
+-----------------
+Docs: Doc 4, Doc 6, Doc 7 · Note: —
+
+Final answer: Answer: 0.35% (the SUI weight). | Your answer (gold): 0.35%
+
+How it got there: Quoted Doc 6 (“Background on Eligible Assets”).
+
+Passages quoted:
+
+- Quoted Doc 6: “Background on Eligible Assets”
+
+Named Doc 4, Doc 6, Doc 7
+
+Full answer
+-----------
+
+The Bitwise 10 Crypto Index ETF’s June 30, 2025 holdings were:
+
+- BTC: 78.72%
+- ETH: 11.10%
+- XRP: 4.97%
+- SOL: 3.03%
+- ADA: 0.78%
+- SUI: 0.35%
+- LINK: 0.32%
+- AVAX: 0.28%
+- LTC: 0.24%
+- DOT: 0.19%
+
+At the time the SEC instituted proceedings on the T. Rowe Price proposal (January 28, 2026—before the April 2026 amendment), the Fund’s “Eligible Assets” listed in the original filing included BTC, ETH, SOL, XRP, ADA, AVAX, LTC, DOT, DOGE, HBAR, BCH, LINK, XLM, and SHIB, but not SUI (SUI was added only in Amendment No. 1).
+
+So only SUI was outside the eligible set.
+
+Answer: 0.35% (the SUI weight).
+
+Reasoning
+---------
+
+We need parse documents to answer: "What weight of Bitwise 10's June 30, 2025 portfolio lay outside the eligible assets in T. Rowe Price's ETF proposal when the SEC instituted proceedings on it?"
+
+Need understand context: There is Bitwise 10 Crypto Index ETF listed in Document 4 and 5, with portfolio weights as of June 30, 2025: BTC 78.72%, ETH 11.10%, XRP 4.97%, SOL 3.03%, ADA 0.78%, SUI 0.35%, LINK 0.32%, AVAX 0.28%, LTC 0.24%, DOT 0.19%.
+
+Then there is T. Rowe Price Active Crypto ETF proposal in Document 6 and 7. Need determine eligible assets in T. Rowe Price's ETF proposal when SEC instituted proceedings on it (Document 7 mentions Amendment No. 1 filed Apr 21, 2026 replacing filing; but proceedings instituted Jan 28, 2026 per Document 7). Need determine which assets were considered eligible in the original/proposed rule? The question asks "What weight of Bitwise 10's June 30, 2025 portfolio lay outside the eligible assets in T. Rowe Price's ETF proposal when the SEC instituted proceedings on it?"
+
+Thus need identify the set of Eligible Assets listed in T. Rowe Price proposal at the time of institution (probably in original filing Document 6, since Amendment 1 in Document 7 modifies to generic listing standards?). Let's examine Document 6 and 7 for list of Eligible Assets.
+
+In Document 6 (Nov 2025 filing), under "Background on Eligible Assets" lists: bitcoin (BTC), ether (ETH), SOL (SOL), XRP (XRP), ada (ADA), AVAX (AVAX), litecoin (LTC), DOT (DOT), Dogecoin (DOGE), HBAR (HBAR), Bitcoin Cash (BCH), LINK (LINK), lumen (XLM), and Shiba Inu (SHIB). That's 14 assets. Note SUI is NOT in that list.
+
+But wait, Document 7 (Apr 2026 amendment) lists Eligible Assets: bitcoin, ether, SOL, XRP, ada, AVAX, litecoin, DOT, Dogecoin, HBAR, Bitcoin Cash, LINK, lumen, Shiba Inu, and Sui (SUI). So Amendment No. 1 added SUI.
+
+The question specifies "when the SEC instituted proceedings on it" - that was Jan 28, 2026, before Amendment No. 1 (filed Apr 21, 2026). So we should use the original filing's eligible assets list (Document 6), which does NOT include SUI.
+
+Thus need compute weight of Bitwise 10's June 30, 2025 portfolio that are NOT in T. Rowe Price's eligible assets list at that time.
+
+Bitwise 10 portfolio weights as of June 30, 2025 (from Document 4/5):
+BTC 78.72% -> in list (yes)
+ETH 11.10% -> yes
+XRP 4.97% -> yes
+SOL 3.03% -> yes
+ADA 0.78% -> yes
+SUI 0.35% -> NOT in original list (added later in amendment)
+LINK 0.32% -> yes (LINK present)
+AVAX 0.28% -> yes
+LTC 0.24% -> yes
+DOT 0.19% -> yes
+
+Thus only SUI lies outside. Weight = 0.35%. But need "What weight... lay outside" maybe sum of all not in list = 0.35%. Let's verify if any other assets in Bitwise 10 not in list: The list includes DOGE, HBAR, BCH, XLM, SHIB, but those aren't in Bitwise portfolio. So only SUI missing. Therefore answer 0.35%.
+
+Need cite sources. Let's provide concise answer with reasoning.
+
+Attempt 3 · Right
+-----------------
+Docs: Doc 4, Doc 6, Doc 7 · Note: —
+
+Final answer: Answer: 0.35% (the SUI allocation). | Your answer (gold): 0.35%
+
+How it got there: Named Doc 4, Doc 6, Doc 7 without quoting a passage.
+
+Passages quoted:
+
+Named Doc 4, Doc 6, Doc 7
+
+Full answer
+-----------
+
+The Bitwise 10 portfolio as of June 30, 2025 (Document 4) was:
+
+- BTC: 78.72%
+- ETH: 11.10%
+- XRP: 4.97%
+- SOL: 3.03%
+- ADA: 0.78%
+- SUI: 0.35%
+- LINK: 0.32%
+- AVAX: 0.28%
+- LTC: 0.24%
+- DOT: 0.19%
+
+At the time the SEC instituted proceedings on the T. Rowe Price proposal (January 28, 2026), the filing still used the original eligible-asset list from the November 2025 filing (Document 6), which included BTC, ETH, SOL, XRP, ADA, AVAX, LTC, DOT, DOGE, HBAR, BCH, LINK, XLM, and SHIB — but not SUI. (SUI was added only in the April 2026 Amendment No. 1; Document 7.)
+
+All other Bitwise 10 holdings were in that original T. Rowe Price list. Only SUI was outside it.
+
+Answer: 0.35% (the SUI allocation).
+
+Reasoning
+---------
+
+We need answer based on input docs. Need understand context: Bitwise 10's June 30, 2025 portfolio weights listed in Document 4 (the approval order for Bitwise 10). Need determine which assets are not in T. Rowe Price's ETF proposal eligible assets list, then sum weights outside.
+
+Let's parse Document 6 (proposed rule change for T. Rowe Price Active Crypto ETF) lists Eligible Assets as of filing date: bitcoin (BTC), ether (ETH), SOL (SOL), XRP (XRP), ada (ADA), AVAX (AVAX), litecoin (LTC), DOT (DOT), Dogecoin (DOGE), HBAR (HBAR), Bitcoin Cash (BCH), LINK (LINK), lumen (XLM), Shiba Inu (SHIB), and Sui (SUI).
+
+Document 4 lists Bitwise 10 portfolio weights as of June 30, 2025: BTC 78.72%, ETH 11.10%, XRP 4.97%, SOL 3.03%, ADA 0.78%, SUI 0.35%, LINK 0.32%, AVAX 0.28%, LTC 0.24%, DOT 0.19%.
+
+We need weight that lay outside eligible assets in T. Rowe Price proposal. Let's check each Bitwise holding against T. Rowe list:
+BTC yes
+ETH yes
+XRP yes
+SOL yes
+ADA yes
+SUI yes (listed in T. Rowe eligible assets)
+LINK yes
+AVAX yes
+LTC yes
+DOT yes
+
+Wait all are in T. Rowe list? Actually T. Rowe list includes SUI, yes included at end "and Sui (SUI)". So all ten are within eligible assets? But question asks "What weight of Bitwise 10's June 30, 2025 portfolio lay outside the eligible assets in T. Rowe Price's ETF proposal when the SEC instituted proceedings on it?" Maybe need check the filing date of T. Rowe proposal (Nov 6, 2025) and Amendment No. 1 (Apr 21, 2026). At time proceedings instituted (Jan 28, 2026?), the eligible assets might have been those listed in original filing (Document 6? Actually Document 6 is the notice of filing of proposed rule change published Nov 28, 2025, listing eligible assets: BTC, ETH, SOL, XRP, ADA, AVAX, LTC, DOT, DOGE, HBAR, BCH, LINK, XLM, SHIB. Wait in Document 6 (the original filing notice published Nov 28, 2025), the list ends with Shiba Inu (SHIB) and does NOT include SUI? Let's check carefully.
+
+Document 6 lists: "bitcoin (BTC), ether (ETH), SOL (SOL), XRP (XRP), ada (ADA), AVAX (AVAX), litecoin (LTC), DOT (DOT), Dogecoin (DOGE), HBAR (HBAR), Bitcoin Cash (BCH), LINK (LINK), lumen (XLM), Shiba Inu (SHIB)." Yes SUI is NOT in that list. Then Document 7 (Amendment No. 1 filed Apr 21, 2026) updates list to include Sui (SUI) at end: "and Sui (SUI)." So at time proceedings instituted (Jan 28, 2026), the proposal was the original filing (before Amendment No. 1), so eligible assets did not include SUI.
+
+Thus Bitwise 10's June 30, 2025 portfolio includes SUI at 0.35%, which was outside T. Rowe Price's eligible assets at that time. Are there any others not in original list? Let's check original list includes BTC, ETH, SOL, XRP, ADA, AVAX, LTC, DOT, DOGE, HBAR, BCH, LINK, XLM, SHIB. Bitwise portfolio includes BTC, ETH, XRP, SOL, ADA, SUI, LINK, AVAX, LTC, DOT. Among these, SUI is missing; all others are present. So weight outside = 0.35%.
+
+But need verify if there might also be missing DOGE etc but not in Bitwise. So only SUI 0.35%. Need answer likely 0.35%.
+
+We should cite docs. Let's craft concise answer.
+
+Attempt 4 · Right
+-----------------
+Docs: Doc 4, Doc 6, Doc 7 · Note: —
+
+Final answer: Weight outside: 0.35% (the SUI allocation). | Your answer (gold): 0.35%
+
+How it got there: It compared Bitwise 10's June 30, 2025 portfolio from Doc 4 against the eligible assets in Doc 6, using the timing of SEC proceedings to select the original list without SUI.
+
+Passages quoted:
+
+- Quoted Doc 7: “As of the date of this filing, based on its assessment of available data, the Sponsor considers the following to be Eligible Assets (ticker symbols in parentheses): bitcoin (BTC), ether (ETH), SOL (SOL), XRP (XRP), ada (ADA), AVAX (AVAX), litecoin (LTC), DOT (DOT), Dogecoin (DOGE), HBAR (HBAR), Bitc”
+- Quoted Doc 6: “Background on Eligible Assets”
+- Quoted Doc 6: “As of October 2025, SHIB has”
+- Quoted Doc 6: “The Structure and Operation of the Fund Protects Investors”
+
+Named Doc 4, Doc 6, Doc 7
+
+Full answer
+-----------
+
+The Bitwise 10 portfolio as of June 30, 2025 (Document 4) was:
+
+- BTC: 78.72%
+- ETH: 11.10%
+- XRP: 4.97%
+- SOL: 3.03%
+- ADA: 0.78%
+- SUI: 0.35%
+- LINK: 0.32%
+- AVAX: 0.28%
+- LTC: 0.24%
+- DOT: 0.19%
+
+At the time the SEC instituted proceedings (Jan. 28, 2026), the T. Rowe Price proposal (the original Nov. 2025 filing, Document 6) listed these Eligible Assets: BTC, ETH, SOL, XRP, ADA, AVAX, LTC, DOT, DOGE, HBAR, BCH, LINK, XLM, and SHIB. SUI was not included in that list (it was added only in the April 2026 Amendment No. 1, Document 7).
+
+So only the SUI position was outside the then-proposed eligible assets.
+
+Weight outside: 0.35% (the SUI allocation).
+
+Reasoning
+---------
+
+We need answer based on input documents. Need understand context: "What weight of Bitwise 10's June 30, 2025 portfolio lay outside the eligible assets in T. Rowe Price's ETF proposal when the SEC instituted proceedings on it?"
+
+We need parse documents for Bitwise 10 Crypto Index ETF portfolio weights on June 30, 2025 and eligible assets in T. Rowe Price Active Crypto ETF proposal, then determine which portfolio assets are not in T. Rowe's eligible assets list, compute total weight.
+
+Let's extract data.
+
+Document 4 (Federal Register Vol 90 Issue 141, July 25, 2025) describes Bitwise 10 Crypto Index ETF listing approval. In section B. The Trust, lists portfolio assets and weightings as of June 30, 2025:
+bitcoin (BTC) 78.72%
+ether (ETH) 11.10%
+XRP (XRP) 4.97%
+Solana (SOL) 3.03%
+Cardano (ADA) 0.78%
+SUI (SUI) 0.35%
+Chainlink (LINK) 0.32%
+Avalanche (AVAX) 0.28%
+Litecoin (LTC) 0.24%
+Polkadot (DOT) 0.19%
+
+Check sum approx 99.98? Let's sum: 78.72+11.10=89.82; +4.97=94.79; +3.03=97.82; +0.78=98.6; +0.35=98.95; +0.32=99.27; +0.28=99.55; +0.24=99.79; +0.19=99.98. Yes.
+
+Now need "eligible assets in T. Rowe Price's ETF proposal when the SEC instituted proceedings on it". Need look at Document 6 and Document 7? Document 6 is notice of filing of proposed rule change to list and trade shares of T. Rowe Price Active Crypto ETF under NYSE Arca Rule 8.201-E (Non-Generic) Commodity-Based Trust Shares, dated Nov 24, 2025. Document 7 is notice of filing of proposed rule change, as modified by Amendment No. 1, to list and trade shares... under NYSE Arca Rule 8.201-E (Generic) Commodity-Based Trust Shares, dated Apr 24, 2026, and mentions Amendment No. 1 replaced filing in its entirety, with proposal available. Need determine eligible assets listed in the proposal at time SEC instituted proceedings. The proceedings instituted on Jan 28, 2026 (Document 7 mentions). So need the proposal as modified? Actually "when the SEC instituted proceedings on it" - institution date Jan 28, 2026. At that time, the filing was the original filed Nov 6, 2025? Or maybe amended? Let's check Document 7 says filed Nov 6, 2025, published Nov 28, 2025. On Jan 7, 2026 designated longer period. On Jan 28, 2026 instituted proceedings. Then on Apr 21, 2026 filed Amendment No. 1 replacing in its entirety. So at the time of institution (Jan 28, 2026), the proposal was the original filing (Document 6). However Document 7 includes the amended version with eligible assets list? Let's check Document 7 content for eligible assets.
+
+In Document 7, section Description of the Fund lists "As of the date of this filing, based on its assessment of available data, the Sponsor considers the following to be Eligible Assets (ticker symbols in parentheses): bitcoin (BTC), ether (ETH), SOL (SOL), XRP (XRP), ada (ADA), AVAX (AVAX), litecoin (LTC), DOT (DOT), Dogecoin (DOGE), HBAR (HBAR), Bitcoin Cash (BCH), LINK (LINK), lumen (XLM), Shiba Inu (SHIB), and Sui (SUI)."
+
+But wait that's in Document 7 (the amended filing dated Apr 2026). In Document 6 (original filing Nov 2025), there may be a different list? Let's check Document 6 content near the end: It lists Eligible Assets? Let's scan Document 6.
+
+Document 6 includes Description of the Fund with investment objective referencing Index Constituents, but I need the specific list of Eligible Assets in the original proposal. Let's search within Document 6 text.
+
+Looking at Document 6, near "Background on Eligible Assets" there is a long section describing Bitcoin, Ethereum, Solana, XRP Ledger, Cardano, Avalanche, Litecoin, Polkadot, Dogecoin, HBAR, Bitcoin Cash, Chainlink, lumen, Shiba Inu. Wait I see in Document 6 there are descriptions for Bitcoin, Ether, Solana, XRP, Cardano, Avalanche, Litecoin, DOT, Dogecoin, HBAR, Bitcoin Cash, Chainlink, lumen, Shiba Inu. Is SUI included? Let's check Document 6 text precisely.
+
+In Document 6, after Shiba Inu (SHIB) section ends at "As of October 2025, SHIB has..." Then the section "The Structure and Operation of the Fund Protects Investors" starts. So in Document 6, the listed assets with background are: Bitcoin, Ether, Solana, XRP, Cardano, Avalanche, Litecoin, Polkadot, Dogecoin, HBAR, Bitcoin Cash, Chainlink, lumen, Shiba Inu. That's 14 assets, no SUI. But wait need check if SUI mentioned elsewhere? In Document 6 portfolio? No that's Bitwise.
+
+Thus the original proposal (Document 6) eligible assets list likely includes those 14, excluding SUI. But Document 7 (amended) includes Sui (SUI) as well, making 15.
+
+The question asks "What weight of Bitwise 10's June 30, 2025 portfolio lay outside the eligible assets in T. Rowe Price's ETF proposal when the SEC instituted proceedings on it?"
+
+We need determine which assets in Bitwise 10 portfolio on June 30, 2025 are NOT in T. Rowe Price eligible assets at the time of institution (Jan 28, 2026). If using original list (Document 6), missing assets are SUI? Wait Bitwise portfolio includes SUI 0.35%, Chainlink 0.32%, Avalanche 0.28%, Litecoin 0.24%, Polkadot 0.19%. All of these except maybe SUI are in Document 6 list? Let's check Document 6 includes Avalanche, Litecoin, Polkadot, Chainlink? Yes Chainlink is included (LINK). So only SUI is not in Document 6 list? Let's verify if Document 6 includes SUI anywhere. I don't see SUI in Document 6 descriptions. So weight outside = 0.35%? That seems small, but let's verify precisely.
+
+But wait need check if Document 6 includes XRP, Solana, Cardano, Bitcoin, Ethereum obviously yes. So indeed only SUI missing, weight 0.35%.
+
+However, need be careful: The question might be asking using the amended proposal? But it says "when the SEC instituted proceedings on it" - that was Jan 28, 2026, before Amendment No. 1 filed Apr 21, 2026. So the proposal at that time was the original filing (Document 6). But Document 7 mentions that Amendment No. 1 replaced filing in its entirety and was filed Apr 21, 2026. The institution was in January, prior to amendment. So correct list is original.
+
+But wait there might be another asset missing: In Document 6, is there "Sui" absent, yes. Are there any others? Bitwise portfolio includes Bitcoin Cash? No. So only SUI is outside.
+
+But the weight "lay outside the eligible assets" might be summed for all assets in Bitwise portfolio not in T. Rowe list. That'd be just SUI at 0.35%. But also need check if Polkadot (DOT) is in Document 6? Yes DOT is included with background. Chainlink included. Avalanche included. Litecoin included. So yes only SUI.
+
+But wait Document 7 lists SUI as eligible in the amended version. So if using amended version (which replaced filing entirely but after institution?), but the question specifically ties to "when the SEC instituted proceedings on it" - the proceedings were on the proposed rule change, which was later amended. But typically they review the amended version? Actually they instituted proceedings on the proposed rule change filed originally? Let's read Document 7: "On January 28, 2026, the Commission instituted proceedings under Section 19(b)(2)(B) of the Act, to determine whether to approve or disapprove the proposed rule change." Then "On April 21, 2026, pursuant to Section 19(b)(2) of the Act, the Exchange filed Amendment No. 1 to the proposed rule change, which replaced and superseded the original filing in its entirety." So the proceedings are still on the proposed rule change, now as amended. But the question asks "when the SEC instituted proceedings on it" - that might just be referencing the timeline point, but they ask "the eligible assets in T. Rowe Price's ETF proposal" - which proposal? The one being considered, likely as amended? Hmm need determine precisely.
+
+However, the answer likely expects using the list present in Document 7? Let's examine context: The user asks "What weight of Bitwise 10's June 30, 2025 portfolio lay outside the eligible assets in T. Rowe Price's ETF proposal when the SEC instituted proceedings on it?" This sounds like a comparison between Bitwise 10 portfolio (Document 4) and T. Rowe Price eligible assets (Document 6 or 7). They want compute total weight of Bitwise assets not included in T. Rowe's eligible list at that time.
+
+If using Document 7 list (includes SUI), then all Bitwise assets are included? Let's check Document 7 list: BTC, ETH, SOL, XRP, ADA, AVAX, LTC, DOT, DOGE, HBAR, BCH, LINK, XLM, SHIB, SUI. Bitwise portfolio includes BTC, ETH, XRP, SOL, ADA, SUI, LINK, AVAX, LTC, DOT. All of these are in Document 7 list! So weight outside would be 0%. That can't be the intended answer, likely not 0. So indeed they must be using the original list (Document 6) where SUI is missing, yielding 0.35%.
+
+But wait check if Document 6 includes Chainlink? Yes. So only SUI missing. Weight 0.35%. Let's verify there is no other missing asset like maybe "Stellar lumen" not in Bitwise, but that's okay. So answer 0.35%.
+
+But need present reasoning with references.
+
+Let's also verify that in Document 6, there is indeed no SUI. Search mental: Document 6 sections: Bitcoin, Ethereum, Solana, XRP Ledger, Cardano, Avalanche, Litecoin, Polkadot, Dogecoin, HBAR, Bitcoin Cash, Chainlink, lumen, Shiba Inu. Yes 14 assets. So SUI absent.
+
+Thus answer: 0.35% (the SUI holding).
+
+But the question asks "What weight... lay outside..." singular? Could answer "0.35% (the SUI allocation)".
+
+Let's craft concise answer citing documents.
+
+Attempt 5 · Right
+-----------------
+Docs: Doc 4, Doc 6, Doc 7 · Note: —
+
+Final answer: Answer: 0.35% (the SUI weight). | Your answer (gold): 0.35%
+
+How it got there: It compared Bitwise 10's June 30, 2025 portfolio against the eligible assets in Doc 6, using the timing of SEC proceedings to select the original list without SUI.
+
+Passages quoted:
+
+Named Doc 4, Doc 6, Doc 7
+
+Full answer
+-----------
+
+Based on the filings:
+
+- Bitwise 10’s June 30, 2025 holdings (Document 4) were:
+
+BTC 78.72%, ETH 11.10%, XRP 4.97%, SOL 3.03%, ADA 0.78%, SUI 0.35%, LINK 0.32%, AVAX 0.28%, LTC 0.24%, DOT 0.19%.
+
+- T. Rowe Price ETF’s eligible assets at the time proceedings were instituted (January 28, 2026) — i.e., the original November 6, 2025 filing (Document 6) — included:
+
+BTC, ETH, SOL, XRP, ADA, AVAX, LTC, DOT, DOGE, HBAR, BCH, LINK, XLM, and SHIB. (SUI was not added until Amendment No. 1 filed April 21, 2026 — Document 7.)
+
+Comparing the two, every Bitwise 10 holding except SUI (0.35%) was in the T. Rowe Price eligible-asset list at that time.
+
+Answer: 0.35% (the SUI weight).
+
+Reasoning
+---------
+
+We need answer based on input docs. Need understand "eligible assets in T. Rowe Price's ETF proposal" and compare to Bitwise 10's June 30 2025 portfolio weights outside them.
+
+We need identify T. Rowe Price Active Crypto ETF proposal eligible assets listed in Document 6? Wait Document 6 is filing for T. Rowe Price Active Crypto ETF under NYSE Arca Rule 8.201-E (Non-Generic) originally filed Nov 6 2025, then Amendment No.1 in Document 7 changed to Generic? Need determine eligible assets in T. Rowe Price ETF proposal when SEC instituted proceedings.
+
+Let's parse documents.
+
+Document 6 (Federal Register Nov 28, 2025) describes Fund's Eligible Assets are crypto assets Sponsor determined meet eligibility criteria for holdings of Commodity-Based Trust Shares pursuant to generic listing standards in NYSE Arca Rule 8.201-E(d)(1) (Generic). Then lists as of date of filing based on assessment: bitcoin (BTC), ether (ETH), SOL (SOL), XRP (XRP), ada (ADA), AVAX (AVAX), litecoin (LTC), DOT (DOT), Dogecoin (DOGE), HBAR (HBAR), Bitcoin Cash (BCH), LINK (LINK), lumen (XLM), and Shiba Inu (SHIB). So 14 eligible assets.
+
+But wait Document 7 (Amendment No.1 filed Apr 21, 2026) also lists eligible assets: bitcoin (BTC), ether (ETH), SOL (SOL), XRP (XRP), ada (ADA), AVAX (AVAX), litecoin (LTC), DOT (DOT), Dogecoin (DOGE), HBAR (HBAR), Bitcoin Cash (BCH), LINK (LINK), lumen (XLM), Shiba Inu (SHIB), and Sui (SUI). So added SUI. Need determine which version was in effect when SEC instituted proceedings on Jan 28, 2026? The original filing was Nov 6, 2025 (Document 6). The Amendment No. 1 was filed Apr 21, 2026 (Document 7), after institution of proceedings on Jan 28, 2026. So at the time of institution (Jan 28, 2026), the proposal was the original one without SUI? But the question asks "when the SEC instituted proceedings on it" referring to T. Rowe Price ETF proposal. The proceedings instituted Jan 28, 2026 based on original filing (Document 6? Actually Document 7 mentions on Jan 28, 2026 Commission instituted proceedings). So eligible assets at that time were the 14 listed in Document 6 (without SUI).
+
+Now need Bitwise 10's June 30, 2025 portfolio weights outside those eligible assets.
+
+From Document 4 (Bitwise 10 Crypto Index ETF approval July 2025) lists portfolio assets and weightings as of June 30, 2025:
+78.72% bitcoin (BTC)
+11.10% ether (ETH)
+4.97% XRP (XRP)
+3.03% Solana (SOL)
+0.78% Cardano (ADA)
+0.35% SUI (SUI)
+0.32% Chainlink (LINK)
+0.28% Avalanche (AVAX)
+0.24% Litecoin (LTC)
+0.19% Polkadot (DOT)
+
+Need identify which are NOT in T. Rowe Price eligible assets list (without SUI): The list includes BTC, ETH, SOL, XRP, ADA, AVAX, LTC, DOT, DOGE, HBAR, BCH, LINK, XLM, SHIB. So present: BTC, ETH, XRP, SOL, ADA, LINK, AVAX, LTC, DOT. Not present: SUI only? Wait SUI is in Bitwise portfolio at 0.35%, but SUI was not in original T. Rowe list (added in Amendment 1). So weight outside = 0.35%.
+
+But check if any other missing? Bitwise has no DOGE, HBAR, BCH, XLM, SHIB. Those are in T. Rowe but not in Bitwise, but question asks weight of Bitwise 10's portfolio lay outside the eligible assets in T. Rowe Price's ETF proposal. That means assets in Bitwise portfolio that are not in T. Rowe eligible set. Only SUI at 0.35%. Need answer likely 0.35%.
+
+But wait check Document 6 lists "lumen (XLM)" and "Shiba Inu (SHIB)" etc. So yes only SUI missing. Therefore weight outside is 0.35%.
+
+Need cite docs. Let's answer concisely with reasoning.
