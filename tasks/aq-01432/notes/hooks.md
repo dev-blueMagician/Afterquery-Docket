@@ -28,4 +28,22 @@ offences list vs fn112/fn39), applied to a universe only another document define
 | h9 | D05 L331 quotes D02 L497 "Use disclosures in each ad" | to what ad type the quoted 2013 principle was addressed (space-constrained, such as a tweet) | who belongs where | none | two lookups | reject (too easy) |
 | h10 | D03 L107 red flags; D04 8.19(b)(iii) L625 anomalies | warning sign in both (surge of reviews in a short period) | match | none | intersection by paraphrase; lookups | reject (too easy) |
 | h11 | D11 L54 ASA control test; L73, L100-L102 DMCC no control requirement; D07 L105 gifts labelled even without obligation | which regime a no-strings gifted post breaches | mentions vs does; decoy "both" (L73) | "likely to infringe both" | ASA scope "for example" is non-exhaustive; ASA "likely to consider" control | hold (defensibility) |
-| h12 | D10 L93-L95 after-sales theme; D09 BP8 L485, BP9 L493, BP29 L717 | Schedule 20 numbers of the after-sales practices (8, 9, 29) | entity resolution; decoy BP11 (statutory rights) | BP11 | Schedule 20 numbering may be general knowledge; D10 says "statutory" where BP29 says "contractual" | hold (closed-book risk) |
+| h12 | D10 L93-L95 after-sales theme; D09 BP8 L485, BP9 L493, BP29 L717 | Schedule 20 numbers of the after-sales practices (8, 9, 29) | entity resolution; decoy BP11 (statutory rights) | BP11 | Schedule 20 numbering may be general knowledge; D10 says "statutory" where BP29 says "contractual" | hold (closed-book risk); RETIRED 2026-10-08 with q03's family |
+
+Round 3 (2026-10-08, independent question-author, origin claude). Written after q01 and q03 were both measured
+Too easy (Low 5/5); every line of D01-D11 read. These are the author's proposals and are not validated.
+
+| Hook | Source inputs and locations | World fact/possible ask | Selected lever(s) | Applicable decoy/counterfactual | Source risks | Decision |
+| --- | --- | --- | --- | --- | --- | --- |
+| h13 | D04 ch6 L418-L434 (three procurement services), ch7 L438-L455 (two facilitation services); D03 L33-L35, L61-L63, L69-L71, L289-L301; D01 L111, L115, L247-L251 | which CMA208 prohibited services would expose the provider to liability under the FTC rule as staff read it | match then exclude; scatter | ch7 account set-up (as fake indicators), ch7 platform (host) | broker "generally"; D01 alone may replace D03 | sketch i09 |
+| h14 | D11 para 21 L115; D04 fn24 L487 (13(3)); fn2 L66, fn16 L351 | sub-paragraph of 13 for platforms' review duty | - | - | description-to-number lookup (q03's structure); closed-book risk ~30% | reject |
+| h15 | D11 para 20 L112-L113; D09 L77, fn104 L1853, fn105 L1857 | section for professional diligence | - | - | lookup; D11's "(sections 225 & 229)" removes D09's necessity | reject |
+| h16 | D10 L101; D09 L893, L897, L857-L861 | what an invitation to purchase must "always" make clear | - | - | q01's structure; unnamed condition gives two answers | reject |
+| h17 | D10 layout ("Code of conduct expectations" under "sometimes banned"); D09 L99, L103, L1365 | always vs sometimes banned | - | - | premise rests on layout; D09 states the rule three times | reject |
+| h18 | D01 (c)(8) L100; D09 L321, L367-L377, L349 | targeted vs average consumer | - | - | both benchmarks recalled; three-option answer | reject |
+| h19 | h4 revisited: D08 five cases vs D09 L389-L391, L773; D08 L53 decoy | which cases breach regardless of effect | - | car case decoy | ticket case hedged ("likely", L199): 2 or 3 | reject |
+| h20 | D05 L483-L543 vs D03 L113-L115, L145-L147, L161-L163, L257-L259, L269-L271, s465.7(b) | which business plans breach the rule | - | - | near-verbatim match; delay-then-drop plan gives two answers | reject |
+| h21 | D09 L1181, fn94 L1813 vs D04 3.2(b) L231-L235, fn10 L241 | which limb a self-posted review breaches | - | - | D09 drops out; 13(1) and 13(2) both arguable | reject |
+| h22 | D11 fn1, fn3 to D09 fn2 (SI 2008/1277), fn18 (2008/1276) | SI number of the CPRs | - | - | recalled | reject |
+| h23 | D02 L783-L796 vs D05 L685 | weight-loss claim multiples | - | - | examples never connected; two lookups plus arithmetic | reject |
+| h24 | D09 fn39 L1593 vs D10 L57 | maximum penalty for a small trader | - | - | D09 alone; recalled | reject |

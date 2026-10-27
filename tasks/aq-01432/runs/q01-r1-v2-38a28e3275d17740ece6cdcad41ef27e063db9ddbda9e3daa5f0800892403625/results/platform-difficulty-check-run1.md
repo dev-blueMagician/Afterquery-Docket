@@ -90,3 +90,16 @@ How it got there: It read Doc 11's pressure-selling theme, mapped behaviours to 
 Answer: 6 (all except asking children to buy products).
 Doc 9, Doc 11	—	ViewLow model · Attempt 5
 How it got there: It listed Doc 11's seven pressure-selling behaviours, matched them to Doc 9 banned practices, and excluded paragraph 30 (children) as non-prosecutable, yielding 6.
+
+---
+
+Caller's note, 2026-10-08 (not platform text): the full saved page arrived later, placed in the bundle by
+the user: tasks/aq-01432/verdicts/AQ-01432_difficulty_2026-10-07_1307.txt. It holds this run as "Run 1 · Too
+easy · Earlier version — does not count", version e5d715, Low 5/5, from page line 836, with every
+attempt's answer and reasoning. It is consistent with the paste above:
+- All five attempts mapped the seven behaviours to 14, 24, 27, 28, 26, 30 and 32 and excluded 30 through
+  note 112.
+- Attempts 2-4 also weighed 31 against 24 for "pretending they have ordered" (page L1288, L1396-L1400,
+  L1532-L1539).
+- The closed-book attempt reasoned from a recalled list of the old banned practices, numbering the three
+  pressure practices 25-27, and answered 3.
